@@ -1,0 +1,77 @@
+Source: ktorrent
+Section: net
+Priority: optional
+Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Uploaders: Modestas Vainius <modestas@vainius.eu>
+DM-Upload-Allowed: yes
+Build-Depends: cmake (>= 2.6.2), debhelper (>= 7), quilt, pkg-kde-tools (>= 0.2),
+ kdelibs5-dev (>= 4:4.2.0), libphonon-dev (>= 4:4.3.0), kdepimlibs5-dev (>= 4:4.2.0),
+ kdebase-workspace-dev (>= 4:4.2.0),
+ pkg-config, libgeoip-dev, libgmp3-dev, libqca2-dev, libx11-dev, libboost-serialization-dev
+Standards-Version: 3.8.0
+Homepage: http://ktorrent.org/
+
+Package: ktorrent
+Architecture: any
+Depends: ${shlibs:Depends}, ktorrent-data (= ${source:Version})
+Suggests: plasma-widget-ktorrent (= ${binary:Version})
+Description: BitTorrent client based on the KDE 4 technology platform
+ This package contains KTorrent, a BitTorrent peer-to-peer network client, that
+ is based on the Qt4 and KDE 4 libraries. Obviously, KTorrent supports such
+ basic features as downloading, uploading and seeding files on the BitTorrent
+ network. However, lots of other additional features and intuitive GUI should
+ make KTorrent a good choice for everyone. Some features are available as
+ plugins hence you should make sure you have the ones you need enabled.
+   - Support for HTTP and UDP trackers, trackerless DHT (mainline) and webseeds.
+   - Alternative UI support including Web interface and Plasma widget.
+   - Torrent grouping, speed capping, various download prioritization
+     capabilities on both torrent and file level as well as bandwidth
+     scheduling.
+   - Support for fetching torrent files from many sources including any local
+     file or remote URL, RSS feeds (with filtering) or actively monitored
+     directory etc.
+   - Integrated and customizable torrent search on the Web.
+   - Various security features like IP blocking and protocol encryption.
+   - Disk space preallocation to reduce fragmentation.
+   - uTorrent compatible peer exchange.
+   - Autoconfiguration for LANs like Zeroconf extension and port forwarning via
+     uPnP.
+   - Scripting support via Kross and interprocess control via DBus interface.
+   - SOCKSv4 and SOCKSv5 proxy, IPv6 support.
+   - Lots of other useful builtin features and plugins.
+
+Package: ktorrent-data
+Architecture: all
+Recommends: ktorrent (>= ${source:Version})
+Replaces: ktorrent (<< 3.2~beta1+svn902175)
+Description: KTorrent data and other architecture independant files
+ This packages contains architecture independent data files for KTorrent,
+ a BitTorrent peer-to-peer network client. Unless you have ktorrent package
+ installed, you probably won't find this package useful.
+
+Package: plasma-widget-ktorrent
+Section: kde
+Architecture: any
+Depends: ${shlibs:Depends}, ktorrent (= ${binary:Version})
+Replaces: ktorrent (<< 3.2~beta1+svn898132), plasma-applet-ktorrent
+Conflicts: plasma-applet-ktorrent
+Description: KTorrent Plasma widget
+ This package provides the KTorrent Plasma widget which features display of
+ the current upload and download speeds and status of any single torrent which
+ KTorrent knows about. Please note that KTorrent must be running for this
+ widget to be able to display any up-to-date information.
+ .
+ This package contains KTorrent Plasma data engine as well.
+
+Package: ktorrent-dbg
+Section: devel
+Architecture: any
+Priority: extra
+Depends: ktorrent (= ${binary:Version})
+Recommends: kdelibs5-dbg
+Description: KTorrent debugging symbols
+ This package contains debugging symbols for KTorrent. When KTorrent crashes,
+ in most cases this package is needed to get a backtrace that is useful for
+ developers. If you have experienced KTorrent crash without this package
+ installed, please install it, try to reproduce the problem and fill a bug
+ report with a new backtrace attached.

@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+
+# THIS_SHOULD_GO_TO_UNSTABLE=1
+
+DEB_CMAKE_CUSTOM_FLAGS += -DWITH_SYSTEM_GEOIP:BOOL=ON \
+                          -DWITH_BUILTIN_COUNTRY_FLAGS:BOOL=OFF
+DEB_KDE_LINK_WITH_AS_NEEDED := yes
+
+include debian/debhelper/kde4.mk
+
+prune-tarball:
+	# Remove non-free components: flags and geoip stuff
+	rm -f plugins/infowidget/geoip/*.png
+	rm -f plugins/infowidget/geoip/FLAGS_LICENCE
+	rm -f plugins/infowidget/geoip/geoip.dat
+	rm -f plugins/infowidget/geoip/GeoIP-LICENSE.txt
+	rm -f plugins/infowidget/GeoIP.c
+	rm -f plugins/infowidget/GeoIP.h
+.PHONY: prune-tarball

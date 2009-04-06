@@ -1,0 +1,6 @@
+version=3
+
+# Track development releases as well
+opts="dversionmangle=s/\+dfsg\.?\d+//; duversionmangle=s/([\d.]+)-?(.*)/$1~$2/i" \
+    http://ktorrent.org/downloads/([\d.]+(?:-?.*)?)/ \
+    ktorrent-([\d.]+(?:-?.*)?)\.tar\.(?:bz2|gz)
