@@ -42,6 +42,8 @@ namespace kt
 				this,SLOT(onStateChanged(Phonon::State, Phonon::State)));
 		connect(media,SIGNAL(hasVideoChanged(bool)),this,SLOT(hasVideoChanged(bool)));
 		connect(media,SIGNAL(aboutToFinish()),this,SIGNAL(aboutToFinish()));
+		connect(media,SIGNAL(currentSourceChanged(Phonon::MediaSource)),
+				this,SLOT(currentSourceChanged(Phonon::MediaSource)));
 		media->setTickInterval(1000);
 	}
 
@@ -146,6 +148,7 @@ namespace kt
 				
 				enableActions(flags);
 				hasVideoChanged(media->hasVideo());
+				playing(getCurrentSource());
 				break;
 			case Phonon::BufferingState:
 				Out(SYS_MPL|LOG_DEBUG) << "MediaPlayer: buffering" << endl;
@@ -181,4 +184,10 @@ namespace kt
 		else
 			closeVideo();
 	}
+	
+	void MediaPlayer::currentSourceChanged(Phonon::MediaSource src)
+	{
+		playing(src.fileName());
+	}
+	
 }

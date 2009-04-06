@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-01-10 11:31+0100\n"
+"POT-Creation-Date: 2009-03-29 07:49+0200\n"
 "PO-Revision-Date: 2008-07-14 15:45+0200\n"
 "Last-Translator: Alexander Nicolaysen Sørnes <alex@thehandofagony.com>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -16,35 +16,35 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ktorrent/groupview.cpp:129
+#: ktorrent/groupview.cpp:130
 msgid "Custom Groups"
 msgstr "Selvvalgte grupper"
 
-#: ktorrent/groupview.cpp:151 ktorrent/viewmanager.cpp:539
+#: ktorrent/groupview.cpp:152 ktorrent/viewmanager.cpp:545
 msgid "New Group"
 msgstr "Ny gruppe"
 
-#: ktorrent/groupview.cpp:155
+#: ktorrent/groupview.cpp:156
 msgid "Edit Name"
 msgstr "Endre navn"
 
-#: ktorrent/groupview.cpp:159
+#: ktorrent/groupview.cpp:160
 msgid "Remove Group"
 msgstr "Fjern gruppe"
 
-#: ktorrent/groupview.cpp:163
+#: ktorrent/groupview.cpp:164
 msgid "Open Tab"
 msgstr "Åpne fane"
 
-#: ktorrent/groupview.cpp:167
+#: ktorrent/groupview.cpp:168
 msgid "Group Policy"
 msgstr "Regler for grupper"
 
-#: ktorrent/groupview.cpp:331
+#: ktorrent/groupview.cpp:334
 msgid "Please enter the group name."
 msgstr "Skriv inn gruppenavnet."
 
-#: ktorrent/groupview.cpp:338 ktorrent/groupview.cpp:463
+#: ktorrent/groupview.cpp:341 ktorrent/groupview.cpp:466
 #, kde-format
 msgid "The group %1 already exists."
 msgstr "Gruppen «%1» finnes fra før."
@@ -147,9 +147,11 @@ msgstr "Importerte <b>%1</b>"
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:155
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_limit)
 #: ktorrent/spinboxdelegate.cpp:39 rc.cpp:98 rc.cpp:567 rc.cpp:576 rc.cpp:818
-#: rc.cpp:827 rc.cpp:1030 rc.cpp:1042 rc.cpp:2241 rc.cpp:2250 rc.cpp:2310
-#: rc.cpp:2319
-msgid " KB/s"
+#: rc.cpp:827 rc.cpp:1030 rc.cpp:1042 rc.cpp:2244 rc.cpp:2253 rc.cpp:2313
+#: rc.cpp:2322
+#, fuzzy
+#| msgid " KB/s"
+msgid " KiB/s"
 msgstr " KB/s"
 
 #. i18n: file: ktorrent/grouppolicydlg.ui:83
@@ -248,17 +250,17 @@ msgstr " KB/s"
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, m_max_conn_per_torrent)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:207
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, m_max_conn_global)
-#: ktorrent/spinboxdelegate.cpp:41 ktorrent/speedlimitsmodel.cpp:137
-#: ktorrent/speedlimitsmodel.cpp:142 rc.cpp:564 rc.cpp:573 rc.cpp:582
+#: ktorrent/spinboxdelegate.cpp:41 ktorrent/speedlimitsmodel.cpp:138
+#: ktorrent/speedlimitsmodel.cpp:143 rc.cpp:564 rc.cpp:573 rc.cpp:582
 #: rc.cpp:591 rc.cpp:644 rc.cpp:653 rc.cpp:731 rc.cpp:740 rc.cpp:815
-#: rc.cpp:824 rc.cpp:1009 rc.cpp:1018 rc.cpp:1027 rc.cpp:1039 rc.cpp:1551
-#: rc.cpp:1557 rc.cpp:2238 rc.cpp:2247 rc.cpp:2262 rc.cpp:2268 rc.cpp:2307
-#: rc.cpp:2316 rc.cpp:2331 rc.cpp:2337 plugins/infowidget/statustab.cpp:57
+#: rc.cpp:824 rc.cpp:1009 rc.cpp:1018 rc.cpp:1027 rc.cpp:1039 rc.cpp:1554
+#: rc.cpp:1560 rc.cpp:2241 rc.cpp:2250 rc.cpp:2265 rc.cpp:2271 rc.cpp:2310
+#: rc.cpp:2319 rc.cpp:2334 rc.cpp:2340 plugins/infowidget/statustab.cpp:57
 msgid "No limit"
 msgstr "Ingen grense"
 
-#: ktorrent/spinboxdelegate.cpp:43 ktorrent/speedlimitsmodel.cpp:147
-#: ktorrent/speedlimitsmodel.cpp:152
+#: ktorrent/spinboxdelegate.cpp:43 ktorrent/speedlimitsmodel.cpp:148
+#: ktorrent/speedlimitsmodel.cpp:153
 msgid "No assured speed"
 msgstr "Ingen garantert fart"
 
@@ -309,8 +311,8 @@ msgstr "Klarte ikke laste inn strømfilen: %1"
 
 #: ktorrent/importdialog.cpp:276 plugins/ipfilter/convertthread.cpp:93
 #: plugins/ipfilter/convertthread.cpp:197
-#: plugins/search/searchenginelist.cpp:185 libbtcore/util/fileops.cpp:315
-#: libbtcore/util/fileops.cpp:344 libbtcore/util/fileops.cpp:403
+#: plugins/search/searchenginelist.cpp:185 libbtcore/util/fileops.cpp:318
+#: libbtcore/util/fileops.cpp:347 libbtcore/util/fileops.cpp:406
 #: libbtcore/diskio/cachefile.cpp:94
 #, kde-format
 msgid "Cannot open %1 : %2"
@@ -353,17 +355,17 @@ msgstr "Åpne en nettadresse"
 msgid "Invalid URL: "
 msgstr "Ugyldig URL: "
 
-#: ktorrent/viewmanager.cpp:483
+#: ktorrent/viewmanager.cpp:489
 msgid "Remove Torrent and Data"
 msgstr "Fjern strøm og data"
 
-#: ktorrent/viewmanager.cpp:488
+#: ktorrent/viewmanager.cpp:494
 #, fuzzy
 #| msgid "Remove Torrent"
 msgid "Rename Torrent"
 msgstr "Fjern strøm"
 
-#: ktorrent/viewmanager.cpp:494
+#: ktorrent/viewmanager.cpp:500
 msgid "Add Peers"
 msgstr "Legg til personer"
 
@@ -379,70 +381,74 @@ msgstr "Legg til personer"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_5)
 #. i18n: file: plugins/stats/Settings.ui:234
 #. i18n: ectx: property (text), widget (QLabel, label_12)
-#: ktorrent/viewmanager.cpp:498 rc.cpp:1629 rc.cpp:1716 rc.cpp:1779
+#: ktorrent/viewmanager.cpp:504 rc.cpp:1632 rc.cpp:1719 rc.cpp:1782
 #: plugins/infowidget/peerviewmodel.cpp:374
 #: libbtcore/util/logsystemmanager.cpp:36
 msgid "DHT"
 msgstr "DHT"
 
-#: ktorrent/viewmanager.cpp:504
+#: ktorrent/viewmanager.cpp:510
 msgid "Peer Exchange"
 msgstr "Personutveksling"
 
-#: ktorrent/viewmanager.cpp:509
+#. i18n: file: plugins/infowidget/trackerview.ui:189
+#. i18n: ectx: property (text), widget (KPushButton, m_announce)
+#: ktorrent/viewmanager.cpp:515 rc.cpp:1434
 msgid "Manual Announce"
 msgstr "Manuell annonsering"
 
-#: ktorrent/viewmanager.cpp:514
+#. i18n: file: plugins/infowidget/trackerview.ui:196
+#. i18n: ectx: property (text), widget (QPushButton, m_scrape)
+#: ktorrent/viewmanager.cpp:520 rc.cpp:1437
 msgid "Scrape"
 msgstr "Hent status"
 
-#: ktorrent/viewmanager.cpp:518 plugins/infowidget/iwfilelistmodel.cpp:69
-#: plugins/infowidget/iwfiletreemodel.cpp:73
+#: ktorrent/viewmanager.cpp:524 plugins/infowidget/iwfilelistmodel.cpp:78
+#: plugins/infowidget/iwfiletreemodel.cpp:89
 msgid "Preview"
 msgstr "Forhåndsvisning"
 
-#: ktorrent/viewmanager.cpp:522
+#: ktorrent/viewmanager.cpp:528
 msgid "Data Directory"
 msgstr "Datamappe"
 
-#: ktorrent/viewmanager.cpp:526
+#: ktorrent/viewmanager.cpp:532
 msgid "Temporary Directory"
 msgstr "Midlertidig mappe"
 
-#: ktorrent/viewmanager.cpp:530
+#: ktorrent/viewmanager.cpp:536
 msgid "Move Data"
 msgstr "Flytt data"
 
-#: ktorrent/viewmanager.cpp:535
+#: ktorrent/viewmanager.cpp:541
 msgid "Remove from Group"
 msgstr "Fjern fra gruppe"
 
-#. i18n: file: ktorrent/ktorrentui.rc:63
+#. i18n: file: ktorrent/ktorrentui.rc:62
 #. i18n: ectx: Menu (OpenDirMenu)
-#: ktorrent/viewmanager.cpp:553 rc.cpp:620
+#: ktorrent/viewmanager.cpp:559 rc.cpp:620
 msgid "Open Directory"
 msgstr "Åpne mappe"
 
-#. i18n: file: ktorrent/ktorrentui.rc:70
+#. i18n: file: ktorrent/ktorrentui.rc:69
 #. i18n: ectx: Menu (GroupsSubMenu)
-#: ktorrent/viewmanager.cpp:556 rc.cpp:623
+#: ktorrent/viewmanager.cpp:562 rc.cpp:623
 msgid "Add to Group"
 msgstr "Legg til gruppe"
 
-#: ktorrent/viewmanager.cpp:559
+#: ktorrent/viewmanager.cpp:565
 #, fuzzy
 #| msgid "Copy torrent files to:"
 msgid "Copy Torrent URL"
 msgstr "Kopier strømfiler til:"
 
-#: ktorrent/ipfilterlist.cpp:94
+#: ktorrent/ipfilterlist.cpp:95
 #, fuzzy, kde-format
 #| msgid "Invalid url %1"
 msgid "Invalid IP address %1 !"
 msgstr "Ugyldig URL: %1"
 
-#: ktorrent/ipfilterlist.cpp:99
+#: ktorrent/ipfilterlist.cpp:100
 #, kde-format
 msgid "Duplicate IP address %1 !"
 msgstr ""
@@ -474,107 +480,108 @@ msgstr "Program"
 msgid "Calculate Recommended Settings"
 msgstr "Anbefalte innstillinger"
 
-#: ktorrent/recommendedsettingsdlg.cpp:241
-#: ktorrent/recommendedsettingsdlg.cpp:246
-#, kde-format
-msgid "(= %1 KB/s)"
+#: ktorrent/recommendedsettingsdlg.cpp:242
+#: ktorrent/recommendedsettingsdlg.cpp:248
+#, fuzzy, kde-format
+#| msgid "(= %1 KB/s)"
+msgid "(= %1/s)"
 msgstr "(= %1 KB/s)"
 
 #. i18n: file: ktorrent/advancedpref.ui:224
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: ktorrent/main.cpp:103 rc.cpp:1168
+#: ktorrent/main.cpp:84 rc.cpp:1168
 msgid "KTorrent"
 msgstr "KTorrent"
 
-#: ktorrent/main.cpp:104
+#: ktorrent/main.cpp:85
 msgid "Bittorrent client for KDE"
 msgstr "BitTorrent-klient for KDE"
 
-#: ktorrent/main.cpp:106
+#: ktorrent/main.cpp:87
 msgid "(C) 2005 - 2008 Joris Guisson and Ivan Vasic"
 msgstr "Opphavsrett 2005 – 2008 tilhører Joris Guisson og Ivan Vasic"
 
-#: ktorrent/main.cpp:110
+#: ktorrent/main.cpp:91
 msgid "Joris Guisson"
 msgstr "Joris Guisson"
 
-#: ktorrent/main.cpp:111
+#: ktorrent/main.cpp:92
 msgid "Ivan Vasic"
 msgstr "Ivan Vasic"
 
-#: ktorrent/main.cpp:112
+#: ktorrent/main.cpp:93
 msgid "Alan Jones"
 msgstr "Alan Jones"
 
-#: ktorrent/main.cpp:112
+#: ktorrent/main.cpp:93
 msgid "BitFinder Plugin"
 msgstr "Bitfinner-modul"
 
-#: ktorrent/main.cpp:113
+#: ktorrent/main.cpp:94
 msgid "Diego R. Brogna"
 msgstr "Diego R. Brogna"
 
-#: ktorrent/main.cpp:113
+#: ktorrent/main.cpp:94
 msgid "Webinterface Plugin"
 msgstr "Nettgrensesnitt"
 
-#: ktorrent/main.cpp:114
+#: ktorrent/main.cpp:95
 msgid "Krzysztof Kundzicz"
 msgstr "Krzysztof Kundzicz"
 
-#: ktorrent/main.cpp:114
+#: ktorrent/main.cpp:95
 msgid "Statistics Plugin"
 msgstr "Statistikkmodul"
 
-#: ktorrent/main.cpp:116
+#: ktorrent/main.cpp:97
 msgid "Mladen Babic"
 msgstr "Mladen Babic"
 
-#: ktorrent/main.cpp:116
+#: ktorrent/main.cpp:97
 msgid "Application icon and a couple of others"
 msgstr "Programikon og et par andre"
 
-#: ktorrent/main.cpp:117
+#: ktorrent/main.cpp:98
 msgid "Adam Treat"
 msgstr "Adam Treat"
 
-#: ktorrent/main.cpp:118
+#: ktorrent/main.cpp:99
 msgid "Danny Allen"
 msgstr "Danny Allen"
 
-#: ktorrent/main.cpp:118
+#: ktorrent/main.cpp:99
 msgid "1.0 application icon"
 msgstr "Programikon for 1.0"
 
-#: ktorrent/main.cpp:119
+#: ktorrent/main.cpp:100
 msgid "Vincent Wagelaar"
 msgstr "Vincent Wagelaar"
 
-#: ktorrent/main.cpp:120
+#: ktorrent/main.cpp:101
 msgid "Knut Morten Johansson"
 msgstr "Knut Morten Johansson"
 
-#: ktorrent/main.cpp:121
+#: ktorrent/main.cpp:102
 msgid "Felix Berger"
 msgstr "Felix Berger"
 
-#: ktorrent/main.cpp:121
+#: ktorrent/main.cpp:102
 msgid "ChunkBar's tooltip and IWFileTreeItem sorting"
 msgstr "Bitlinjens verktøytips og «IWFileTreeItem»-sortering"
 
-#: ktorrent/main.cpp:122
+#: ktorrent/main.cpp:103
 msgid "Andreas Kling"
 msgstr "Andreas Kling"
 
-#: ktorrent/main.cpp:123
+#: ktorrent/main.cpp:104
 msgid "Felipe Sateler"
 msgstr "Felipe Sateler"
 
-#: ktorrent/main.cpp:124
+#: ktorrent/main.cpp:105
 msgid "Maxmind"
 msgstr "Maxmind"
 
-#: ktorrent/main.cpp:124
+#: ktorrent/main.cpp:105
 msgid ""
 "Country locator for InfoWidget plugin. Flags are taken from http://flags."
 "blogpotato.de/ so thanks to them too."
@@ -582,209 +589,209 @@ msgstr ""
 "Land-finner for infotilleggsmodulen. Flaggene er tatt fra http://flags."
 "blogpotato.de/, så takk til dem også."
 
-#: ktorrent/main.cpp:125
+#: ktorrent/main.cpp:106
 msgid "Adam Forsyth"
 msgstr "Adam Forsyth"
 
-#: ktorrent/main.cpp:125
+#: ktorrent/main.cpp:106
 #, fuzzy
 #| msgid "File prioritization"
 msgid "File prioritization and some other patches"
 msgstr "Filprioritering"
 
-#: ktorrent/main.cpp:126
+#: ktorrent/main.cpp:107
 msgid "Thomas Bernard"
 msgstr "Thomas Bernard"
 
-#: ktorrent/main.cpp:126
+#: ktorrent/main.cpp:107
 msgid "Miniupnp was used as an example for our own UPnP implementation"
 msgstr "Miniupnp ble brukt som et eksempel for vår egen UPnP-kode"
 
-#: ktorrent/main.cpp:127
+#: ktorrent/main.cpp:108
 msgid "Diego Rosario Brogna"
 msgstr "Diego Rosario Brogna"
 
-#: ktorrent/main.cpp:127
+#: ktorrent/main.cpp:108
 msgid "Global max share ratio patch"
 msgstr "Tillegg for totalt deleforhold"
 
-#: ktorrent/main.cpp:128
+#: ktorrent/main.cpp:109
 msgid "Lesly Weyts"
 msgstr "Lesly Weyts"
 
-#: ktorrent/main.cpp:128 ktorrent/main.cpp:129
+#: ktorrent/main.cpp:109 ktorrent/main.cpp:110
 msgid "Zeroconf enhancements"
 msgstr "Zeroconf-forbedringer"
 
-#: ktorrent/main.cpp:129
+#: ktorrent/main.cpp:110
 msgid "Kevin Andre"
 msgstr "Kevin Andre"
 
-#: ktorrent/main.cpp:130
+#: ktorrent/main.cpp:111
 msgid "Dagur Valberg Johannsson"
 msgstr "Dagur Valberg Johannsson"
 
-#: ktorrent/main.cpp:130
+#: ktorrent/main.cpp:111
 msgid "Coldmilk webgui"
 msgstr "Nettgrensesnittet «Coldmilk»"
 
-#: ktorrent/main.cpp:131
+#: ktorrent/main.cpp:112
 msgid "Alexander Dymo"
 msgstr "Alexander Dymo"
 
-#: ktorrent/main.cpp:131
+#: ktorrent/main.cpp:112
 msgid "IDEAl code from KDevelop"
 msgstr "IDEAl-kode fra KDevelop"
 
-#: ktorrent/main.cpp:132
+#: ktorrent/main.cpp:113
 msgid "Scott Wolchok"
 msgstr "Scott Wolchok"
 
-#: ktorrent/main.cpp:132
+#: ktorrent/main.cpp:113
 msgid "Conversion speed improvement in ipfilter plugin"
 msgstr "Raskere konvertering i ipfilter-modulen"
 
-#: ktorrent/main.cpp:133
+#: ktorrent/main.cpp:114
 msgid "Bryan Burns of Juniper Networks"
 msgstr "Bryan Burns fra Juniper Networks"
 
-#: ktorrent/main.cpp:133
+#: ktorrent/main.cpp:114
 msgid "Discovered 2 security vulnerabilities (both are fixed)"
 msgstr "Fant 2 sikkerhetshull (som nå er fikset)"
 
-#: ktorrent/main.cpp:134
+#: ktorrent/main.cpp:115
 msgid "Goten Xiao"
 msgstr "Goten Xiao"
 
-#: ktorrent/main.cpp:134
+#: ktorrent/main.cpp:115
 msgid "Patch to load silently with a save location"
 msgstr "Oppdatering for å starte stille med en lagringsplass"
 
-#: ktorrent/main.cpp:135
+#: ktorrent/main.cpp:116
 msgid "Rapsys"
 msgstr "Rapsys"
 
-#: ktorrent/main.cpp:135
+#: ktorrent/main.cpp:116
 msgid "Fixes in PHP code of webinterface"
 msgstr "Feilrettinger i PHP-koden for nettgrensesnittet"
 
-#: ktorrent/main.cpp:136
+#: ktorrent/main.cpp:117
 msgid "Athantor"
 msgstr "Athantor"
 
-#: ktorrent/main.cpp:136
+#: ktorrent/main.cpp:117
 msgid "XFS specific disk preallocation"
 msgstr "Forhåndstildeling for XFS-filsystemet"
 
-#: ktorrent/main.cpp:137
+#: ktorrent/main.cpp:118
 msgid "twisted_fall"
 msgstr "twisted_fall"
 
-#: ktorrent/main.cpp:137
+#: ktorrent/main.cpp:118
 msgid "Patch to not show very low speeds"
 msgstr "Oppdatering for å ikke vise veldig lave hastigheter"
 
-#: ktorrent/main.cpp:138
+#: ktorrent/main.cpp:119
 msgid "Lucke"
 msgstr "Lucke"
 
-#: ktorrent/main.cpp:138
+#: ktorrent/main.cpp:119
 msgid "Patch to show potentially firewalled status"
 msgstr "Oppdatering for å vise om brukeren er bak en brannmur"
 
-#: ktorrent/main.cpp:139
+#: ktorrent/main.cpp:120
 msgid "Modestas Vainius"
 msgstr "Modestas Vainius"
 
-#: ktorrent/main.cpp:139
+#: ktorrent/main.cpp:120
 msgid "Several patches"
 msgstr "Flere oppdateringer"
 
-#: ktorrent/main.cpp:140
+#: ktorrent/main.cpp:121
 msgid "Stefan Monov"
 msgstr "Stefan Monov"
 
-#: ktorrent/main.cpp:140
+#: ktorrent/main.cpp:121
 msgid "Patch to hide menu bar"
 msgstr "Oppdatering for å skjule menylinjen"
 
-#: ktorrent/main.cpp:141
+#: ktorrent/main.cpp:122
 msgid "The_Kernel"
 msgstr "The_Kernel"
 
-#: ktorrent/main.cpp:141
+#: ktorrent/main.cpp:122
 msgid "Patch to change file priorities in the webgui"
 msgstr "Oppdatering for å endre filprioriteringer i nettgrensesnittet"
 
-#: ktorrent/main.cpp:142
+#: ktorrent/main.cpp:123
 msgid "Rafał Miłecki"
 msgstr "Rafał Miłecki"
 
-#: ktorrent/main.cpp:142
+#: ktorrent/main.cpp:123
 msgid "Several webgui patches"
 msgstr "Flere oppdateringer for nettgrensesnittet"
 
-#: ktorrent/main.cpp:143
+#: ktorrent/main.cpp:124
 msgid "Ozzi"
 msgstr "Ozzi"
 
-#: ktorrent/main.cpp:143
+#: ktorrent/main.cpp:124
 msgid "Fixes for several warnings"
 msgstr "Oppdateringer for å fikse flere advarsler"
 
-#: ktorrent/main.cpp:144
+#: ktorrent/main.cpp:125
 msgid "Markus Brueffer"
 msgstr "Markus Brueffer"
 
-#: ktorrent/main.cpp:144
+#: ktorrent/main.cpp:125
 msgid "Patch to fix free diskspace calculation on FreeBSD"
 msgstr "Oppdatering for å fikse beregning av diskplass på FreeBSD"
 
-#: ktorrent/main.cpp:145
+#: ktorrent/main.cpp:126
 msgid "Lukas Appelhans"
 msgstr "Lukas Appelhans"
 
-#: ktorrent/main.cpp:145
+#: ktorrent/main.cpp:126
 msgid "Patch to fix a crash in ChunkDownloadView"
 msgstr "Oppdatering for å fikse klikking i visningen av fildeler"
 
-#: ktorrent/main.cpp:146
+#: ktorrent/main.cpp:127
 msgid "Rickard Närström"
 msgstr "Rickard Närström"
 
-#: ktorrent/main.cpp:146
+#: ktorrent/main.cpp:127
 msgid "A couple of bugfixes"
 msgstr "Et par feilrettinger"
 
-#: ktorrent/main.cpp:147
+#: ktorrent/main.cpp:128
 msgid "caruccio"
 msgstr "caruccio"
 
-#: ktorrent/main.cpp:147
+#: ktorrent/main.cpp:128
 msgid "Patch to load torrents silently from the command line"
 msgstr "Oppdatering for å åpne strømfiler stille fra kommandolinjen"
 
-#: ktorrent/main.cpp:148
+#: ktorrent/main.cpp:129
 msgid "Lee Olson"
 msgstr "Lee Olson"
 
-#: ktorrent/main.cpp:148
+#: ktorrent/main.cpp:129
 msgid "New set of icons"
 msgstr "Nytt sett med ikoner"
 
-#: ktorrent/main.cpp:149
+#: ktorrent/main.cpp:130
 msgid "Aaron J. Seigo"
 msgstr ""
 
-#: ktorrent/main.cpp:149
+#: ktorrent/main.cpp:130
 msgid "Drag and drop support for plasma applet"
 msgstr ""
 
-#: ktorrent/main.cpp:153
+#: ktorrent/main.cpp:134
 msgid "Document to open"
 msgstr "Dokument som skal åpnes"
 
-#: ktorrent/main.cpp:154
+#: ktorrent/main.cpp:135
 msgid "Silently open torrent given on URL"
 msgstr "Stille åpning av strømfiler gitt på URL"
 
@@ -829,216 +836,216 @@ msgstr "Datafilen er ikke der du sa den skulle være!"
 msgid "Create A Torrent"
 msgstr "Lag en ny strøm"
 
-#: ktorrent/torrentcreatordlg.cpp:104 ktorrent/fileselectdlg.cpp:276
+#: ktorrent/torrentcreatordlg.cpp:103 ktorrent/fileselectdlg.cpp:276
 #: libktcore/groups/allgroup.cpp:26
 msgid "All Torrents"
 msgstr "Alle strømmer"
 
-#: ktorrent/torrentcreatordlg.cpp:217
+#: ktorrent/torrentcreatordlg.cpp:216
 #, kde-format
 msgid "Invalid url %1"
 msgstr "Ugyldig URL: %1"
 
-#: ktorrent/torrentcreatordlg.cpp:223
+#: ktorrent/torrentcreatordlg.cpp:222
 #, fuzzy
 #| msgid "Only HTTP is supported for webseeding !"
 msgid "Only HTTP is supported for webseeding!"
 msgstr "Nettdeling støtter kun HTTP."
 
-#: ktorrent/torrentcreatordlg.cpp:254
+#: ktorrent/torrentcreatordlg.cpp:253
 msgid "You must select a file or a folder."
 msgstr "Du må velge en fil eller en mappe."
 
-#: ktorrent/torrentcreatordlg.cpp:260
+#: ktorrent/torrentcreatordlg.cpp:259
 msgid ""
 "You have not added a tracker, are you sure you want to create this torrent ?"
 msgstr ""
 "Du har ikke lagt til en sporer; er du sikker på at du vil lage strømfilen?"
 
-#: ktorrent/torrentcreatordlg.cpp:268
+#: ktorrent/torrentcreatordlg.cpp:267
 msgid "You must add at least one node."
 msgstr "Du må legge til minst én node."
 
-#: ktorrent/torrentcreatordlg.cpp:308
+#: ktorrent/torrentcreatordlg.cpp:307
 msgid "Torrent Files (*.torrent)"
 msgstr "Strømfiler (*.torrent)"
 
-#: ktorrent/torrentcreatordlg.cpp:309
+#: ktorrent/torrentcreatordlg.cpp:308
 msgid "Choose a file to save the torrent"
 msgstr "Velg et filnavn å lagre som"
 
-#: ktorrent/torrentcreatordlg.cpp:318
+#: ktorrent/torrentcreatordlg.cpp:317
 #, fuzzy
 #| msgid "Create a torrent"
 msgid "Creating Torrent"
 msgstr "Lag en ny strøm"
 
-#: ktorrent/torrentcreatordlg.cpp:319
+#: ktorrent/torrentcreatordlg.cpp:318
 #, kde-format
 msgid "Creating %1..."
 msgstr "Lager «%1» . . ."
 
-#: ktorrent/viewmodel.cpp:216 plugins/infowidget/iwfilelistmodel.cpp:146
-#: plugins/infowidget/iwfilelistmodel.cpp:169
-#: plugins/infowidget/iwfiletreemodel.cpp:152
-#: plugins/infowidget/iwfiletreemodel.cpp:172
-#: plugins/infowidget/iwfiletreemodel.cpp:178
+#: ktorrent/viewmodel.cpp:216 plugins/infowidget/iwfilelistmodel.cpp:155
+#: plugins/infowidget/iwfilelistmodel.cpp:178
+#: plugins/infowidget/iwfiletreemodel.cpp:168
+#: plugins/infowidget/iwfiletreemodel.cpp:188
+#: plugins/infowidget/iwfiletreemodel.cpp:194
 #, no-c-format, kde-format
 msgid "%1 %"
 msgstr "%1 %"
 
 #. i18n: file: plugins/bitfinder/filter/filterdetails.ui:57
 #. i18n: ectx: property (text), widget (QLabel, nameLabel)
-#: ktorrent/viewmodel.cpp:419 ktorrent/queuemanagermodel.cpp:98 rc.cpp:2139
+#: ktorrent/viewmodel.cpp:426 ktorrent/queuemanagermodel.cpp:98 rc.cpp:2142
 msgid "Name"
 msgstr "Navn"
 
-#: ktorrent/viewmodel.cpp:420 ktorrent/queuemanagermodel.cpp:99
+#: ktorrent/viewmodel.cpp:427 ktorrent/queuemanagermodel.cpp:99
 #: plugins/infowidget/infowidgetplugin.cpp:80
 #: plugins/infowidget/webseedsmodel.cpp:127
 msgid "Status"
 msgstr "Status"
 
-#: ktorrent/viewmodel.cpp:421 plugins/infowidget/peerviewmodel.cpp:378
+#: ktorrent/viewmodel.cpp:428 plugins/infowidget/peerviewmodel.cpp:378
 #: plugins/infowidget/webseedsmodel.cpp:126
 msgid "Downloaded"
 msgstr "Lastet ned"
 
-#: ktorrent/viewmodel.cpp:422 libktcore/torrent/torrentfiletreemodel.cpp:377
-#: libktcore/torrent/torrentfilelistmodel.cpp:70
+#: ktorrent/viewmodel.cpp:429 libktcore/torrent/torrentfiletreemodel.cpp:399
+#: libktcore/torrent/torrentfilelistmodel.cpp:77
 msgid "Size"
 msgstr "Størrelse"
 
-#: ktorrent/viewmodel.cpp:423 plugins/infowidget/peerviewmodel.cpp:379
+#: ktorrent/viewmodel.cpp:430 plugins/infowidget/peerviewmodel.cpp:379
 msgid "Uploaded"
 msgstr "Lastet opp"
 
-#: ktorrent/viewmodel.cpp:424 plugins/infowidget/peerviewmodel.cpp:369
+#: ktorrent/viewmodel.cpp:431 plugins/infowidget/peerviewmodel.cpp:369
 #: plugins/infowidget/chunkdownloadmodel.cpp:213
 msgid "Down Speed"
 msgstr "Nedhastighet"
 
-#: ktorrent/viewmodel.cpp:425 plugins/infowidget/peerviewmodel.cpp:370
+#: ktorrent/viewmodel.cpp:432 plugins/infowidget/peerviewmodel.cpp:370
 msgid "Up Speed"
 msgstr "Opphastighet"
 
-#: ktorrent/viewmodel.cpp:426
+#: ktorrent/viewmodel.cpp:433
 msgid "Time Left"
 msgstr "Tid igjen"
 
-#: ktorrent/viewmodel.cpp:427
+#: ktorrent/viewmodel.cpp:434
 msgid "Seeders"
 msgstr "Delere"
 
-#: ktorrent/viewmodel.cpp:428
+#: ktorrent/viewmodel.cpp:435
 msgid "Leechers"
 msgstr "Nedlastere"
 
-#: ktorrent/viewmodel.cpp:430
+#: ktorrent/viewmodel.cpp:437
 #, no-c-format
 msgid "% Complete"
 msgstr "% ferdig"
 
-#: ktorrent/viewmodel.cpp:431
+#: ktorrent/viewmodel.cpp:438
 msgid "Share Ratio"
 msgstr "Delingsforhold"
 
-#: ktorrent/viewmodel.cpp:432
+#: ktorrent/viewmodel.cpp:439
 msgid "Time Downloaded"
 msgstr "Tid lastet ned"
 
-#: ktorrent/viewmodel.cpp:433
+#: ktorrent/viewmodel.cpp:440
 msgid "Time Seeded"
 msgstr "Tid lastet opp"
 
-#: ktorrent/viewmodel.cpp:434
+#: ktorrent/viewmodel.cpp:441
 msgid "Location"
 msgstr "Adresse"
 
-#: ktorrent/viewmodel.cpp:442
+#: ktorrent/viewmodel.cpp:449
 #, fuzzy
 #| msgid "Do you want to download or save the torrent?"
 msgid "How much data we have downloaded of the torrent"
 msgstr "Vil du laste ned innholdet eller lagre strømfilen?"
 
-#: ktorrent/viewmodel.cpp:443
+#: ktorrent/viewmodel.cpp:450
 msgid "Total size of the torrent, excluded files are not included"
 msgstr ""
 
-#: ktorrent/viewmodel.cpp:444
+#: ktorrent/viewmodel.cpp:451
 msgid "How much data we have uploaded"
 msgstr ""
 
-#: ktorrent/viewmodel.cpp:445
+#: ktorrent/viewmodel.cpp:452
 #, fuzzy
 #| msgid "Set max download speed"
 msgid "Current download speed"
 msgstr "Angi høyeste nedlastingsfart"
 
-#: ktorrent/viewmodel.cpp:446
+#: ktorrent/viewmodel.cpp:453
 #, fuzzy
 #| msgid "Current speed"
 msgid "Current upload speed"
 msgstr "Nåværende fart"
 
-#: ktorrent/viewmodel.cpp:447
+#: ktorrent/viewmodel.cpp:454
 msgid ""
 "How much time is left before the torrent is finished or before the maximum "
 "share ratio is reached, if that is enabled"
 msgstr ""
 
-#: ktorrent/viewmodel.cpp:448
+#: ktorrent/viewmodel.cpp:455
 msgid ""
 "How many seeders we are connected to (How many seeders there are according "
 "to the tracker)"
 msgstr ""
 
-#: ktorrent/viewmodel.cpp:449
+#: ktorrent/viewmodel.cpp:456
 msgid ""
 "How many leechers we are connected to (How many leechers there are according "
 "to the tracker)"
 msgstr ""
 
-#: ktorrent/viewmodel.cpp:451
+#: ktorrent/viewmodel.cpp:458
 #, no-c-format
 msgid ""
 "The percentage of data we have of the whole torrent, not including excluded "
 "files"
 msgstr ""
 
-#: ktorrent/viewmodel.cpp:452
+#: ktorrent/viewmodel.cpp:459
 msgid ""
 "Share ratio is the number of bytes uploaded divided by the number of bytes "
 "downloaded"
 msgstr ""
 
-#: ktorrent/viewmodel.cpp:453
+#: ktorrent/viewmodel.cpp:460
 #, fuzzy
 #| msgid "You are already downloading the torrent %1"
 msgid "How long we have been downloading the torrent"
 msgstr "Du laster allerede ned denne strømmen (%1)"
 
-#: ktorrent/viewmodel.cpp:454
+#: ktorrent/viewmodel.cpp:461
 msgid "How long we have been seeding the torrent"
 msgstr ""
 
-#: ktorrent/viewmodel.cpp:455
+#: ktorrent/viewmodel.cpp:462
 msgid "The location of the torrent's data on disk"
 msgstr ""
 
-#: ktorrent/viewmodel.cpp:498
+#: ktorrent/viewmodel.cpp:508
 #, fuzzy, kde-format
 #| msgid "There already is a tracker named <b>%1</b> !"
 msgid "There is a problem with the tracker: <br><b>%1</b>"
 msgstr "Det finnes allerede en sporer kalt <b>%1</b>."
 
-#: ktorrent/viewmodel.cpp:504
+#: ktorrent/viewmodel.cpp:514
 #, fuzzy, kde-format
 #| msgid "Title: <b>%1</b>"
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "Tittel: <b>%1</b>"
 
-#: ktorrent/core.cpp:121
+#: ktorrent/core.cpp:136
 #, kde-format
 msgid ""
 "Specified port (%1) is unavailable or in use by another application. "
@@ -1047,7 +1054,7 @@ msgstr ""
 "Den oppgitte porten (%1) er ikke tilgjengelig eller i bruk av et annet "
 "program. KTorrent bruker nå port %2 i stedet."
 
-#: ktorrent/core.cpp:129
+#: ktorrent/core.cpp:144
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -1056,16 +1063,16 @@ msgstr ""
 "KTorrent kan ikke godta tilkoblinger fordi portene %1 til %2 brukes av et "
 "annet program."
 
-#: ktorrent/core.cpp:826
+#: ktorrent/core.cpp:840
 msgid "KTorrent is running one or more torrents"
 msgstr "KTorrent kjører en eller flere strømmer"
 
-#: ktorrent/core.cpp:918
+#: ktorrent/core.cpp:932
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Klarte ikke lage strømfil: %1"
 
-#: ktorrent/core.cpp:1019
+#: ktorrent/core.cpp:1027
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1074,21 +1081,21 @@ msgstr ""
 "Flere datafiler i strømmen «%1» mangler. \n"
 "Vil du lage dem på nytt eller la være laste dem ned?"
 
-#: ktorrent/core.cpp:1028 ktorrent/core.cpp:1040 ktorrent/core.cpp:1053
+#: ktorrent/core.cpp:1036 ktorrent/core.cpp:1048 ktorrent/core.cpp:1061
 msgid "Data files are missing"
 msgstr "Datafiler mangler"
 
-#: ktorrent/core.cpp:1039
+#: ktorrent/core.cpp:1047
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Klarte ikke overse manglende filer: %1"
 
-#: ktorrent/core.cpp:1052
+#: ktorrent/core.cpp:1060
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Klarte ikke lage manglende filer på nytt: %1"
 
-#: ktorrent/core.cpp:1068
+#: ktorrent/core.cpp:1076
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -1097,27 +1104,27 @@ msgstr ""
 "Fila hvor dataene til strømmen «%1» lagres mangler, \n"
 "vil du lage den på nytt?"
 
-#: ktorrent/core.cpp:1075 ktorrent/core.cpp:1086
+#: ktorrent/core.cpp:1083 ktorrent/core.cpp:1094
 msgid "Data file is missing"
 msgstr "Datafil mangler"
 
-#: ktorrent/core.cpp:1085
+#: ktorrent/core.cpp:1093
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Klarte ikke lage datafil på nytt: %1"
 
-#: ktorrent/core.cpp:1153
+#: ktorrent/core.cpp:1161
 msgid "Checking Data Integrity"
 msgstr "Sjekker dataintegritet"
 
-#: ktorrent/core.cpp:1175
+#: ktorrent/core.cpp:1183
 #, kde-format
 msgid ""
 "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
 "want to import them ?"
 msgstr "Fant %1 strømmer fra KDE3-versjonen av KTorrent. Vil du importere dem?"
 
-#: ktorrent/core.cpp:1197
+#: ktorrent/core.cpp:1205
 msgid "No torrents from the KDE3 version were found !"
 msgstr "Fant ingen strømmer fra KDE3-versjonen."
 
@@ -1203,60 +1210,60 @@ msgstr ""
 msgid "Widget to manage the torrent queue"
 msgstr ""
 
-#: ktorrent/gui.cpp:266 ktorrent/gui.cpp:281
+#: ktorrent/gui.cpp:268 ktorrent/gui.cpp:283
 msgid "Torrent Files"
 msgstr "Strømfiler"
 
-#: ktorrent/gui.cpp:266 ktorrent/gui.cpp:281
-#: plugins/mediaplayer/mediaview.cpp:72
+#: ktorrent/gui.cpp:268 ktorrent/gui.cpp:283
+#: plugins/mediaplayer/mediaview.cpp:75
 msgid "All Files"
 msgstr "Alle filer"
 
-#: ktorrent/gui.cpp:267 ktorrent/gui.cpp:282
+#: ktorrent/gui.cpp:269 ktorrent/gui.cpp:284
 msgid "Open Location"
 msgstr "Åpne adresse"
 
-#: ktorrent/gui.cpp:361
+#: ktorrent/gui.cpp:363
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "Ugyldig URL: %1"
 
-#: ktorrent/gui.cpp:422
+#: ktorrent/gui.cpp:424
 #, fuzzy
 #| msgid "Create a torrent"
 msgid "Create a new torrent"
 msgstr "Lag en ny strøm"
 
-#: ktorrent/gui.cpp:424
+#: ktorrent/gui.cpp:426
 #, fuzzy
 #| msgid "Create a torrent"
 msgid "Open a torrent"
 msgstr "Lag en ny strøm"
 
-#: ktorrent/gui.cpp:428
+#: ktorrent/gui.cpp:430
 msgid "Open Silently"
 msgstr "Åpne stille"
 
-#: ktorrent/gui.cpp:429
+#: ktorrent/gui.cpp:431
 #, fuzzy
 #| msgid "Open the torrents without asking any questions."
 msgid "Open a torrent without asking any questions"
 msgstr "Åpne strømmer uten å stille spørsmål"
 
-#: ktorrent/gui.cpp:443
+#: ktorrent/gui.cpp:445
 msgid "Start"
 msgstr "Start"
 
-#: ktorrent/gui.cpp:444
+#: ktorrent/gui.cpp:446
 msgid "Start all selected torrents in the current tab"
 msgstr ""
 
-#: ktorrent/gui.cpp:449 plugins/mediaplayer/videowidget.cpp:55
-#: plugins/mediaplayer/mediaplayerplugin.cpp:81
+#: ktorrent/gui.cpp:451 plugins/mediaplayer/videowidget.cpp:55
+#: plugins/mediaplayer/mediaplayerplugin.cpp:80
 msgid "Stop"
 msgstr "Stopp"
 
-#: ktorrent/gui.cpp:450
+#: ktorrent/gui.cpp:452
 msgid "Stop all selected torrents in the current tab"
 msgstr ""
 
@@ -1280,34 +1287,34 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KPushButton, m_remove)
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:67
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
-#: ktorrent/gui.cpp:455 rc.cpp:470 rc.cpp:497 rc.cpp:506 rc.cpp:851
-#: rc.cpp:1884
+#: ktorrent/gui.cpp:457 rc.cpp:470 rc.cpp:497 rc.cpp:506 rc.cpp:851
+#: rc.cpp:1887
 msgid "Remove"
 msgstr "Fjern"
 
-#: ktorrent/gui.cpp:456
+#: ktorrent/gui.cpp:458
 msgid "Remove all selected torrents in the current tab"
 msgstr ""
 
-#: ktorrent/gui.cpp:461 ktorrent/gui.cpp:467
+#: ktorrent/gui.cpp:463 ktorrent/gui.cpp:469
 msgid "Start All"
 msgstr "Start alle"
 
-#: ktorrent/gui.cpp:462
+#: ktorrent/gui.cpp:464
 msgid "Start all torrents in the current tab"
 msgstr ""
 
-#: ktorrent/gui.cpp:468
+#: ktorrent/gui.cpp:470
 #, fuzzy
 #| msgid "Start torrents"
 msgid "Start all torrents"
 msgstr "Start nedlastinger"
 
-#: ktorrent/gui.cpp:471 ktorrent/gui.cpp:477
+#: ktorrent/gui.cpp:473 ktorrent/gui.cpp:479
 msgid "Stop All"
 msgstr "Stop alle"
 
-#: ktorrent/gui.cpp:472
+#: ktorrent/gui.cpp:474
 #, fuzzy
 #| msgid "Stop all torrents"
 msgid "Stop all torrents in the current tab"
@@ -1321,85 +1328,85 @@ msgstr "Stopp alle strømmer"
 #. i18n: ectx: property (text), widget (QCheckBox, m_paused)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:167
 #. i18n: ectx: property (text), widget (QCheckBox, m_paused)
-#: ktorrent/gui.cpp:478 rc.cpp:2253 rc.cpp:2322
+#: ktorrent/gui.cpp:480 rc.cpp:2256 rc.cpp:2325
 msgid "Stop all torrents"
 msgstr "Stopp alle strømmer"
 
-#: ktorrent/gui.cpp:481
+#: ktorrent/gui.cpp:483
 msgid "Open URL"
 msgstr "Åpne URL"
 
-#: ktorrent/gui.cpp:482
+#: ktorrent/gui.cpp:484
 msgid "Open an URL which points to a torrent"
 msgstr ""
 
-#: ktorrent/gui.cpp:487
+#: ktorrent/gui.cpp:489
 msgid "Enqueue/Dequeue"
 msgstr "Legg til/Fjern fra køen"
 
-#: ktorrent/gui.cpp:488
+#: ktorrent/gui.cpp:490
 #, fuzzy
 #| msgid "Enqueue or dequeue a torrent"
 msgid "Enqueue or dequeue all selected torrents in the current tab"
 msgstr "Legg til/Fjern fra køen"
 
-#: ktorrent/gui.cpp:493
+#: ktorrent/gui.cpp:495
 #, fuzzy
 #| msgid "Inactive torrents"
 msgid "Pause KTorrent"
 msgstr "Inaktive strømmer"
 
-#: ktorrent/gui.cpp:494
+#: ktorrent/gui.cpp:496
 msgid "Pause all running torrents"
 msgstr "Sett alle strømmer på pause"
 
-#: ktorrent/gui.cpp:497
+#: ktorrent/gui.cpp:499
 #, fuzzy
 #| msgid "Remove Torrent"
 msgid "Resume KTorrent"
 msgstr "Fjern strøm"
 
-#: ktorrent/gui.cpp:498
+#: ktorrent/gui.cpp:500
 msgid "Resume paused torrents"
 msgstr "Fortsett strømmene som er på pause"
 
-#: ktorrent/gui.cpp:501 plugins/ipfilter/ipfilterplugin.cpp:60
+#: ktorrent/gui.cpp:503 plugins/ipfilter/ipfilterplugin.cpp:60
 #: plugins/ipfilter/ipfilterplugin.cpp:73
 #: plugins/ipfilter/ipblockingprefpage.cpp:34
 msgid "IP Filter"
 msgstr "IP-filter"
 
-#: ktorrent/gui.cpp:502
+#: ktorrent/gui.cpp:504
 #, fuzzy
 #| msgid "Show list of trackers"
 msgid "Show the list of blocked IP addresses"
 msgstr "Vis liste over sporere"
 
-#: ktorrent/gui.cpp:507
+#: ktorrent/gui.cpp:509
 msgid "Check Data"
 msgstr "Sjekk data"
 
-#: ktorrent/gui.cpp:508
+#: ktorrent/gui.cpp:510
 #, fuzzy
 #| msgid "Scanning data of torrent:"
 msgid "Check all the data of a torrent"
 msgstr "Undersøker data for strømmen:"
 
-#: ktorrent/gui.cpp:513
+#: ktorrent/gui.cpp:515
 msgid "Import Torrent"
 msgstr "Importer strøm"
 
-#: ktorrent/gui.cpp:514
+#: ktorrent/gui.cpp:516
 #, fuzzy
 #| msgid "Import Torrent"
 msgid "Import a torrent"
 msgstr "Importer strøm"
 
-#: ktorrent/gui.cpp:520
+#: ktorrent/gui.cpp:522
 msgid "Import KDE3 Torrents"
 msgstr "Importer KDE3-strømmer"
 
-#: ktorrent/gui.cpp:521
+#: ktorrent/gui.cpp:523
 #, fuzzy
 #| msgid "Importing torrents from KDE3 version:"
 msgid "Import all torrents from the KDE3 version of KTorrent"
@@ -1407,15 +1414,15 @@ msgstr "Importerer strømmer fra KDE3-versjon:"
 
 #. i18n: file: ktorrent/speedlimitsdlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QDialog, SpeedLimitsDlg)
-#: ktorrent/gui.cpp:528 rc.cpp:803
+#: ktorrent/gui.cpp:530 rc.cpp:803
 msgid "Speed Limits"
 msgstr "Fartsgrenser"
 
-#: ktorrent/gui.cpp:529
+#: ktorrent/gui.cpp:531
 msgid "Set the speed limits of individual torrents"
 msgstr ""
 
-#: ktorrent/gui.cpp:534
+#: ktorrent/gui.cpp:536
 msgid "Show/Hide KTorrent"
 msgstr "Vis/Skjul KTorrent"
 
@@ -1551,7 +1558,9 @@ msgid "Torrent has been stopped.<br />"
 msgstr "Strømmen har blitt stoppet.<br />"
 
 #: ktorrent/trayicon.cpp:293
-msgid "Speed limit in KB/s"
+#, fuzzy
+#| msgid "Speed limit in KB/s"
+msgid "Speed limit in KiB/s"
 msgstr "Fartsgrense i KB/s"
 
 #: ktorrent/trayicon.cpp:295
@@ -1567,8 +1576,8 @@ msgid "Time Stalled"
 msgstr "Tid stoppet opp"
 
 #: ktorrent/queuemanagermodel.cpp:101
-#: plugins/infowidget/iwfilelistmodel.cpp:68
-#: plugins/infowidget/iwfiletreemodel.cpp:72
+#: plugins/infowidget/iwfilelistmodel.cpp:77
+#: plugins/infowidget/iwfiletreemodel.cpp:88
 msgid "Priority"
 msgstr "Prioritet"
 
@@ -1581,7 +1590,7 @@ msgid "Running"
 msgstr "Kjører"
 
 #: ktorrent/queuemanagermodel.cpp:138
-#: libbtcore/torrent/torrentcontrol.cpp:1477
+#: libbtcore/torrent/torrentcontrol.cpp:1489
 msgid "Queued"
 msgstr "Lagt i kø"
 
@@ -1597,40 +1606,34 @@ msgid ""
 "order."
 msgstr ""
 
-#: ktorrent/speedlimitsmodel.cpp:109
+#: ktorrent/speedlimitsmodel.cpp:110
 #: plugins/syndication/feedwidgetmodel.cpp:83
 msgid "Torrent"
 msgstr "Strøm"
 
-#: ktorrent/speedlimitsmodel.cpp:110
+#: ktorrent/speedlimitsmodel.cpp:111
 msgid "Download Limit"
 msgstr "Nedlastingsgrense"
 
-#: ktorrent/speedlimitsmodel.cpp:111
+#: ktorrent/speedlimitsmodel.cpp:112
 msgid "Upload Limit"
 msgstr "Opplastingsgrense"
 
-#: ktorrent/speedlimitsmodel.cpp:112
+#: ktorrent/speedlimitsmodel.cpp:113
 msgid "Assured Download Speed"
 msgstr "Garantert nedlastingsfart"
 
-#: ktorrent/speedlimitsmodel.cpp:113
+#: ktorrent/speedlimitsmodel.cpp:114
 msgid "Assured Upload Speed"
 msgstr "Garantert opplastingsfart"
 
-#: ktorrent/speedlimitsmodel.cpp:137 ktorrent/speedlimitsmodel.cpp:142
-#: ktorrent/speedlimitsmodel.cpp:147 ktorrent/speedlimitsmodel.cpp:152
-#, kde-format
-msgid "%1 KB/s"
-msgstr "%1 KB/s"
-
-#. i18n: file: ktorrent/ktorrentui.rc:82
+#. i18n: file: ktorrent/ktorrentui.rc:81
 #. i18n: ectx: Menu (ColumnsMenu)
-#: ktorrent/view.cpp:72 rc.cpp:629
+#: ktorrent/view.cpp:75 rc.cpp:629
 msgid "Columns"
 msgstr "Kolonner"
 
-#: ktorrent/view.cpp:193
+#: ktorrent/view.cpp:204
 #, kde-format
 msgid ""
 "The torrent <b>%1</b> has not finished downloading, do you want to delete "
@@ -1639,29 +1642,29 @@ msgstr ""
 "Strømmen <b>%1</b> er ikke ferdig lastet ned; vil du slette de uferdige "
 "dataene også?"
 
-#: ktorrent/view.cpp:198
+#: ktorrent/view.cpp:209
 msgid "Remove Download"
 msgstr "Fjern nedlasting"
 
-#: ktorrent/view.cpp:199
+#: ktorrent/view.cpp:210
 msgid "Delete Data"
 msgstr "Fjern data"
 
-#: ktorrent/view.cpp:200
+#: ktorrent/view.cpp:211
 msgid "Keep Data"
 msgstr "Behold data"
 
-#: ktorrent/view.cpp:219
+#: ktorrent/view.cpp:230
 msgid ""
 "You will lose all the downloaded data. Are you sure you want to do this?"
 msgstr "Du vil miste all data du har lastet ned. Er du sikker?"
 
-#: ktorrent/view.cpp:220
+#: ktorrent/view.cpp:231
 msgid "Remove Torrent"
 msgstr "Fjern strøm"
 
-#: ktorrent/view.cpp:335 plugins/infowidget/fileview.cpp:280
-#: plugins/infowidget/fileview.cpp:301
+#: ktorrent/view.cpp:346 plugins/infowidget/fileview.cpp:270
+#: plugins/infowidget/fileview.cpp:291
 msgid "Select a directory to move the data to."
 msgstr "Velg en mappe å flytte innholdet til."
 
@@ -1792,12 +1795,12 @@ msgstr "Inaktive opplastinger"
 msgid "Ungrouped Torrents"
 msgstr "Ikke grupperte strømmer"
 
-#: libktcore/torrent/torrentfiletreemodel.cpp:376
-#: libktcore/torrent/torrentfilelistmodel.cpp:69
+#: libktcore/torrent/torrentfiletreemodel.cpp:398
+#: libktcore/torrent/torrentfilelistmodel.cpp:76
 msgid "File"
 msgstr "Fil"
 
-#: libktcore/torrent/queuemanager.cpp:101
+#: libktcore/torrent/queuemanager.cpp:106
 msgid ""
 "You don't have enough disk space to download this torrent. Are you sure you "
 "want to continue?"
@@ -1805,12 +1808,12 @@ msgstr ""
 "Du har ikke nok diskplass til å laste ned denne strømmen. Er du sikker på at "
 "du vil fortsette?"
 
-#: libktcore/torrent/queuemanager.cpp:101
+#: libktcore/torrent/queuemanager.cpp:106
 #, kde-format
 msgid "Insufficient disk space for %1"
 msgstr "Ikke nok diskplass for «%1»"
 
-#: libktcore/torrent/queuemanager.cpp:126
+#: libktcore/torrent/queuemanager.cpp:131
 #, kde-format
 msgid ""
 "The torrent \"%1\" has reached it's maximum share ratio and it's maximum "
@@ -1819,7 +1822,7 @@ msgstr ""
 "Strømmen «%1» har nådd sitt høyeste delingsforhold og lengste delingstid. "
 "Ignorere grensen og starte deling uansett?"
 
-#: libktcore/torrent/queuemanager.cpp:128
+#: libktcore/torrent/queuemanager.cpp:133
 #, kde-format
 msgid ""
 "The torrent \"%1\" has reached it's maximum share ratio. Ignore the limit "
@@ -1828,7 +1831,7 @@ msgstr ""
 "Strømmen «%1» har nådd sitt høyeste delingsforhold. Ignorere grensen og "
 "starte deling uansett?"
 
-#: libktcore/torrent/queuemanager.cpp:130
+#: libktcore/torrent/queuemanager.cpp:135
 #, kde-format
 msgid ""
 "The torrent \"%1\" has reached it's maximum seed time. Ignore the limit and "
@@ -1837,11 +1840,11 @@ msgstr ""
 "Strømmen «%1» har nådd sin lengste delingstid. Ignorere grensen og starte "
 "deling uansett?"
 
-#: libktcore/torrent/queuemanager.cpp:132
+#: libktcore/torrent/queuemanager.cpp:137
 msgid "Maximum share ratio limit reached."
 msgstr "Nådde grense for høyeste delingsforhold."
 
-#: libktcore/torrent/queuemanager.cpp:218
+#: libktcore/torrent/queuemanager.cpp:223
 msgid ""
 "Not enough disk space for the following torrents. Do you want to start them "
 "anyway ?"
@@ -1849,7 +1852,7 @@ msgstr ""
 "Du har ikke nok diskplass til å laste ned følgende strømmer. Vil du starte "
 "dem uansett?"
 
-#: libktcore/torrent/queuemanager.cpp:257
+#: libktcore/torrent/queuemanager.cpp:262
 msgid ""
 "The following torrents have reached their maximum seed time. Do you want to "
 "start them anyway ?"
@@ -1857,7 +1860,7 @@ msgstr ""
 "Følgende strømmer har nådd sine lengste delingstider. Vil du starte dem "
 "uansett?"
 
-#: libktcore/torrent/queuemanager.cpp:286
+#: libktcore/torrent/queuemanager.cpp:291
 msgid ""
 "The following torrents have reached their maximum share ratio. Do you want "
 "to start them anyway ?"
@@ -1865,19 +1868,19 @@ msgstr ""
 "Følgenste strømmer har nådd sine høyeste delingsforhold. Vil du starte dem "
 "uansett?"
 
-#: libktcore/torrent/queuemanager.cpp:376
-#: libktcore/torrent/queuemanager.cpp:737
+#: libktcore/torrent/queuemanager.cpp:381
+#: libktcore/torrent/queuemanager.cpp:744
 #, kde-format
 msgid "Error stopping torrent %1 : %2"
 msgstr "Klarte ikke stoppe strømmen «%1»: %2"
 
-#: libktcore/torrent/queuemanager.cpp:378
-#: libktcore/torrent/queuemanager.cpp:723
-#: libktcore/torrent/queuemanager.cpp:739
+#: libktcore/torrent/queuemanager.cpp:383
+#: libktcore/torrent/queuemanager.cpp:730
+#: libktcore/torrent/queuemanager.cpp:746
 msgid "Error"
 msgstr "Feil"
 
-#: libktcore/torrent/queuemanager.cpp:721
+#: libktcore/torrent/queuemanager.cpp:728
 #, kde-format
 msgid "Error starting torrent %1 : %2"
 msgstr "Klarte ikke starte strømmen «%1»: %2"
@@ -2040,8 +2043,8 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "have been downloaded, and which are not OK.</p></body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-"css\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
@@ -2172,13 +2175,17 @@ msgstr "Tilgjengelig båndbredde inn:"
 #. i18n: file: ktorrent/recommendedsettingsdlg.ui:78
 #. i18n: ectx: property (text), widget (QLabel, m_upload_bw_display)
 #: rc.cpp:83
-msgid "(= 32 KB/s)"
+#, fuzzy
+#| msgid "(= 32 KB/s)"
+msgid "(= 32 KiB/s)"
 msgstr "(= 32 KB/s)"
 
 #. i18n: file: ktorrent/recommendedsettingsdlg.ui:85
 #. i18n: ectx: property (text), widget (QLabel, m_download_bw_display)
 #: rc.cpp:86
-msgid "(= 500 KB/s)"
+#, fuzzy
+#| msgid "(= 500 KB/s)"
+msgid "(= 500 KiB/s)"
 msgstr "(= 500 KB/s)"
 
 #. i18n: file: ktorrent/recommendedsettingsdlg.ui:96
@@ -2265,7 +2272,7 @@ msgstr "Høyeste nedlastingsfart:"
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:183
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:121 rc.cpp:1003 rc.cpp:2259 rc.cpp:2328
+#: rc.cpp:121 rc.cpp:1003 rc.cpp:2262 rc.cpp:2331
 msgid "Maximum connections per torrent:"
 msgstr "Høyeste antall forbindelser per strøm:"
 
@@ -2285,7 +2292,7 @@ msgstr "Høyeste antall forbindelser per strøm:"
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:200
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:125 rc.cpp:1012 rc.cpp:2265 rc.cpp:2334
+#: rc.cpp:125 rc.cpp:1012 rc.cpp:2268 rc.cpp:2337
 msgid "Global connection limit:"
 msgstr "Begrensning av totale forbindelser:"
 
@@ -2339,7 +2346,7 @@ msgstr "Velg hvilke filer du vil laste ned"
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #. i18n: file: plugins/syndication/filtereditor.ui:239
 #. i18n: ectx: property (text), widget (QCheckBox, m_use_custom_download_location)
-#: rc.cpp:147 rc.cpp:1986
+#: rc.cpp:147 rc.cpp:1989
 msgid "Download to:"
 msgstr "Last ned til:"
 
@@ -2951,7 +2958,9 @@ msgstr "Største størrelsen en bit kan ha for å bli kontrollert på nytt."
 #. i18n: file: ktorrent/advancedpref.ui:291
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeVideo)
 #: rc.cpp:363 rc.cpp:1192 rc.cpp:1204
-msgid " KB"
+#, fuzzy
+#| msgid " KB"
+msgid " KiB"
 msgstr " KB"
 
 #. i18n: file: ktorrent/btpref.ui:210
@@ -3125,7 +3134,7 @@ msgstr "127.0.0.1"
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:61
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: rc.cpp:404 rc.cpp:485 rc.cpp:885 rc.cpp:931 rc.cpp:979 rc.cpp:1219
-#: rc.cpp:1351 rc.cpp:2091
+#: rc.cpp:1351 rc.cpp:2094
 msgid "Port:"
 msgstr "Port:"
 
@@ -3157,8 +3166,8 @@ msgstr "Port:"
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
 #. i18n: file: plugins/search/searchpref.ui:139
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
-#: rc.cpp:407 rc.cpp:467 rc.cpp:488 rc.cpp:503 rc.cpp:848 rc.cpp:1881
-#: rc.cpp:2037
+#: rc.cpp:407 rc.cpp:467 rc.cpp:488 rc.cpp:503 rc.cpp:848 rc.cpp:1884
+#: rc.cpp:2040
 msgid "Add"
 msgstr "Legg til"
 
@@ -3206,7 +3215,7 @@ msgstr "Fil eller mappe strømmen skal lages fra:"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #. i18n: file: plugins/syndication/filtereditor.ui:183
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: rc.cpp:419 rc.cpp:1276 rc.cpp:1816 rc.cpp:1974
+#: rc.cpp:419 rc.cpp:1276 rc.cpp:1819 rc.cpp:1977
 msgid "Options"
 msgstr "Innstillinger"
 
@@ -3219,55 +3228,73 @@ msgstr "Størrelse på hver bit:"
 #. i18n: file: ktorrent/torrentcreatordlg.ui:73
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
 #: rc.cpp:425
-msgid "32 KB"
+#, fuzzy
+#| msgid "32 KB"
+msgid "32 KiB"
 msgstr "32 KB"
 
 #. i18n: file: ktorrent/torrentcreatordlg.ui:78
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
 #: rc.cpp:428
-msgid "64 KB"
+#, fuzzy
+#| msgid "64 KB"
+msgid "64 KiB"
 msgstr "64 KB"
 
 #. i18n: file: ktorrent/torrentcreatordlg.ui:83
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
 #: rc.cpp:431
-msgid "128 KB"
+#, fuzzy
+#| msgid "128 KB"
+msgid "128 KiB"
 msgstr "128 KB"
 
 #. i18n: file: ktorrent/torrentcreatordlg.ui:88
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
 #: rc.cpp:434
-msgid "256 KB"
+#, fuzzy
+#| msgid "256 KB"
+msgid "256 KiB"
 msgstr "256 KB"
 
 #. i18n: file: ktorrent/torrentcreatordlg.ui:93
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
 #: rc.cpp:437
-msgid "512 KB"
+#, fuzzy
+#| msgid "512 KB"
+msgid "512 KiB"
 msgstr "512 KB"
 
 #. i18n: file: ktorrent/torrentcreatordlg.ui:98
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
 #: rc.cpp:440
-msgid "1 MB"
+#, fuzzy
+#| msgid "1 MB"
+msgid "1 MiB"
 msgstr "1 MB"
 
 #. i18n: file: ktorrent/torrentcreatordlg.ui:103
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
 #: rc.cpp:443
-msgid "2 MB"
+#, fuzzy
+#| msgid "2 MB"
+msgid "2 MiB"
 msgstr "2 MB"
 
 #. i18n: file: ktorrent/torrentcreatordlg.ui:108
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
 #: rc.cpp:446
-msgid "4 MB"
+#, fuzzy
+#| msgid "4 MB"
+msgid "4 MiB"
 msgstr "4 MB"
 
 #. i18n: file: ktorrent/torrentcreatordlg.ui:113
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
 #: rc.cpp:449
-msgid "8 MB"
+#, fuzzy
+#| msgid "8 MB"
+msgid "8 MiB"
 msgstr "8 MB"
 
 #. i18n: file: ktorrent/torrentcreatordlg.ui:123
@@ -3314,7 +3341,7 @@ msgstr "Sporere"
 #. i18n: ectx: property (text), widget (KPushButton, m_move_up)
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:50
 #. i18n: ectx: property (text), widget (KPushButton, m_move_up)
-#: rc.cpp:473 rc.cpp:1840
+#: rc.cpp:473 rc.cpp:1843
 msgid "Move Up"
 msgstr "Flytt opp"
 
@@ -3326,7 +3353,7 @@ msgstr "Flytt opp"
 #. i18n: ectx: property (text), widget (KPushButton, m_move_down)
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:57
 #. i18n: ectx: property (text), widget (KPushButton, m_move_down)
-#: rc.cpp:476 rc.cpp:1843
+#: rc.cpp:476 rc.cpp:1846
 msgid "Move Down"
 msgstr "Flytt ned"
 
@@ -3557,7 +3584,7 @@ msgstr "Lengste opplastingstid:"
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, m_max_seed_time)
 #. i18n: file: plugins/infowidget/statustab.ui:364
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, time_limit)
-#: rc.cpp:585 rc.cpp:1560
+#: rc.cpp:585 rc.cpp:1563
 msgid " Hours"
 msgstr " timer"
 
@@ -3635,13 +3662,13 @@ msgstr "Gruppe-meny"
 msgid "ViewMenu"
 msgstr "Vis-meny"
 
-#. i18n: file: ktorrent/ktorrentui.rc:81
+#. i18n: file: ktorrent/ktorrentui.rc:80
 #. i18n: ectx: Menu (ColumnsMenu)
 #: rc.cpp:626
 msgid "Configure Columns"
 msgstr "Sett opp kolonner"
 
-#. i18n: file: ktorrent/ktorrentui.rc:89
+#. i18n: file: ktorrent/ktorrentui.rc:88
 #. i18n: ectx: ToolBar (mainToolBar)
 #: rc.cpp:632
 msgid "Download Toolbar"
@@ -3711,7 +3738,9 @@ msgstr "Stopp alle nedlastinger når ledig diskplass er lavere enn dette."
 #. i18n: file: ktorrent/qmpref.ui:103
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minDiskSpace)
 #: rc.cpp:677
-msgid " MB"
+#, fuzzy
+#| msgid " MB"
+msgid " MiB"
 msgstr " MB"
 
 #. i18n: file: ktorrent/qmpref.ui:126
@@ -3827,7 +3856,7 @@ msgstr " minutter"
 
 #. i18n: file: ktorrent/qmpref.ui:183
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:704 libbtcore/torrent/torrentcontrol.cpp:1465
+#: rc.cpp:704 libbtcore/torrent/torrentcontrol.cpp:1477
 msgid "Seeding"
 msgstr "Deler"
 
@@ -4025,7 +4054,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/missingfilesdlg.ui:52
 #. i18n: ectx: property (text), widget (KPushButton, m_dnd)
-#: rc.cpp:773 plugins/infowidget/fileview.cpp:72
+#: rc.cpp:773 plugins/infowidget/fileview.cpp:78
 msgid "Do Not Download"
 msgstr "Ikke last ned"
 
@@ -4485,7 +4514,7 @@ msgstr "Krever brukernavn og passord"
 #. i18n: ectx: property (text), widget (QLabel, textLabel5)
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:25
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:950 rc.cpp:1336 rc.cpp:2082
+#: rc.cpp:950 rc.cpp:1336 rc.cpp:2085
 msgid "Username:"
 msgstr "Brukernavn:"
 
@@ -4536,7 +4565,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:35
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:960 rc.cpp:1342 rc.cpp:2085
+#: rc.cpp:960 rc.cpp:1342 rc.cpp:2088
 msgid "Password:"
 msgstr "Passord:"
 
@@ -4579,15 +4608,15 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #. i18n: file: plugins/infowidget/trackerview.ui:34
 #. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: plugins/syndication/feedwidget.ui:18
+#. i18n: file: plugins/syndication/feedwidget.ui:26
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: ktorrent/pastedlgbase.ui:36
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #. i18n: file: plugins/infowidget/trackerview.ui:34
 #. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: plugins/syndication/feedwidget.ui:18
+#. i18n: file: plugins/syndication/feedwidget.ui:26
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:973 rc.cpp:1416 rc.cpp:1855
+#: rc.cpp:973 rc.cpp:1416 rc.cpp:1858
 msgid "URL:"
 msgstr "URL:"
 
@@ -4734,13 +4763,17 @@ msgstr "Den totale grensen for forbindelser, for alle strømmer sammenlakt."
 #. i18n: file: ktorrent/networkpref.ui:127
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxDownloadRate)
 #: rc.cpp:1024
-msgid "The maximum download speed in KB/s."
+#, fuzzy
+#| msgid "The maximum download speed in KB/s."
+msgid "The maximum download speed in KiB/s."
 msgstr "Høyeste nedlastingsfart i KB/s."
 
 #. i18n: file: ktorrent/networkpref.ui:150
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxUploadRate)
 #: rc.cpp:1036
-msgid "The maximum upload speed in KB/s"
+#, fuzzy
+#| msgid "The maximum upload speed in KB/s"
+msgid "The maximum upload speed in KiB/s"
 msgstr "Høyeste opplastingsfart i KB/s"
 
 #. i18n: file: ktorrent/networkpref.ui:177
@@ -4904,9 +4937,13 @@ msgstr "Reserver diskplass før nedlasting"
 #. i18n: file: ktorrent/advancedpref.ui:31
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_fullDiskPrealloc)
 #: rc.cpp:1090
+#, fuzzy
+#| msgid ""
+#| "Instead of doing a quick reservation, do a full reservation. This is "
+#| "slower then the quick way, but avoids fragmentation on the disk."
 msgid ""
 "Instead of doing a quick reservation, do a full reservation. This is slower "
-"then the quick way, but avoids fragmentation on the disk."
+"than the quick way, but avoids fragmentation on the disk."
 msgstr ""
 "Gjør en full reservasjon i stedet for en rask en. Dette er treigere, men "
 "gjør at filer lagres mer sammenhengende."
@@ -4932,7 +4969,7 @@ msgid ""
 "<b>Basic:</b> Will work on all filesystems, but is slow.\n"
 "</li><li>\n"
 "<b>Filesystem Specific:</b> Will use special methods provided by some "
-"filesystems, which are faster then the basic method.\n"
+"filesystems, which are faster than the basic method.\n"
 "</li></ul>\n"
 "</html>"
 msgstr ""
@@ -5090,9 +5127,9 @@ msgid ""
 "p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">For example on an 100 Mbit "
-"LAN, if you set a limit of 3000 KB/s, you might not actually reach this "
+"LAN, if you set a limit of 3000 KiB/s, you might not actually reach this "
 "speed when this value is too high. Without a limit you can easily get above "
-"3000 KB/s on a LAN.</p></body></html>"
+"3000 KiB/s on a LAN.</p></body></html>"
 msgstr ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -5231,13 +5268,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/advancedpref.ui:229
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: rc.cpp:1171
+#: rc.cpp:1171 plugins/stats/SpdTabPage.cc:63 plugins/stats/SpdTabPage.cc:64
 msgid "Current speed"
 msgstr "Nåværende fart"
 
 #. i18n: file: ktorrent/advancedpref.ui:234
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: rc.cpp:1174
+#: rc.cpp:1174 plugins/stats/SpdTabPage.cc:66 plugins/stats/SpdTabPage.cc:67
 msgid "Average speed"
 msgstr "Gjennomsnittsfart"
 
@@ -5641,7 +5678,7 @@ msgstr "Stopp alle strømmer"
 #. i18n: ectx: property (windowTitle), widget (QWidget, WebInterfacePrefWidget)
 #. i18n: file: plugins/search/searchpref.ui:25
 #. i18n: ectx: property (windowTitle), widget (QWidget, SearchPref)
-#: rc.cpp:1324 rc.cpp:2001
+#: rc.cpp:1324 rc.cpp:2004
 msgid "Search Preferences"
 msgstr "Søkeinnstillinger"
 
@@ -5832,7 +5869,7 @@ msgstr "Fjern nettdelingstjener"
 #. i18n: ectx: property (windowTitle), widget (QWidget, ChunkDownloadView)
 #. i18n: file: plugins/infowidget/statustab.ui:210
 #. i18n: ectx: property (text), widget (QLabel, hdr_chunks)
-#: rc.cpp:1392 rc.cpp:1533 plugins/infowidget/infowidgetplugin.cpp:241
+#: rc.cpp:1392 rc.cpp:1536 plugins/infowidget/infowidgetplugin.cpp:241
 msgid "Chunks"
 msgstr "Biter"
 
@@ -5878,135 +5915,129 @@ msgstr "Størrelse:"
 msgid "Current Tracker"
 msgstr "Gjeldende sporer"
 
-#. i18n: file: plugins/infowidget/trackerview.ui:58
+#. i18n: file: plugins/infowidget/trackerview.ui:55
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: file: plugins/syndication/feedwidget.ui:38
+#. i18n: file: plugins/syndication/feedwidget.ui:56
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: file: plugins/infowidget/trackerview.ui:58
+#. i18n: file: plugins/infowidget/trackerview.ui:55
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: file: plugins/syndication/feedwidget.ui:38
+#. i18n: file: plugins/syndication/feedwidget.ui:56
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1419 rc.cpp:1859
+#: rc.cpp:1419 rc.cpp:1862
 msgid "Status:"
 msgstr "Status:"
 
-#. i18n: file: plugins/infowidget/trackerview.ui:84
+#. i18n: file: plugins/infowidget/trackerview.ui:78
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: file: plugins/infowidget/statustab.ui:111
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#. i18n: file: plugins/infowidget/trackerview.ui:84
+#. i18n: file: plugins/infowidget/trackerview.ui:78
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: file: plugins/infowidget/statustab.ui:111
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:1422 rc.cpp:1524
+#: rc.cpp:1422 rc.cpp:1527
 msgid "Seeders:"
 msgstr "Delere:"
 
-#. i18n: file: plugins/infowidget/trackerview.ui:108
+#. i18n: file: plugins/infowidget/trackerview.ui:102
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: file: plugins/infowidget/statustab.ui:42
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#. i18n: file: plugins/infowidget/trackerview.ui:108
+#. i18n: file: plugins/infowidget/trackerview.ui:102
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: file: plugins/infowidget/statustab.ui:42
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:1425 rc.cpp:1515
+#: rc.cpp:1425 rc.cpp:1518
 msgid "Leechers:"
 msgstr "Nedlastere:"
 
-#. i18n: file: plugins/infowidget/trackerview.ui:132
+#. i18n: file: plugins/infowidget/trackerview.ui:126
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: rc.cpp:1428
 msgid "Times Downloaded:"
 msgstr "Antall ganger nedlastet:"
 
-#. i18n: file: plugins/infowidget/trackerview.ui:156
+#. i18n: file: plugins/infowidget/trackerview.ui:150
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: rc.cpp:1431
 msgid "Next Update In:"
 msgstr "Oppdatering om:"
 
-#. i18n: file: plugins/infowidget/trackerview.ui:195
-#. i18n: ectx: property (text), widget (KPushButton, m_update_tracker)
-#: rc.cpp:1434
-msgid "Update Tracker"
-msgstr "Oppdater sporer"
-
-#. i18n: file: plugins/infowidget/trackerview.ui:218
+#. i18n: file: plugins/infowidget/trackerview.ui:219
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:1437
+#: rc.cpp:1440
 msgid "Available Trackers"
 msgstr "Tilgjengelige sporere"
 
-#. i18n: file: plugins/infowidget/trackerview.ui:231
+#. i18n: file: plugins/infowidget/trackerview.ui:232
 #. i18n: ectx: property (text), widget (KPushButton, m_add_tracker)
-#: rc.cpp:1440
+#: rc.cpp:1443
 msgid "Add Tracker"
 msgstr "Legg til sporer"
 
-#. i18n: file: plugins/infowidget/trackerview.ui:243
+#. i18n: file: plugins/infowidget/trackerview.ui:244
 #. i18n: ectx: property (text), widget (KPushButton, m_remove_tracker)
-#: rc.cpp:1443
+#: rc.cpp:1446
 msgid "Remove Tracker"
 msgstr "Fjern sporer"
 
-#. i18n: file: plugins/infowidget/trackerview.ui:250
+#. i18n: file: plugins/infowidget/trackerview.ui:251
 #. i18n: ectx: property (text), widget (KPushButton, m_change_tracker)
-#: rc.cpp:1446
+#: rc.cpp:1449
 msgid "Change Tracker"
 msgstr "Bytt sporer"
 
-#. i18n: file: plugins/infowidget/trackerview.ui:270
+#. i18n: file: plugins/infowidget/trackerview.ui:271
 #. i18n: ectx: property (text), widget (KPushButton, m_restore_defaults)
-#: rc.cpp:1449
+#: rc.cpp:1452
 msgid "Restore Defaults"
 msgstr "Bruk standardverdier"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:16
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:1452
+#: rc.cpp:1455
 msgid "Tabs"
 msgstr "Faner"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:22
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showPeerView)
-#: rc.cpp:1455
+#: rc.cpp:1458
 msgid "Whether or not to show the peers tab in the bottom of the window."
 msgstr "Vis Personer-fanen i bunnen av vinduet."
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:25
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showPeerView)
-#: rc.cpp:1458
+#: rc.cpp:1461
 msgid "Show list of peers"
 msgstr "Vis liste over personer"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:32
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showChunkView)
-#: rc.cpp:1461
+#: rc.cpp:1464
 msgid "Whether or not to show the chunks tab in the bottom of the window."
 msgstr "Vis Biter-fanen i bunnen av vinduet."
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:35
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showChunkView)
-#: rc.cpp:1464
+#: rc.cpp:1467
 msgid "Show list of chunks currently downloading"
 msgstr "Vis liste over biter som lastes ned"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:42
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showTrackersView)
-#: rc.cpp:1467
+#: rc.cpp:1470
 msgid "Whether or not to show the trackers tab in the bottom of the window."
 msgstr "Vis Sporer-fanen i bunnen av vinduet."
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:45
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showTrackersView)
-#: rc.cpp:1470
+#: rc.cpp:1473
 msgid "Show list of trackers"
 msgstr "Vis liste over sporere"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:55
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showWebSeedsTab)
-#: rc.cpp:1473
+#: rc.cpp:1476
 #, fuzzy
 #| msgid ""
 #| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
@@ -6038,25 +6069,25 @@ msgstr ""
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:58
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showWebSeedsTab)
-#: rc.cpp:1479
+#: rc.cpp:1482
 msgid "Show list of webseeds"
 msgstr "Vis liste over nettdelingstjenere"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:68
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:1482
+#: rc.cpp:1485
 msgid "File Priority Colors"
 msgstr "Farger for filprioritet"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:74
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1485
+#: rc.cpp:1488
 msgid "First priority:"
 msgstr "Førsteprioritet:"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:84
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_firstColor)
-#: rc.cpp:1488
+#: rc.cpp:1491
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -6078,13 +6109,13 @@ msgstr ""
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:91
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1494
+#: rc.cpp:1497
 msgid "Normal priority:"
 msgstr "Normal prioritet:"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:101
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_normalColor)
-#: rc.cpp:1497
+#: rc.cpp:1500
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -6106,13 +6137,13 @@ msgstr ""
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:108
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:1503
+#: rc.cpp:1506
 msgid "Last priority:"
 msgstr "Lav prioritet:"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:118
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_lastColor)
-#: rc.cpp:1506
+#: rc.cpp:1509
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -6134,98 +6165,98 @@ msgstr ""
 
 #. i18n: file: plugins/infowidget/statustab.ui:31
 #. i18n: ectx: property (text), widget (QLabel, hdr_info)
-#: rc.cpp:1512
+#: rc.cpp:1515
 msgid "Info"
 msgstr "Info"
 
 #. i18n: file: plugins/infowidget/statustab.ui:65
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:1518
+#: rc.cpp:1521
 msgid "Average down speed:"
 msgstr "Gjennomsnittlig nedhastighet"
 
 #. i18n: file: plugins/infowidget/statustab.ui:88
 #. i18n: ectx: property (text), widget (QLabel, label_16)
-#: rc.cpp:1521
+#: rc.cpp:1524
 msgid "Tracker status:"
 msgstr "Sporerstatus:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:134
 #. i18n: ectx: property (text), widget (QLabel, label_15)
-#: rc.cpp:1527
+#: rc.cpp:1530
 msgid "Average up speed:"
 msgstr "Gjennomsnittlig opphastighet"
 
 #. i18n: file: plugins/infowidget/statustab.ui:157
 #. i18n: ectx: property (text), widget (QLabel, label_17)
-#: rc.cpp:1530
+#: rc.cpp:1533
 msgid "Next update in:"
 msgstr "Oppdatering om:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:217
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:1536
+#: rc.cpp:1539
 msgid "Downloaded chunks:"
 msgstr "Nedlastede biter"
 
 #. i18n: file: plugins/infowidget/statustab.ui:240
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:1539
+#: rc.cpp:1542
 msgid "Available chunks:"
 msgstr "Tilgjengelige biter"
 
 #. i18n: file: plugins/infowidget/statustab.ui:302
 #. i18n: ectx: property (text), widget (QLabel, hdr_sharing)
-#: rc.cpp:1542
+#: rc.cpp:1545
 msgid "Sharing"
 msgstr "Deler"
 
 #. i18n: file: plugins/infowidget/statustab.ui:311
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:1545
+#: rc.cpp:1548
 msgid "Share ratio:"
 msgstr "Delingsforhold:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:328
 #. i18n: ectx: property (text), widget (QCheckBox, use_ratio_limit)
-#: rc.cpp:1548
+#: rc.cpp:1551
 msgid "Ratio limit:"
 msgstr "Forholdsgrense:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:354
 #. i18n: ectx: property (text), widget (QCheckBox, use_time_limit)
-#: rc.cpp:1554
+#: rc.cpp:1557
 msgid "Time limit:"
 msgstr "Tidsgrense:"
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:19
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
-#: rc.cpp:1563 plugins/ipfilter/convertthread.cpp:204
+#: rc.cpp:1566 plugins/ipfilter/convertthread.cpp:204
 msgid "Converting..."
 msgstr "Konverterer . . ."
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:28
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:1566
+#: rc.cpp:1569
 msgid "Converting block list to KTorrent format. This might take some time."
 msgstr ""
 "Konverterer liste over biter til KTorrent-format. Dette kan ta litt tid."
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:95
 #. i18n: ectx: property (text), widget (QPushButton, m_cancel)
-#: rc.cpp:1569
+#: rc.cpp:1572
 msgid "C&ancel"
 msgstr "&Avbryt"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, IPBlockingPrefPage)
-#: rc.cpp:1572
+#: rc.cpp:1575
 msgid "IPBlocking Preferences"
 msgstr "Innstillinger for IP-blokkering"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:22
 #. i18n: ectx: property (title), widget (Q3GroupBox, groupBox1)
-#: rc.cpp:1575
+#: rc.cpp:1578
 #, fuzzy
 #| msgid "Select PeerGuardian filter file "
 msgid "PeerGuardian Filter File "
@@ -6233,31 +6264,31 @@ msgstr "Velg filterfil "
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:28
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useLevel1)
-#: rc.cpp:1578
+#: rc.cpp:1581
 msgid "Enable this if you want the IP filter plugin to work."
 msgstr ""
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:31
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useLevel1)
-#: rc.cpp:1581
+#: rc.cpp:1584
 msgid "Use PeerGuardian filter"
 msgstr "Bruk PearGuardian-filter"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:43
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:1584
+#: rc.cpp:1587
 msgid "IP filter file:"
 msgstr "IP-filterfil:"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:53
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_filterURL)
-#: rc.cpp:1587
+#: rc.cpp:1590
 msgid "Filter file to use, this can be a local file or a remote file."
 msgstr ""
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:80
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_download)
-#: rc.cpp:1590
+#: rc.cpp:1593
 #, fuzzy
 #| msgid "Status: Downloading and converting new block list ..."
 msgid "Download and convert the IP filter file."
@@ -6265,13 +6296,13 @@ msgstr "Status: Laster ned og konverterer ny blokkeringsliste . . ."
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:83
 #. i18n: ectx: property (text), widget (QPushButton, m_download)
-#: rc.cpp:1593
+#: rc.cpp:1596
 msgid "Dow&nload/Convert"
 msgstr "Lastet &ned/Konverter"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:93
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: rc.cpp:1596
+#: rc.cpp:1599
 msgid ""
 "Download PeerGuardian filter from bluetack.co.uk or blocklist.org.\n"
 "NOTE: ZIP file from bluetack.co.uk is supported."
@@ -6281,19 +6312,19 @@ msgstr ""
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:116
 #. i18n: ectx: property (title), widget (QGroupBox, m_auto_update_group_box)
-#: rc.cpp:1600
+#: rc.cpp:1603
 msgid "Automatic Update"
 msgstr ""
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:124
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_autoUpdate)
-#: rc.cpp:1603
+#: rc.cpp:1606
 msgid "Enable this if you want to automatically update the filter file."
 msgstr ""
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:127
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_autoUpdate)
-#: rc.cpp:1606
+#: rc.cpp:1609
 #, fuzzy
 #| msgid "Update charts every"
 msgid "Update file every:"
@@ -6301,7 +6332,7 @@ msgstr "Oppdater grafer hvert"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:140
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_autoUpdateInterval)
-#: rc.cpp:1609
+#: rc.cpp:1612
 #, fuzzy
 #| msgid "GUI update interval:"
 msgid "Update interval in days."
@@ -6309,7 +6340,7 @@ msgstr "Oppdateringsintervall for brukergrensesnittet:"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:143
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_autoUpdateInterval)
-#: rc.cpp:1612
+#: rc.cpp:1615
 #, fuzzy
 #| msgid "1 day "
 #| msgid_plural "%1 days "
@@ -6318,7 +6349,7 @@ msgstr "1 dag "
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:163
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1615
+#: rc.cpp:1618
 #, fuzzy
 #| msgid "Next update in:"
 msgid "Last updated:"
@@ -6326,7 +6357,7 @@ msgstr "Oppdatering om:"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:183
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1619
+#: rc.cpp:1622
 #, fuzzy
 #| msgid "Next update in:"
 msgid "Next update:"
@@ -6348,14 +6379,14 @@ msgstr "Oppdatering om:"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. i18n: file: plugins/stats/Settings.ui:140
 #. i18n: ectx: property (text), widget (QLabel, label_11)
-#: rc.cpp:1623 rc.cpp:1626 rc.cpp:1689 rc.cpp:1770
+#: rc.cpp:1626 rc.cpp:1629 rc.cpp:1692 rc.cpp:1773
 #: libbtcore/util/logsystemmanager.cpp:34
 msgid "Connections"
 msgstr "Forbindelser"
 
 #. i18n: file: plugins/stats/Spd.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpdWgt)
-#: rc.cpp:1632 plugins/infowidget/webseedsmodel.cpp:125
+#: rc.cpp:1635 plugins/infowidget/webseedsmodel.cpp:125
 msgid "Speed"
 msgstr "Fart"
 
@@ -6367,7 +6398,7 @@ msgstr "Fart"
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: file: plugins/stats/Settings.ui:114
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#. i18n: file: plugins/syndication/feedwidget.ui:74
+#. i18n: file: plugins/syndication/feedwidget.ui:94
 #. i18n: ectx: property (text), widget (KPushButton, m_download)
 #. i18n: file: plugins/stats/Spd.ui:19
 #. i18n: ectx: property (title), widget (QGroupBox, DlSpdGbw)
@@ -6377,9 +6408,9 @@ msgstr "Fart"
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: file: plugins/stats/Settings.ui:114
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#. i18n: file: plugins/syndication/feedwidget.ui:74
+#. i18n: file: plugins/syndication/feedwidget.ui:94
 #. i18n: ectx: property (text), widget (KPushButton, m_download)
-#: rc.cpp:1635 rc.cpp:1647 rc.cpp:1650 rc.cpp:1767 rc.cpp:1863
+#: rc.cpp:1638 rc.cpp:1650 rc.cpp:1653 rc.cpp:1770 rc.cpp:1866
 #: plugins/search/htmlpart.cpp:168
 msgid "Download"
 msgstr "Nedlastinger"
@@ -6396,7 +6427,7 @@ msgstr "Nedlastinger"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #. i18n: file: plugins/stats/Settings.ui:166
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:1638 rc.cpp:1659 rc.cpp:1773
+#: rc.cpp:1641 rc.cpp:1662 rc.cpp:1776
 #: plugins/infowidget/infowidgetplugin.cpp:220
 msgid "Peers"
 msgstr "Personer"
@@ -6417,7 +6448,7 @@ msgstr "Personer"
 #. i18n: ectx: property (text), widget (QLabel, label_15)
 #. i18n: file: plugins/stats/Settings.ui:192
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:1641 rc.cpp:1677 rc.cpp:1680 rc.cpp:1776
+#: rc.cpp:1644 rc.cpp:1680 rc.cpp:1683 rc.cpp:1779
 msgid "Upload"
 msgstr "Opplastinger"
 
@@ -6429,7 +6460,7 @@ msgstr "Opplastinger"
 #. i18n: ectx: property (title), widget (QGroupBox, ColorsGbw)
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:16
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:1644 rc.cpp:2184
+#: rc.cpp:1647 rc.cpp:2187
 msgid "Colors"
 msgstr "Farger"
 
@@ -6441,7 +6472,7 @@ msgstr "Farger"
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #. i18n: file: plugins/stats/DisplaySettings.ui:412
 #. i18n: ectx: property (text), widget (QLabel, label_16)
-#: rc.cpp:1653 rc.cpp:1683
+#: rc.cpp:1656 rc.cpp:1686
 msgid "Average"
 msgstr "Gjennomsnitt"
 
@@ -6453,139 +6484,140 @@ msgstr "Gjennomsnitt"
 #. i18n: ectx: property (text), widget (QLabel, label_13)
 #. i18n: file: plugins/stats/DisplaySettings.ui:451
 #. i18n: ectx: property (text), widget (QLabel, label_17)
-#: rc.cpp:1656 rc.cpp:1686
+#: rc.cpp:1659 rc.cpp:1689
 msgid "Limit"
 msgstr "Grense"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:172
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:1662
+#: rc.cpp:1665 plugins/stats/SpdTabPage.cc:72
 msgid "Average from leechers"
 msgstr "Gjennomsnitt fra nedlastere"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:207
 #. i18n: ectx: property (text), widget (QLabel, label_19)
-#: rc.cpp:1665
+#: rc.cpp:1668 plugins/stats/SpdTabPage.cc:73
 msgid "Average to leechers"
 msgstr "Gjennomsnitt til nedlastere"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:242
 #. i18n: ectx: property (text), widget (QLabel, label_20)
-#: rc.cpp:1668
+#: rc.cpp:1671 plugins/stats/SpdTabPage.cc:74
 msgid "Average from seeds"
 msgstr "Gjennomsnitt fra delere"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:277
 #. i18n: ectx: property (text), widget (QLabel, label_21)
-#: rc.cpp:1671
+#: rc.cpp:1674 plugins/stats/SpdTabPage.cc:75
 msgid "From leechers"
 msgstr "Fra nedlastere"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:312
 #. i18n: ectx: property (text), widget (QLabel, label_22)
-#: rc.cpp:1674
+#: rc.cpp:1677 plugins/stats/SpdTabPage.cc:76
 msgid "From seeds"
 msgstr "Fra delere"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:512
 #. i18n: ectx: property (text), widget (QLabel, label_23)
-#: rc.cpp:1692
+#: rc.cpp:1695 plugins/stats/ConnsTabPage.cc:57
 msgid "Leechers connected"
 msgstr "TIlkoblede nedlastere"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:547
 #. i18n: ectx: property (text), widget (QLabel, label_24)
-#: rc.cpp:1695
+#: rc.cpp:1698 plugins/stats/ConnsTabPage.cc:61
+#: plugins/stats/ConnsTabPage.cc:106
 msgid "Leechers in swarms"
 msgstr "Nedlastere i svermer"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:582
 #. i18n: ectx: property (text), widget (QLabel, label_25)
-#: rc.cpp:1698
+#: rc.cpp:1701 plugins/stats/ConnsTabPage.cc:64
 msgid "Seeds connected"
 msgstr "Tilkoblede opplastinger"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:617
 #. i18n: ectx: property (text), widget (QLabel, label_26)
-#: rc.cpp:1701
+#: rc.cpp:1704
 msgid "Seeds  in swarms"
 msgstr "Opplastinger i svermer"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:652
 #. i18n: ectx: property (text), widget (QLabel, label_27)
-#: rc.cpp:1704
+#: rc.cpp:1707 plugins/stats/ConnsTabPage.cc:71
 msgid "Average leechers connected per torrent"
 msgstr "Gjennomsnittlig antall nedlastere koblet til hver strøm"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:687
 #. i18n: ectx: property (text), widget (QLabel, label_28)
-#: rc.cpp:1707
+#: rc.cpp:1710 plugins/stats/ConnsTabPage.cc:73
 msgid "Average seeds connected per torrent"
 msgstr "Gjennomsnittlig antall opplastinger per strøm"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:722
 #. i18n: ectx: property (text), widget (QLabel, label_29)
-#: rc.cpp:1710
+#: rc.cpp:1713
 msgid "Avg. leechers connected per running torr."
 msgstr "Gjennomsnittlig antall nedlastere koblet til per kjørende strøm."
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:757
 #. i18n: ectx: property (text), widget (QLabel, label_30)
-#: rc.cpp:1713
+#: rc.cpp:1716
 msgid "Avg. seeds connected per running torrent"
 msgstr "Gjennomsnittlig antall opplastinger er kjørene strøm"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:805
 #. i18n: ectx: property (text), widget (QLabel, label_31)
-#: rc.cpp:1719
+#: rc.cpp:1722 plugins/stats/ConnsTabPage.cc:83
 msgid "Nodes"
 msgstr "Noder"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:844
 #. i18n: ectx: property (text), widget (QLabel, label_32)
-#: rc.cpp:1722
+#: rc.cpp:1725 plugins/stats/ConnsTabPage.cc:84
 msgid "Tasks"
 msgstr "Oppgaver"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:903
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:1725
+#: rc.cpp:1728 plugins/stats/DisplaySettingsPage.cc:28
 msgid "Display"
 msgstr "Visning"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:909
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AntiAliasing)
-#: rc.cpp:1728
+#: rc.cpp:1731
 msgid "Use anti-aliasing"
 msgstr "Bruk kanututjevning"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:919
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_DrawBgdGrid)
-#: rc.cpp:1731
+#: rc.cpp:1734
 msgid "Draw background grid"
 msgstr "Tegn bakgrunnsnett"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:931
 #. i18n: ectx: property (text), widget (QLabel, label_18)
-#: rc.cpp:1734
+#: rc.cpp:1737
 msgid "Widget type:"
 msgstr "Utvidelsestype:"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:939
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_WidgetType)
-#: rc.cpp:1737
+#: rc.cpp:1740
 msgid "Native"
 msgstr "KTorrent"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:944
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_WidgetType)
-#: rc.cpp:1740
+#: rc.cpp:1743
 msgid "KDE"
 msgstr "KDE"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:952
 #. i18n: ectx: property (text), widget (QLabel, label_33)
-#: rc.cpp:1743
+#: rc.cpp:1746
 msgid "(plugin reload is needed after change)"
 msgstr "(utvidelser må startes på nytt etter endringer)"
 
@@ -6597,91 +6629,91 @@ msgstr "(utvidelser må startes på nytt etter endringer)"
 #. i18n: ectx: property (windowTitle), widget (QWidget, StatsSettingsWgt)
 #. i18n: file: plugins/bitfinder/filter/filterdetails.ui:49
 #. i18n: ectx: attribute (label), widget (QWidget, settingsPage)
-#: rc.cpp:1746 rc.cpp:2136
+#: rc.cpp:1749 rc.cpp:2139
 msgid "Settings"
 msgstr "Innstillinger"
 
 #. i18n: file: plugins/stats/Settings.ui:19
 #. i18n: ectx: property (title), widget (QGroupBox, UpdateGbw)
-#: rc.cpp:1749
+#: rc.cpp:1752
 msgid "Update"
 msgstr "Oppdatering"
 
 #. i18n: file: plugins/stats/Settings.ui:25
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1752
+#: rc.cpp:1755
 msgid "Update charts every"
 msgstr "Oppdater grafer hvert"
 
 #. i18n: file: plugins/stats/Settings.ui:50
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1755
+#: rc.cpp:1758
 msgid "GUI updates"
 msgstr "Oppdateringer av brukergrensesnittet"
 
 #. i18n: file: plugins/stats/Settings.ui:69
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:1758
+#: rc.cpp:1761
 msgid "Gather data every"
 msgstr "Innsamling av data hver"
 
 #. i18n: file: plugins/stats/Settings.ui:95
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:1761
+#: rc.cpp:1764
 msgid "milliseconds"
 msgstr "millisekunder"
 
 #. i18n: file: plugins/stats/Settings.ui:108
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:1764
+#: rc.cpp:1767
 msgid "Measurements counts"
 msgstr "Målinger"
 
 #. i18n: file: plugins/stats/Settings.ui:247
 #. i18n: ectx: property (title), widget (QGroupBox, MaxModeGbw)
-#: rc.cpp:1782
+#: rc.cpp:1785
 msgid "Maximum"
 msgstr "Høyeste antall:"
 
 #. i18n: file: plugins/stats/Settings.ui:255
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:1785
+#: rc.cpp:1788
 msgid "Maximum speed scale mode: "
 msgstr "Høyeste fartsskaleringsmodus:"
 
 #. i18n: file: plugins/stats/Settings.ui:272
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MaxMode)
-#: rc.cpp:1788
+#: rc.cpp:1791
 msgid "Top"
 msgstr "Topp"
 
 #. i18n: file: plugins/stats/Settings.ui:277
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MaxMode)
-#: rc.cpp:1791
+#: rc.cpp:1794
 msgid "Exact"
 msgstr "Eksakt"
 
 #. i18n: file: plugins/stats/Settings.ui:290
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:1794
+#: rc.cpp:1797
 msgid "Peers connections"
 msgstr "Forbindelser til personer:"
 
 #. i18n: file: plugins/stats/Settings.ui:296
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowSeedsInSwarms)
-#: rc.cpp:1797
+#: rc.cpp:1800
 msgid "Show seeds in swarms"
 msgstr "Vis opplastinger i svermer"
 
 #. i18n: file: plugins/stats/Settings.ui:303
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowLeechersInSwarms)
-#: rc.cpp:1800
+#: rc.cpp:1803
 msgid "Show leechers in swarms"
 msgstr "Vis nedlastere i svermer"
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:26
 #. i18n: ectx: property (toolTip), widget (QTreeView, m_logging_flags)
-#: rc.cpp:1803
+#: rc.cpp:1806
 #, fuzzy
 #| msgid ""
 #| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
@@ -6773,7 +6805,7 @@ msgstr ""
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:45
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useRichText)
-#: rc.cpp:1819
+#: rc.cpp:1822
 msgid ""
 "Whether or not to use rich text or just plain text, for the logging output "
 "shown in the logviewer."
@@ -6781,13 +6813,13 @@ msgstr "Vis rik tekst i stedet for vanlig tekst for visning av logger."
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:48
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useRichText)
-#: rc.cpp:1822
+#: rc.cpp:1825
 msgid "Use rich text for logging output"
 msgstr "Bruk rik tekst i loggvisning"
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, DownloadOrderWidget)
-#: rc.cpp:1825 plugins/downloadorder/downloadorderdialog.cpp:38
+#: rc.cpp:1828 plugins/downloadorder/downloadorderdialog.cpp:38
 #: plugins/downloadorder/downloadorderplugin.cpp:46
 #, fuzzy
 #| msgid "Time Downloaded"
@@ -6796,7 +6828,7 @@ msgstr "Tid lasted ned"
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:22
 #. i18n: ectx: property (text), widget (QLabel, m_top_label)
-#: rc.cpp:1828
+#: rc.cpp:1831
 #, fuzzy
 #| msgid "Failed to download %1 : %2"
 msgid "File download order for:"
@@ -6804,19 +6836,19 @@ msgstr "Klarte ikke laste ned «%1»: %2"
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:29
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_custom_order_enabled)
-#: rc.cpp:1831
+#: rc.cpp:1834
 msgid "Whether or not to enable a custom download order."
 msgstr ""
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:32
 #. i18n: ectx: property (text), widget (QCheckBox, m_custom_order_enabled)
-#: rc.cpp:1834
+#: rc.cpp:1837
 msgid "Custom file download order enabled"
 msgstr ""
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:41
 #. i18n: ectx: property (toolTip), widget (QListView, m_order)
-#: rc.cpp:1837
+#: rc.cpp:1840
 msgid ""
 "Order in which to download the files of a torrent. The file at the top will "
 "be downloaded first, followed by the second, then the third ..."
@@ -6824,35 +6856,35 @@ msgstr ""
 
 #. i18n: file: plugins/mediaplayer/ktmediaplayerpluginui.rc:3
 #. i18n: ectx: Menu (MediaPlayerMenu)
-#: rc.cpp:1846
+#: rc.cpp:1849
 msgid "Media Player Menu"
 msgstr "Medispiller-meny"
 
 #. i18n: file: plugins/mediaplayer/ktmediaplayerpluginui.rc:11
 #. i18n: ectx: ToolBar (MediaPlayerToolBar)
-#: rc.cpp:1849
+#: rc.cpp:1852
 msgid "Media Player Toolbar"
 msgstr "Mediespiller-verktøylinje"
 
 #. i18n: file: plugins/syndication/ktsyndicationpluginui.rc:4
 #. i18n: ectx: ToolBar (SyndicationToolBar)
-#: rc.cpp:1852
+#: rc.cpp:1855
 #, fuzzy
 #| msgid "Main Toolbar"
 msgid "Syndication Toolbar"
 msgstr "Hovedverktøylinje"
 
-#. i18n: file: plugins/syndication/feedwidget.ui:81
+#. i18n: file: plugins/syndication/feedwidget.ui:101
 #. i18n: ectx: property (text), widget (KPushButton, m_refresh)
-#: rc.cpp:1866
+#: rc.cpp:1869
 #, fuzzy
 #| msgid "Rerelease"
 msgid "Refresh"
 msgstr "Lagt ut på nytt"
 
-#. i18n: file: plugins/syndication/feedwidget.ui:101
+#. i18n: file: plugins/syndication/feedwidget.ui:121
 #. i18n: ectx: property (text), widget (KPushButton, m_filters)
-#: rc.cpp:1869
+#: rc.cpp:1872
 #, fuzzy
 #| msgid "Filter"
 msgid "Filters"
@@ -6860,7 +6892,7 @@ msgstr "Filter"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, ManageFiltersDlg)
-#: rc.cpp:1872
+#: rc.cpp:1875
 #, fuzzy
 #| msgid "BF Filters"
 msgid "Manage Filters"
@@ -6868,7 +6900,7 @@ msgstr "BF-filtre"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:22
 #. i18n: ectx: property (text), widget (QLabel, m_feed_text)
-#: rc.cpp:1875
+#: rc.cpp:1878
 #, fuzzy
 #| msgid "Seeders:"
 msgid "Feed:"
@@ -6876,7 +6908,7 @@ msgstr "Delere:"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:33
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1878
+#: rc.cpp:1881
 #, fuzzy
 #| msgid "Active torrents"
 msgid "Active filters:"
@@ -6884,7 +6916,7 @@ msgstr "Aktive strømmer"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:91
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1887
+#: rc.cpp:1890
 #, fuzzy
 #| msgid "Available Trackers"
 msgid "Available filters:"
@@ -6892,7 +6924,7 @@ msgstr "Tilgjengelige sporere"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:107
 #. i18n: ectx: property (text), widget (QPushButton, m_remove_all)
-#: rc.cpp:1890
+#: rc.cpp:1893
 #, fuzzy
 #| msgid "R&emove All"
 msgid "Remove All"
@@ -6900,7 +6932,7 @@ msgstr "Fj&ern alle"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:127
 #. i18n: ectx: property (text), widget (QPushButton, m_new_filter)
-#: rc.cpp:1893 plugins/syndication/syndicationplugin.cpp:299
+#: rc.cpp:1896 plugins/syndication/syndicationplugin.cpp:299
 #, fuzzy
 #| msgid "Add New Filter"
 msgid "New Filter"
@@ -6908,7 +6940,7 @@ msgstr "Legg til filter"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:21
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1896
+#: rc.cpp:1899
 #, fuzzy
 #| msgid "Name"
 msgid "Name:"
@@ -6916,13 +6948,13 @@ msgstr "Navn"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:37
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: rc.cpp:1899
+#: rc.cpp:1902
 msgid "String Matching"
 msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:71
 #. i18n: ectx: property (toolTip), widget (KEditListBox, m_word_matches)
-#: rc.cpp:1902
+#: rc.cpp:1905
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -6990,7 +7022,7 @@ msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:84
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_reg_exp_syntax)
-#: rc.cpp:1933
+#: rc.cpp:1936
 msgid ""
 "By default strings will use wildcard matching. If you want to use regular "
 "expressions, this needs to be enabled."
@@ -6998,43 +7030,43 @@ msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:87
 #. i18n: ectx: property (text), widget (QCheckBox, m_reg_exp_syntax)
-#: rc.cpp:1936
+#: rc.cpp:1939
 msgid "Strings are regular expressions"
 msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:94
 #. i18n: ectx: property (text), widget (QCheckBox, m_all_words_must_match)
-#: rc.cpp:1939
+#: rc.cpp:1942
 msgid "Item must match all strings"
 msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:101
 #. i18n: ectx: property (text), widget (QCheckBox, m_match_case_sensitive)
-#: rc.cpp:1942
+#: rc.cpp:1945
 msgid "Case sensitive matching"
 msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:109
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: rc.cpp:1945
+#: rc.cpp:1948
 msgid "Seasons && Episodes"
 msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:115
 #. i18n: ectx: property (text), widget (QCheckBox, m_use_se_matching)
-#: rc.cpp:1948
+#: rc.cpp:1951
 msgid "Use season and episode matching"
 msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:124
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:1951
+#: rc.cpp:1954
 msgid "Seasons: "
 msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:135
 #. i18n: ectx: property (toolTip), widget (QLineEdit, m_seasons)
-#: rc.cpp:1954
+#: rc.cpp:1957
 msgid ""
 "Specify the seasons to download, multiple seasons can be separated by a , "
 "and you can also use ranges by using a -\n"
@@ -7046,13 +7078,13 @@ msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:142
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:1961
+#: rc.cpp:1964
 msgid "Episodes:"
 msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:153
 #. i18n: ectx: property (toolTip), widget (QLineEdit, m_episodes)
-#: rc.cpp:1964
+#: rc.cpp:1967
 msgid ""
 "Specify the episodes to download, multiple episodes can be separated by a , "
 "and you can also use ranges by using a -\n"
@@ -7064,25 +7096,25 @@ msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:162
 #. i18n: ectx: property (text), widget (QCheckBox, m_se_no_duplicates)
-#: rc.cpp:1971
+#: rc.cpp:1974
 msgid "Do not download multiple items with the same season and episode"
 msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:189
 #. i18n: ectx: property (text), widget (QCheckBox, m_download_matches)
-#: rc.cpp:1977
+#: rc.cpp:1980
 msgid "Download torrents of matching items"
 msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:196
 #. i18n: ectx: property (text), widget (QCheckBox, m_download_non_matches)
-#: rc.cpp:1980
+#: rc.cpp:1983
 msgid "Download torrents of non matching items"
 msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:205
 #. i18n: ectx: property (text), widget (QCheckBox, m_add_to_group)
-#: rc.cpp:1983
+#: rc.cpp:1986
 #, fuzzy
 #| msgid "Add to Group"
 msgid "Add to group:"
@@ -7090,7 +7122,7 @@ msgstr "Legg til gruppe"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:251
 #. i18n: ectx: property (text), widget (QCheckBox, m_silently)
-#: rc.cpp:1989
+#: rc.cpp:1992
 #, fuzzy
 #| msgid "Open multiple torrents silently"
 msgid "Open torrents silently"
@@ -7104,13 +7136,13 @@ msgstr "Åpne flere strømmer stille"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. i18n: file: plugins/syndication/filtereditor.ui:280
 #. i18n: ectx: property (text), widget (QPushButton, m_test)
-#: rc.cpp:1992 rc.cpp:1995
+#: rc.cpp:1995 rc.cpp:1998
 msgid "Test"
 msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:287
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1998
+#: rc.cpp:2001
 #, fuzzy
 #| msgid "IP filter file:"
 msgid "filter on feed:"
@@ -7118,7 +7150,7 @@ msgstr "IP-filterfil:"
 
 #. i18n: file: plugins/search/searchpref.ui:33
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_clear_history)
-#: rc.cpp:2004
+#: rc.cpp:2007
 #, fuzzy
 #| msgid "Clear Search History"
 msgid "Clear the search history combo boxes."
@@ -7126,13 +7158,13 @@ msgstr "Tøm listen over søk"
 
 #. i18n: file: plugins/search/searchpref.ui:36
 #. i18n: ectx: property (text), widget (QPushButton, m_clear_history)
-#: rc.cpp:2007
+#: rc.cpp:2010
 msgid "Clear Search History"
 msgstr "Tøm listen over søk"
 
 #. i18n: file: plugins/search/searchpref.ui:58
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openInExternal)
-#: rc.cpp:2010
+#: rc.cpp:2013
 #, fuzzy
 #| msgid "Open searches in external browser"
 msgid "Whether or not to open searches in an external browser."
@@ -7140,25 +7172,25 @@ msgstr "Åpne søk i ekstern nettleser"
 
 #. i18n: file: plugins/search/searchpref.ui:61
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openInExternal)
-#: rc.cpp:2013
+#: rc.cpp:2016
 msgid "Open searches in external browser"
 msgstr "Åpne søk i ekstern nettleser"
 
 #. i18n: file: plugins/search/searchpref.ui:68
 #. i18n: ectx: property (toolTip), widget (QRadioButton, kcfg_useDefaultBrowser)
-#: rc.cpp:2016
+#: rc.cpp:2019
 msgid "Use the default browser configured in the system settings."
 msgstr ""
 
 #. i18n: file: plugins/search/searchpref.ui:71
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_useDefaultBrowser)
-#: rc.cpp:2019
+#: rc.cpp:2022
 msgid "Use default browser"
 msgstr "Bruk standard nettleser"
 
 #. i18n: file: plugins/search/searchpref.ui:83
 #. i18n: ectx: property (toolTip), widget (QRadioButton, kcfg_useCustomBrowser)
-#: rc.cpp:2022
+#: rc.cpp:2025
 #, fuzzy
 #| msgid "Use default browser"
 msgid "Use a custom browser."
@@ -7166,25 +7198,25 @@ msgstr "Bruk standard nettleser"
 
 #. i18n: file: plugins/search/searchpref.ui:86
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_useCustomBrowser)
-#: rc.cpp:2025
+#: rc.cpp:2028
 msgid "Custom browser path:"
 msgstr "Sti til selvvalgt nettleser:"
 
 #. i18n: file: plugins/search/searchpref.ui:96
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_customBrowser)
-#: rc.cpp:2028
+#: rc.cpp:2031
 msgid "Path of the custom browser."
 msgstr ""
 
 #. i18n: file: plugins/search/searchpref.ui:121
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox8)
-#: rc.cpp:2031
+#: rc.cpp:2034
 msgid "Search Engines"
 msgstr "Søkemotorer"
 
 #. i18n: file: plugins/search/searchpref.ui:136
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_add)
-#: rc.cpp:2034
+#: rc.cpp:2037
 #, fuzzy
 #| msgid "Search Engine"
 msgid "Add a new search engine."
@@ -7192,19 +7224,19 @@ msgstr "Søkemotor"
 
 #. i18n: file: plugins/search/searchpref.ui:146
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_remove)
-#: rc.cpp:2040
+#: rc.cpp:2043
 msgid "Remove all selected search engines."
 msgstr ""
 
 #. i18n: file: plugins/search/searchpref.ui:149
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
-#: rc.cpp:2043
+#: rc.cpp:2046
 msgid "&Remove"
 msgstr "Fje&rn"
 
 #. i18n: file: plugins/search/searchpref.ui:156
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_remove_all)
-#: rc.cpp:2046
+#: rc.cpp:2049
 #, fuzzy
 #| msgid "Search Engine"
 msgid "Remove all search engines."
@@ -7212,13 +7244,13 @@ msgstr "Søkemotor"
 
 #. i18n: file: plugins/search/searchpref.ui:159
 #. i18n: ectx: property (text), widget (QPushButton, m_remove_all)
-#: rc.cpp:2049
+#: rc.cpp:2052
 msgid "R&emove All"
 msgstr "Fj&ern alle"
 
 #. i18n: file: plugins/search/searchpref.ui:179
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_add_default)
-#: rc.cpp:2052
+#: rc.cpp:2055
 #, fuzzy
 #| msgid "Search Engine"
 msgid "Add all default search engines."
@@ -7226,19 +7258,19 @@ msgstr "Søkemotor"
 
 #. i18n: file: plugins/search/searchpref.ui:182
 #. i18n: ectx: property (text), widget (QPushButton, m_add_default)
-#: rc.cpp:2055
+#: rc.cpp:2058
 msgid "Add Defau&lt"
 msgstr "&Legg til standard"
 
 #. i18n: file: plugins/search/ktsearchpluginui.rc:3
 #. i18n: ectx: ToolBar (SearchToolBar)
-#: rc.cpp:2058
+#: rc.cpp:2061
 msgid "Search Toolbar"
 msgstr "Søkeverktøylinje"
 
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, AutoResumeConfig)
-#: rc.cpp:2061
+#: rc.cpp:2064
 #, fuzzy
 #| msgid "Recommended Settings"
 msgid "Auto Resume Settings"
@@ -7246,13 +7278,13 @@ msgstr "Anbefalte innstillinger"
 
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:19
 #. i18n: ectx: property (text), widget (QCheckBox, auto_resume)
-#: rc.cpp:2064
+#: rc.cpp:2067
 msgid "Auto resume after:"
 msgstr ""
 
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:41
 #. i18n: ectx: property (suffix), widget (QSpinBox, hours)
-#: rc.cpp:2067
+#: rc.cpp:2070
 #, fuzzy
 #| msgid " Hours"
 msgid " hours"
@@ -7260,7 +7292,7 @@ msgstr " timer"
 
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:51
 #. i18n: ectx: property (suffix), widget (QSpinBox, minutes)
-#: rc.cpp:2070
+#: rc.cpp:2073
 #, fuzzy
 #| msgid " Minutes"
 msgid " minutes"
@@ -7268,7 +7300,7 @@ msgstr " minutter"
 
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:61
 #. i18n: ectx: property (suffix), widget (QSpinBox, seconds)
-#: rc.cpp:2073
+#: rc.cpp:2076
 #, fuzzy
 #| msgid " secs"
 msgid " seconds"
@@ -7276,7 +7308,7 @@ msgstr " sekunder"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, EMailConfigWidget)
-#: rc.cpp:2076
+#: rc.cpp:2079
 #, fuzzy
 #| msgid "Settings"
 msgid "EMail Settings"
@@ -7284,7 +7316,7 @@ msgstr "Innstillinger"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:19
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:2079
+#: rc.cpp:2082
 #, fuzzy
 #| msgid "Server:"
 msgid "SMTP Server"
@@ -7292,7 +7324,7 @@ msgstr "Tjener:"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:49
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2088
+#: rc.cpp:2091
 #, fuzzy
 #| msgid "Server:"
 msgid "SMTP server:"
@@ -7300,7 +7332,7 @@ msgstr "Tjener:"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:80
 #. i18n: ectx: property (text), widget (QCheckBox, tls)
-#: rc.cpp:2094
+#: rc.cpp:2097
 #, fuzzy
 #| msgid "Use protocol encryption"
 msgid "Use SSL/TLS encryption"
@@ -7308,7 +7340,7 @@ msgstr "Bruk protokollkryptering"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:90
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:2097
+#: rc.cpp:2100
 #, fuzzy
 #| msgid "Scripts"
 msgid "Destination"
@@ -7316,13 +7348,13 @@ msgstr "Skript"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:96
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2100
+#: rc.cpp:2103
 msgid "Send mails to:"
 msgstr ""
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:106
 #. i18n: ectx: property (text), widget (QCheckBox, add_cc)
-#: rc.cpp:2103
+#: rc.cpp:2106
 #, fuzzy
 #| msgid "Add peer:"
 msgid "Add CC:"
@@ -7330,19 +7362,19 @@ msgstr "Legg til person:"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:116
 #. i18n: ectx: property (text), widget (QCheckBox, add_bcc)
-#: rc.cpp:2106
+#: rc.cpp:2109
 msgid "Add BCC:"
 msgstr ""
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, ScriptProperties)
-#: rc.cpp:2109 plugins/scripting/scriptingplugin.cpp:293
+#: rc.cpp:2112 plugins/scripting/scriptingplugin.cpp:293
 msgid "Script Properties"
 msgstr ""
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:51
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2113
+#: rc.cpp:2116
 #, fuzzy
 #| msgid "Scripts"
 msgid "Description:"
@@ -7350,13 +7382,13 @@ msgstr "Skript"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:65
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2117
+#: rc.cpp:2120
 msgid "License:"
 msgstr ""
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:79
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2121
+#: rc.cpp:2124
 #, fuzzy
 #| msgid "Athantor"
 msgid "Author:"
@@ -7364,13 +7396,13 @@ msgstr "Athantor"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:93
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:2125
+#: rc.cpp:2128
 msgid "E-Mail:"
 msgstr ""
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:107
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:2129
+#: rc.cpp:2132
 #, fuzzy
 #| msgid "Webinterface:"
 msgid "Website:"
@@ -7378,43 +7410,43 @@ msgstr "Nettgrensesnitt:"
 
 #. i18n: file: plugins/bitfinder/filter/filterdetails.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, FilterDetailsWidget)
-#: rc.cpp:2133
+#: rc.cpp:2136
 msgid "Filter"
 msgstr "Filter"
 
 #. i18n: file: plugins/bitfinder/filter/filterdetails.ui:77
 #. i18n: ectx: property (text), widget (QLabel, typeLabel)
-#: rc.cpp:2142
+#: rc.cpp:2145
 msgid "Type"
 msgstr "Type"
 
 #. i18n: file: plugins/bitfinder/filter/filterdetails.ui:87
 #. i18n: ectx: property (text), widget (QLabel, groupLabel)
-#: rc.cpp:2145
+#: rc.cpp:2148
 msgid "Group"
 msgstr "Gruppe"
 
 #. i18n: file: plugins/bitfinder/filter/filterdetails.ui:97
 #. i18n: ectx: property (text), widget (QLabel, testStringLabel)
-#: rc.cpp:2148
+#: rc.cpp:2151
 msgid "Test String"
 msgstr "Test-tekst"
 
 #. i18n: file: plugins/bitfinder/filter/filterdetails.ui:130
 #. i18n: ectx: property (title), widget (QGroupBox, expressionsBox)
-#: rc.cpp:2151
+#: rc.cpp:2154
 msgid "Expressions"
 msgstr "Uttrykk"
 
 #. i18n: file: plugins/bitfinder/filter/filterdetails.ui:172
 #. i18n: ectx: property (title), widget (QGroupBox, sourceListBox)
-#: rc.cpp:2154
+#: rc.cpp:2157
 msgid "Source List"
 msgstr "Kildeliste"
 
 #. i18n: file: plugins/bitfinder/filter/filterdetails.ui:195
 #. i18n: ectx: property (text), widget (QLabel, sourceListTypeLabel)
-#: rc.cpp:2157
+#: rc.cpp:2160
 msgid "Source List Type"
 msgstr "Type kildeliste"
 
@@ -7426,55 +7458,55 @@ msgstr "Type kildeliste"
 #. i18n: ectx: property (title), widget (QGroupBox, multiMatchBox)
 #. i18n: file: plugins/bitfinder/filter/filterdetails.ui:264
 #. i18n: ectx: property (text), widget (QLabel, multiMatchLabel)
-#: rc.cpp:2160 rc.cpp:2163
+#: rc.cpp:2163 rc.cpp:2166
 msgid "MultiMatch"
 msgstr "Flere treff"
 
 #. i18n: file: plugins/bitfinder/filter/filterdetails.ui:277
 #. i18n: ectx: property (text), widget (QLabel, rereleaseLabel)
-#: rc.cpp:2166
+#: rc.cpp:2169
 msgid "Rerelease"
 msgstr "Lagt ut på nytt"
 
 #. i18n: file: plugins/bitfinder/filter/filterdetails.ui:290
 #. i18n: ectx: property (text), widget (QLabel, rereleaseTermsLabel)
-#: rc.cpp:2169
+#: rc.cpp:2172
 msgid "Rerelease Terms"
 msgstr "Krav for «lagt ut på nytt»"
 
 #. i18n: file: plugins/bitfinder/filter/filterdetails.ui:325
 #. i18n: ectx: attribute (label), widget (QWidget, matchesPage)
-#: rc.cpp:2172
+#: rc.cpp:2175
 msgid "Matches"
 msgstr "Treff"
 
 #. i18n: file: plugins/bitfinder/filter/capturecheckerdetails.ui:37
 #. i18n: ectx: property (title), widget (QGroupBox, capturesBox)
-#: rc.cpp:2175
+#: rc.cpp:2178
 msgid "Captures"
 msgstr "Kilder"
 
 #. i18n: file: plugins/bitfinder/filter/capturecheckerdetails.ui:68
 #. i18n: ectx: property (title), widget (QGroupBox, variablesBox)
-#: rc.cpp:2178
+#: rc.cpp:2181
 msgid "Variables"
 msgstr "Variabler"
 
 #. i18n: file: plugins/bitfinder/filter/capturecheckerdetails.ui:99
 #. i18n: ectx: property (title), widget (QGroupBox, mappingsBox)
-#: rc.cpp:2181
+#: rc.cpp:2184
 msgid "Mappings"
 msgstr "Tilordninger"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:22
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2187
+#: rc.cpp:2190
 msgid "Schedule background color:"
 msgstr "Bakgrunnsfarge for timeplanen:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:29
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_scheduleBackgroundColor)
-#: rc.cpp:2190
+#: rc.cpp:2193
 #, fuzzy
 #| msgid "Schedule background color:"
 msgid "Color of the schedule background."
@@ -7482,13 +7514,13 @@ msgstr "Bakgrunnsfarge for timeplanen:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:36
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2193
+#: rc.cpp:2196
 msgid "Schedule line color:"
 msgstr "Linjefarge for timeplanen:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:43
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_scheduleLineColor)
-#: rc.cpp:2196
+#: rc.cpp:2199
 #, fuzzy
 #| msgid "Add a new item to the schedule"
 msgid "Color of all lines on the schedule."
@@ -7496,13 +7528,13 @@ msgstr "Legg til en ny post i timeplanen"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:50
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:2199
+#: rc.cpp:2202
 msgid "Schedule Item color:"
 msgstr "Farge for oppføringer i timeplanen:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:57
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_itemColor)
-#: rc.cpp:2202
+#: rc.cpp:2205
 #, fuzzy
 #| msgid "Add a new item to the schedule"
 msgid "Color of each normal item on the schedule."
@@ -7510,13 +7542,13 @@ msgstr "Legg til en ny post i timeplanen"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:64
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2205
+#: rc.cpp:2208
 msgid "Paused schedule item color:"
 msgstr "Pause-farge for timeplanen:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:71
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_pausedColor)
-#: rc.cpp:2208
+#: rc.cpp:2211
 #, fuzzy
 #| msgid "Add a new item to the schedule"
 msgid "Color of each paused item on the schedule."
@@ -7530,7 +7562,7 @@ msgstr "Legg til en ny post i timeplanen"
 #. i18n: ectx: property (windowTitle), widget (QWidget, EditItemDlg)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, AddItemDlg)
-#: rc.cpp:2211 rc.cpp:2271
+#: rc.cpp:2214 rc.cpp:2274
 msgid "Add a new item to the schedule"
 msgstr "Legg til en ny post i timeplanen"
 
@@ -7542,7 +7574,7 @@ msgstr "Legg til en ny post i timeplanen"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:24
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:2214 rc.cpp:2274
+#: rc.cpp:2217 rc.cpp:2277
 msgid "Time"
 msgstr "Tid"
 
@@ -7554,7 +7586,7 @@ msgstr "Tid"
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:32
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2217 rc.cpp:2277
+#: rc.cpp:2220 rc.cpp:2280
 msgid "From:"
 msgstr "Fra:"
 
@@ -7574,7 +7606,7 @@ msgstr "Fra:"
 #. i18n: ectx: property (displayFormat), widget (QTimeEdit, m_from)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:53
 #. i18n: ectx: property (displayFormat), widget (QTimeEdit, m_to)
-#: rc.cpp:2220 rc.cpp:2226 rc.cpp:2280 rc.cpp:2286
+#: rc.cpp:2223 rc.cpp:2229 rc.cpp:2283 rc.cpp:2289
 msgid "hh:mm"
 msgstr "hh:mm"
 
@@ -7586,13 +7618,13 @@ msgstr "hh:mm"
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:46
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:2223 rc.cpp:2283
+#: rc.cpp:2226 rc.cpp:2286
 msgid "To:"
 msgstr "Til:"
 
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:62
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2229
+#: rc.cpp:2232
 msgid "Day:"
 msgstr "Dag:"
 
@@ -7604,7 +7636,7 @@ msgstr "Dag:"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:117
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:2232 rc.cpp:2301
+#: rc.cpp:2235 rc.cpp:2304
 msgid "Limits"
 msgstr "Grenser"
 
@@ -7616,7 +7648,7 @@ msgstr "Grenser"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:125
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2235 rc.cpp:2304
+#: rc.cpp:2238 rc.cpp:2307
 msgid "Download limit:"
 msgstr "Nedlasting:"
 
@@ -7628,7 +7660,7 @@ msgstr "Nedlasting:"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:145
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2244 rc.cpp:2313
+#: rc.cpp:2247 rc.cpp:2316
 msgid "Upload limit:"
 msgstr "Opplasting:"
 
@@ -7640,31 +7672,31 @@ msgstr "Opplasting:"
 #. i18n: ectx: property (text), widget (QCheckBox, m_set_connection_limits)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:174
 #. i18n: ectx: property (text), widget (QCheckBox, m_set_connection_limits)
-#: rc.cpp:2256 rc.cpp:2325
+#: rc.cpp:2259 rc.cpp:2328
 msgid "Set connection limits"
 msgstr "Angi tilkoblingsgrenser"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:62
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2289
+#: rc.cpp:2292
 msgid "Days:"
 msgstr "Dager:"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:76
 #. i18n: ectx: property (text), widget (QPushButton, m_entire_week)
-#: rc.cpp:2292
+#: rc.cpp:2295
 msgid "Entire Week"
 msgstr "Hele uken"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:83
 #. i18n: ectx: property (text), widget (QPushButton, m_weekdays_only)
-#: rc.cpp:2295
+#: rc.cpp:2298
 msgid "Weekdays Only"
 msgstr "Kun hverdager"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:90
 #. i18n: ectx: property (text), widget (QPushButton, m_weekend)
-#: rc.cpp:2298
+#: rc.cpp:2301
 msgid "Weekend"
 msgstr "Helg"
 
@@ -7704,46 +7736,46 @@ msgstr "Søk i mapper"
 msgid "loaded"
 msgstr "På"
 
-#: plugins/infowidget/fileview.cpp:66
+#: plugins/infowidget/fileview.cpp:72
 msgctxt "Open file"
 msgid "Open"
 msgstr "Åpne"
 
-#: plugins/infowidget/fileview.cpp:68
+#: plugins/infowidget/fileview.cpp:74
 msgid "Download first"
 msgstr "Last ned først"
 
-#: plugins/infowidget/fileview.cpp:69
+#: plugins/infowidget/fileview.cpp:75
 msgid "Download normally"
 msgstr "Last ned normalt"
 
-#: plugins/infowidget/fileview.cpp:70
+#: plugins/infowidget/fileview.cpp:76
 msgid "Download last"
 msgstr "Last ned sist"
 
-#: plugins/infowidget/fileview.cpp:73
+#: plugins/infowidget/fileview.cpp:79
 msgid "Delete File(s)"
 msgstr "Slett fil(er)"
 
-#: plugins/infowidget/fileview.cpp:75
+#: plugins/infowidget/fileview.cpp:81
 msgid "Move File"
 msgstr "Flytt fil"
 
-#: plugins/infowidget/fileview.cpp:77
+#: plugins/infowidget/fileview.cpp:83
 msgid "Collapse Folder Tree"
 msgstr ""
 
-#: plugins/infowidget/fileview.cpp:78
+#: plugins/infowidget/fileview.cpp:84
 #, fuzzy
 #| msgid "Scan Folder"
 msgid "Expand Folder Tree"
 msgstr "Søk i mapper"
 
-#: plugins/infowidget/fileview.cpp:265
+#: plugins/infowidget/fileview.cpp:255
 msgid "You will lose all data in this file, are you sure you want to do this ?"
 msgstr "Du vil miste all data i filen; er du sikker?"
 
-#: plugins/infowidget/fileview.cpp:266
+#: plugins/infowidget/fileview.cpp:256
 msgid ""
 "You will lose all data in these files, are you sure you want to do this ?"
 msgstr "Du vil miste all data i disse filene; er du sikker?"
@@ -7991,15 +8023,15 @@ msgstr "Det finnes allerede en sporer kalt <b>%1</b>."
 msgid "Cannot remove torrent default tracker."
 msgstr "Kan ikke fjerne strømmens standardsporer."
 
-#: plugins/infowidget/trackerview.cpp:223
+#: plugins/infowidget/trackerview.cpp:231
 msgid "You cannot add trackers to a private torrent"
 msgstr "Du kan ikke legge sporere til en privat strøm"
 
-#: plugins/infowidget/peerview.cpp:51
+#: plugins/infowidget/peerview.cpp:56
 msgid "Kick Peer"
 msgstr "Fjern person"
 
-#: plugins/infowidget/peerview.cpp:52
+#: plugins/infowidget/peerview.cpp:57
 msgid "Ban Peer"
 msgstr "Bannlys person"
 
@@ -8013,49 +8045,49 @@ msgstr ""
 "\"unavailable_color\">&nbsp; – Utilgjengelige biter<br/><img src="
 "\"excluded_color\">&nbsp; – Ekskluderte biter"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:71
-#: plugins/infowidget/iwfiletreemodel.cpp:75
+#: plugins/infowidget/iwfilelistmodel.cpp:80
+#: plugins/infowidget/iwfiletreemodel.cpp:91
 #, no-c-format
 msgctxt "Percent of File Downloaded"
 msgid "% Complete"
 msgstr "% ferdig"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:80
-#: plugins/infowidget/iwfiletreemodel.cpp:84
+#: plugins/infowidget/iwfilelistmodel.cpp:89
+#: plugins/infowidget/iwfiletreemodel.cpp:100
 msgctxt "Download first"
 msgid "First"
 msgstr "Først"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:81
-#: plugins/infowidget/iwfiletreemodel.cpp:85
+#: plugins/infowidget/iwfilelistmodel.cpp:90
+#: plugins/infowidget/iwfiletreemodel.cpp:101
 msgctxt "Download last"
 msgid "Last"
 msgstr "Sist"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:86
+#: plugins/infowidget/iwfilelistmodel.cpp:95
 msgctxt "Download Normal (not as first or last)"
 msgid "Normal"
 msgstr "Normal"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:137
-#: plugins/infowidget/iwfilelistmodel.cpp:160
-#: plugins/infowidget/iwfiletreemodel.cpp:165
+#: plugins/infowidget/iwfilelistmodel.cpp:146
+#: plugins/infowidget/iwfilelistmodel.cpp:169
+#: plugins/infowidget/iwfiletreemodel.cpp:181
 msgctxt "Preview available"
 msgid "Available"
 msgstr "Tilgjengelig"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:139
-#: plugins/infowidget/iwfilelistmodel.cpp:162
-#: plugins/infowidget/iwfiletreemodel.cpp:144
-#: plugins/infowidget/iwfiletreemodel.cpp:167
+#: plugins/infowidget/iwfilelistmodel.cpp:148
+#: plugins/infowidget/iwfilelistmodel.cpp:171
+#: plugins/infowidget/iwfiletreemodel.cpp:160
+#: plugins/infowidget/iwfiletreemodel.cpp:183
 msgctxt "Preview pending"
 msgid "Pending"
 msgstr "Venter"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:142
-#: plugins/infowidget/iwfilelistmodel.cpp:165
-#: plugins/infowidget/iwfiletreemodel.cpp:147
-#: plugins/infowidget/iwfiletreemodel.cpp:170
+#: plugins/infowidget/iwfilelistmodel.cpp:151
+#: plugins/infowidget/iwfilelistmodel.cpp:174
+#: plugins/infowidget/iwfiletreemodel.cpp:163
+#: plugins/infowidget/iwfiletreemodel.cpp:186
 msgctxt "No preview available"
 msgid "No"
 msgstr "Nei"
@@ -8098,12 +8130,12 @@ msgstr "Nedlastede biter"
 msgid "Which files the chunk is located in"
 msgstr ""
 
-#: plugins/infowidget/iwfiletreemodel.cpp:90
+#: plugins/infowidget/iwfiletreemodel.cpp:106
 msgctxt "Download normally(not as first or last)"
 msgid "Normal"
 msgstr "Normal"
 
-#: plugins/infowidget/iwfiletreemodel.cpp:142
+#: plugins/infowidget/iwfiletreemodel.cpp:158
 msgctxt "preview available"
 msgid "Available"
 msgstr "Tilgjengelig"
@@ -8158,6 +8190,114 @@ msgstr "Laster tekstfil . . ."
 msgid "There are no IP addresses to convert in %1"
 msgstr "Det er ingen IP-adresser å konvertere i «%1»"
 
+#: plugins/stats/SpdTabPage.cc:69 plugins/stats/SpdTabPage.cc:70
+#, fuzzy
+#| msgid "Speed Limits"
+msgid "Speed limit"
+msgstr "Fartsgrenser"
+
+#: plugins/stats/SettingsPage.cc:27
+#, fuzzy
+#| msgid "Statistics Plugin"
+msgid "Statistics"
+msgstr "Statistikkmodul"
+
+#: plugins/stats/SettingsPage.cc:48
+#, fuzzy, kde-format
+#| msgid "(= %1 KB/s)"
+msgid "(= %1 ms)"
+msgstr "(= %1 KB/s)"
+
+#: plugins/stats/drawer/ChartDrawerData.cc:25
+#, fuzzy
+#| msgid "Unknown client"
+msgid "Unknown"
+msgstr "Ukjent program"
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:323
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:383
+msgid "Save as image…"
+msgstr ""
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:327
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:387
+#, fuzzy
+#| msgid "Rescan"
+msgid "Rescale"
+msgstr "Søk på nytt"
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:331
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:391
+#, fuzzy
+#| msgid "Resume"
+msgid "Reset"
+msgstr "Fortsett"
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:343
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:403
+msgid "Select path to save image…"
+msgstr ""
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:530
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:340
+msgid ""
+"<h1 align='center' style='font-size: large; text-decoration: "
+"underline'>Legend:</h1><ul type='square'>"
+msgstr ""
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:534
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:344
+#, kde-format
+msgid ""
+"<li><span style='background-color: %1; font-size: 14px; font-family: "
+"monospace'>&nbsp;&nbsp;</span>&nbsp;—&nbsp;%2</li>"
+msgstr ""
+
+#: plugins/stats/drawer/ChartDrawer.cc:26
+#, fuzzy
+#| msgid " KB/s"
+msgid "KiB/s"
+msgstr " KB/s"
+
+#: plugins/stats/StatsPlugin.cc:49
+#, fuzzy
+#| msgid "Speed Limits"
+msgid "Speed charts"
+msgstr "Fartsgrenser"
+
+#: plugins/stats/StatsPlugin.cc:49
+msgid "Displays charts about download and upload speed"
+msgstr ""
+
+#: plugins/stats/StatsPlugin.cc:50
+#, fuzzy
+#| msgid "Connections"
+msgid "Connections charts"
+msgstr "Forbindelser"
+
+#: plugins/stats/StatsPlugin.cc:50
+msgid "Displays charts about connections"
+msgstr ""
+
+#: plugins/stats/ConnsTabPage.cc:68 plugins/stats/ConnsTabPage.cc:120
+#: plugins/stats/ConnsTabPage.cc:122
+#, fuzzy
+#| msgid "Seeds  in swarms"
+msgid "Seeds in swarms"
+msgstr "Opplastinger i svermer"
+
+#: plugins/stats/ConnsTabPage.cc:75
+#, fuzzy
+#| msgid "Average leechers connected per torrent"
+msgid "Average leechers connected per running torrent"
+msgstr "Gjennomsnittlig antall nedlastere koblet til hver strøm"
+
+#: plugins/stats/ConnsTabPage.cc:77
+#, fuzzy
+#| msgid "Avg. seeds connected per running torrent"
+msgid "Average seeds connected per running torrent"
+msgstr "Gjennomsnittlig antall opplastinger er kjørene strøm"
+
 #: plugins/logviewer/logprefpage.cpp:30
 #: plugins/logviewer/logviewerplugin.cpp:59
 msgid "Log Viewer"
@@ -8209,12 +8349,12 @@ msgid "File download order for <b>%1</b>:"
 msgstr "Klarte ikke laste <b>%1</b>"
 
 #: plugins/mediaplayer/videowidget.cpp:53
-#: plugins/mediaplayer/mediaplayerplugin.cpp:73
+#: plugins/mediaplayer/mediaplayerplugin.cpp:72
 msgid "Play"
 msgstr "Spill av"
 
 #: plugins/mediaplayer/videowidget.cpp:54
-#: plugins/mediaplayer/mediaplayerplugin.cpp:77
+#: plugins/mediaplayer/mediaplayerplugin.cpp:76
 msgid "Pause"
 msgstr "Pause"
 
@@ -8222,78 +8362,68 @@ msgstr "Pause"
 msgid "Toggle Fullscreen"
 msgstr "Fullskjerm"
 
-#: plugins/mediaplayer/mediaplayerplugin.cpp:85
+#: plugins/mediaplayer/mediaplayerplugin.cpp:84
 msgid "Previous"
 msgstr "Forrige"
 
-#: plugins/mediaplayer/mediaplayerplugin.cpp:89
+#: plugins/mediaplayer/mediaplayerplugin.cpp:88
 msgid "Next"
 msgstr "Neste"
 
-#: plugins/mediaplayer/mediaplayerplugin.cpp:93
+#: plugins/mediaplayer/mediaplayerplugin.cpp:92
 msgid "Show Video"
 msgstr "Vis video"
 
-#: plugins/mediaplayer/mediaplayerplugin.cpp:108
-#: plugins/mediaplayer/mediaplayerplugin.cpp:114
+#: plugins/mediaplayer/mediaplayerplugin.cpp:107
+#: plugins/mediaplayer/mediaplayerplugin.cpp:113
 #: plugins/mediaplayer/mediaplayerplugin.cpp:133
-#: plugins/mediaplayer/mediaplayerplugin.cpp:164
+#: plugins/mediaplayer/mediaplayerplugin.cpp:161
 msgid "Media Player"
 msgstr "Mediespiller"
 
-#: plugins/mediaplayer/mediaplayerplugin.cpp:114
+#: plugins/mediaplayer/mediaplayerplugin.cpp:113
 msgid "The media player allows you to play music and movies inside KTorrent"
 msgstr ""
 
 #: plugins/mediaplayer/mediaplayerplugin.cpp:171
-#: plugins/mediaplayer/mediaplayerplugin.cpp:177
-#: plugins/mediaplayer/mediaplayerplugin.cpp:367
+#: plugins/mediaplayer/mediaplayerplugin.cpp:354
 #, fuzzy
 #| msgid "Move File"
 msgid "Movie player"
 msgstr "Flytt fil"
 
-#: plugins/mediaplayer/mediaview.cpp:60 plugins/mediaplayer/mediaview.cpp:144
+#: plugins/mediaplayer/mediaview.cpp:63 plugins/mediaplayer/mediaview.cpp:143
 msgid "Ready to play"
 msgstr "Klar til å spille av"
 
-#: plugins/mediaplayer/mediaview.cpp:68
+#: plugins/mediaplayer/mediaview.cpp:71
 msgid "Mode:"
 msgstr "Modus:"
 
-#: plugins/mediaplayer/mediaview.cpp:71
+#: plugins/mediaplayer/mediaview.cpp:74
 msgid "Single File"
 msgstr "Én fil"
 
-#: plugins/mediaplayer/mediaview.cpp:73
+#: plugins/mediaplayer/mediaview.cpp:76
 msgid "Random Files"
 msgstr "Tilfeldige filer"
 
-#: plugins/mediaplayer/mediaview.cpp:82
+#: plugins/mediaplayer/mediaview.cpp:85
 msgid "Skip incomplete files"
 msgstr "Hopp over uferdige filer"
 
-#: plugins/mediaplayer/mediaview.cpp:133
+#: plugins/mediaplayer/mediaview.cpp:136 plugins/mediaplayer/mediaview.cpp:184
 #, kde-format
 msgid "Playing: <b>%1</b>"
 msgstr "Spiller: <b>%1</b>"
 
-#: plugins/mediaplayer/mediaview.cpp:162
+#: plugins/mediaplayer/mediaview.cpp:169
 #, kde-format
 msgid "Title: <b>%1</b><br/>Artist: <b>%2</b><br/>Album: <b>%3</b>"
 msgstr "Tittel: <b>%1</b><br/>Artist: <b>%2</b><br/>Album: <b>%3</b>"
 
-#: plugins/mediaplayer/mediaview.cpp:166
-#, kde-format
-msgid "Title: <b>%1</b><br/>Artist: <b>%2</b>"
-msgstr "Tittel: <b>%1</b><br/>Artist: <b>%2</b>"
-
-#: plugins/mediaplayer/mediaview.cpp:170
-#, kde-format
-msgid "Title: <b>%1</b>"
-msgstr "Tittel: <b>%1</b>"
-
-#: plugins/mediaplayer/mediaview.cpp:182
+#: plugins/mediaplayer/mediaview.cpp:170 plugins/mediaplayer/mediaview.cpp:175
+#: plugins/mediaplayer/mediaview.cpp:180
 #, kde-format
 msgid ""
 "Playing: <b>%1</b><br/>\n"
@@ -8301,6 +8431,16 @@ msgid ""
 msgstr ""
 "Spiller: <b>%1</b><br/>\n"
 "%2"
+
+#: plugins/mediaplayer/mediaview.cpp:174
+#, kde-format
+msgid "Title: <b>%1</b><br/>Artist: <b>%2</b>"
+msgstr "Tittel: <b>%1</b><br/>Artist: <b>%2</b>"
+
+#: plugins/mediaplayer/mediaview.cpp:179
+#, kde-format
+msgid "Title: <b>%1</b>"
+msgstr "Tittel: <b>%1</b>"
 
 #: plugins/mediaplayer/mediamodel.cpp:124
 #: plugins/mediaplayer/mediamodel.cpp:151
@@ -8501,8 +8641,8 @@ msgid ""
 msgstr ""
 
 #: plugins/search/searchprefpage.cpp:150
-#, c-format
-msgid "The URL %s, does not contain {searchTerms} !"
+#, kde-format
+msgid "The URL %1, does not contain {searchTerms}."
 msgstr ""
 
 #: plugins/search/searchenginelist.cpp:209
@@ -8754,18 +8894,21 @@ msgid "Current schedule: paused"
 msgstr "Gjeldende timeplan, på pause"
 
 #: plugins/bwscheduler/weekscene.cpp:73
-#, kde-format
-msgid "Current schedule: %1 KB/s download, %2 KB/s upload"
+#, fuzzy, kde-format
+#| msgid "Current schedule: %1 KB/s download, %2 KB/s upload"
+msgid "Current schedule: %1 KiB/s download, %2 KiB/s upload"
 msgstr "Gjeldende båndbreddeplan: %1 KB/s ned, %2 KB/s opp"
 
 #: plugins/bwscheduler/weekscene.cpp:75
-#, kde-format
-msgid "Current schedule: unlimited download, %1 KB/s upload"
+#, fuzzy, kde-format
+#| msgid "Current schedule: unlimited download, %1 KB/s upload"
+msgid "Current schedule: unlimited download, %1 KiB/s upload"
 msgstr "Gjeldende båndbreddeplan: ubegrenset nedlasting, %1 KB/s opp"
 
 #: plugins/bwscheduler/weekscene.cpp:77
-#, kde-format
-msgid "Current schedule: %1 KB/s download, unlimited upload"
+#, fuzzy, kde-format
+#| msgid "Current schedule: %1 KB/s download, unlimited upload"
+msgid "Current schedule: %1 KiB/s download, unlimited upload"
 msgstr "Gjeldende båndbreddeplan: %1 KB/s ned, ubegrenset opplasting"
 
 #: plugins/bwscheduler/weekscene.cpp:79
@@ -8848,20 +8991,20 @@ msgstr "Denne posten overlapper en annen post og kan ikke endres."
 msgid "Unknown client"
 msgstr "Ukjent program"
 
-#: libbtcore/util/functions.cpp:273
+#: libbtcore/util/functions.cpp:263
 #, fuzzy, kde-format
 #| msgid "%1 KB/s"
 msgid "%1/s"
 msgstr "%1 KB/s"
 
-#: libbtcore/util/functions.cpp:284
+#: libbtcore/util/functions.cpp:274
 #, kde-format
 msgid "1 day "
 msgid_plural "%1 days "
 msgstr[0] "1 dag "
 msgstr[1] "%1 dager "
 
-#: libbtcore/util/log.cpp:117
+#: libbtcore/util/log.cpp:112
 #, kde-format
 msgid "Cannot open log file %1 : %2"
 msgstr "Klarte ikke åpne loggfila «%1»: %2"
@@ -8876,58 +9019,59 @@ msgstr "Klarte ikke skrive til «%1»: %2"
 msgid "Cannot read from %1"
 msgstr "Klarte ikke lese fra %1"
 
-#: libbtcore/util/fileops.cpp:80
-#, kde-format
-msgid "Cannot create directory %1: %2"
+#: libbtcore/util/fileops.cpp:88
+#, fuzzy, kde-format
+#| msgid "Cannot create directory %1: %2"
+msgid "Cannot create directory %1"
 msgstr "Kan ikke lage mappen «%1»: %2"
 
-#: libbtcore/util/fileops.cpp:126
+#: libbtcore/util/fileops.cpp:129
 #, kde-format
 msgid "Cannot symlink %1 to %2: %3"
 msgstr "Klarte ikke lage en symbolsk kobling fra «%1» til «%2»: %3"
 
-#: libbtcore/util/fileops.cpp:143
+#: libbtcore/util/fileops.cpp:146
 #, kde-format
 msgid "Cannot move %1 to %2: %3"
 msgstr "Klarte ikke flytte «%1» til «%2»: %3"
 
-#: libbtcore/util/fileops.cpp:159 libbtcore/util/fileops.cpp:175
+#: libbtcore/util/fileops.cpp:162 libbtcore/util/fileops.cpp:178
 #, kde-format
 msgid "Cannot copy %1 to %2: %3"
 msgstr "Klarte ikke kopoiere «%1» til «%2»: %3"
 
-#: libbtcore/util/fileops.cpp:236
+#: libbtcore/util/fileops.cpp:239
 #, kde-format
 msgid "Cannot delete %1: %2"
 msgstr "Klarte ikke slette «%1»: %2"
 
-#: libbtcore/util/fileops.cpp:253
+#: libbtcore/util/fileops.cpp:256
 #, kde-format
 msgid "Cannot create %1: %2"
 msgstr "Klarte ikke lage «%1»: %2"
 
-#: libbtcore/util/fileops.cpp:271
+#: libbtcore/util/fileops.cpp:274
 #, kde-format
 msgid "Cannot calculate the filesize of %1: %2"
 msgstr "Klarte ikke beregne filstørrelsen for «%1»: %2"
 
-#: libbtcore/util/fileops.cpp:287
+#: libbtcore/util/fileops.cpp:290
 #, kde-format
 msgid "Cannot calculate the filesize : %1"
 msgstr "Klarte ikke beregne filstørrelse: %1"
 
-#: libbtcore/util/fileops.cpp:365 libbtcore/util/fileops.cpp:371
-#: libbtcore/util/fileops.cpp:374
+#: libbtcore/util/fileops.cpp:368 libbtcore/util/fileops.cpp:374
+#: libbtcore/util/fileops.cpp:377
 #, kde-format
 msgid "Cannot expand file : %1"
 msgstr "Klarte ikke utvide fil: %1"
 
-#: libbtcore/util/fileops.cpp:389 libbtcore/util/fileops.cpp:391
+#: libbtcore/util/fileops.cpp:392 libbtcore/util/fileops.cpp:394
 #, kde-format
 msgid "Cannot expand file: %1"
 msgstr "Klarte ikke utvide fil: %1"
 
-#: libbtcore/util/fileops.cpp:424
+#: libbtcore/util/fileops.cpp:427
 #, kde-format
 msgid "Cannot seek in file : %1"
 msgstr "Klarte ikke søke i fil: %1"
@@ -8944,12 +9088,18 @@ msgstr "Generelt:"
 msgid "Disk Input/Output"
 msgstr "Disk I/U:"
 
-#: libbtcore/download/webseed.cpp:48 libbtcore/download/webseed.cpp:91
+#: libbtcore/download/webseed.cpp:49 libbtcore/download/webseed.cpp:92
 #: libbtcore/download/httpconnection.cpp:37
 msgid "Not connected"
 msgstr "Ikke koblet til"
 
-#: libbtcore/download/webseed.cpp:251
+#: libbtcore/download/webseed.cpp:298 libbtcore/download/webseed.cpp:503
+#, fuzzy
+#| msgid "Notice"
+msgid "Not in use"
+msgstr "Merknader"
+
+#: libbtcore/download/webseed.cpp:316
 #: libbtcore/download/httpconnection.cpp:125
 msgid "Connection closed"
 msgstr "Tilkoblingen ble stengt"
@@ -8970,7 +9120,7 @@ msgid "Error: request failed: %1"
 msgstr "Feil, klarte ikke kjøre forespørsel: %1"
 
 #: libbtcore/download/httpconnection.cpp:149
-#: libbtcore/download/httpconnection.cpp:214
+#: libbtcore/download/httpconnection.cpp:213
 msgid "Connected"
 msgstr "Koblet til"
 
@@ -8982,27 +9132,27 @@ msgstr "Feil: klarte ikke koble til nettdelingstjener"
 msgid "Connecting"
 msgstr "Kobler til"
 
-#: libbtcore/download/httpconnection.cpp:230
+#: libbtcore/download/httpconnection.cpp:231
 msgid "Failed to connect to webseed"
 msgstr "Klarte ikek koble til nettdelingstjener"
 
-#: libbtcore/download/httpconnection.cpp:237
+#: libbtcore/download/httpconnection.cpp:238
 msgid "Failed to resolve hostname of webseed"
 msgstr "Klarte ikke slå opp maskinnavn for nettdelingstjener"
 
-#: libbtcore/download/httpconnection.cpp:317
+#: libbtcore/download/httpconnection.cpp:318
 msgid "Error: failed to connect, server not responding"
 msgstr "Feil: Klarte ikke koble til, tjeneren svarer ikke"
 
-#: libbtcore/download/httpconnection.cpp:326
+#: libbtcore/download/httpconnection.cpp:327
 msgid "Error: request timed out"
 msgstr "Feil: tidsavbrudd for forespørsel"
 
-#: libbtcore/download/httpconnection.cpp:417
+#: libbtcore/download/httpconnection.cpp:388
 msgid "Redirected without a new location !"
 msgstr ""
 
-#: libbtcore/download/chunkdownload.cpp:384
+#: libbtcore/download/chunkdownload.cpp:379
 #, fuzzy, kde-format
 #| msgid "%1 peers"
 msgid "1 peer"
@@ -9113,9 +9263,9 @@ msgstr "Klarte ikke åpne fila «%1»: %2"
 #: libbtcore/torrent/torrent.cpp:218 libbtcore/torrent/torrent.cpp:232
 #: libbtcore/torrent/torrent.cpp:239 libbtcore/torrent/torrent.cpp:245
 #: libbtcore/torrent/torrent.cpp:252 libbtcore/torrent/torrent.cpp:258
-#: libbtcore/torrent/torrent.cpp:274 libbtcore/torrent/torrent.cpp:321
-#: libbtcore/torrent/torrent.cpp:327 libbtcore/torrent/torrent.cpp:330
-#: libbtcore/torrent/torrent.cpp:333
+#: libbtcore/torrent/torrent.cpp:290 libbtcore/torrent/torrent.cpp:340
+#: libbtcore/torrent/torrent.cpp:346 libbtcore/torrent/torrent.cpp:349
+#: libbtcore/torrent/torrent.cpp:352
 msgid "Corrupted torrent!"
 msgstr "Ødelagt strøm"
 
@@ -9128,11 +9278,11 @@ msgstr "Strømmen har ikke noe felt for annonsering og noder"
 msgid " Unable to open torrent file %1 : %2"
 msgstr " Klarte ikke åpne strømfila «%1»: %2"
 
-#: libbtcore/torrent/torrent.cpp:298 libbtcore/torrent/torrent.cpp:304
+#: libbtcore/torrent/torrent.cpp:317 libbtcore/torrent/torrent.cpp:323
 msgid "Parse Error"
 msgstr "Tolkingsfeil"
 
-#: libbtcore/torrent/torrentcontrol.cpp:522
+#: libbtcore/torrent/torrentcontrol.cpp:528
 #, fuzzy, kde-format
 #| msgid ""
 #| "An error occurred while loading the torrent <b>%1</b>.<br/>The torrent is "
@@ -9144,7 +9294,7 @@ msgstr ""
 "Det oppstod en feil ved lasting av strømfilen <b>%1</b>.<br/>Filen er "
 "antakelig ødelagt eller ikke en strømfil."
 
-#: libbtcore/torrent/torrentcontrol.cpp:550
+#: libbtcore/torrent/torrentcontrol.cpp:556
 #, fuzzy
 #| msgid ""
 #| "An error occurred while loading the torrent.<br/>The torrent is probably "
@@ -9156,12 +9306,12 @@ msgstr ""
 "Det oppstod en feil ved lasting av strømmen.<br/>Strømmen er antakelig "
 "ødelagt eller ikke en strømfil."
 
-#: libbtcore/torrent/torrentcontrol.cpp:559
+#: libbtcore/torrent/torrentcontrol.cpp:565
 #, kde-format
 msgid "Unable to create %1 : %2"
 msgstr "Klarte ikke lage «%1»: %2"
 
-#: libbtcore/torrent/torrentcontrol.cpp:574
+#: libbtcore/torrent/torrentcontrol.cpp:580
 #, kde-format
 msgid ""
 "You are already downloading this torrent %1, the list of trackers of both "
@@ -9170,17 +9320,17 @@ msgstr ""
 "Du holder allerede på å laste ned denne strømmen (%1); lista over sporere i "
 "begge strømmene er nå slått sammen."
 
-#: libbtcore/torrent/torrentcontrol.cpp:578
+#: libbtcore/torrent/torrentcontrol.cpp:584
 #, kde-format
 msgid "You are already downloading the torrent %1"
 msgstr "Du laster allerede ned denne strømmen (%1)"
 
-#: libbtcore/torrent/torrentcontrol.cpp:677
+#: libbtcore/torrent/torrentcontrol.cpp:683
 #, kde-format
 msgid "Cannot migrate %1 : %2"
 msgstr "Klarte ikke flytte «%1»: %2"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1367
+#: libbtcore/torrent/torrentcontrol.cpp:1379
 #, kde-format
 msgid ""
 "The torrent %1 was started with a previous version of KTorrent. To make sure "
@@ -9193,48 +9343,48 @@ msgstr ""
 "vil bli spurt om hvor den skal lagres; veger du «Avbryt» lagres den i "
 "hjemmemappen din."
 
-#: libbtcore/torrent/torrentcontrol.cpp:1372
+#: libbtcore/torrent/torrentcontrol.cpp:1384
 msgid "Select Folder to Save To"
 msgstr "Velg mappe å lagre i"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1459
+#: libbtcore/torrent/torrentcontrol.cpp:1471
 msgid "Not started"
 msgstr "Ikke startet"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1461
+#: libbtcore/torrent/torrentcontrol.cpp:1473
 msgid "Download completed"
 msgstr "Nedlasting ferdig"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1463
+#: libbtcore/torrent/torrentcontrol.cpp:1475
 msgid "Seeding completed"
 msgstr "Deling ferdig"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1467
+#: libbtcore/torrent/torrentcontrol.cpp:1479
 msgid "Downloading"
 msgstr "Laster ned"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1469
+#: libbtcore/torrent/torrentcontrol.cpp:1481
 msgid "Stalled"
 msgstr "Stoppet opp"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1471
+#: libbtcore/torrent/torrentcontrol.cpp:1483
 #: libbtcore/torrent/peersourcemanager.cpp:162
 msgid "Stopped"
 msgstr "Stoppet"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1473
+#: libbtcore/torrent/torrentcontrol.cpp:1485
 msgid "Error: "
 msgstr "Feil: "
 
-#: libbtcore/torrent/torrentcontrol.cpp:1475
+#: libbtcore/torrent/torrentcontrol.cpp:1487
 msgid "Allocating diskspace"
 msgstr "Gjør klar diskplass"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1479
+#: libbtcore/torrent/torrentcontrol.cpp:1491
 msgid "Checking data"
 msgstr "Kontrollerer data"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1481
+#: libbtcore/torrent/torrentcontrol.cpp:1493
 msgid "Stopped. No space left on device."
 msgstr "Stoppet. Ikke mer plass på disken."
 
@@ -9247,7 +9397,7 @@ msgstr "Annonserer"
 msgid "Cannot create index file: %1"
 msgstr "Klarte ikke lage indeksfil: %1"
 
-#: libbtcore/tracker/udptracker.cpp:304
+#: libbtcore/tracker/udptracker.cpp:307
 #, fuzzy, kde-format
 #| msgid "Failed to resolve hostname of webseed"
 msgid "Unable to resolve hostname %1"
@@ -9276,6 +9426,12 @@ msgstr "Ugyldig sporer-URL"
 msgid "Cannot open file : %1 : %2"
 msgstr "Kan ikke åpne fila «%1»: %2"
 
+#~ msgid "%1 KB/s"
+#~ msgstr "%1 KB/s"
+
+#~ msgid "Update Tracker"
+#~ msgstr "Oppdater sporer"
+
 #~ msgid "%1 GB"
 #~ msgstr "%1 GB"
 
@@ -9290,9 +9446,6 @@ msgstr "Kan ikke åpne fila «%1»: %2"
 
 #~ msgid "Select interface:"
 #~ msgstr "Velg grensesnitt:"
-
-#~ msgid "Resume"
-#~ msgstr "Fortsett"
 
 #~ msgid "Php executable path:"
 #~ msgstr "Sti til PHP-program:"

@@ -305,6 +305,10 @@ namespace net
 	
 	bool Socket::setTOS(unsigned char type_of_service)
 	{
+		// If type of service is 0, do nothing
+		if (type_of_service == 0)
+			return true;
+
 		if (m_ip_version == 4)
 		{
 #if defined(Q_OS_MACX) || defined(Q_OS_DARWIN) || (defined(Q_OS_FREEBSD) && __FreeBSD_version < 600020) || defined(Q_OS_NETBSD) || defined(Q_OS_BSD4)
@@ -375,7 +379,13 @@ namespace net
 		socklen_t sslen = sizeof(ss);
 		
 		if (getpeername(m_fd,(struct sockaddr*)&ss,&sslen) == 0)
-			addr = KNetwork::KInetSocketAddress((struct sockaddr*)&ss,sslen);
+		{
+			// If it is a IPv6 mapped address convert to IPv4
+			KNetwork::KInetSocketAddress tmp((struct sockaddr*)&ss,sslen);
+			if (tmp.ipVersion() == 6 && tmp.ipAddress().isV4Mapped())
+				tmp.setHost(KNetwork::KIpAddress(tmp.ipAddress().IPv4Addr(true)));
+			addr = tmp;
+		}
 	}
 
 }

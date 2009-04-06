@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-02-13 06:05+0100\n"
-"PO-Revision-Date: 2009-02-04 16:17+0100\n"
+"POT-Creation-Date: 2009-03-29 07:49+0200\n"
+"PO-Revision-Date: 2009-03-30 07:56+0200\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -399,8 +399,8 @@ msgstr "Manuelle Bekanntmachung"
 msgid "Scrape"
 msgstr "Tracker aktualisieren"
 
-#: ktorrent/viewmanager.cpp:524 plugins/infowidget/iwfilelistmodel.cpp:69
-#: plugins/infowidget/iwfiletreemodel.cpp:73
+#: ktorrent/viewmanager.cpp:524 plugins/infowidget/iwfilelistmodel.cpp:78
+#: plugins/infowidget/iwfiletreemodel.cpp:89
 msgid "Preview"
 msgstr "Vorschau"
 
@@ -869,104 +869,104 @@ msgstr "Torrent wird erstellt"
 msgid "Creating %1..."
 msgstr "%1 wird erstellt ..."
 
-#: ktorrent/viewmodel.cpp:216 plugins/infowidget/iwfilelistmodel.cpp:146
-#: plugins/infowidget/iwfilelistmodel.cpp:169
-#: plugins/infowidget/iwfiletreemodel.cpp:152
-#: plugins/infowidget/iwfiletreemodel.cpp:172
-#: plugins/infowidget/iwfiletreemodel.cpp:178
+#: ktorrent/viewmodel.cpp:216 plugins/infowidget/iwfilelistmodel.cpp:155
+#: plugins/infowidget/iwfilelistmodel.cpp:178
+#: plugins/infowidget/iwfiletreemodel.cpp:168
+#: plugins/infowidget/iwfiletreemodel.cpp:188
+#: plugins/infowidget/iwfiletreemodel.cpp:194
 #, no-c-format, kde-format
 msgid "%1 %"
 msgstr "%1 %"
 
 #. i18n: file: plugins/bitfinder/filter/filterdetails.ui:57
 #. i18n: ectx: property (text), widget (QLabel, nameLabel)
-#: ktorrent/viewmodel.cpp:420 ktorrent/queuemanagermodel.cpp:98 rc.cpp:2142
+#: ktorrent/viewmodel.cpp:426 ktorrent/queuemanagermodel.cpp:98 rc.cpp:2142
 msgid "Name"
 msgstr "Name"
 
-#: ktorrent/viewmodel.cpp:421 ktorrent/queuemanagermodel.cpp:99
+#: ktorrent/viewmodel.cpp:427 ktorrent/queuemanagermodel.cpp:99
 #: plugins/infowidget/infowidgetplugin.cpp:80
 #: plugins/infowidget/webseedsmodel.cpp:127
 msgid "Status"
 msgstr "Status"
 
-#: ktorrent/viewmodel.cpp:422 plugins/infowidget/peerviewmodel.cpp:378
+#: ktorrent/viewmodel.cpp:428 plugins/infowidget/peerviewmodel.cpp:378
 #: plugins/infowidget/webseedsmodel.cpp:126
 msgid "Downloaded"
 msgstr "Heruntergeladen"
 
-#: ktorrent/viewmodel.cpp:423 libktcore/torrent/torrentfiletreemodel.cpp:377
-#: libktcore/torrent/torrentfilelistmodel.cpp:70
+#: ktorrent/viewmodel.cpp:429 libktcore/torrent/torrentfiletreemodel.cpp:399
+#: libktcore/torrent/torrentfilelistmodel.cpp:77
 msgid "Size"
 msgstr "Größe"
 
-#: ktorrent/viewmodel.cpp:424 plugins/infowidget/peerviewmodel.cpp:379
+#: ktorrent/viewmodel.cpp:430 plugins/infowidget/peerviewmodel.cpp:379
 msgid "Uploaded"
 msgstr "Hochgeladen"
 
-#: ktorrent/viewmodel.cpp:425 plugins/infowidget/peerviewmodel.cpp:369
+#: ktorrent/viewmodel.cpp:431 plugins/infowidget/peerviewmodel.cpp:369
 #: plugins/infowidget/chunkdownloadmodel.cpp:213
 msgid "Down Speed"
 msgstr "Downloadgeschwindigkeit"
 
-#: ktorrent/viewmodel.cpp:426 plugins/infowidget/peerviewmodel.cpp:370
+#: ktorrent/viewmodel.cpp:432 plugins/infowidget/peerviewmodel.cpp:370
 msgid "Up Speed"
 msgstr "Uploadgeschwindigkeit"
 
-#: ktorrent/viewmodel.cpp:427
+#: ktorrent/viewmodel.cpp:433
 msgid "Time Left"
 msgstr "Restzeit"
 
-#: ktorrent/viewmodel.cpp:428
+#: ktorrent/viewmodel.cpp:434
 msgid "Seeders"
 msgstr "Seeder"
 
-#: ktorrent/viewmodel.cpp:429
+#: ktorrent/viewmodel.cpp:435
 msgid "Leechers"
 msgstr "Leecher"
 
-#: ktorrent/viewmodel.cpp:431
+#: ktorrent/viewmodel.cpp:437
 #, no-c-format
 msgid "% Complete"
 msgstr "% vollständig"
 
-#: ktorrent/viewmodel.cpp:432
+#: ktorrent/viewmodel.cpp:438
 msgid "Share Ratio"
 msgstr "Verteilungsverhältnis"
 
-#: ktorrent/viewmodel.cpp:433
+#: ktorrent/viewmodel.cpp:439
 msgid "Time Downloaded"
 msgstr "Herunterladezeit"
 
-#: ktorrent/viewmodel.cpp:434
+#: ktorrent/viewmodel.cpp:440
 msgid "Time Seeded"
 msgstr "Hochladezeit"
 
-#: ktorrent/viewmodel.cpp:435
+#: ktorrent/viewmodel.cpp:441
 msgid "Location"
 msgstr "Ort"
 
-#: ktorrent/viewmodel.cpp:443
+#: ktorrent/viewmodel.cpp:449
 msgid "How much data we have downloaded of the torrent"
 msgstr "Die bereits heruntergeladene Datenmenge des Torrents"
 
-#: ktorrent/viewmodel.cpp:444
+#: ktorrent/viewmodel.cpp:450
 msgid "Total size of the torrent, excluded files are not included"
 msgstr "Die Größe des Torrents ohne ausgeschlossene Dateien"
 
-#: ktorrent/viewmodel.cpp:445
+#: ktorrent/viewmodel.cpp:451
 msgid "How much data we have uploaded"
 msgstr "Die bereits hochgeladene Datenmenge"
 
-#: ktorrent/viewmodel.cpp:446
+#: ktorrent/viewmodel.cpp:452
 msgid "Current download speed"
 msgstr "Aktuelle Downloadgeschwindigkeit"
 
-#: ktorrent/viewmodel.cpp:447
+#: ktorrent/viewmodel.cpp:453
 msgid "Current upload speed"
 msgstr "Aktuelle Uploadgeschwindigkeit"
 
-#: ktorrent/viewmodel.cpp:448
+#: ktorrent/viewmodel.cpp:454
 msgid ""
 "How much time is left before the torrent is finished or before the maximum "
 "share ratio is reached, if that is enabled"
@@ -974,19 +974,19 @@ msgstr ""
 "Die verbleibende Restzeit bis der Torrent beendet ist oder - falls aktiviert "
 "- das maximale Verteilungsverhältnis erreicht wurde"
 
-#: ktorrent/viewmodel.cpp:449
+#: ktorrent/viewmodel.cpp:455
 msgid ""
 "How many seeders we are connected to (How many seeders there are according "
 "to the tracker)"
 msgstr "Die Anzahl der verbundenen Seeder (nach Angabe des Trackers)"
 
-#: ktorrent/viewmodel.cpp:450
+#: ktorrent/viewmodel.cpp:456
 msgid ""
 "How many leechers we are connected to (How many leechers there are according "
 "to the tracker)"
 msgstr "Die Anzahl der verbundenen Leecher (nach Angabe des Trackers)"
 
-#: ktorrent/viewmodel.cpp:452
+#: ktorrent/viewmodel.cpp:458
 #, no-c-format
 msgid ""
 "The percentage of data we have of the whole torrent, not including excluded "
@@ -995,7 +995,7 @@ msgstr ""
 "Der prozentuale Anteil der heruntergeladenen Datenmenge an der Gesamtgröße "
 "des Torrents ohne ausgeschlossene Dateien"
 
-#: ktorrent/viewmodel.cpp:453
+#: ktorrent/viewmodel.cpp:459
 msgid ""
 "Share ratio is the number of bytes uploaded divided by the number of bytes "
 "downloaded"
@@ -1003,29 +1003,29 @@ msgstr ""
 "Das Verteilungsverhältnis ist die Anzahl an hochgeladenen Bytes geteilt "
 "durch die Anzahl an heruntergeladenen Bytes"
 
-#: ktorrent/viewmodel.cpp:454
+#: ktorrent/viewmodel.cpp:460
 msgid "How long we have been downloading the torrent"
 msgstr "Der Zeitraum, über den Sie den Torrent bereits herunterladen"
 
-#: ktorrent/viewmodel.cpp:455
+#: ktorrent/viewmodel.cpp:461
 msgid "How long we have been seeding the torrent"
 msgstr "Der Zeitraum, über den Sie den Torrent bereits hochladen"
 
-#: ktorrent/viewmodel.cpp:456
+#: ktorrent/viewmodel.cpp:462
 msgid "The location of the torrent's data on disk"
 msgstr "Der Speicherort der Daten des Torrents auf dem Medium"
 
-#: ktorrent/viewmodel.cpp:502
+#: ktorrent/viewmodel.cpp:508
 #, kde-format
 msgid "There is a problem with the tracker: <br><b>%1</b>"
 msgstr "Es besteht ein Problem mit dem Tracker: <br><b>%1</b>"
 
-#: ktorrent/viewmodel.cpp:508
+#: ktorrent/viewmodel.cpp:514
 #, kde-format
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "%1<br>Adresse: <b>%2</b>"
 
-#: ktorrent/core.cpp:121
+#: ktorrent/core.cpp:136
 #, kde-format
 msgid ""
 "Specified port (%1) is unavailable or in use by another application. "
@@ -1034,7 +1034,7 @@ msgstr ""
 "Der festgelegte Port (%1) ist nicht verfügbar oder wird bereits von einem "
 "anderen Programm verwendet. KTorrent verwendet stattdessen Port %2."
 
-#: ktorrent/core.cpp:129
+#: ktorrent/core.cpp:144
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -1043,16 +1043,16 @@ msgstr ""
 "KTorrent kann keine Verbindungen annehmen, da die Ports %1 bis %2 bereits "
 "von einem anderen Programm verwendet werden."
 
-#: ktorrent/core.cpp:831
+#: ktorrent/core.cpp:840
 msgid "KTorrent is running one or more torrents"
 msgstr "Ein oder mehrere Torrents laufen derzeit in KTorrent"
 
-#: ktorrent/core.cpp:923
+#: ktorrent/core.cpp:932
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Torrent „%1“ lässt sich nicht erstellen."
 
-#: ktorrent/core.cpp:1024
+#: ktorrent/core.cpp:1027
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1061,22 +1061,22 @@ msgstr ""
 "Es fehlen einige Datendateien zum Torrent „%1“.\n"
 "Möchten Sie diese neu erstellen oder möchten Sie sie nicht herunterladen?"
 
-#: ktorrent/core.cpp:1033 ktorrent/core.cpp:1045 ktorrent/core.cpp:1058
+#: ktorrent/core.cpp:1036 ktorrent/core.cpp:1048 ktorrent/core.cpp:1061
 msgid "Data files are missing"
 msgstr "Fehlende Datendateien"
 
-#: ktorrent/core.cpp:1044
+#: ktorrent/core.cpp:1047
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr ""
 "Die Auswahl für folgende fehlende Dateien lässt sich nicht aufheben: %1"
 
-#: ktorrent/core.cpp:1057
+#: ktorrent/core.cpp:1060
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Folgende fehlende Dateien lassen sich nicht neu erstellen: %1"
 
-#: ktorrent/core.cpp:1073
+#: ktorrent/core.cpp:1076
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -1086,20 +1086,20 @@ msgstr ""
 "vorhanden.\n"
 "Möchten Sie sie erstellen?"
 
-#: ktorrent/core.cpp:1080 ktorrent/core.cpp:1091
+#: ktorrent/core.cpp:1083 ktorrent/core.cpp:1094
 msgid "Data file is missing"
 msgstr "Datendatei fehlt"
 
-#: ktorrent/core.cpp:1090
+#: ktorrent/core.cpp:1093
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Folgende Datendatei lässt sich nicht neu erstellen: %1"
 
-#: ktorrent/core.cpp:1158
+#: ktorrent/core.cpp:1161
 msgid "Checking Data Integrity"
 msgstr "Datenintegrität wird geprüft"
 
-#: ktorrent/core.cpp:1180
+#: ktorrent/core.cpp:1183
 #, kde-format
 msgid ""
 "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
@@ -1108,7 +1108,7 @@ msgstr ""
 "KTorrent hat %1 Torrents aus der KDE3-Version von KTorrent gefunden. Möchten "
 "Sie diese importieren?"
 
-#: ktorrent/core.cpp:1202
+#: ktorrent/core.cpp:1205
 msgid "No torrents from the KDE3 version were found !"
 msgstr "Es konnten keine Torrents aus der KDE3-Version gefunden werden."
 
@@ -1189,18 +1189,18 @@ msgstr "Gruppen"
 
 #: ktorrent/gui.cpp:85
 msgid "Widget to manage torrent groups"
-msgstr "Element zur Verwaltung von Torrent-Gruppen"
+msgstr "Ein Bedienelement zur Verwaltung von Torrent-Gruppen"
 
 #: ktorrent/gui.cpp:91
 msgid "Widget to manage the torrent queue"
-msgstr "Element zur Verwaltung der Warteschlange"
+msgstr "Ein Bedienelement zur Verwaltung der Warteschlange"
 
 #: ktorrent/gui.cpp:268 ktorrent/gui.cpp:283
 msgid "Torrent Files"
 msgstr "Torrent-Dateien"
 
 #: ktorrent/gui.cpp:268 ktorrent/gui.cpp:283
-#: plugins/mediaplayer/mediaview.cpp:72
+#: plugins/mediaplayer/mediaview.cpp:75
 msgid "All Files"
 msgstr "Alle Dateien"
 
@@ -1238,13 +1238,13 @@ msgid "Start all selected torrents in the current tab"
 msgstr "Alle ausgewählten Torrents im aktuellen Unterfenster starten"
 
 #: ktorrent/gui.cpp:451 plugins/mediaplayer/videowidget.cpp:55
-#: plugins/mediaplayer/mediaplayerplugin.cpp:81
+#: plugins/mediaplayer/mediaplayerplugin.cpp:80
 msgid "Stop"
-msgstr "Stoppen"
+msgstr "Anhalten"
 
 #: ktorrent/gui.cpp:452
 msgid "Stop all selected torrents in the current tab"
-msgstr "Alle ausgewählten Torrents im aktuellen Unterfenster stoppen"
+msgstr "Alle ausgewählten Torrents im aktuellen Unterfenster anhalten"
 
 #. i18n: file: ktorrent/torrentcreatordlg.ui:189
 #. i18n: ectx: property (text), widget (KPushButton, m_remove_tracker)
@@ -1289,11 +1289,11 @@ msgstr "Alle Torrents starten"
 
 #: ktorrent/gui.cpp:473 ktorrent/gui.cpp:479
 msgid "Stop All"
-msgstr "Alle stoppen"
+msgstr "Alle anhalten"
 
 #: ktorrent/gui.cpp:474
 msgid "Stop all torrents in the current tab"
-msgstr "Alle Torrents im aktuellen Unterfenster stoppen"
+msgstr "Alle Torrents im aktuellen Unterfenster anhalten"
 
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:127
 #. i18n: ectx: property (text), widget (QCheckBox, m_paused)
@@ -1305,7 +1305,7 @@ msgstr "Alle Torrents im aktuellen Unterfenster stoppen"
 #. i18n: ectx: property (text), widget (QCheckBox, m_paused)
 #: ktorrent/gui.cpp:480 rc.cpp:2256 rc.cpp:2325
 msgid "Stop all torrents"
-msgstr "Alle Torrents stoppen"
+msgstr "Alle Torrents anhalten"
 
 #: ktorrent/gui.cpp:483
 msgid "Open URL"
@@ -1339,7 +1339,7 @@ msgstr "KTorrent fortsetzen"
 
 #: ktorrent/gui.cpp:500
 msgid "Resume paused torrents"
-msgstr "Angehaltene Torrents fortsetzen"
+msgstr "Pausierte Torrents fortsetzen"
 
 #: ktorrent/gui.cpp:503 plugins/ipfilter/ipfilterplugin.cpp:60
 #: plugins/ipfilter/ipfilterplugin.cpp:73
@@ -1440,9 +1440,9 @@ msgid ""
 "<b>%1</b> has reached its maximum seed time of %2 hours and has been stopped."
 "<br>Uploaded %3 at an average speed of %4."
 msgstr ""
-"<b>%1</b> hat seine maximale Verteilungszeit von %2 Stunden erreicht und "
-"wurde angehalten.<br>%3 wurden bei einer durchschnittlichen Geschwindigkeit "
-"von %4 hochgeladen."
+"<b>%1</b> hat seine maximale Uploadzeit von %2 Stunden erreicht und wurde "
+"angehalten.<br>%3 wurden bei einer durchschnittlichen Geschwindigkeit von %4 "
+"hochgeladen."
 
 #: ktorrent/trayicon.cpp:181
 #, kde-format
@@ -1474,8 +1474,8 @@ msgid ""
 "<b>%1</b> has reached its maximum seed time of %2 hours and cannot be "
 "enqueued. <br>Remove the limit manually if you want to continue seeding."
 msgstr ""
-"<b>%1</b> hat seine maximale Verteilungszeit von %2 Stunden erreicht und "
-"kann nicht in die Warteschlange eingereiht werden. <br>Entfernen Sie die "
+"<b>%1</b> hat seine maximale Uploadzeit von %2 Stunden erreicht und kann "
+"nicht in die Warteschlange eingereiht werden. <br>Entfernen Sie die "
 "Begrenzung manuell, wenn Sie den Upload fortsetzen möchten."
 
 #: ktorrent/trayicon.cpp:225
@@ -1537,8 +1537,8 @@ msgid "Time Stalled"
 msgstr "Zeit ohne Übertragung"
 
 #: ktorrent/queuemanagermodel.cpp:101
-#: plugins/infowidget/iwfilelistmodel.cpp:68
-#: plugins/infowidget/iwfiletreemodel.cpp:72
+#: plugins/infowidget/iwfilelistmodel.cpp:77
+#: plugins/infowidget/iwfiletreemodel.cpp:88
 msgid "Priority"
 msgstr "Priorität"
 
@@ -1551,7 +1551,7 @@ msgid "Running"
 msgstr "Läuft"
 
 #: ktorrent/queuemanagermodel.cpp:138
-#: libbtcore/torrent/torrentcontrol.cpp:1486
+#: libbtcore/torrent/torrentcontrol.cpp:1489
 msgid "Queued"
 msgstr "Eingereiht"
 
@@ -1597,7 +1597,7 @@ msgstr "Garantierte Uploadgeschwindigkeit"
 msgid "Columns"
 msgstr "Spalten"
 
-#: ktorrent/view.cpp:206
+#: ktorrent/view.cpp:204
 #, kde-format
 msgid ""
 "The torrent <b>%1</b> has not finished downloading, do you want to delete "
@@ -1606,31 +1606,31 @@ msgstr ""
 "Der Torrent <b>%1</b> wurde nicht vollständig heruntergeladen. Möchten Sie "
 "auch die unvollständigen Daten löschen?"
 
-#: ktorrent/view.cpp:211
+#: ktorrent/view.cpp:209
 msgid "Remove Download"
 msgstr "Download entfernen"
 
-#: ktorrent/view.cpp:212
+#: ktorrent/view.cpp:210
 msgid "Delete Data"
 msgstr "Daten löschen"
 
-#: ktorrent/view.cpp:213
+#: ktorrent/view.cpp:211
 msgid "Keep Data"
 msgstr "Daten behalten"
 
-#: ktorrent/view.cpp:232
+#: ktorrent/view.cpp:230
 msgid ""
 "You will lose all the downloaded data. Are you sure you want to do this?"
 msgstr ""
 "Sämtliche heruntergeladene Daten werden gelöscht. Sind Sie sicher, dass Sie "
 "dies möchten?"
 
-#: ktorrent/view.cpp:233
+#: ktorrent/view.cpp:231
 msgid "Remove Torrent"
 msgstr "Torrent entfernen"
 
-#: ktorrent/view.cpp:348 plugins/infowidget/fileview.cpp:282
-#: plugins/infowidget/fileview.cpp:303
+#: ktorrent/view.cpp:346 plugins/infowidget/fileview.cpp:270
+#: plugins/infowidget/fileview.cpp:291
 msgid "Select a directory to move the data to."
 msgstr "Wählen Sie einen Ordner, in den die Daten verschoben werden sollen."
 
@@ -1729,8 +1729,8 @@ msgstr "Passive Uploads"
 msgid "Ungrouped Torrents"
 msgstr "Nicht gruppierte Torrents"
 
-#: libktcore/torrent/torrentfiletreemodel.cpp:376
-#: libktcore/torrent/torrentfilelistmodel.cpp:69
+#: libktcore/torrent/torrentfiletreemodel.cpp:398
+#: libktcore/torrent/torrentfilelistmodel.cpp:76
 msgid "File"
 msgstr "Datei"
 
@@ -1772,7 +1772,7 @@ msgid ""
 "The torrent \"%1\" has reached it's maximum seed time. Ignore the limit and "
 "start seeding anyway?"
 msgstr ""
-"Der Torrent „%1“ hat seine maximale Verteilungszeit erreicht. Soll diese "
+"Der Torrent „%1“ hat seine maximale Uploadzeit erreicht. Soll diese "
 "Begrenzung ignoriert und der Upload trotzdem gestartet werden?"
 
 #: libktcore/torrent/queuemanager.cpp:137
@@ -1804,18 +1804,18 @@ msgstr ""
 "Möchten Sie sie trotzdem starten?"
 
 #: libktcore/torrent/queuemanager.cpp:381
-#: libktcore/torrent/queuemanager.cpp:745
+#: libktcore/torrent/queuemanager.cpp:744
 #, kde-format
 msgid "Error stopping torrent %1 : %2"
-msgstr "Der Transfer des Torrents %1 kann nicht gestoppt werden: %2"
+msgstr "Der Transfer des Torrents %1 kann nicht angehalten werden: %2"
 
 #: libktcore/torrent/queuemanager.cpp:383
-#: libktcore/torrent/queuemanager.cpp:731
-#: libktcore/torrent/queuemanager.cpp:747
+#: libktcore/torrent/queuemanager.cpp:730
+#: libktcore/torrent/queuemanager.cpp:746
 msgid "Error"
 msgstr "Fehler"
 
-#: libktcore/torrent/queuemanager.cpp:729
+#: libktcore/torrent/queuemanager.cpp:728
 #, kde-format
 msgid "Error starting torrent %1 : %2"
 msgstr "Der Transfer des Torrents %1 kann nicht gestartet werden: %2"
@@ -2918,7 +2918,7 @@ msgstr ""
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxCorruptedBeforeRecheck)
 #: rc.cpp:375
 msgid " corrupted chunks"
-msgstr "fehlerhafte Blöcke"
+msgstr " fehlerhafte Blöcke"
 
 #. i18n: file: ktorrent/btpref.ui:251
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_checkWhenFinished)
@@ -3607,7 +3607,7 @@ msgstr "Torrent starten"
 #. i18n: ectx: property (text), widget (QLabel, label_13)
 #: rc.cpp:671
 msgid "Stop torrents when free disk space is lower than:"
-msgstr "Torrents stoppen, wenn freier Speicherplatz unter:"
+msgstr "Torrents anhalten, wenn freier Speicherplatz unter:"
 
 #. i18n: file: ktorrent/qmpref.ui:100
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_minDiskSpace)
@@ -3711,7 +3711,7 @@ msgstr " Minuten"
 
 #. i18n: file: ktorrent/qmpref.ui:183
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:704 libbtcore/torrent/torrentcontrol.cpp:1474
+#: rc.cpp:704 libbtcore/torrent/torrentcontrol.cpp:1477
 msgid "Seeding"
 msgstr "Hochladen"
 
@@ -3775,9 +3775,9 @@ msgstr ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span style="
 "\" font-size:8pt;\">Das maximale Verteilungsverhältnis. Wird dieser Wert "
-"erreicht, wird der Upload gestoppt. Dies wird nur auf neu geöffnete Torrents "
-"angewandt. Bereits existierende Torrents sind durch Änderungen hier nicht "
-"betroffen.</span></p>\n"
+"erreicht, wird der Upload angehalten. Dies wird nur auf neu geöffnete "
+"Torrents angewandt. Bereits existierende Torrents sind durch Änderungen hier "
+"nicht betroffen.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
 "p>\n"
@@ -3874,7 +3874,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/missingfilesdlg.ui:52
 #. i18n: ectx: property (text), widget (KPushButton, m_dnd)
-#: rc.cpp:773 plugins/infowidget/fileview.cpp:73
+#: rc.cpp:773 plugins/infowidget/fileview.cpp:78
 msgid "Do Not Download"
 msgstr "Nicht herunterladen"
 
@@ -4885,13 +4885,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/advancedpref.ui:229
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: rc.cpp:1171
+#: rc.cpp:1171 plugins/stats/SpdTabPage.cc:63 plugins/stats/SpdTabPage.cc:64
 msgid "Current speed"
 msgstr "Aktuelle Geschwindigkeit"
 
 #. i18n: file: ktorrent/advancedpref.ui:234
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: rc.cpp:1174
+#: rc.cpp:1174 plugins/stats/SpdTabPage.cc:66 plugins/stats/SpdTabPage.cc:67
 msgid "Average speed"
 msgstr "Durchschnittliche Geschwindigkeit"
 
@@ -6019,49 +6019,50 @@ msgstr "Begrenzung"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:172
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:1665
+#: rc.cpp:1665 plugins/stats/SpdTabPage.cc:72
 msgid "Average from leechers"
 msgstr "Durchschnittlich von Leechern"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:207
 #. i18n: ectx: property (text), widget (QLabel, label_19)
-#: rc.cpp:1668
+#: rc.cpp:1668 plugins/stats/SpdTabPage.cc:73
 msgid "Average to leechers"
 msgstr "Durchschnittlich an Leecher"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:242
 #. i18n: ectx: property (text), widget (QLabel, label_20)
-#: rc.cpp:1671
+#: rc.cpp:1671 plugins/stats/SpdTabPage.cc:74
 msgid "Average from seeds"
 msgstr "Durchschnittlich von Seedern"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:277
 #. i18n: ectx: property (text), widget (QLabel, label_21)
-#: rc.cpp:1674
+#: rc.cpp:1674 plugins/stats/SpdTabPage.cc:75
 msgid "From leechers"
 msgstr "Von Leechern"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:312
 #. i18n: ectx: property (text), widget (QLabel, label_22)
-#: rc.cpp:1677
+#: rc.cpp:1677 plugins/stats/SpdTabPage.cc:76
 msgid "From seeds"
 msgstr "Von Seedern"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:512
 #. i18n: ectx: property (text), widget (QLabel, label_23)
-#: rc.cpp:1695
+#: rc.cpp:1695 plugins/stats/ConnsTabPage.cc:57
 msgid "Leechers connected"
 msgstr "Verbundene Leecher"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:547
 #. i18n: ectx: property (text), widget (QLabel, label_24)
-#: rc.cpp:1698
+#: rc.cpp:1698 plugins/stats/ConnsTabPage.cc:61
+#: plugins/stats/ConnsTabPage.cc:106
 msgid "Leechers in swarms"
 msgstr "Leecher in Schwärmen"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:582
 #. i18n: ectx: property (text), widget (QLabel, label_25)
-#: rc.cpp:1701
+#: rc.cpp:1701 plugins/stats/ConnsTabPage.cc:64
 msgid "Seeds connected"
 msgstr "Verbundene Seeder"
 
@@ -6073,13 +6074,13 @@ msgstr "Seeder in Schwärmen"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:652
 #. i18n: ectx: property (text), widget (QLabel, label_27)
-#: rc.cpp:1707
+#: rc.cpp:1707 plugins/stats/ConnsTabPage.cc:71
 msgid "Average leechers connected per torrent"
 msgstr "Durchschnittlich verbundene Leecher pro Torrent"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:687
 #. i18n: ectx: property (text), widget (QLabel, label_28)
-#: rc.cpp:1710
+#: rc.cpp:1710 plugins/stats/ConnsTabPage.cc:73
 msgid "Average seeds connected per torrent"
 msgstr "Durchschnittlich verbundene Seeder pro Torrent"
 
@@ -6087,29 +6088,29 @@ msgstr "Durchschnittlich verbundene Seeder pro Torrent"
 #. i18n: ectx: property (text), widget (QLabel, label_29)
 #: rc.cpp:1713
 msgid "Avg. leechers connected per running torr."
-msgstr "Durchschnittlich verbundene Leecher pro laufendem Torrent"
+msgstr "Durchschnittlich verbundene Leecher pro laufenden Torrent"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:757
 #. i18n: ectx: property (text), widget (QLabel, label_30)
 #: rc.cpp:1716
 msgid "Avg. seeds connected per running torrent"
-msgstr "Durchschnittlich verbundene Seeder pro laufendem Torrent"
+msgstr "Durchschnittlich verbundene Seeder pro laufenden Torrent"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:805
 #. i18n: ectx: property (text), widget (QLabel, label_31)
-#: rc.cpp:1722
+#: rc.cpp:1722 plugins/stats/ConnsTabPage.cc:83
 msgid "Nodes"
 msgstr "Knoten"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:844
 #. i18n: ectx: property (text), widget (QLabel, label_32)
-#: rc.cpp:1725
+#: rc.cpp:1725 plugins/stats/ConnsTabPage.cc:84
 msgid "Tasks"
 msgstr "Aufträge"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:903
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:1728
+#: rc.cpp:1728 plugins/stats/DisplaySettingsPage.cc:28
 msgid "Display"
 msgstr "Anzeige"
 
@@ -7248,46 +7249,46 @@ msgstr "Ordner durchsuchen"
 msgid "loaded"
 msgstr "geladen"
 
-#: plugins/infowidget/fileview.cpp:67
+#: plugins/infowidget/fileview.cpp:72
 msgctxt "Open file"
 msgid "Open"
 msgstr "Öffnen"
 
-#: plugins/infowidget/fileview.cpp:69
+#: plugins/infowidget/fileview.cpp:74
 msgid "Download first"
 msgstr "Zuerst herunterladen"
 
-#: plugins/infowidget/fileview.cpp:70
+#: plugins/infowidget/fileview.cpp:75
 msgid "Download normally"
 msgstr "Normal herunterladen"
 
-#: plugins/infowidget/fileview.cpp:71
+#: plugins/infowidget/fileview.cpp:76
 msgid "Download last"
 msgstr "Zuletzt herunterladen"
 
-#: plugins/infowidget/fileview.cpp:74
+#: plugins/infowidget/fileview.cpp:79
 msgid "Delete File(s)"
 msgstr "Datei(en) löschen"
 
-#: plugins/infowidget/fileview.cpp:76
+#: plugins/infowidget/fileview.cpp:81
 msgid "Move File"
 msgstr "Datei verschieben"
 
-#: plugins/infowidget/fileview.cpp:78
+#: plugins/infowidget/fileview.cpp:83
 msgid "Collapse Folder Tree"
 msgstr "Baumansicht des Ordners einklappen"
 
-#: plugins/infowidget/fileview.cpp:79
+#: plugins/infowidget/fileview.cpp:84
 msgid "Expand Folder Tree"
 msgstr "Baumansicht des Ordners ausklappen"
 
-#: plugins/infowidget/fileview.cpp:267
+#: plugins/infowidget/fileview.cpp:255
 msgid "You will lose all data in this file, are you sure you want to do this ?"
 msgstr ""
 "Sie werden sämtliche heruntergeladenen Daten dieser Datei verlieren. Sind "
 "Sie sicher, dass Sie dies tun möchten?"
 
-#: plugins/infowidget/fileview.cpp:268
+#: plugins/infowidget/fileview.cpp:256
 msgid ""
 "You will lose all data in these files, are you sure you want to do this ?"
 msgstr ""
@@ -7539,11 +7540,11 @@ msgstr "Der vorgegebene Tracker kann nicht entfernt werden."
 msgid "You cannot add trackers to a private torrent"
 msgstr "Sie können keine Tracker zu privaten Torrents hinzufügen"
 
-#: plugins/infowidget/peerview.cpp:52
+#: plugins/infowidget/peerview.cpp:56
 msgid "Kick Peer"
 msgstr "Gegenstelle zwangsweise trennen"
 
-#: plugins/infowidget/peerview.cpp:53
+#: plugins/infowidget/peerview.cpp:57
 msgid "Ban Peer"
 msgstr "Gegenstelle verbannen"
 
@@ -7557,49 +7558,49 @@ msgstr ""
 "\"unavailable_color\">&nbsp; - Nicht verfügbare Teile<br><img src="
 "\"excluded_color\">&nbsp; - Ausgeschlossene Teile"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:71
-#: plugins/infowidget/iwfiletreemodel.cpp:75
+#: plugins/infowidget/iwfilelistmodel.cpp:80
+#: plugins/infowidget/iwfiletreemodel.cpp:91
 #, no-c-format
 msgctxt "Percent of File Downloaded"
 msgid "% Complete"
 msgstr "% vollständig"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:80
-#: plugins/infowidget/iwfiletreemodel.cpp:84
+#: plugins/infowidget/iwfilelistmodel.cpp:89
+#: plugins/infowidget/iwfiletreemodel.cpp:100
 msgctxt "Download first"
 msgid "First"
 msgstr "Zuerst"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:81
-#: plugins/infowidget/iwfiletreemodel.cpp:85
+#: plugins/infowidget/iwfilelistmodel.cpp:90
+#: plugins/infowidget/iwfiletreemodel.cpp:101
 msgctxt "Download last"
 msgid "Last"
 msgstr "Zuletzt"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:86
+#: plugins/infowidget/iwfilelistmodel.cpp:95
 msgctxt "Download Normal (not as first or last)"
 msgid "Normal"
 msgstr "Normal"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:137
-#: plugins/infowidget/iwfilelistmodel.cpp:160
-#: plugins/infowidget/iwfiletreemodel.cpp:165
+#: plugins/infowidget/iwfilelistmodel.cpp:146
+#: plugins/infowidget/iwfilelistmodel.cpp:169
+#: plugins/infowidget/iwfiletreemodel.cpp:181
 msgctxt "Preview available"
 msgid "Available"
 msgstr "Verfügbar"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:139
-#: plugins/infowidget/iwfilelistmodel.cpp:162
-#: plugins/infowidget/iwfiletreemodel.cpp:144
-#: plugins/infowidget/iwfiletreemodel.cpp:167
+#: plugins/infowidget/iwfilelistmodel.cpp:148
+#: plugins/infowidget/iwfilelistmodel.cpp:171
+#: plugins/infowidget/iwfiletreemodel.cpp:160
+#: plugins/infowidget/iwfiletreemodel.cpp:183
 msgctxt "Preview pending"
 msgid "Pending"
 msgstr "Anhängig"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:142
-#: plugins/infowidget/iwfilelistmodel.cpp:165
-#: plugins/infowidget/iwfiletreemodel.cpp:147
-#: plugins/infowidget/iwfiletreemodel.cpp:170
+#: plugins/infowidget/iwfilelistmodel.cpp:151
+#: plugins/infowidget/iwfilelistmodel.cpp:174
+#: plugins/infowidget/iwfiletreemodel.cpp:163
+#: plugins/infowidget/iwfiletreemodel.cpp:186
 msgctxt "No preview available"
 msgid "No"
 msgstr "Nein"
@@ -7636,12 +7637,12 @@ msgstr "Downloadgeschwindigkeit des Blocks"
 msgid "Which files the chunk is located in"
 msgstr "Die Dateien, in denen sich der Block befindet"
 
-#: plugins/infowidget/iwfiletreemodel.cpp:90
+#: plugins/infowidget/iwfiletreemodel.cpp:106
 msgctxt "Download normally(not as first or last)"
 msgid "Normal"
 msgstr "Normal"
 
-#: plugins/infowidget/iwfiletreemodel.cpp:142
+#: plugins/infowidget/iwfiletreemodel.cpp:158
 msgctxt "preview available"
 msgid "Available"
 msgstr "Verfügbar"
@@ -7696,6 +7697,95 @@ msgstr "Text-Datei wird geladen ..."
 msgid "There are no IP addresses to convert in %1"
 msgstr "Es sind keine IP-Adressen zum Umwandeln in %1 vorhanden"
 
+#: plugins/stats/SpdTabPage.cc:69 plugins/stats/SpdTabPage.cc:70
+msgid "Speed limit"
+msgstr "Geschwindigkeitsbegrenzung"
+
+#: plugins/stats/SettingsPage.cc:27
+msgid "Statistics"
+msgstr "Statistik"
+
+#: plugins/stats/SettingsPage.cc:48
+#, kde-format
+msgid "(= %1 ms)"
+msgstr "(= %1 ms)"
+
+#: plugins/stats/drawer/ChartDrawerData.cc:25
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:323
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:383
+msgid "Save as image…"
+msgstr "Als Bild speichern ..."
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:327
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:387
+msgid "Rescale"
+msgstr "Neu skalieren"
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:331
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:391
+msgid "Reset"
+msgstr "Zurücksetzen"
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:343
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:403
+msgid "Select path to save image…"
+msgstr "Pfad zum Speichern des Bildes auswählen ..."
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:530
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:340
+msgid ""
+"<h1 align='center' style='font-size: large; text-decoration: "
+"underline'>Legend:</h1><ul type='square'>"
+msgstr ""
+"<h1 align='center' style='font-size: large; text-decoration: "
+"underline'>Legende:</h1><ul type='square'>"
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:534
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:344
+#, kde-format
+msgid ""
+"<li><span style='background-color: %1; font-size: 14px; font-family: "
+"monospace'>&nbsp;&nbsp;</span>&nbsp;—&nbsp;%2</li>"
+msgstr ""
+"<li><span style='background-color: %1; font-size: 14px; font-family: "
+"monospace'>&nbsp;&nbsp;</span>&nbsp;—&nbsp;%2</li>"
+
+#: plugins/stats/drawer/ChartDrawer.cc:26
+msgid "KiB/s"
+msgstr "KiB/s"
+
+#: plugins/stats/StatsPlugin.cc:49
+msgid "Speed charts"
+msgstr "Geschwindigkeitsdiagramme"
+
+#: plugins/stats/StatsPlugin.cc:49
+msgid "Displays charts about download and upload speed"
+msgstr "Zeigt Diagramme der Download- und Uploadgeschwindigkeiten"
+
+#: plugins/stats/StatsPlugin.cc:50
+msgid "Connections charts"
+msgstr "Verbindungsdiagramme"
+
+#: plugins/stats/StatsPlugin.cc:50
+msgid "Displays charts about connections"
+msgstr "Zeigt Diagramme der Verbindungen"
+
+#: plugins/stats/ConnsTabPage.cc:68 plugins/stats/ConnsTabPage.cc:120
+#: plugins/stats/ConnsTabPage.cc:122
+msgid "Seeds in swarms"
+msgstr "Seeder in Schwärmen"
+
+#: plugins/stats/ConnsTabPage.cc:75
+msgid "Average leechers connected per running torrent"
+msgstr "Durchschnittlich verbundene Leecher pro laufenden Torrent"
+
+#: plugins/stats/ConnsTabPage.cc:77
+msgid "Average seeds connected per running torrent"
+msgstr "Durchschnittlich verbundene Seeder pro laufenden Torrent"
+
 #: plugins/logviewer/logprefpage.cpp:30
 #: plugins/logviewer/logviewerplugin.cpp:59
 msgid "Log Viewer"
@@ -7744,12 +7834,12 @@ msgid "File download order for <b>%1</b>:"
 msgstr "Download-Reihenfolge für <b>%1</b>:"
 
 #: plugins/mediaplayer/videowidget.cpp:53
-#: plugins/mediaplayer/mediaplayerplugin.cpp:73
+#: plugins/mediaplayer/mediaplayerplugin.cpp:72
 msgid "Play"
 msgstr "Wiedergabe"
 
 #: plugins/mediaplayer/videowidget.cpp:54
-#: plugins/mediaplayer/mediaplayerplugin.cpp:77
+#: plugins/mediaplayer/mediaplayerplugin.cpp:76
 msgid "Pause"
 msgstr "Pausieren"
 
@@ -7757,78 +7847,68 @@ msgstr "Pausieren"
 msgid "Toggle Fullscreen"
 msgstr "Vollbildmodus umschalten"
 
-#: plugins/mediaplayer/mediaplayerplugin.cpp:85
+#: plugins/mediaplayer/mediaplayerplugin.cpp:84
 msgid "Previous"
 msgstr "Zurück"
 
-#: plugins/mediaplayer/mediaplayerplugin.cpp:89
+#: plugins/mediaplayer/mediaplayerplugin.cpp:88
 msgid "Next"
 msgstr "Vorwärts"
 
-#: plugins/mediaplayer/mediaplayerplugin.cpp:93
+#: plugins/mediaplayer/mediaplayerplugin.cpp:92
 msgid "Show Video"
 msgstr "Video anzeigen"
 
-#: plugins/mediaplayer/mediaplayerplugin.cpp:108
-#: plugins/mediaplayer/mediaplayerplugin.cpp:114
+#: plugins/mediaplayer/mediaplayerplugin.cpp:107
+#: plugins/mediaplayer/mediaplayerplugin.cpp:113
 #: plugins/mediaplayer/mediaplayerplugin.cpp:133
-#: plugins/mediaplayer/mediaplayerplugin.cpp:164
+#: plugins/mediaplayer/mediaplayerplugin.cpp:161
 msgid "Media Player"
 msgstr "Medienwiedergabe"
 
-#: plugins/mediaplayer/mediaplayerplugin.cpp:114
+#: plugins/mediaplayer/mediaplayerplugin.cpp:113
 msgid "The media player allows you to play music and movies inside KTorrent"
 msgstr ""
 "Die Medienwiedergabe ermöglicht es Ihnen, Musik und Filme innerhalb von "
 "KTorrent abzuspielen"
 
 #: plugins/mediaplayer/mediaplayerplugin.cpp:171
-#: plugins/mediaplayer/mediaplayerplugin.cpp:177
-#: plugins/mediaplayer/mediaplayerplugin.cpp:367
+#: plugins/mediaplayer/mediaplayerplugin.cpp:354
 msgid "Movie player"
 msgstr "Film-Wiedergabe"
 
-#: plugins/mediaplayer/mediaview.cpp:60 plugins/mediaplayer/mediaview.cpp:144
+#: plugins/mediaplayer/mediaview.cpp:63 plugins/mediaplayer/mediaview.cpp:143
 msgid "Ready to play"
 msgstr "Bereit zum Abspielen"
 
-#: plugins/mediaplayer/mediaview.cpp:68
+#: plugins/mediaplayer/mediaview.cpp:71
 msgid "Mode:"
 msgstr "Modus:"
 
-#: plugins/mediaplayer/mediaview.cpp:71
+#: plugins/mediaplayer/mediaview.cpp:74
 msgid "Single File"
 msgstr "Einzelne Datei"
 
-#: plugins/mediaplayer/mediaview.cpp:73
+#: plugins/mediaplayer/mediaview.cpp:76
 msgid "Random Files"
 msgstr "Zufällige Dateien"
 
-#: plugins/mediaplayer/mediaview.cpp:82
+#: plugins/mediaplayer/mediaview.cpp:85
 msgid "Skip incomplete files"
 msgstr "Unvollständige Dateien überspringen"
 
-#: plugins/mediaplayer/mediaview.cpp:133
+#: plugins/mediaplayer/mediaview.cpp:136 plugins/mediaplayer/mediaview.cpp:184
 #, kde-format
 msgid "Playing: <b>%1</b>"
 msgstr "Wiedergabe: <b>%1</b>"
 
-#: plugins/mediaplayer/mediaview.cpp:162
+#: plugins/mediaplayer/mediaview.cpp:169
 #, kde-format
 msgid "Title: <b>%1</b><br/>Artist: <b>%2</b><br/>Album: <b>%3</b>"
 msgstr "Titel: <b>%1</b><br/>Interpret: <b>%2</b><br/>Album: <b>%3</b>"
 
-#: plugins/mediaplayer/mediaview.cpp:166
-#, kde-format
-msgid "Title: <b>%1</b><br/>Artist: <b>%2</b>"
-msgstr "Titel: <b>%1</b><br/>Interpret: <b>%2</b>"
-
-#: plugins/mediaplayer/mediaview.cpp:170
-#, kde-format
-msgid "Title: <b>%1</b>"
-msgstr "Titel: <b>%1</b>"
-
-#: plugins/mediaplayer/mediaview.cpp:182
+#: plugins/mediaplayer/mediaview.cpp:170 plugins/mediaplayer/mediaview.cpp:175
+#: plugins/mediaplayer/mediaview.cpp:180
 #, kde-format
 msgid ""
 "Playing: <b>%1</b><br/>\n"
@@ -7836,6 +7916,16 @@ msgid ""
 msgstr ""
 "Wiedergabe: <b>%1</b><br/>\n"
 "%2"
+
+#: plugins/mediaplayer/mediaview.cpp:174
+#, kde-format
+msgid "Title: <b>%1</b><br/>Artist: <b>%2</b>"
+msgstr "Titel: <b>%1</b><br/>Interpret: <b>%2</b>"
+
+#: plugins/mediaplayer/mediaview.cpp:179
+#, kde-format
+msgid "Title: <b>%1</b>"
+msgstr "Titel: <b>%1</b>"
 
 #: plugins/mediaplayer/mediamodel.cpp:124
 #: plugins/mediaplayer/mediamodel.cpp:151
@@ -7913,7 +8003,7 @@ msgstr "Syndizierung"
 
 #: plugins/syndication/syndicationplugin.cpp:94
 msgid "Widget to manage RSS and Atom feeds"
-msgstr "Element zur Verwaltung von RSS- und Atom-Nachrichtenquellen"
+msgstr "Ein Bedienelement zur Verwaltung von RSS- und Atom-Nachrichtenquellen"
 
 #: plugins/syndication/syndicationplugin.cpp:145
 msgid "Enter the URL"
@@ -8012,9 +8102,9 @@ msgstr ""
 "KTorrent automatisch durch den Suchbegriff ersetzt wird."
 
 #: plugins/search/searchprefpage.cpp:150
-#, c-format
-msgid "The URL %s, does not contain {searchTerms} !"
-msgstr "Die Adresse %s enthält nicht {searchTerms}."
+#, kde-format
+msgid "The URL %1, does not contain {searchTerms}."
+msgstr "Die Adresse %1 enthält {searchTerms} nicht."
 
 #: plugins/search/searchenginelist.cpp:209
 #, kde-format
@@ -8108,7 +8198,7 @@ msgstr "Einrichten"
 #: plugins/scripting/scriptingplugin.cpp:102
 #: plugins/scripting/scriptingplugin.cpp:122
 msgid "Scripting"
-msgstr "Skripting"
+msgstr "Skripte"
 
 #: plugins/scripting/scriptingplugin.cpp:116
 #: plugins/scripting/scriptingplugin.cpp:197
@@ -8117,7 +8207,7 @@ msgstr "Skripte"
 
 #: plugins/scripting/scriptingplugin.cpp:117
 msgid "Widget to start, stop and manage scripts"
-msgstr "Ein Element zum starten, stoppen und verwalten von Skripten"
+msgstr "Ein Bedienelement zum starten, anhalten und verwalten von Skripten"
 
 #: plugins/zeroconf/zeroconfplugin.cpp:51
 #: plugins/zeroconf/zeroconfplugin.cpp:68
@@ -8247,7 +8337,7 @@ msgstr "Die Datei %1 ist beschädigt oder keine korrekte KTorrent-Planerdatei."
 
 #: plugins/bwscheduler/weekscene.cpp:71
 msgid "Current schedule: paused"
-msgstr "Aktueller Plan: angehalten"
+msgstr "Aktueller Plan: pausiert"
 
 #: plugins/bwscheduler/weekscene.cpp:73
 #, kde-format
@@ -8297,7 +8387,7 @@ msgstr ""
 
 #: plugins/bwscheduler/schedulegraphicsitem.cpp:77
 msgid "Paused"
-msgstr "Angehalten"
+msgstr "Pausiert"
 
 #: plugins/bwscheduler/schedulegraphicsitem.cpp:82
 #, kde-format
@@ -8360,7 +8450,7 @@ msgid_plural "%1 days "
 msgstr[0] "1 Tag "
 msgstr[1] "%1 Tage "
 
-#: libbtcore/util/log.cpp:119
+#: libbtcore/util/log.cpp:112
 #, kde-format
 msgid "Cannot open log file %1 : %2"
 msgstr "Die Protokolldatei %1 lässt sich nicht öffnen: %2"
@@ -8445,7 +8535,11 @@ msgstr "Disk-Eingabe/Ausgabe"
 msgid "Not connected"
 msgstr "Nicht verbunden"
 
-#: libbtcore/download/webseed.cpp:310
+#: libbtcore/download/webseed.cpp:298 libbtcore/download/webseed.cpp:503
+msgid "Not in use"
+msgstr "Nicht in Benutzung"
+
+#: libbtcore/download/webseed.cpp:316
 #: libbtcore/download/httpconnection.cpp:125
 msgid "Connection closed"
 msgstr "Verbindung beendet"
@@ -8465,40 +8559,40 @@ msgstr "Rechnername %1 wird aufgelöst"
 msgid "Error: request failed: %1"
 msgstr "Fehler: Anfrage fehlgeschlagen: %1"
 
-#: libbtcore/download/httpconnection.cpp:148
-#: libbtcore/download/httpconnection.cpp:212
+#: libbtcore/download/httpconnection.cpp:149
+#: libbtcore/download/httpconnection.cpp:213
 msgid "Connected"
 msgstr "Verbunden"
 
-#: libbtcore/download/httpconnection.cpp:154
+#: libbtcore/download/httpconnection.cpp:155
 msgid "Error: Failed to connect to webseed"
 msgstr "Fehler: Verbindung zum Webseed fehlgeschlagen"
 
-#: libbtcore/download/httpconnection.cpp:219
+#: libbtcore/download/httpconnection.cpp:220
 msgid "Connecting"
 msgstr "Verbindung wird hergestellt"
 
-#: libbtcore/download/httpconnection.cpp:230
+#: libbtcore/download/httpconnection.cpp:231
 msgid "Failed to connect to webseed"
 msgstr "Verbindung zum Webseed fehlgeschlagen"
 
-#: libbtcore/download/httpconnection.cpp:237
+#: libbtcore/download/httpconnection.cpp:238
 msgid "Failed to resolve hostname of webseed"
 msgstr "Der Rechnername des Webseeds wurde nicht gefunden"
 
-#: libbtcore/download/httpconnection.cpp:317
+#: libbtcore/download/httpconnection.cpp:318
 msgid "Error: failed to connect, server not responding"
 msgstr "Fehler: Verbindung fehlgeschlagen, Server antwortet nicht"
 
-#: libbtcore/download/httpconnection.cpp:326
+#: libbtcore/download/httpconnection.cpp:327
 msgid "Error: request timed out"
 msgstr "Fehler: Zeitüberschreitung der Anfrage"
 
-#: libbtcore/download/httpconnection.cpp:417
+#: libbtcore/download/httpconnection.cpp:388
 msgid "Redirected without a new location !"
 msgstr "Ohne neue Adresse umgeleitet."
 
-#: libbtcore/download/chunkdownload.cpp:384
+#: libbtcore/download/chunkdownload.cpp:379
 #, kde-format
 msgid "1 peer"
 msgid_plural "%1 peers"
@@ -8609,9 +8703,9 @@ msgstr "Die Datei %1 lässt sich nicht öffnen: %2"
 #: libbtcore/torrent/torrent.cpp:218 libbtcore/torrent/torrent.cpp:232
 #: libbtcore/torrent/torrent.cpp:239 libbtcore/torrent/torrent.cpp:245
 #: libbtcore/torrent/torrent.cpp:252 libbtcore/torrent/torrent.cpp:258
-#: libbtcore/torrent/torrent.cpp:274 libbtcore/torrent/torrent.cpp:321
-#: libbtcore/torrent/torrent.cpp:327 libbtcore/torrent/torrent.cpp:330
-#: libbtcore/torrent/torrent.cpp:333
+#: libbtcore/torrent/torrent.cpp:290 libbtcore/torrent/torrent.cpp:340
+#: libbtcore/torrent/torrent.cpp:346 libbtcore/torrent/torrent.cpp:349
+#: libbtcore/torrent/torrent.cpp:352
 msgid "Corrupted torrent!"
 msgstr "Die Torrent-Datei ist beschädigt!"
 
@@ -8624,11 +8718,11 @@ msgstr "Der Torrent hat kein Ankündigungs- oder Knotenfeld"
 msgid " Unable to open torrent file %1 : %2"
 msgstr "Torrent-Datei %1 kann nicht geöffnet werden: %2"
 
-#: libbtcore/torrent/torrent.cpp:298 libbtcore/torrent/torrent.cpp:304
+#: libbtcore/torrent/torrent.cpp:317 libbtcore/torrent/torrent.cpp:323
 msgid "Parse Error"
 msgstr "Verarbeitungsfehler"
 
-#: libbtcore/torrent/torrentcontrol.cpp:525
+#: libbtcore/torrent/torrentcontrol.cpp:528
 #, kde-format
 msgid ""
 "An error occurred while loading the torrent <b>%1</b>\n"
@@ -8638,7 +8732,7 @@ msgstr ""
 "Der Torrent ist möglicherweise beschädigt oder es handelt sich nicht um eine "
 "Torrent-Datei."
 
-#: libbtcore/torrent/torrentcontrol.cpp:553
+#: libbtcore/torrent/torrentcontrol.cpp:556
 msgid ""
 "An error occurred while loading the torrent.\n"
 "The torrent is probably corrupt or is not a torrent file."
@@ -8647,12 +8741,12 @@ msgstr ""
 "Möglicherweise handelt es sich nicht um eine Torrent-Datei, oder sie ist "
 "beschädigt."
 
-#: libbtcore/torrent/torrentcontrol.cpp:562
+#: libbtcore/torrent/torrentcontrol.cpp:565
 #, kde-format
 msgid "Unable to create %1 : %2"
 msgstr "%1 kann nicht erstellt werden: %2"
 
-#: libbtcore/torrent/torrentcontrol.cpp:577
+#: libbtcore/torrent/torrentcontrol.cpp:580
 #, kde-format
 msgid ""
 "You are already downloading this torrent %1, the list of trackers of both "
@@ -8661,17 +8755,17 @@ msgstr ""
 "Sie laden den Torrent %1 bereits herunter. Die Liste der Tracker von beiden "
 "Torrents wurde zusammengeführt."
 
-#: libbtcore/torrent/torrentcontrol.cpp:581
+#: libbtcore/torrent/torrentcontrol.cpp:584
 #, kde-format
 msgid "You are already downloading the torrent %1"
 msgstr "Sie laden den Torrent %1 bereits herunter."
 
-#: libbtcore/torrent/torrentcontrol.cpp:680
+#: libbtcore/torrent/torrentcontrol.cpp:683
 #, kde-format
 msgid "Cannot migrate %1 : %2"
 msgstr "%1 kann nicht migriert werden: %2"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1376
+#: libbtcore/torrent/torrentcontrol.cpp:1379
 #, kde-format
 msgid ""
 "The torrent %1 was started with a previous version of KTorrent. To make sure "
@@ -8685,48 +8779,48 @@ msgstr ""
 "Speicherort für den Torrent gefragt werden. Wenn Sie Abbrechen drücken, wird "
 "es in Ihrem persönlichen Ordner gespeichert."
 
-#: libbtcore/torrent/torrentcontrol.cpp:1381
+#: libbtcore/torrent/torrentcontrol.cpp:1384
 msgid "Select Folder to Save To"
 msgstr "Bitte den Zielordner zum Speichern wählen"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1468
+#: libbtcore/torrent/torrentcontrol.cpp:1471
 msgid "Not started"
 msgstr "Nicht gestartet"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1470
+#: libbtcore/torrent/torrentcontrol.cpp:1473
 msgid "Download completed"
 msgstr "Download beendet"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1472
+#: libbtcore/torrent/torrentcontrol.cpp:1475
 msgid "Seeding completed"
 msgstr "Upload beendet"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1476
+#: libbtcore/torrent/torrentcontrol.cpp:1479
 msgid "Downloading"
 msgstr "Herunterladen"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1478
+#: libbtcore/torrent/torrentcontrol.cpp:1481
 msgid "Stalled"
 msgstr "Stehengeblieben"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1480
+#: libbtcore/torrent/torrentcontrol.cpp:1483
 #: libbtcore/torrent/peersourcemanager.cpp:162
 msgid "Stopped"
 msgstr "Angehalten"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1482
+#: libbtcore/torrent/torrentcontrol.cpp:1485
 msgid "Error: "
 msgstr "Fehler: "
 
-#: libbtcore/torrent/torrentcontrol.cpp:1484
+#: libbtcore/torrent/torrentcontrol.cpp:1487
 msgid "Allocating diskspace"
 msgstr "Speicherplatz wird belegt"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1488
+#: libbtcore/torrent/torrentcontrol.cpp:1491
 msgid "Checking data"
 msgstr "Daten werden geprüft"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1490
+#: libbtcore/torrent/torrentcontrol.cpp:1493
 msgid "Stopped. No space left on device."
 msgstr "Angehalten. Auf dem Medium ist kein Speicherplatz mehr verfügbar."
 
@@ -8789,9 +8883,6 @@ msgstr "Die Datei %1 lässt sich nicht öffnen: %2"
 
 #~ msgid "Select interface:"
 #~ msgstr "Schnittstelle auswählen:"
-
-#~ msgid "Resume"
-#~ msgstr "Fortsetzen"
 
 #~ msgid "Php executable path:"
 #~ msgstr "Pfad zur PHP-Programmdatei:"
@@ -10459,9 +10550,6 @@ msgstr "Die Datei %1 lässt sich nicht öffnen: %2"
 
 #~ msgid "IPBlocking Filter Options"
 #~ msgstr "Einstellungen für IP-Blockierungsfilter"
-
-#~ msgid "Statistics"
-#~ msgstr "Statistik"
 
 #~ msgid "Statistics options"
 #~ msgstr "Statistikoptionen"
