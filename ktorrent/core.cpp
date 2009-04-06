@@ -18,6 +18,7 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
+#include <QNetworkInterface>
 #include <klocale.h>
 #include <kio/job.h>
 #include <kmessagebox.h>
@@ -64,6 +65,7 @@
 #include "gui.h"
 #include "torrentmigratordlg.h"
 
+
 using namespace bt;
 
 namespace kt
@@ -107,6 +109,19 @@ namespace kt
 			port = 6881;
 			Settings::setPort(6881);
 		}
+		
+		// Make sure network interface is set properly before server is initialized
+		if (Settings::networkInterface() != 0)
+		{
+			QList<QNetworkInterface> iface_list = QNetworkInterface::allInterfaces();
+			int iface = Settings::networkInterface();
+			if (iface > iface_list.count())
+				SetNetworkInterface(QString::null);
+			else
+				SetNetworkInterface(iface_list[iface - 1].name());
+		}
+		
+		
 		Uint16 i = 0;
 		do
 		{
@@ -134,7 +149,7 @@ namespace kt
 		
 		pman = new kt::PluginManager(this,gui);
 		gman = new kt::GroupManager();
-		applySettings(true);
+		applySettings();
 		gman->loadGroups();
 		connect(qman,SIGNAL(queueOrdered()),this,SLOT(startUpdateTimer()));
 		connect(qman,SIGNAL(pauseStateChanged(bool)),gui,SLOT(onPausedStateChanged(bool)));
@@ -152,12 +167,6 @@ namespace kt
 
 	void Core::applySettings()
 	{
-		applySettings(false);
-		settingsChanged();
-	}
-
-	void Core::applySettings(bool change_port)
-	{
 		ApplySettings();
 		setMaxDownloads(Settings::maxDownloads());
 		setMaxSeeds(Settings::maxSeeds());
@@ -168,11 +177,11 @@ namespace kt
 			tmp = kt::DataDir();
 		
 		changeDataDir(tmp);
-		if (change_port)
-			changePort(Settings::port());
-		        
+		changePort(Settings::port());
+		
 		//update QM
 		getQueueManager()->orderQueue();
+		settingsChanged();
 	}
 
 	void Core::loadPlugins()
@@ -951,15 +960,9 @@ namespace kt
 
 	bool Core::changePort(Uint16 port)
 	{
-		if (qman->count() == 0)
-		{
-			Globals::instance().getServer().changePort(port);
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+		bt::Server & srv = Globals::instance().getServer();
+		srv.changePort(port);
+		return srv.isOK();
 	}
 
 	void Core::slotStoppedByError(bt::TorrentInterface* tc, QString msg)

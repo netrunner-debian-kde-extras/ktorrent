@@ -1,3 +1,30 @@
+Changes in 3.2.1 :
+- Resort torrents if display name is changed
+- Fix bug causing torrents to get stuck when data checking and move to completed dir are done when a torrent has finished
+- Fix sorting of time left column (185284)
+- Make sure selection in view is updated when the view is sorted again
+- Prevent torrent from start when torrent is opened user controlled and not started and ktorrent is restarted
+- Use IPv6 :: (all interfaces) address to bind to when interface is not specified
+- Make sure QM can be edited when queue is paused
+- Fix bug causing network interface not to be set when server was initialized
+- Backport fix for ktorrent hogging XVideo port
+- Backport fix for displaying song information not working properly 
+- Fix bug causing url requester in fileselect dialog not to allow you to select directories on windows (185739)
+- Don't throw away model of FileView, when switching torrents (186031)
+- Fix bug causing infinite emission of the stoppedByError signal when corrupted chunks are found in a not started completed torrent 
+- Port switching no longer requires a restart
+- Fix bug in time estimation algorithm causing imported bytes not to be included in average speed calculation
+- Fix bug causing torrents to move around when being sorted on floating point numbers and number is equal (186770)
+- Improve keyboard navigation of GroupView by activating the current item when pressing enter
+- In webinterface clear torrent details before updating the table to prevent an old file list being shown
+- Fix webseeding crash (184986)
+- Fix several webseeding bugs
+- Check for invalid characters (for windows that is) in torrent name on windows (187373) 
+- Fix webseeding crash caused by wrong chunk range (187882)
+- Expanded scripting API with scriptDir function
+- Use QFile::rename instead of KIO jobs to do log rotation (188225)
+- Make sure that selection gets updated when the peer view and chunkdownload view are sorted (185825)
+
 Changes in 3.2 :
 - Use QDir to create directories, avoids nested event loops, which seems to be buggy in some situations (182327)
 - Make sure strings tab is shown first in filter editor dialog

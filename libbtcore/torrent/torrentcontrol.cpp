@@ -95,7 +95,7 @@ namespace bt
 		istats.session_bytes_uploaded = 0;
 		old_tordir = QString();
 		stats.status = NOT_STARTED;
-		stats.autostart = true;
+		stats.autostart = false;
 		stats.user_controlled = false;
 		stats.priv_torrent = false;
 		stats.seeders_connected_to = stats.seeders_total = 0;
@@ -151,7 +151,7 @@ namespace bt
 	
 	bool TorrentControl::updateNeeded() const
 	{
-		return stats.running || moving_files || prealloc_thread || dcheck_thread || stats.completed != cman->completed();
+		return stats.running;
 	}
 
 	void TorrentControl::update()
@@ -297,7 +297,7 @@ namespace bt
                  
 				stop(true); 
 				emit seedingAutoStopped(this, overMaxRatio() ? MAX_RATIO_REACHED : MAX_SEED_TIME_REACHED);
-			} 			
+			}
 
 			//Update diskspace if needed (every 1 min)			
 			if(!stats.completed && stats.running && bt::GetCurrentTime() - last_diskspace_check >= 60 * 1000)
@@ -441,10 +441,13 @@ namespace bt
 		// stop preallocation thread if necesarry
 		if (prealloc_thread)
 		{
+			disconnect(prealloc_thread,SIGNAL(finished()),this,SLOT(preallocThreadDone()));
 			prealloc_thread->stop();
 			prealloc_thread->wait();
 			if (prealloc_thread->errorHappened() || prealloc_thread->isNotFinished())
 				saveStats(); // save stats, so that we will start preallocating the next time
+			prealloc_thread->deleteLater();
+			prealloc_thread = 0;
 		}
 	
 		if (stats.running)
@@ -1544,6 +1547,7 @@ namespace bt
 			lst->stop();
 		}
 		
+		bool completed = stats.completed;
 		if (lst && !lst->isStopped())
 		{
 			downloader->dataChecked(dc->getResult());
@@ -1553,8 +1557,7 @@ namespace bt
 			{
 				downloader->recalcDownloaded();
 				stats.imported_bytes = downloader->bytesDownloaded();
-				if (cman->haveAllChunks())
-					stats.completed = true;
+				stats.completed = cman->completed();
 			}
 			else
 			{
@@ -1564,8 +1567,7 @@ namespace bt
 				if (stats.bytes_downloaded > downloaded)
 					stats.imported_bytes = stats.bytes_downloaded - downloaded;
 				 
-				if (cman->haveAllChunks())
-					stats.completed = true;
+				stats.completed = cman->completed();
 			}
 		}
 			
@@ -1573,11 +1575,20 @@ namespace bt
 		dcheck_thread->deleteLater();
 		dcheck_thread = 0;
 		Out(SYS_GEN|LOG_NOTICE) << "Data check finished" << endl;
-		dataCheckFinished();
 		resetTrackerStats();
 		updateStatus();
 		if (lst)
 			lst->finished();
+		
+		dataCheckFinished();
+	
+		if (stats.completed != completed)
+		{
+			// Tell QM to redo queue 
+			// seeder might have become downloader, so 
+			// queue might need to be redone
+			updateQueue();
+		}
 	}
 	
 	bool TorrentControl::isCheckingData(bool & finished) const
@@ -1738,7 +1749,7 @@ namespace bt
 		case DHT_FEATURE:
 			if (on)
 			{
-				if(!stats.priv_torrent)
+				if (!stats.priv_torrent)
 				{
 					psman->addDHT();
 					istats.dht_on = psman->dhtStarted();
@@ -1917,6 +1928,9 @@ namespace bt
 	
 	void TorrentControl::preallocThreadDone()
 	{
+		if (!prealloc_thread)
+			return;
+		
 		// thread done
 		if (prealloc_thread->errorHappened())
 		{
@@ -2014,6 +2028,8 @@ namespace bt
 	
 	void TorrentControl::moveToCompletedDir()
 	{
+		disconnect(this,SIGNAL(dataCheckFinished()),this,SLOT(moveToCompletedDir()));
+		
 		// it is possible that the user might have disabled moving to the completed dir during the data check
 		// so double check before we start the move
 		if (completed_dir.path().isNull() || !stats.completed)

@@ -275,7 +275,7 @@ namespace kt
 			if (order == Qt::AscendingOrder)
 				return a->lessThan(col,b);
 			else
-				return !a->lessThan(col,b);
+				return b->lessThan(col,a);
 		}
 	
 		int col;
@@ -289,5 +289,6 @@ namespace kt
 		emit layoutAboutToBeChanged();
 		qStableSort(items.begin(),items.end(),ChunkDownloadModelItemCmp(col,order));
 		emit layoutChanged();
+		emit sorted();
 	}
 }

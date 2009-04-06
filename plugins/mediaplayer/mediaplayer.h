@@ -77,6 +77,7 @@ namespace kt
 	private slots:
 		void onStateChanged(Phonon::State cur,Phonon::State old);
 		void hasVideoChanged(bool hasVideo);
+		void currentSourceChanged(Phonon::MediaSource src);
 		
 	signals:
 		/**
@@ -99,6 +100,11 @@ namespace kt
 		 * Emitted when we have finished playing something
 		 */
 		void stopped();
+		
+		/**
+		* Emitted when a file is being played
+		*/
+		void playing(const QString & file);
 		
 		/**
 		 * Emitted when the player is about to finish

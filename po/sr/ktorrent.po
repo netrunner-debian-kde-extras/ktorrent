@@ -5,16 +5,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-02-13 06:05+0100\n"
-"PO-Revision-Date: 2009-02-08 00:33+0100\n"
+"POT-Creation-Date: 2009-03-24 06:27+0100\n"
+"PO-Revision-Date: 2009-03-24 17:59+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@lists.kde.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n%"
-"10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 0.3\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -398,8 +398,8 @@ msgstr "Ручно објављивање"
 msgid "Scrape"
 msgstr "Загреби"
 
-#: ktorrent/viewmanager.cpp:524 plugins/infowidget/iwfilelistmodel.cpp:69
-#: plugins/infowidget/iwfiletreemodel.cpp:73
+#: ktorrent/viewmanager.cpp:524 plugins/infowidget/iwfilelistmodel.cpp:78
+#: plugins/infowidget/iwfiletreemodel.cpp:89
 msgid "Preview"
 msgstr "Преглед"
 
@@ -628,7 +628,9 @@ msgstr "Веб сучеље „Ладно млеко“"
 
 #: ktorrent/main.cpp:112
 msgid "Alexander Dymo"
-msgstr "Александар Димо (~@¦Александр Дымо¦Александр Дымо¦, Alexander Dymo)"
+msgstr ""
+"~@¦Александар Димо (Александр Дымо, Alexander Dymo)¦Aleksandar Dimo "
+"(Александр Дымо, Alexander Dymo)¦"
 
 #: ktorrent/main.cpp:112
 msgid "IDEAl code from KDevelop"
@@ -701,7 +703,9 @@ msgstr "Неколико закрпа"
 
 #: ktorrent/main.cpp:121
 msgid "Stefan Monov"
-msgstr "Стефан Монов (~@¦Стефан Монов¦Стефан Монов¦, Stefan Monov)"
+msgstr ""
+"~@¦Стефан Монов (Стефан Монов, Stefan Monov)¦Stefan Monov (Стефан Монов, "
+"Stefan Monov)¦"
 
 #: ktorrent/main.cpp:121
 msgid "Patch to hide menu bar"
@@ -778,7 +782,7 @@ msgstr "Арон Џ. Сајго (Aaron J. Seigo)"
 
 #: ktorrent/main.cpp:130
 msgid "Drag and drop support for plasma applet"
-msgstr "Подршка за превлачење за ~@¦Плазма¦Plasma¦ аплет"
+msgstr "Подршка за превлачење за ~@¦плазма¦plasma¦ аплет"
 
 #: ktorrent/main.cpp:134
 msgid "Document to open"
@@ -872,11 +876,11 @@ msgstr "Стварање торента"
 msgid "Creating %1..."
 msgstr "Правим %1..."
 
-#: ktorrent/viewmodel.cpp:216 plugins/infowidget/iwfilelistmodel.cpp:146
-#: plugins/infowidget/iwfilelistmodel.cpp:169
-#: plugins/infowidget/iwfiletreemodel.cpp:152
-#: plugins/infowidget/iwfiletreemodel.cpp:172
-#: plugins/infowidget/iwfiletreemodel.cpp:178
+#: ktorrent/viewmodel.cpp:216 plugins/infowidget/iwfilelistmodel.cpp:155
+#: plugins/infowidget/iwfilelistmodel.cpp:178
+#: plugins/infowidget/iwfiletreemodel.cpp:168
+#: plugins/infowidget/iwfiletreemodel.cpp:188
+#: plugins/infowidget/iwfiletreemodel.cpp:194
 #, no-c-format, kde-format
 msgid "%1 %"
 msgstr "%1 %"
@@ -884,107 +888,107 @@ msgstr "%1 %"
 # >> @title:column
 #. i18n: file: plugins/bitfinder/filter/filterdetails.ui:57
 #. i18n: ectx: property (text), widget (QLabel, nameLabel)
-#: ktorrent/viewmodel.cpp:420 ktorrent/queuemanagermodel.cpp:98 rc.cpp:2142
+#: ktorrent/viewmodel.cpp:426 ktorrent/queuemanagermodel.cpp:98 rc.cpp:2142
 msgid "Name"
 msgstr "име"
 
 # >> @title:column
-#: ktorrent/viewmodel.cpp:421 ktorrent/queuemanagermodel.cpp:99
+#: ktorrent/viewmodel.cpp:427 ktorrent/queuemanagermodel.cpp:99
 #: plugins/infowidget/infowidgetplugin.cpp:80
 #: plugins/infowidget/webseedsmodel.cpp:127
 msgid "Status"
 msgstr "стање"
 
 # >> @title:column
-#: ktorrent/viewmodel.cpp:422 plugins/infowidget/peerviewmodel.cpp:378
+#: ktorrent/viewmodel.cpp:428 plugins/infowidget/peerviewmodel.cpp:378
 #: plugins/infowidget/webseedsmodel.cpp:126
 msgid "Downloaded"
 msgstr "преузето"
 
 # >> @title:column
-#: ktorrent/viewmodel.cpp:423 libktcore/torrent/torrentfiletreemodel.cpp:377
-#: libktcore/torrent/torrentfilelistmodel.cpp:70
+#: ktorrent/viewmodel.cpp:429 libktcore/torrent/torrentfiletreemodel.cpp:399
+#: libktcore/torrent/torrentfilelistmodel.cpp:77
 msgid "Size"
 msgstr "величина"
 
 # >> @title:column
-#: ktorrent/viewmodel.cpp:424 plugins/infowidget/peerviewmodel.cpp:379
+#: ktorrent/viewmodel.cpp:430 plugins/infowidget/peerviewmodel.cpp:379
 msgid "Uploaded"
 msgstr "послато"
 
 # >> @title:column
-#: ktorrent/viewmodel.cpp:425 plugins/infowidget/peerviewmodel.cpp:369
+#: ktorrent/viewmodel.cpp:431 plugins/infowidget/peerviewmodel.cpp:369
 #: plugins/infowidget/chunkdownloadmodel.cpp:213
 msgid "Down Speed"
 msgstr "преузимање"
 
 # >> @title:column
-#: ktorrent/viewmodel.cpp:426 plugins/infowidget/peerviewmodel.cpp:370
+#: ktorrent/viewmodel.cpp:432 plugins/infowidget/peerviewmodel.cpp:370
 msgid "Up Speed"
 msgstr "слање"
 
 # >> @title:column
-#: ktorrent/viewmodel.cpp:427
+#: ktorrent/viewmodel.cpp:433
 msgid "Time Left"
 msgstr "преостало време"
 
 # >> @title:column
-#: ktorrent/viewmodel.cpp:428
+#: ktorrent/viewmodel.cpp:434
 msgid "Seeders"
 msgstr "сејачи"
 
 # >> @title:column
-#: ktorrent/viewmodel.cpp:429
+#: ktorrent/viewmodel.cpp:435
 msgid "Leechers"
 msgstr "пијавице"
 
 # >> @title:column
-#: ktorrent/viewmodel.cpp:431
+#: ktorrent/viewmodel.cpp:437
 #, no-c-format
 msgid "% Complete"
 msgstr "% завршено"
 
 # >> @title:column
-#: ktorrent/viewmodel.cpp:432
+#: ktorrent/viewmodel.cpp:438
 msgid "Share Ratio"
 msgstr "однос дељења"
 
 # >> @title:column
-#: ktorrent/viewmodel.cpp:433
+#: ktorrent/viewmodel.cpp:439
 msgid "Time Downloaded"
 msgstr "време преузимања"
 
 # >> @title:column
-#: ktorrent/viewmodel.cpp:434
+#: ktorrent/viewmodel.cpp:440
 msgid "Time Seeded"
 msgstr "Време сејања"
 
 # >> @title:column
-#: ktorrent/viewmodel.cpp:435
+#: ktorrent/viewmodel.cpp:441
 msgid "Location"
 msgstr "локација"
 
-#: ktorrent/viewmodel.cpp:443
+#: ktorrent/viewmodel.cpp:449
 msgid "How much data we have downloaded of the torrent"
 msgstr "Колико је података из торента преузето"
 
-#: ktorrent/viewmodel.cpp:444
+#: ktorrent/viewmodel.cpp:450
 msgid "Total size of the torrent, excluded files are not included"
 msgstr "Укупна величина торента, изузети фајлови нису урачунати"
 
-#: ktorrent/viewmodel.cpp:445
+#: ktorrent/viewmodel.cpp:451
 msgid "How much data we have uploaded"
 msgstr "Колико је података послато"
 
-#: ktorrent/viewmodel.cpp:446
+#: ktorrent/viewmodel.cpp:452
 msgid "Current download speed"
 msgstr "Тренутна брзина преузимања"
 
-#: ktorrent/viewmodel.cpp:447
+#: ktorrent/viewmodel.cpp:453
 msgid "Current upload speed"
 msgstr "Тренутна брзина слања"
 
-#: ktorrent/viewmodel.cpp:448
+#: ktorrent/viewmodel.cpp:454
 msgid ""
 "How much time is left before the torrent is finished or before the maximum "
 "share ratio is reached, if that is enabled"
@@ -992,54 +996,54 @@ msgstr ""
 "Колико је времена преостало до завршетка или до достизања највећег односа "
 "дељења, ако је то укључено."
 
-#: ktorrent/viewmodel.cpp:449
+#: ktorrent/viewmodel.cpp:455
 msgid ""
 "How many seeders we are connected to (How many seeders there are according "
 "to the tracker)"
 msgstr "На колико сејача смо повезани (колико их има према пратиоцу)"
 
-#: ktorrent/viewmodel.cpp:450
+#: ktorrent/viewmodel.cpp:456
 msgid ""
 "How many leechers we are connected to (How many leechers there are according "
 "to the tracker)"
 msgstr "На колико пијавица смо повезани (колико их има према пратиоцу)"
 
-#: ktorrent/viewmodel.cpp:452
+#: ktorrent/viewmodel.cpp:458
 #, no-c-format
 msgid ""
 "The percentage of data we have of the whole torrent, not including excluded "
 "files"
 msgstr "Проценат пристиглих података торента, искључујући изузете фајлове"
 
-#: ktorrent/viewmodel.cpp:453
+#: ktorrent/viewmodel.cpp:459
 msgid ""
 "Share ratio is the number of bytes uploaded divided by the number of bytes "
 "downloaded"
 msgstr "Однос дељења је број послатих подељен бројем преузетих бајтова"
 
-#: ktorrent/viewmodel.cpp:454
+#: ktorrent/viewmodel.cpp:460
 msgid "How long we have been downloading the torrent"
 msgstr "Колико дуго се торент већ преузима"
 
-#: ktorrent/viewmodel.cpp:455
+#: ktorrent/viewmodel.cpp:461
 msgid "How long we have been seeding the torrent"
 msgstr "Колико дуго се торент већ сеје"
 
-#: ktorrent/viewmodel.cpp:456
+#: ktorrent/viewmodel.cpp:462
 msgid "The location of the torrent's data on disk"
 msgstr "Локација података торента на диску"
 
-#: ktorrent/viewmodel.cpp:502
+#: ktorrent/viewmodel.cpp:508
 #, kde-format
 msgid "There is a problem with the tracker: <br><b>%1</b>"
 msgstr "<html>Проблем са пратиоцем: <br /><b>%1</b></html>"
 
-#: ktorrent/viewmodel.cpp:508
+#: ktorrent/viewmodel.cpp:514
 #, kde-format
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "<html>%1<br />УРЛ: <b>%2</b></html>"
 
-#: ktorrent/core.cpp:121
+#: ktorrent/core.cpp:136
 #, kde-format
 msgid ""
 "Specified port (%1) is unavailable or in use by another application. "
@@ -1048,7 +1052,7 @@ msgstr ""
 "Наведени порт (%1) није доступан или га користи други програм. "
 "~@¦К‑торент¦KTorrent¦ сада користи порт %2."
 
-#: ktorrent/core.cpp:129
+#: ktorrent/core.cpp:144
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -1057,16 +1061,16 @@ msgstr ""
 "~@¦К‑торент¦KTorrent¦ не може да прихвата везе јер портове %1 до %2 већ "
 "користи други програм."
 
-#: ktorrent/core.cpp:831
+#: ktorrent/core.cpp:840
 msgid "KTorrent is running one or more torrents"
 msgstr "~@¦К‑торент¦KTorrent¦ ради са једним или више торената"
 
-#: ktorrent/core.cpp:923
+#: ktorrent/core.cpp:932
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Не могу да направим торент: %1"
 
-#: ktorrent/core.cpp:1024
+#: ktorrent/core.cpp:1027
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1075,21 +1079,21 @@ msgstr ""
 "Недостаје неколико фајлова торента „%1“. \n"
 "Желите ли да их поново направите или да их не преузимате?"
 
-#: ktorrent/core.cpp:1033 ktorrent/core.cpp:1045 ktorrent/core.cpp:1058
+#: ktorrent/core.cpp:1036 ktorrent/core.cpp:1048 ktorrent/core.cpp:1061
 msgid "Data files are missing"
 msgstr "Недостају фајлови са подацима"
 
-#: ktorrent/core.cpp:1044
+#: ktorrent/core.cpp:1047
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Не могу да искључим из избора недостајуће фајлове: %1"
 
-#: ktorrent/core.cpp:1057
+#: ktorrent/core.cpp:1060
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Не могу да направим недостајуће фајлове: %1"
 
-#: ktorrent/core.cpp:1073
+#: ktorrent/core.cpp:1076
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -1098,21 +1102,21 @@ msgstr ""
 "Недостаје фајл у који се уписују подаци торента „%1“. \n"
 "Желите ли да га поново направите?"
 
-#: ktorrent/core.cpp:1080 ktorrent/core.cpp:1091
+#: ktorrent/core.cpp:1083 ktorrent/core.cpp:1094
 msgid "Data file is missing"
 msgstr "Недостаје фајл са подацима"
 
-#: ktorrent/core.cpp:1090
+#: ktorrent/core.cpp:1093
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Не могу да направим фајл са подацима: %1"
 
-#: ktorrent/core.cpp:1158
+#: ktorrent/core.cpp:1161
 msgid "Checking Data Integrity"
 msgstr "Проверавам целовитост података"
 
 # >! Missing plural forms.
-#: ktorrent/core.cpp:1180
+#: ktorrent/core.cpp:1183
 #, kde-format
 msgid ""
 "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
@@ -1121,7 +1125,7 @@ msgstr ""
 "Нађено је %1 торената из КДЕ3 верзије ~@¦К‑торента¦KTorrenta¦. Желите ли да "
 "их увезете?"
 
-#: ktorrent/core.cpp:1202
+#: ktorrent/core.cpp:1205
 msgid "No torrents from the KDE3 version were found !"
 msgstr "Нема торената из КДЕ3 верзије."
 
@@ -1215,7 +1219,7 @@ msgid "Torrent Files"
 msgstr "торент фајлови"
 
 #: ktorrent/gui.cpp:268 ktorrent/gui.cpp:283
-#: plugins/mediaplayer/mediaview.cpp:72
+#: plugins/mediaplayer/mediaview.cpp:75
 msgid "All Files"
 msgstr "сви фајлови"
 
@@ -1253,7 +1257,7 @@ msgid "Start all selected torrents in the current tab"
 msgstr "Покреће све изабране торенте у текућем језичку"
 
 #: ktorrent/gui.cpp:451 plugins/mediaplayer/videowidget.cpp:55
-#: plugins/mediaplayer/mediaplayerplugin.cpp:81
+#: plugins/mediaplayer/mediaplayerplugin.cpp:80
 msgid "Stop"
 msgstr "Заустави"
 
@@ -1521,8 +1525,8 @@ msgstr "Нема довољно слободног простора."
 #: ktorrent/trayicon.cpp:257
 #, kde-format
 msgid ""
-"Your disk is running out of space.<br /><b>%1</b> is being downloaded to '%"
-"2'."
+"Your disk is running out of space.<br /><b>%1</b> is being downloaded to "
+"'%2'."
 msgstr "Понестаје простора на диску.<br /><b>%1</b> се преузима у „%2“."
 
 #: ktorrent/trayicon.cpp:260
@@ -1549,8 +1553,8 @@ msgstr "време застоја"
 
 # >> @title:column
 #: ktorrent/queuemanagermodel.cpp:101
-#: plugins/infowidget/iwfilelistmodel.cpp:68
-#: plugins/infowidget/iwfiletreemodel.cpp:72
+#: plugins/infowidget/iwfilelistmodel.cpp:77
+#: plugins/infowidget/iwfiletreemodel.cpp:88
 msgid "Priority"
 msgstr "приоритет"
 
@@ -1566,7 +1570,7 @@ msgstr "ради"
 
 # >> @item:intable
 #: ktorrent/queuemanagermodel.cpp:138
-#: libbtcore/torrent/torrentcontrol.cpp:1486
+#: libbtcore/torrent/torrentcontrol.cpp:1489
 msgid "Queued"
 msgstr "у реду"
 
@@ -1616,7 +1620,7 @@ msgstr "обезбеђена брзина слања"
 msgid "Columns"
 msgstr "Колоне"
 
-#: ktorrent/view.cpp:206
+#: ktorrent/view.cpp:204
 #, kde-format
 msgid ""
 "The torrent <b>%1</b> has not finished downloading, do you want to delete "
@@ -1625,29 +1629,29 @@ msgstr ""
 "Преузимање торента <b>%1</b> није завршено. Желите ли да обришете и "
 "непотпуне податке?"
 
-#: ktorrent/view.cpp:211
+#: ktorrent/view.cpp:209
 msgid "Remove Download"
 msgstr "Уклони преузимање"
 
-#: ktorrent/view.cpp:212
+#: ktorrent/view.cpp:210
 msgid "Delete Data"
 msgstr "Обриши податке"
 
-#: ktorrent/view.cpp:213
+#: ktorrent/view.cpp:211
 msgid "Keep Data"
 msgstr "Задржи податке"
 
-#: ktorrent/view.cpp:232
+#: ktorrent/view.cpp:230
 msgid ""
 "You will lose all the downloaded data. Are you sure you want to do this?"
 msgstr "Изгубићете све преузете податке. Желите ли заиста ово да учините?"
 
-#: ktorrent/view.cpp:233
+#: ktorrent/view.cpp:231
 msgid "Remove Torrent"
 msgstr "Уклони торент"
 
-#: ktorrent/view.cpp:348 plugins/infowidget/fileview.cpp:282
-#: plugins/infowidget/fileview.cpp:303
+#: ktorrent/view.cpp:346 plugins/infowidget/fileview.cpp:270
+#: plugins/infowidget/fileview.cpp:291
 msgid "Select a directory to move the data to."
 msgstr "Изаберите фасциклу где премештате податке."
 
@@ -1746,8 +1750,8 @@ msgstr "Неактивна слања"
 msgid "Ungrouped Torrents"
 msgstr "Негруписани торенти"
 
-#: libktcore/torrent/torrentfiletreemodel.cpp:376
-#: libktcore/torrent/torrentfilelistmodel.cpp:69
+#: libktcore/torrent/torrentfiletreemodel.cpp:398
+#: libktcore/torrent/torrentfilelistmodel.cpp:76
 msgid "File"
 msgstr "Фајл"
 
@@ -1820,18 +1824,18 @@ msgstr ""
 "покренете?"
 
 #: libktcore/torrent/queuemanager.cpp:381
-#: libktcore/torrent/queuemanager.cpp:745
+#: libktcore/torrent/queuemanager.cpp:744
 #, kde-format
 msgid "Error stopping torrent %1 : %2"
 msgstr "Грешка при заустављању торента %1: %2"
 
 #: libktcore/torrent/queuemanager.cpp:383
-#: libktcore/torrent/queuemanager.cpp:731
-#: libktcore/torrent/queuemanager.cpp:747
+#: libktcore/torrent/queuemanager.cpp:730
+#: libktcore/torrent/queuemanager.cpp:746
 msgid "Error"
 msgstr "Грешка"
 
-#: libktcore/torrent/queuemanager.cpp:729
+#: libktcore/torrent/queuemanager.cpp:728
 #, kde-format
 msgid "Error starting torrent %1 : %2"
 msgstr "Грешка при покретању торента %1: %2"
@@ -1903,10 +1907,10 @@ msgid ""
 "</td><td>%3 (%4)</td></tr>\t\t\t\t<tr><td>Downloaded:</td><td>%7 / %8 </"
 "td><td>Uploaded: </td><td>%9</td></tr>\t\t\t\t</table>"
 msgstr ""
-"<table>\t\t\t\t<tr><td>Преузимање:</td><td>%5 </td><td>Сејача: </td><td>%1 (%"
-"2)</td></tr>\t\t\t\t<tr><td>Слање:</td><td>%6 </td><td>Пијавица: </td><td>%3 "
-"(%4)</td></tr>\t\t\t\t<tr><td>Преузето:</td><td>%7 / %8 </td><td>Послато: </"
-"td><td>%9</td></tr>\t\t\t\t</table>"
+"<table>\t\t\t\t<tr><td>Преузимање:</td><td>%5 </td><td>Сејача: </td><td>%1 "
+"(%2)</td></tr>\t\t\t\t<tr><td>Слање:</td><td>%6 </td><td>Пијавица: </td><td>"
+"%3 (%4)</td></tr>\t\t\t\t<tr><td>Преузето:</td><td>%7 / %8 </td><td>Послато: "
+"</td><td>%9</td></tr>\t\t\t\t</table>"
 
 #: plasma/applet/applet.cpp:316
 #, kde-format
@@ -3527,7 +3531,7 @@ msgstr " минута"
 
 #. i18n: file: ktorrent/qmpref.ui:183
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:704 libbtcore/torrent/torrentcontrol.cpp:1474
+#: rc.cpp:704 libbtcore/torrent/torrentcontrol.cpp:1477
 msgid "Seeding"
 msgstr "Сејем"
 
@@ -3658,7 +3662,7 @@ msgstr "<html><p>Не преузимај недостајуће фајлове.<
 
 #. i18n: file: ktorrent/missingfilesdlg.ui:52
 #. i18n: ectx: property (text), widget (KPushButton, m_dnd)
-#: rc.cpp:773 plugins/infowidget/fileview.cpp:73
+#: rc.cpp:773 plugins/infowidget/fileview.cpp:78
 msgid "Do Not Download"
 msgstr "Не преузимај"
 
@@ -3882,7 +3886,7 @@ msgid ""
 "\"><span style=\" font-weight:600;\">Note: </span>This is not used for "
 "tracker connections</p></body></html>"
 msgstr ""
-"<html><p>Користи ~@¦СОКС¦SOCKS¦ прокси сервер за ~@¦битторент¦Bittorrent¦ "
+"<html><p>Користи ~@¦СОКС¦SOCKS¦ прокси сервер за ~@¦битторент¦bittorrent¦ "
 "везе.</p><p><b>Напомена:</b> Ово се не користи за везе пратилаца.</p></html>"
 
 #. i18n: file: ktorrent/proxypref.ui:118
@@ -4439,13 +4443,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/advancedpref.ui:229
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: rc.cpp:1171
+#: rc.cpp:1171 plugins/stats/SpdTabPage.cc:63 plugins/stats/SpdTabPage.cc:64
 msgid "Current speed"
 msgstr "тренутна брзина"
 
 #. i18n: file: ktorrent/advancedpref.ui:234
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: rc.cpp:1174
+#: rc.cpp:1174 plugins/stats/SpdTabPage.cc:66 plugins/stats/SpdTabPage.cc:67
 msgid "Average speed"
 msgstr "просечна брзина"
 
@@ -5461,49 +5465,50 @@ msgstr "Ограничење"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:172
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:1665
+#: rc.cpp:1665 plugins/stats/SpdTabPage.cc:72
 msgid "Average from leechers"
 msgstr "Просечно од пијавица"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:207
 #. i18n: ectx: property (text), widget (QLabel, label_19)
-#: rc.cpp:1668
+#: rc.cpp:1668 plugins/stats/SpdTabPage.cc:73
 msgid "Average to leechers"
 msgstr "Просечно ка пијавицама"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:242
 #. i18n: ectx: property (text), widget (QLabel, label_20)
-#: rc.cpp:1671
+#: rc.cpp:1671 plugins/stats/SpdTabPage.cc:74
 msgid "Average from seeds"
 msgstr "Просечно од сејача"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:277
 #. i18n: ectx: property (text), widget (QLabel, label_21)
-#: rc.cpp:1674
+#: rc.cpp:1674 plugins/stats/SpdTabPage.cc:75
 msgid "From leechers"
 msgstr "Од пијавица"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:312
 #. i18n: ectx: property (text), widget (QLabel, label_22)
-#: rc.cpp:1677
+#: rc.cpp:1677 plugins/stats/SpdTabPage.cc:76
 msgid "From seeds"
 msgstr "Од сејања"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:512
 #. i18n: ectx: property (text), widget (QLabel, label_23)
-#: rc.cpp:1695
+#: rc.cpp:1695 plugins/stats/ConnsTabPage.cc:57
 msgid "Leechers connected"
 msgstr "Пијавица повезано"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:547
 #. i18n: ectx: property (text), widget (QLabel, label_24)
-#: rc.cpp:1698
+#: rc.cpp:1698 plugins/stats/ConnsTabPage.cc:61
+#: plugins/stats/ConnsTabPage.cc:106
 msgid "Leechers in swarms"
 msgstr "Пијавица у ројевима"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:582
 #. i18n: ectx: property (text), widget (QLabel, label_25)
-#: rc.cpp:1701
+#: rc.cpp:1701 plugins/stats/ConnsTabPage.cc:64
 msgid "Seeds connected"
 msgstr "Сејача повезано"
 
@@ -5515,13 +5520,13 @@ msgstr "Сејача у ројевима"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:652
 #. i18n: ectx: property (text), widget (QLabel, label_27)
-#: rc.cpp:1707
+#: rc.cpp:1707 plugins/stats/ConnsTabPage.cc:71
 msgid "Average leechers connected per torrent"
 msgstr "Просечно пијавица везано по торенту"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:687
 #. i18n: ectx: property (text), widget (QLabel, label_28)
-#: rc.cpp:1710
+#: rc.cpp:1710 plugins/stats/ConnsTabPage.cc:73
 msgid "Average seeds connected per torrent"
 msgstr "Просечно сејача везано по торенту"
 
@@ -5539,19 +5544,19 @@ msgstr "Просек сејача везаних по активном торе�
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:805
 #. i18n: ectx: property (text), widget (QLabel, label_31)
-#: rc.cpp:1722
+#: rc.cpp:1722 plugins/stats/ConnsTabPage.cc:83
 msgid "Nodes"
 msgstr "Чворови"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:844
 #. i18n: ectx: property (text), widget (QLabel, label_32)
-#: rc.cpp:1725
+#: rc.cpp:1725 plugins/stats/ConnsTabPage.cc:84
 msgid "Tasks"
 msgstr "Послови"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:903
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:1728
+#: rc.cpp:1728 plugins/stats/DisplaySettingsPage.cc:28
 msgid "Display"
 msgstr "Приказ"
 
@@ -6597,8 +6602,8 @@ msgstr "~@¦ВАН¦WAN¦ веза"
 #: plugins/upnp/routermodel.cpp:114
 #, kde-format
 msgid ""
-"Model Name: <b>%1</b><br/>Manufacturer: <b>%2</b><br/>Model Description: <b>%"
-"3</b><br/>"
+"Model Name: <b>%1</b><br/>Manufacturer: <b>%2</b><br/>Model Description: <b>"
+"%3</b><br/>"
 msgstr ""
 "Назив модела: <b>%1</b><br/>Произвођач: <b>%2</b><br/>Опис модела: <b>%3</"
 "b><br/>"
@@ -6620,44 +6625,44 @@ msgid "loaded"
 msgstr "учитано"
 
 # >> @title:window
-#: plugins/infowidget/fileview.cpp:67
+#: plugins/infowidget/fileview.cpp:72
 msgctxt "Open file"
 msgid "Open"
 msgstr "Отварање"
 
-#: plugins/infowidget/fileview.cpp:69
+#: plugins/infowidget/fileview.cpp:74
 msgid "Download first"
 msgstr "Преузми прво"
 
-#: plugins/infowidget/fileview.cpp:70
+#: plugins/infowidget/fileview.cpp:75
 msgid "Download normally"
 msgstr "Преузми нормално"
 
-#: plugins/infowidget/fileview.cpp:71
+#: plugins/infowidget/fileview.cpp:76
 msgid "Download last"
 msgstr "Преузми последње"
 
-#: plugins/infowidget/fileview.cpp:74
+#: plugins/infowidget/fileview.cpp:79
 msgid "Delete File(s)"
 msgstr "Обриши фајлове"
 
-#: plugins/infowidget/fileview.cpp:76
+#: plugins/infowidget/fileview.cpp:81
 msgid "Move File"
 msgstr "Премести фајл"
 
-#: plugins/infowidget/fileview.cpp:78
+#: plugins/infowidget/fileview.cpp:83
 msgid "Collapse Folder Tree"
 msgstr "Сажми стабло фасцикли"
 
-#: plugins/infowidget/fileview.cpp:79
+#: plugins/infowidget/fileview.cpp:84
 msgid "Expand Folder Tree"
 msgstr "Рашири стабло фасцикли"
 
-#: plugins/infowidget/fileview.cpp:267
+#: plugins/infowidget/fileview.cpp:255
 msgid "You will lose all data in this file, are you sure you want to do this ?"
 msgstr "Изгубићете све податке у овом фајлу. Желите ли заиста ово да урадите?"
 
-#: plugins/infowidget/fileview.cpp:268
+#: plugins/infowidget/fileview.cpp:256
 msgid ""
 "You will lose all data in these files, are you sure you want to do this ?"
 msgstr ""
@@ -6927,49 +6932,49 @@ msgstr ""
 "\"unavailable_color\" /> — недоступни парчићи<br/><img src=\"excluded_color"
 "\" /> — изузети парчићи"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:71
-#: plugins/infowidget/iwfiletreemodel.cpp:75
+#: plugins/infowidget/iwfilelistmodel.cpp:80
+#: plugins/infowidget/iwfiletreemodel.cpp:91
 #, no-c-format
 msgctxt "Percent of File Downloaded"
 msgid "% Complete"
 msgstr "% завршено"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:80
-#: plugins/infowidget/iwfiletreemodel.cpp:84
+#: plugins/infowidget/iwfilelistmodel.cpp:89
+#: plugins/infowidget/iwfiletreemodel.cpp:100
 msgctxt "Download first"
 msgid "First"
 msgstr "прво"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:81
-#: plugins/infowidget/iwfiletreemodel.cpp:85
+#: plugins/infowidget/iwfilelistmodel.cpp:90
+#: plugins/infowidget/iwfiletreemodel.cpp:101
 msgctxt "Download last"
 msgid "Last"
 msgstr "последње"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:86
+#: plugins/infowidget/iwfilelistmodel.cpp:95
 msgctxt "Download Normal (not as first or last)"
 msgid "Normal"
 msgstr "нормално"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:137
-#: plugins/infowidget/iwfilelistmodel.cpp:160
-#: plugins/infowidget/iwfiletreemodel.cpp:165
+#: plugins/infowidget/iwfilelistmodel.cpp:146
+#: plugins/infowidget/iwfilelistmodel.cpp:169
+#: plugins/infowidget/iwfiletreemodel.cpp:181
 msgctxt "Preview available"
 msgid "Available"
 msgstr "доступан"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:139
-#: plugins/infowidget/iwfilelistmodel.cpp:162
-#: plugins/infowidget/iwfiletreemodel.cpp:144
-#: plugins/infowidget/iwfiletreemodel.cpp:167
+#: plugins/infowidget/iwfilelistmodel.cpp:148
+#: plugins/infowidget/iwfilelistmodel.cpp:171
+#: plugins/infowidget/iwfiletreemodel.cpp:160
+#: plugins/infowidget/iwfiletreemodel.cpp:183
 msgctxt "Preview pending"
 msgid "Pending"
 msgstr "наступа"
 
-#: plugins/infowidget/iwfilelistmodel.cpp:142
-#: plugins/infowidget/iwfilelistmodel.cpp:165
-#: plugins/infowidget/iwfiletreemodel.cpp:147
-#: plugins/infowidget/iwfiletreemodel.cpp:170
+#: plugins/infowidget/iwfilelistmodel.cpp:151
+#: plugins/infowidget/iwfilelistmodel.cpp:174
+#: plugins/infowidget/iwfiletreemodel.cpp:163
+#: plugins/infowidget/iwfiletreemodel.cpp:186
 msgctxt "No preview available"
 msgid "No"
 msgstr "нема"
@@ -7009,12 +7014,12 @@ msgstr "Брзина преузимања парчета"
 msgid "Which files the chunk is located in"
 msgstr "У којем фајлу се налази парче"
 
-#: plugins/infowidget/iwfiletreemodel.cpp:90
+#: plugins/infowidget/iwfiletreemodel.cpp:106
 msgctxt "Download normally(not as first or last)"
 msgid "Normal"
 msgstr "нормално"
 
-#: plugins/infowidget/iwfiletreemodel.cpp:142
+#: plugins/infowidget/iwfiletreemodel.cpp:158
 msgctxt "preview available"
 msgid "Available"
 msgstr "доступан"
@@ -7069,6 +7074,97 @@ msgstr "Учитавам текстуални фајл..."
 msgid "There are no IP addresses to convert in %1"
 msgstr "Нема ИП адреса за претварање у %1"
 
+#: plugins/stats/SpdTabPage.cc:69 plugins/stats/SpdTabPage.cc:70
+msgid "Speed limit"
+msgstr "Ограничења брзине"
+
+#: plugins/stats/SettingsPage.cc:27
+msgid "Statistics"
+msgstr "Статистика"
+
+#: plugins/stats/SettingsPage.cc:48
+#, kde-format
+msgid "(= %1 ms)"
+msgstr "(= %1 ms)"
+
+#: plugins/stats/drawer/ChartDrawerData.cc:25
+msgid "Unknown"
+msgstr "Непознат"
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:323
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:383
+msgid "Save as image…"
+msgstr "Сачувај као слику..."
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:327
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:387
+msgid "Rescale"
+msgstr "Промени размеру"
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:331
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:391
+msgid "Reset"
+msgstr "Ресетуј"
+
+# >> @title:window
+#: plugins/stats/drawer/PlainChartDrawer.cc:343
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:403
+msgid "Select path to save image…"
+msgstr "Избор путање за уписивање слике"
+
+# skip-rule: x-markup-k
+#: plugins/stats/drawer/PlainChartDrawer.cc:530
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:340
+msgid ""
+"<h1 align='center' style='font-size: large; text-decoration: "
+"underline'>Legend:</h1><ul type='square'>"
+msgstr ""
+"<h1 align='center' style='font-size: large; text-decoration: "
+"underline'>Легенда:</h1><ul type='square'>"
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:534
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:344
+#, kde-format
+msgid ""
+"<li><span style='background-color: %1; font-size: 14px; font-family: "
+"monospace'>&nbsp;&nbsp;</span>&nbsp;—&nbsp;%2</li>"
+msgstr ""
+"<li><span style='background-color: %1; font-size: 14px; font-family: "
+"monospace'>&nbsp;&nbsp;</span>&nbsp;—&nbsp;%2</li>"
+
+#: plugins/stats/drawer/ChartDrawer.cc:26
+msgid "KiB/s"
+msgstr "kiB/s"
+
+#: plugins/stats/StatsPlugin.cc:49
+msgid "Speed charts"
+msgstr "Графици брзине"
+
+#: plugins/stats/StatsPlugin.cc:49
+msgid "Displays charts about download and upload speed"
+msgstr "Приказује графике брзине преузимања и слања."
+
+#: plugins/stats/StatsPlugin.cc:50
+msgid "Connections charts"
+msgstr "Графици веза"
+
+#: plugins/stats/StatsPlugin.cc:50
+msgid "Displays charts about connections"
+msgstr "Приказује графике о везама."
+
+#: plugins/stats/ConnsTabPage.cc:68 plugins/stats/ConnsTabPage.cc:120
+#: plugins/stats/ConnsTabPage.cc:122
+msgid "Seeds in swarms"
+msgstr "Сејача у ројевима"
+
+#: plugins/stats/ConnsTabPage.cc:75
+msgid "Average leechers connected per running torrent"
+msgstr "Просечно пијавица везано по активном торенту"
+
+#: plugins/stats/ConnsTabPage.cc:77
+msgid "Average seeds connected per running torrent"
+msgstr "Просечно сејача везаних по активном торенту"
+
 #: plugins/logviewer/logprefpage.cpp:30
 #: plugins/logviewer/logviewerplugin.cpp:59
 msgid "Log Viewer"
@@ -7119,12 +7215,12 @@ msgid "File download order for <b>%1</b>:"
 msgstr "Редослед преузимања фајлова за <b>%1</b>:"
 
 #: plugins/mediaplayer/videowidget.cpp:53
-#: plugins/mediaplayer/mediaplayerplugin.cpp:73
+#: plugins/mediaplayer/mediaplayerplugin.cpp:72
 msgid "Play"
 msgstr "Пусти"
 
 #: plugins/mediaplayer/videowidget.cpp:54
-#: plugins/mediaplayer/mediaplayerplugin.cpp:77
+#: plugins/mediaplayer/mediaplayerplugin.cpp:76
 msgid "Pause"
 msgstr "Паузирај"
 
@@ -7132,80 +7228,70 @@ msgstr "Паузирај"
 msgid "Toggle Fullscreen"
 msgstr "Преко целог екрана"
 
-#: plugins/mediaplayer/mediaplayerplugin.cpp:85
+#: plugins/mediaplayer/mediaplayerplugin.cpp:84
 msgid "Previous"
 msgstr "Претходно"
 
-#: plugins/mediaplayer/mediaplayerplugin.cpp:89
+#: plugins/mediaplayer/mediaplayerplugin.cpp:88
 msgid "Next"
 msgstr "Следеће"
 
-#: plugins/mediaplayer/mediaplayerplugin.cpp:93
+#: plugins/mediaplayer/mediaplayerplugin.cpp:92
 msgid "Show Video"
 msgstr "Прикажи видео"
 
-#: plugins/mediaplayer/mediaplayerplugin.cpp:108
-#: plugins/mediaplayer/mediaplayerplugin.cpp:114
+#: plugins/mediaplayer/mediaplayerplugin.cpp:107
+#: plugins/mediaplayer/mediaplayerplugin.cpp:113
 #: plugins/mediaplayer/mediaplayerplugin.cpp:133
-#: plugins/mediaplayer/mediaplayerplugin.cpp:164
+#: plugins/mediaplayer/mediaplayerplugin.cpp:161
 msgid "Media Player"
 msgstr "Медија плејер"
 
-#: plugins/mediaplayer/mediaplayerplugin.cpp:114
+#: plugins/mediaplayer/mediaplayerplugin.cpp:113
 msgid "The media player allows you to play music and movies inside KTorrent"
 msgstr ""
 "Медија плејер омогућава пуштање музике и филмова унутар "
 "~@¦К‑торента¦KTorrenta¦"
 
 #: plugins/mediaplayer/mediaplayerplugin.cpp:171
-#: plugins/mediaplayer/mediaplayerplugin.cpp:177
-#: plugins/mediaplayer/mediaplayerplugin.cpp:367
+#: plugins/mediaplayer/mediaplayerplugin.cpp:354
 msgid "Movie player"
 msgstr "Плејер филмова"
 
-#: plugins/mediaplayer/mediaview.cpp:60 plugins/mediaplayer/mediaview.cpp:144
+#: plugins/mediaplayer/mediaview.cpp:63 plugins/mediaplayer/mediaview.cpp:143
 msgid "Ready to play"
 msgstr "Спреман за пуштање"
 
-#: plugins/mediaplayer/mediaview.cpp:68
+#: plugins/mediaplayer/mediaview.cpp:71
 msgid "Mode:"
 msgstr "Режим:"
 
 # >> @item:inlistbox Mode
-#: plugins/mediaplayer/mediaview.cpp:71
+#: plugins/mediaplayer/mediaview.cpp:74
 msgid "Single File"
 msgstr "један фајл"
 
 # >> @item:inlistbox Mode
-#: plugins/mediaplayer/mediaview.cpp:73
+#: plugins/mediaplayer/mediaview.cpp:76
 msgid "Random Files"
 msgstr "случајни фајлови"
 
-#: plugins/mediaplayer/mediaview.cpp:82
+#: plugins/mediaplayer/mediaview.cpp:85
 msgid "Skip incomplete files"
 msgstr "Прескочи недовршене фајлове"
 
-#: plugins/mediaplayer/mediaview.cpp:133
+#: plugins/mediaplayer/mediaview.cpp:136 plugins/mediaplayer/mediaview.cpp:184
 #, kde-format
 msgid "Playing: <b>%1</b>"
 msgstr "Пуштам: <b>%1</b>"
 
-#: plugins/mediaplayer/mediaview.cpp:162
+#: plugins/mediaplayer/mediaview.cpp:169
 #, kde-format
 msgid "Title: <b>%1</b><br/>Artist: <b>%2</b><br/>Album: <b>%3</b>"
 msgstr "Наслов: <b>%1</b><br/>Извођач: <b>%2</b><br/>Албум: <b>%3</b>"
 
-#: plugins/mediaplayer/mediaview.cpp:166
-#, kde-format
-msgid "Title: <b>%1</b><br/>Artist: <b>%2</b>"
-msgstr "Наслов: <b>%1</b><br/>Извођач: <b>%2</b>"
-
-#: plugins/mediaplayer/mediaview.cpp:170
-#, kde-format
-msgid "Title: <b>%1</b>"
-msgstr "Наслов: <b>%1</b>"
-
-#: plugins/mediaplayer/mediaview.cpp:182
+#: plugins/mediaplayer/mediaview.cpp:170 plugins/mediaplayer/mediaview.cpp:175
+#: plugins/mediaplayer/mediaview.cpp:180
 #, kde-format
 msgid ""
 "Playing: <b>%1</b><br/>\n"
@@ -7213,6 +7299,16 @@ msgid ""
 msgstr ""
 "Пуштам: <b>%1</b><br/>\n"
 "%2"
+
+#: plugins/mediaplayer/mediaview.cpp:174
+#, kde-format
+msgid "Title: <b>%1</b><br/>Artist: <b>%2</b>"
+msgstr "Наслов: <b>%1</b><br/>Извођач: <b>%2</b>"
+
+#: plugins/mediaplayer/mediaview.cpp:179
+#, kde-format
+msgid "Title: <b>%1</b>"
+msgstr "Наслов: <b>%1</b>"
 
 # >> @item:intext Preview: Available
 #: plugins/mediaplayer/mediamodel.cpp:124
@@ -7830,7 +7926,11 @@ msgstr "Улаз/излаз диска"
 msgid "Not connected"
 msgstr "Неповезан"
 
-#: libbtcore/download/webseed.cpp:310
+#: libbtcore/download/webseed.cpp:298 libbtcore/download/webseed.cpp:503
+msgid "Not in use"
+msgstr "Ван употребе"
+
+#: libbtcore/download/webseed.cpp:316
 #: libbtcore/download/httpconnection.cpp:125
 msgid "Connection closed"
 msgstr "Веза затворена"
@@ -7850,40 +7950,40 @@ msgstr "Разрешавам име домаћина %1"
 msgid "Error: request failed: %1"
 msgstr "Грешка: неуспешан захтев: %1"
 
-#: libbtcore/download/httpconnection.cpp:148
-#: libbtcore/download/httpconnection.cpp:212
+#: libbtcore/download/httpconnection.cpp:149
+#: libbtcore/download/httpconnection.cpp:213
 msgid "Connected"
 msgstr "Повезан"
 
-#: libbtcore/download/httpconnection.cpp:154
+#: libbtcore/download/httpconnection.cpp:155
 msgid "Error: Failed to connect to webseed"
 msgstr "Грешка: Неуспело повезивање на веб сејање"
 
-#: libbtcore/download/httpconnection.cpp:219
+#: libbtcore/download/httpconnection.cpp:220
 msgid "Connecting"
 msgstr "Повезујем"
 
-#: libbtcore/download/httpconnection.cpp:230
+#: libbtcore/download/httpconnection.cpp:231
 msgid "Failed to connect to webseed"
 msgstr "Неуспело повезивање на веб сејање"
 
-#: libbtcore/download/httpconnection.cpp:237
+#: libbtcore/download/httpconnection.cpp:238
 msgid "Failed to resolve hostname of webseed"
 msgstr "Неуспешно разрешавање имена домаћина за веб сејање"
 
-#: libbtcore/download/httpconnection.cpp:317
+#: libbtcore/download/httpconnection.cpp:318
 msgid "Error: failed to connect, server not responding"
 msgstr "Грешка: неуспело повезивање, сервер не одговара"
 
-#: libbtcore/download/httpconnection.cpp:326
+#: libbtcore/download/httpconnection.cpp:327
 msgid "Error: request timed out"
 msgstr "Грешка: време за захтев је истекло"
 
-#: libbtcore/download/httpconnection.cpp:417
+#: libbtcore/download/httpconnection.cpp:388
 msgid "Redirected without a new location !"
 msgstr "Преусмерен без нове локације!"
 
-#: libbtcore/download/chunkdownload.cpp:384
+#: libbtcore/download/chunkdownload.cpp:379
 #, kde-format
 msgid "1 peer"
 msgid_plural "%1 peers"
@@ -7995,9 +8095,9 @@ msgstr "Не могу да отворим фајл %1: %2"
 #: libbtcore/torrent/torrent.cpp:218 libbtcore/torrent/torrent.cpp:232
 #: libbtcore/torrent/torrent.cpp:239 libbtcore/torrent/torrent.cpp:245
 #: libbtcore/torrent/torrent.cpp:252 libbtcore/torrent/torrent.cpp:258
-#: libbtcore/torrent/torrent.cpp:274 libbtcore/torrent/torrent.cpp:321
-#: libbtcore/torrent/torrent.cpp:327 libbtcore/torrent/torrent.cpp:330
-#: libbtcore/torrent/torrent.cpp:333
+#: libbtcore/torrent/torrent.cpp:290 libbtcore/torrent/torrent.cpp:340
+#: libbtcore/torrent/torrent.cpp:346 libbtcore/torrent/torrent.cpp:349
+#: libbtcore/torrent/torrent.cpp:352
 msgid "Corrupted torrent!"
 msgstr "Оштећен торент."
 
@@ -8010,11 +8110,11 @@ msgstr "Торент нема поље објаве или чворова"
 msgid " Unable to open torrent file %1 : %2"
 msgstr " Не могу да отворим торент фајл %1: %2"
 
-#: libbtcore/torrent/torrent.cpp:298 libbtcore/torrent/torrent.cpp:304
+#: libbtcore/torrent/torrent.cpp:317 libbtcore/torrent/torrent.cpp:323
 msgid "Parse Error"
 msgstr "Грешка у рашчлањивању"
 
-#: libbtcore/torrent/torrentcontrol.cpp:525
+#: libbtcore/torrent/torrentcontrol.cpp:528
 #, kde-format
 msgid ""
 "An error occurred while loading the torrent <b>%1</b>\n"
@@ -8023,7 +8123,7 @@ msgstr ""
 "Грешка при учитавању торента <b>%1</b>.\n"
 "Торент је или оштећен или уопште није торент фајл."
 
-#: libbtcore/torrent/torrentcontrol.cpp:553
+#: libbtcore/torrent/torrentcontrol.cpp:556
 msgid ""
 "An error occurred while loading the torrent.\n"
 "The torrent is probably corrupt or is not a torrent file."
@@ -8031,29 +8131,29 @@ msgstr ""
 "Грешка при учитавању торента.\n"
 "Торент је или оштећен или уопште није торент фајл."
 
-#: libbtcore/torrent/torrentcontrol.cpp:562
+#: libbtcore/torrent/torrentcontrol.cpp:565
 #, kde-format
 msgid "Unable to create %1 : %2"
 msgstr "Не могу да направим %1: %2"
 
-#: libbtcore/torrent/torrentcontrol.cpp:577
+#: libbtcore/torrent/torrentcontrol.cpp:580
 #, kde-format
 msgid ""
 "You are already downloading this torrent %1, the list of trackers of both "
 "torrents has been merged."
 msgstr "Торент %1 се већ преузима. Спискови пратилаца оба торента су стопљени."
 
-#: libbtcore/torrent/torrentcontrol.cpp:581
+#: libbtcore/torrent/torrentcontrol.cpp:584
 #, kde-format
 msgid "You are already downloading the torrent %1"
 msgstr "Већ преузимате торент %1"
 
-#: libbtcore/torrent/torrentcontrol.cpp:680
+#: libbtcore/torrent/torrentcontrol.cpp:683
 #, kde-format
 msgid "Cannot migrate %1 : %2"
 msgstr "Не могу преселим %1: %2"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1376
+#: libbtcore/torrent/torrentcontrol.cpp:1379
 #, kde-format
 msgid ""
 "The torrent %1 was started with a previous version of KTorrent. To make sure "
@@ -8067,48 +8167,48 @@ msgstr ""
 "interface>, бира се ваша домаћа фасцикла."
 
 # >> @title:window
-#: libbtcore/torrent/torrentcontrol.cpp:1381
+#: libbtcore/torrent/torrentcontrol.cpp:1384
 msgid "Select Folder to Save To"
 msgstr "Избор фасцикле за уписивање"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1468
+#: libbtcore/torrent/torrentcontrol.cpp:1471
 msgid "Not started"
 msgstr "Није покренут"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1470
+#: libbtcore/torrent/torrentcontrol.cpp:1473
 msgid "Download completed"
 msgstr "Преузимање завршено"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1472
+#: libbtcore/torrent/torrentcontrol.cpp:1475
 msgid "Seeding completed"
 msgstr "Сејање завршено"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1476
+#: libbtcore/torrent/torrentcontrol.cpp:1479
 msgid "Downloading"
 msgstr "Преузимам"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1478
+#: libbtcore/torrent/torrentcontrol.cpp:1481
 msgid "Stalled"
 msgstr "Застој"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1480
+#: libbtcore/torrent/torrentcontrol.cpp:1483
 #: libbtcore/torrent/peersourcemanager.cpp:162
 msgid "Stopped"
 msgstr "Заустављен"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1482
+#: libbtcore/torrent/torrentcontrol.cpp:1485
 msgid "Error: "
 msgstr "Грешка: "
 
-#: libbtcore/torrent/torrentcontrol.cpp:1484
+#: libbtcore/torrent/torrentcontrol.cpp:1487
 msgid "Allocating diskspace"
 msgstr "Резервишем простор на диску"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1488
+#: libbtcore/torrent/torrentcontrol.cpp:1491
 msgid "Checking data"
 msgstr "Проверавам податке"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1490
+#: libbtcore/torrent/torrentcontrol.cpp:1493
 msgid "Stopped. No space left on device."
 msgstr "Заустављен. Нема слободног простора."
 
