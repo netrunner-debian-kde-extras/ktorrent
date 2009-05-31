@@ -57,7 +57,7 @@ using namespace bt;
 namespace kt
 {
 	
-	SearchWidget::SearchWidget(SearchPlugin* sp,SearchEngineList* sl) : html_part(0),sp(sp)
+	SearchWidget::SearchWidget(SearchPlugin* sp) : html_part(0),sp(sp)
 	{
 		QVBoxLayout* layout = new QVBoxLayout(this);
 		layout->setSpacing(0);
@@ -66,14 +66,16 @@ namespace kt
 		
 		KActionCollection* ac = sp->actionCollection();
 		sbar = new KToolBar(this);
+		sbar->setToolButtonStyle(Qt::ToolButtonIconOnly);
 		sbar->addAction(ac->action("search_tab_back"));
 		sbar->addAction(ac->action("search_tab_reload"));
+		sbar->addAction(ac->action("search_home"));
 		search_text = new KLineEdit(sbar);
 		sbar->addWidget(search_text);
 		sbar->addAction(ac->action("search_tab_search"));
 		sbar->addWidget(new QLabel(i18n(" Engine:")));
 		search_engine = new KComboBox(sbar);
-		search_engine->setModel(sl);
+		search_engine->setModel(sp->getSearchEngineList());
 		sbar->addWidget(search_engine);
 		
 		connect(search_text,SIGNAL(returnPressed()),this,SLOT(search()));;
@@ -167,8 +169,13 @@ namespace kt
 	{
 		if (html_part)
 		{
-			html_part->openUrl(url);
-			html_part->addToHistory(url);
+			if (url.protocol() == "home")
+				home();
+			else
+			{
+				html_part->openUrl(url);
+				html_part->addToHistory(url);
+			}
 		}
 	
 		search_text->setText(sb_text);
@@ -186,13 +193,18 @@ namespace kt
 		if (search_engine->currentIndex() != engine)
 			search_engine->setCurrentIndex(engine);
 	
-		SearchEngineList & sl = sp->getSearchEngineList();
-		KUrl url = sl.search(engine,text);
+		KUrl url = sp->getSearchEngineList()->search(engine,text);
 	
 		statusBarMsg(i18n("Searching for %1...",text));
 		//html_part->openURL(url);
  		html_part->openUrlRequest(url,KParts::OpenUrlArguments(),KParts::BrowserArguments());
-	}	
+		at_home = false;
+	}
+	
+	void SearchWidget::setSearchBarEngine(int engine)
+	{
+		search_engine->setCurrentIndex(engine);
+	}
 	
 	void SearchWidget::onUrlHover(const QString & url)
 	{
@@ -201,6 +213,7 @@ namespace kt
 	
 	void SearchWidget::onFinished()
 	{
+		changeTitle(this,html_part->title());
 	}
 	
 	void SearchWidget::onOpenTorrent(const KUrl & url)
@@ -300,13 +313,26 @@ namespace kt
 	
 	void SearchWidget::reload()
 	{
-		html_part->reload();
+		if (atHome())
+			home();
+		else
+			html_part->reload();
 	}
 	
 	void SearchWidget::openNewTab()
 	{
 		openNewTab(url_to_open);
 	}
+	
+	void SearchWidget::home() 
+	{
+		html_part->begin();
+		html_part->write("<html><head></head><body>TODO: make cool search page</body></html>");
+		html_part->end();
+		changeTitle(this,i18n("Home"));
+		at_home = true;
+	}
+
 	
 	bool SearchWidget::backAvailable() const
 	{

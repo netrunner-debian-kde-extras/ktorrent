@@ -1,3 +1,52 @@
+Changes in 3.3 :
+- Cleanup plugin list (180402)
+- If QM enabled, torrents are always managed by the QM, unless user stops them
+- QM can now be disabled to allow full manual control of torrents
+- Check completed dir for torrent files when opening a torrent (164165)
+- Add i18n to scripts, so that they get translated to
+- Trackers folder becomes Trackers in tracker_groups.py (183416)
+- WebSeeds can now be disabled and enabled individually and globally
+- Redesigned GUI with kontact like sidebar to switch between activities
+- Added playlist to mediaplayer
+- Update size when activities are added or removed (185759)
+- Destroy VideoWidget completely when video is closed, to prevent ktorrent from hogging XVideo port (185846)
+- Status queued can now result in status strings "Queued for downloading" or "Queued for seeding" (181096)
+- Make logviewer widget position configurable
+- Added shutdown plugin (182050)
+- Add comment to applet desktop file and rename the applet to just KTorrent (183825)
+- Added automatic torrent removal script
+- The scripting plugin now supports script packages
+- Use relative URL's in webinterface (188134)
+- Don't send body of login page when redirecting to login page (188209)
+- VideoWidget now inhibits screensaver
+- Add feature to support a different speed limit when the screensaver is activated (172660)
+- Use bytes to calculate availability percentage of a peer (188575)
+- Add support for using multiple trackers at the same time for non private torrents (175255)
+- Remove config option to select between basic and filesystem specific preallocation method (189784)
+- Add patch from amichai which adds easier navigation between torrents in plasma applet (183826)
+- GeoIP database will now get downloaded automatically (and updated every 30 days), so it is no longer distributed with ktorrent
+
+Changes in 3.2.2 :
+- Fix crash when changing speed limits using system tray menu (188447)
+- Fix bug with displaying directory trees in infowidget FileView
+- Fix crash caused by calling front on empty QList
+- Make sure paths in webseed http requests are URL encoded (189477)
+- Prevent torrent from being loaded twice when loading torrents via commandline or external program (190434)
+- Fix crash caused by uncaught exception (190317)
+- Fix crash caused by sorting list of torrent in QM when the list is being cleared (190759)
+- Added patch from amichai which makes the plasma applet a popup applet and which fixes some other things (190822)
+- Fix bug causing drag and drop of torrent on to plasma desktop not to work
+- Increase numwant to 200 and the maximum number of potential peers to 500
+- Cancel all scan dialogs before exiting, this fixes a crash (191487)
+- Config dialog now embeds pages in scroll areas, so that the dialog also is useable on small screens
+- Make sure dbus names are valid, this fixes an assert (192007)
+- Fix crash when parsing DHT packets (190107)
+- Remove newlines from path names of files when present in torrent file (192652)
+- Properly check for GeoIP system library (193117)
+- Fix crash at exit caused by stopping torrent in it's destructor (193585)
+- No longer check if a torrent has to have an announce or a nodes key
+- Make sure http post works properly in search plugin (194037)
+
 Changes in 3.2.1 :
 - Resort torrents if display name is changed
 - Fix bug causing torrents to get stuck when data checking and move to completed dir are done when a torrent has finished

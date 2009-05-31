@@ -33,6 +33,8 @@
 #include <groups/group.h>
 #include "viewmodel.h"
 #include "core.h"
+#include <interfaces/trackerinterface.h>
+#include <util/sha1hash.h>
 
 using namespace bt;
 
@@ -496,7 +498,8 @@ namespace kt
 		else if (role == Qt::DecorationRole && index.column() == 1)
 		{
 			bt::TorrentInterface* tc = item->tc;
-			if (tc->getStats().tracker_status == bt::TRACKER_ERROR)
+			bt::TrackerInterface* trk = tc->getTrackersList()->getCurrentTracker();
+			if (trk && trk->trackerStatus() == bt::TRACKER_ERROR)
 				return KIcon("dialog-warning");
 		} 
 		else if (role == Qt::ToolTipRole)
@@ -504,8 +507,9 @@ namespace kt
 			if (index.column() == 1)
 			{
 				bt::TorrentInterface* tc = item->tc;
-				if (tc->getStats().tracker_status == bt::TRACKER_ERROR)
-					return i18n("There is a problem with the tracker: <br><b>%1</b>",tc->getStats().tracker_status_string);
+				bt::TrackerInterface* trk = tc->getTrackersList()->getCurrentTracker();
+				if (trk && trk->trackerStatus() == bt::TRACKER_ERROR)
+					return trk->trackerStatusString();
 			}
 			else if (index.column() == 0)
 			{
@@ -564,15 +568,25 @@ namespace kt
 		QByteArray encoded_data;
 
 		QDataStream stream(&encoded_data, QIODevice::WriteOnly);
-
+		QStringList hashes;
 		foreach (const QModelIndex &index, indexes) 
 		{
-			if (index.isValid()) 
+			if (!index.isValid()) 
+				continue;
+			
+			const bt::TorrentInterface* ti = torrentFromIndex(index);
+			if (ti)
 			{
-				QString text = data(createIndex(index.row(),0), Qt::DisplayRole).toString();
-				stream << text;
+				QString hash = ti->getInfoHash().toString();
+				if (!hashes.contains(hash))
+				{
+					hashes.append(hash);
+				}
 			}
 		}
+		
+		foreach (const QString & s,hashes)
+			stream << s;
 
 		mime_data->setData( "application/x-ktorrent-drag-object", encoded_data);
 		return mime_data;

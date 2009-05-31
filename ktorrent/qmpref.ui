@@ -11,7 +11,17 @@
   </property>
   <layout class="QVBoxLayout" >
    <item>
-    <widget class="QGroupBox" name="groupBox_3" >
+    <widget class="QCheckBox" name="kcfg_manuallyControlTorrents" >
+     <property name="toolTip" >
+      <string>When enabled, the queue manager will be totally disabled, allowing you to fully control all torrents manually.</string>
+     </property>
+     <property name="text" >
+      <string>Control torrents manually</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="m_qm_group_box" >
      <property name="title" >
       <string>Queue Manager</string>
      </property>
@@ -180,7 +190,7 @@ p, li { white-space: pre-wrap; }
    <item>
     <widget class="QGroupBox" name="groupBox_2" >
      <property name="title" >
-      <string>Seeding</string>
+      <string comment="@title:group Options regarging Seeding">Seeding</string>
      </property>
      <layout class="QGridLayout" >
       <item row="0" column="0" >
@@ -298,12 +308,60 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel" >
-     <x>119</x>
-     <y>173</y>
+     <x>132</x>
+     <y>221</y>
     </hint>
     <hint type="destinationlabel" >
-     <x>143</x>
-     <y>197</y>
+     <x>243</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>kcfg_manuallyControlTorrents</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>kcfg_maxDownloads</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>128</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>369</x>
+     <y>90</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>kcfg_manuallyControlTorrents</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>kcfg_maxSeeds</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>253</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>349</x>
+     <y>112</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>kcfg_manuallyControlTorrents</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>kcfg_decreasePriorityOfStalledTorrents</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>207</x>
+     <y>9</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>167</x>
+     <y>216</y>
     </hint>
    </hints>
   </connection>

@@ -12,6 +12,8 @@ from email import Encoders
 import os
 import socket
 
+t = Kross.module("kdetranslation")
+
 class EMailNotifier:
 	def __init__(self):
 		self.mail_user = "your_email@gmail.com"
@@ -100,9 +102,9 @@ class EMailNotifier:
 
 	def configure(self):
 		forms = Kross.module("forms")
-		dialog = forms.createDialog("E-Mail Script Settings")
+		dialog = forms.createDialog(t.i18n("E-Mail Script Settings"))
 		dialog.setButtons("Ok|Cancel")
-		page = page = dialog.addPage("E-Mail Settings","E-Mail Settings","mail-send")
+		page = page = dialog.addPage(t.i18n("E-Mail Settings"),t.i18n("E-Mail Settings"),"mail-send")
 		widget = forms.createWidgetFromUIFile(page,KTScriptingPlugin.scriptDir("email_notifications") + "emailconfig.ui")
 		widget["username"].text = self.mail_user
 		widget["password"].text = self.mail_pwd

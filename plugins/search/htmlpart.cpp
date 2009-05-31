@@ -28,6 +28,7 @@
 #include <kparts/browserextension.h>
 #include <util/constants.h>
 #include <khtmlview.h>
+#include <dom/html_document.h>
 #include "htmlpart.h"
 
 using namespace bt;
@@ -44,7 +45,7 @@ namespace kt
 		setPluginsEnabled(false);
 		setStatusMessagesEnabled(false);
 		KParts::BrowserExtension* ext = this->browserExtension();
-		connect(ext,SIGNAL(openUrlRequest(const KUrl &, const KParts::OpenUrlArguments &, const KParts::BrowserArguments &)),
+		connect(ext,SIGNAL(openUrlRequestDelayed(const KUrl &, const KParts::OpenUrlArguments &, const KParts::BrowserArguments &)),
 				this,SLOT(openUrlRequest(const KUrl&,const KParts::OpenUrlArguments & , const KParts::BrowserArguments &)));
 	
 		ext->enableAction("copy",true);
@@ -55,6 +56,11 @@ namespace kt
 	
 	HTMLPart::~HTMLPart()
 	{}
+	
+	QString HTMLPart::title() const
+	{
+		return htmlDocument().title().string();
+	}
 	
 	void HTMLPart::copy()
 	{
@@ -67,15 +73,23 @@ namespace kt
 	
 	void HTMLPart::openUrlRequest(const KUrl &u, const KParts::OpenUrlArguments & arg, const KParts::BrowserArguments & barg)
 	{
-		Q_UNUSED(arg);
-		Q_UNUSED(barg);
 		if (active_job)
 		{
 			active_job->kill();
 			active_job = 0;
 		}
 		
-		KIO::TransferJob* j = KIO::get(u, KIO::NoReload, KIO::HideProgressInfo);
+		
+		KIO::TransferJob* j = 0;
+		if (barg.doPost())
+		{
+			j = KIO::http_post(u,barg.postData,KIO::HideProgressInfo);
+			j->addMetaData("content-type",barg.contentType());
+		}
+		else
+		{
+			j = KIO::get(u, KIO::NoReload, KIO::HideProgressInfo);
+		}
 		connect(j,SIGNAL(data(KIO::Job*,const QByteArray &)),
 				this,SLOT(dataReceived(KIO::Job*, const QByteArray& )));
 		connect(j,SIGNAL(result(KJob*)),this,SLOT(jobDone(KJob* )));

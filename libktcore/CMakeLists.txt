@@ -10,6 +10,8 @@ set(libktorrent_SRC
 	interfaces/guiinterface.cpp
 	interfaces/coreinterface.cpp
 	interfaces/prefpageinterface.cpp
+	interfaces/activity.cpp
+	interfaces/torrentactivityinterface.cpp
 	
 	torrent/queuemanager.cpp
 	torrent/torrentfilemodel.cpp
@@ -28,10 +30,18 @@ set(libktorrent_SRC
 	dbus/dbus.cpp
 	dbus/dbustorrent.cpp
 	dbus/dbusgroup.cpp
+	
+	gui/centralwidget.cpp
+	gui/activitybar.cpp
+	gui/activitylistmodel.cpp
+	gui/activitylistwidget.cpp
+	gui/activitylistdelegate.cpp
+	gui/tabbarwidget.cpp
+	
+	plugin/pluginmanager.cpp
+	plugin/pluginactivity.cpp
 
 	ktorrent.kcfg
-	pluginmanager.cpp
-	pluginmanagerprefpage.cpp
 )
 
 # set(libktorrent_UI pluginmanagerwidget.ui )

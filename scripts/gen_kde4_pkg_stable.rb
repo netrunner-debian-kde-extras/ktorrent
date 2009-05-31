@@ -14,7 +14,7 @@ addDocs    = []
 addPo      = []
 remove     = ""
 
-version    = "3.1.6"
+version    = "3.2.1"
 svnbase    = "svn+ssh://guisson@svn.kde.org/home/kde"
 svnroot    = "#{svnbase}/branches/stable"
 svntags    = "#{svnbase}/tags/#{name}"
@@ -138,7 +138,7 @@ end
 
 # Remove cruft 
 `find -name ".svn" | xargs rm -rf`
-`find -name "Messages.sh" | xargs rm -rf`
+#`find -name "Messages.sh" | xargs rm -rf`
 if ( remove != "")
    `/bin/rm #{remove}`
 end

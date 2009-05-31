@@ -42,7 +42,7 @@ endif (ENABLE_DHT_SUPPORT)
 #  message(STATUS "Building KTorrent with GeoIP support")
 #endif (ENABLE_GEOIP)
 
-
+set (KTORRENT_DBUS_XML_DIR ${KTORRENT_SOURCE_DIR}/dbus_xml)
 
 include_directories( ${KDE4_INCLUDES} 
    ${KTORRENT_BINARY_DIR}
@@ -66,9 +66,8 @@ if( PLASMA_FOUND )
     add_subdirectory(plasma)
 endif(PLASMA_FOUND)
 
+add_subdirectory(po)
+
 # --- show log ---
 macro_display_feature_log()
 
-find_package(Msgfmt REQUIRED)
-find_package(Gettext REQUIRED)
-add_subdirectory( po )

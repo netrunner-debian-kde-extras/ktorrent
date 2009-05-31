@@ -36,12 +36,14 @@ namespace kt
 {
 	
 
-	ScheduleEditor::ScheduleEditor(QWidget* parent) : QWidget(parent),schedule(0)
+	ScheduleEditor::ScheduleEditor(QWidget* parent) 
+		: Activity(i18n("Bandwidth\nSchedule"),"kt-bandwidth-scheduler",20,parent),schedule(0)
 	{
+		setToolTip(i18n("Edit the bandwidth schedule"));
 		QVBoxLayout* layout = new QVBoxLayout(this);
 		view = new WeekView(this);
 		tool_bar = new KToolBar(this);
-		
+
 		layout->addWidget(tool_bar);
 		layout->addWidget(view);
 		
@@ -159,7 +161,7 @@ namespace kt
 			if (schedule->conflicts(item))
 			{
 				*item = tmp; // restore old values
-				KMessageBox::error(this,i18n("This item conflicts with another item in the schedule, we cannot change it !"));
+				KMessageBox::error(this,i18n("This item conflicts with another item in the schedule, we cannot change it."));
 			}
 			else
 			{

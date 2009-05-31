@@ -51,6 +51,9 @@ namespace kt
 		virtual bool insertRows(int row,int count,const QModelIndex & parent);
 		virtual QModelIndex index(int row,int column,const QModelIndex & parent) const;
 		virtual QModelIndex parent(const QModelIndex & index) const;
+		virtual Qt::ItemFlags flags(const QModelIndex &index) const;
+		virtual QStringList mimeTypes() const;
+		virtual QMimeData* mimeData(const QModelIndexList &indexes) const;
 		
 		/// Get the full path of the model index
 		QString pathForIndex(const QModelIndex & idx) const;
@@ -58,16 +61,9 @@ namespace kt
 		/// Get the index of a full path
 		QModelIndex indexForPath(const QString & path) const;
 		
-		/// Get the next item to play, if idx is invalid return the first playable item
-		QModelIndex next(const QModelIndex & idx,bool random,bool complete_only) const;
-		
 	public slots:
 		void onTorrentAdded(bt::TorrentInterface* t);
 		void onTorrentRemoved(bt::TorrentInterface* t);
-		
-	private:
-		QModelIndex next(const QModelIndex & idx) const;
-		QModelIndex randomNext(const QModelIndex & idx,bool complete_only) const;
 		
 	private:
 		struct Item

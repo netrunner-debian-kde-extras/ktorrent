@@ -20,9 +20,10 @@
 #ifndef BTHTTPTRACKER_H
 #define BTHTTPTRACKER_H
 
-#include <qtimer.h>
+#include <QTimer>
 #include <btcore_export.h>
 #include "tracker.h"
+
 
 class KJob;
 
@@ -51,17 +52,20 @@ namespace bt
 		virtual void start();
 		virtual void stop(WaitJob* wjob = 0);
 		virtual void completed();
-		virtual void manualUpdate();
 		virtual Uint32 failureCount() const {return failures;}
 		virtual void scrape();
 		
 		static void setProxy(const QString & proxy,const bt::Uint16 proxy_port);
 		static void setProxyEnabled(bool on);
+		static void setUseQHttp(bool on);
 		
 	private slots:
-		void onAnnounceResult(KJob* j);
+		void onKIOAnnounceResult(KJob* j);
+		void onQHttpAnnounceResult(KJob* j);
 		void onScrapeResult(KJob* j);
 		void emitInvalidURLFailure();
+		void onTimeout();
+		virtual void manualUpdate();
 
 	private:
 		void doRequest(WaitJob* wjob = 0);
@@ -69,16 +73,20 @@ namespace bt
 		void setupMetaData(KIO::MetaData & md);
  		void doAnnounceQueue();
  		void doAnnounce(const KUrl & u);
+		void onAnnounceResult(const KUrl & url,const QByteArray & data,KJob* j);
 
 	private:
 		KJob* active_job;
 		KUrl::List announce_queue;
 		QString event;
 		Uint32 failures;
+		QTimer timer;
+		
 		
 		static bool proxy_on;
 		static QString proxy;
 		static Uint16 proxy_port;
+		static bool use_qhttp;
 	};
 
 }

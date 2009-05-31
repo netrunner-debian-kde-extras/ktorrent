@@ -37,8 +37,26 @@
 
 namespace bt
 {
+	static QString SanityzeName(const QString & name)
+	{
+#ifdef Q_WS_WIN
+		QString ret = name;
+		char invalid[] = {'<','>',':','"','/','\\','|','?','*'};
+		for (int i = 0;i < 9;i++)
+		{
+			if (ret.contains(invalid[i]))
+				ret = ret.replace(invalid[i],'_');
+		}
+		
+		return ret;
+#else
+		if (name.endsWith("/"))
+			return name.left(name.length() - 1);
+		return name;
+#endif
+	}
 
-	Torrent::Torrent() : piece_length(0),file_length(0),priv_torrent(false),pos_cache_chunk(0),pos_cache_file(0),tmon(0)
+	Torrent::Torrent() : chunk_size(0),total_size(0),priv_torrent(false),pos_cache_chunk(0),pos_cache_file(0),tmon(0)
 	{
 		text_codec = QTextCodec::codecForName("utf-8");
 		trackers = 0;
@@ -62,27 +80,31 @@ namespace bt
 			node = decoder.decode();
 			BDictNode* dict = dynamic_cast<BDictNode*>(node);
 			if (!dict)
-				throw Error(i18n("Corrupted torrent!"));
+				throw Error(i18n("Corrupted torrent."));
 
 			// see if we can find an encoding node
-			BValueNode* enc = dict->getValue("encoding");
-			if (enc)
+			if (dict->getValue("encoding"))
 			{
-				QTextCodec* tc = QTextCodec::codecForName(enc->data().toByteArray());
+				QByteArray enc = dict->getByteArray("encoding");
+				QTextCodec* tc = QTextCodec::codecForName(enc);
 				if (tc)
 				{
 					Out(SYS_GEN|LOG_DEBUG) << "Encoding : " << QString(tc->name()) << endl;
 					text_codec = tc;
 				}
 			}
+			
+			BValueNode* c = dict->getValue("comment");
+			if (c)
+				comments = c->data().toString(text_codec);
 
 			BValueNode* announce = dict->getValue("announce");
 			BListNode* nodes = dict->getList("nodes");
-			if (!announce && !nodes)
-				throw Error(i18n("Torrent has no announce or nodes field"));
+			//if (!announce && !nodes)
+			//	throw Error(i18n("Torrent has no announce or nodes field."));
 				
 			if (announce)
-				loadTrackerURL(announce);
+				loadTrackerURL(dict->getString("announce",text_codec));
 			
 			if (nodes) // DHT torrrents have a node key
 				loadNodes(nodes);
@@ -92,11 +114,16 @@ namespace bt
 			
 			// see if the torrent contains webseeds
 			BListNode* urls = dict->getList("url-list");
-			BValueNode* url = dict->getValue("url-list");
 			if (urls)
+			{
 				loadWebSeeds(urls);
-			else if (url)
-				loadWebSeed(url);
+			}
+			else if (dict->getValue("url-list"))
+			{
+				KUrl url(dict->getString("url-list",text_codec));
+				if (url.isValid())
+					web_seeds.append(url);
+			}
 			
 			BNode* n = dict->getData("info");
 			SHA1HashGen hg;
@@ -124,60 +151,64 @@ namespace bt
 	void Torrent::loadInfo(BDictNode* dict)
 	{
 		if (!dict)
-			throw Error(i18n("Corrupted torrent!"));
+			throw Error(i18n("Corrupted torrent."));
 		
-		loadPieceLength(dict->getValue("piece length"));
-		BValueNode* n = dict->getValue("length");
-		if (n)
-			loadFileLength(n);
+		chunk_size = dict->getInt64("piece length");
+		BListNode* files = dict->getList("files");
+		if (files)
+			loadFiles(files);
 		else
-			loadFiles(dict->getList("files"));
+			total_size = dict->getInt64("length");
 		
-		loadHash(dict->getValue("pieces"));
-		loadName(dict->getValue("name"));
-		n = dict->getValue("private");
+		loadHash(dict);
+		unencoded_name = dict->getByteArray("name");
+		name_suggestion = text_codec->toUnicode(unencoded_name);
+		name_suggestion = SanityzeName(name_suggestion);
+		BValueNode* n = dict->getValue("private");
 		if (n && n->data().toInt() == 1)
 			priv_torrent = true;
 		
 		// do a safety check to see if the number of hashes matches the file_length
-		Uint32 num_chunks = (file_length / this->piece_length);
-		if (file_length % piece_length > 0)
+		Uint32 num_chunks = (total_size / chunk_size);
+		last_chunk_size = total_size % chunk_size;
+		if (last_chunk_size > 0)
 			num_chunks++;
+		else
+			last_chunk_size = chunk_size;
 		
 		if (num_chunks != (Uint32)hash_pieces.count())
 		{
 			Out(SYS_GEN|LOG_DEBUG) << "File sizes and number of hashes do not match for " << name_suggestion << endl;
-			throw Error(i18n("Corrupted torrent!"));
+			throw Error(i18n("Corrupted torrent."));
 		}
 	}
 	
 	void Torrent::loadFiles(BListNode* node)
 	{
-		Out(SYS_GEN|LOG_DEBUG) << "Multi file torrent" << endl;
 		if (!node)
-			throw Error(i18n("Corrupted torrent!"));
-		Uint32 idx = 0;	
+			throw Error(i18n("Corrupted torrent."));
+		
+		Uint32 idx = 0;
 		BListNode* fl = node;
 		for (Uint32 i = 0;i < fl->getNumChildren();i++)
 		{
 			BDictNode* d = fl->getDict(i);
 			if (!d)
-				throw Error(i18n("Corrupted torrent!"));
+				throw Error(i18n("Corrupted torrent."));
 			
 			BListNode* ln = d->getList("path");
 			if (!ln)
-				throw Error(i18n("Corrupted torrent!"));
+				throw Error(i18n("Corrupted torrent."));
 
 			QString path;
 			QList<QByteArray> unencoded_path;
 			for (Uint32 j = 0;j < ln->getNumChildren();j++)
 			{
-				BValueNode* v = ln->getValue(j);
-				if (!v || v->data().getType() != Value::STRING)
-					throw Error(i18n("Corrupted torrent!"));
-	
-				unencoded_path.append(v->data().toByteArray());
-				QString sd = v->data().toString(text_codec);
+				QByteArray v = ln->getByteArray(j);
+				unencoded_path.append(v);
+				QString sd = text_codec ? text_codec->toUnicode(v) : QString(v);
+				if (sd.contains("\n"))
+					sd = sd.remove("\n");
 				path += sd;
 				if (j + 1 < ln->getNumChildren())
 					path += bt::DirSeparator();
@@ -188,77 +219,32 @@ namespace bt
 				continue;
 
 			if (!checkPathForDirectoryTraversal(path))
-				throw Error(i18n("Corrupted torrent!"));
+				throw Error(i18n("Corrupted torrent."));
 
-			BValueNode* v = d->getValue("length");
-			if (!v)
-				throw Error(i18n("Corrupted torrent!"));
+			Uint64 s = d->getInt64("length");
+			TorrentFile file(this,idx,path,total_size,s,chunk_size);
+			file.setUnencodedPath(unencoded_path);
 
-			if (v->data().getType() == Value::INT || v->data().getType() == Value::INT64)
-			{
-				Uint64 s = v->data().toInt64();
-				TorrentFile file(this,idx,path,file_length,s,piece_length);
-				file.setUnencodedPath(unencoded_path);
-
-				// update file_length
-				file_length += s;
-				files.append(file);
-			}
-			else
-			{
-				throw Error(i18n("Corrupted torrent!"));
-			}
+			// update file_length
+			total_size += s;
+			files.append(file);
 			idx++;
 		}
 	}
 
-	void Torrent::loadTrackerURL(BValueNode* node)
+	void Torrent::loadTrackerURL(const QString & s)
 	{
-		if (!node || node->data().getType() != Value::STRING)
-			throw Error(i18n("Corrupted torrent!"));
-		
 		if (!trackers)
 			trackers = new TrackerTier();
-		
-		QString s = node->data().toString(text_codec).trimmed();
+	
 		KUrl url(s);
 		if (s.length() > 0 && url.isValid())
 			trackers->urls.append(url);
 	}
 	
-	void Torrent::loadPieceLength(BValueNode* node)
+	void Torrent::loadHash(BDictNode* dict)
 	{
-		if (!node)
-			throw Error(i18n("Corrupted torrent!"));
-
-		if (node->data().getType() == Value::INT)
-			piece_length = node->data().toInt();
-		else if (node->data().getType() == Value::INT64)
-			piece_length = node->data().toInt64();
-		else
-			throw Error(i18n("Corrupted torrent!"));
-	}
-	
-	void Torrent::loadFileLength(BValueNode* node)
-	{
-		if (!node)
-			throw Error(i18n("Corrupted torrent!"));
-				
-		if (node->data().getType() == Value::INT)
-			file_length = node->data().toInt();
-		else if (node->data().getType() == Value::INT64)
-			file_length = node->data().toInt64();
-		else
-			throw Error(i18n("Corrupted torrent!"));
-	}
-	
-	void Torrent::loadHash(BValueNode* node)
-	{
-		if (!node || node->data().getType() != Value::STRING)
-			throw Error(i18n("Corrupted torrent!"));
-		
-		
-		QByteArray hash_string = node->data().toByteArray();
+		QByteArray hash_string = dict->getByteArray("pieces");
 		for (int i = 0;i < hash_string.size();i+=20)
 		{
 			Uint8 h[20];
@@ -267,35 +253,7 @@ namespace bt
 			hash_pieces.append(hash);
 		}
 	}
-	
-	
-#ifdef Q_WS_WIN
-	static QString NameForWindows(const QString & name)
-	{
-		QString ret = name;
-		char invalid[] = {'<','>',':','"','/','\\','|','?','*'};
-		for (int i = 0;i < 9;i++)
-		{
-			if (ret.contains(invalid[i]))
-				ret = ret.replace(invalid[i],'_');
-		}
-		
-		return ret;
-	}
-#endif
 
-	void Torrent::loadName(BValueNode* node)
-	{
-		if (!node || node->data().getType() != Value::STRING)
-			throw Error(i18n("Corrupted torrent!"));
-		
-		unencoded_name = node->data().toByteArray();
-		name_suggestion = text_codec->toUnicode(unencoded_name);
-#ifdef Q_WS_WIN
-		name_suggestion = NameForWindows(name_suggestion);
-#endif
-	}
-	
 	void Torrent::loadAnnounceList(BNode* node)
 	{
 		if (!node)
@@ -312,19 +270,14 @@ namespace bt
 		//ml->printDebugInfo();
 		for (Uint32 i = 0;i < ml->getNumChildren();i++)
 		{
-			BListNode* url = dynamic_cast<BListNode*>(ml->getChild(i));
-			if (!url)
+			BListNode* url_list = ml->getList(i);
+			if (!url_list)
 				throw Error(i18n("Parse Error"));
 			
-			for (Uint32 j = 0;j < url->getNumChildren();j++)
+			for (Uint32 j = 0;j < url_list->getNumChildren();j++)
 			{
-				BValueNode* vn = dynamic_cast<BValueNode*>(url->getChild(j));
-				if (!vn)
-					throw Error(i18n("Parse Error"));
-
-				KUrl url(vn->data().toString().trimmed());
+				KUrl url(url_list->getString(j,0));
 				tier->urls.append(url);
-				//Out(SYS_GEN|LOG_DEBUG) << "Added tracker " << url << endl;
 			}
 			tier->next = new TrackerTier();
 			tier = tier->next;
@@ -337,24 +290,13 @@ namespace bt
 		{
 			BListNode* c = node->getList(i);
 			if (!c || c->getNumChildren() != 2)
-				throw Error(i18n("Corrupted torrent!"));
+				throw Error(i18n("Corrupted torrent."));
 			
 			// first child is the IP, second the port
-			BValueNode* ip = c->getValue(0);
-			BValueNode* port = c->getValue(1);
-			if (!ip || !port)
-				throw Error(i18n("Corrupted torrent!"));
-			
-			if (ip->data().getType() != Value::STRING) 
-				throw Error(i18n("Corrupted torrent!"));
-			
-			if (port->data().getType() != Value::INT)
-				throw Error(i18n("Corrupted torrent!"));
-			
 			// add the DHT node
 			DHTNode n;
-			n.ip = ip->data().toString();
-			n.port = port->data().toInt();
+			n.ip = c->getString(0,0);
+			n.port = c->getInt(1);
 			nodes.append(n);
 		}
 	}
@@ -363,15 +305,10 @@ namespace bt
 	{
 		for (Uint32 i = 0;i < node->getNumChildren();i++)
 		{
-			loadWebSeed(node->getValue(i));
+			KUrl url = KUrl(node->getString(i,text_codec));
+			if (url.isValid())
+				web_seeds.append(url);
 		}
-	}
-	
-	void Torrent::loadWebSeed(BValueNode* node)
-	{
-		KUrl url = KUrl(node->data().toString(text_codec));
-		if (url.isValid())
-			web_seeds.append(url);
 	}
 
 	void Torrent::debugPrintInfo()
@@ -381,7 +318,7 @@ namespace bt
 //		for (KUrl::List::iterator i = tracker_urls.begin();i != tracker_urls.end();i++)
 //			Out(SYS_GEN|LOG_DEBUG) << "Tracker URL : " << *i << endl;
 		
-		Out(SYS_GEN|LOG_DEBUG) << "Piece Length : " << piece_length << endl;
+		Out(SYS_GEN|LOG_DEBUG) << "Piece Length : " << chunk_size << endl;
 		if (this->isMultiFile())
 		{
 			Out(SYS_GEN|LOG_DEBUG) << "Files : " << endl;
@@ -400,7 +337,7 @@ namespace bt
 		}
 		else
 		{
-			Out(SYS_GEN|LOG_DEBUG) << "File Length : " << file_length << endl;
+			Out(SYS_GEN|LOG_DEBUG) << "File Length : " << total_size << endl;
 		}
 		Out(SYS_GEN|LOG_DEBUG) << "Pieces : " << hash_pieces.size() << endl;
 	}
@@ -449,8 +386,6 @@ namespace bt
 		}
 		return count;
 	}
-	
-	
 
 	void Torrent::calcChunkPos(Uint32 chunk,QList<Uint32> & file_list) const
 	{
@@ -560,9 +495,7 @@ namespace bt
 			f.changeTextCodec(codec);
 		}
 		name_suggestion = text_codec->toUnicode(unencoded_name);
-#ifdef Q_WS_WIN
-		name_suggestion = NameForWindows(name_suggestion);
-#endif
+		name_suggestion = SanityzeName(name_suggestion);
 	}
 	
 	void Torrent::downloadPriorityChanged(TorrentFile* tf,Priority newpriority,Priority oldpriority)

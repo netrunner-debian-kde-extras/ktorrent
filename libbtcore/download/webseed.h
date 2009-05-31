@@ -121,6 +121,8 @@ namespace bt
 		/// Get the current webseed download
 		WebSeedChunkDownload* currentChunkDownload() {return current;}
 		
+		virtual void setEnabled(bool on);
+		
 		/// Get the number of failed attempts
 		Uint32 failedAttempts() const {return num_failures;}
 		

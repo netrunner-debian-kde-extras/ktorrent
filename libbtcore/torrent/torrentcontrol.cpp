@@ -83,12 +83,10 @@ namespace bt
 	{
 		custom_selector_factory = 0;
 		cache_factory = 0;
-		istats.last_announce = 0;
 		stats.imported_bytes = 0;
-		stats.trk_bytes_downloaded = 0;
-		stats.trk_bytes_uploaded = 0;
 		stats.running = false;
 		stats.started = false;
+		stats.queued = false;
 		stats.stopped_by_error = false;
 		stats.session_bytes_downloaded = 0;
 		stats.session_bytes_uploaded = 0;
@@ -96,19 +94,15 @@ namespace bt
 		old_tordir = QString();
 		stats.status = NOT_STARTED;
 		stats.autostart = false;
-		stats.user_controlled = false;
 		stats.priv_torrent = false;
 		stats.seeders_connected_to = stats.seeders_total = 0;
 		stats.leechers_connected_to = stats.leechers_total = 0;
-		stats.total_times_downloaded = 0;
 		stats.max_share_ratio = 0.00f;
 		stats.max_seed_time = 0;
 		stats.last_download_activity_time = stats.last_upload_activity_time = 0;
-		stats.tracker_status = TRACKER_OK;
 		istats.running_time_dl = istats.running_time_ul = 0;
 		istats.prev_bytes_dl = 0;
 		istats.prev_bytes_ul = 0;
-		istats.trk_prev_bytes_dl = istats.trk_prev_bytes_ul = 0;
 		istats.io_error = false;
 		istats.priority = 0;
 		istats.custom_output_name = false;
@@ -133,10 +127,18 @@ namespace bt
 	TorrentControl::~TorrentControl()
 	{
 		if (stats.running)
+		{
+			// block all signals to prevent crash at exit
+			blockSignals(true);
 			stop(false);
+		}
 		
 		if (tmon)
 			tmon->destroyed();
+		
+		if (downloader)
+			downloader->saveWebSeeds(tordir + "webseeds");
+		
 		delete choke;
 		delete downloader;
 		delete uploader;
@@ -221,11 +223,9 @@ namespace bt
 					psman->start();
 				else
 					psman->manualUpdate();
-				istats.last_announce = bt::GetCurrentTime();
 				istats.time_started_dl = QDateTime::currentDateTime();
 				// Tell QM to redo queue
-				if (!isUserControlled())
-					updateQueue();
+				updateQueue();
 			}
 			updateStatus();
 
@@ -288,19 +288,14 @@ namespace bt
 				stalled_timer.update();
 			}
 			
-			if (overMaxRatio() || overMaxSeedTime()) 
-			{ 
-				if (!stats.user_controlled) //if it's queued make sure to dequeue it 
-				{
-					setUserControlled(true);
-				}
-                 
-				stop(true); 
+			if (stats.completed && (overMaxRatio() || overMaxSeedTime()))
+			{
+				stop(); 
 				emit seedingAutoStopped(this, overMaxRatio() ? MAX_RATIO_REACHED : MAX_SEED_TIME_REACHED);
 			}
 
 			//Update diskspace if needed (every 1 min)			
-			if(!stats.completed && stats.running && bt::GetCurrentTime() - last_diskspace_check >= 60 * 1000)
+			if (!stats.completed && stats.running && bt::GetCurrentTime() - last_diskspace_check >= 60 * 1000)
 			{
 				checkDiskSpace(true);
 			}
@@ -373,7 +368,6 @@ namespace bt
 		}
 		
 		istats.time_started_ul = istats.time_started_dl = QDateTime::currentDateTime();
-		resetTrackerStats();
 		
 		if (prealloc)
 		{
@@ -418,6 +412,7 @@ namespace bt
 		stats.running = true;
 		stats.started = true;
 		stats.autostart = true;
+		stats.queued = false;
 		stats.last_download_activity_time = stats.last_upload_activity_time = GetCurrentTime();
 		choker_update_timer.update();
 		stats_save_timer.update();
@@ -425,12 +420,11 @@ namespace bt
 		
 		stalled_timer.update();
 		psman->start();
-		istats.last_announce = bt::GetCurrentTime();
 		stalled_timer.update();
 	}
 		
 
-	void TorrentControl::stop(bool user,WaitJob* wjob)
+	void TorrentControl::stop(WaitJob* wjob)
 	{
 		QDateTime now = QDateTime::currentDateTime();
 		if(!stats.completed)
@@ -470,13 +464,7 @@ namespace bt
 			
 			downloader->clearDownloads();
 		}
-		
-		if (user)
-		{
-			//make this torrent user controlled
-			setUserControlled(true);
-			stats.autostart = false;
-		}
+	
 		
 		pman->savePeerList(tordir + "peer_list");
 		pman->stop();
@@ -485,11 +473,11 @@ namespace bt
 		cman->stop();
 		
 		stats.running = false;
+		stats.autostart = false;
+		stats.queued = false;
 		saveStats();
 		updateStatus();
 		updateStats();
-		stats.trk_bytes_downloaded = 0;
-		stats.trk_bytes_uploaded = 0;
 
 		emit torrentStopped(this);
 	}
@@ -521,12 +509,14 @@ namespace bt
 		{
 			tor->load(torrent,false);
 		}
-		catch (...)
+		catch (bt::Error & err)
 		{
+			Out(SYS_GEN|LOG_NOTICE) << "Failed to load torrent: " << err.toString() << endl;
 			delete tor;
 			tor = 0;
-			throw Error(i18n("An error occurred while loading the torrent <b>%1</b>\n"
-					"The torrent is probably corrupt or is not a torrent file.",torrent));
+			throw Error(i18n("An error occurred while loading the torrent <b>%1</b>:<br/>"
+					"<b>%2</b><br/>"
+					"The torrent is probably corrupt or is not a valid torrent file.",torrent,err.toString()));
 		}
 		
 		initInternal(qman,tmpdir,ddir,default_save_dir,torrent.startsWith(tmpdir));
@@ -549,12 +539,14 @@ namespace bt
 		{
 			tor->load(data,false);
 		}
-		catch (...)
+		catch (bt::Error & err)
 		{
+			Out(SYS_GEN|LOG_NOTICE) << "Failed to load torrent: " << err.toString() << endl;
 			delete tor;
 			tor = 0;
-			throw Error(i18n("An error occurred while loading the torrent.\n"
-					"The torrent is probably corrupt or is not a torrent file."));
+			throw Error(i18n("An error occurred while loading the torrent:<br/>"
+				"<b>%1</b><br/>"
+				"The torrent is probably corrupt or is not a valid torrent file.",err.toString()));
 		}
 		
 		initInternal(qman,tmpdir,ddir,default_save_dir,true);
@@ -609,7 +601,7 @@ namespace bt
 		stats.running = false;
 		stats.torrent_name = tor->getNameSuggestion();
 		stats.multi_file_torrent = tor->isMultiFile();
-		stats.total_bytes = tor->getFileLength();
+		stats.total_bytes = tor->getTotalSize();
 		stats.priv_torrent = tor->isPrivate();
 		
 		// check the stats file for the custom_output_name variable
@@ -630,8 +622,6 @@ namespace bt
 		pman = new PeerManager(*tor);
 		//Out() << "Tracker url " << url << " " << url.protocol() << " " << url.prettyURL() << endl;
 		psman = new PeerSourceManager(this,pman);
-		connect(psman,SIGNAL(statusChanged(TrackerStatus , const QString& )),
-				this,SLOT(trackerStatusChanged(TrackerStatus , const QString& )));
 
 		// Create chunkmanager, load the index file if it exists
 		// else create all the necesarry files
@@ -719,21 +709,14 @@ namespace bt
 
 	bool TorrentControl::announceAllowed()
 	{
-		if(istats.last_announce == 0)
-			return true;
-		
-		if (psman && psman->getNumFailures() == 0)
-			return bt::GetCurrentTime() - istats.last_announce >= 60 * 1000;
-		else
-			return true;
+		return psman != 0 && stats.running;
 	}
 	
 	void TorrentControl::updateTracker()
 	{
-		if (stats.running && announceAllowed())
+		if (announceAllowed())
 		{
 			psman->manualUpdate();
-			istats.last_announce = bt::GetCurrentTime();
 		}
 	}
 	
@@ -981,22 +964,21 @@ namespace bt
 			stats.status = ERROR;
 		else if (dcheck_thread)
 			stats.status = CHECKING_DATA;
-		else if (!stats.started && stats.user_controlled)
-			stats.status = NOT_STARTED;
-		else if (!stats.running && !stats.user_controlled)
+		else if (stats.queued)
 			stats.status = QUEUED;
-		else if (!stats.running && stats.completed && (overMaxRatio() || overMaxSeedTime()))
+		else if (stats.completed && (overMaxRatio() || overMaxSeedTime()))
 			stats.status = SEEDING_COMPLETE;
 		else if (!stats.running && stats.completed)
 			stats.status = DOWNLOAD_COMPLETE;
+		else if (!stats.started)
+			stats.status = NOT_STARTED;
 		else if (!stats.running)
 			stats.status = STOPPED;
 		else if (stats.running && stats.completed)
 			stats.status = SEEDING;
 		else if (stats.running) 
 			// protocol messages are also included in speed calculation, so lets not compare with 0
-			stats.status = downloader->downloadRate() > 100 ?
-					DOWNLOADING : STALLED;
+			stats.status = downloader->downloadRate() > 100 ? DOWNLOADING : STALLED;
 		
 		if (old != stats.status)
 			statusChanged(this);
@@ -1057,8 +1039,8 @@ namespace bt
 			st.write("RUNNING_TIME_UL", QString("%1").arg(istats.running_time_ul));
 		}
 		
+		st.write("QM_CAN_START",stats.qm_can_start ? "1" : "0");
 		st.write("PRIORITY", QString("%1").arg(istats.priority));
-		st.write("USER_CONTROLLED",stats.user_controlled ? "1" : "0");
 		st.write("AUTOSTART", QString("%1").arg(stats.autostart));
 		st.write("IMPORTED", QString("%1").arg(stats.imported_bytes));
 		st.write("CUSTOM_OUTPUT_NAME",istats.custom_output_name ? "1" : "0");
@@ -1123,17 +1105,11 @@ namespace bt
 			display_name = st.readString("DISPLAY_NAME");
 		
 		setPriority(st.readInt("PRIORITY"));
-		// before USER_CONTROLLED was added, priority == 0 meant user controlled
-		if (st.hasKey("USER_CONTROLLED"))
-			setUserControlled(st.readBoolean("USER_CONTROLLED"));
-		else
-			setUserControlled(getPriority() == 0); 
 		stats.autostart = st.readBoolean("AUTOSTART");
-		
 		stats.imported_bytes = st.readUint64("IMPORTED");
 		stats.max_share_ratio = st.readFloat("MAX_RATIO");
 		stats.max_seed_time = st.readFloat("MAX_SEED_TIME");
-
+		stats.qm_can_start = st.readBoolean("QM_CAN_START");
 
 		if (st.hasKey("RESTART_DISK_PREALLOCATION"))
 			prealloc = st.readString("RESTART_DISK_PREALLOCATION") == "1";
@@ -1219,14 +1195,6 @@ namespace bt
 		return !tor->isMultiFile() && tor->isMultimedia();
 	}
 
-	Uint32 TorrentControl::getTimeToNextTrackerUpdate() const
-	{
-		if (psman)
-			return psman->getTimeToNextUpdate();
-		else
-			return 0;
-	}
-
 	void TorrentControl::updateStats()
 	{
 		stats.num_chunks_downloading = downloader ? downloader->numActiveDownloads() : 0;
@@ -1242,7 +1210,7 @@ namespace bt
 		stats.num_chunks_excluded = cman ? cman->chunksExcluded() : 0;
 		stats.chunk_size = tor ? tor->getChunkSize() : 0;
 		stats.num_chunks_left = cman ? cman->chunksLeft() : 0;
-		stats.total_bytes_to_download = (tor && cman) ?	tor->getFileLength() - cman->bytesExcluded() : 0;
+		stats.total_bytes_to_download = (tor && cman) ? tor->getTotalSize() - cman->bytesExcluded() : 0;
 		
 		
 		
@@ -1255,24 +1223,10 @@ namespace bt
 			stats.session_bytes_uploaded = (stats.bytes_uploaded - istats.prev_bytes_ul) + istats.session_bytes_uploaded;
 		else
 			stats.session_bytes_uploaded = istats.session_bytes_uploaded;
-		/*
-			Safety check, it is possible that stats.bytes_downloaded gets subtracted in Downloader.
-			Which can cause stats.bytes_downloaded to be smaller the istats.trk_prev_bytes_dl.
-			This can screw up your download ratio.
-		*/
-		if (stats.bytes_downloaded >= istats.trk_prev_bytes_dl)
-			stats.trk_bytes_downloaded = stats.bytes_downloaded - istats.trk_prev_bytes_dl;
-		else
-			stats.trk_bytes_downloaded = 0;
-		
-		if (stats.bytes_uploaded >= istats.trk_prev_bytes_ul)
-			stats.trk_bytes_uploaded = stats.bytes_uploaded - istats.trk_prev_bytes_ul;
-		else
-			stats.trk_bytes_uploaded = 0;
+
 		
 		getSeederInfo(stats.seeders_total,stats.seeders_connected_to);
 		getLeecherInfo(stats.leechers_total,stats.leechers_connected_to);
-		stats.total_times_downloaded = psman ? psman->getTotalTimesDownloaded() : 0;
 	}
 
 	void TorrentControl::trackerScrapeDone()
@@ -1409,25 +1363,15 @@ namespace bt
 		updateStatus();
 	}
 	
-	void TorrentControl::setUserControlled(bool uc)
-	{
-		stats.user_controlled = uc;
-		saveStats();
-		updateStatus();
-	}
-	
 	void TorrentControl::setMaxShareRatio(float ratio)
 	{
-		if(ratio == 1.00f)
+		if (ratio == 1.00f)
 		{
-			if(stats.max_share_ratio != ratio)
+			if (stats.max_share_ratio != ratio)
 				stats.max_share_ratio = ratio;
 		}
 		else
 			stats.max_share_ratio = ratio;
-		
-		if(stats.completed && !stats.running && !stats.user_controlled && (ShareRatio(stats) >= stats.max_share_ratio))
-			setUserControlled(true); //dequeue it
 		
 		saveStats();
 		emit maxRatioChanged(this);
@@ -1474,7 +1418,7 @@ namespace bt
 			case SEEDING_COMPLETE :
 				return i18n("Seeding completed");
 			case SEEDING :
-				return i18n("Seeding");
+				return i18nc("Status of a torrent file", "Seeding");
 			case DOWNLOADING:
 				return i18n("Downloading");
 			case STALLED:
@@ -1486,7 +1430,7 @@ namespace bt
 			case ALLOCATING_DISKSPACE:
 				return i18n("Allocating diskspace");
 			case QUEUED:
-				return i18n("Queued");
+				return stats.completed ? i18n("Queued for seeding") : i18n("Queued for downloading");
 			case CHECKING_DATA:
 				return i18n("Checking data");
 			case NO_SPACE_LEFT:
@@ -1575,7 +1519,6 @@ namespace bt
 		dcheck_thread->deleteLater();
 		dcheck_thread = 0;
 		Out(SYS_GEN|LOG_NOTICE) << "Data check finished" << endl;
-		resetTrackerStats();
 		updateStatus();
 		if (lst)
 			lst->finished();
@@ -1676,20 +1619,6 @@ namespace bt
 	const bt::SHA1Hash & TorrentControl::getInfoHash() const
 	{
 		return tor->getInfoHash();
-	}
-	
-	void TorrentControl::resetTrackerStats()
-	{
-		istats.trk_prev_bytes_dl = stats.bytes_downloaded,
-		istats.trk_prev_bytes_ul = stats.bytes_uploaded,
-		stats.trk_bytes_downloaded = 0;
-		stats.trk_bytes_uploaded = 0;
-	}
-	
-	void TorrentControl::trackerStatusChanged(TrackerStatus s,const QString & ns)
-	{
-		stats.tracker_status = s;
-		stats.tracker_status_string = ns;
 	}
 	
 	void TorrentControl::addPeerSource(PeerSource* ps)
@@ -1990,6 +1919,11 @@ namespace bt
 		return downloader->getWebSeed(i);
 	}
 	
+	WebSeedInterface* TorrentControl::getWebSeed(Uint32 i)
+	{
+		return downloader->getWebSeed(i);
+	}
+	
 	bool TorrentControl::addWebSeed(const KUrl & url)
 	{
 		WebSeed* ws = downloader->addWebSeed(url);
@@ -2041,6 +1975,24 @@ namespace bt
 					
 		changeOutputDir(outdir,bt::TorrentInterface::MOVE_FILES);
 	}
+	
+	void TorrentControl::setAllowedToStart(bool on)
+	{
+		stats.qm_can_start = on;
+		saveStats();
+	}
+	
+	void TorrentControl::setQueued(bool queued) 
+	{
+		stats.queued = queued;
+		updateStatus();
+	}
+	
+	QString TorrentControl::getComments() const
+	{
+		return tor->getComments();
+	}
+
 }
 
 #include "torrentcontrol.moc"

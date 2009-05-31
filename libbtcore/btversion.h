@@ -60,11 +60,11 @@ namespace bt
 	/// Major version number of the BTCore library
 	const Uint32 MAJOR = 3;
 	/// Minor version number of the BTCore library
-	const Uint32 MINOR = 2;
+	const Uint32 MINOR = 3;
 	/// Version type of the BTCore library
-	const VersionType VERSION_TYPE = NORMAL;
+	const VersionType VERSION_TYPE = DEVEL;
 	/// Release version number of the BTCore library
-	const Uint32 RELEASE = 1;
+	const Uint32 RELEASE = 0;
 }
 
 #endif

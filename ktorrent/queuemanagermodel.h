@@ -73,12 +73,6 @@ namespace kt
 		void moveDown(int row);
 		
 		/**
-		 * Enqueue or dequeue an item
-		 * @param row The row of the item
-		 */
-		void queue(int row);
-		
-		/**
 		 * Move an item to the top
 		 * @param row The row of the item
 		 */
@@ -99,6 +93,7 @@ namespace kt
 		void onTorrentAdded(bt::TorrentInterface* tc);
 		void onTorrentRemoved(bt::TorrentInterface* tc);
 		void onQueueOrdered();
+		void onTorrentStatusChanged(bt::TorrentInterface* tc);
 
 	private:
 		QueueManager* qman;

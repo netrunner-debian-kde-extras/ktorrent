@@ -29,7 +29,7 @@ namespace kt
 	class Filter;
 	class FilterList;
 	class Feed;
-	class SyndicationPlugin;
+	class SyndicationActivity;
 
 	/**
 		List model which keeps track of all feeds
@@ -47,7 +47,7 @@ namespace kt
 		virtual bool insertRows(int row,int count,const QModelIndex & parent);
 		
 		void addFeed(Feed* f);
-		void loadFeeds(FilterList* filters,SyndicationPlugin* plugin);
+		void loadFeeds(FilterList* filters,SyndicationActivity* activity);
 		Feed* feedForIndex(const QModelIndex & idx);
 		Feed* feedForDirectory(const QString & dir);
 		void removeFeeds(const QModelIndexList & idx);

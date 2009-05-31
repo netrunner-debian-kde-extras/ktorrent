@@ -192,14 +192,14 @@ namespace bt
 		bool ok = true;
 		int len = 0;
 		len = n.toInt(&ok);
-		if (!ok)
+		if (!ok || len < 0)
 		{
 			throw Error(i18n("Cannot convert %1 to an int",n));
 		}
 		// move pos to the first part of the string
 		pos++;
 		if (pos + len > (Uint32)data.size())
-			throw Error(i18n("Torrent is incomplete!"));
+			throw Error(i18n("Torrent is incomplete."));
 			
 		QByteArray arr(data.constData() + pos,len);
 		pos += len;

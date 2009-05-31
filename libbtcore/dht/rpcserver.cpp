@@ -98,10 +98,11 @@ namespace dht
 		sock->close();
 	}
 	
+#if 0
 	static void PrintRawData(const QByteArray & data)
 	{
 		QString tmp;
-		for (Uint32 i = 0;i < data.size();i++)
+		for (int i = 0;i < data.size();i++)
 		{
 			char c = QChar(data[i]).toLatin1();
 			if (!QChar(data[i]).isPrint() || c == 0)
@@ -112,6 +113,7 @@ namespace dht
 		
 		Out(SYS_DHT|LOG_DEBUG) << tmp << endl;
 	}
+#endif
 
 	void RPCServer::readPacket()
 	{

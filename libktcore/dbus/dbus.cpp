@@ -95,7 +95,7 @@ namespace kt
 		if (!tc)
 			return;
 
-		core->getQueueManager()->start(tc->torrent(),true);
+		core->getQueueManager()->start(tc->torrent());
 	}
 
 	void DBus::stop(const QString & info_hash)
@@ -104,17 +104,17 @@ namespace kt
 		if (!tc)
 			return;
 
-		core->getQueueManager()->stop(tc->torrent(),true);
+		core->getQueueManager()->stop(tc->torrent());
 	}
 
 	void DBus::startAll()
 	{
-		core->startAll(3);
+		core->startAll();
 	}
 
 	void DBus::stopAll()
 	{
-		core->stopAll(3);
+		core->stopAll();
 	}
 	
 	void DBus::torrentAdded(bt::TorrentInterface* tc)
@@ -226,15 +226,6 @@ namespace kt
 	void DBus::log(const QString & line)
 	{
 		Out(SYS_GEN|LOG_NOTICE) << line << endl;
-	}
-	
-	void DBus::queue(const QString & info_hash)
-	{
-		DBusTorrent* tc = torrent_map.find(info_hash);
-		if (!tc)
-			return;
-
-		core->queue(tc->torrent());
 	}
 		
 	void DBus::remove(const QString & info_hash,bool data_to)

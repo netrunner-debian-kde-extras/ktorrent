@@ -179,9 +179,6 @@ namespace bt
 		 */
 		Uint32 getRunningTimeUL() const;
 
-		/// Get the time to the next tracker update in seconds.
-		Uint32 getTimeToNextTrackerUpdate() const;
-
 		/// Get a short error message
 		QString getShortErrorMessage() const {return error_msg;}
 		
@@ -197,6 +194,7 @@ namespace bt
 		virtual void changeTextCodec(QTextCodec* tc);
 		virtual Uint32 getNumWebSeeds() const;
 		virtual const WebSeedInterface* getWebSeed(Uint32 i) const;
+		virtual WebSeedInterface* getWebSeed(Uint32 i);
 		virtual bool addWebSeed(const KUrl & url);
 		virtual bool removeWebSeed(const KUrl & url);
 		virtual bool readyForPreview() const;
@@ -204,14 +202,14 @@ namespace bt
 		virtual void markExistingFilesAsDownloaded();
 		virtual int getPriority() const { return istats.priority; }
 		virtual void setPriority(int p);
-		virtual bool isUserControlled() const {return stats.user_controlled;}
-		virtual void setUserControlled(bool uc);
 		virtual bool overMaxRatio();		
 		virtual void setMaxShareRatio(float ratio);
 		virtual float getMaxShareRatio() const { return stats.max_share_ratio; }
 		virtual bool overMaxSeedTime();
 		virtual void setMaxSeedTime(float hours);
 		virtual float getMaxSeedTime() const {return stats.max_seed_time;}
+		virtual void setAllowedToStart(bool on);
+		virtual void setQueued(bool queued);
 	
 		/// Tell the TorrentControl obj to preallocate diskspace in the next update
 		void setPreallocateDiskSpace(bool pa) {prealloc = pa;}
@@ -239,11 +237,7 @@ namespace bt
 		virtual void deleteDataFiles();
 		virtual const bt::PeerID & getOwnPeerID() const;
 		virtual bool updateNeeded() const;
-		
-		/**
-		 * Called by the PeerSourceManager when it is going to start a new tracker.
-		 */
-		void resetTrackerStats();
+		virtual QString getComments() const;
 		
 		/**
 		 * Returns estimated time left for finishing download. Returned value is in seconds.
@@ -295,10 +289,9 @@ namespace bt
 		
 		/**
 		 * Stop the download, closes all connections.
-		 * @param user whether or not the user did this explicitly
 		 * @param wjob WaitJob to wait at exit for the completion of stopped requests
 		 */
-		void stop(bool user,WaitJob* wjob = 0);
+		void stop(WaitJob* wjob = 0);
 			
 		/**
 		 * Update the tracker, this should normally handled internally.
@@ -310,13 +303,6 @@ namespace bt
 		 * Scrape the tracker.
 		 * */
 		void scrapeTracker();
-
-		/**
-		 * The tracker status has changed.
-		 * @param s The tracker status
-		 * @param ns New status
-		 */
-		void trackerStatusChanged(TrackerStatus s,const QString & ns);
 
 		/**
 		 * A scrape has finished on the tracker.
@@ -436,15 +422,12 @@ namespace bt
 			Uint32 running_time_ul;
 			Uint64 prev_bytes_dl;
 			Uint64 prev_bytes_ul;
-			Uint64 trk_prev_bytes_dl;
-			Uint64 trk_prev_bytes_ul;
 			Uint64 session_bytes_uploaded;
 			bool io_error;
 			bool custom_output_name;
 			Uint16 port;
 			int priority;
 			bool dht_on;
-			TimeStamp last_announce;
 			bool diskspace_warning_emitted;
 		};
 		

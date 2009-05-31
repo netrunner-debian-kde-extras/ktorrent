@@ -768,15 +768,7 @@ namespace bt
 		if (!fptr.open(src_file,"rb"))
 			throw Error(i18n("Cannot open file %1 : %2",src_file,fptr.errorString()));
 		
-		Uint32 cs = 0;
-		if (tf->getFirstChunk() == tor.getNumChunks() - 1)
-		{
-			cs = tor.getFileLength() % tor.getChunkSize();
-			if (cs == 0)
-				cs = tor.getChunkSize();
-		}
-		else
-			cs = tor.getChunkSize();
+		Uint32 cs = (tf->getFirstChunk() == tor.getNumChunks() - 1) ? tor.getLastChunkSize() : tor.getChunkSize();
 		
 		Uint8* tmp = new Uint8[tor.getChunkSize()];
 		try
@@ -813,12 +805,12 @@ namespace bt
 		{
 			bool res = false;
 			
-			#ifdef HAVE_XFS_XFS_H
-				if( (! res) && Cache::useFSSpecificPreallocMethod() )
-				{
-					res = XfsPreallocate(output_file, tf->getSize()) );
-				}
-			#endif
+#ifdef HAVE_XFS_XFS_H
+			if (Cache::preallocateFully())
+			{
+				res = XfsPreallocate(output_file, tf->getSize()) );
+			}
+#endif
 			
 			if(! res)
 			{
@@ -834,15 +826,7 @@ namespace bt
 			}
 		}
 		
-		Uint32 cs = 0;
-		if (tf->getFirstChunk() == tor.getNumChunks() - 1)
-		{
-			cs = tor.getFileLength() % tor.getChunkSize();
-			if (cs == 0)
-				cs = tor.getChunkSize();
-		}
-		else
-			cs = tor.getChunkSize();
+		Uint32 cs = (tf->getFirstChunk() == tor.getNumChunks() - 1) ? tor.getLastChunkSize() : tor.getChunkSize();
 		
 		File fptr;
 		if (!fptr.open(output_file,"r+b"))

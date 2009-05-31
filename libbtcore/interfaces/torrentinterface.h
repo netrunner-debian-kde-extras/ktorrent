@@ -39,7 +39,6 @@ namespace bt
 	class MonitorInterface;
 	class TorrentFileInterface;
 	class PeerSource;
-	class TrackersList;
 	class SHA1Hash;
 	class WebSeedInterface;
 	
@@ -75,10 +74,6 @@ namespace bt
 		MAX_SEED_TIME_REACHED
 	};
 	
-	enum TrackerStatus
-	{
-		TRACKER_OK,TRACKER_ANNOUNCING,TRACKER_ERROR,TRACKER_STOPPED
-	};
 
 	struct TorrentStats
 	{
@@ -122,22 +117,12 @@ namespace bt
 		Uint32 leechers_total;
 		/// Num leechers connected to
 		Uint32 leechers_connected_to;
-		/// The number of times the torrent was downloaded
-		Uint32 total_times_downloaded;
 		/// Status of the download
 		TorrentStatus status;
-		/// The status of the tracker
-		TrackerStatus tracker_status;
-		/// The status of the tracker
-		QString tracker_status_string;
 		/// The number of bytes downloaded in this session
 		Uint64 session_bytes_downloaded;
 		/// The number of bytes uploaded in this session
 		Uint64 session_bytes_uploaded;
-		/// The number of bytes downloaded since the last started event, this gets sent to the tracker
-		Uint64 trk_bytes_downloaded;
-		/// The number of bytes upload since the last started event, this gets sent to the tracker
-		Uint64 trk_bytes_uploaded;
 		/// Name of the torrent
 		QString torrent_name;
 		/// Path of the dir or file where the data will get saved
@@ -146,6 +131,8 @@ namespace bt
 		bool running;
 		/// See if the torrent has been started
 		bool started;
+		/// Whether or not the torrent is queued
+		bool queued;
 		/// See if we are allowed to startup this torrent automatically.
 		bool autostart;
 		/// See if we have a multi file torrent
@@ -154,8 +141,6 @@ namespace bt
 		bool stopped_by_error;
 		/// See if the download is completed
 		bool completed;
-		/// See if this torrent is controlled by user
-		bool user_controlled;
 		/// Maximum share ratio
 		float max_share_ratio;
 		/// Maximum seed time in hours
@@ -168,6 +153,8 @@ namespace bt
 		TimeStamp last_download_activity_time;
 		/// TimeStamp when we last saw upload activity
 		TimeStamp last_upload_activity_time;
+		/// Whether or not the QM can start this torrent
+		bool qm_can_start;
 	};
 	
 		
@@ -216,19 +203,19 @@ namespace bt
 		
 		/**
 		 * Stop the download, closes all connections.
-		 * @param user whether or not the user did this explicitly
 		 * @param wjob WaitJob, used when KT is shutting down, 
-		 * 	so that we can wait for all stopped events to reach the tracker
+		 * so that we can wait for all stopped events to reach the tracker
 		 */
-		virtual void stop(bool user,bt::WaitJob* wjob = 0) = 0;
+		virtual void stop(bt::WaitJob* wjob = 0) = 0;
 		
 		/**
 		 * Update the tracker, this should normally handled internally.
 		 * We leave it public so that the user can do a manual announce.
 		 */
 		virtual void updateTracker() = 0;
+		
 		/**
-		 * Scrape the tracker
+		 * Scrape all or one tracker (private torrents)
 		 */
 		virtual void scrapeTracker() = 0;
 
@@ -320,9 +307,6 @@ namespace bt
 		/// Set the monitor
 		virtual void setMonitor(MonitorInterface* tmo) = 0;
 
-		/// Get the time to the next tracker update in seconds.
-		virtual Uint32 getTimeToNextTrackerUpdate() const = 0;
-
 		/// Get the number of files in a multifile torrent (0 if we do not have a multifile torrent)
 		virtual Uint32 getNumFiles() const = 0;
 
@@ -359,12 +343,6 @@ namespace bt
 		///Set the torrent queue number.
 		virtual void setPriority(int p) = 0;
 		
-		/// Is the torrent user controlled ?
-		virtual bool isUserControlled() const = 0;
-		
-		/// Make the torrent user controlled or not
-		virtual void setUserControlled(bool uc) = 0;
-		
 		/// Set the max share ratio
 		virtual void setMaxShareRatio(float ratio) = 0;
 		
@@ -379,6 +357,9 @@ namespace bt
 
 		/// Make a string of the current status
 		virtual QString statusToString() const = 0;
+		
+		/// Get the comments
+		virtual QString getComments() const = 0;
 		
 		/// Update the status
 		virtual void updateStatus() = 0;
@@ -501,6 +482,9 @@ namespace bt
 		/// Get a webseed (returns 0 if index is invalid)
 		virtual const WebSeedInterface* getWebSeed(Uint32 i) const = 0; 
 		
+		/// Get a webseed (returns 0 if index is invalid)
+		virtual WebSeedInterface* getWebSeed(Uint32 i) = 0; 
+		
 		/// Add a webseed (return false, if there is already a webseed with the same url)
 		virtual bool addWebSeed(const KUrl & url) = 0;
 		
@@ -521,6 +505,20 @@ namespace bt
 		
 		/// Gets the displayed name
 		QString getDisplayName() const {return display_name.isEmpty() ? stats.torrent_name : display_name;}
+		
+		/// Set whether the QM can start a torrent.
+		virtual void setAllowedToStart(bool on) = 0;
+		
+		/**
+		 * Can the torrent be started by the QM.
+		 * @return True if it can, false otherwise
+		 */
+		bool isAllowedToStart() const {return stats.qm_can_start;}
+		
+		/**
+		 * Set whether the torrent is queued or not
+		 */
+		virtual void setQueued(bool queued) = 0;
 	signals:
 		/**
 		 * Emitted when we have finished downloading.

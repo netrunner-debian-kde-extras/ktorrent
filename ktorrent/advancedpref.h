@@ -23,7 +23,7 @@
 
 #include <interfaces/prefpageinterface.h>
 #include "ui_advancedpref.h"
-#include "ui_btpref.h"
+
 
 namespace kt
 {
@@ -40,19 +40,6 @@ namespace kt
 	public slots:
 		void onDiskPreallocToggled(bool on);
 	};
-        
-	class BTPref: public PrefPageInterface,public Ui_BTPref
-	{
-		Q_OBJECT
-	public:
-		BTPref(QWidget* parent);
-		/*virtual */~BTPref(){}
-		void loadSettings();
-	public Q_SLOTS:
-		void onUploadDataCheckToggled(bool on);
-	};
-
-
 }
 
 #endif
