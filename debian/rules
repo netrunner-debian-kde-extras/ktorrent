@@ -12,8 +12,8 @@ prune-tarball:
 	# Remove non-free components: flags and geoip stuff
 	rm -f plugins/infowidget/geoip/*.png
 	rm -f plugins/infowidget/geoip/FLAGS_LICENCE
-	rm -f plugins/infowidget/geoip/geoip.dat
-	rm -f plugins/infowidget/geoip/GeoIP-LICENSE.txt
+#	rm -f plugins/infowidget/geoip/geoip.dat
+#	rm -f plugins/infowidget/geoip/GeoIP-LICENSE.txt
 	rm -f plugins/infowidget/GeoIP.c
 	rm -f plugins/infowidget/GeoIP.h
 .PHONY: prune-tarball
