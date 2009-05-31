@@ -134,7 +134,7 @@ namespace kt
 		if (!curr_tc)
 			return QVariant();
 		
-		if (!index.isValid() || index.row() >= curr_tc->getNumWebSeeds() || index.row() < 0)
+		if (!index.isValid() || index.row() >= (int) curr_tc->getNumWebSeeds() || index.row() < 0)
 			return QVariant(); 
 		
 		if (role == Qt::DisplayRole)
@@ -147,6 +147,11 @@ namespace kt
 				case 2: return bt::BytesToString(ws->getTotalDownloaded());
 				case 3: return ws->getStatus();
 			}
+		}
+		else if (role == Qt::CheckStateRole && index.column() == 0)
+		{
+			const bt::WebSeedInterface* ws = curr_tc->getWebSeed(index.row());
+			return ws->isEnabled() ? Qt::Checked : Qt::Unchecked;
 		}
 		else if (role == Qt::UserRole)
 		{
@@ -161,5 +166,27 @@ namespace kt
 		}
 		return QVariant();
 	}
+	
+	Qt::ItemFlags WebSeedsModel::flags(const QModelIndex & index) const
+	{
+		Qt::ItemFlags flags = QAbstractTableModel::flags(index);
+		if (index.column() == 0)
+			flags |= Qt::ItemIsUserCheckable;
+		
+		return flags;
+	}
 
+	bool WebSeedsModel::setData(const QModelIndex & index,const QVariant & value,int role)
+	{
+		if (!curr_tc || role != Qt::CheckStateRole)
+			return false;
+		
+		if (!index.isValid() || index.row() >= (int) curr_tc->getNumWebSeeds() || index.row() < 0)
+			return false; 
+		
+		bt::WebSeedInterface* ws = curr_tc->getWebSeed(index.row());
+		ws->setEnabled((Qt::CheckState)value.toInt() == Qt::Checked),
+		emit dataChanged(index,index);
+		return true;
+	}
 }

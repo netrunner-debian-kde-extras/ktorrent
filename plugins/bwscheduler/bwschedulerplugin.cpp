@@ -52,6 +52,7 @@
 
 #include <torrent/globals.h>
 #include <peer/peermanager.h>
+#include <bwschedulerpluginsettings.h>
 
 using namespace bt;
 
@@ -63,11 +64,13 @@ namespace kt
 	BWSchedulerPlugin::BWSchedulerPlugin(QObject* parent, const QStringList& args) : Plugin(parent)
 	{
 		Q_UNUSED(args);
-	//	setXMLFile("ktbwschedulerpluginui.rc");
-		m_bws_action = 0;
 		connect(&m_timer, SIGNAL(timeout()), this, SLOT(timerTriggered()));
 		m_editor = 0;
 		m_pref = 0;
+		QString interface("org.freedesktop.ScreenSaver");
+		screensaver = new org::freedesktop::ScreenSaver(interface, "/ScreenSaver",QDBusConnection::sessionBus(),this);
+		connect(screensaver,SIGNAL(ActiveChanged(bool)),this,SLOT(screensaverActivated(bool)));
+		screensaver_on = screensaver->GetActive();
 	}
 
 
@@ -79,11 +82,6 @@ namespace kt
 	{
 		LogSystemManager::instance().registerSystem(i18n("Bandwidth Scheduler"),SYS_SCD);
 		m_schedule = new Schedule();
-		m_tool_bar = new KToolBar("scheduler",getGUI()->getMainWindow(),Qt::TopToolBarArea,false,true,true);
-		m_bws_action = new KToggleAction(KIcon("kt-bandwidth-scheduler"),i18n("Bandwidth Scheduler"), this);
-		connect(m_bws_action,SIGNAL(toggled(bool)),this,SLOT(onToggled(bool)));
-		m_tool_bar->addAction(m_bws_action);
-		
 		m_pref = new BWPrefPage(0);
 		connect(m_pref,SIGNAL(colorsChanged()),this,SLOT(colorsChanged()));
 		getGUI()->addPrefPage(m_pref);
@@ -100,10 +98,11 @@ namespace kt
 			m_schedule->clear();
 		}
 		
-		KConfigGroup g = KGlobal::config()->group("BWScheduler");
-		bool on = g.readEntry("show_scheduler",true);
-		onToggled(on);
-		m_bws_action->setChecked(on);
+		m_editor = new ScheduleEditor(0);
+		connect(m_editor,SIGNAL(loaded(Schedule*)),this,SLOT(onLoaded(Schedule*)));
+		connect(m_editor,SIGNAL(scheduleChanged()),this,SLOT(timerTriggered()));
+		getGUI()->addActivity(m_editor);
+		m_editor->setSchedule(m_schedule);
 		
 		// make sure that schedule gets applied again if the settings change
 		connect(getCore(),SIGNAL(settingsChanged()),this,SLOT(timerTriggered()));
@@ -113,19 +112,11 @@ namespace kt
 	void BWSchedulerPlugin::unload()
 	{
 		LogSystemManager::instance().unregisterSystem(i18n("Bandwidth Scheduler"));
-		KConfigGroup g = KGlobal::config()->group("BWScheduler");
-		g.writeEntry("show_scheduler",m_editor != 0);
-		KGlobal::config()->sync();
-		
 		m_timer.stop();
-		delete m_tool_bar;
-		m_tool_bar = 0;
-		
-		if (m_editor)
-		{
-			getGUI()->removeTabPage(m_editor);
-			m_editor = 0;
-		}
+	
+		getGUI()->removeActivity(m_editor);
+		delete m_editor;
+		m_editor = 0;
 		
 		getGUI()->removePrefPage(m_pref);
 		m_pref = 0;
@@ -141,9 +132,31 @@ namespace kt
 		
 		delete m_schedule;
 		m_schedule = 0;
-		delete m_bws_action;
-		m_bws_action = 0;
 	}
+	
+	void BWSchedulerPlugin::setNormalLimits() 
+	{
+		int ulim = Settings::maxUploadRate();
+		int dlim = Settings::maxDownloadRate();
+		if (screensaver_on && SchedulerPluginSettings::screensaverLimits())
+		{
+			ulim = SchedulerPluginSettings::screensaverUploadLimit();
+			dlim = SchedulerPluginSettings::screensaverDownloadLimit();
+		}
+		
+		Out(SYS_SCD|LOG_NOTICE) << QString("Changing schedule to normal values : %1 down, %2 up")
+		.arg(dlim).arg(ulim) << endl;
+		// set normal limits
+		getCore()->setPausedState(false);
+		net::SocketMonitor::setDownloadCap(1024 * dlim);
+		net::SocketMonitor::setUploadCap(1024 * ulim);
+		if (m_editor)
+			m_editor->updateStatusText(ulim,dlim,false);
+		
+		PeerManager::setMaxConnections(Settings::maxConnections());
+		PeerManager::setMaxTotalConnections(Settings::maxTotalConnections());
+	}
+
 	
 	void BWSchedulerPlugin::timerTriggered()
 	{
@@ -151,19 +164,11 @@ namespace kt
 		ScheduleItem* item = m_schedule->getCurrentItem(now);
 		if (!item)
 		{
-			Out(SYS_SCD|LOG_NOTICE) << QString("Changing schedule to normal values : %1 down, %2 up")
-					.arg(Settings::maxDownloadRate()).arg(Settings::maxUploadRate()) << endl;
-			// set normal limits
-			getCore()->setPausedState(false);
-			net::SocketMonitor::setDownloadCap(1024 * Settings::maxDownloadRate());
-			net::SocketMonitor::setUploadCap(1024 * Settings::maxUploadRate());
-			if (m_editor)
-				m_editor->updateStatusText(Settings::maxUploadRate(),Settings::maxDownloadRate(),false);
-			
-			PeerManager::setMaxConnections(Settings::maxConnections());
-			PeerManager::setMaxTotalConnections(Settings::maxTotalConnections());
+			setNormalLimits();
+			return;
 		}
-		else if (item->paused)
+		
+		if (item->paused)
 		{
 			Out(SYS_SCD|LOG_NOTICE) << QString("Changing schedule to : PAUSED") << endl;
 			if (!getCore()->getPausedState())
@@ -174,42 +179,38 @@ namespace kt
 				if (m_editor)
 					m_editor->updateStatusText(Settings::maxUploadRate(),Settings::maxDownloadRate(),true);
 			}
-			
-			if (item->set_conn_limits)
-			{
-				Out(SYS_SCD|LOG_NOTICE) << QString("Setting connection limits to : %1 per torrent, %2 global")
-						.arg(item->torrent_conn_limit).arg(item->global_conn_limit) << endl;
-				PeerManager::setMaxConnections(item->torrent_conn_limit);
-				PeerManager::setMaxTotalConnections(item->global_conn_limit);
-			}
-			else
-			{
-				PeerManager::setMaxConnections(Settings::maxConnections());
-				PeerManager::setMaxTotalConnections(Settings::maxTotalConnections());
-			}
 		}
 		else
 		{
-			Out(SYS_SCD|LOG_NOTICE) << QString("Changing schedule to : %1 down, %2 up")
-					.arg(item->download_limit).arg(item->upload_limit) << endl;
-			getCore()->setPausedState(false);
-			net::SocketMonitor::setDownloadCap(1024 * item->download_limit);
-			net::SocketMonitor::setUploadCap(1024 * item->upload_limit);
-			if (m_editor)
-				m_editor->updateStatusText(item->upload_limit,item->download_limit,false);
+			int ulim = item->upload_limit;
+			int dlim = item->download_limit;
+			if (screensaver_on && SchedulerPluginSettings::screensaverLimits())
+			{
+				ulim = item->ss_upload_limit;
+				dlim = item->ss_download_limit;
+			}
 			
-			if (item->set_conn_limits)
-			{
-				Out(SYS_SCD|LOG_NOTICE) << QString("Setting connection limits to : %1 per torrent, %2 global")
-						.arg(item->torrent_conn_limit).arg(item->global_conn_limit) << endl;
-				PeerManager::setMaxConnections(item->torrent_conn_limit);
-				PeerManager::setMaxTotalConnections(item->global_conn_limit);
-			}
-			else
-			{
-				PeerManager::setMaxConnections(Settings::maxConnections());
-				PeerManager::setMaxTotalConnections(Settings::maxTotalConnections());
-			}
+			Out(SYS_SCD|LOG_NOTICE) << QString("Changing schedule to : %1 down, %2 up")
+					.arg(dlim).arg(ulim) << endl;
+			getCore()->setPausedState(false);
+			
+			net::SocketMonitor::setDownloadCap(1024 * dlim);
+			net::SocketMonitor::setUploadCap(1024 * ulim);
+			if (m_editor)
+				m_editor->updateStatusText(ulim,dlim,false);
+		}
+		
+		if (item->set_conn_limits)
+		{
+			Out(SYS_SCD|LOG_NOTICE) << QString("Setting connection limits to : %1 per torrent, %2 global")
+			.arg(item->torrent_conn_limit).arg(item->global_conn_limit) << endl;
+			PeerManager::setMaxConnections(item->torrent_conn_limit);
+			PeerManager::setMaxTotalConnections(item->global_conn_limit);
+		}
+		else
+		{
+			PeerManager::setMaxConnections(Settings::maxConnections());
+			PeerManager::setMaxTotalConnections(Settings::maxTotalConnections());
 		}
 		
 		// now calculate the new interval
@@ -218,41 +219,6 @@ namespace kt
 			wait_time = 1000;
 		m_timer.stop();
 		m_timer.start(wait_time);
-	}
-	
-	void BWSchedulerPlugin::onToggled(bool on)
-	{
-		if (on)
-		{
-			if (!m_editor)
-			{
-				m_editor = new ScheduleEditor(0);
-				connect(m_editor,SIGNAL(loaded(Schedule*)),this,SLOT(onLoaded(Schedule*)));
-				connect(m_editor,SIGNAL(scheduleChanged()),this,SLOT(timerTriggered()));
-				getGUI()->addTabPage(m_editor,"kt-bandwidth-scheduler",i18n("Bandwidth Schedule"),
-					   i18n("Tab to edit the bandwidth schedule"),this);
-				m_editor->setSchedule(m_schedule);
-				timerTriggered(); // trigger timer so that status text is updated
-			}
-		}
-		else
-		{
-			if (m_editor)
-			{
-				getGUI()->removeTabPage(m_editor);
-				m_editor = 0;
-			}
-		}
-	}
-	
-	void BWSchedulerPlugin::tabCloseRequest(kt::GUIInterface* gui,QWidget* tab)
-	{
-		if (tab != m_editor)
-			return;
-		
-		getGUI()->removeTabPage(m_editor);
-		m_editor = 0;
-		m_bws_action->setChecked(false);
 	}
 	
 	void BWSchedulerPlugin::onLoaded(Schedule* ns)
@@ -277,4 +243,11 @@ namespace kt
 			m_editor->colorsChanged();
 		}
 	}
+	
+	void BWSchedulerPlugin::screensaverActivated(bool on) 
+	{
+		screensaver_on = on;
+		timerTriggered();
+	}
+
 }

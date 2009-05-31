@@ -51,7 +51,7 @@ namespace kt
 	{
 		Q_OBJECT
 	public:
-		SearchWidget(SearchPlugin* sp,SearchEngineList* sl);
+		SearchWidget(SearchPlugin* sp);
 		virtual ~SearchWidget();
 	
 		KMenu* rightClickMenu();
@@ -60,12 +60,15 @@ namespace kt
 		KUrl getCurrentUrl() const;
 		QString getSearchBarText() const;
 		int getSearchBarEngine() const;
+		void setSearchBarEngine(int engine);
 		
 		bool backAvailable() const;
+		bool atHome() const {return at_home;}
 		
 	signals:
 		void enableBack(bool on);
 		void openNewTab(const KUrl & url);
+		void changeTitle(SearchWidget* w,const QString & title);
 	
 	public slots:
 		void search(const QString & text,int engine = 0);
@@ -75,6 +78,7 @@ namespace kt
 		void back();
 		void reload();
 		void onShutDown();
+		void home();
 		void restore(const KUrl & url,const QString & text,const QString & sb_text,int engine);
 	
 	private slots:
@@ -102,6 +106,7 @@ namespace kt
 		KLineEdit* search_text;
 		QAction* open_url_action;
 		KUrl url_to_open;
+		bool at_home;
 	};
 
 }

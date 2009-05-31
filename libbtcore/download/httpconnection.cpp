@@ -168,7 +168,7 @@ namespace bt
 			
 			memcpy(data,g->buffer.data() + g->bytes_sent,len);
 			g->bytes_sent += len;
-			if (len == g->buffer.size())
+			if ((int) len == g->buffer.size())
 			{
 				g->buffer.clear();
 				g->request_sent = true;
@@ -334,7 +334,10 @@ namespace bt
 	HttpConnection::HttpGet::HttpGet(const QString & host,const QString & path,bt::Uint64 start,bt::Uint64 len,bool using_proxy) 
 		: host(host),path(path),start(start),len(len),data_received(0),bytes_sent(0),response_header_received(false),request_sent(false),response_code(0)
 	{
-		QHttpRequestHeader request("GET",!using_proxy ? path : QString("http://%1/%2").arg(host).arg(path));
+		KUrl url;
+		url.setPath(path);
+		QString encoded_path = url.encodedPathAndQuery();
+		QHttpRequestHeader request("GET",!using_proxy ? encoded_path : QString("http://%1/%2").arg(host).arg(encoded_path));
 		request.setValue("Host",host);
 		request.setValue("Range",QString("bytes=%1-%2").arg(start).arg(start + len - 1));
 		request.setValue("User-Agent",bt::GetVersionString());
@@ -385,7 +388,7 @@ namespace bt
 				// we got redirected to somewhere else
 				if (!hdr.hasKey("Location"))
 				{
-					failure_reason = i18n("Redirected without a new location !");
+					failure_reason = i18n("Redirected without a new location.");
 					return false;
 				}
 				else

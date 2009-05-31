@@ -38,6 +38,11 @@ namespace kt
 			: QAbstractTableModel(parent),qman(qman)
 	{
 		connect(qman,SIGNAL(queueOrdered()),this,SLOT(onQueueOrdered()));
+		for (QueueManager::iterator i = qman->begin();i != qman->end();i++)
+		{
+			bt::TorrentInterface* tc = *i;
+			connect(tc,SIGNAL(statusChanged(bt::TorrentInterface*)),this,SLOT(onTorrentStatusChanged(bt::TorrentInterface*)));
+		}
 	}
 
 
@@ -53,11 +58,12 @@ namespace kt
 	{
 		insertRow(qman->count() - 1);
 		stalled_times.insert(tc,0);
-		reset();
+		connect(tc,SIGNAL(statusChanged(bt::TorrentInterface*)),this,SLOT(onTorrentStatusChanged(bt::TorrentInterface*)));
 	}
 	
 	void QueueManagerModel::onTorrentRemoved(bt::TorrentInterface* tc)
 	{
+		disconnect(tc,SIGNAL(statusChanged(bt::TorrentInterface*)),this,SLOT(onTorrentStatusChanged(bt::TorrentInterface*)));
 		int r = 0;
 		for (QueueManager::iterator i = qman->begin();i != qman->end();i++)
 		{
@@ -65,6 +71,21 @@ namespace kt
 			{
 				stalled_times.remove(tc);
 				removeRow(r);
+				break;
+			}
+			r++;
+		}
+	}
+	
+	void QueueManagerModel::onTorrentStatusChanged(bt::TorrentInterface* tc)
+	{
+		int r = 0;
+		for (QueueManager::iterator i = qman->begin();i != qman->end();i++)
+		{
+			if (tc == *i)
+			{
+				QModelIndex idx = index(r,2);
+				emit dataChanged(idx,idx);
 				break;
 			}
 			r++;
@@ -106,19 +127,19 @@ namespace kt
 	QVariant QueueManagerModel::data(const QModelIndex & index, int role) const
 	{
 		if (!index.isValid() || index.row() >= qman->count() || index.row() < 0)
-			return QVariant(); 
+			return QVariant();
 		
 		if (role == Qt::ForegroundRole)
 		{
 			const bt::TorrentInterface* tc = qman->getTorrent(index.row());
 			if (index.column() == 2)
 			{
-				if (tc->isUserControlled())
-					return QVariant();
-				else if (tc->getStats().running)
+				if (tc->getStats().running)
 					return QColor(40,205,40); // green
-				else
+				else if (tc->getStats().status == bt::QUEUED)
 					return QColor(255,174,0); // yellow
+				else
+					return QVariant();
 			}
 			return QVariant();
 		}
@@ -130,18 +151,17 @@ namespace kt
 				case 0: return index.row() + 1;
 				case 1: return tc->getDisplayName();
 				case 2: 
-					if (tc->isUserControlled())
-						return i18n("Not queued");
-					else if (tc->getStats().running)
+					if (tc->getStats().running)
 						return i18n("Running");
-					else
+					else if (tc->getStats().status == bt::QUEUED)
 						return i18n("Queued");
+					else
+						return i18n("Not queued");
 					break;
 				case 3: 
 					{
 						if (!tc->getStats().running)
 							return QVariant();
-						
 						
 						Int64 stalled_time = stalled_times.value(tc);
 						if (stalled_time >= 1)
@@ -316,16 +336,6 @@ namespace kt
 		}
 		
 		// reorder the queue
-		qman->orderQueue();
-	}
-	
-	void QueueManagerModel::queue(int row)
-	{
-		if (row < 0 || row >= qman->count())
-			return;
-		
-		bt::TorrentInterface* tc = qman->getTorrent(row);
-		qman->queue(tc);
 		qman->orderQueue();
 	}
 	

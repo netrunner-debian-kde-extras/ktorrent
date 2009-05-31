@@ -1,3 +1,4 @@
+class KArchiveDirectory;
 /***************************************************************************
  *   Copyright (C) 2008 by Joris Guisson and Ivan Vasic                    *
  *   joris.guisson@gmail.com                                               *
@@ -23,6 +24,8 @@
 
 #include <QAbstractListModel>
 
+class KArchive;
+class KArchiveDirectory;
 
 namespace kt
 {
@@ -37,6 +40,14 @@ namespace kt
 	public:
 		ScriptModel(QObject* parent);
 		virtual ~ScriptModel();
+		
+		enum Role
+		{
+			CommentRole = Qt::UserRole,
+			ConfigurableRole,
+			ConfigureRole,
+			AboutRole
+		};
 		
 		/**
 		 * Add a script to the model
@@ -73,6 +84,12 @@ namespace kt
 		virtual Qt::ItemFlags flags(const QModelIndex & index) const;
 		virtual bool removeRows(int row,int count,const QModelIndex & parent);
 		virtual bool insertRows(int row,int count,const QModelIndex & parent);
+	private:
+		void addScriptFromArchive(KArchive* archive);
+		void addScriptFromArchiveDirectory(const KArchiveDirectory* dir);
+		
+	signals:
+		void showPropertiesDialog(Script* s);
 		
 	private:
 		QList<Script*> scripts;

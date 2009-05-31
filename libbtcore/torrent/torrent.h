@@ -129,11 +129,17 @@ namespace bt
 		
 		void debugPrintInfo();
 		
+		/// Return the comments in the torrent
+		QString getComments() const {return comments;}
+		
 		/// Get the number of chunks.
 		Uint32 getNumChunks() const {return hash_pieces.size();}
 		
 		/// Get the size of a chunk.
-		Uint64 getChunkSize() const {return piece_length;}
+		Uint64 getChunkSize() const {return chunk_size;}
+		
+		/// Get the size of the last chunk
+		Uint64 getLastChunkSize() const {return last_chunk_size;}
 		
 		/// Get the info_hash.
 		const SHA1Hash & getInfoHash() const {return info_hash;}
@@ -142,7 +148,7 @@ namespace bt
 		const PeerID & getPeerID() const {return peer_id;}
 		
 		/// Get the file size in number of bytes.
-		Uint64 getFileLength() const {return file_length;}
+		Uint64 getTotalSize() const {return total_size;}
 		
 		/// Get the suggested name.
 		QString getNameSuggestion() const {return name_suggestion;}
@@ -245,24 +251,21 @@ namespace bt
 
 	private:
 		void loadInfo(BDictNode* node);
-		void loadTrackerURL(BValueNode* node);
-		void loadPieceLength(BValueNode* node);
-		void loadFileLength(BValueNode* node);
-		void loadHash(BValueNode* node);
-		void loadName(BValueNode* node);
+		void loadTrackerURL(const QString & s);
+		void loadHash(BDictNode* dict);
 		void loadFiles(BListNode* node);
 		void loadNodes(BListNode* node);
 		void loadAnnounceList(BNode* node);
 		void loadWebSeeds(BListNode* node);
-		void loadWebSeed(BValueNode* node);
 		bool checkPathForDirectoryTraversal(const QString & p);
 		
 	private:
 		TrackerTier* trackers;
 		QString name_suggestion;
 		QByteArray unencoded_name;
-		Uint64 piece_length;
-		Uint64 file_length;
+		Uint64 chunk_size;
+		Uint64 last_chunk_size;
+		Uint64 total_size;
 		SHA1Hash info_hash;
 		PeerID peer_id;
 		QVector<SHA1Hash> hash_pieces;
@@ -275,6 +278,7 @@ namespace bt
 		mutable Uint32 pos_cache_chunk;
 		mutable Uint32 pos_cache_file;
 		MonitorInterface* tmon;
+		QString comments;
 	};
 
 }

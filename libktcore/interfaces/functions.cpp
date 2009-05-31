@@ -43,6 +43,7 @@
 #include <util/log.h>
 #include <torrent/server.h>
 #include <torrent/timeestimator.h>
+#include <interfaces/queuemanagerinterface.h>
 #include "settings.h"
 #include "functions.h"
 
@@ -118,11 +119,11 @@ namespace kt
 	;
 		bt::HTTPTracker::setProxyEnabled(!Settings::useKDEProxySettings() && Settings::useProxyForTracker());
 		bt::HTTPTracker::setProxy(proxy,Settings::httpProxyPort());
+		bt::HTTPTracker::setUseQHttp(Settings::useQHttpAnnounce());
 		bt::WebSeed::setProxy(proxy,Settings::httpProxyPort());
 		bt::WebSeed::setProxyEnabled(!Settings::useKDEProxySettings() && Settings::useProxyForWebSeeds());
 		bt::Cache::setPreallocationEnabled(Settings::diskPrealloc());
 		bt::Cache::setPreallocateFully(Settings::fullDiskPrealloc());
-		bt::Cache::setUseFSSpecificPreallocMethod(Settings::fullDiskPreallocMethod() == 1);
 		
 		if (Settings::useCompletedDir())
 			bt::TorrentControl::setMoveWhenCompletedDir(Settings::completedDir());
@@ -160,6 +161,8 @@ namespace kt
 		bt::TimeEstimator::setAlgorithm((bt::TimeEstimator::ETAlgorithm)Settings::eta());
 		
 		bt::ChunkManager::setPreviewSizes(Settings::previewSizeAudio() * 1024,Settings::previewSizeVideo() * 1024);
+		bt::QueueManagerInterface::setQueueManagerEnabled(!Settings::manuallyControlTorrents());
+		bt::Downloader::setUseWebSeeds(Settings::webseedsEnabled());
 	}
 
 

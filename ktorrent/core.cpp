@@ -49,7 +49,7 @@
 #include <util/fileops.h>
 #include <util/functions.h>
 #include <util/waitjob.h>
-
+#include <plugin/pluginmanager.h>
 #include <groups/groupmanager.h>
 #include <groups/group.h>
 
@@ -58,7 +58,6 @@
 #endif
 
 #include "settings.h"
-#include "pluginmanager.h"
 #include "core.h"
 #include "fileselectdlg.h"
 #include "missingfilesdlg.h"
@@ -191,24 +190,24 @@ namespace kt
 
 	bool Core::init(TorrentControl* tc,const QString & group,bool silently)
 	{
-		bool user = false;
 		bool start_torrent = false;
 		bool skip_check = false;
 
 		if (!silently)
 		{
-			if (!gui->selectFiles(tc,&user,&start_torrent,group,&skip_check))
+			if (!gui->selectFiles(tc,&start_torrent,group,&skip_check))
 			{
 				// Cleanup tor dir
 				QString dir = tc->getTorDir();
 				if (bt::Exists(dir))
 					bt::Delete(dir,true);
-				delete tc;
+				delete tc;	
 				return false;
 			}
 		}
 		else
 		{
+			start_torrent = true;
 			// add torrent to group if necessary
 			Group* g = gman->find(group);
 			if (g)
@@ -231,6 +230,17 @@ namespace kt
 						tc->changeOutputDir(dn, 0);
 				}
 			}
+		}
+		
+		if (qman->alreadyLoaded(tc->getInfoHash()))
+		{
+			Out(SYS_GEN|LOG_IMPORTANT) << "Torrent " << tc->getDisplayName() << " already loaded" << endl;
+			// Cleanup tor dir
+			QString dir = tc->getTorDir();
+			if (bt::Exists(dir))
+				bt::Delete(dir,true);
+			delete tc;
+			return false;
 		}
 		
 		connectSignals(tc);
@@ -265,7 +275,7 @@ namespace kt
 			tc->setMaxSeedTime(Settings::maxSeedTime());
 		
 		torrentAdded(tc);
-		qman->torrentAdded(tc,user,start_torrent);
+		qman->torrentAdded(tc,start_torrent);
 		//now copy torrent file to user specified dir if needed
 		if(Settings::useTorrentCopyDir())
 		{
@@ -578,7 +588,10 @@ namespace kt
 	
 	void Core::start(QList<bt::TorrentInterface*> & todo)
 	{
-		if (todo.count() == 0)
+		if (todo.isEmpty())
+			return;
+		
+		if (todo.count() == 1)
 		{
 			start(todo.front());
 		}
@@ -589,9 +602,14 @@ namespace kt
 		}
 	}
 
-	void Core::stop(bt::TorrentInterface* tc, bool user)
+	void Core::stop(bt::TorrentInterface* tc)
 	{
-		qman->stop(tc, user);
+		qman->stop(tc);
+	}
+	
+	void Core::stop(QList<bt::TorrentInterface*> & todo)
+	{
+		qman->stop(todo);
 	}
 
 	QString Core::findNewTorrentDir() const
@@ -629,7 +647,7 @@ namespace kt
 				
 			qman->append(tc);
 			connectSignals(tc);
-			if (tc->getStats().autostart && tc->getStats().user_controlled && !tc->overMaxRatio() && !tc->overMaxSeedTime())
+			if (tc->getStats().autostart && !bt::QueueManagerInterface::enabled() && !tc->overMaxRatio() && !tc->overMaxSeedTime())
 				start(tc);
 			torrentAdded(tc);
 		}
@@ -665,7 +683,7 @@ namespace kt
 			const bt::TorrentStats & s = tc->getStats();
 			removed_bytes_up += s.session_bytes_uploaded;
 			removed_bytes_down += s.session_bytes_downloaded;
-			stop(tc,true);
+			stop(tc);
 
 			QString dir = tc->getTorDir();
 			
@@ -818,15 +836,15 @@ namespace kt
 		update_timer.start(CORE_UPDATE_INTERVAL);
 	}
 
-	void Core::startAll(int type)
+	void Core::startAll()
 	{
-		qman->startall(type);
+		qman->startAll();
 		startUpdateTimer();
 	}
 
-	void Core::stopAll(int type)
+	void Core::stopAll()
 	{
-		qman->stopall(type);
+		qman->stopAll();
 	}
 	
 	void Core::startUpdateTimer()
@@ -852,38 +870,45 @@ namespace kt
 
 	void Core::update()
 	{
-		bt::UpdateCurrentTime();
-		AuthenticationMonitor::instance().update();
-		
-		QList<bt::TorrentInterface *>::iterator i = qman->begin();
-		bool updated = false;
-		while (i != qman->end())
+		try
 		{
-			bt::TorrentInterface* tc = *i;
-			if (tc->updateNeeded())
+			bt::UpdateCurrentTime();
+			AuthenticationMonitor::instance().update();
+			
+			QList<bt::TorrentInterface *>::iterator i = qman->begin();
+			bool updated = false;
+			while (i != qman->end())
 			{
-				tc->update();
-				updated = true;
+				bt::TorrentInterface* tc = *i;
+				if (tc->updateNeeded())
+				{
+					tc->update();
+					updated = true;
+				}
+				i++;
 			}
-			i++;
-		}
-		
-		if (!updated)
-		{
-			Out(SYS_GEN|LOG_DEBUG) << "Stopped update timer" << endl;
-			update_timer.stop(); // stop timer when not necessary
-			if (sleep_suppression_cookie != -1)
+			
+			if (!updated)
 			{
-				Solid::PowerManagement::stopSuppressingSleep(sleep_suppression_cookie);
-				Out(SYS_GEN|LOG_DEBUG) << "Stopped suppressing sleep" << endl;
-				sleep_suppression_cookie = -1;
+				Out(SYS_GEN|LOG_DEBUG) << "Stopped update timer" << endl;
+				update_timer.stop(); // stop timer when not necessary
+				if (sleep_suppression_cookie != -1)
+				{
+					Solid::PowerManagement::stopSuppressingSleep(sleep_suppression_cookie);
+					Out(SYS_GEN|LOG_DEBUG) << "Stopped suppressing sleep" << endl;
+					sleep_suppression_cookie = -1;
+				}
+			}
+			else
+			{
+				// check if the priority of stalled torrents must be decreased
+				if (Settings::decreasePriorityOfStalledTorrents())
+					qman->checkStalledTorrents(bt::GetCurrentTime(),Settings::stallTimer());
 			}
 		}
-		else
+		catch (bt::Error & err)
 		{
-			// check if the priority of stalled torrents must be decreased
-			if (Settings::decreasePriorityOfStalledTorrents())
-				qman->checkStalledTorrents(bt::GetCurrentTime(),Settings::stallTimer());
+			Out(SYS_GEN|LOG_IMPORTANT) << "Caught bt::Error: " << err.toString() << endl;
 		}
 	}
 
@@ -1005,11 +1030,6 @@ namespace kt
 	bool Core::getPausedState()
 	{
 		return qman->getPausedState();
-	}
-
-	void Core::queue(bt::TorrentInterface* tc)
-	{
-		qman->queue(tc);
 	}
 
 	void Core::aboutToBeStarted(bt::TorrentInterface* tc,bool & ret)
@@ -1180,7 +1200,7 @@ namespace kt
 		Uint32 num = mig.findTorrentsToBeMigrated();
 		if (num > 0)
 		{
-			if (KMessageBox::questionYesNo(gui,i18n("KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you want to import them ?",num)) == KMessageBox::Yes)
+			if (KMessageBox::questionYesNo(gui,i18np("KTorrent has found a torrent from the KDE3 version of KTorrent, do you want to import it?", "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you want to import them?",num)) == KMessageBox::Yes)
 			{
 				mig.migrateFoundTorrents(qman);
 				foreach (const QString & s,mig.getSuccessFullImports())
@@ -1202,7 +1222,7 @@ namespace kt
 		}
 		else
 		{
-			KMessageBox::information(gui,i18n("No torrents from the KDE3 version were found !"));
+			KMessageBox::information(gui,i18n("No torrents from the KDE3 version were found."));
 		}
 	}
 	

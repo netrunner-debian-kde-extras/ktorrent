@@ -39,6 +39,8 @@
 #include <torrent/server.h>
 #include <torrent/globals.h>
 #include "btversion.h"
+#include "httpannouncejob.h"
+#include <kprotocolmanager.h>
 
 
 
@@ -47,6 +49,7 @@ namespace bt
 	bool HTTPTracker::proxy_on = false;
 	QString HTTPTracker::proxy = QString();
 	Uint16 HTTPTracker::proxy_port = 8080;
+	bool HTTPTracker::use_qhttp = false;
 
 	HTTPTracker::HTTPTracker(const KUrl & url,TorrentInterface* tor,const PeerID & id,int tier)
 		: Tracker(url,tor,id,tier)
@@ -55,9 +58,9 @@ namespace bt
 		
 		interval = 5 * 60; // default interval 5 minutes
 		failures = 0;
-		seeders = leechers = 0;
+		connect(&timer,SIGNAL(timeout()),this,SLOT(onTimeout()));
+		
 	}
-
 
 	HTTPTracker::~HTTPTracker()
 	{
@@ -66,6 +69,7 @@ namespace bt
 	void HTTPTracker::start()
 	{
 		event = "started";
+		resetTrackerStats();
 		doRequest();
 	}
 	
@@ -89,8 +93,9 @@ namespace bt
 	void HTTPTracker::manualUpdate()
 	{
 		if (!started)
-			event = "started";
-		doRequest();
+			start();
+		else
+			doRequest();
 	}
 	
 	void HTTPTracker::scrape()
@@ -161,28 +166,22 @@ namespace bt
 				d = d->getDict(tor->getInfoHash().toByteArray());
 				if (d)
 				{
-					BValueNode* vn = d->getValue("complete");
-					if (vn && vn->data().getType() == Value::INT)
+					try
 					{
-						seeders = vn->data().toInt();
-					} 
-						
-					
-					vn = d->getValue("incomplete");
-					if (vn && vn->data().getType() == Value::INT)
-					{
-						leechers = vn->data().toInt();
-					}
-					
-					vn = d->getValue("downloaded");
-					if (vn && vn->data().getType() == Value::INT)
-					{
-						total_downloaded = vn->data().toInt();
-					}
-					
-					Out(SYS_TRK|LOG_DEBUG) << "Scrape : leechers = " << leechers 
+						seeders = d->getInt("complete");
+						leechers = d->getInt("incomplete");
+						total_downloaded = d->getInt("downloaded");
+						Out(SYS_TRK|LOG_DEBUG) << "Scrape : leechers = " << leechers 
 							<< ", seeders = " << seeders << ", downloaded = " << total_downloaded << endl;
+					}
+					catch (...)
+					{}
 					scrapeDone();
+					if (status == bt::TRACKER_ERROR)
+					{
+						status = bt::TRACKER_OK;
+						failures = 0;
+					}
 				}
 			}
 		}
@@ -206,8 +205,8 @@ namespace bt
 		
 		u.addQueryItem("peer_id",peer_id.toString());
 		u.addQueryItem("port",QString::number(port));
-		u.addQueryItem("uploaded",QString::number(s.trk_bytes_uploaded));
-		u.addQueryItem("downloaded",QString::number(s.trk_bytes_downloaded));
+		u.addQueryItem("uploaded",QString::number(bytesUploaded()));
+		u.addQueryItem("downloaded",QString::number(bytesDownloaded()));
 		
 		if (event == "completed")
 			u.addQueryItem("left","0"); // need to send 0 when we are completed
@@ -216,7 +215,7 @@ namespace bt
 		
 		u.addQueryItem("compact","1");
 		if (event != "stopped")
-			u.addQueryItem("numwant","100");
+			u.addQueryItem("numwant","200");
 		else
 			u.addQueryItem("numwant","0");
 		
@@ -256,7 +255,7 @@ namespace bt
 		Out(SYS_TRK|LOG_DEBUG) << QString(data) << endl;
 #endif
 		// search for dictionary, there might be random garbage infront of the data
-		Uint32 i = 0;
+		int i = 0;
 		while (i < data.size())
 		{
 			if (data[i] == 'd')
@@ -267,7 +266,7 @@ namespace bt
 		if (i == data.size())
 		{
 			failures++;
-			requestFailed(i18n("Invalid response from tracker"));
+			failed(i18n("Invalid response from tracker"));
 			return false;
 		}
 		
@@ -280,14 +279,14 @@ namespace bt
 		catch (...)
 		{
 			failures++;
-			requestFailed(i18n("Invalid data from tracker"));
+			failed(i18n("Invalid data from tracker"));
 			return false;
 		}
 			
 		if (!n || n->getType() != BNode::DICT)
 		{
 			failures++;
-			requestFailed(i18n("Invalid response from tracker"));
+			failed(i18n("Invalid response from tracker"));
 			return false;
 		}
 			
@@ -295,10 +294,10 @@ namespace bt
 		if (dict->getData("failure reason"))
 		{
 			BValueNode* vn = dict->getValue("failure reason");
-			QString msg = vn->data().toString();
+			error = vn->data().toString();
 			delete n;
 			failures++;
-			requestFailed(msg);
+			failed(error);
 			return false;
 		}
 			
@@ -327,12 +326,12 @@ namespace bt
 			{
 				delete n;
 				failures++;
-				requestFailed(i18n("Invalid response from tracker"));
+				failed(i18n("Invalid response from tracker"));
 				return false;
 			}
 
 			QByteArray arr = vn->data().toByteArray();
-			for (Uint32 i = 0;i < arr.size();i+=6)
+			for (int i = 0;i < arr.size();i+=6)
 			{
 				Uint8 buf[6];
 				for (int j = 0;j < 6;j++)
@@ -372,14 +371,13 @@ namespace bt
 		if (vn && vn->data().getType() == Value::STRING)
 		{
 			QByteArray arr = vn->data().toByteArray();
-			for (Uint32 i = 0;i < arr.size();i+=18)
+			for (int i = 0;i < arr.size();i+=18)
 			{
 				Uint8 buf[18];
 				for (int j = 0;j < 18;j++)
 					buf[j] = arr[i + j];
 
 				KNetwork::KIpAddress ip(buf,6);
-
 				addPeer(ip.toString(),ReadUint16(buf,16));
 			}
 		}
@@ -387,55 +385,68 @@ namespace bt
 		delete n;
 		return true;
 	}
-
 	
-	void HTTPTracker::onAnnounceResult(KJob* j)
+	void HTTPTracker::onKIOAnnounceResult(KJob* j)
 	{
-		if (j->error())
+		KIO::StoredTransferJob* st = (KIO::StoredTransferJob*)j;
+		KUrl u = st->url();
+		onAnnounceResult(u,st->data(),j);
+	}
+
+	void HTTPTracker::onQHttpAnnounceResult(KJob* j)
+	{
+		HTTPAnnounceJob* st = (HTTPAnnounceJob*)j;
+		KUrl u = st->announceUrl();
+		onAnnounceResult(u,st->replyData(),j);
+	}
+
+	void HTTPTracker::onAnnounceResult(const KUrl& url, const QByteArray& data,KJob* j)
+	{
+		timer.stop();
+		active_job = 0;
+		if (j->error() && data.size() == 0)
 		{
-			KIO::StoredTransferJob* st = (KIO::StoredTransferJob*)j;
-			KUrl u = st->url();
-			active_job = 0;
-			
-			Out(SYS_TRK|LOG_IMPORTANT) << "Error : " << st->errorString() << endl;
-			if (u.queryItem("event") != "stopped")
+			Out(SYS_TRK|LOG_IMPORTANT) << "Error : " << j->errorString() << endl;
+			if (url.queryItem("event") != "stopped")
 			{
 				failures++;
-				requestFailed(j->errorString());
+				failed(j->errorString());
 			}
 			else
 			{
+				status = TRACKER_IDLE;
 				stopDone();
 			}
 		}
 		else
 		{
-			KIO::StoredTransferJob* st = (KIO::StoredTransferJob*)j;
-			KUrl u = st->url();
-			active_job = 0;
-			
-			if (u.queryItem("event") != "stopped")
+			if (url.queryItem("event") != "stopped")
 			{
 				try
 				{
-					if (updateData(st->data()))
+					if (updateData(data))
 					{
 						failures = 0;
 						peersReady(this);
+						request_time = QDateTime::currentDateTime();
+						status = TRACKER_OK;
 						requestOK();
-						if (u.queryItem("event") == "started")
+						if (url.queryItem("event") == "started")
 							started = true;
+						if (started)
+							reannounce_timer.start(interval * 1000);
 					}
 				}
 				catch (bt::Error & err)
 				{
 					failures++;
-					requestFailed(i18n("Invalid response from tracker"));
+					failed(i18n("Invalid response from tracker"));
 				}
 				event = QString();
 			}
 			else
 			{
+				status = TRACKER_IDLE;
 				failures = 0;
 				stopDone();
 			}
@@ -446,7 +457,7 @@ namespace bt
 	void HTTPTracker::emitInvalidURLFailure()
 	{
 		failures++;
-		requestFailed(i18n("Invalid tracker URL"));
+		failed(i18n("Invalid tracker URL"));
 	}
 	
 	void HTTPTracker::setupMetaData(KIO::MetaData & md)
@@ -484,19 +495,51 @@ namespace bt
 	
 	void HTTPTracker::doAnnounce(const KUrl & u)
 	{
-		Out(SYS_TRK|LOG_NOTICE) << "Doing tracker request to url : " << u.prettyUrl() << endl;
-		KIO::MetaData md;
-		setupMetaData(md);
-		KIO::StoredTransferJob* j = KIO::storedGet(u, KIO::NoReload, KIO::HideProgressInfo);
-		// set the meta data
-		j->setMetaData(md);
-		KIO::Scheduler::scheduleJob(j);
+		Out(SYS_TRK|LOG_NOTICE) << "Doing tracker request to url (via " << (use_qhttp ? "QHttp" : "KIO") << "): " << u.prettyUrl() << endl;
 		
-		connect(j,SIGNAL(result(KJob* )),this,SLOT(onAnnounceResult( KJob* )));
+		if (!use_qhttp)
+		{
+			KIO::MetaData md;
+			setupMetaData(md);
+			KIO::StoredTransferJob* j = KIO::storedGet(u, KIO::NoReload, KIO::HideProgressInfo);
+			// set the meta data
+			j->setMetaData(md);
+			connect(j,SIGNAL(result(KJob* )),this,SLOT(onKIOAnnounceResult( KJob* )));
+			KIO::Scheduler::scheduleJob(j);
+			active_job = j;
+		}
+		else
+		{
+			HTTPAnnounceJob* j = new HTTPAnnounceJob(u);
+			connect(j,SIGNAL(result(KJob* )),this,SLOT(onQHttpAnnounceResult(KJob*)));
+			if (!proxy_on)
+			{
+				QString proxy = KProtocolManager::proxyForUrl(u); // Use KDE settings
+				if (!proxy.isNull() && proxy != "DIRECT")
+				{
+					KUrl proxy_url(proxy);
+					j->setProxy(proxy_url.host(),proxy_url.port() <= 0 ? 80 : proxy_url.port());
+				}
+			}
+			else if (!proxy.isNull()) 
+			{
+				j->setProxy(proxy,proxy_port);
+			}
+			active_job = j;
+			j->start();
+		}
 		
-		active_job = j;
+		timer.start(60*1000);
+		status = TRACKER_ANNOUNCING;
 		requestPending();
 	}
+	
+	void HTTPTracker::onTimeout() 
+	{
+		if (active_job)
+			active_job->kill(KJob::EmitResult);
+	}
+
 	
 	void HTTPTracker::setProxy(const QString & p,const bt::Uint16 port) 
 	{
@@ -508,5 +551,12 @@ namespace bt
 	{
 		proxy_on = on;
 	}
+	
+	
+	void HTTPTracker::setUseQHttp(bool on)
+	{
+		use_qhttp = on;
+	}
+
 }
 #include "httptracker.moc"

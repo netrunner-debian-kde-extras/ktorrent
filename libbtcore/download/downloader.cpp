@@ -47,9 +47,12 @@
 namespace bt
 {
 
+	bool Downloader::use_webseeds = true;
+	
 	Downloader::Downloader(Torrent & tor,PeerManager & pman,ChunkManager & cman,ChunkSelectorFactoryInterface* fac) 
 	: tor(tor),pman(pman),cman(cman),downloaded(0),tmon(0),chunk_selector(0),webseed_endgame_mode(false)
 	{
+		webseeds_on = use_webseeds;
 		pman.setPieceHandler(this);
 		
 		if (!fac) // check if a custom one was provided, if not create a default one
@@ -57,7 +60,7 @@ namespace bt
 		else
 			chunk_selector = fac->createChunkSelector(cman,*this,pman);
 		
-		Uint64 total = tor.getFileLength();
+		Uint64 total = tor.getTotalSize();
 		downloaded = (total - cman.bytesLeft());
 		curr_chunks_downloaded = 0;
 		unnecessary_data = 0;
@@ -192,13 +195,15 @@ namespace bt
 			pd->checkTimeouts();
 		}
 		
-		
-		foreach (WebSeed* ws,webseeds)
+		if (use_webseeds)
 		{
-			ws->update();
+			foreach (WebSeed* ws,webseeds)
+			{
+				ws->update();
+			}
 		}
 		
-		if (isFinished())
+		if (isFinished() && webseeds_on)
 		{
 			foreach (WebSeed* ws,webseeds)
 			{
@@ -240,11 +245,26 @@ namespace bt
 			}
 		}
 		
-		foreach (WebSeed* ws,webseeds)
+		if (use_webseeds)
 		{
-			if (!ws->busy() && ws->failedAttempts() < 3)
+			foreach (WebSeed* ws,webseeds)
 			{
-				downloadFrom(ws);
+				if (!ws->busy() && ws->isEnabled() && ws->failedAttempts() < 3)
+				{
+					downloadFrom(ws);
+				}
+			}
+		}
+		else if (webseeds_on != use_webseeds)
+		{
+			// reset all webseeds, webseeds have been disabled
+			webseeds_on = use_webseeds;
+			foreach (WebSeed* ws,webseeds)
+			{
+				if (ws->busy() && ws->isEnabled())
+				{
+					ws->cancel();
+				}
 			}
 		}
 	}
@@ -562,7 +582,7 @@ namespace bt
 			return;
 
 		// recalculate downloaded bytes
-		downloaded = (tor.getFileLength() - cman.bytesLeft());
+		downloaded = (tor.getTotalSize() - cman.bytesLeft());
 
 		CurrentChunksHeader chdr;
 		fptr.read(&chdr,sizeof(CurrentChunksHeader));
@@ -718,7 +738,7 @@ namespace bt
 	
 	void Downloader::recalcDownloaded()
 	{
-		Uint64 total = tor.getFileLength();
+		Uint64 total = tor.getTotalSize();
 		downloaded = (total - cman.bytesLeft());
 	}
 	
@@ -866,6 +886,12 @@ namespace bt
 			if (ws->isUserCreated())
 				out << ws->getUrl().prettyUrl() << ::endl;
 		}
+		out << "====disabled====" << ::endl;
+		foreach (WebSeed* ws,webseeds)
+		{
+			if (!ws->isEnabled())
+				out << ws->getUrl().prettyUrl() << ::endl;
+		}
 	}
 	
 	void Downloader::loadWebSeeds(const QString & file)
@@ -877,11 +903,33 @@ namespace bt
 			return;
 		}
 		
+		bool disabled_list_found = false;
 		QTextStream in(&fptr); 
 		while (!in.atEnd())
 		{
-			KUrl url(in.readLine());
-			if (url.isValid() && url.protocol() == "http")
+			QString line = in.readLine();
+			if (line == "====disabled====")
+			{
+				disabled_list_found = true;
+				continue;
+			}
+			
+			KUrl url(line);
+			if (!url.isValid() || url.protocol() != "http")
+				continue;
+				
+			if (disabled_list_found)
+			{
+				foreach (WebSeed* ws,webseeds)
+				{
+					if (ws->getUrl() == url)
+					{
+						ws->setEnabled(false);
+						break;
+					}
+				}
+			}
+			else
 			{
 				WebSeed* ws = new WebSeed(url,true,tor,cman);
 				webseeds.append(ws);
@@ -906,6 +954,12 @@ namespace bt
 	{
 		return current_chunks.find(chunk);
 	}
+	
+	void Downloader::setUseWebSeeds(bool on) 
+	{
+		use_webseeds = on;
+	}
+
 }
 
 #include "downloader.moc"

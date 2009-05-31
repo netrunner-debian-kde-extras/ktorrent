@@ -48,7 +48,7 @@
 #include <dht/dhtbase.h>
 #include <groups/group.h>
 #include <groups/groupmanager.h>
-#include <pluginmanager.h>
+#include <plugin/pluginmanager.h>
 #include <settings.h>
 #include "gui.h"
 #include "core.h"
@@ -65,9 +65,11 @@
 #include "ipfilterwidget.h"
 #include "torrentcreatordlg.h"
 #include "importdialog.h"
-#include "speedlimitsdlg.h"
 #include "queuemanagerwidget.h"
 #include <util/timer.h>
+#include <gui/activitybar.h>
+#include "torrentactivity.h"
+#include <gui/centralwidget.h>
 
 
 namespace kt
@@ -77,18 +79,12 @@ namespace kt
 		//Marker markk("GUI::GUI()");
 		core = new Core(this);
 		tray_icon = new TrayIcon(core,this);
-		view_man = new ViewManager(core->getGroupManager()->allGroup(),this,core);
 		setupActions();
-		view_man->setupActions();
 		
-		group_view = new GroupView(core->getGroupManager(),view_man,this);
-		addToolWidget(group_view,"application-x-bittorrent",i18n("Groups"),i18n("Widget to manage torrent groups"),DOCK_LEFT);
-		connect(group_view,SIGNAL(openNewTab(kt::Group*)),this,SLOT(openNewView(kt::Group*)));
-
-		qm = new QueueManagerWidget(core->getQueueManager(),this);
-		connect(core,SIGNAL(torrentAdded(bt::TorrentInterface*)),qm,SLOT(onTorrentAdded(bt::TorrentInterface*)));
-		connect(core,SIGNAL(torrentRemoved(bt::TorrentInterface*)),qm,SLOT(onTorrentRemoved(bt::TorrentInterface*)));
-		addToolWidget(qm,"kt-queue-manager",i18n("Queue Manager"),i18n("Widget to manage the torrent queue"),DOCK_BOTTOM);
+		central = new CentralWidget(this);
+		setCentralWidget(central);
+		torrent_activity = new TorrentActivity(core,this,0);
+		addActivity(torrent_activity);
 		
 		createGUI("ktorrentui.rc");
 		
@@ -100,18 +96,9 @@ namespace kt
 		//mark.update();
 		connect(&timer,SIGNAL(timeout()),this,SLOT(update()));
 		timer.start(Settings::guiUpdateInterval());
-		
-		QToolButton* lc = leftCornerButton();
-		QToolButton* rc = rightCornerButton();
-
-		lc->setIcon(KIcon("tab-new"));
-		connect(lc,SIGNAL(clicked()),this,SLOT(newView()));
-		rc->setIcon(KIcon("tab-close"));
-		connect(rc,SIGNAL(clicked()),this,SLOT(closeTab()));
 
 		applySettings();
 		connect(core,SIGNAL(settingsChanged()),this,SLOT(applySettings()));
-		currentTabPageChanged(currentTabPage());
 
 		if (Settings::showSystemTrayIcon())
 		{
@@ -122,10 +109,9 @@ namespace kt
 			tray_icon->hide();		
 
 		dbus_iface = new DBus(this,core,this);
-		view_man->loadState(KGlobal::config());
 		core->loadPlugins();
 		loadState(KGlobal::config());
-		notifyViewListeners(view_man->getCurrentTorrent());
+		
 		//markk.update();
 		updateActions();
 	}
@@ -134,25 +120,29 @@ namespace kt
 	{
 		delete core;
 	}
-
-	void GUI::addTabPage(QWidget* page,const QString & icon,const QString & caption,const QString & tooltip,CloseTabListener* ctl)
+	
+	void GUI::addActivity(Activity* act)
 	{
-		addTab(page,caption,icon,CENTER,tooltip);
-		close_tab_map[page] = ctl;	
-		currentTabPageChanged(currentTabPage());
+		central->activityBar()->addActivity(act);
 	}
-
-	void GUI::removeTabPage(QWidget* page)
+	
+	void GUI::removeActivity(Activity* act)
 	{
-		removeTab(page);
-		close_tab_map.remove(page);
-		currentTabPageChanged(currentTabPage());
+		central->activityBar()->removeActivity(act);
+	}
+	
+	void GUI::setCurrentActivity(Activity* act)
+	{
+		central->activityBar()->setCurrentActivity(act);
 	}
 
 	void GUI::addPrefPage(PrefPageInterface* page)
 	{
 		if (!pref_dlg)
+		{
 			pref_dlg = new PrefDialog(this,core);
+			pref_dlg->loadState(KGlobal::config());
+		}
 
 		pref_dlg->addPrefPage(page);
 	}
@@ -177,41 +167,6 @@ namespace kt
 	{
 		guiFactory()->removeClient(p);
 	}
-
-	void GUI::addToolWidget(QWidget* w,const QString & icon,const QString & caption,const QString & tooltip,ToolDock dock)
-	{
-		ideal::MainWindow::TabPosition pos = LEFT;
-		switch (dock)
-		{
-			case DOCK_BOTTOM:
-				pos = BOTTOM;
-				break;
-			case DOCK_LEFT:
-				pos = LEFT;
-				break;
-			case DOCK_RIGHT:
-				pos = RIGHT;
-				break;
-		}
-		addTab(w,caption,icon,pos,tooltip);
-	}
-	
-	void GUI::removeToolWidget(QWidget* w)
-	{
-		removeTab(w,LEFT);
-		removeTab(w,RIGHT);
-		removeTab(w,BOTTOM);
-	}
-
-	const TorrentInterface* GUI::getCurrentTorrent() const
-	{
-		return view_man->getCurrentTorrent();
-	}
-	
-	bt::TorrentInterface* GUI::getCurrentTorrent()
-	{
-		return view_man->getCurrentTorrent();
-	}
 	
 	void GUI::dataScan(bt::TorrentInterface* tc,bool auto_import,bool silently,const QString & dlg_caption)
 	{
@@ -223,11 +178,11 @@ namespace kt
 		core->startUpdateTimer(); // make sure update timer is running
 	}
 
-	bool GUI::selectFiles(bt::TorrentInterface* tc,bool* user,bool* start_torrent,const QString & group_hint,bool* skip_check)
+	bool GUI::selectFiles(bt::TorrentInterface* tc,bool* start_torrent,const QString & group_hint,bool* skip_check)
 	{
 		FileSelectDlg dlg(core->getGroupManager(),group_hint,this);
 
-		return dlg.execute(tc,user,start_torrent,skip_check) == QDialog::Accepted;
+		return dlg.execute(tc,start_torrent,skip_check) == QDialog::Accepted;
 	}
 
 	void GUI::errorMsg(const QString & err)
@@ -311,32 +266,22 @@ namespace kt
 	{
 		Out(SYS_GEN|LOG_NOTICE) << "Setting paused state to " << pause << endl;
 		core->setPausedState(pause);
-		view_man->updateActions();
+		torrent_activity->updateActions();
 	}
 	
 	void GUI::onPausedStateChanged(bool paused)
 	{
 		queue_pause_action->setChecked(paused);
 	}
-
-	void GUI::startAllTorrentsCV()
-	{
-		view_man->startAllTorrents();
-	}
-
-	void GUI::stopAllTorrentsCV()
-	{
-		view_man->stopAllTorrents();
-	}
 	
 	void GUI::startAllTorrents()
 	{
-		core->startAll(3);
+		core->startAll();
 	}
 
 	void GUI::stopAllTorrents()
 	{
-		core->stopAll(3);
+		core->stopAll();
 	}
 
 	void GUI::pasteURL()
@@ -425,7 +370,6 @@ namespace kt
 		KAction* open_action = KStandardAction::open(this, SLOT(openTorrent()),ac);
 		open_action->setToolTip(i18n("Open a torrent"));
 		paste_action = KStandardAction::paste(this,SLOT(paste()),ac);
-		KStandardAction::selectAll(view_man,SLOT(selectAll()),ac);
 		
 		open_silently_action = new KAction(KIcon(open_action->icon()),i18n("Open Silently"),this);
 		open_silently_action->setToolTip(i18n("Open a torrent without asking any questions"));
@@ -440,57 +384,21 @@ namespace kt
 		KStandardAction::keyBindings(this, SLOT(configureKeys()),ac);
 		
 		KStandardAction::configureToolbars(this,SLOT(configureToolBars()),ac);
-		KStandardAction::configureNotifications(this,SLOT(configureNotifications()),ac);
-
-		start_action = new KAction(KIcon("kt-start"),i18n("Start"), this);
-		start_action->setToolTip(i18n("Start all selected torrents in the current tab"));
-		start_action->setShortcut(KShortcut(Qt::CTRL + Qt::Key_S));
-		connect(start_action,SIGNAL(triggered()),view_man,SLOT(startTorrents()));
-		ac->addAction("start",start_action);
-
-		stop_action = new KAction(KIcon("kt-stop"),i18n("Stop"),this);
-		stop_action->setToolTip(i18n("Stop all selected torrents in the current tab"));
-		stop_action->setShortcut(KShortcut(Qt::CTRL + Qt::Key_H));
-		connect(stop_action,SIGNAL(triggered()),view_man,SLOT(stopTorrents()));
-		ac->addAction("stop",stop_action);
-
-		remove_action = new KAction(KIcon("kt-remove"),i18n("Remove"),this);
-		remove_action->setToolTip(i18n("Remove all selected torrents in the current tab"));
-		remove_action->setShortcut(KShortcut(Qt::Key_Delete));
-		connect(remove_action,SIGNAL(triggered()),view_man,SLOT(removeTorrents()));
-		ac->addAction("remove",remove_action);
-
-		start_all_cv_action = new KAction(KIcon("kt-start-all"),i18n("Start All"),this);
-		start_all_cv_action->setToolTip(i18n("Start all torrents in the current tab"));
-		start_all_cv_action->setShortcut(KShortcut(Qt::SHIFT + Qt::Key_S));
-		connect(start_all_cv_action,SIGNAL(triggered()),this,SLOT(startAllTorrentsCV()));
-		ac->addAction("start_all",start_all_cv_action);
+		KStandardAction::configureNotifications(this,SLOT(configureNotifications()),ac);		
 		
 		start_all_action = new KAction(KIcon("kt-start-all"),i18n("Start All"),this);
 		start_all_action->setToolTip(i18n("Start all torrents"));
 		connect(start_all_action,SIGNAL(triggered()),this,SLOT(startAllTorrents()));
-		
-		stop_all_cv_action = new KAction(KIcon("kt-stop-all"),i18n("Stop All"),this);
-		stop_all_cv_action->setToolTip(i18n("Stop all torrents in the current tab"));
-		stop_all_cv_action->setShortcut(KShortcut(Qt::SHIFT + Qt::Key_H));
-		connect(stop_all_cv_action,SIGNAL(triggered()),this,SLOT(stopAllTorrentsCV()));
-		ac->addAction("stop_all",stop_all_cv_action);
 		
 		stop_all_action = new KAction(KIcon("kt-stop-all"),i18n("Stop All"),this);
 		stop_all_action->setToolTip(i18n("Stop all torrents"));
 		connect(stop_all_action,SIGNAL(triggered()),this,SLOT(stopAllTorrents()));
 		
 		paste_url_action = new KAction(KIcon(open_action->icon()),i18n("Open URL"),this);
-		paste_url_action->setToolTip(i18n("Open an URL which points to a torrent"));
+		paste_url_action->setToolTip(i18n("Open a URL which points to a torrent"));
 		paste_url_action->setShortcut(KShortcut(Qt::CTRL + Qt::Key_P));
 		connect(paste_url_action,SIGNAL(triggered()),this,SLOT(pasteURL()));
 		ac->addAction("paste_url",paste_url_action);
-
-		queue_action = new KAction(KIcon("view-choose"),i18n("Enqueue/Dequeue"),this);
-		queue_action->setToolTip(i18n("Enqueue or dequeue all selected torrents in the current tab"));
-		queue_action->setShortcut(KShortcut(Qt::CTRL + Qt::Key_D));
-		connect(queue_action,SIGNAL(triggered()),view_man,SLOT(queueTorrents()));
-		ac->addAction("queue_action",queue_action);
 		
 		queue_pause_action = new KToggleAction(KIcon("kt-pause"),i18n("Pause KTorrent"),this);
 		queue_pause_action->setToolTip(i18n("Pause all running torrents"));
@@ -506,11 +414,7 @@ namespace kt
 		connect(ipfilter_action,SIGNAL(triggered()),this,SLOT(showIPFilter()));
 		ac->addAction("ipfilter_action",ipfilter_action);
 
-		data_check_action = new KAction(KIcon("kt-check-data"),i18n("Check Data"),this);
-		data_check_action->setToolTip(i18n("Check all the data of a torrent"));
-		data_check_action->setShortcut(KShortcut(Qt::SHIFT + Qt::Key_C));
-		connect(data_check_action,SIGNAL(triggered()),view_man,SLOT(checkData()));
-		ac->addAction("check_data",data_check_action);
+		
 		
 		import_action = new KAction(KIcon("document-import"),i18n("Import Torrent"),this);
 		import_action->setToolTip(i18n("Import a torrent"));
@@ -526,12 +430,6 @@ namespace kt
 #else
 		import_kde3_torrents_action = 0; // this action is not needed in windows
 #endif
-		
-		speed_limits_action = new KAction(KIcon("kt-speed-limits"),i18n("Speed Limits"),this);
-		speed_limits_action->setToolTip(i18n("Set the speed limits of individual torrents"));
-		connect(speed_limits_action,SIGNAL(triggered()),this,SLOT(speedLimits()));
-		speed_limits_action->setShortcut(KShortcut(Qt::CTRL + Qt::Key_L));
-		ac->addAction("speed_limits",speed_limits_action);
 		
 		show_kt_action = new KAction(KIcon("kt-show-hide"),i18n("Show/Hide KTorrent"),this);
 		connect(show_kt_action,SIGNAL(triggered()),this,SLOT(showOrHide()));
@@ -558,8 +456,6 @@ namespace kt
 
 	void GUI::update()
 	{
-		view_man->update();
-
 		CurrentStats stats = core->getStats();
 		status_bar->updateSpeed(stats.upload_speed,stats.download_speed);
 		status_bar->updateTransfer(stats.bytes_uploaded,stats.bytes_downloaded);
@@ -567,9 +463,7 @@ namespace kt
 
 		tray_icon->updateStats(stats);
 		core->updateGuiPlugins();
-		
-		if (qm->isVisible())
-			qm->update();
+		torrent_activity->update();
 	}
 
 	void GUI::applySettings()
@@ -584,78 +478,12 @@ namespace kt
 		else
 			tray_icon->hide();
 	}
-
-	void GUI::closeTab()
-	{
-		QWidget* w = currentTabPage();
-		if (!w || !close_tab_map.contains(w))
-			return;
-
-		CloseTabListener* ctl = close_tab_map[w];
-		if (ctl)
-			ctl->tabCloseRequest(this,w);
-	}
-
-	void GUI::newView()
-	{
-		newView(core->getGroupManager()->allGroup());
-	}
-
-	View* GUI::newView(kt::Group* g)
-	{
-		View* view = view_man->newView(core,this);
-		view->setGroup(g);
-		addTabPage(view,g->groupIconName(),view->caption(false),QString(),view_man);
-		changeTabToolTip(view,view->caption(true));
-		connect(view,SIGNAL(editingItem(bool)),this,SLOT(setPasteDisabled(bool)));
-		return view;
-	}
-			
-	void GUI::openNewView(kt::Group* g)
-	{
-		View* v = newView(g);
-		v->setupDefaultColumns();
-	}
-	
-	
-	void GUI::openView(const QString & group_name,bool starting_up)
-	{
-		Group* g = core->getGroupManager()->find(group_name);
-		if (!g)
-		{
-			g = core->getGroupManager()->findDefault(group_name);
-			if (!g)
-				g = core->getGroupManager()->allGroup();
-		}
-
-		View* v = newView(g);
-		if (!starting_up) // if it is a new view, setup the default columns based upon the group
-			v->setupDefaultColumns();
-	}
-
-	void GUI::currentTabPageChanged(QWidget* page)
-	{
-		view_man->onCurrentTabChanged(page);
-		CloseTabListener* ctl = close_tab_map[page];
-		rightCornerButton()->setEnabled(ctl != 0 && ctl->closeAllowed(page));
-
-		notifyViewListeners(view_man->getCurrentTorrent());
-		notifyCurrentTabPageListeners(page);
-	}
-	
-	void GUI::speedLimits()
-	{
-		QList<bt::TorrentInterface*> sel;
-		view_man->getSelection(sel);
-		SpeedLimitsDlg dlg(sel.count() > 0 ? sel.front() : 0,core,this);
-		dlg.exec();
-	}
 	
 	void GUI::loadState(KSharedConfigPtr cfg)
 	{
-		group_view->loadState(cfg);
-		qm->loadState(cfg);
-		ideal::MainWindow::loadState(cfg);
+		setAutoSaveSettings("MainWindow",true);
+		central->loadState(cfg);
+		torrent_activity->loadState(cfg);
 		
 		KConfigGroup g = cfg->group("MainWindow");
 		bool statusbar_hidden = g.readEntry("statusbar_hidden",false);
@@ -688,18 +516,15 @@ namespace kt
 	void GUI::saveState(KSharedConfigPtr cfg)
 	{
 		KConfigGroup g = cfg->group("MainWindow");
+		saveMainWindowSettings(g);
 		g.writeEntry("statusbar_hidden",status_bar->isHidden());
 		g.writeEntry("menubar_hidden",menuBar()->isHidden());
 		g.writeEntry("hidden_on_exit",isHidden());
-		view_man->saveState(cfg);
-		group_view->saveState(cfg);
-		qm->saveState(cfg);
-		ideal::MainWindow::saveState(cfg);
-	}
-
-	void GUI::currentTorrentChanged(bt::TorrentInterface* tc)
-	{
-		notifyViewListeners(tc);
+		torrent_activity->saveState(cfg);
+		central->saveState(cfg);
+		if (pref_dlg)
+			pref_dlg->saveState(cfg);
+		cfg->sync();
 	}
 
 	bool GUI::queryClose()
@@ -721,8 +546,9 @@ namespace kt
 		static bool first_time = true;
 		if (first_time)
 		{
+			saveState(KGlobal::config());
 			timer.stop();
-			ideal::MainWindow::queryExit();
+			ScanDlg::cancelAllScans();
 			hide();
 			tray_icon->hide();
 			core->onExit();
@@ -733,7 +559,7 @@ namespace kt
 	
 	void GUI::updateActions()
 	{
-		view_man->updateActions();
+		torrent_activity->updateActions();
 		Uint32 nr = core->getNumTorrentsRunning();
 		queue_pause_action->setEnabled(core->getPausedState() || nr > 0);
 		start_all_action->setEnabled(core->getNumTorrentsNotRunning() > 0);
@@ -750,29 +576,19 @@ namespace kt
 		KNotifyConfigWidget::configure( this );
 	}
 	
-	void GUI::setTabIcon(QWidget* tab,const QString & icon)
-	{
-		changeTabIcon(tab,icon);
-	}
-	
-	void GUI::setTabText(QWidget* tab,const QString & text)
-	{
-		changeTabText(tab,text);
-	}
-	
-	void GUI::setCurrentTab(QWidget* tab)
-	{
-		changeCurrentTab(tab);
-	}
-	
-	QWidget* GUI::getCurrentTab()
-	{
-		return currentTabPage();
-	}
-	
 	void GUI::setPasteDisabled(bool on)
 	{
 		paste_action->setEnabled(!on);
+	}
+	
+	QWidget* GUI::container(const QString & name)
+	{
+		return guiFactory()->container(name, this);
+	}
+	
+	TorrentActivityInterface* GUI::getTorrentActivity()
+	{
+		return torrent_activity;
 	}
 }
 

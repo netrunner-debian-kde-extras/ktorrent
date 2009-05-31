@@ -140,6 +140,9 @@ namespace bt
 		
 	void WebSeed::download(Uint32 first,Uint32 last)
 	{
+		if (!enabled)
+			return;
+		
 		Out(SYS_CON|LOG_DEBUG) << "WebSeed: downloading " << first << "-" << last << " from " << url.prettyUrl() << endl;
 		// open connection and connect if needed
 		if (!conn)
@@ -192,8 +195,8 @@ namespace bt
 		{
 			Uint64 len = (last_chunk - first_chunk) * tor.getChunkSize();
 			// last chunk can have a different size
-			if (last_chunk == tor.getNumChunks() - 1 && tor.getFileLength() % tor.getChunkSize() > 0)
-				len += tor.getFileLength() % tor.getChunkSize();
+			if (last_chunk == tor.getNumChunks() - 1)
+				len += tor.getLastChunkSize();
 			else
 				len += tor.getChunkSize(); 
 			
@@ -239,8 +242,8 @@ namespace bt
 		{
 			Uint64 len = (last_chunk - first_chunk) * tor.getChunkSize();
 			// last chunk can have a different size
-			if (last_chunk == tor.getNumChunks() - 1 && tor.getFileLength() % tor.getChunkSize() > 0)
-				len += tor.getFileLength() % tor.getChunkSize();
+			if (last_chunk == tor.getNumChunks() - 1)
+				len += tor.getLastChunkSize();
 			else
 				len += tor.getChunkSize(); 
 			
@@ -482,6 +485,15 @@ namespace bt
 	{
 		// reset if chunk downloaded is in the range we are currently downloading
 		if (chunk >= cur_chunk) 
+		{
+			reset();
+		}
+	}
+	
+	void WebSeed::setEnabled(bool on)
+	{
+		WebSeedInterface::setEnabled(on);
+		if (!on)
 		{
 			reset();
 		}

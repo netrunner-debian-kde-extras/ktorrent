@@ -77,6 +77,7 @@ namespace bt
 	void UDPTracker::start()
 	{
 		event = STARTED;
+		resetTrackerStats();
 		conn_timer.stop();
 		doRequest();
 	}
@@ -103,8 +104,9 @@ namespace bt
 	{
 		conn_timer.stop();
 		if (!started)
-			event = STARTED;
-		doRequest();
+			start();
+		else
+			doRequest();
 	}
 
 	void UDPTracker::connectReceived(Int32 tid,Int64 cid)
@@ -139,7 +141,7 @@ namespace bt
 
 		Uint32 nip = leechers + seeders;
 		Uint32 j = 0;
-		for (Uint32 i = 20;i < b.size() && j < nip;i+=6,j++)
+		for (int i = 20;i < b.size() && j < nip;i+=6,j++)
 		{
 			Uint32 ip = ReadUint32(buf,i);
 			QString ip_str = QString("%1.%2.%3.%4")
@@ -158,13 +160,18 @@ namespace bt
 			if (event == STARTED)
 				started = true;
 			event = NONE;
+			status = TRACKER_OK;
 			requestOK();
+			if (started)
+				reannounce_timer.start(interval * 1000);
 		}
 		else
 		{
 			stopDone();
+			status = TRACKER_IDLE;
 			requestOK();
 		}
+		request_time = QDateTime::currentDateTime();
 	}
 	
 	void UDPTracker::onError(Int32 tid,const QString & error_string)
@@ -173,7 +180,7 @@ namespace bt
 			return;
 
 		Out(SYS_TRK|LOG_IMPORTANT) << "UDPTracker::error : " << error_string << endl;
-		requestFailed(error_string);
+		failed(error_string);
 	}
 
 
@@ -242,12 +249,12 @@ namespace bt
 		const SHA1Hash & info_hash = tor->getInfoHash();
 		memcpy(buf+16,info_hash.getData(),20);
 		memcpy(buf+36,peer_id.data(),20);
-		WriteInt64(buf,56,s.trk_bytes_downloaded);
+		WriteInt64(buf,56,bytesDownloaded());
 		if (ev == COMPLETED)
 			WriteInt64(buf,64,0);
 		else
 			WriteInt64(buf,64,s.bytes_left);
-		WriteInt64(buf,72,s.trk_bytes_uploaded);
+		WriteInt64(buf,72,bytesUploaded());
 		WriteInt32(buf,80,ev);
 		QString cip = Tracker::getCustomIP();
 		if (cip.isNull())
@@ -278,7 +285,10 @@ namespace bt
 			if (event != STOPPED)
 				sendConnect();
 			else
+			{
+				status = TRACKER_IDLE;
 				stopDone();
+			}
 		}
 		else
 		{
@@ -304,7 +314,7 @@ namespace bt
 		else 
 		{
 			n++;
-			requestFailed(i18n("Unable to resolve hostname %1",url.host()));
+			failed(i18n("Unable to resolve hostname %1",url.host()));
 		}
 	}
 	

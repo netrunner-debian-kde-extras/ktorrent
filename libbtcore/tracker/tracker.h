@@ -23,8 +23,10 @@
 #include <kurl.h>
 #include <util/sha1hash.h>
 #include <interfaces/peersource.h>
+#include <interfaces/trackerinterface.h>
 #include <peer/peerid.h>
 #include <btcore_export.h>
+#include <QTimer>
 
 class KUrl;
 
@@ -35,15 +37,12 @@ namespace bt
 	/**
 	 * Base class for all tracker classes.
 	*/
-	class BTCORE_EXPORT Tracker : public PeerSource
+	class BTCORE_EXPORT Tracker : public PeerSource,public TrackerInterface
 	{
 		Q_OBJECT
 	public:
 		Tracker(const KUrl & url,TorrentInterface* tor,const PeerID & id,int tier);
 		virtual ~Tracker();
-		
-		/// See if a start request succeeded
-		bool isStarted() const {return started;}
 		
 		/**
 		 * Set the custom IP
@@ -75,32 +74,27 @@ namespace bt
 		/// Get the trackers tier
 		int getTier() const {return tier;}
 		
-		/**
-		 * Get the update interval in ms
-		 * @return interval
-		 */
-		Uint32 getInterval() const {return interval;}
-		
-		/// Set the interval
-		void setInterval(Uint32 i) {interval = i;}
-		
-		/// Get the number of seeders
-		Uint32 getNumSeeders() const {return seeders;}
-		
-		/// Get the number of leechers
-		Uint32 getNumLeechers() const {return leechers;}
-		
-		/// Get the number of times the torrent was downloaded
-		Uint32 getTotalTimesDownloaded() const {return total_downloaded;}
-		
 		/// Get the custom ip to use, null if none is set
 		static QString getCustomIP();
 		
-		/// Enable or disable the tracker
-		void setEnabled(bool on) {enabled = on;}
+		/// Handle a failure
+		void handleFailure();
+	protected:
+		/// Reset the tracker stats
+		void resetTrackerStats();
 		
-		/// Is the tracker enabled
-		bool isEnabled() const {return enabled;}
+		/// Calculates the bytes downloaded to send with the request
+		Uint64 bytesDownloaded() const;
+		
+		/// Calculates the bytes uploaded to send with the request
+		Uint64 bytesUploaded() const;
+	
+		/// Emit the failure signal, and set the error
+		void failed(const QString & err);
+		
+	public slots:
+		virtual void manualUpdate() = 0;
+		
 	signals:
 		/**
 		 * Emitted when an error happens.
@@ -129,13 +123,13 @@ namespace bt
 		void scrapeDone();
 		
 	protected:
-		KUrl url;
 		int tier;
 		PeerID peer_id;
 		TorrentInterface* tor;
-		Uint32 interval,seeders,leechers,key,total_downloaded;
-		bool started;
-		bool enabled;
+		Uint32 key;
+		QTimer reannounce_timer;
+		Uint64 bytes_downloaded_at_start;
+		Uint64 bytes_uploaded_at_start;
 	};
 	
 }

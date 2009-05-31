@@ -29,6 +29,7 @@
 #include <interfaces/torrentfileinterface.h>
 #include <torrent/queuemanager.h>
 #include "mediamodel.h"
+#include <QMimeData>
 
 using namespace bt;
 
@@ -139,7 +140,7 @@ namespace kt
 		else if (index.row() >= 0 && index.row() < item->multimedia_files.count())
 		{
 			int idx = item->multimedia_files.at(index.row());
-			if (idx < 0 || idx >= item->tc->getNumFiles())
+			if (idx < 0 || idx >= (int)item->tc->getNumFiles())
 				return QVariant();
 			
 			const bt::TorrentFileInterface & tfi = item->tc->getTorrentFile(idx);
@@ -275,7 +276,7 @@ namespace kt
 				return QString();
 			
 			r = item->multimedia_files.at(r);
-			if (r < 0 || r >= item->tc->getNumFiles())
+			if (r < 0 || r >= (int)item->tc->getNumFiles())
 				return QString();
 			else
 				return item->tc->getTorrentFile(r).getPathOnDisk();
@@ -319,88 +320,65 @@ namespace kt
 		return QModelIndex();
 	}
 	
-	QModelIndex MediaModel::next(const QModelIndex & idx) const
+	Qt::ItemFlags MediaModel::flags(const QModelIndex & index) const
 	{
-		QModelIndex	n = idx.sibling(idx.row()+1,0); // take a look at the next sibling
-		if (!n.isValid())
-		{
-			n = parent(idx);
-			n = n.sibling(n.row()+1,0);
-			if (n.isValid() && n.child(0,0).isValid())
-				n = n.child(0,0);	
-		}
-		return n;
-	}
-	
-	QModelIndex MediaModel::randomNext(const QModelIndex & idx,bool complete_only) const
-	{
-		QModelIndexList possible;
+		Qt::ItemFlags defaultFlags = QAbstractItemModel::flags(index);
 		
-		// find the start index
-		Item* f = items.at(0);
-		QModelIndex n;
-		if (!f->tc->getStats().multi_file_torrent)
-			n = index(0,0,QModelIndex());
+		if (index.isValid())
+			return Qt::ItemIsDragEnabled | defaultFlags;
 		else
-			n = index(0,0,index(0,0,QModelIndex()));
-		
-		// loop over all and assemble the list of possible candidates
-		while (n.isValid())
-		{
-			if ((!complete_only || data(n,Qt::UserRole).toBool()) && idx != n)
-				possible.append(n);
-			n = next(n);
-		}
-		
-		if (possible.count() == 0)
-			return QModelIndex();
-		
-		return possible.at(qrand() % possible.count()); // select a random one
+			return defaultFlags;
 	}
 	
-	QModelIndex MediaModel::next(const QModelIndex & idx,bool random,bool complete_only) const
+	QStringList MediaModel::mimeTypes() const
 	{
-		if (items.count() == 0)
-			return QModelIndex();
-		
-		if (!idx.isValid())
-		{	
-			if (!random)
+		QStringList types;
+		types << "text/uri-list";
+		return types;
+	}
+	
+	QMimeData* MediaModel::mimeData(const QModelIndexList & indexes) const
+	{
+		QMimeData* data = new QMimeData();
+		QList<QUrl> urls;
+		foreach (const QModelIndex & idx,indexes)
+		{
+			if (!idx.isValid())
+				continue;
+			
+			Item* item = (Item*)idx.internalPointer();
+			if (item)
 			{
-				Item* f = items.at(0);
-				QModelIndex n;
-				if (!f->tc->getStats().multi_file_torrent)
-					n = index(0,0,QModelIndex());
-				else
-					n = index(0,0,index(0,0,QModelIndex()));
-				
-				if (complete_only)
-					return n;
-				
-				while (n.isValid() && !data(n,Qt::UserRole).toBool())
-					n = next(n);
-				
-				return n;
+				int r = idx.row();
+				if (r >= 0 && r < item->multimedia_files.count())
+				{
+					r = item->multimedia_files.at(r);
+					if (r >= 0 && r < (int)item->tc->getNumFiles())
+						urls.append(item->tc->getTorrentFile(r).getPathOnDisk());
+				}
 			}
 			else
 			{
-				return randomNext(QModelIndex(),complete_only);
+				int r = idx.row();
+				if (r < 0 || r >= items.count())
+					continue;
+				
+				item = items.at(r);	
+				bt::TorrentInterface* tc = item->tc;
+				if (!tc->getStats().multi_file_torrent)
+				{
+					urls.append(QUrl(tc->getStats().output_path));
+				}
+				else
+				{
+					foreach (int file,item->multimedia_files)
+					{
+						urls.append(item->tc->getTorrentFile(file).getPathOnDisk());
+					}
+				}
 			}
 		}
-		else if (!random)
-		{
-			if (!complete_only)
-				return next(idx);
-				
-			QModelIndex n = next(idx);
-			while (n.isValid() && !data(n,Qt::UserRole).toBool())
-				n = next(n);
-			
-			return n;
-		}
-		else
-		{
-			return randomNext(idx,complete_only);
-		}
+		data->setUrls(urls);
+		return data;
 	}
 }

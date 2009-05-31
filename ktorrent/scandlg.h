@@ -45,6 +45,11 @@ namespace kt
 
 		/// Starts the scan threadvent(QC
 		void execute(bt::TorrentInterface* tc,bool silently);
+		
+		/**
+		 * Cancel all data scans.
+		 */
+		static void cancelAllScans();
 
 	protected:
 		/// Update progress info, runs in scan threadnted"))
@@ -79,8 +84,6 @@ namespace kt
 		bt::Uint32 num_failed;
 		bool silently;
 		bool restart;
-		bool qm_controlled;
-		int qm_priority;
 		bool scanning;
 		Core* core;
 		QProgressBar *m_progress;
@@ -90,6 +93,8 @@ namespace kt
 		QLabel *m_chunks_found;
 		QLabel *m_chunks_downloaded;
 		QLabel *m_chunks_not_downloaded;
+		
+		static QList<ScanDlg*> active_scans;
 	};
 }
 

@@ -64,9 +64,6 @@ namespace kt
 		setSelectionBehavior(QAbstractItemView::SelectRows);
 		setUniformRowHeights(true);
 		
-		connect(this,SIGNAL(wantToRemove(bt::TorrentInterface*,bool )),core,SLOT(remove(bt::TorrentInterface*,bool )));
-		connect(this,SIGNAL(wantToStart( QList<bt::TorrentInterface*> & )),core,SLOT(start( QList<bt::TorrentInterface*> & )));
-		connect(this,SIGNAL(wantToStop( bt::TorrentInterface*, bool )),core,SLOT(stop( bt::TorrentInterface*, bool )));
 		connect(this,SIGNAL(customContextMenuRequested(const QPoint & ) ),this,SLOT(showMenu( const QPoint& )));
 	
 		header()->setContextMenuPolicy(Qt::CustomContextMenu);
@@ -175,17 +172,16 @@ namespace kt
 	{
 		QList<bt::TorrentInterface*> sel;
 		getSelection(sel);
-		wantToStart(sel);
+		if (sel.count() > 0)
+			core->start(sel);
 	}
 
 	void View::stopTorrents()
 	{
 		QList<bt::TorrentInterface*> sel;
 		getSelection(sel);
-		foreach(bt::TorrentInterface* tc,sel)
-		{
-			wantToStop(tc,true);
-		}
+		if (sel.count() > 0)
+			core->stop(sel);
 	}
 
 	void View::removeTorrents()
@@ -215,7 +211,7 @@ namespace kt
 					else if (ret == KMessageBox::Yes)
 						data_to = true;
 				}
-				wantToRemove(tc,data_to);
+				core->remove(tc,data_to);
 			}
 		}
 	}
@@ -235,7 +231,7 @@ namespace kt
 		{
 			bool dummy = false;
 			if (tc && !tc->isCheckingData(dummy))
-				wantToRemove(tc,true);
+				core->remove(tc,true);
 		}
 	}
 
@@ -243,29 +239,14 @@ namespace kt
 	{
 		QList<bt::TorrentInterface*> all;
 		model->allTorrents(all);
-		wantToStart(all);
+		core->start(all);
 	}
 
 	void View::stopAllTorrents()
 	{
 		QList<bt::TorrentInterface*> all;
 		model->allTorrents(all);
-		foreach (bt::TorrentInterface* tc,all)
-		{
-			wantToStop(tc,true);
-		}
-	}
-
-	void View::queueTorrents()
-	{
-		QList<bt::TorrentInterface*> sel;
-		getSelection(sel);
-		foreach(bt::TorrentInterface* tc,sel)
-		{
-			bool dummy;
-			if (tc && !tc->isCheckingData(dummy))
-				core->queue(tc);
-		}
+		core->stop(all);
 	}
 
 	void View::addPeers()

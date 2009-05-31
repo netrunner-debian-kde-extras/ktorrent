@@ -10,12 +10,16 @@ set(ktorrent_SRC
 	view.cpp 
 	viewmodel.cpp
 	viewmanager.cpp 
+	torrentactivity.cpp
 	viewselectionmodel.cpp
 	groupfiltermodel.cpp
 	prefdialog.cpp 
 	advancedpref.cpp
 	networkpref.cpp
 	proxypref.cpp
+	qmpref.cpp
+	generalpref.cpp
+	btpref.cpp
 	statusbar.cpp 
 	groupview.cpp
 	scandlg.cpp

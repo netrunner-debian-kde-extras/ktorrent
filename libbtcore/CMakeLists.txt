@@ -114,6 +114,7 @@ set(libbtcore_SRC
 	interfaces/chunkselectorinterface.cpp
 	interfaces/cachefactory.cpp
 	interfaces/webseedinterface.cpp
+	interfaces/trackerinterface.cpp
 
 	torrent/globals.cpp
 	torrent/server.cpp
@@ -161,6 +162,8 @@ set(libbtcore_SRC
 	tracker/tracker.cpp  
 	tracker/udptracker.cpp  
 	tracker/udptrackersocket.cpp
+	tracker/trackermanager.cpp
+	tracker/httpannouncejob.cpp
 	
 	datachecker/datachecker.cpp          
 	datachecker/datacheckerthread.cpp  
@@ -232,6 +235,7 @@ set (interfaces_HDR
 	./interfaces/chunkselectorinterface.h
 	./interfaces/cachefactory.h
 	./interfaces/webseedinterface.h
+	./interfaces/trackerinterface.h
 )
 
 set (peer_HDR
@@ -274,7 +278,6 @@ set (util_HDR
 set (download_HDR
 	./download/chunkdownload.h
 	./download/downloader.h
-	./download/httpdownloader.h
 	./download/request.h
 	./download/piece.h
 	./download/packet.h
@@ -327,6 +330,7 @@ set (tracker_HDR
 	./tracker/udptracker.h
 	./tracker/udptrackersocket.h
 	./tracker/httptracker.h
+	./tracker/trackermanager.h
 )
 
 set (datachecker_HDR

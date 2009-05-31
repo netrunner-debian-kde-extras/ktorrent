@@ -71,11 +71,10 @@ namespace kt
 	FileSelectDlg::~FileSelectDlg()
 	{}
 
-	int FileSelectDlg::execute(bt::TorrentInterface* tc,bool* user, bool* start,bool* skip_check)
+	int FileSelectDlg::execute(bt::TorrentInterface* tc,bool* start,bool* skip_check)
 	{
 		setWindowTitle(i18n("Opening %1",tc->getDisplayName()));
 		this->tc = tc;
-		this->user = user;
 		this->start = start;
 		this->skip_check = skip_check;
 		if (tc)
@@ -141,12 +140,44 @@ namespace kt
 		QString dn = m_downloadLocation->url().path();
 		if (!dn.endsWith(bt::DirSeparator()))
 			dn += bt::DirSeparator();
+		
+		QString tld = tc->getUserModifiedFileName();
+		// If the move on completion is on, check completed dir for files of the torrent
+		if (Settings::useCompletedDir())
+		{
+			bool completed_files_found = false;
+			QStringList cf;
+			for (Uint32 i = 0;i < tc->getNumFiles();i++)
+			{
+				bt::TorrentFileInterface & file = tc->getTorrentFile(i);
+				QString path = Settings::completedDir().path() + bt::DirSeparator() + tld + bt::DirSeparator() + file.getUserModifiedPath();
+				if (bt::Exists(path))
+				{
+					completed_files_found = true;
+					cf.append(file.getUserModifiedPath());
+				}
+			}
+			
+			if (completed_files_found)
+			{
+				QString msg = i18n("Files of the torrent have been found in the completed downloads directory. "
+						"Do you want to use them, and download to the completed downloads directory?");
+			// better ask the user if (s)he wants to delete the already existing data
+				int ret = KMessageBox::questionYesNoList(0,msg,cf,QString::null);
+				if (ret == KMessageBox::Yes)
+				{
+					dn = Settings::completedDir().path();
+					if (!dn.endsWith(bt::DirSeparator()))
+						dn += bt::DirSeparator();
+				}
+			}
+		}
 
 		if (!bt::Exists(dn))
 		{
 			try
 			{
-				if (KMessageBox::questionYesNo(this,i18n("The directory %1 does not exist, do you want to create it ?",dn)) == KMessageBox::Yes)
+				if (KMessageBox::questionYesNo(this,i18n("The directory %1 does not exist, do you want to create it?",dn)) == KMessageBox::Yes)
 					MakePath(dn);	
 				else
 					return;
@@ -159,8 +190,6 @@ namespace kt
 			}
 		}
 		
-		QString tld = tc->getUserModifiedFileName();
-
 		for (Uint32 i = 0;i < tc->getNumFiles();i++)
 		{
 			bt::TorrentFileInterface & file = tc->getTorrentFile(i);
@@ -182,7 +211,7 @@ namespace kt
 		if (pe_ex.count() > 0)
 		{
 			QString msg = i18n("You have deselected the following existing files. "
-					"You will lose all data in these files, are you sure you want to do this ?");
+					"You will lose all data in these files, are you sure you want to do this?");
 			// better ask the user if (s)he wants to delete the already existing data
 			int ret = KMessageBox::warningYesNoList(0,msg,pe_ex,QString::null,
 								KGuiItem(i18n("Yes, delete the files")),
@@ -215,8 +244,7 @@ namespace kt
 			tc->changeOutputDir(dn, 0);
 
 		//Make it user controlled if needed
-		*user = m_chkUserControlled->isChecked();
-		*start = m_chkUserControlled->isChecked() && m_chkStartTorrent->isChecked();
+		*start = m_chkStartTorrent->isChecked();
 		*skip_check = m_skip_data_check->isChecked();
 		
 		//Now add torrent to selected group
@@ -338,7 +366,7 @@ namespace kt
 		lblRequired->setText(bt::BytesToString(bytes_to_download));
 
 		if (bytes_to_download > bytes_free)
-			lblStatus->setText("<font color=\"#ff0000\">" + i18n("%1 short!", bt::BytesToString(-1*(long long)(bytes_free - bytes_to_download))));
+			lblStatus->setText("<font color=\"#ff0000\">" + i18nc("We are %1 bytes short of what we need", "%1 short", bt::BytesToString(-1*(long long)(bytes_free - bytes_to_download))));
 		else
 			lblStatus->setText(bt::BytesToString(bytes_free - bytes_to_download));
 	}
