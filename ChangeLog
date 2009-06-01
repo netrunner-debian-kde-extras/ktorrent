@@ -1,3 +1,25 @@
+Changes in 3.2.2 :
+- Fix crash when changing speed limits using system tray menu (188447)
+- Fix bug with displaying directory trees in infowidget FileView
+- Fix crash caused by calling front on empty QList
+- Make sure paths in webseed http requests are URL encoded (189477)
+- Prevent torrent from being loaded twice when loading torrents via commandline or external program (190434)
+- Fix crash caused by uncaught exception (190317)
+- Fix crash caused by sorting list of torrent in QM when the list is being cleared (190759)
+- Added patch from amichai which makes the plasma applet a popup applet and which fixes some other things (190822)
+- Fix bug causing drag and drop of torrent on to plasma desktop not to work
+- Increase numwant to 200 and the maximum number of potential peers to 500
+- Cancel all scan dialogs before exiting, this fixes a crash (191487)
+- Config dialog now embeds pages in scroll areas, so that the dialog also is useable on small screens
+- Make sure dbus names are valid, this fixes an assert (192007)
+- Fix crash when parsing DHT packets (190107)
+- Remove newlines from path names of files when present in torrent file (192652)
+- Properly check for GeoIP system library (193117)
+- Fix crash at exit caused by stopping torrent in it's destructor (193585)
+- No longer check if a torrent has to have an announce or a nodes key
+- Added experimental option which replaces KIO to announce with a QHttp based solution, this fixes connection to host broken errors
+- Make sure http post works properly in search plugin (194037)
+
 Changes in 3.2.1 :
 - Resort torrents if display name is changed
 - Fix bug causing torrents to get stuck when data checking and move to completed dir are done when a torrent has finished
