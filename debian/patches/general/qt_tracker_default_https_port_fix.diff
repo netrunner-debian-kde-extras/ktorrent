@@ -1,0 +1,35 @@
+From: Modestas Vainius <modestas@vainius.eu>
+Subject: [PATCH] Proper default port for https protocol
+
+When using QHttp to do tracker announces
+("Do not use KIO for tracker announces" option), default to the right port
+for https protocol (not to 80).
+
+Signed-off-by: Modestas Vainius <modestas@vainius.eu>
+
+---
+ libbtcore/tracker/httpannouncejob.cpp |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/libbtcore/tracker/httpannouncejob.cpp b/libbtcore/tracker/httpannouncejob.cpp
+index 9123467..59b2e70 100644
+--- a/libbtcore/tracker/httpannouncejob.cpp
++++ b/libbtcore/tracker/httpannouncejob.cpp
+@@ -35,7 +35,7 @@ namespace bt
+ 
+ 	void HTTPAnnounceJob::start()
+ 	{
+-		http->setHost(url.host(),url.protocol() == "https" ? QHttp::ConnectionModeHttps : QHttp::ConnectionModeHttp,url.port(80));
++		http->setHost(url.host(),url.protocol() == "https" ? QHttp::ConnectionModeHttps : QHttp::ConnectionModeHttp,url.port() > 0 ? url.port() : 0);
+ 		if (!proxy_host.isEmpty() && proxy_port > 0)
+ 			http->setProxy(proxy_host,proxy_port);
+ 		
+@@ -90,4 +90,4 @@ namespace bt
+ 
+ 
+ 
+-}
+\ No newline at end of file
++}
+-- 
+tg: (9cb9cec..) general/qt_tracker_default_https_port_fix (depends on: upstream)
