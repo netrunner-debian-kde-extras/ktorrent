@@ -152,7 +152,10 @@ namespace kt
 	void GUI::addPrefPage(PrefPageInterface* page)
 	{
 		if (!pref_dlg)
+		{
 			pref_dlg = new PrefDialog(this,core);
+			pref_dlg->loadState(KGlobal::config());
+		}
 
 		pref_dlg->addPrefPage(page);
 	}
@@ -695,6 +698,9 @@ namespace kt
 		group_view->saveState(cfg);
 		qm->saveState(cfg);
 		ideal::MainWindow::saveState(cfg);
+		if (pref_dlg)
+			pref_dlg->saveState(cfg);
+		cfg->sync();
 	}
 
 	void GUI::currentTorrentChanged(bt::TorrentInterface* tc)
@@ -723,6 +729,7 @@ namespace kt
 		{
 			timer.stop();
 			ideal::MainWindow::queryExit();
+			ScanDlg::cancelAllScans();
 			hide();
 			tray_icon->hide();
 			core->onExit();
