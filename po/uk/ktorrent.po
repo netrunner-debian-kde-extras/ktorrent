@@ -17,8 +17,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<"
-"=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 0.3\n"
 
 #: ktorrent/groupview.cpp:130
@@ -1619,7 +1619,8 @@ msgid "Keep Data"
 msgstr "Зберегти дані"
 
 #: ktorrent/view.cpp:230
-msgid "You will lose all the downloaded data. Are you sure you want to do this?"
+msgid ""
+"You will lose all the downloaded data. Are you sure you want to do this?"
 msgstr "Ви втратите всі звантажені дані. Ви справді хочете це зробити?"
 
 #: ktorrent/view.cpp:231
@@ -1633,7 +1634,8 @@ msgstr "Виберіть каталог, куди пересунути дані.
 
 #: libktcore/dbus/dbustorrent.cpp:321
 msgid "Maximum share ratio reached !"
-msgstr "Перевищено максимальне значення коефіцієнта вивантаження / звантаження!"
+msgstr ""
+"Перевищено максимальне значення коефіцієнта вивантаження / звантаження!"
 
 #: libktcore/dbus/dbustorrent.cpp:324
 msgid "Maximum seed time reached !"
@@ -2864,7 +2866,8 @@ msgstr "Не перевіряти повторно, якщо шматки біл
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxSizeForUploadDataCheck)
 #: rc.cpp:360
 msgid "The maximum size a chunk can be for rechecking during uploading."
-msgstr "Максимальний розмір шматка, який можна перевіряти під час вивантаження."
+msgstr ""
+"Максимальний розмір шматка, який можна перевіряти під час вивантаження."
 
 #. i18n: file: ktorrent/btpref.ui:194
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxSizeForUploadDataCheck)
@@ -3541,7 +3544,8 @@ msgstr "Пенал звантаження"
 #. i18n: file: ktorrent/qmpref.ui:31
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxDownloads)
 #: rc.cpp:641
-msgid "The maximum number of simultaneous downloads the queue manager will run."
+msgid ""
+"The maximum number of simultaneous downloads the queue manager will run."
 msgstr ""
 "Максимальна кількість одночасних завантажень у черзі, які можна одночасно "
 "запускати."
@@ -4963,7 +4967,6 @@ msgstr ""
 #. i18n: file: ktorrent/advancedpref.ui:329
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useQHttpAnnounce)
 #: rc.cpp:1212
-#| msgid "Use proxy for tracker connections"
 msgid "Do not use KIO for tracker announces"
 msgstr "Не використоувати KIO для анонсів координатора"
 
@@ -8697,28 +8700,24 @@ msgstr " Не вдається відкрити файл торента %1: %2"
 msgid "Parse Error"
 msgstr "Помилка аналізу"
 
-#: libbtcore/torrent/torrentcontrol.cpp:533, kde-format
-#| msgid ""
-#| "An error occurred while loading the torrent <b>%1</b>\n"
-#| "The torrent is probably corrupt or is not a torrent file."
+#: libbtcore/torrent/torrentcontrol.cpp:533
+#, kde-format
 msgid ""
 "An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
 "torrent is probably corrupt or is not a valid torrent file."
 msgstr ""
-"Під час спроби завантаження торента <b>%1</b> сталася помилка:<br/><b>%2</b><"
-"br/>Найімовірніша причина: пошкодження торента або цей файл не є файлом "
+"Під час спроби завантаження торента <b>%1</b> сталася помилка:<br/><b>%2</"
+"b><br/>Найімовірніша причина: пошкодження торента або цей файл не є файлом "
 "торента."
 
-#: libbtcore/torrent/torrentcontrol.cpp:563, kde-format
-#| msgid ""
-#| "An error occurred while loading the torrent <b>%1</b>\n"
-#| "The torrent is probably corrupt or is not a torrent file."
+#: libbtcore/torrent/torrentcontrol.cpp:563
+#, kde-format
 msgid ""
 "An error occurred while loading the torrent:<br/><b>%1</b><br/>The torrent "
 "is probably corrupt or is not a valid torrent file."
 msgstr ""
-"Під час спроби завантаження торента сталася помилка:<br/><b>%1</b><br/>"
-"Найімовірніша причина: пошкодження торента або цей файл не є файлом торента."
+"Під час спроби завантаження торента сталася помилка:<br/><b>%1</b><br/"
+">Найімовірніша причина: пошкодження торента або цей файл не є файлом торента."
 
 #: libbtcore/torrent/torrentcontrol.cpp:573
 #, kde-format

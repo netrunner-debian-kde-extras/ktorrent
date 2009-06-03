@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2009-06-01 07:10+0200\n"
-"PO-Revision-Date: 2009-05-22 13:08+0200\n"
+"PO-Revision-Date: 2009-06-02 08:50+0200\n"
 "Last-Translator: Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -4970,14 +4970,17 @@ msgid ""
 "This is experimental and should only be used if you are getting a lot of "
 "connection to host broken errors."
 msgstr ""
+"Inhabilita el uso de la biblioteca KIO de KDE para los anuncios del "
+"localizador.\n"
+"\n"
+"Esto es experimental, y sólo se debe usar si recibe un montón de errores de "
+"ruptura de la conexión con la máquina."
 
 #. i18n: file: ktorrent/advancedpref.ui:329
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useQHttpAnnounce)
 #: rc.cpp:1212
-#, fuzzy
-#| msgid "Use proxy for tracker connections"
 msgid "Do not use KIO for tracker announces"
-msgstr "Utilizar el «proxy» en las conexiones del localizador"
+msgstr "No usar KIO para los anuncios del localizador"
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, UPnPTestWidget)
@@ -8721,28 +8724,24 @@ msgid "Parse Error"
 msgstr "Error de análisis sintáctico"
 
 #: libbtcore/torrent/torrentcontrol.cpp:533
-#, fuzzy, kde-format
-#| msgid ""
-#| "An error occurred while loading the torrent <b>%1</b>\n"
-#| "The torrent is probably corrupt or is not a torrent file."
+#, kde-format
 msgid ""
 "An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
 "torrent is probably corrupt or is not a valid torrent file."
 msgstr ""
-"Se ha producido un error mientras se cargaba el torrent <b>%1</b>\n"
-" Probablemente el torrent esté dañado, o no sea realmente un archivo torrent."
+"Se ha producido un error mientras se cargaba el torrent <b>%1</b>:<br/><b>%"
+"2</b><br/>Probablemente el torrent esté dañado, o no sea realmente un "
+"archivo torrent válido."
 
 #: libbtcore/torrent/torrentcontrol.cpp:563
-#, fuzzy, kde-format
-#| msgid ""
-#| "An error occurred while loading the torrent <b>%1</b>\n"
-#| "The torrent is probably corrupt or is not a torrent file."
+#, kde-format
 msgid ""
 "An error occurred while loading the torrent:<br/><b>%1</b><br/>The torrent "
 "is probably corrupt or is not a valid torrent file."
 msgstr ""
-"Se ha producido un error mientras se cargaba el torrent <b>%1</b>\n"
-" Probablemente el torrent esté dañado, o no sea realmente un archivo torrent."
+"Se ha producido un error mientras se cargaba el torrent:<br/><b>%1</b><br/"
+">Probablemente el torrent esté dañado, o no sea realmente un archivo torrent "
+"válido."
 
 #: libbtcore/torrent/torrentcontrol.cpp:573
 #, kde-format

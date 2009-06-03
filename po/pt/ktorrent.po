@@ -4964,14 +4964,17 @@ msgid ""
 "This is experimental and should only be used if you are getting a lot of "
 "connection to host broken errors."
 msgstr ""
+"Desactiva a utilização da biblioteca KIO do KDE para os anúncios do "
+"localizador.\n"
+"\n"
+"Isto é experimental e só deverá ser usado se estiver a ter muitos erros de "
+"ligações à máquina perdidas."
 
 #. i18n: file: ktorrent/advancedpref.ui:329
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useQHttpAnnounce)
 #: rc.cpp:1212
-#, fuzzy
-#| msgid "Use proxy for tracker connections"
 msgid "Do not use KIO for tracker announces"
-msgstr "Usar o 'proxy' para as ligações do localizador"
+msgstr "Não usar o KIO para as ligações do localizador"
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, UPnPTestWidget)
@@ -8707,27 +8710,21 @@ msgid "Parse Error"
 msgstr "Erro de Processamento"
 
 #: libbtcore/torrent/torrentcontrol.cpp:533
-#, fuzzy, kde-format
-#| msgid ""
-#| "An error occurred while loading the torrent <b>%1</b>\n"
-#| "The torrent is probably corrupt or is not a torrent file."
+#, kde-format
 msgid ""
 "An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
 "torrent is probably corrupt or is not a valid torrent file."
 msgstr ""
-"Ocorreu um erro ao carregar a torrente <b>%1</b>\n"
-"Esta poderá estar corrompida, ou não ser sequer um ficheiro de torrente."
+"Ocorreu um erro ao carregar a torrente <b>%1</b>:<br/><b>%2</b><br/>Esta "
+"poderá estar corrompida, ou não ser sequer um ficheiro de torrente."
 
 #: libbtcore/torrent/torrentcontrol.cpp:563
-#, fuzzy, kde-format
-#| msgid ""
-#| "An error occurred while loading the torrent <b>%1</b>\n"
-#| "The torrent is probably corrupt or is not a torrent file."
+#, kde-format
 msgid ""
 "An error occurred while loading the torrent:<br/><b>%1</b><br/>The torrent "
 "is probably corrupt or is not a valid torrent file."
 msgstr ""
-"Ocorreu um erro ao carregar a torrente <b>%1</b>\n"
+"Ocorreu um erro ao carregar a torrente:<br/><b>%1</b><br/>\n"
 "Esta poderá estar corrompida, ou não ser sequer um ficheiro de torrente."
 
 #: libbtcore/torrent/torrentcontrol.cpp:573
@@ -8849,13 +8846,3 @@ msgstr "URL inválido do localizador"
 #, kde-format
 msgid "Cannot open file : %1 : %2"
 msgstr "Não é possível aceder ao ficheiro : %1 : %2"
-
-#~ msgid "Torrent has no announce or nodes field"
-#~ msgstr "A torrente não tem um campo de anúncio ou de nós"
-
-#~ msgid ""
-#~ "An error occurred while loading the torrent.\n"
-#~ "The torrent is probably corrupt or is not a torrent file."
-#~ msgstr ""
-#~ "Ocorreu um erro ao carregar a torrente.\n"
-#~ "Esta poderá estar corrompida, ou não ser sequer um ficheiro de torrente."
