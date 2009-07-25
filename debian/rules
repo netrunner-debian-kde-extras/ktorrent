@@ -1,18 +1,15 @@
 #!/usr/bin/make -f
 
-# THIS_SHOULD_GO_TO_UNSTABLE=1
-
 DEB_CMAKE_CUSTOM_FLAGS += -DWITH_SYSTEM_GEOIP:BOOL=ON \
                           -DWITH_BUILTIN_COUNTRY_FLAGS:BOOL=OFF
 DEB_KDE_LINK_WITH_AS_NEEDED := yes
-DH := dh --with quilt
 
 ifneq (,$(shell which tg))
 include /usr/share/quilt/quilt.make
 include /usr/share/topgit/tg2quilt.mk
 endif
 
-include debian/debhelper/kde.mk
+include /usr/share/pkg-kde-tools/makefiles/1/debhelper/kde.mk
 
 prune-tarball:
 	# Remove non-free components: flags and geoip stuff
