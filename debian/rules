@@ -5,7 +5,7 @@ DEB_CMAKE_CUSTOM_FLAGS += -DWITH_SYSTEM_GEOIP:BOOL=ON \
 DEB_KDE_LINK_WITH_AS_NEEDED := yes
 
 ifneq (,$(shell which tg))
-include /usr/share/quilt/quilt.make
+QUILT_PATCH_DIR := debian/patches
 include /usr/share/topgit/tg2quilt.mk
 endif
 
