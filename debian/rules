@@ -11,6 +11,9 @@ endif
 
 include /usr/share/pkg-kde-tools/makefiles/1/debhelper/kde.mk
 
+%:
+	dh --dbg-package=ktorrent-dbg $@
+
 prune-tarball:
 	# Remove non-free components: flags and geoip stuff
 	rm -f plugins/infowidget/geoip/*.png
