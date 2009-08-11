@@ -26,6 +26,7 @@
 
 class KMenu;
 class QSortFilterProxyModel;
+class QToolBar;
 
 namespace bt
 {
@@ -36,11 +37,12 @@ namespace bt
 namespace kt
 {
 	class TorrentFileModel;
+	class HintLineEdit;
 
 	/**
 		@author Joris Guisson <joris.guisson@gmail.com>
 	*/
-	class FileView : public QTreeView
+	class FileView : public QWidget
 	{
 		Q_OBJECT
 	public:
@@ -48,7 +50,7 @@ namespace kt
 		virtual ~FileView();
 
 		void changeTC(bt::TorrentInterface* tc);
-		void setShowListOfFiles(bool on,KSharedConfigPtr cfg);
+		void setShowListOfFiles(bool on);
 		void saveState(KSharedConfigPtr cfg);
 		void loadState(KSharedConfigPtr cfg);
 		void update();
@@ -67,9 +69,8 @@ namespace kt
 		void changePriority(bt::Priority newpriority);
 		void expandCollapseTree(const QModelIndex& idx, bool expand);
 		void expandCollapseSelected(bool expand);
-		virtual bool viewportEvent(QEvent *event);
-		virtual void dataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight);
-
+		void setupActions();
+		
 	private slots:
 		void open();
 		void downloadFirst();
@@ -80,9 +81,11 @@ namespace kt
 		void moveFiles();
 		void collapseTree();
 		void expandTree();
+		void showTree();
+		void showList();
+		void setFilter(const QString& f);
 
 	private:
-		bool redraw;
 		bt::TorrentInterface* curr_tc;
 		TorrentFileModel* model;
 
@@ -96,11 +99,18 @@ namespace kt
 		QAction* move_files_action;
 		QAction* collapse_action;
 		QAction* expand_action;
+		QAction* show_tree_action;
+		QAction* show_list_action;
+		QAction* show_filter_action;
 
 		QString preview_path;
 		bool show_list_of_files;
 		QMap<bt::TorrentInterface*,QByteArray> expanded_state_map;
 		QSortFilterProxyModel* proxy_model;
+		
+		QTreeView* view;
+		QToolBar* toolbar;
+		HintLineEdit* filter;
 	};
 
 }

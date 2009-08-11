@@ -47,6 +47,8 @@ set(libbtcore_SRC
 	util/waitjob.cpp
 	util/autorotatelogjob.cpp
 	util/compressfilejob.cpp
+	util/decompressfilejob.cpp
+	util/extractfilejob.cpp
 	util/logsystemmanager.cpp
 	
 	bcodec/bdecoder.cpp  
@@ -128,6 +130,9 @@ set(libbtcore_SRC
 	torrent/advancedchokealgorithm.cpp
 	torrent/torrentcontrol.cpp
 	torrent/torrentcreator.cpp
+	torrent/torrentstats.cpp
+	torrent/jobqueue.cpp
+	torrent/job.cpp
 
 	dht/announcetask.cpp  
 	dht/dht.cpp                
@@ -152,6 +157,7 @@ set(libbtcore_SRC
 	diskio/singlefilecache.cpp
 	diskio/multifilecache.cpp
 	diskio/preallocationthread.cpp
+	diskio/preallocationjob.cpp
 	diskio/movedatafilesjob.cpp
 	diskio/deletedatafilesjob.cpp
 	diskio/piecedata.cpp
@@ -170,6 +176,7 @@ set(libbtcore_SRC
 	datachecker/singledatachecker.cpp
 	datachecker/datacheckerlistener.cpp  
 	datachecker/multidatachecker.cpp
+	datachecker/datacheckerjob.cpp
 	
 	migrate/cachemigrate.cpp  
 	migrate/ccmigrate.cpp  
@@ -193,7 +200,7 @@ target_link_libraries(btcore ${KDE4_KDEUI_LIBS} ${KDE4_KIO_LIBS} ${GMP_LIBRARIES
 if(WIN32)
 target_link_libraries(btcore ws2_32)
 endif(WIN32)
-set_target_properties(btcore PROPERTIES VERSION 10.0.0 SOVERSION 10 )
+set_target_properties(btcore PROPERTIES VERSION 12.0.0 SOVERSION 12 )
 install(TARGETS btcore  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 set(net_HDR  
@@ -273,6 +280,9 @@ set (util_HDR
 	./util/error.h
 	./util/win32.h
 	./util/logsystemmanager.h
+	./util/compressfilejob.h
+	./util/decompressfilejob.h
+	./util/extractfilejob.h
 )
 	
 set (download_HDR
@@ -301,6 +311,7 @@ set (diskio_HDR
 	./diskio/cachefile.h
 	./diskio/singlefilecache.h
 	./diskio/preallocationthread.h
+	./diskio/preallocationjob.h
 	./diskio/movedatafilesjob.h
 	./diskio/deletedatafilesjob.h
 	./diskio/chunkmanager.h
@@ -323,6 +334,9 @@ set (torrent_HDR
 	./torrent/torrentfile.h
 	./torrent/statsfile.h
 	./torrent/globals.h
+	./torrent/torrentstats.h
+	./torrent/job.h
+	./torrent/jobqueue.h
 )
 	
 set (tracker_HDR
@@ -339,6 +353,7 @@ set (datachecker_HDR
 	./datachecker/singledatachecker.h
 	./datachecker/datacheckerlistener.h
 	./datachecker/multidatachecker.h
+	./datachecker/datacheckerjob.h
 )
 
 set (dht_HDR

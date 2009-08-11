@@ -21,14 +21,18 @@
 #include <kmimetype.h>
 #include <kmessagebox.h>
 #include <klocale.h>
+#include <kzip.h>
 #include <kio/jobuidelegate.h>
 #include <util/log.h>
 #include <util/functions.h>
 #include <util/fileops.h>
 #include <util/error.h>
+#include <util/decompressfilejob.h>
+#include <util/extractfilejob.h>
 #include <interfaces/functions.h>
 #include "convertdialog.h"
 #include "downloadandconvertjob.h"
+
 
 namespace kt
 {
@@ -45,11 +49,11 @@ namespace kt
 
 	void DownloadAndConvertJob::start()
 	{
-		QString temp = kt::DataDir() + "level1.tmp";
+		QString temp = kt::DataDir() + "tmp-" + url.fileName();
 		if (bt::Exists(temp))
 			bt::Delete(temp,true);
 		
-		active_job = KIO::file_copy(url,temp,-1,KIO::HideProgressInfo|KIO::Overwrite);
+		active_job = KIO::file_copy(url,temp,-1,KIO::Overwrite);
 		connect(active_job,SIGNAL(result(KJob*)),this,SLOT(downloadFileFinished(KJob*)));
 	}
 	
@@ -87,7 +91,7 @@ namespace kt
 			return;
 		}
 		
-		QString temp = kt::DataDir() + "level1.tmp";
+		QString temp = kt::DataDir() + "tmp-" + url.fileName();
 		
 		//now determine if it's ZIP or TXT file
 		KMimeType::Ptr ptr = KMimeType::findByPath(temp);
@@ -95,6 +99,12 @@ namespace kt
 		{
 			active_job = KIO::file_move(temp,kt::DataDir() + "level1.zip",-1,KIO::HideProgressInfo|KIO::Overwrite);
 			connect(active_job,SIGNAL(result(KJob*)),this,SLOT(extract(KJob*)));
+		}
+		else if (ptr->name() == "application/x-gzip" || ptr->name() == "application/x-bzip")
+		{
+			active_job = new bt::DecompressFileJob(temp,kt::DataDir() + "level1.txt");
+			connect(active_job,SIGNAL(result(KJob*)),this,SLOT(convert(KJob*)));
+			active_job->start();
 		}
 		else
 		{
@@ -115,11 +125,41 @@ namespace kt
 			return;
 		}
 		
-		KUrl zipfile("zip:" + kt::DataDir() + "level1.zip/splist.txt");
-		KUrl destinationfile(kt::DataDir() + "level1.txt");
-		active_job = KIO::file_copy(zipfile,destinationfile, -1, KIO::HideProgressInfo|KIO::Overwrite);
-		connect(active_job,SIGNAL(result(KJob*)),this,SLOT(convert(KJob*)));
-		unzip = true;
+		QString zipfile = kt::DataDir() + "level1.zip";
+		KZip* zip = new KZip(zipfile);
+		if (!zip->open(QIODevice::ReadOnly))
+		{
+			if (mode == Verbose)
+				KMessageBox::error(0,i18n("Cannot open zip file %1.",zipfile));
+			setError(UNZIP_FAILED);
+			emitResult();
+			delete zip;
+		}
+		
+		QString destination = kt::DataDir() + "level1.txt";
+		if (zip->directory()->entries().contains("splist.txt"))
+		{
+			active_job = new bt::ExtractFileJob(zip,"splist.txt",destination);
+			connect(active_job,SIGNAL(result(KJob*)),this,SLOT(convert(KJob*)));
+			unzip = true;
+			active_job->start();
+		}
+		else if (zip->directory()->entries().contains("level1.txt"))
+		{
+			active_job = new bt::ExtractFileJob(zip,"level1.txt",destination);
+			connect(active_job,SIGNAL(result(KJob*)),this,SLOT(convert(KJob*)));
+			unzip = true;
+			active_job->start();
+		}
+		else
+		{
+			if (mode == Verbose)
+				KMessageBox::error(0,i18n("Cannot find blocklist in zip file %1.",zipfile));
+			
+			setError(UNZIP_FAILED);
+			emitResult();
+			delete zip;
+		}
 	}
 	
 	void DownloadAndConvertJob::revertBackupFinished(KJob*)

@@ -106,7 +106,6 @@ namespace bt
 	
 	void CompressFileJob::kill(bool quietly)
 	{
-		Q_UNUSED(quietly);
 		if (compress_thread)
 		{
 			compress_thread->cancel();
@@ -115,7 +114,8 @@ namespace bt
 			compress_thread = 0;
 		}
 		setError(KIO::ERR_USER_CANCELED);
-		emitResult();
+		if (!quietly)
+			emitResult();
 	}
 	
 	void CompressFileJob::compressThreadFinished()

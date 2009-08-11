@@ -66,8 +66,9 @@ if( PLASMA_FOUND )
     add_subdirectory(plasma)
 endif(PLASMA_FOUND)
 
-add_subdirectory(po)
-
 # --- show log ---
 macro_display_feature_log()
 
+find_package(Msgfmt REQUIRED)
+find_package(Gettext REQUIRED)
+add_subdirectory( po )

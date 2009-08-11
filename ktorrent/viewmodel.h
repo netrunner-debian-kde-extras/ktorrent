@@ -27,6 +27,8 @@
 
 namespace kt
 {
+	class View;
+	class ViewDelegate;
 	class Core;
 	class Group;
 	
@@ -39,7 +41,7 @@ namespace kt
 	{
 		Q_OBJECT
 	public:
-		ViewModel(Core* core,QObject* parent);
+		ViewModel(Core* core,View* parent);
 		virtual ~ViewModel();
 		
 		/**
@@ -50,10 +52,11 @@ namespace kt
 		
 		/**
 		 * Update the model, checks if data has changed.
+		 $ @param delegate The ViewDelegate, so we don't hide extended items
 		 * @param force_resort Force a resort
 		 * @return true if the model got resorted
 		 */
-		bool update(bool force_resort = false);
+		bool update(ViewDelegate* delegate,bool force_resort = false);
 		
 		/// Is a column a default column for an upload view
 		bool defaultColumnForUpload(int column);
@@ -61,8 +64,8 @@ namespace kt
 		/// Is a column a default column for a download view
 		bool defaultColumnForDownload(int column);
 		
-		virtual int rowCount(const QModelIndex & parent) const;
-		virtual int columnCount(const QModelIndex & parent) const;
+		virtual int rowCount(const QModelIndex & parent = QModelIndex()) const;
+		virtual int columnCount(const QModelIndex & parent = QModelIndex()) const;
 		virtual QVariant headerData(int section, Qt::Orientation orientation,int role) const;
 		virtual QVariant data(const QModelIndex & index, int role) const;
 		virtual bool removeRows(int row,int count,const QModelIndex & parent);
@@ -174,6 +177,7 @@ namespace kt
 			
 	private:
 		Core* core;
+		View* view;
 		QList<Item*> torrents;
 		int sort_column;
 		Qt::SortOrder sort_order;

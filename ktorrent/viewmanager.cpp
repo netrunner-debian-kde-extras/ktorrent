@@ -31,6 +31,7 @@
 #include <groups/group.h>
 #include <util/log.h>
 #include <groups/groupmanager.h>
+#include <torrent/jobqueue.h>
 #include "gui.h"
 #include "view.h"
 #include "viewmodel.h"
@@ -40,6 +41,8 @@
 #include "settings.h"
 #include "torrentactivity.h"
 #include "speedlimitsdlg.h"
+#include <kfiledialog.h>
+#include <kio/job.h>
 
 using namespace bt;
 
@@ -48,7 +51,6 @@ namespace kt
 	ViewManager::ViewManager(Group* all_group,GUI* gui,Core* core,TorrentActivity* ta) 
 		: QObject(ta),gui(gui),core(core),current(0),all_group(all_group),ta(ta)
 	{
-		view_menu = 0;
 	}
 
 	ViewManager::~ViewManager()
@@ -63,7 +65,7 @@ namespace kt
 		connect(v,SIGNAL(currentTorrentChanged(View* ,bt::TorrentInterface* )),
 			this,SLOT(onCurrentTorrentChanged(View* ,bt::TorrentInterface* )));
 		connect(v,SIGNAL(torrentSelectionChanged(View*)),
-				this,SLOT(onSelectionChaged(View*)));
+				this,SLOT(onSelectionChanged(View*)));
 		connect(v,SIGNAL(showMenu(View*, const QPoint&)),this,SLOT(showViewMenu(View*, const QPoint&)));
 		return v;
 	}
@@ -360,12 +362,25 @@ namespace kt
 			ta->currentTorrentChanged(tc);
 	}
 
-	void ViewManager::onSelectionChaged(View* v)
+	void ViewManager::onSelectionChanged(View* v)
 	{
 		if (v != current)
 			return;
 			
 		updateActions();
+	}
+	
+	
+	void ViewManager::dataScanStarted(ScanListener* listener)
+	{
+		foreach (View* v,views)
+			v->dataScanStarted(listener);
+	}
+	
+	void ViewManager::dataScanClosed(ScanListener* listener)
+	{
+		foreach (View* v,views)
+			v->dataScanClosed(listener);
 	}
 	
 	void ViewManager::updateActions()
@@ -384,7 +399,6 @@ namespace kt
 		bool en_announce = false;
 		bool en_add_peer = false;
 		bool en_peer_sources = false;
-		bool dummy = false;
 
 		foreach (bt::TorrentInterface* tc,sel)
 		{
@@ -393,7 +407,7 @@ namespace kt
 			if (tc->readyForPreview() && !s.multi_file_torrent)
 				en_prev = true;
 			
-			if (tc->isCheckingData(dummy))
+			if (tc->getJobQueue()->runningJobs())
 				continue;
 			
 			en_remove = true;
@@ -402,7 +416,7 @@ namespace kt
 				if (qm_enabled)
 				{
 					// Queued torrents can be stopped, and not started
-					if (tc->isAllowedToStart() && !tc->overMaxRatio() && !tc->overMaxSeedTime())
+					if (s.queued)
 						en_stop = true;
 					else
 						en_start = true;
@@ -450,7 +464,7 @@ namespace kt
 			
 			TorrentInterface* tc = sel.front();
 			// no data check when we are preallocating diskspace
-			check_data->setEnabled(tc->getStats().status != bt::ALLOCATING_DISKSPACE && !tc->isCheckingData(dummy));
+			check_data->setEnabled(tc->getStats().status != bt::ALLOCATING_DISKSPACE);
 			
 			if (en_peer_sources)
 			{
@@ -471,6 +485,7 @@ namespace kt
 		open_dir_menu->setEnabled(sel.count() == 1);
 		add_to_new_group->setEnabled(sel.count() > 0);
 		copy_url->setEnabled(sel.count() == 1 && sel.front()->loadUrl().isValid());
+		export_torrent->setEnabled(sel.count() == 1);
 		
 		if (qm_enabled)
 		{
@@ -480,7 +495,7 @@ namespace kt
 			stop_all->setEnabled(false);
 			foreach (bt::TorrentInterface* tc,all)
 			{
-				if (tc->isCheckingData(dummy))
+				if (tc->getJobQueue()->runningJobs())
 					continue;
 				
 				const TorrentStats & s = tc->getStats();
@@ -626,6 +641,10 @@ namespace kt
 		connect(copy_url,SIGNAL(triggered()),this,SLOT(copyTorrentURL()));
 		ac->addAction("view_copy_url",copy_url);
 		
+		export_torrent = new KAction(KIcon("document-export"),i18n("Export Torrent"),this);
+		connect(export_torrent,SIGNAL(triggered()),this,SLOT(exportTorrent()));
+		ac->addAction("view_export_torrent",export_torrent);
+		
 		speed_limits = new KAction(KIcon("kt-speed-limits"),i18n("Speed Limits"),this);
 		speed_limits->setToolTip(i18n("Set the speed limits of individual torrents"));
 		connect(speed_limits,SIGNAL(triggered()),this,SLOT(speedLimits()));
@@ -709,32 +728,38 @@ namespace kt
 		dlg.exec();
 	}
 	
+	void ViewManager::exportTorrent()
+	{
+		QList<bt::TorrentInterface*> sel;
+		getSelection(sel);
+		if (sel.count() == 1)
+		{
+			bt::TorrentInterface* tc = sel.front();
+			QString filter = "*.torrent|" + i18n("Torrents (*.torrent)");
+			QString fn = KFileDialog::getSaveFileName(KUrl("kfiledialog:///exportTorrent"),filter);
+			if (!fn.isEmpty())
+				KIO::file_copy(tc->getTorDir() + "torrent",fn);
+		}
+	}
+	
 	void ViewManager::showViewMenu(View* v,const QPoint & pos)
 	{
 		if (!v)
 			return;
 		
+		KMenu* view_menu = qobject_cast<KMenu*>(gui->container("ViewMenu"));
 		if (!view_menu)
-		{
-			view_menu = (KMenu*)gui->container("ViewMenu");
-			if (!view_menu)
-			{
-				Out(SYS_GEN|LOG_NOTICE) << "Failed to create ViewMenu" << endl;
-				return;
-			}
-			
-			QList<QAction*> actions;
-			QMap<Group*,KAction*>::iterator j = group_actions.begin();
-			while (j != group_actions.end())
-			{
-				actions.append(j.value());
-				j++;
-			}
-			
-			gui->plugActionList("view_groups_list",actions);
-		}
+			return;
 		
-	
+		QList<QAction*> actions;
+		QMap<Group*,KAction*>::iterator j = group_actions.begin();
+		while (j != group_actions.end())
+		{
+			actions.append(j.value());
+			j++;
+		}
+			
+		gui->plugActionList("view_groups_list",actions);
 		
 		gui->unplugActionList("view_columns_list");
 		gui->plugActionList("view_columns_list",v->columnActionList());

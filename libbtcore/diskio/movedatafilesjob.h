@@ -20,20 +20,27 @@
 #ifndef BTMOVEDATAFILESJOB_H
 #define BTMOVEDATAFILESJOB_H
 
-#include <kio/job.h>
+#include <torrent/job.h>
 
 namespace bt
 {
+	class TorrentFileInterface;
 
 	/**
 	 * @author Joris Guisson <joris.guisson@gmail.com>
 	 * KIO::Job to move all the files of a torrent.
 	*/
-	class MoveDataFilesJob : public KIO::Job
+	class MoveDataFilesJob : public Job
 	{
 		Q_OBJECT
 	public:
 		MoveDataFilesJob();
+		
+		/**
+			Constructor with a file map.
+			@param fmap Map of files and their destinations
+		*/
+		MoveDataFilesJob(const QMap<TorrentFileInterface*,QString> & fmap);
 		virtual ~MoveDataFilesJob();
 		
 		/**
@@ -43,12 +50,11 @@ namespace bt
 		 */
 		void addMove(const QString & src,const QString & dst);
 		
-		/**
-		 * Start moving the files.
-		 */
-		void startMoving();
-		
 		virtual void start();
+		virtual void kill(bool quietly = true);
+		
+		/// Get the file map (could be empty)
+		const QMap<TorrentFileInterface*,QString> & fileMap() const {return file_map;}
 		
 	private slots:
 		void onJobDone(KJob* j);
@@ -57,6 +63,7 @@ namespace bt
 		
 	private:
 		void recover(bool delete_active);
+		void startMoving();
 
 	private:
 		bool err;
@@ -65,6 +72,7 @@ namespace bt
 		QMap<QString,QString> todo;
 		QMap<QString,QString> success;
 		int running_recovery_jobs;	
+		QMap<TorrentFileInterface*,QString> file_map;
 	};
 
 }

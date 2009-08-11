@@ -114,6 +114,7 @@ namespace kt
 		
 		//markk.update();
 		updateActions();
+		core->startUpdateTimer();
 	}
 
 	GUI:: ~GUI()
@@ -168,21 +169,26 @@ namespace kt
 		guiFactory()->removeClient(p);
 	}
 	
-	void GUI::dataScan(bt::TorrentInterface* tc,bool auto_import,bool silently,const QString & dlg_caption)
+	
+	void GUI::dataScanStarted(ScanListener* listener)
 	{
-		ScanDlg* dlg = new ScanDlg(core,auto_import,this);
-		if (!dlg_caption.isEmpty())
-			dlg->setWindowTitle(dlg_caption);
-		dlg->show();
-		dlg->execute(tc,silently);
+		torrent_activity->dataScanStarted(listener);
 		core->startUpdateTimer(); // make sure update timer is running
 	}
+	
+	void GUI::dataScanClosed(ScanListener* listener)
+	{
+		torrent_activity->dataScanClosed(listener);
+	}
+
 
 	bool GUI::selectFiles(bt::TorrentInterface* tc,bool* start_torrent,const QString & group_hint,bool* skip_check)
 	{
 		FileSelectDlg dlg(core->getGroupManager(),group_hint,this);
-
-		return dlg.execute(tc,start_torrent,skip_check) == QDialog::Accepted;
+		dlg.loadState(KGlobal::config());
+		bool ret = dlg.execute(tc,start_torrent,skip_check) == QDialog::Accepted;
+		dlg.saveState(KGlobal::config());
+		return ret;
 	}
 
 	void GUI::errorMsg(const QString & err)
@@ -401,13 +407,14 @@ namespace kt
 		ac->addAction("paste_url",paste_url_action);
 		
 		queue_pause_action = new KToggleAction(KIcon("kt-pause"),i18n("Pause KTorrent"),this);
+		ac->addAction("queue_pause",queue_pause_action);
 		queue_pause_action->setToolTip(i18n("Pause all running torrents"));
 		queue_pause_action->setShortcut(KShortcut(Qt::SHIFT + Qt::Key_P));
+		queue_pause_action->setGlobalShortcut(KShortcut(Qt::ALT + Qt::SHIFT + Qt::Key_P));
 		connect(queue_pause_action,SIGNAL(toggled(bool)),this,SLOT(pauseQueue(bool)));
 		queue_pause_action->setCheckedState(KGuiItem(i18n("Resume KTorrent"),"media-playback-start",
 											i18n("Resume paused torrents")));
-		ac->addAction("queue_pause",queue_pause_action);
-
+		
 		ipfilter_action = new KAction(KIcon("view-filter"),i18n("IP Filter"),this);
 		ipfilter_action->setToolTip(i18n("Show the list of blocked IP addresses"));
 		ipfilter_action->setShortcut(KShortcut(Qt::CTRL + Qt::Key_I));
@@ -433,11 +440,12 @@ namespace kt
 		
 		show_kt_action = new KAction(KIcon("kt-show-hide"),i18n("Show/Hide KTorrent"),this);
 		connect(show_kt_action,SIGNAL(triggered()),this,SLOT(showOrHide()));
-		show_kt_action->setGlobalShortcut(KShortcut(Qt::ALT+ Qt::CTRL + Qt::Key_T), 
+		ac->addAction("show_kt",show_kt_action);
+		show_kt_action->setObjectName("ktorrent-show-hide-action");
+		show_kt_action->setGlobalShortcut(KShortcut(Qt::ALT+ Qt::SHIFT + Qt::Key_T), 
 										  KAction::ActiveShortcut | KAction::DefaultShortcut,KAction::Autoloading);
 		show_kt_action->setShortcut(show_kt_action->globalShortcut());
-		ac->addAction("show_kt",show_kt_action);
-
+		
 		setStandardToolBarMenuEnabled(true);
 				
 		QMenu* m = tray_icon->contextMenu();

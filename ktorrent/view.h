@@ -34,8 +34,9 @@ namespace kt
 	class Core;
 	class ViewModel;
 	class ViewSelectionModel;
+	class ViewDelegate;
 	class Group;
-	class TorrentInterface;	
+	class TorrentInterface;
 	
 	class View : public QTreeView
 	{
@@ -96,6 +97,15 @@ namespace kt
 		
 		virtual void closeEditor(QWidget* editor,QAbstractItemDelegate::EndEditHint hint);
 		virtual bool edit(const QModelIndex & index,EditTrigger trigger,QEvent* event);
+		
+		/// A data scan was started
+		void dataScanStarted(ScanListener* listener);
+		
+		/// A data scan was closed
+		void dataScanClosed(ScanListener* listener);
+		
+		/// Get the ViewDelegate
+		ViewDelegate* viewDelegate() {return delegate;}
 	public slots:
 		/**
 		 * Update all items in the view
@@ -124,6 +134,7 @@ namespace kt
 		void onHeaderMenuItemTriggered(QAction* act);
 		void onCurrentItemChanged(const QModelIndex & current,const QModelIndex & previous);
 		void onSelectionChanged(const QItemSelection & selected,const QItemSelection & deselected);
+		
 
 	signals:
 		void currentTorrentChanged(View* v,bt::TorrentInterface* tc);
@@ -141,6 +152,7 @@ namespace kt
 		bt::Uint32 num_running;
 		ViewModel* model;
 		ViewSelectionModel* selection_model;
+		ViewDelegate* delegate;
 	};
 }
 

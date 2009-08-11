@@ -30,6 +30,7 @@
 #include <kinputdialog.h>
 #include <interfaces/torrentinterface.h>
 #include <torrent/queuemanager.h>
+#include <torrent/jobqueue.h>
 #include <util/functions.h>
 #include <util/log.h>
 #include <interfaces/functions.h>
@@ -42,6 +43,8 @@
 #include "speedlimitsdlg.h"
 #include "addpeersdlg.h"
 #include "viewselectionmodel.h"
+#include "viewdelegate.h"
+#include "scanextender.h"
 
 
 using namespace bt;
@@ -62,7 +65,7 @@ namespace kt
 		setDragEnabled(true);
 		setSelectionMode(QAbstractItemView::ExtendedSelection);
 		setSelectionBehavior(QAbstractItemView::SelectRows);
-		setUniformRowHeights(true);
+//		setUniformRowHeights(true);
 		
 		connect(this,SIGNAL(customContextMenuRequested(const QPoint & ) ),this,SLOT(showMenu( const QPoint& )));
 	
@@ -94,10 +97,14 @@ namespace kt
 		connect(selectionModel(),SIGNAL(selectionChanged(const QItemSelection &,const QItemSelection)),
 				this,SLOT(onSelectionChanged(const QItemSelection &,const QItemSelection)));
 		connect(model,SIGNAL(sorted()),selection_model,SLOT(sorted()));
+		
+		delegate = new ViewDelegate(core,model,this);
+		setItemDelegate(delegate);
 	}
 
 	View::~View()
 	{
+		delegate->contractAll();
 	}
 	
 	void View::setupDefaultColumns()
@@ -128,7 +135,7 @@ namespace kt
 
 	void View::update()
 	{
-		model->update();
+		model->update(delegate);
 	}
 
 	bool View::needToUpdateCaption()
@@ -190,8 +197,7 @@ namespace kt
 		getSelection(sel);
 		foreach(bt::TorrentInterface* tc,sel)
 		{
-			bool dummy;
-			if (tc && !tc->isCheckingData(dummy))
+			if (tc && !tc->getJobQueue()->runningJobs())
 			{	
 				const TorrentStats & s = tc->getStats();
 				bool data_to = false;
@@ -229,8 +235,7 @@ namespace kt
 
 		foreach(bt::TorrentInterface* tc,sel)
 		{
-			bool dummy = false;
-			if (tc && !tc->isCheckingData(dummy))
+			if (tc && !tc->getJobQueue()->runningJobs())
 				core->remove(tc,true);
 		}
 	}
@@ -355,13 +360,12 @@ namespace kt
 		getSelection(sel);
 		foreach(bt::TorrentInterface* tc,sel)
 		{
-			bool dummy;
-			if (tc && !tc->isCheckingData(dummy))
+			if (tc)
 			{
 				bool on = tc->isFeatureEnabled(bt::DHT_FEATURE);
 				tc->setFeatureEnabled(bt::DHT_FEATURE,!on);
 			}
-		}							
+		}
 	}
 
 	void View::togglePEX()
@@ -370,8 +374,7 @@ namespace kt
 		getSelection(sel);
 		foreach(bt::TorrentInterface* tc,sel)
 		{
-			bool dummy;
-			if (tc && !tc->isCheckingData(dummy))
+			if (tc)
 			{
 				bool on = tc->isFeatureEnabled(bt::UT_PEX_FEATURE);
 				tc->setFeatureEnabled(bt::UT_PEX_FEATURE,!on);
@@ -394,14 +397,29 @@ namespace kt
 	{
 		QList<bt::TorrentInterface*> sel;
 		getSelection(sel);
-		if (sel.count() == 0)
+		if (sel.count() > 0)
+		{
+			core->doDataCheck(sel.front());
+			core->startUpdateTimer(); // make sure update timer of core is running
+		}
+	}
+
+	void View::dataScanStarted(ScanListener* listener)
+	{
+		if (delegate->extended(listener->torrent()))
 			return;
 		
-		ScanDlg* dlg = new ScanDlg(core,false,this);
-		dlg->show();
-		dlg->execute(sel.front(),false);
-		core->startUpdateTimer(); // make sure update timer of core is running
+		bt::TorrentInterface* tc = listener->torrent();
+		ScanExtender* ext = new ScanExtender(listener,tc,0);
+		ext->hide();
+		delegate->extend(tc,ext);
 	}
+	
+	void View::dataScanClosed(ScanListener* listener)
+	{
+		delegate->closeExtender(listener->torrent());
+	}
+
 
 	void View::showMenu(const QPoint & pos)
 	{
@@ -484,6 +502,7 @@ namespace kt
 	{
 		QTreeView::closeEditor(editor,hint);
 		editingItem(false);
+		setFocus();
 	}
 	
 	bool View::edit(const QModelIndex & index,EditTrigger trigger,QEvent* event)
@@ -494,6 +513,9 @@ namespace kt
 		
 		return ret;
 	}
+	
+	
+	
 }
 
 #include "view.moc"

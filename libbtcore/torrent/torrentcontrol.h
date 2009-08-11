@@ -48,13 +48,12 @@ namespace bt
 	class Peer;
 	class BitSet;
 	class QueueManagerInterface;
-	class PreallocationThread;
 	class TimeEstimator;
-	class DataCheckerThread;
 	class WaitJob;
 	class MonitorInterface;
 	class ChunkSelectorFactoryInterface;
 	class CacheFactory;
+	class JobQueue;
 	
 	/**
 	 * @author Joris Guisson
@@ -98,14 +97,12 @@ namespace bt
 		 * @param tmpdir The directory to store temporary data
 		 * @param datadir The directory to store the actual file(s)
 		 * 		(only used the first time we load a torrent)
-		 * @param default_save_dir Default save directory (null if not set)
 		 * @throw Error when something goes wrong
 		 */
 		void init(QueueManagerInterface* qman,
 				const QString & torrent,
 				const QString & tmpdir,
-				const QString & datadir,
-				const QString & default_save_dir);
+				const QString & datadir);
 		
 		/**
 		 * Initialize the TorrentControl. 
@@ -114,14 +111,12 @@ namespace bt
 		 * @param tmpdir The directory to store temporary data
 		 * @param datadir The directory to store the actual file(s)
 		 * 		(only used the first time we load a torrent)
-		 * @param default_save_dir Default save directory (null if not set)
 		 * @throw Error when something goes wrong
 		 */
 		void init(QueueManagerInterface* qman,
 				  const QByteArray & data,
 				  const QString & tmpdir,
-				  const QString & datadir,
-				  const QString & default_save_dir);
+				  const QString & datadir);
 
 		/**
 		 * Change to a new data dir. If this fails
@@ -178,9 +173,6 @@ namespace bt
 		 * @return Uint32 - time in seconds
 		 */
 		Uint32 getRunningTimeUL() const;
-
-		/// Get a short error message
-		QString getShortErrorMessage() const {return error_msg;}
 		
 		virtual Uint32 getNumFiles() const;
 		virtual TorrentFileInterface & getTorrentFile(Uint32 index);
@@ -214,9 +206,6 @@ namespace bt
 		/// Tell the TorrentControl obj to preallocate diskspace in the next update
 		void setPreallocateDiskSpace(bool pa) {prealloc = pa;}
 		
-		/// Make a string out of the status message
-		virtual QString statusToString() const;
-		
 		/// Checks if tracker announce is allowed (minimum interval 60 seconds)
 		bool announceAllowed();
 		
@@ -236,8 +225,8 @@ namespace bt
 		virtual const DHTNode & getDHTNode(Uint32 i) const;
 		virtual void deleteDataFiles();
 		virtual const bt::PeerID & getOwnPeerID() const;
-		virtual bool updateNeeded() const;
 		virtual QString getComments() const;
+		virtual const JobQueue* getJobQueue() const {return job_queue;}
 		
 		/**
 		 * Returns estimated time left for finishing download. Returned value is in seconds.
@@ -266,9 +255,6 @@ namespace bt
 	
 		/// Get the PeerManager
 		const PeerManager * getPeerMgr() const;
-
-		/// Are we in the process of moving files
-		bool isMovingFiles() const {return moving_files;}
 		
 		/// Set a custom chunk selector factory (needs to be done for init is called)
 		void setChunkSelectorFactory(ChunkSelectorFactoryInterface* csfi);
@@ -339,19 +325,24 @@ namespace bt
 		 */
 		static void setNumCorruptedForRecheck(Uint32 m) {num_corrupted_for_recheck = m;}
 		
+	protected:
+		/// Called when a data check is finished by DataCheckerJob
+		void afterDataCheck(DataCheckerListener* lst,const BitSet & result,const QString & error);
+		void beforeDataCheck();
+		void preallocFinished(const QString & error,bool completed);
+		void allJobsDone();
+		
 	private slots:
 		void onNewPeer(Peer* p);
 		void onPeerRemoved(Peer* p);
 		void doChoking();
 		void onIOError(const QString & msg);
-		void onPortPacket(const QString & ip,Uint16 port);
 		/// Update the stats of the torrent.
 		void updateStats();
 		void corrupted(Uint32 chunk);
 		void moveDataFilesFinished(KJob* j);
+		void moveDataFilesWithMapFinished(KJob* j);
 		void downloaded(Uint32 chunk);
-		void afterDataCheck();
-		void preallocThreadDone();
 		void moveToCompletedDir();
 		
 	private:	
@@ -363,26 +354,22 @@ namespace bt
 		void loadEncoding();
 		void getSeederInfo(Uint32 & total,Uint32 & connected_to) const;
 		void getLeecherInfo(Uint32 & total,Uint32 & connected_to) const;
-		void migrateTorrent(const QString & default_save_dir);
 		void continueStart();
 		virtual void handleError(const QString & err);
-
-		void initInternal(QueueManagerInterface* qman,const QString & tmpdir,
-						  const QString & ddir,const QString & default_save_dir,bool first_time);
-		
+		void initInternal(QueueManagerInterface* qman,const QString & tmpdir,const QString & ddir);
 		void checkExisting(QueueManagerInterface* qman);
 		void setupDirs(const QString & tmpdir,const QString & ddir);
 		void setupStats();
 		void setupData();
-		virtual bool isCheckingData(bool & finished) const;
-		
 		void setUploadProps(Uint32 limit,Uint32 rate);
 		void setDownloadProps(Uint32 limit,Uint32 rate);
+		
 		
 	signals:
 		void dataCheckFinished();
 		
 	private:
+		JobQueue* job_queue;
 		Torrent* tor;
 		PeerSourceManager* psman;
 		ChunkManager* cman;
@@ -394,25 +381,17 @@ namespace bt
 		MonitorInterface* tmon;
 		ChunkSelectorFactoryInterface* custom_selector_factory;
 		CacheFactory* cache_factory;
-		
 		QString move_data_files_destination_path;
-		bool restart_torrent_after_move_data_files;
-		
 		Timer choker_update_timer;
 		Timer stats_save_timer;
 		Timer stalled_timer;
 		Timer wanted_update_timer;
-		
 		QString tordir;
 		QString old_tordir;
 		QString outputdir;
 		QString error_msg;
-		
 		bool prealloc;
-		PreallocationThread* prealloc_thread;
-		DataCheckerThread* dcheck_thread;
 		TimeStamp last_diskspace_check;
-		bool moving_files;
 		
 		struct InternalStats
 		{
@@ -446,6 +425,10 @@ namespace bt
 		static Uint32 min_diskspace;
 		static bool auto_recheck;
 		static Uint32 num_corrupted_for_recheck;
+		
+		friend class DataCheckerJob;
+		friend class PreallocationJob;
+		friend class JobQueue;
 	};
 	
 	

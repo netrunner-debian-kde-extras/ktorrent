@@ -43,9 +43,8 @@ using namespace net;
 namespace bt
 {
 
-	
-	
 	static Uint32 peer_id_counter = 1;
+	bool Peer::resolve_hostname = true;
 	
 	
 	Peer::Peer(mse::StreamSocket* sock,const PeerID & peer_id,
@@ -100,6 +99,9 @@ namespace bt
 		}
 		pex_allowed = stats.extension_protocol;
 		utorrent_pex_id = 0;
+		
+		if (resolve_hostname)
+			QHostInfo::lookupHost(stats.ip_address,this,SLOT(resolved(QHostInfo)));
 	}
 
 
@@ -117,16 +119,12 @@ namespace bt
 	{
 		sock->close();
 	}
-	
 
 	void Peer::kill()
 	{
 		sock->close();
 		killed = true;
 	}
-
-	
-	
 	
 	void Peer::packetReady(const Uint8* packet,Uint32 len)
 	{
@@ -309,7 +307,7 @@ namespace bt
 				{
 					Uint16 port = ReadUint16(tmp_buf,1);
 				//	Out(SYS_CON|LOG_DEBUG) << "Got PORT packet : " << port << endl;
-					gotPortPacket(getIPAddresss(),port);
+					pman->portPacketReceived(getIPAddresss(),port);
 				}
 				break;
 			case HAVE_ALL:
@@ -426,12 +424,6 @@ namespace bt
 	{
 		return sock->bytesAvailable();
 	}
-
-	void Peer::dataWritten(int )
-	{
-	//	Out(SYS_CON|LOG_DEBUG) << "dataWritten " << bytes << endl;
-		
-	}
 	
 	Uint32 Peer::getUploadRate() const 
 	{
@@ -447,11 +439,6 @@ namespace bt
 			return (Uint32)ceil(sock->getDownloadRate());
 		else
 			return 0;
-	}
-	
-	bool Peer::readyToSend() const 
-	{
-		return true;
 	}
 	
 	void Peer::update()
@@ -574,7 +561,7 @@ namespace bt
 	
 	void Peer::emitPortPacket()
 	{
-		gotPortPacket(sock->getRemoteIPAddress(),sock->getRemotePort());
+		pman->portPacketReceived(sock->getRemoteIPAddress(),sock->getRemotePort());
 	}
 	
 	void Peer::emitPex(const QByteArray & data)
@@ -611,6 +598,21 @@ namespace bt
 	{
 		sock->setGroupIDs(up_gid,down_gid);
 	}
+		
+	void Peer::resolved(const QHostInfo& hinfo)
+	{
+		if (hinfo.error() != QHostInfo::NoError)
+			return;
+		
+		stats.hostname = hinfo.hostName();
+	}
+	
+	void Peer::setResolveHostnames(bool on)
+	{
+		resolve_hostname = on;
+	}
+
+
 }
 
 #include "peer.moc"

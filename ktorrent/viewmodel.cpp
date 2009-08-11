@@ -35,6 +35,8 @@
 #include "core.h"
 #include <interfaces/trackerinterface.h>
 #include <util/sha1hash.h>
+#include "viewdelegate.h"
+#include "view.h"
 
 using namespace bt;
 
@@ -57,7 +59,7 @@ namespace kt
 		leechers_total = s.leechers_total;
 		leechers_connected_to = s.leechers_connected_to;
 		percentage = Percentage(s);
-		share_ratio = ShareRatio(s);
+		share_ratio = s.shareRatio();
 		runtime_dl = tc->getRunningTimeDL();
 		runtime_ul = tc->getRunningTimeUL() - tc->getRunningTimeDL();
 		hidden = false;
@@ -152,7 +154,7 @@ namespace kt
 				ret = true;
 		}
 		
-		float ratio = ShareRatio(s);
+		float ratio = s.shareRatio();
 		if (fabsf(share_ratio - ratio) > 0.01)
 		{
 			modified = true;
@@ -188,7 +190,7 @@ namespace kt
 		switch (col)
 		{
 			case 0: return tc->getDisplayName();
-			case 1: return tc->statusToString();
+			case 1: return s.statusToString();
 			case 2: return BytesToString(bytes_downloaded);
 			case 3: return BytesToString(total_bytes_to_download);
 			case 4: return BytesToString(bytes_uploaded);
@@ -229,7 +231,7 @@ namespace kt
 		switch (col)
 		{
 			case 0: return QString::localeAwareCompare(tc->getDisplayName(),other->tc->getDisplayName()) < 0;
-			case 1: return tc->statusToString() < other->tc->statusToString();
+			case 1: return tc->getStats().statusToString() < other->tc->getStats().statusToString();
 			case 2: return bytes_downloaded < other->bytes_downloaded;
 			case 3: return total_bytes_to_download < other->total_bytes_to_download;
 			case 4: return bytes_uploaded < other->bytes_uploaded;
@@ -297,7 +299,7 @@ namespace kt
 			return group->isMember(tc);
 	}
 
-	ViewModel::ViewModel(Core* core,QObject* parent) : QAbstractTableModel(parent),core(core)
+	ViewModel::ViewModel(Core* core,View* parent) : QAbstractTableModel(parent),core(core),view(parent)
 	{
 		connect(core,SIGNAL(torrentAdded(bt::TorrentInterface*)),this,SLOT(addTorrent(bt::TorrentInterface*)));
 		connect(core,SIGNAL(torrentRemoved(bt::TorrentInterface*)),this,SLOT(removeTorrent(bt::TorrentInterface*)));
@@ -323,13 +325,12 @@ namespace kt
 	void ViewModel::setGroup(Group* g)
 	{
 		group = g;
-		update();
 	}
 	
 	void ViewModel::addTorrent(bt::TorrentInterface* ti)
 	{
 		torrents.append(new Item(ti));
-		update(true);
+		update(view->viewDelegate(),true);
 	}
 	
 	void ViewModel::removeTorrent(bt::TorrentInterface* ti)
@@ -341,7 +342,7 @@ namespace kt
 			if (item->tc == ti)
 			{
 				removeRow(idx);
-				update(true);
+				update(view->viewDelegate(),true);
 				break;
 			}
 			idx++;
@@ -355,7 +356,7 @@ namespace kt
 		//emit dataChanged(createIndex(row,0),createIndex(row,14));
 	}
 
-	bool ViewModel::update(bool force_resort)
+	bool ViewModel::update(ViewDelegate* delegate,bool force_resort)
 	{
 		bool resort = force_resort;
 		Uint32 idx=0;
@@ -366,11 +367,14 @@ namespace kt
 			if (i->update(sort_column,modified))
 				resort = true;
 			
-			bool hidden = !i->member(group);
+			bool hidden = !i->member(group)/* && !delegate->extended(i->tc) */;
 			if (hidden != i->hidden)
 			{
 				i->hidden = hidden;
 				resort = true;
+				// hide the extender if there is one shown
+				if (hidden && delegate->extended(i->tc))
+					delegate->hideExtender(i->tc);
 			}
 			
 			if (!i->hidden)

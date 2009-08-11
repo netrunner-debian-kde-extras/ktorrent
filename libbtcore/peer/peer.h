@@ -20,11 +20,13 @@
 #ifndef BTPEER_H
 #define BTPEER_H
 
-#include <qobject.h>
-#include <qdatetime.h>
+#include <QObject>
+#include <QDateTime>
+#include <QHostInfo>
 #include <util/timer.h>
 #include <interfaces/peerinterface.h>
 #include <util/bitset.h>
+#include <btcore_export.h>
 #include "peerid.h"
 
 namespace net
@@ -40,9 +42,7 @@ namespace mse
 
 namespace bt
 {
-	class Chunk;
 	class Peer;
-	class Request;
 	class Piece;
 	class PacketReader;
 	class PacketWriter;
@@ -62,7 +62,7 @@ namespace bt
 	 * It provides functions for sending packets. Packets it receives
 	 * get relayed to the outside world using a bunch of signals.
 	*/
-	class Peer : public QObject, public PeerInterface
+	class BTCORE_EXPORT Peer : public QObject, public PeerInterface
 	{
 		Q_OBJECT
 	public:
@@ -164,12 +164,6 @@ namespace bt
 		Uint32 bytesAvailable() const;
 		
 		/**
-		 * See if all previously written data, has been sent.
-		 */
-		bool readyToSend() const;
-		
-		
-		/**
 		 * Close the peers connection.
 		 */
 		void closeConnection();
@@ -237,16 +231,11 @@ namespace bt
 		 */
 		void setGroupIDs(Uint32 up_gid,Uint32 down_gid);
 		
+		/// Enable or disable hostname resolving
+		static void setResolveHostnames(bool on);
+		
 	private slots:
-		void dataWritten(int bytes);
-
-	signals:		
-		/**
-		 * Got a port packet from this peer.
-		 * @param ip The IP
-		 * @param port The port
-		 */
-		void gotPortPacket(const QString & ip,Uint16 port);
+		void resolved(const QHostInfo & hinfo);
 		
 	private:
 		void packetReady(const Uint8* packet,Uint32 size);
@@ -272,6 +261,8 @@ namespace bt
 		bool pex_allowed;
 		Uint32 utorrent_pex_id;
 		PeerManager* pman;
+		
+		static bool resolve_hostname;
 
 		friend class PacketWriter;
 		friend class PacketReader;
