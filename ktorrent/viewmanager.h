@@ -27,7 +27,6 @@
 #include <torrent/queuemanager.h>
 
 class QWidget;
-class KMenu;
 class KAction;
 
 
@@ -81,7 +80,13 @@ namespace kt
 		
 		/// Remove a view
 		void removeView(View* view);
+		
+		/// A data scan was started
+		void dataScanStarted(ScanListener* listener);
 
+		/// A data scan was closed
+		void dataScanClosed(ScanListener* listener);
+		
 	public slots:
 		void onCurrentTabChanged(QWidget* tab);
 		void onCurrentGroupChanged(kt::Group* g);
@@ -89,7 +94,7 @@ namespace kt
 		void onGroupRemoved(kt::Group* g);
 		void onGroupAdded(kt::Group* g);
 		void onCurrentTorrentChanged(View* v,bt::TorrentInterface* tc);
-		void onSelectionChaged(View* v);
+		void onSelectionChanged(View* v);
 		
 		/// Start all selected downloads in the current view
 		void startTorrents();
@@ -114,6 +119,7 @@ namespace kt
 		
 		/// Select all torrents in the current view
 		void selectAll();
+		
 		
 	private slots:
 		/// Remove selected downloads and data in the current view
@@ -164,13 +170,15 @@ namespace kt
 		/// Show the speed limits dialog
 		void speedLimits();
 		
+		/// Export a torrent
+		void exportTorrent();
+		
 	private:
 		GUI* gui;
 		Core* core;
 		View* current;
 		QList<View*> views;
 		Group* all_group; 
-		KMenu* view_menu;
 		TorrentActivity* ta;
 		
 		// actions for the view menu 
@@ -197,9 +205,11 @@ namespace kt
 		KAction* open_dir_menu;
 		KAction* groups_menu;
 		KAction* copy_url;
+		KAction* export_torrent;
 		QList<KAction*> configure_columns_list;
 		KAction* speed_limits;
 	};
 }
 
 #endif
+

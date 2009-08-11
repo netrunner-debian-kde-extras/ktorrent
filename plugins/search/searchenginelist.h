@@ -94,6 +94,9 @@ namespace kt
 		
 	private:
 		void convertSearchEnginesFile();
+		void loadDefault(bool removed_to);
+		bool alreadyLoaded(const QString & user_dir);
+		void loadEngine(const QString & global_dir,const QString & user_dir,bool load_removed);
 		
 	private slots:
 		void openSearchDownloadJobFinished(KJob* j);

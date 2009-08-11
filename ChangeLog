@@ -25,6 +25,33 @@ Changes in 3.3 :
 - Remove config option to select between basic and filesystem specific preallocation method (189784)
 - Add patch from amichai which adds easier navigation between torrents in plasma applet (183826)
 - GeoIP database will now get downloaded automatically (and updated every 30 days), so it is no longer distributed with ktorrent
+- Added support for gzip and bzip2 compressed ipfilter files, and improve zip file support
+- Added support for auto completion in tracker, webseed and nodes QLineEdit's of torrent creation dialog (194972)
+- Added option to export the torrent file of a torrent 
+- Choice between file tree or list has been moved from settings to individual views (177401)
+- Add filter box in FileSelectDlg (179980)
+- Add filter box in FileView (173887)
+- Make names of syndication feeds editable (191878)
+- Make refresh interval of syndication feeds configurable (193978)
+- Add hostname lookup for peers (145760)
+- Add filter box to speed limits dialog
+- Add jobsystem to each torrent
+- Data check progress is now shown inside the View
+- Make settings accessible to dbus and scripting engine
+- Allow to add tracker to private torrents (198444)
+- Make it possible to suspend output of logviewer (200730)
+- Add paused overlay on tray icon when queue is paused (174542)
+- Add global shortcut to pause the QM
+- Add legit torrents search engine (174873)
+
+Changes in 3.2.3:
+- Make sure View gets focus back when you are finished editing the name of a torrent
+- Fix bug causing sizes > 4GB not being displayed properly in plasma applet
+- Fix bug in sleep suppression feature causing it to not work when torrents get started at startup (195991)
+- Also announce to DHT node when we get back a GetPeers with nodes (194366)
+- Use deleteLater when removing torrents this should prevent a crash (197421)
+- Do not keep pointer to view menu and groupview menu, this causes crashes when toolbars are reconfigured (198963) 
+- Make global shortcut to show and hide ktorrent work again (174541)
 
 Changes in 3.2.2 :
 - Fix crash when changing speed limits using system tray menu (188447)
@@ -45,6 +72,7 @@ Changes in 3.2.2 :
 - Properly check for GeoIP system library (193117)
 - Fix crash at exit caused by stopping torrent in it's destructor (193585)
 - No longer check if a torrent has to have an announce or a nodes key
+- Added experimental option which replaces KIO to announce with a QHttp based solution, this fixes connection to host broken errors
 - Make sure http post works properly in search plugin (194037)
 
 Changes in 3.2.1 :

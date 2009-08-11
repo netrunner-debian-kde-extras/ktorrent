@@ -27,6 +27,7 @@
 
 namespace kt
 {
+	class ScanListener;
 	class GUI;
 	class Core;
 	class View;
@@ -60,9 +61,16 @@ namespace kt
 		virtual void updateActions();
 		virtual void addToolWidget(QWidget* widget,const QString & text,const QString & icon,const QString & tooltip);
 		virtual void removeToolWidget(QWidget* widget);
+		virtual View* getCurrentView();
 		
 		/// Update the activity
 		void update();
+		
+		/// A data scan was started
+		void dataScanStarted(ScanListener* listener);
+		
+		/// A data scan was closed
+		void dataScanClosed(ScanListener* listener);
 		
 	public slots:
 		/**
@@ -89,6 +97,7 @@ namespace kt
 		* @param tc The torrent 
 		* */
 		void currentTorrentChanged(bt::TorrentInterface* tc);
+		
 		
 	private slots:
 		void newView();

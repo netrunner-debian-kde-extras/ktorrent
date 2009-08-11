@@ -26,7 +26,9 @@
 
 namespace kt
 {
+	class StringCompletionModel;
 	class Core;
+	class GUI;
 	
 	/**
 	 * Dialog to create torrents with
@@ -66,10 +68,14 @@ namespace kt
 		
 	private:
 		void loadGroups();
+		void loadCompleterData();
 		
 	private:
 		Core* core;
 		GUI* gui;
+		StringCompletionModel* tracker_completion;
+		StringCompletionModel* webseeds_completion;
+		StringCompletionModel* nodes_completion;
 	};
 }
 

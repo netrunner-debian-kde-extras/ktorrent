@@ -273,7 +273,7 @@ namespace kt
 		enc.write("seeders_connected_to",s.seeders_connected_to);
 		enc.write("leechers_total",s.leechers_total);
 		enc.write("leechers_connected_to",s.leechers_connected_to);
-		enc.write("status",ti->statusToString());
+		enc.write("status",s.statusToString());
 		enc.write("session_bytes_downloaded", s.session_bytes_downloaded);
 		enc.write("session_bytes_uploaded", s.session_bytes_uploaded);
 		enc.write("output_path", s.output_path);
@@ -428,6 +428,17 @@ namespace kt
 	void DBusTorrent::setPriority(int p)
 	{
 		ti->setPriority(p);
+	}	
+	
+	void DBusTorrent::setAllowedToStart(bool on)
+	{
+		ti->setAllowedToStart(on);
 	}
+
+	bool DBusTorrent::isAllowedToStart() const
+	{
+		return ti->isAllowedToStart();
+	}
+
 }
 

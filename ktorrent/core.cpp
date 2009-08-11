@@ -63,6 +63,7 @@
 #include "missingfilesdlg.h"
 #include "gui.h"
 #include "torrentmigratordlg.h"
+#include "scanlistener.h"
 
 
 using namespace bt;
@@ -100,7 +101,6 @@ namespace kt
 			data_dir += bt::DirSeparator();
 
 		connect(&update_timer,SIGNAL(timeout()),this,SLOT(update()));
-		update_timer.start(CORE_UPDATE_INTERVAL);
 		
 		Uint16 port = Settings::port();
 		if (port == 0)
@@ -262,7 +262,7 @@ namespace kt
 		if (tc->hasExistingFiles())
 		{
 			if (!skip_check)
-				gui->dataScan(tc,false,true,QString::null);
+				doDataCheck(tc);
 			else
 				tc->markExistingFilesAsDownloaded();
 		}
@@ -302,8 +302,7 @@ namespace kt
 		{
 			Out(SYS_GEN|LOG_NOTICE) << "Loading torrent from data " << endl;
 			tc = new TorrentControl();
-			tc->init(qman, data, tdir, dir, 
-					 Settings::useSaveDir() ? Settings::saveDir().path() : QString());
+			tc->init(qman, data, tdir, dir);
 			tc->setLoadUrl(url);
 			
 			if(!init(tc,group,silently))
@@ -343,8 +342,7 @@ namespace kt
 		{
 			Out(SYS_GEN|LOG_NOTICE) << "Loading file " << target << endl;
 			tc = new TorrentControl();
-			tc->init(qman, target, tdir, dir, 
-				 Settings::useSaveDir() ? Settings::saveDir().path() : QString());
+			tc->init(qman, target, tdir, dir);
 			tc->setLoadUrl(KUrl(target));
 			
 			init(tc,group,silently);
@@ -642,8 +640,7 @@ namespace kt
 		try
 		{
 			tc = new TorrentControl();
-			tc->init(qman,idir + "torrent",idir,QString::null,
-				 Settings::useSaveDir() ? Settings::saveDir().path() : QString());
+			tc->init(qman,idir + "torrent",idir,QString::null);
 				
 			qman->append(tc);
 			connectSignals(tc);
@@ -696,6 +693,11 @@ namespace kt
 			{
 				gui->errorMsg(e.toString());
 			}
+			
+			// cleanup potential data scans
+			QMap<bt::TorrentInterface*,ScanListener*>::iterator i = active_scans.find(tc);
+			if (i != active_scans.end())
+				closeScanListener(i.value());
 			
 			torrentRemoved(tc);
 			gman->torrentRemoved(tc);
@@ -765,14 +767,11 @@ namespace kt
 	{
 		try
 		{
-			update_timer.stop();
 			// do nothing if new and old dir are the same
 			if (KUrl(data_dir) == KUrl(new_dir) || data_dir == (new_dir + bt::DirSeparator()))
-			{
-				update_timer.start(CORE_UPDATE_INTERVAL);
 				return true;
-			}
 
+			update_timer.stop();
 			// safety check
 			if (!bt::Exists(new_dir))
 				bt::MakeDir(new_dir);
@@ -880,7 +879,7 @@ namespace kt
 			while (i != qman->end())
 			{
 				bt::TorrentInterface* tc = *i;
-				if (tc->updateNeeded())
+				if (tc->getStats().running)
 				{
 					tc->update();
 					updated = true;
@@ -1169,17 +1168,36 @@ namespace kt
 		Out(SYS_GEN|LOG_IMPORTANT) << "Doing an automatic data check on " 
 					<< tc->getStats().torrent_name << endl;
 		
-		gui->dataScan(tc,false,true,QString::null);
+		doDataCheck(tc);
 	}
 
 	void Core::doDataCheck(bt::TorrentInterface* tc)
 	{
-		bool dummy = false;
-		if (tc->isCheckingData(dummy))
-			return;
-		
-		gui->dataScan(tc,false,false,i18n("Checking Data Integrity"));
+		QMap<bt::TorrentInterface*,ScanListener*>::iterator itr = active_scans.find(tc);
+		if (itr == active_scans.end())
+		{
+			ScanListener* listener = new ScanListener(tc);
+			connect(listener,SIGNAL(closeRequested(ScanListener*)),this,SLOT(closeScanListener(ScanListener*)));
+			active_scans.insert(tc,listener);
+			gui->dataScanStarted(listener);
+			tc->startDataCheck(listener);
+		}
+		else
+		{
+			ScanListener* listener = itr.value();
+			if (listener->isFinished())
+				listener->restart();
+		}
 	}
+	
+	
+	void Core::closeScanListener(ScanListener* sl)
+	{
+		gui->dataScanClosed(sl);
+		active_scans.remove(sl->torrent());
+		sl->deleteLater();
+	}
+
 
 	void Core::onLowDiskSpace(bt::TorrentInterface * tc, bool stopped)
 	{

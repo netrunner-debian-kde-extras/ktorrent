@@ -4,6 +4,9 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 set(libktorrent_SRC 
 	util/mmapfile.cpp
 	util/itemselectionmodel.cpp
+	util/stringcompletionmodel.cpp
+	util/hintlineedit.cpp
+	util/treefiltermodel.cpp
 	
 	interfaces/functions.cpp
 	interfaces/plugin.cpp
@@ -30,6 +33,7 @@ set(libktorrent_SRC
 	dbus/dbus.cpp
 	dbus/dbustorrent.cpp
 	dbus/dbusgroup.cpp
+	dbus/dbussettings.cpp
 	
 	gui/centralwidget.cpp
 	gui/activitybar.cpp
@@ -51,6 +55,6 @@ kde4_add_kcfg_files(libktorrent_SRC settings.kcfgc)
 kde4_add_library(ktcore SHARED ${libktorrent_SRC})
 
 target_link_libraries(ktcore ${KDE4_KDE3SUPPORT_LIBS} ${KDE4_KPARTS_LIBS} ${KDE4_KUTILS_LIBS} btcore ${KDE4_SOLID_LIBS} ${GMP_LIBRARIES})
-set_target_properties(ktcore PROPERTIES VERSION 9.0.0 SOVERSION 9 )
+set_target_properties(ktcore PROPERTIES VERSION 10.0.0 SOVERSION 10 )
 install(TARGETS ktcore  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 

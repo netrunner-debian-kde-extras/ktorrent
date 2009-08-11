@@ -34,22 +34,25 @@ using namespace bt;
 
 namespace kt
 {
-	Feed::Feed(const QString & dir) : dir(dir),status(UNLOADED)
+	const int DEFAULT_REFRESH_RATE = 60;
+	
+	
+	Feed::Feed(const QString & dir) : dir(dir),status(UNLOADED),refresh_rate(DEFAULT_REFRESH_RATE)
 	{
 		connect(&update_timer,SIGNAL(timeout()),this,SLOT(refresh()));
 	}
 	
-	Feed::Feed(const KUrl & url,const QString & dir) : url(url),dir(dir),status(UNLOADED)
+	Feed::Feed(const KUrl & url,const QString & dir) : url(url),dir(dir),status(UNLOADED),refresh_rate(DEFAULT_REFRESH_RATE)
 	{
 		connect(&update_timer,SIGNAL(timeout()),this,SLOT(refresh()));
 		refresh();
 		save();
 	}
 	
-	Feed::Feed(const KUrl & url,Syndication::FeedPtr feed,const QString & dir) : url(url),feed(feed),dir(dir),status(OK)
+	Feed::Feed(const KUrl & url,Syndication::FeedPtr feed,const QString & dir) : url(url),feed(feed),dir(dir),status(OK),refresh_rate(DEFAULT_REFRESH_RATE)
 	{
 		connect(&update_timer,SIGNAL(timeout()),this,SLOT(refresh()));
-		update_timer.start(3600 * 1000);
+		update_timer.start(refresh_rate * 60 * 1000);
 	}
 
 
@@ -99,6 +102,9 @@ namespace kt
 			i++;
 		}
 		enc.end();
+		if (!custom_name.isEmpty())
+			enc.write("custom_name",custom_name);
+		enc.write("refresh_rate",refresh_rate);
 		enc.end();
 	}
 	
@@ -126,6 +132,8 @@ namespace kt
 		try
 		{
 			url = KUrl(dict->getString("url",0));
+			custom_name = dict->getValue("custom_name") ? dict->getString("custom_name",0) : QString();
+			refresh_rate = dict->getValue("refresh_rate") ? dict->getInt("refresh_rate") : DEFAULT_REFRESH_RATE;
 			
 			BListNode* fl = dict->getList("filters");
 			if (fl)
@@ -195,14 +203,14 @@ namespace kt
 		{
 			Out(SYS_SYN|LOG_NOTICE) << "Failed to load feed " << url.prettyUrl() << endl;
 			this->status = FAILED_TO_DOWNLOAD;
-			update_timer.start(3600 * 1000);
+			update_timer.start(refresh_rate * 60 * 1000);
 			updated();
 			return;
 		}
 		
 		Out(SYS_SYN|LOG_NOTICE) << "Loaded feed " << url.prettyUrl() << endl;
 		this->feed = feed;
-		update_timer.start(3600 * 1000);
+		update_timer.start(refresh_rate * 60  * 1000);
 		this->status = OK;
 		checkLoaded();
 		runFilters();
@@ -371,10 +379,44 @@ namespace kt
 			save();
 	}
 	
-	bool  Feed::downloaded(Syndication::ItemPtr item) const
+	bool Feed::downloaded(Syndication::ItemPtr item) const
 	{
 		return loaded.contains(item->id());
 	}
+	
+	
+	QString Feed::displayName() const
+	{
+		if (!custom_name.isEmpty())
+			return custom_name;
+		else if (ok())
+			return feed->title();
+		else
+			return url.prettyUrl();
+	}
+	
+	
+	void Feed::setDisplayName(const QString& dname)
+	{
+		if (custom_name != dname)
+		{
+			custom_name = dname;
+			save();
+			feedRenamed(this);
+		}
+	}
+	
+	
+	void Feed::setRefreshRate(bt::Uint32 r)
+	{
+		if (r > 0)
+		{
+			refresh_rate = r;
+			save();
+			update_timer.setInterval(refresh_rate * 60 * 1000);
+		}
+	}
+
 	
 	//////////////////////////////////
 	SeasonEpisodeItem::SeasonEpisodeItem() : season(-1),episode(-1)

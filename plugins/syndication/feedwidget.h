@@ -49,6 +49,8 @@ namespace kt
 		void filtersClicked();
 		void selectionChanged(const QItemSelection & selected, const QItemSelection & deselected);
 		void updated();
+		void onFeedRenamed(Feed* f);
+		void refreshRateChanged(int v);
 		
 	signals:
 		void updateCaption(QWidget* w,const QString & text);
