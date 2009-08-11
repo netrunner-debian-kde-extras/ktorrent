@@ -13,7 +13,7 @@ endif
 include /usr/share/pkg-kde-tools/makefiles/1/debhelper/kde.mk
 
 %:
-	dh --dbg-package=ktorrent-dbg $@
+	dh --dbg-package=ktorrent-dbg --with quilt $@
 
 prune-tarball:
 	# Remove non-free components: flags and geoip stuff
