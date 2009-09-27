@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-07-28 01:30+0200\n"
+"POT-Creation-Date: 2009-09-23 01:30+0200\n"
 "PO-Revision-Date: 2009-07-17 13:37+0200\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -302,8 +302,8 @@ msgstr "Ni moč preveriti podatkov: %1"
 msgid "Cannot load the torrent file : %1"
 msgstr "Ni moč naložiti torrenta: %1"
 
-#: ktorrent/importdialog.cpp:276 plugins/ipfilter/convertthread.cpp:93
-#: plugins/ipfilter/convertthread.cpp:197
+#: ktorrent/importdialog.cpp:276 plugins/ipfilter/convertthread.cpp:67
+#: plugins/ipfilter/convertthread.cpp:167
 #: plugins/search/searchenginelist.cpp:185 libbtcore/util/fileops.cpp:318
 #: libbtcore/util/fileops.cpp:347 libbtcore/util/fileops.cpp:406
 #: libbtcore/diskio/cachefile.cpp:94
@@ -5739,7 +5739,7 @@ msgstr "Časovna omejitev:"
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:19
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
-#: rc.cpp:1573 plugins/ipfilter/convertthread.cpp:204
+#: rc.cpp:1573 plugins/ipfilter/convertthread.cpp:174
 msgid "Converting..."
 msgstr "Pretvarjanje ..."
 
@@ -7632,11 +7632,11 @@ msgstr ""
 msgid "File Exists"
 msgstr "Datoteka obstaja"
 
-#: plugins/ipfilter/convertthread.cpp:98
+#: plugins/ipfilter/convertthread.cpp:72
 msgid "Loading txt file..."
 msgstr "Nalaganje besedilne datoteke ..."
 
-#: plugins/ipfilter/convertthread.cpp:186
+#: plugins/ipfilter/convertthread.cpp:156
 #, kde-format
 msgid "There are no IP addresses to convert in %1"
 msgstr "V %1 ni nobenega naslova IP za pretvoriti"
@@ -8260,15 +8260,15 @@ msgstr "Filtri"
 msgid "Edit an item"
 msgstr "Uredi postavko"
 
-#: plugins/bwscheduler/bwschedulerplugin.cpp:232
+#: plugins/bwscheduler/bwschedulerplugin.cpp:239
 msgid "Bandwidth Schedule"
 msgstr "Urnik hitrosti"
 
-#: plugins/bwscheduler/bwschedulerplugin.cpp:233
+#: plugins/bwscheduler/bwschedulerplugin.cpp:240
 msgid "Tab to edit the bandwidth schedule"
 msgstr "Pritisnite tabulator da uredite urnik hitrosti"
 
-#: plugins/bwscheduler/schedule.cpp:110 plugins/bwscheduler/schedule.cpp:195
+#: plugins/bwscheduler/schedule.cpp:116 plugins/bwscheduler/schedule.cpp:202
 #: libbtcore/torrent/torrentcreator.cpp:124
 #: libbtcore/torrent/torrentcreator.cpp:259
 #: libbtcore/torrent/torrentcreator.cpp:297
@@ -8276,7 +8276,7 @@ msgstr "Pritisnite tabulator da uredite urnik hitrosti"
 msgid "Cannot open file %1: %2"
 msgstr "Ni moč odpreti datoteke %1: %2"
 
-#: plugins/bwscheduler/schedule.cpp:126 plugins/bwscheduler/schedule.cpp:132
+#: plugins/bwscheduler/schedule.cpp:132 plugins/bwscheduler/schedule.cpp:138
 #, kde-format
 msgid "The file %1 is corrupted or not a proper KTorrent schedule file !"
 msgstr "Datoteka %1 je poškodovana, ali pa ni datoteka z urnikom za KTorrent."
@@ -8316,12 +8316,12 @@ msgstr "Dodaj postavko"
 msgid "No day has been selected !"
 msgstr "Izbran ni bil noben dan."
 
-#: plugins/bwscheduler/additemdlg.cpp:100
+#: plugins/bwscheduler/additemdlg.cpp:101
 msgid ""
 "Failed to add item, because it conflicts with another item on the schedule !"
 msgstr "Ni bilo moč dodati postavke, ker je v sporu z drugo na urniku."
 
-#: plugins/bwscheduler/additemdlg.cpp:105
+#: plugins/bwscheduler/additemdlg.cpp:106
 msgid ""
 "This item could not be added to all selected days, because it conflicts with "
 "another item on the schedule !"
@@ -8624,13 +8624,13 @@ msgstr "Napaka pri branju iz %1"
 msgid "Failed to write to file %1 : %2"
 msgstr "Ni bilo moč pisati v datoteko %1 : %2"
 
-#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:833
+#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:840
 #, kde-format
 msgid "Cannot preallocate diskspace : %1"
 msgstr "Ni moč v naprej dodeliti prostora na disku: %1"
 
-#: libbtcore/diskio/multifilecache.cpp:769
-#: libbtcore/diskio/multifilecache.cpp:849
+#: libbtcore/diskio/multifilecache.cpp:776
+#: libbtcore/diskio/multifilecache.cpp:856
 #, kde-format
 msgid "Cannot open file %1 : %2"
 msgstr "Ni moč odpreti datoteke %1: %2"

@@ -10,15 +10,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-07-28 01:30+0200\n"
-"PO-Revision-Date: 2009-08-12 17:26+0300\n"
+"POT-Creation-Date: 2009-09-23 01:30+0200\n"
+"PO-Revision-Date: 2009-09-06 13:32+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<"
-"=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 0.3\n"
 
 #: ktorrent/groupview.cpp:129
@@ -305,8 +305,8 @@ msgstr "Не вдається перевірити дані: %1"
 msgid "Cannot load the torrent file : %1"
 msgstr "Не вдається завантажити файл торента: %1"
 
-#: ktorrent/importdialog.cpp:276 plugins/ipfilter/convertthread.cpp:93
-#: plugins/ipfilter/convertthread.cpp:197
+#: ktorrent/importdialog.cpp:276 plugins/ipfilter/convertthread.cpp:67
+#: plugins/ipfilter/convertthread.cpp:167
 #: plugins/search/searchenginelist.cpp:185 libbtcore/util/fileops.cpp:318
 #: libbtcore/util/fileops.cpp:347 libbtcore/util/fileops.cpp:406
 #: libbtcore/diskio/cachefile.cpp:94
@@ -1619,7 +1619,8 @@ msgid "Keep Data"
 msgstr "Зберегти дані"
 
 #: ktorrent/view.cpp:230
-msgid "You will lose all the downloaded data. Are you sure you want to do this?"
+msgid ""
+"You will lose all the downloaded data. Are you sure you want to do this?"
 msgstr "Ви втратите всі звантажені дані. Ви справді хочете це зробити?"
 
 #: ktorrent/view.cpp:231
@@ -1633,7 +1634,8 @@ msgstr "Виберіть каталог, куди пересунути дані.
 
 #: libktcore/dbus/dbustorrent.cpp:321
 msgid "Maximum share ratio reached !"
-msgstr "Перевищено максимальне значення коефіцієнта вивантаження / звантаження!"
+msgstr ""
+"Перевищено максимальне значення коефіцієнта вивантаження / звантаження!"
 
 #: libktcore/dbus/dbustorrent.cpp:324
 msgid "Maximum seed time reached !"
@@ -2864,7 +2866,8 @@ msgstr "Не перевіряти повторно, якщо шматки біл
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxSizeForUploadDataCheck)
 #: rc.cpp:359
 msgid "The maximum size a chunk can be for rechecking during uploading."
-msgstr "Максимальний розмір шматка, який можна перевіряти під час вивантаження."
+msgstr ""
+"Максимальний розмір шматка, який можна перевіряти під час вивантаження."
 
 #. i18n: file: ktorrent/btpref.ui:194
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxSizeForUploadDataCheck)
@@ -3541,7 +3544,8 @@ msgstr "Пенал звантаження"
 #. i18n: file: ktorrent/qmpref.ui:31
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxDownloads)
 #: rc.cpp:640
-msgid "The maximum number of simultaneous downloads the queue manager will run."
+msgid ""
+"The maximum number of simultaneous downloads the queue manager will run."
 msgstr ""
 "Максимальна кількість одночасних завантажень у черзі, які можна одночасно "
 "запускати."
@@ -5768,7 +5772,7 @@ msgstr "Обмеження часу:"
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:19
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
-#: rc.cpp:1573 plugins/ipfilter/convertthread.cpp:204
+#: rc.cpp:1573 plugins/ipfilter/convertthread.cpp:174
 msgid "Converting..."
 msgstr "Перетворення..."
 
@@ -7670,11 +7674,11 @@ msgstr "Файл фільтра (level1.dat) вже існує, хочете п�
 msgid "File Exists"
 msgstr "Файл існує"
 
-#: plugins/ipfilter/convertthread.cpp:98
+#: plugins/ipfilter/convertthread.cpp:72
 msgid "Loading txt file..."
 msgstr "Завантаження текстового файла..."
 
-#: plugins/ipfilter/convertthread.cpp:186
+#: plugins/ipfilter/convertthread.cpp:156
 #, kde-format
 msgid "There are no IP addresses to convert in %1"
 msgstr "Відсутні IP-адреси для перетворення у %1"
@@ -8294,15 +8298,15 @@ msgstr "Фільтри BF"
 msgid "Edit an item"
 msgstr "Змінити запис"
 
-#: plugins/bwscheduler/bwschedulerplugin.cpp:232
+#: plugins/bwscheduler/bwschedulerplugin.cpp:239
 msgid "Bandwidth Schedule"
 msgstr "Розклад ширини каналу"
 
-#: plugins/bwscheduler/bwschedulerplugin.cpp:233
+#: plugins/bwscheduler/bwschedulerplugin.cpp:240
 msgid "Tab to edit the bandwidth schedule"
 msgstr "Вкладка для редагування розкладу ширини каналу"
 
-#: plugins/bwscheduler/schedule.cpp:110 plugins/bwscheduler/schedule.cpp:195
+#: plugins/bwscheduler/schedule.cpp:116 plugins/bwscheduler/schedule.cpp:202
 #: libbtcore/torrent/torrentcreator.cpp:124
 #: libbtcore/torrent/torrentcreator.cpp:259
 #: libbtcore/torrent/torrentcreator.cpp:297
@@ -8310,7 +8314,7 @@ msgstr "Вкладка для редагування розкладу ширин
 msgid "Cannot open file %1: %2"
 msgstr "Не вдається відкрити файл %1: %2"
 
-#: plugins/bwscheduler/schedule.cpp:126 plugins/bwscheduler/schedule.cpp:132
+#: plugins/bwscheduler/schedule.cpp:132 plugins/bwscheduler/schedule.cpp:138
 #, kde-format
 msgid "The file %1 is corrupted or not a proper KTorrent schedule file !"
 msgstr ""
@@ -8351,12 +8355,12 @@ msgstr "Додати елемент"
 msgid "No day has been selected !"
 msgstr "Не було вибрано жодного дня!"
 
-#: plugins/bwscheduler/additemdlg.cpp:100
+#: plugins/bwscheduler/additemdlg.cpp:101
 msgid ""
 "Failed to add item, because it conflicts with another item on the schedule !"
 msgstr "Цей запис конфліктує з іншим записом у розкладі, його не можна додати!"
 
-#: plugins/bwscheduler/additemdlg.cpp:105
+#: plugins/bwscheduler/additemdlg.cpp:106
 msgid ""
 "This item could not be added to all selected days, because it conflicts with "
 "another item on the schedule !"
@@ -8658,13 +8662,13 @@ msgstr "Помилка читання з %1"
 msgid "Failed to write to file %1 : %2"
 msgstr "Не вдалося записати в файл %1: %2"
 
-#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:833
+#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:840
 #, kde-format
 msgid "Cannot preallocate diskspace : %1"
 msgstr "Не вдається виділити місце на диску: %1"
 
-#: libbtcore/diskio/multifilecache.cpp:769
-#: libbtcore/diskio/multifilecache.cpp:849
+#: libbtcore/diskio/multifilecache.cpp:776
+#: libbtcore/diskio/multifilecache.cpp:856
 #, kde-format
 msgid "Cannot open file %1 : %2"
 msgstr "Не вдається відкрити файл %1: %2"

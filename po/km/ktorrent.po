@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-07-28 01:30+0200\n"
+"POT-Creation-Date: 2009-09-23 01:30+0200\n"
 "PO-Revision-Date: 2009-07-27 14:00+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -308,8 +308,8 @@ msgstr "មិន​អាច​ផ្ទៀងផ្ទាត់​ទិន្
 msgid "Cannot load the torrent file : %1"
 msgstr "មិន​អាច​ផ្ទុក​ឯកសារ​ torrent ៖​ %1"
 
-#: ktorrent/importdialog.cpp:276 plugins/ipfilter/convertthread.cpp:93
-#: plugins/ipfilter/convertthread.cpp:197
+#: ktorrent/importdialog.cpp:276 plugins/ipfilter/convertthread.cpp:67
+#: plugins/ipfilter/convertthread.cpp:167
 #: plugins/search/searchenginelist.cpp:185 libbtcore/util/fileops.cpp:318
 #: libbtcore/util/fileops.cpp:347 libbtcore/util/fileops.cpp:406
 #: libbtcore/diskio/cachefile.cpp:94
@@ -5682,7 +5682,7 @@ msgstr "ពេល​កំណត់ ៖"
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:19
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
-#: rc.cpp:1573 plugins/ipfilter/convertthread.cpp:204
+#: rc.cpp:1573 plugins/ipfilter/convertthread.cpp:174
 msgid "Converting..."
 msgstr "កំពុង​​​បម្លែង..."
 
@@ -7570,11 +7570,11 @@ msgstr "មាន​ឯកសារ​តម្រង (level1.dat) រួចហ�
 msgid "File Exists"
 msgstr "មាន​ឯកសារ​រួច​ហើយ"
 
-#: plugins/ipfilter/convertthread.cpp:98
+#: plugins/ipfilter/convertthread.cpp:72
 msgid "Loading txt file..."
 msgstr "កំពុង​ផ្ទុក​ឯកសារ​ txt..."
 
-#: plugins/ipfilter/convertthread.cpp:186
+#: plugins/ipfilter/convertthread.cpp:156
 #, kde-format
 msgid "There are no IP addresses to convert in %1"
 msgstr "មិនមាន​អាសយដ្ឋាន IP ដែល​ត្រូវបម្លែង​ជា %1 ទេ"
@@ -8186,15 +8186,15 @@ msgstr "តម្រង BF"
 msgid "Edit an item"
 msgstr "កែសម្រួល​ធាតុ"
 
-#: plugins/bwscheduler/bwschedulerplugin.cpp:232
+#: plugins/bwscheduler/bwschedulerplugin.cpp:239
 msgid "Bandwidth Schedule"
 msgstr "តារាង​កំណត់​ពេល​កម្រិត​បញ្ជូន"
 
-#: plugins/bwscheduler/bwschedulerplugin.cpp:233
+#: plugins/bwscheduler/bwschedulerplugin.cpp:240
 msgid "Tab to edit the bandwidth schedule"
 msgstr "ផ្ទាំង​ដែល​ត្រូវ​កែសម្រួល​តារាង​ពេលវេលា bandwidth"
 
-#: plugins/bwscheduler/schedule.cpp:110 plugins/bwscheduler/schedule.cpp:195
+#: plugins/bwscheduler/schedule.cpp:116 plugins/bwscheduler/schedule.cpp:202
 #: libbtcore/torrent/torrentcreator.cpp:124
 #: libbtcore/torrent/torrentcreator.cpp:259
 #: libbtcore/torrent/torrentcreator.cpp:297
@@ -8202,7 +8202,7 @@ msgstr "ផ្ទាំង​ដែល​ត្រូវ​កែសម្រួ
 msgid "Cannot open file %1: %2"
 msgstr "មិន​អាច​បើក​ឯកសារ %1 ៖​ %2 បានទេ"
 
-#: plugins/bwscheduler/schedule.cpp:126 plugins/bwscheduler/schedule.cpp:132
+#: plugins/bwscheduler/schedule.cpp:132 plugins/bwscheduler/schedule.cpp:138
 #, kde-format
 msgid "The file %1 is corrupted or not a proper KTorrent schedule file !"
 msgstr "ឯកសារ %1 ខូច ឬ​មិនមែន​ជា​ឯកសារ​កំណត់​ពេល KTorrent ដែល​ត្រឹមត្រូវ​ទេ !"
@@ -8242,12 +8242,12 @@ msgstr "បន្ថែម​ធាតុ​មួយ"
 msgid "No day has been selected !"
 msgstr "គ្មាន​ថ្ងៃ​ត្រូវ​បាន​ជ្រើស !"
 
-#: plugins/bwscheduler/additemdlg.cpp:100
+#: plugins/bwscheduler/additemdlg.cpp:101
 msgid ""
 "Failed to add item, because it conflicts with another item on the schedule !"
 msgstr "បាន​បរាជ័យ​ក្នុង​បន្ថែម​ធាតុ ពីព្រោះ​វា​ប៉ះទង្គិច​ជា​មួយ​ធាតុ​ផ្សេង​នៅ​ក្នុង​កាលវិភាគ !"
 
-#: plugins/bwscheduler/additemdlg.cpp:105
+#: plugins/bwscheduler/additemdlg.cpp:106
 msgid ""
 "This item could not be added to all selected days, because it conflicts with "
 "another item on the schedule !"
@@ -8544,13 +8544,13 @@ msgstr "កំហុស​ក្នុងការ​អាន​ពី %1"
 msgid "Failed to write to file %1 : %2"
 msgstr "បរាជ័យ​ក្នុងការ​សរសេរ​ទៅ​ឯកសារ %1 ៖ %2"
 
-#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:833
+#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:840
 #, kde-format
 msgid "Cannot preallocate diskspace : %1"
 msgstr "មិនអាច​បម្រុងទុក​ទំហំថាស​ជាមុន​បាន ៖ %1"
 
-#: libbtcore/diskio/multifilecache.cpp:769
-#: libbtcore/diskio/multifilecache.cpp:849
+#: libbtcore/diskio/multifilecache.cpp:776
+#: libbtcore/diskio/multifilecache.cpp:856
 #, kde-format
 msgid "Cannot open file %1 : %2"
 msgstr "មិន​អាច​បើក​ឯកសារ %1 ៖​ %2"

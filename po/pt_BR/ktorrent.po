@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-07-28 01:30+0200\n"
-"PO-Revision-Date: 2009-08-04 23:52-0300\n"
+"POT-Creation-Date: 2009-09-23 01:30+0200\n"
+"PO-Revision-Date: 2009-09-01 23:37-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@lists.kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -305,8 +305,8 @@ msgstr "Não foi possível verificar os dados: %1"
 msgid "Cannot load the torrent file : %1"
 msgstr "Não foi possível carregar o arquivo torrent: %1"
 
-#: ktorrent/importdialog.cpp:276 plugins/ipfilter/convertthread.cpp:93
-#: plugins/ipfilter/convertthread.cpp:197
+#: ktorrent/importdialog.cpp:276 plugins/ipfilter/convertthread.cpp:67
+#: plugins/ipfilter/convertthread.cpp:167
 #: plugins/search/searchenginelist.cpp:185 libbtcore/util/fileops.cpp:318
 #: libbtcore/util/fileops.cpp:347 libbtcore/util/fileops.cpp:406
 #: libbtcore/diskio/cachefile.cpp:94
@@ -555,7 +555,7 @@ msgstr "Felix Berger"
 
 #: ktorrent/main.cpp:102
 msgid "ChunkBar's tooltip and IWFileTreeItem sorting"
-msgstr "Tooltip da ChunkBar e organização da IWFileTreeItem"
+msgstr "Dica de ferramenta da ChunkBar e organização da IWFileTreeItem"
 
 #: ktorrent/main.cpp:103
 msgid "Andreas Kling"
@@ -600,7 +600,7 @@ msgstr "Diego Rosario Brogna"
 
 #: ktorrent/main.cpp:108
 msgid "Global max share ratio patch"
-msgstr "Patch de proporção de compartilhamento máx."
+msgstr "Correção de proporção de compartilhamento máx."
 
 #: ktorrent/main.cpp:109
 msgid "Lesly Weyts"
@@ -1459,7 +1459,7 @@ msgid ""
 "idea to do a data integrity check on the torrent."
 msgstr ""
 "Dados corrompidos foram encontrados no torrent <b>%1</b><br>Seria uma boa "
-"idéia verificar a integridade dos dados do torrent."
+"ideia verificar a integridade dos dados do torrent."
 
 #: ktorrent/trayicon.cpp:209
 #, kde-format
@@ -2759,7 +2759,7 @@ msgstr ""
 "é útil quando seu ISP está diminuindo a velocidade das conexões bittorrent. "
 "</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"> A encriptação previnirá "
+"right:0px; -qt-block-indent:0; text-indent:0px;\"> A encriptação prevenirá "
 "que seu tráfego seja sinalizado como tráfego de bittorrent, e então o ISP "
 "não irá reduzir sua velocidade.</p></body></html>"
 
@@ -3352,9 +3352,9 @@ msgstr ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Nota:</span> Isso somente é usado no diálogo de seleção de "
-"arquivos quando você modifica o grupo; e a locaização do download no diálogo "
-"será definida para esta. Você ainda pode ignorá-la, se desejar. </p></body></"
-"html>"
+"arquivos quando você modifica o grupo; e a localização do download no "
+"diálogo será definida para esta. Você ainda pode ignorá-la, se desejar. </"
+"p></body></html>"
 
 #. i18n: file: ktorrent/grouppolicydlg.ui:53
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, m_default_location)
@@ -3391,9 +3391,9 @@ msgstr ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Nota: </span> Isso somente é usado no diálogo de seleção de "
-"arquivos quando você modifica o grupo; e a locaização do download no diálogo "
-"será definida para esta. Você ainda pode ignorá-la, se desejar.</p></body></"
-"html>"
+"arquivos quando você modifica o grupo; e a localização do download no "
+"diálogo será definida para esta. Você ainda pode ignorá-la, se desejar.</p></"
+"body></html>"
 
 #. i18n: file: ktorrent/grouppolicydlg.ui:65
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox)
@@ -3414,7 +3414,7 @@ msgstr ""
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Configurações padraõ para "
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Configurações padrão para "
 "torrents que são adicionados ao grupo.</p></body></html>"
 
 #. i18n: file: ktorrent/grouppolicydlg.ui:68
@@ -5775,7 +5775,7 @@ msgstr "Limite de tempo:"
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:19
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
-#: rc.cpp:1573 plugins/ipfilter/convertthread.cpp:204
+#: rc.cpp:1573 plugins/ipfilter/convertthread.cpp:174
 msgid "Converting..."
 msgstr "Convertendo..."
 
@@ -6436,7 +6436,7 @@ msgstr "Nome:"
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: rc.cpp:1908
 msgid "String Matching"
-msgstr "Igualar Seqüência"
+msgstr "Igualar Sequência"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:71
 #. i18n: ectx: property (toolTip), widget (KEditListBox, m_word_matches)
@@ -6513,7 +6513,7 @@ msgstr ""
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">A seqüência a ser "
+"right:0px; -qt-block-indent:0; text-indent:0px;\">A sequência a ser "
 "encontrada no título de um item. Uma sintaxe de curingas simples é suportada:"
 "</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
@@ -6577,20 +6577,20 @@ msgid ""
 "By default strings will use wildcard matching. If you want to use regular "
 "expressions, this needs to be enabled."
 msgstr ""
-"Por padrão, seqüências serão igualadas por curingas. Se você deseja usar "
+"Por padrão, sequências serão igualadas por curingas. Se você deseja usar "
 "expressões regulares, isto precisa estar habilitado."
 
 #. i18n: file: plugins/syndication/filtereditor.ui:87
 #. i18n: ectx: property (text), widget (QCheckBox, m_reg_exp_syntax)
 #: rc.cpp:1945
 msgid "Strings are regular expressions"
-msgstr "Seqüências são expressões regulares"
+msgstr "Sequências são expressões regulares"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:94
 #. i18n: ectx: property (text), widget (QCheckBox, m_all_words_must_match)
 #: rc.cpp:1948
 msgid "Item must match all strings"
-msgstr "O item deve igualar todas as seqüências"
+msgstr "O item deve igualar todas as sequências"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:101
 #. i18n: ectx: property (text), widget (QCheckBox, m_match_case_sensitive)
@@ -6952,7 +6952,7 @@ msgstr "Grupo"
 #. i18n: ectx: property (text), widget (QLabel, testStringLabel)
 #: rc.cpp:2156
 msgid "Test String"
-msgstr "Seqüência de Teste"
+msgstr "Sequência de Teste"
 
 #. i18n: file: plugins/bitfinder/filter/filterdetails.ui:130
 #. i18n: ectx: property (title), widget (QGroupBox, expressionsBox)
@@ -7681,11 +7681,11 @@ msgstr ""
 msgid "File Exists"
 msgstr "O Arquivo Existe"
 
-#: plugins/ipfilter/convertthread.cpp:98
+#: plugins/ipfilter/convertthread.cpp:72
 msgid "Loading txt file..."
 msgstr "Carregando arquivo txt..."
 
-#: plugins/ipfilter/convertthread.cpp:186
+#: plugins/ipfilter/convertthread.cpp:156
 #, kde-format
 msgid "There are no IP addresses to convert in %1"
 msgstr "Não existem endereços IP para converter, em %1"
@@ -8305,15 +8305,15 @@ msgstr "Filtros BF"
 msgid "Edit an item"
 msgstr "Editar um item"
 
-#: plugins/bwscheduler/bwschedulerplugin.cpp:232
+#: plugins/bwscheduler/bwschedulerplugin.cpp:239
 msgid "Bandwidth Schedule"
 msgstr "Agenda da Largura de Banda"
 
-#: plugins/bwscheduler/bwschedulerplugin.cpp:233
+#: plugins/bwscheduler/bwschedulerplugin.cpp:240
 msgid "Tab to edit the bandwidth schedule"
 msgstr "Aba para editar a agenda da largura de banda"
 
-#: plugins/bwscheduler/schedule.cpp:110 plugins/bwscheduler/schedule.cpp:195
+#: plugins/bwscheduler/schedule.cpp:116 plugins/bwscheduler/schedule.cpp:202
 #: libbtcore/torrent/torrentcreator.cpp:124
 #: libbtcore/torrent/torrentcreator.cpp:259
 #: libbtcore/torrent/torrentcreator.cpp:297
@@ -8321,7 +8321,7 @@ msgstr "Aba para editar a agenda da largura de banda"
 msgid "Cannot open file %1: %2"
 msgstr "Não foi possível abrir o arquivo %1: %2"
 
-#: plugins/bwscheduler/schedule.cpp:126 plugins/bwscheduler/schedule.cpp:132
+#: plugins/bwscheduler/schedule.cpp:132 plugins/bwscheduler/schedule.cpp:138
 #, kde-format
 msgid "The file %1 is corrupted or not a proper KTorrent schedule file !"
 msgstr ""
@@ -8363,13 +8363,13 @@ msgstr "Adicionar um item"
 msgid "No day has been selected !"
 msgstr "Nenhum dia foi selecionado!"
 
-#: plugins/bwscheduler/additemdlg.cpp:100
+#: plugins/bwscheduler/additemdlg.cpp:101
 msgid ""
 "Failed to add item, because it conflicts with another item on the schedule !"
 msgstr ""
 "Falha ao adicionar o item, porque ele conflita com outro item na agenda!"
 
-#: plugins/bwscheduler/additemdlg.cpp:105
+#: plugins/bwscheduler/additemdlg.cpp:106
 msgid ""
 "This item could not be added to all selected days, because it conflicts with "
 "another item on the schedule !"
@@ -8670,13 +8670,13 @@ msgstr "Erro lendo de %1"
 msgid "Failed to write to file %1 : %2"
 msgstr "Falha ao gravar no arquivo %1 : %2"
 
-#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:833
+#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:840
 #, kde-format
 msgid "Cannot preallocate diskspace : %1"
 msgstr "Não foi possível pré-alocar o espaço em disco: %1"
 
-#: libbtcore/diskio/multifilecache.cpp:769
-#: libbtcore/diskio/multifilecache.cpp:849
+#: libbtcore/diskio/multifilecache.cpp:776
+#: libbtcore/diskio/multifilecache.cpp:856
 #, kde-format
 msgid "Cannot open file %1 : %2"
 msgstr "Não foi possível abrir o arquivo %1 : %2"

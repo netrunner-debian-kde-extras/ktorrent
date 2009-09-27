@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-07-28 01:30+0200\n"
-"PO-Revision-Date: 2009-07-31 12:25+0000\n"
+"POT-Creation-Date: 2009-09-23 01:30+0200\n"
+"PO-Revision-Date: 2009-09-16 11:44+0000\n"
 "Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
 "Language-Team: Icelandic <kde-isl@molar.is>\n"
 "MIME-Version: 1.0\n"
@@ -301,8 +301,8 @@ msgstr "Gat ekki yfirfarið gögn : %1"
 msgid "Cannot load the torrent file : %1"
 msgstr "Gat ekki hlaðið inn straumskrá (torrent file) : %1"
 
-#: ktorrent/importdialog.cpp:276 plugins/ipfilter/convertthread.cpp:93
-#: plugins/ipfilter/convertthread.cpp:197
+#: ktorrent/importdialog.cpp:276 plugins/ipfilter/convertthread.cpp:67
+#: plugins/ipfilter/convertthread.cpp:167
 #: plugins/search/searchenginelist.cpp:185 libbtcore/util/fileops.cpp:318
 #: libbtcore/util/fileops.cpp:347 libbtcore/util/fileops.cpp:406
 #: libbtcore/diskio/cachefile.cpp:94
@@ -587,7 +587,7 @@ msgstr "Thomas Bernard"
 
 #: ktorrent/main.cpp:107
 msgid "Miniupnp was used as an example for our own UPnP implementation"
-msgstr ""
+msgstr "Miniupnp var notað sem dæmi um okkar eigin UPnP útfærslu"
 
 #: ktorrent/main.cpp:108
 msgid "Diego Rosario Brogna"
@@ -595,7 +595,7 @@ msgstr "Diego Rosario Brogna"
 
 #: ktorrent/main.cpp:108
 msgid "Global max share ratio patch"
-msgstr ""
+msgstr "Viðbót með víðværu hámarksdeilihlutfalli"
 
 #: ktorrent/main.cpp:109
 msgid "Lesly Weyts"
@@ -631,7 +631,7 @@ msgstr "Scott Wolchok"
 
 #: ktorrent/main.cpp:113
 msgid "Conversion speed improvement in ipfilter plugin"
-msgstr ""
+msgstr "Bætti umbreytihraða í ipfilter íforritinu"
 
 #: ktorrent/main.cpp:114
 msgid "Bryan Burns of Juniper Networks"
@@ -639,7 +639,7 @@ msgstr "Bryan Burns frá Juniper Networks"
 
 #: ktorrent/main.cpp:114
 msgid "Discovered 2 security vulnerabilities (both are fixed)"
-msgstr ""
+msgstr "Uppgötvaði 2 öryggisholur (báðar eru lagaðar)"
 
 #: ktorrent/main.cpp:115
 msgid "Goten Xiao"
@@ -771,16 +771,15 @@ msgstr ""
 
 #: ktorrent/main.cpp:131
 msgid "Amichai Rothman"
-msgstr ""
+msgstr "Amichai Rothman"
 
 #: ktorrent/main.cpp:131
 msgid "Patch to make the plasma applet a popup applet"
 msgstr ""
 
 #: ktorrent/main.cpp:135
-#, fuzzy
 msgid "Document to open"
-msgstr "Skjal sem á að opna"
+msgstr "Skjal til að opna"
 
 #: ktorrent/main.cpp:136
 msgid "Silently open torrent given on URL"
@@ -1595,8 +1594,9 @@ msgstr ""
 
 #: ktorrent/view.cpp:346 plugins/infowidget/fileview.cpp:270
 #: plugins/infowidget/fileview.cpp:291
+#, fuzzy
 msgid "Select a directory to move the data to."
-msgstr ""
+msgstr "Veldu möppu til að gæra gögnin yfir í."
 
 #: libktcore/dbus/dbustorrent.cpp:321
 msgid "Maximum share ratio reached !"
@@ -1864,8 +1864,9 @@ msgstr "sveinki@nett.is"
 #. i18n: file: ktorrent/scandlg.ui:16
 #. i18n: ectx: property (text), widget (QLabel, torrent_label)
 #: rc.cpp:5
+#, fuzzy
 msgid "Scanning data of torrent:"
-msgstr ""
+msgstr "Yfirfer gögn straums:"
 
 #. i18n: file: ktorrent/scandlg.ui:28
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
@@ -2096,8 +2097,9 @@ msgstr ""
 #. i18n: file: ktorrent/networkpref.ui:143
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: rc.cpp:113 rc.cpp:820 rc.cpp:1032
+#, fuzzy
 msgid "Maximum upload speed:"
-msgstr ""
+msgstr "Mesti sendingarhraði:"
 
 #. i18n: file: ktorrent/recommendedsettingsdlg.ui:221
 #. i18n: ectx: property (text), widget (QLabel, label_5)
@@ -2112,8 +2114,9 @@ msgstr ""
 #. i18n: file: ktorrent/networkpref.ui:120
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: rc.cpp:117 rc.cpp:811 rc.cpp:1020
+#, fuzzy
 msgid "Maximum download speed:"
-msgstr ""
+msgstr "Mesti niðurhalshraði:"
 
 #. i18n: file: ktorrent/recommendedsettingsdlg.ui:235
 #. i18n: ectx: property (text), widget (QLabel, label_7)
@@ -2633,8 +2636,9 @@ msgstr ""
 #. i18n: file: ktorrent/btpref.ui:113
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: rc.cpp:329 libbtcore/util/logsystemmanager.cpp:35
+#, fuzzy
 msgid "Tracker"
-msgstr ""
+msgstr "Skrásetjari (tracker)"
 
 #. i18n: file: ktorrent/btpref.ui:119
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useCustomIP)
@@ -2717,8 +2721,9 @@ msgstr ""
 #. i18n: file: ktorrent/advancedpref.ui:294
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeVideo)
 #: rc.cpp:362 rc.cpp:1191 rc.cpp:1203
+#, fuzzy
 msgid " KiB"
-msgstr ""
+msgstr " KiB"
 
 #. i18n: file: ktorrent/btpref.ui:210
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_autoRecheck)
@@ -3032,8 +3037,9 @@ msgstr ""
 #. i18n: file: ktorrent/torrentcreatordlg.ui:168
 #. i18n: ectx: attribute (title), widget (QWidget, m_tracker_tab)
 #: rc.cpp:463 plugins/infowidget/infowidgetplugin.cpp:262
+#, fuzzy
 msgid "Trackers"
-msgstr ""
+msgstr "Skrásetjarar (trackers)"
 
 #. i18n: file: ktorrent/torrentcreatordlg.ui:196
 #. i18n: ectx: property (text), widget (KPushButton, m_move_up)
@@ -3247,8 +3253,9 @@ msgstr ""
 #. i18n: file: ktorrent/qmpref.ui:222
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: rc.cpp:587 rc.cpp:718
+#, fuzzy
 msgid "Maximum share ratio:"
-msgstr ""
+msgstr "Mesta skiptihlutfall:"
 
 #. i18n: file: ktorrent/grouppolicydlg.ui:166
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_only_new)
@@ -4835,8 +4842,9 @@ msgstr "Stærð:"
 #. i18n: file: plugins/infowidget/trackerview.ui:26
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: rc.cpp:1420
+#, fuzzy
 msgid "Current Tracker"
-msgstr ""
+msgstr "Núverandi skrásetjari (tracker)"
 
 #. i18n: file: plugins/infowidget/trackerview.ui:55
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -5083,8 +5091,9 @@ msgstr ""
 #. i18n: file: plugins/infowidget/statustab.ui:157
 #. i18n: ectx: property (text), widget (QLabel, label_17)
 #: rc.cpp:1540
+#, fuzzy
 msgid "Next update in:"
-msgstr ""
+msgstr "Næsta uppfærsla eftir:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:217
 #. i18n: ectx: property (text), widget (QLabel, label_4)
@@ -5126,9 +5135,10 @@ msgstr "Tímatakmark:"
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:19
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
-#: rc.cpp:1573 plugins/ipfilter/convertthread.cpp:204
+#: rc.cpp:1573 plugins/ipfilter/convertthread.cpp:174
+#, fuzzy
 msgid "Converting..."
-msgstr ""
+msgstr "Umbreyting..."
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:28
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
@@ -5371,8 +5381,9 @@ msgstr "Meðaltal"
 #. i18n: file: plugins/stats/DisplaySettings.ui:451
 #. i18n: ectx: property (text), widget (QLabel, label_17)
 #: rc.cpp:1665 rc.cpp:1695
+#, fuzzy
 msgid "Limit"
-msgstr ""
+msgstr "Takmörk"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:172
 #. i18n: ectx: property (text), widget (QLabel, label_14)
@@ -5564,8 +5575,9 @@ msgstr ""
 #. i18n: file: plugins/stats/Settings.ui:247
 #. i18n: ectx: property (title), widget (QGroupBox, MaxModeGbw)
 #: rc.cpp:1791
+#, fuzzy
 msgid "Maximum"
-msgstr ""
+msgstr "Hámark"
 
 #. i18n: file: plugins/stats/Settings.ui:255
 #. i18n: ectx: property (text), widget (QLabel, label_5)
@@ -6527,12 +6539,14 @@ msgid "Move File"
 msgstr "Færa skrá"
 
 #: plugins/infowidget/fileview.cpp:83
+#, fuzzy
 msgid "Collapse Folder Tree"
-msgstr ""
+msgstr "Fella saman möppugrein"
 
 #: plugins/infowidget/fileview.cpp:84
+#, fuzzy
 msgid "Expand Folder Tree"
-msgstr ""
+msgstr "Fella út möppugrein"
 
 #: plugins/infowidget/fileview.cpp:255
 msgid "You will lose all data in this file, are you sure you want to do this ?"
@@ -6634,16 +6648,18 @@ msgid "Interesting"
 msgstr "Áhugavert"
 
 #: plugins/infowidget/peerviewmodel.cpp:389
+#, fuzzy
 msgid "IP address of the peer"
-msgstr ""
+msgstr "IP vistfang jafningja"
 
 #: plugins/infowidget/peerviewmodel.cpp:390
 msgid "Country the peer is in"
 msgstr ""
 
 #: plugins/infowidget/peerviewmodel.cpp:391
+#, fuzzy
 msgid "Which client the peer is using"
-msgstr ""
+msgstr "Hvaða forrit jafningi notar"
 
 #: plugins/infowidget/peerviewmodel.cpp:392
 msgid "Download speed"
@@ -6668,20 +6684,23 @@ msgid "How much data the peer has of the torrent"
 msgstr ""
 
 #: plugins/infowidget/peerviewmodel.cpp:397
+#, fuzzy
 msgid "Whether or not the peer has DHT enabled"
-msgstr ""
+msgstr "Hvort jafninginn sé með DHT virkjað"
 
 #: plugins/infowidget/peerviewmodel.cpp:398
 msgid "The score of the peer, KTorrent uses this to determine who to upload to"
 msgstr ""
 
 #: plugins/infowidget/peerviewmodel.cpp:399
+#, fuzzy
 msgid "Only peers which have an upload slot will get data from us"
-msgstr ""
+msgstr "Einungis jafningjar sem eiga sendingarhólf fá gögn frá okkur"
 
 #: plugins/infowidget/peerviewmodel.cpp:400
+#, fuzzy
 msgid "The number of download and upload requests"
-msgstr ""
+msgstr "Fjöldi fyrirspurna um niðurhal og sendingar"
 
 #: plugins/infowidget/peerviewmodel.cpp:401
 msgid "How much data we downloaded from this peer"
@@ -6692,12 +6711,14 @@ msgid "How much data we uploaded to this peer"
 msgstr ""
 
 #: plugins/infowidget/peerviewmodel.cpp:403
+#, fuzzy
 msgid "Whether the peer is interested in downloading data from us"
-msgstr ""
+msgstr "Hvort jafninginn hefur áhuga á gögnum frá okkur"
 
 #: plugins/infowidget/peerviewmodel.cpp:404
+#, fuzzy
 msgid "Whether we are interested in downloading from this peer"
-msgstr ""
+msgstr "Hvort við höfum áhuga á gögnum frá þessum jafningja"
 
 #: plugins/infowidget/infowidgetplugin.cpp:70
 #: plugins/infowidget/iwprefpage.cpp:27
@@ -6750,18 +6771,21 @@ msgid "URL"
 msgstr "Slóð (URL)"
 
 #: plugins/infowidget/webseedstab.cpp:92
-#, kde-format
+#, fuzzy, kde-format
 msgid "Cannot add the webseed %1, it is already part of the list of webseeds."
 msgstr ""
+"Get ekki bætt við vefsáningunni %1, hún er nú þegar hluti listans yfir "
+"vefsáningar."
 
 #: plugins/infowidget/webseedstab.cpp:109
-#, kde-format
+#, fuzzy, kde-format
 msgid "Cannot remove webseed %1, it is part of the torrent."
-msgstr ""
+msgstr "Get ekki fjarlægt vefsáninguna %1, hún er hluti af straumnum."
 
 #: plugins/infowidget/trackerview.cpp:87
+#, fuzzy
 msgid "Cannot add a tracker to a private torrent."
-msgstr ""
+msgstr "Get ekki bætt skrásetjara (tracker) við einkastraum (private torrent)."
 
 #: plugins/infowidget/trackerview.cpp:94
 msgid "Malformed URL."
@@ -6773,12 +6797,15 @@ msgid "There already is a tracker named <b>%1</b> !"
 msgstr ""
 
 #: plugins/infowidget/trackerview.cpp:119
+#, fuzzy
 msgid "Cannot remove torrent default tracker."
-msgstr ""
+msgstr "Get ekki fjarlægt sjálfgefinn skrásetjara (tracker) straums."
 
 #: plugins/infowidget/trackerview.cpp:231
+#, fuzzy
 msgid "You cannot add trackers to a private torrent"
 msgstr ""
+"Þú getur ekki bætt skrásetjara (tracker) við einkastraum (private torrent)"
 
 #: plugins/infowidget/peerview.cpp:56
 msgid "Kick Peer"
@@ -6859,8 +6886,9 @@ msgid "Number of the chunk"
 msgstr "Fjöldi búta"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:223
+#, fuzzy
 msgid "Download progress of the chunk"
-msgstr ""
+msgstr "Sóknarframvinda búts"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:224
 #, fuzzy
@@ -6868,12 +6896,14 @@ msgid "Which peer we are downloading it from"
 msgstr "frá"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:225
+#, fuzzy
 msgid "Download speed of the chunk"
-msgstr ""
+msgstr "Sóknarhraði búts"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:226
+#, fuzzy
 msgid "Which files the chunk is located in"
-msgstr ""
+msgstr "Í hvaða skrám búturinn er staðsettur"
 
 #: plugins/infowidget/iwfiletreemodel.cpp:106
 msgctxt "Download normally(not as first or last)"
@@ -6926,11 +6956,11 @@ msgstr ""
 msgid "File Exists"
 msgstr "Skráin er þegar til"
 
-#: plugins/ipfilter/convertthread.cpp:98
+#: plugins/ipfilter/convertthread.cpp:72
 msgid "Loading txt file..."
 msgstr "Hleð inn textaskrá..."
 
-#: plugins/ipfilter/convertthread.cpp:186
+#: plugins/ipfilter/convertthread.cpp:156
 #, kde-format
 msgid "There are no IP addresses to convert in %1"
 msgstr ""
@@ -6955,7 +6985,7 @@ msgstr "Óþekkt"
 #: plugins/stats/drawer/PlainChartDrawer.cc:323
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:383
 msgid "Save as image…"
-msgstr "Vista sem mynd..."
+msgstr "Vista sem mynd…"
 
 #: plugins/stats/drawer/PlainChartDrawer.cc:327
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:387
@@ -7037,7 +7067,7 @@ msgstr "Kerfi"
 
 #: plugins/logviewer/logflags.cpp:126
 msgid "Log Level"
-msgstr "Annálsstig:"
+msgstr "Annálsstig"
 
 #: plugins/logviewer/logflags.cpp:205
 #: plugins/logviewer/logflagsdelegate.cpp:46
@@ -7278,8 +7308,9 @@ msgstr "Bæta síu við"
 
 #: plugins/syndication/syndicationplugin.cpp:223
 #: plugins/bitfinder/filter/filtersview.cpp:62
+#, fuzzy
 msgid "Remove Filter"
-msgstr ""
+msgstr "Fjarlægja síu"
 
 #: plugins/syndication/syndicationplugin.cpp:265
 #, kde-format
@@ -7545,23 +7576,23 @@ msgstr "BF síur"
 msgid "Edit an item"
 msgstr ""
 
-#: plugins/bwscheduler/bwschedulerplugin.cpp:232
+#: plugins/bwscheduler/bwschedulerplugin.cpp:239
 msgid "Bandwidth Schedule"
 msgstr ""
 
-#: plugins/bwscheduler/bwschedulerplugin.cpp:233
+#: plugins/bwscheduler/bwschedulerplugin.cpp:240
 msgid "Tab to edit the bandwidth schedule"
 msgstr ""
 
-#: plugins/bwscheduler/schedule.cpp:110 plugins/bwscheduler/schedule.cpp:195
+#: plugins/bwscheduler/schedule.cpp:116 plugins/bwscheduler/schedule.cpp:202
 #: libbtcore/torrent/torrentcreator.cpp:124
 #: libbtcore/torrent/torrentcreator.cpp:259
 #: libbtcore/torrent/torrentcreator.cpp:297
-#, kde-format
+#, fuzzy, kde-format
 msgid "Cannot open file %1: %2"
-msgstr ""
+msgstr "Gat ekki opnað skrá %1: %2"
 
-#: plugins/bwscheduler/schedule.cpp:126 plugins/bwscheduler/schedule.cpp:132
+#: plugins/bwscheduler/schedule.cpp:132 plugins/bwscheduler/schedule.cpp:138
 #, kde-format
 msgid "The file %1 is corrupted or not a proper KTorrent schedule file !"
 msgstr ""
@@ -7601,12 +7632,12 @@ msgstr "Bæta við hlut"
 msgid "No day has been selected !"
 msgstr ""
 
-#: plugins/bwscheduler/additemdlg.cpp:100
+#: plugins/bwscheduler/additemdlg.cpp:101
 msgid ""
 "Failed to add item, because it conflicts with another item on the schedule !"
 msgstr ""
 
-#: plugins/bwscheduler/additemdlg.cpp:105
+#: plugins/bwscheduler/additemdlg.cpp:106
 msgid ""
 "This item could not be added to all selected days, because it conflicts with "
 "another item on the schedule !"
@@ -7721,26 +7752,26 @@ msgid "Cannot create %1: %2"
 msgstr "Get ekki búið til %1: %2"
 
 #: libbtcore/util/fileops.cpp:274
-#, kde-format
+#, fuzzy, kde-format
 msgid "Cannot calculate the filesize of %1: %2"
-msgstr ""
+msgstr "Gat ekki reiknað skráarstærð %1: %2"
 
 #: libbtcore/util/fileops.cpp:290
-#, kde-format
+#, fuzzy, kde-format
 msgid "Cannot calculate the filesize : %1"
-msgstr ""
+msgstr "Gat ekki reiknað skráarstærð : %1"
 
 #: libbtcore/util/fileops.cpp:368 libbtcore/util/fileops.cpp:374
 #: libbtcore/util/fileops.cpp:377 libbtcore/util/fileops.cpp:392
 #: libbtcore/util/fileops.cpp:394
-#, kde-format
+#, fuzzy, kde-format
 msgid "Cannot expand file: %1"
-msgstr ""
+msgstr "Gat ekki afþjappað skrána: %1"
 
 #: libbtcore/util/fileops.cpp:427
-#, kde-format
+#, fuzzy, kde-format
 msgid "Cannot seek in file : %1"
-msgstr ""
+msgstr "Gat ekki leitað í skránni: %1"
 
 #: libbtcore/util/logsystemmanager.cpp:33
 msgid "General"
@@ -7765,19 +7796,19 @@ msgid "Connection closed"
 msgstr "Tengingu lokað"
 
 #: libbtcore/download/httpconnection.cpp:103
-#, kde-format
+#, fuzzy, kde-format
 msgid "Resolving proxy %1:%2"
-msgstr ""
+msgstr "Greini milliþjón (proxy) %1:%2"
 
 #: libbtcore/download/httpconnection.cpp:112
-#, kde-format
+#, fuzzy, kde-format
 msgid "Resolving hostname %1"
-msgstr ""
+msgstr "Greini vélarheiti %1"
 
 #: libbtcore/download/httpconnection.cpp:132
-#, kde-format
+#, fuzzy, kde-format
 msgid "Error: request failed: %1"
-msgstr ""
+msgstr "Villa: fyrirspurn mistókst: %1"
 
 #: libbtcore/download/httpconnection.cpp:149
 #: libbtcore/download/httpconnection.cpp:213
@@ -7785,32 +7816,38 @@ msgid "Connected"
 msgstr "Tengd(ur)"
 
 #: libbtcore/download/httpconnection.cpp:155
+#, fuzzy
 msgid "Error: Failed to connect to webseed"
-msgstr ""
+msgstr "Villa: tókst ekki að tengjast vefsáningu"
 
 #: libbtcore/download/httpconnection.cpp:220
 msgid "Connecting"
 msgstr "Tengist"
 
 #: libbtcore/download/httpconnection.cpp:231
+#, fuzzy
 msgid "Failed to connect to webseed"
-msgstr ""
+msgstr "Gat ekki tengst vefsáningu"
 
 #: libbtcore/download/httpconnection.cpp:238
+#, fuzzy
 msgid "Failed to resolve hostname of webseed"
-msgstr ""
+msgstr "Mistókst að greina vélarheiti vefsáningarinnar"
 
 #: libbtcore/download/httpconnection.cpp:318
+#, fuzzy
 msgid "Error: failed to connect, server not responding"
-msgstr ""
+msgstr "Villa: tókst ekki að tengjast, þjónn svarar ekki"
 
 #: libbtcore/download/httpconnection.cpp:327
+#, fuzzy
 msgid "Error: request timed out"
-msgstr ""
+msgstr "Villa: fyrirspurn rann út á tíma"
 
 #: libbtcore/download/httpconnection.cpp:391
+#, fuzzy
 msgid "Redirected without a new location !"
-msgstr ""
+msgstr "Endurbeint án þess að fá nýja slóð !"
 
 #: libbtcore/download/chunkdownload.cpp:379
 #, kde-format
@@ -7820,14 +7857,14 @@ msgstr[0] "1 jafningi"
 msgstr[1] "%1 jafningjar"
 
 #: libbtcore/migrate/migrate.cpp:45
-#, kde-format
+#, fuzzy, kde-format
 msgid "The directory %1 does not exist"
-msgstr ""
+msgstr "Mappan %1 er ekki til"
 
 #: libbtcore/bcodec/bdecoder.cpp:61
-#, kde-format
+#, fuzzy, kde-format
 msgid "Illegal token: %1"
-msgstr ""
+msgstr "Ógilt skráningarmerki (token): %1"
 
 #: libbtcore/bcodec/bdecoder.cpp:82
 msgid "Decode error"
@@ -7838,9 +7875,9 @@ msgid "Unexpected end of input"
 msgstr "Óvænt ending á inntaki"
 
 #: libbtcore/bcodec/bdecoder.cpp:163 libbtcore/bcodec/bdecoder.cpp:197
-#, kde-format
+#, fuzzy, kde-format
 msgid "Cannot convert %1 to an int"
-msgstr ""
+msgstr "Gat ekki umbreytt %1 í heiltölu (int)"
 
 #: libbtcore/bcodec/bdecoder.cpp:202
 msgid "Torrent is incomplete!"
@@ -7853,66 +7890,66 @@ msgid "Failed to open %1 : %2"
 msgstr "Mistókst að opna %1 : %2"
 
 #: libbtcore/diskio/chunkmanager.cpp:209 libbtcore/diskio/chunkmanager.cpp:324
-#, kde-format
+#, fuzzy, kde-format
 msgid "Cannot open index file %1 : %2"
-msgstr ""
+msgstr "Get ekki opnað yfirlitsskrá %1 : %2"
 
 #: libbtcore/diskio/dndfile.cpp:89
-#, kde-format
+#, fuzzy, kde-format
 msgid "Cannot create file %1 : %2"
-msgstr ""
+msgstr "Gat ekki búið til skrána %1 : %2"
 
 #: libbtcore/diskio/dndfile.cpp:137
-#, kde-format
+#, fuzzy, kde-format
 msgid "Failed to write first chunk to DND file : %1"
-msgstr ""
+msgstr "Gat ekki skrifað fyrsta bútinn í DND skrá: %1"
 
 #: libbtcore/diskio/dndfile.cpp:155
-#, kde-format
+#, fuzzy, kde-format
 msgid "Failed to write last chunk to DND file : %1"
-msgstr ""
+msgstr "Gat ekki skrifað síðasta bútinn í DND skrá: %1"
 
 #: libbtcore/diskio/cachefile.cpp:120 libbtcore/diskio/cachefile.cpp:243
 #: libbtcore/diskio/cachefile.cpp:429 libbtcore/diskio/cachefile.cpp:496
-#, kde-format
+#, fuzzy, kde-format
 msgid "Cannot open %1 for writing : readonly filesystem"
-msgstr ""
+msgstr "Gat ekki opnað %1 til skrifunar : skrifvarið skráakerfi (readonly)"
 
 #: libbtcore/diskio/cachefile.cpp:253
-#, kde-format
+#, fuzzy, kde-format
 msgid "Cannot expand file %1 : %2"
-msgstr ""
+msgstr "Gat ekki afþjappað skrá %1 : %2"
 
 #: libbtcore/diskio/cachefile.cpp:395
-#, kde-format
+#, fuzzy, kde-format
 msgid "Error : Reading past the end of the file %1"
-msgstr ""
+msgstr "Villa : las framyfir enda skráarinnar %1"
 
 #: libbtcore/diskio/cachefile.cpp:400 libbtcore/diskio/cachefile.cpp:446
-#, kde-format
+#, fuzzy, kde-format
 msgid "Failed to seek file %1 : %2"
-msgstr ""
+msgstr "Gat ekki leitað að skrá %1 : %2"
 
 #: libbtcore/diskio/cachefile.cpp:408
-#, kde-format
+#, fuzzy, kde-format
 msgid "Error reading from %1"
-msgstr ""
+msgstr "Villa við lestur frá %1"
 
 #: libbtcore/diskio/cachefile.cpp:450
-#, kde-format
+#, fuzzy, kde-format
 msgid "Failed to write to file %1 : %2"
-msgstr ""
+msgstr "Gat ekki skrifað í skrá %1 : %2"
 
-#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:833
-#, kde-format
+#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:840
+#, fuzzy, kde-format
 msgid "Cannot preallocate diskspace : %1"
-msgstr ""
+msgstr "Gat ekki tekið frá diskpláss : %1"
 
-#: libbtcore/diskio/multifilecache.cpp:769
-#: libbtcore/diskio/multifilecache.cpp:849
-#, kde-format
+#: libbtcore/diskio/multifilecache.cpp:776
+#: libbtcore/diskio/multifilecache.cpp:856
+#, fuzzy, kde-format
 msgid "Cannot open file %1 : %2"
-msgstr ""
+msgstr "Gat ekki opnað skrá %1 : %2"
 
 #: libbtcore/torrent/torrent.cpp:83 libbtcore/torrent/torrent.cpp:145
 #: libbtcore/torrent/torrent.cpp:168 libbtcore/torrent/torrent.cpp:176
@@ -7930,27 +7967,31 @@ msgid "Corrupted torrent!"
 msgstr "Gallaður torrent straumur!"
 
 #: libbtcore/torrent/torrent.cpp:136
-#, kde-format
+#, fuzzy, kde-format
 msgid " Unable to open torrent file %1 : %2"
-msgstr ""
+msgstr "Gat ekki opnað torrent skrá %1 : %2"
 
 #: libbtcore/torrent/torrent.cpp:335 libbtcore/torrent/torrent.cpp:341
 msgid "Parse Error"
 msgstr "Þáttunarvilla"
 
 #: libbtcore/torrent/torrentcontrol.cpp:533
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
 "torrent is probably corrupt or is not a valid torrent file."
 msgstr ""
+"Villa kom upp vi að hlaða inn straumnum <b>%1</b>:<br/><b>%2</b><br/> "
+"Torrent straumurinn er líklega skemmdur eða er ekki gild torrent skrá."
 
 #: libbtcore/torrent/torrentcontrol.cpp:563
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "An error occurred while loading the torrent:<br/><b>%1</b><br/>The torrent "
 "is probably corrupt or is not a valid torrent file."
 msgstr ""
+"Villa kom upp vi að hlaða inn straumnum:<br/><b>%1</b><br/>Torrent "
+"straumurinn er líklega skemmdur eða er ekki gild torrent skrá."
 
 #: libbtcore/torrent/torrentcontrol.cpp:573
 #, kde-format
@@ -7958,16 +7999,18 @@ msgid "Unable to create %1 : %2"
 msgstr "Gat ekki búið til %1 : %2"
 
 #: libbtcore/torrent/torrentcontrol.cpp:588
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "You are already downloading this torrent %1, the list of trackers of both "
 "torrents has been merged."
 msgstr ""
+"Þú ert nú þegar að ná í þennan torrent staum %1, listi skrásetjara beggja "
+"straumanna hefur verið sameinaður."
 
 #: libbtcore/torrent/torrentcontrol.cpp:592
-#, kde-format
+#, fuzzy, kde-format
 msgid "You are already downloading the torrent %1"
-msgstr ""
+msgstr "Þú ert nú þegar að ná í torrent stauminn %1"
 
 #: libbtcore/torrent/torrentcontrol.cpp:691
 #, kde-format
@@ -7975,17 +8018,22 @@ msgid "Cannot migrate %1 : %2"
 msgstr "Gat ekki yfirfært %1 : %2"
 
 #: libbtcore/torrent/torrentcontrol.cpp:1387
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "The torrent %1 was started with a previous version of KTorrent. To make sure "
 "this torrent still works with this version of KTorrent, we will migrate this "
 "torrent. You will be asked for a location to save the torrent to. If you "
 "press cancel, we will select your home directory."
 msgstr ""
+"Byrjað var að ná í strauminn %1 með eldri útgáfu KTorrent. Til að ganga úr "
+"skugga um að straumurinn virki með þessari útgáfu af KTorrent, verður hann "
+"yfirfærður. Þú verður spurður hvar þú viljir vista strauminn. Ef þú hætti "
+"við, verður heimamappan þín valin."
 
 #: libbtcore/torrent/torrentcontrol.cpp:1392
+#, fuzzy
 msgid "Select Folder to Save To"
-msgstr ""
+msgstr "Veldu möppu til að vista í"
 
 #: libbtcore/torrent/torrentcontrol.cpp:1479
 msgid "Not started"
@@ -8033,32 +8081,35 @@ msgid "Announcing"
 msgstr "Tilkynni"
 
 #: libbtcore/torrent/torrentcreator.cpp:359
-#, kde-format
+#, fuzzy, kde-format
 msgid "Cannot create index file: %1"
-msgstr ""
+msgstr "Gat ekki búið til yfirlitsskrá: %1"
 
 #: libbtcore/tracker/udptracker.cpp:307
-#, kde-format
+#, fuzzy, kde-format
 msgid "Unable to resolve hostname %1"
-msgstr ""
+msgstr "Tókst ekki að greina vélarheiti %1"
 
 #: libbtcore/tracker/udptrackersocket.cpp:66
-#, kde-format
+#, fuzzy, kde-format
 msgid "Cannot bind to udp port %1 or the 10 following ports."
-msgstr ""
+msgstr "Get ekki bundist udp gátt %1 eða 10 gáttum þar á eftir."
 
 #: libbtcore/tracker/httptracker.cpp:273 libbtcore/tracker/httptracker.cpp:293
 #: libbtcore/tracker/httptracker.cpp:333 libbtcore/tracker/httptracker.cpp:443
+#, fuzzy
 msgid "Invalid response from tracker"
-msgstr ""
+msgstr "Ógilt svar frá skrásetjara (tracker)"
 
 #: libbtcore/tracker/httptracker.cpp:286
+#, fuzzy
 msgid "Invalid data from tracker"
-msgstr ""
+msgstr "Ógild gögn frá skrásetjara (tracker)"
 
 #: libbtcore/tracker/httptracker.cpp:459
+#, fuzzy
 msgid "Invalid tracker URL"
-msgstr ""
+msgstr "Ógild slóð á skrásetjara (tracker)"
 
 #: libbtcore/datachecker/singledatachecker.cpp:49
 #, kde-format
