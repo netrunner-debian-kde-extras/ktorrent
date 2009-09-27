@@ -1,0 +1,39 @@
+From: Modestas Vainius <modestas@vainius.eu>
+Subject: [PATCH] general/fix_target_link_libraries
+
+Do not link with excess libraries.
+
+Signed-off-by: Modestas Vainius <modestas@vainius.eu>
+
+---
+ libktcore/CMakeLists.txt         |    2 +-
+ plugins/scripting/CMakeLists.txt |    1 -
+ 2 files changed, 1 insertions(+), 2 deletions(-)
+
+diff --git a/libktcore/CMakeLists.txt b/libktcore/CMakeLists.txt
+index ff536e5..97432a7 100644
+--- a/libktcore/CMakeLists.txt
++++ b/libktcore/CMakeLists.txt
+@@ -40,7 +40,7 @@ kde4_add_ui_files(libktorrent_SRC ${libktorrent_UI})
+ kde4_add_kcfg_files(libktorrent_SRC settings.kcfgc)
+ kde4_add_library(ktcore SHARED ${libktorrent_SRC})
+ 
+-target_link_libraries(ktcore ${KDE4_KDE3SUPPORT_LIBS} ${KDE4_KPARTS_LIBS} ${KDE4_KUTILS_LIBS} btcore ${KDE4_SOLID_LIBS} ${GMP_LIBRARIES})
++target_link_libraries(ktcore ${QT_QT3SUPPORT_LIBRARY} ${KDE4_KPARTS_LIBS} ${KDE4_KUTILS_LIBS} btcore ${KDE4_SOLID_LIBS} ${GMP_LIBRARIES})
+ set_target_properties(ktcore PROPERTIES VERSION 9.3.0 SOVERSION 9 )
+ install(TARGETS ktcore  ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ 
+diff --git a/plugins/scripting/CMakeLists.txt b/plugins/scripting/CMakeLists.txt
+index 680ac3c..e0476f5 100644
+--- a/plugins/scripting/CMakeLists.txt
++++ b/plugins/scripting/CMakeLists.txt
+@@ -19,7 +19,6 @@ target_link_libraries(
+     ${KDE4_KDECORE_LIBS}
+     ${KDE4_KDEUI_LIBS}
+     ${KDE4_KROSSCORE_LIBS}
+-    ${KDE4_KROSSUI_LIBS}
+     ${KDE4_KPARTS_LIBS}
+     ${QT_QTCORE_LIBRARY}
+     ${QT_QT3SUPPORT_LIBRARY}
+-- 
+tg: (69c25da..) general/fix_target_link_libraries (depends on: upstream)
