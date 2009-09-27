@@ -15,7 +15,7 @@ Vcs-Browser: http://git.debian.org/?p=pkg-kde/kde-extras/ktorrent.git;a=summary
 
 Package: ktorrent
 Architecture: any
-Depends: ${shlibs:Depends}, ktorrent-data (= ${source:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, ktorrent-data (= ${source:Version})
 Suggests: plasma-widget-ktorrent (= ${binary:Version})
 Description: BitTorrent client based on the KDE 4 technology platform
  This package contains KTorrent, a BitTorrent peer-to-peer network client, that
@@ -44,6 +44,7 @@ Description: BitTorrent client based on the KDE 4 technology platform
 
 Package: ktorrent-data
 Architecture: all
+Depends: ${misc:Depends}
 Recommends: ktorrent (>= ${source:Version})
 Replaces: ktorrent (<< 3.2~beta1+svn902175)
 Description: KTorrent data and other architecture independant files
@@ -54,7 +55,7 @@ Description: KTorrent data and other architecture independant files
 Package: plasma-widget-ktorrent
 Section: kde
 Architecture: any
-Depends: ${shlibs:Depends}, ktorrent (= ${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, ktorrent (= ${binary:Version})
 Replaces: ktorrent (<< 3.2~beta1+svn898132), plasma-applet-ktorrent
 Conflicts: plasma-applet-ktorrent
 Description: KTorrent Plasma widget
@@ -69,7 +70,7 @@ Package: ktorrent-dbg
 Section: debug
 Architecture: any
 Priority: extra
-Depends: ktorrent (= ${binary:Version})
+Depends: ${misc:Depends}, ktorrent (= ${binary:Version})
 Recommends: kdelibs5-dbg
 Description: KTorrent debugging symbols
  This package contains debugging symbols for KTorrent. When KTorrent crashes,
