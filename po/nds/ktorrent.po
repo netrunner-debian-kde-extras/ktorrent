@@ -2,12 +2,11 @@
 #
 # Manfred Wiese <m.j.wiese@web.de>, 2006, 2008, 2009.
 # Sönke Dibbern <s_dibbern@web.de>, 2006, 2007, 2008, 2009.
-# Sönke Dibbern <s_dibbern@web.de>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-07-28 01:30+0200\n"
+"POT-Creation-Date: 2009-09-23 01:30+0200\n"
 "PO-Revision-Date: 2009-08-10 07:58+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -301,8 +300,8 @@ msgstr "Daten laat sik nich pröven: \"%1\""
 msgid "Cannot load the torrent file : %1"
 msgstr "Torrentdatei \"%1\" lett sik nich laden"
 
-#: ktorrent/importdialog.cpp:276 plugins/ipfilter/convertthread.cpp:93
-#: plugins/ipfilter/convertthread.cpp:197
+#: ktorrent/importdialog.cpp:276 plugins/ipfilter/convertthread.cpp:67
+#: plugins/ipfilter/convertthread.cpp:167
 #: plugins/search/searchenginelist.cpp:185 libbtcore/util/fileops.cpp:318
 #: libbtcore/util/fileops.cpp:347 libbtcore/util/fileops.cpp:406
 #: libbtcore/diskio/cachefile.cpp:94
@@ -5722,7 +5721,7 @@ msgstr "Tietgrenz:"
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:19
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
-#: rc.cpp:1573 plugins/ipfilter/convertthread.cpp:204
+#: rc.cpp:1573 plugins/ipfilter/convertthread.cpp:174
 msgid "Converting..."
 msgstr "Bi to wanneln..."
 
@@ -7626,11 +7625,11 @@ msgstr ""
 msgid "File Exists"
 msgstr "Gifft Datei al"
 
-#: plugins/ipfilter/convertthread.cpp:98
+#: plugins/ipfilter/convertthread.cpp:72
 msgid "Loading txt file..."
 msgstr "Textdatei warrt laadt..."
 
-#: plugins/ipfilter/convertthread.cpp:186
+#: plugins/ipfilter/convertthread.cpp:156
 #, kde-format
 msgid "There are no IP addresses to convert in %1"
 msgstr "Binnen \"%1\" gifft dat keen IP-Adressen, de sik ümwanneln laat."
@@ -8249,15 +8248,15 @@ msgstr "BitFinder-Filtern"
 msgid "Edit an item"
 msgstr "En Indrag bewerken"
 
-#: plugins/bwscheduler/bwschedulerplugin.cpp:232
+#: plugins/bwscheduler/bwschedulerplugin.cpp:239
 msgid "Bandwidth Schedule"
 msgstr "Bandbreed-Plaan"
 
-#: plugins/bwscheduler/bwschedulerplugin.cpp:233
+#: plugins/bwscheduler/bwschedulerplugin.cpp:240
 msgid "Tab to edit the bandwidth schedule"
 msgstr "Bandbreed-Plaan mit Tab-Tast bewerken"
 
-#: plugins/bwscheduler/schedule.cpp:110 plugins/bwscheduler/schedule.cpp:195
+#: plugins/bwscheduler/schedule.cpp:116 plugins/bwscheduler/schedule.cpp:202
 #: libbtcore/torrent/torrentcreator.cpp:124
 #: libbtcore/torrent/torrentcreator.cpp:259
 #: libbtcore/torrent/torrentcreator.cpp:297
@@ -8265,7 +8264,7 @@ msgstr "Bandbreed-Plaan mit Tab-Tast bewerken"
 msgid "Cannot open file %1: %2"
 msgstr "Datei \"%1\" lett sik nich opmaken: %2"
 
-#: plugins/bwscheduler/schedule.cpp:126 plugins/bwscheduler/schedule.cpp:132
+#: plugins/bwscheduler/schedule.cpp:132 plugins/bwscheduler/schedule.cpp:138
 #, kde-format
 msgid "The file %1 is corrupted or not a proper KTorrent schedule file !"
 msgstr "De Datei \"%1\" is schaadhaftig oder keen propper KTorrent-Plaan."
@@ -8305,14 +8304,14 @@ msgstr "En Indrag tofögen"
 msgid "No day has been selected !"
 msgstr "Keen Dag utsöcht!"
 
-#: plugins/bwscheduler/additemdlg.cpp:100
+#: plugins/bwscheduler/additemdlg.cpp:101
 msgid ""
 "Failed to add item, because it conflicts with another item on the schedule !"
 msgstr ""
 "Disse Indrag verdreegt sik nich mit en anner Indrag op de List, Du kannst em "
 "nich tofögen!"
 
-#: plugins/bwscheduler/additemdlg.cpp:105
+#: plugins/bwscheduler/additemdlg.cpp:106
 msgid ""
 "This item could not be added to all selected days, because it conflicts with "
 "another item on the schedule !"
@@ -8613,13 +8612,13 @@ msgstr "Fehler bi't Lesen vun %1"
 msgid "Failed to write to file %1 : %2"
 msgstr "\"%1\" lett sik nich schrieven: %2"
 
-#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:833
+#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:840
 #, kde-format
 msgid "Cannot preallocate diskspace : %1"
 msgstr "Plattenspieker lett sik nich vörweg towiesen: %1"
 
-#: libbtcore/diskio/multifilecache.cpp:769
-#: libbtcore/diskio/multifilecache.cpp:849
+#: libbtcore/diskio/multifilecache.cpp:776
+#: libbtcore/diskio/multifilecache.cpp:856
 #, kde-format
 msgid "Cannot open file %1 : %2"
 msgstr "Datei \"%1\" lett sik nich opmaken: %2"

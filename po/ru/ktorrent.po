@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-07-28 01:30+0200\n"
-"PO-Revision-Date: 2009-07-19 21:32+0300\n"
+"POT-Creation-Date: 2009-09-23 01:30+0200\n"
+"PO-Revision-Date: 2009-09-22 00:02+0300\n"
 "Last-Translator: Artem Sereda <overmind88@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "MIME-Version: 1.0\n"
@@ -305,8 +305,8 @@ msgstr "Невозможно проверить данные: %1"
 msgid "Cannot load the torrent file : %1"
 msgstr "Не удалось загрузить торрент: %1"
 
-#: ktorrent/importdialog.cpp:276 plugins/ipfilter/convertthread.cpp:93
-#: plugins/ipfilter/convertthread.cpp:197
+#: ktorrent/importdialog.cpp:276 plugins/ipfilter/convertthread.cpp:67
+#: plugins/ipfilter/convertthread.cpp:167
 #: plugins/search/searchenginelist.cpp:185 libbtcore/util/fileops.cpp:318
 #: libbtcore/util/fileops.cpp:347 libbtcore/util/fileops.cpp:406
 #: libbtcore/diskio/cachefile.cpp:94
@@ -1859,10 +1859,8 @@ msgid "No torrents loaded !"
 msgstr "Нет запущенных торрентов!"
 
 #: plasma/applet/applet.cpp:268
-#, fuzzy
-#| msgid "KTorrent is not running !"
 msgid "KTorrent is not running."
-msgstr "KTorrent не запущен!"
+msgstr "KTorrent не запущен."
 
 #: plasma/applet/applet.cpp:292 plasma/applet/applet.cpp:360
 #, kde-format
@@ -5724,7 +5722,7 @@ msgstr "Ограничение по времени:"
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:19
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
-#: rc.cpp:1573 plugins/ipfilter/convertthread.cpp:204
+#: rc.cpp:1573 plugins/ipfilter/convertthread.cpp:174
 msgid "Converting..."
 msgstr "Преобразование..."
 
@@ -6545,7 +6543,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, m_se_no_duplicates)
 #: rc.cpp:1980
 msgid "Do not download multiple items with the same season and episode"
-msgstr ""
+msgstr "Не загружать повторные элементы с совпадающими сезонами и сериями"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:189
 #. i18n: ectx: property (text), widget (QCheckBox, m_download_matches)
@@ -7557,11 +7555,11 @@ msgstr "Файл фильтра (level1.dat) уже существует, пре
 msgid "File Exists"
 msgstr "Файл уже существует"
 
-#: plugins/ipfilter/convertthread.cpp:98
+#: plugins/ipfilter/convertthread.cpp:72
 msgid "Loading txt file..."
 msgstr "Загрузка текстового файла..."
 
-#: plugins/ipfilter/convertthread.cpp:186
+#: plugins/ipfilter/convertthread.cpp:156
 #, kde-format
 msgid "There are no IP addresses to convert in %1"
 msgstr "Отсутствуют IP-адресы для преобразования в %1"
@@ -8180,15 +8178,15 @@ msgstr "Фильтры BF"
 msgid "Edit an item"
 msgstr "Изменить задание"
 
-#: plugins/bwscheduler/bwschedulerplugin.cpp:232
+#: plugins/bwscheduler/bwschedulerplugin.cpp:239
 msgid "Bandwidth Schedule"
 msgstr "Расписание загрузок"
 
-#: plugins/bwscheduler/bwschedulerplugin.cpp:233
+#: plugins/bwscheduler/bwschedulerplugin.cpp:240
 msgid "Tab to edit the bandwidth schedule"
 msgstr "Вкладка редактирования расписания загрузок"
 
-#: plugins/bwscheduler/schedule.cpp:110 plugins/bwscheduler/schedule.cpp:195
+#: plugins/bwscheduler/schedule.cpp:116 plugins/bwscheduler/schedule.cpp:202
 #: libbtcore/torrent/torrentcreator.cpp:124
 #: libbtcore/torrent/torrentcreator.cpp:259
 #: libbtcore/torrent/torrentcreator.cpp:297
@@ -8196,7 +8194,7 @@ msgstr "Вкладка редактирования расписания заг�
 msgid "Cannot open file %1: %2"
 msgstr "Не удаётся открыть файл %1: %2"
 
-#: plugins/bwscheduler/schedule.cpp:126 plugins/bwscheduler/schedule.cpp:132
+#: plugins/bwscheduler/schedule.cpp:132 plugins/bwscheduler/schedule.cpp:138
 #, kde-format
 msgid "The file %1 is corrupted or not a proper KTorrent schedule file !"
 msgstr "Файл %1 повреждён или не является файлом расписания KTorrent!"
@@ -8236,14 +8234,14 @@ msgstr "Добавить задание"
 msgid "No day has been selected !"
 msgstr "Не выбран день!"
 
-#: plugins/bwscheduler/additemdlg.cpp:100
+#: plugins/bwscheduler/additemdlg.cpp:101
 msgid ""
 "Failed to add item, because it conflicts with another item on the schedule !"
 msgstr ""
 "Невозможно добавить задание, так как оно конфликтует с другим заданием в "
 "расписании!"
 
-#: plugins/bwscheduler/additemdlg.cpp:105
+#: plugins/bwscheduler/additemdlg.cpp:106
 msgid ""
 "This item could not be added to all selected days, because it conflicts with "
 "another item on the schedule !"
@@ -8544,13 +8542,13 @@ msgstr "Ошибка чтения из %1"
 msgid "Failed to write to file %1 : %2"
 msgstr "Не удаётся записать в файл %1 : %2"
 
-#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:833
+#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:840
 #, kde-format
 msgid "Cannot preallocate diskspace : %1"
 msgstr "Не удалось выделить дисковое пространство: %1"
 
-#: libbtcore/diskio/multifilecache.cpp:769
-#: libbtcore/diskio/multifilecache.cpp:849
+#: libbtcore/diskio/multifilecache.cpp:776
+#: libbtcore/diskio/multifilecache.cpp:856
 #, kde-format
 msgid "Cannot open file %1 : %2"
 msgstr "Не удалось открыть файл %1: %2"
