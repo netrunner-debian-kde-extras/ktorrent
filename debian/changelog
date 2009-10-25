@@ -1,6 +1,9 @@
 ktorrent (3.2.5+dfsg.1-1) UNRELEASED; urgency=low
 
   * New upstream release.
+  * Build conflict with Qt 4.5.2 and drop patch 
+    debian/qt_4.5.2-1_phonon_ftbfs_fix.diff. The bug is fixed in Qt 4:4.5.3
+    and later.
 
  -- Modestas Vainius <modestas@vainius.eu>  Sun, 25 Oct 2009 15:58:25 +0200
 
