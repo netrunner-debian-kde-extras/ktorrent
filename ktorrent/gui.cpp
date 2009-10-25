@@ -79,13 +79,13 @@ namespace kt
 		//Marker markk("GUI::GUI()");
 		core = new Core(this);
 		tray_icon = new TrayIcon(core,this);
-		setupActions();
 		
 		central = new CentralWidget(this);
 		setCentralWidget(central);
 		torrent_activity = new TorrentActivity(core,this,0);
 		addActivity(torrent_activity);
 		
+		setupActions();
 		createGUI("ktorrentui.rc");
 		
 		status_bar = new kt::StatusBar(this);
@@ -182,11 +182,11 @@ namespace kt
 	}
 
 
-	bool GUI::selectFiles(bt::TorrentInterface* tc,bool* start_torrent,const QString & group_hint,bool* skip_check)
+	bool GUI::selectFiles(bt::TorrentInterface* tc,bool* start_torrent,const QString & group_hint,const QString & location_hint,bool* skip_check)
 	{
 		FileSelectDlg dlg(core->getGroupManager(),group_hint,this);
 		dlg.loadState(KGlobal::config());
-		bool ret = dlg.execute(tc,start_torrent,skip_check) == QDialog::Accepted;
+		bool ret = dlg.execute(tc,start_torrent,skip_check,location_hint) == QDialog::Accepted;
 		dlg.saveState(KGlobal::config());
 		return ret;
 	}
@@ -441,10 +441,12 @@ namespace kt
 		show_kt_action = new KAction(KIcon("kt-show-hide"),i18n("Show/Hide KTorrent"),this);
 		connect(show_kt_action,SIGNAL(triggered()),this,SLOT(showOrHide()));
 		ac->addAction("show_kt",show_kt_action);
-		show_kt_action->setObjectName("ktorrent-show-hide-action");
-		show_kt_action->setGlobalShortcut(KShortcut(Qt::ALT+ Qt::SHIFT + Qt::Key_T), 
-										  KAction::ActiveShortcut | KAction::DefaultShortcut,KAction::Autoloading);
-		show_kt_action->setShortcut(show_kt_action->globalShortcut());
+		show_kt_action->setGlobalShortcut(KShortcut(Qt::ALT+ Qt::SHIFT + Qt::Key_T));
+		
+		show_group_view_action = new KToggleAction(KIcon("view-list-tree"),i18n("Group View Visible"),this);
+		show_group_view_action->setToolTip(i18n("Show or hide the group view"));
+		connect(show_group_view_action,SIGNAL(toggled(bool)),torrent_activity,SLOT(setGroupViewVisible(bool)));
+		ac->addAction("show_group_view",show_group_view_action);
 		
 		setStandardToolBarMenuEnabled(true);
 				
@@ -492,6 +494,7 @@ namespace kt
 		setAutoSaveSettings("MainWindow",true);
 		central->loadState(cfg);
 		torrent_activity->loadState(cfg);
+		show_group_view_action->setChecked(!torrent_activity->getGroupView()->isHidden());
 		
 		KConfigGroup g = cfg->group("MainWindow");
 		bool statusbar_hidden = g.readEntry("statusbar_hidden",false);

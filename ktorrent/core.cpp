@@ -83,7 +83,7 @@ namespace kt
 		connect(qman, SIGNAL(lowDiskSpace(bt::TorrentInterface*, bool)),
 				this, SLOT(onLowDiskSpace(bt::TorrentInterface*, bool)));
 		
-		data_dir = Settings::tempDir().path();
+		data_dir = Settings::tempDir().toLocalFile();
 		bool dd_not_exist = !bt::Exists(data_dir);
 		if (data_dir == QString::null || dd_not_exist)
 		{
@@ -171,7 +171,7 @@ namespace kt
 		setMaxSeeds(Settings::maxSeeds());
 		setKeepSeeding(Settings::keepSeeding());
 		
-		QString tmp = Settings::tempDir().path();
+		QString tmp = Settings::tempDir().toLocalFile();
 		if (tmp.isEmpty())
 			tmp = kt::DataDir();
 		
@@ -188,14 +188,14 @@ namespace kt
 		pman->loadPluginList();
 	}
 
-	bool Core::init(TorrentControl* tc,const QString & group,bool silently)
+	bool Core::init(TorrentControl* tc,const QString & group,const QString & location,bool silently)
 	{
 		bool start_torrent = false;
 		bool skip_check = false;
 
 		if (!silently)
 		{
-			if (!gui->selectFiles(tc,&start_torrent,group,&skip_check))
+			if (!gui->selectFiles(tc,&start_torrent,group,location,&skip_check))
 			{
 				// Cleanup tor dir
 				QString dir = tc->getTorDir();
@@ -284,7 +284,7 @@ namespace kt
 				torFile += bt::DirSeparator();
 			
 			torFile += "torrent";
-			QString destination = Settings::torrentCopyDir().path();
+			QString destination = Settings::torrentCopyDir().toLocalFile();
 			if(!destination.endsWith(bt::DirSeparator()))
 				destination += bt::DirSeparator();
 			
@@ -294,7 +294,7 @@ namespace kt
 		return true;
 	}
 	
-	bool Core::load(const QByteArray & data,const QString & dir,const QString & group,bool silently, const KUrl& url)
+	bool Core::loadFromData(const QByteArray & data,const QString & dir,const QString & group,bool silently, const KUrl& url)
 	{
 		QString tdir = findNewTorrentDir();
 		TorrentControl* tc = 0;
@@ -305,7 +305,7 @@ namespace kt
 			tc->init(qman, data, tdir, dir);
 			tc->setLoadUrl(url);
 			
-			if(!init(tc,group,silently))
+			if(!init(tc,group,dir,silently))
 				loadingFinished(url, false, true);
 			else
 				loadingFinished(url, true, false);
@@ -334,7 +334,7 @@ namespace kt
 		}
 	}
 
-	bool Core::load(const QString & target,const QString & dir,const QString & group,bool silently)
+	bool Core::loadFromFile(const QString & target,const QString & dir,const QString & group,bool silently)
 	{
 		QString tdir = findNewTorrentDir();
 		TorrentControl* tc = 0;
@@ -345,7 +345,7 @@ namespace kt
 			tc->init(qman, target, tdir, dir);
 			tc->setLoadUrl(KUrl(target));
 			
-			init(tc,group,silently);
+			init(tc,group,dir,silently);
 			startUpdateTimer();
 			return true;
 		}
@@ -385,7 +385,7 @@ namespace kt
 		else
 		{
 			// load in the file (target is always local)
-			QString dir = Settings::saveDir().path();
+			QString dir = Settings::saveDir().toLocalFile();
 			if (!Settings::useSaveDir() ||  dir.isNull())
 				dir = QDir::homePath();
 			
@@ -396,7 +396,7 @@ namespace kt
 				add_to_groups.remove(j);
 			}
 		
-			if (dir != QString::null && load(j->data(),dir,group,false, j->url()))
+			if (dir != QString::null && loadFromData(j->data(),dir,group,false, j->url()))
 				loadingFinished(j->url(),true,false);
 			else
 				loadingFinished(j->url(),false,true);
@@ -407,12 +407,12 @@ namespace kt
 	{
 		if (url.isLocalFile())
 		{
-			QString path = url.path(); 
-			QString dir = Settings::saveDir().path();
+			QString path = url.toLocalFile();
+			QString dir = Settings::saveDir().toLocalFile();
 			if (!Settings::useSaveDir()  || dir.isNull())
 				dir =  QDir::homePath();
 		
-			if (dir != QString::null && load(path,dir,group,false))
+			if (dir != QString::null && loadFromFile(path,dir,group,false))
 				loadingFinished(url,true,false);
 			else
 				loadingFinished(url,false,true);
@@ -444,7 +444,7 @@ namespace kt
 			if (custom_save_locations.contains(j))
 			{
 				// we have a custom save location so save to that
-				dir = custom_save_locations[j].path();
+				dir = custom_save_locations[j].toLocalFile();
 				custom_save_locations.remove(j);
 			}
 			else if (!Settings::useSaveDir())
@@ -456,7 +456,7 @@ namespace kt
 			}
 			else
 			{
-				dir = Settings::saveDir().path();
+				dir = Settings::saveDir().toLocalFile();
 			}
 			
 			QString group;
@@ -467,7 +467,7 @@ namespace kt
 			}
 				
 			
-			if (dir != QString::null && load(j->data(),dir,group,true,j->url()))
+			if (dir != QString::null && loadFromData(j->data(),dir,group,true,j->url()))
 				loadingFinished(j->url(),true,false);
 			else
 				loadingFinished(j->url(),false,false);
@@ -478,8 +478,8 @@ namespace kt
 	{
 		if (url.isLocalFile())
 		{
-			QString path = url.path(); 
-			QString dir = Settings::saveDir().path();
+			QString path = url.toLocalFile(); 
+			QString dir = Settings::saveDir().toLocalFile();
 			if (!Settings::useSaveDir())
 			{
 				Out(SYS_GEN|LOG_NOTICE) << "Cannot load " << path << " silently, default save location not set !" << endl;
@@ -487,7 +487,7 @@ namespace kt
 				dir = QDir::homePath();
 			}
 		
-			if (dir != QString::null && load(path,dir,group,true))
+			if (dir != QString::null && loadFromFile(path,dir,group,true))
 				loadingFinished(url,true,false);
 			else
 				loadingFinished(url,false,true);
@@ -507,14 +507,14 @@ namespace kt
 		QString dir;
 		if (savedir.isEmpty() || !bt::Exists(savedir))
 		{
-			dir = Settings::saveDir().path();
+			dir = Settings::saveDir().toLocalFile();
 			if (!Settings::useSaveDir()  || dir.isNull())
 				dir =  QDir::homePath();
 		}
 		else
 			dir = savedir;
 		
-		if (dir != QString::null && load(data,dir,group,false,url))
+		if (dir != QString::null && loadFromData(data,dir,group,false,url))
 			loadingFinished(url,true,false);
 		else
 			loadingFinished(url,false,true);
@@ -525,7 +525,7 @@ namespace kt
 		QString dir;
 		if (savedir.isEmpty() || !bt::Exists(savedir))
 		{
-			dir = Settings::saveDir().path();
+			dir = Settings::saveDir().toLocalFile();
 			if (!Settings::useSaveDir())
 			{
 				Out(SYS_GEN|LOG_NOTICE) << "Cannot load " << url.prettyUrl() << " silently, default save location not set !" << endl;
@@ -536,45 +536,11 @@ namespace kt
 		else
 			dir = savedir;
 		
-		if (dir != QString::null && load(data,dir,group,true,url))
+		if (dir != QString::null && loadFromData(data,dir,group,true,url))
 			loadingFinished(url,true,false);
 		else
 			loadingFinished(url,false,true);
 	}
-
-	/*
-	void Core::loadSilentlyDir(const KUrl& url, const KUrl& savedir)
-	{
-		if (url.isLocalFile())
-		{
-			QString path = url.path(); 
-			QString dir = savedir.path();
-			QFileInfo fi(dir);
-			if (!fi.exists() || !fi.isWritable() || !fi.isDir())
-			{
-				Out(SYS_GEN|LOG_NOTICE) << "Cannot load " << path << " silently, destination directory is not OK ! Using default save directory." << endl;
-				dir = Settings::saveDir().path();
-				if (!Settings::useSaveDir())
-				{
-					Out(SYS_GEN|LOG_NOTICE) << "Default save directory not set, using home directory !" << endl;
-					dir = QDir::homePath();
-				}
-			}
-			
-			if (dir != QString::null && load(path,dir,QString(),true))
-				loadingFinished(url,true,false);
-			else
-				loadingFinished(url,false,true);
-		}
-		else
-		{
-			// download to a random file in tmp
-			KIO::Job* j = KIO::storedGet(url);
-			custom_save_locations.insert(j,savedir); // keep track of save location
-			connect(j,SIGNAL(result(KJob*)),this,SLOT(downloadFinishedSilently( KJob* )));
-		}
-	}
-*/
 	
 	void Core::start(bt::TorrentInterface* tc)
 	{
@@ -670,7 +636,10 @@ namespace kt
 			Out(SYS_GEN|LOG_NOTICE) << "Loading " << idir << endl;
 			loadExistingTorrent(idir);
 		}
-		qman->orderQueue();
+		if (!kt::QueueManager::enabled())
+			qman->startAutoStartTorrents();
+		else
+			qman->orderQueue();
 	}
 
 	void Core::remove(bt::TorrentInterface* tc,bool data_to)
@@ -1081,10 +1050,6 @@ namespace kt
 						ret = false;
 					}
 					break;
-				case MissingFilesDlg::QUIT:
-					ret = false;
-					QTimer::singleShot(500,kapp,SLOT(quit()));
-					break;
 				case MissingFilesDlg::NEW_LOCATION_SELECTED:
 					ret = true;
 					break;
@@ -1113,10 +1078,6 @@ namespace kt
 						tc->handleError(i18n("Data file is missing"));
 						ret = false;
 					}
-					break;
-				case MissingFilesDlg::QUIT:
-					ret = false;
-					QTimer::singleShot(500,kapp,SLOT(quit()));
 					break;
 				case MissingFilesDlg::DO_NOT_DOWNLOAD:
 					ret = false;

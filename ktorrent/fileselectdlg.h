@@ -58,7 +58,7 @@ namespace kt
 		FileSelectDlg(kt::GroupManager* gman,const QString & group_hint,QWidget* parent);
 		virtual ~FileSelectDlg();
 		
-		int execute(bt::TorrentInterface* tc, bool* start,bool* skip_check);
+		int execute(bt::TorrentInterface* tc, bool* start,bool* skip_check,const QString & location_hint);
 		
 		/**
 		 * Load the state of the dialog
@@ -83,9 +83,10 @@ namespace kt
 		void fileList(bool on);
 		void setShowFileTree(bool on);
 		void setFilter(const QString & filter);
+		void updateExistingFiles();
 
 	private:
-		void populateFields();
+		void populateFields(const QString & location_hint);
 		void loadGroups();
 	};
 }

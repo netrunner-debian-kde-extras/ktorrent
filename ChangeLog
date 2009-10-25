@@ -1,4 +1,30 @@
-Changes in 3.3 :
+Changes in 3.3rc1:
+- Make sure Qt's warnings, critical and fatal messages are printed to stderr in QtMessageOutput (203423)
+- Fix crash by handling missing webinterface skins propperly (203430)
+- Make TreeFilterModel use case insensitive filtering (203886)
+- Draw progressbar in percentage column of view (190875)
+- Make sure running torrents at exit are restarted when KT starts up when the QM is disabled (204988)
+- Fix bug causing disabled trackers to be announced in a manual announce
+- Add action to menu and toolbar to show or hide the GroupView
+- Improved DHT's ability to find peers (205346)
+- Make sure file locations are updated before torrent is restarted after data file move
+- FileSelectDlg now displays if existing files are found
+- Only do automatic update in webinterface of visible sections
+- Make it possible to disable automatic update in webinterface
+- Make playlist sortable in media player plugin
+- Add URL drop support to view (208739)
+- DHT packet receiving and parsing moved to separate thread (208801)
+- Handle redirection in QHttp based announce job properly
+- Make sure saving torrent in search plugin to existing file works
+- Add home page for search plugin like the one in konqueror
+- Clarify message when checking for files in completed downloads directory (208992)
+- Use KUrl::toLocalFile instead of KUrl::path, path prepends / on windows, which breaks things
+- Improve editing of feed name
+- Fix crash in ChunkDownload (196417)
+- Remove quit button from MissingFilesDlg (207388)
+- Fix timeout handling of UDPTracker (211191)
+
+Changes in 3.3beta1:
 - Cleanup plugin list (180402)
 - If QM enabled, torrents are always managed by the QM, unless user stops them
 - QM can now be disabled to allow full manual control of torrents
@@ -44,7 +70,19 @@ Changes in 3.3 :
 - Add global shortcut to pause the QM
 - Add legit torrents search engine (174873)
 
-Changes in 3.2.3:
+Changes in 3.2.5 :
+- Fix crash caused by dangling pointer to already destroyed view (209338)
+- Backport tracker timeout fix from trunk (208443)
+
+Changes in 3.2.4 :
+- Improve flexibility of IP blocklist parsing to support more formats
+- Fix bug in TorrentFileListModel causing wrong checkstate to be shown
+- Fix very rare crash caused by 0 pointer (206689)
+- Fix bug causing scheduler to not restart the schedule timer
+- Unset Qt message handler when Log is destroyed (197944)
+- Fix crash caused by dangling pointer to TorrentControl when removing torrent and torrent list is changing a lot (208385)
+
+Changes in 3.2.3 :
 - Make sure View gets focus back when you are finished editing the name of a torrent
 - Fix bug causing sizes > 4GB not being displayed properly in plasma applet
 - Fix bug in sleep suppression feature causing it to not work when torrents get started at startup (195991)

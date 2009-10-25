@@ -181,7 +181,7 @@ namespace bt
 				finished(this);
 
 				//Move completed download to specified directory if needed
-				if (!completed_dir.path().isNull())
+				if (!completed_dir.toLocalFile().isNull())
 					moveCompleted = true;
 				
 				// See if we need to do a data check
@@ -373,7 +373,6 @@ namespace bt
 		loadStats();
 		stats.running = true;
 		stats.started = true;
-		stats.autostart = true;
 		stats.queued = false;
 		stats.last_download_activity_time = stats.last_upload_activity_time = GetCurrentTime();
 		choker_update_timer.update();
@@ -427,7 +426,7 @@ namespace bt
 		cman->stop();
 		
 		stats.running = false;
-		stats.autostart = false;
+		stats.autostart = wjob != 0;
 		stats.queued = false;
 		saveStats();
 		updateStatus();
@@ -778,8 +777,8 @@ namespace bt
 				
 				if (j)
 				{
-					job_queue->enqueue(j);
 					connect(j,SIGNAL(result(KJob*)),this,SLOT(moveDataFilesFinished(KJob*)));
+					job_queue->enqueue(j);
 					return true;
 				}
 				else
@@ -1754,7 +1753,7 @@ namespace bt
 	
 	void TorrentControl::moveToCompletedDir()
 	{
-		QString outdir = completed_dir.path();
+		QString outdir = completed_dir.toLocalFile();
 		if (!outdir.endsWith(bt::DirSeparator()))
 			outdir += bt::DirSeparator();
 					
