@@ -20,7 +20,7 @@
 #ifndef HTMLPART_H
 #define HTMLPART_H
 
-#include <khtml_part.h>
+#include "homepage.h"
 
 class KJob;
 class KUrl;
@@ -37,7 +37,7 @@ namespace kt
 	/**
 	@author Joris Guisson
 	*/
-	class HTMLPart : public KHTMLPart
+	class HTMLPart : public HomePage
 	{
 		Q_OBJECT
 	public:
@@ -65,6 +65,7 @@ namespace kt
 		void openTorrent(const KUrl & url);
 		void saveTorrent(const KUrl & url);
 		void searchFinished();
+		void searchRequested(const QString & text);
 	
 	private:
 		KUrl::List history;
@@ -72,6 +73,7 @@ namespace kt
 		QByteArray curr_data;
 		QString mime_type;
 		KUrl curr_url;
+		bool add_to_history;
 	};
 }
 

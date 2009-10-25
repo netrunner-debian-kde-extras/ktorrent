@@ -20,6 +20,8 @@
  ***************************************************************************/
 #include <QHeaderView>
 #include <QFileInfo>
+#include <QDropEvent>
+#include <QDragEnterEvent>
 #include <QSortFilterProxyModel>
 #include <krun.h>
 #include <kmenu.h>
@@ -44,8 +46,7 @@
 #include "addpeersdlg.h"
 #include "viewselectionmodel.h"
 #include "viewdelegate.h"
-#include "scanextender.h"
-
+#include "scanlistener.h"
 
 using namespace bt;
 
@@ -65,6 +66,8 @@ namespace kt
 		setDragEnabled(true);
 		setSelectionMode(QAbstractItemView::ExtendedSelection);
 		setSelectionBehavior(QAbstractItemView::SelectRows);
+		setAcceptDrops(true);
+		setDragDropMode(DragDrop);
 //		setUniformRowHeights(true);
 		
 		connect(this,SIGNAL(customContextMenuRequested(const QPoint & ) ),this,SLOT(showMenu( const QPoint& )));
@@ -409,10 +412,12 @@ namespace kt
 		if (delegate->extended(listener->torrent()))
 			return;
 		
-		bt::TorrentInterface* tc = listener->torrent();
-		ScanExtender* ext = new ScanExtender(listener,tc,0);
-		ext->hide();
-		delegate->extend(tc,ext);
+		QWidget* ext = listener->createExtender();
+		if (ext)
+		{
+			ext->hide();
+			delegate->extend(listener->torrent(),ext);
+		}
 	}
 	
 	void View::dataScanClosed(ScanListener* listener)
@@ -513,8 +518,7 @@ namespace kt
 		
 		return ret;
 	}
-	
-	
+
 	
 }
 

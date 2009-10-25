@@ -41,8 +41,7 @@ namespace kt
 		enum State
 		{
 			WAITING_FOR_REQUEST,
-			WAITING_FOR_CONTENT,
-			PROCESSING_PHP
+			WAITING_FOR_CONTENT
 		};
 	public:
 		HttpClientHandler(HttpServer* srv,int sock);
@@ -52,7 +51,7 @@ namespace kt
 		bool sendFile(HttpResponseHeader & hdr,const QString & full_path);
 		void sendResponse(const HttpResponseHeader & hdr);
 		void send404(HttpResponseHeader & hdr,const QString & path);
-		void send500(HttpResponseHeader & hdr);
+		void send500(HttpResponseHeader & hdr,const QString & error);
 		void send(HttpResponseHeader & hdr,const QByteArray & data);
 		
 	private:

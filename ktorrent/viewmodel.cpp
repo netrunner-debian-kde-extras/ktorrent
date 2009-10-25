@@ -217,7 +217,7 @@ namespace kt
 			case 8: return QString("%1 (%2)").arg(QString::number(seeders_connected_to)).arg(QString::number(seeders_total));
 			case 9: return QString("%1 (%2)").arg(QString::number(leechers_connected_to)).arg(QString::number(leechers_total));
 			// xgettext: no-c-format
-			case 10: return i18n("%1 %",KGlobal::locale()->formatNumber(percentage,2));
+			case 10: return percentage;
 			case 11: return KGlobal::locale()->formatNumber(share_ratio,2);
 			case 12: return DurationToString(runtime_dl);
 			case 13: return DurationToString(runtime_ul);
@@ -550,9 +550,9 @@ namespace kt
 	Qt::ItemFlags ViewModel::flags(const QModelIndex & index) const
 	{
 		if (!index.isValid() || index.row() >= torrents.count() || index.row() < 0)
-			return QAbstractTableModel::flags(index);
+			return QAbstractTableModel::flags(index) | Qt::ItemIsDropEnabled;
 		
-		Qt::ItemFlags flags = QAbstractTableModel::flags(index) | Qt::ItemIsDragEnabled;
+		Qt::ItemFlags flags = QAbstractTableModel::flags(index) | Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled;
 		if (index.column() == 0 )
 			flags |= Qt::ItemIsEditable;
 		
@@ -563,6 +563,7 @@ namespace kt
 	{
 		QStringList types;
 		types << "application/x-ktorrent-drag-object";
+		types << "text/uri-list";
 		return types;
 	}
 	
@@ -594,6 +595,31 @@ namespace kt
 
 		mime_data->setData( "application/x-ktorrent-drag-object", encoded_data);
 		return mime_data;
+	}
+		
+	bool ViewModel::dropMimeData(const QMimeData* data, Qt::DropAction action, int row, int column, const QModelIndex& parent)
+	{
+		Q_UNUSED(row);
+		Q_UNUSED(column);
+		Q_UNUSED(parent);
+		if (action == Qt::IgnoreAction)
+			return true;
+		
+		if (!data->hasUrls())
+			return false;
+		
+		QList<QUrl> files = data->urls();
+		foreach (QUrl file,files)
+		{
+			core->load(file,QString());
+		}
+		
+		return true;
+	}
+	
+	Qt::DropActions ViewModel::supportedDropActions() const
+	{
+		return Qt::CopyAction | Qt::MoveAction;
 	}
 	
 	void ViewModel::torrentsFromIndexList(const QModelIndexList & idx,QList<bt::TorrentInterface*> & tlist)
