@@ -4,6 +4,8 @@ ktorrent (3.2.5+dfsg.1-1) UNRELEASED; urgency=low
   * Build conflict with Qt 4.5.2 and drop patch 
     debian/qt_4.5.2-1_phonon_ftbfs_fix.diff. The bug is fixed in Qt 4:4.5.3
     and later.
+  * Merge old 3.1.x changelog entries from lenny: 3.1.2+dfsg.1-1,
+    3.1.3+dfsg.1-1, 3.1.3+dfsg.2-1 and 3.1.4+dfsg.1-1.
 
  -- Modestas Vainius <modestas@vainius.eu>  Sun, 25 Oct 2009 15:58:25 +0200
 
@@ -270,6 +272,47 @@ ktorrent (3.2~~svn839064-1) experimental; urgency=low
     moved to git.
 
  -- Modestas Vainius <modestas@vainius.eu>  Tue, 29 Jul 2008 16:20:32 +0300
+
+ktorrent (3.1.4+dfsg.1-1) unstable; urgency=low
+
+   * New upstream bugfix release:
+     - Make sure user is properly logged in when handling a torrent post in the
+       webgui.
+     - Prevent PHP injection attacks in webgui.
+     - Update file size in CacheFile::growFile, this fixes a SIGBUS error.
+     - Fix bug causing infinite DNS lookups in UDP tracker when lookup fails
+       (Closes: #502071).
+     - Remove default label text KSqueezedTextLabel in trackerview.
+   * Disable both 97_fix_target_link_libraries.diff patches.
+
+ -- Modestas Vainius <modestas@vainius.eu>  Mon, 20 Oct 2008 14:40:23 +0300
+
+ktorrent (3.1.3+dfsg.2-1) unstable; urgency=low
+
+   * No real code changes. Upstream tarball includes the patch below.
+   * Remove 01_webinterface_httpserver_time_h.diff - merged upstream.
+   * Build conflict with Qt 4.4.2-2 as it has broken shlibs.
+
+ -- Modestas Vainius <modestas@vainius.eu>  Wed, 01 Oct 2008 19:38:25 +0300
+
+ktorrent (3.1.3+dfsg.1-1) unstable; urgency=low
+
+   * New upstream release.
+   * Update patches (library minor version bumps).
+   * Update debian/not-installed.
+   * Add patch (01_webinterface_httpserver_time_h.diff) to fix upstream FTBFS
+     in plugins/webinterface/httpserver.cpp - missing <time.h> include.
+
+ -- Modestas Vainius <modestas@vainius.eu>  Tue, 30 Sep 2008 00:31:08 +0300
+
+ktorrent (3.1.2+dfsg.1-1) unstable; urgency=low
+
+   * New upstream bugfix release.
+   * Remove 01_arm_qreal_fixes.diff - merged upstream.
+   * Update other patches.
+   * Update ktorrent.install file.
+
+ -- Modestas Vainius <modestas@vainius.eu>  Wed, 06 Aug 2008 18:39:28 +0300 
 
 ktorrent (3.1.1+dfsg.1-1) unstable; urgency=medium
 
