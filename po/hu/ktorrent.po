@@ -3,14 +3,13 @@
 #
 # Tamas Szanto <tszanto@interware.hu>, 2008.
 # Csanád Tóth <toth.csanad@kde.hu>, 2009.
-# Tóth Csanád <toth.csanad@kde.hu>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: KTorrent 3.1\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-09-23 01:30+0200\n"
-"PO-Revision-Date: 2009-08-07 23:09+0200\n"
-"Last-Translator: Csanád Tóth <toth.csanad@kde.hu>\n"
+"POT-Creation-Date: 2009-10-05 01:29+0200\n"
+"PO-Revision-Date: 2009-09-28 23:09+0200\n"
+"Last-Translator: Tamas Szanto <taszanto@gmail.com>\n"
 "Language-Team: Magyar <kde-lista@sophia.jpte.hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +21,7 @@ msgstr ""
 msgid "Custom Groups"
 msgstr "Egyedi csoportok"
 
-#: ktorrent/groupview.cpp:151 ktorrent/viewmanager.cpp:544
+#: ktorrent/groupview.cpp:151 ktorrent/viewmanager.cpp:545
 msgid "New Group"
 msgstr "Új csoport"
 
@@ -77,14 +76,11 @@ msgid "Importing <b>%1</b> ..."
 msgstr "Importálás - <b>%1</b>..."
 
 #: ktorrent/torrentmigratordlg.cpp:110
-#, fuzzy
-#| msgid "Finished import."
 msgid "Finished import !"
 msgstr "Az importálás befejeződött."
 
 #: ktorrent/torrentmigratordlg.cpp:145
-#, fuzzy, kde-format
-#| msgid "Torrent <b>%1</b> already loaded."
+#, kde-format
 msgid "Torrent <b>%1</b> already loaded !"
 msgstr "A torrent (<b>%1</b>) már be van töltve."
 
@@ -350,15 +346,15 @@ msgstr "URL megnyitása"
 msgid "Invalid URL: "
 msgstr "Érvénytelen URL: "
 
-#: ktorrent/viewmanager.cpp:488
+#: ktorrent/viewmanager.cpp:489
 msgid "Remove Torrent and Data"
 msgstr "Eltávolítás (adatokkal együtt)"
 
-#: ktorrent/viewmanager.cpp:493
+#: ktorrent/viewmanager.cpp:494
 msgid "Rename Torrent"
 msgstr "Torrent átnevezése"
 
-#: ktorrent/viewmanager.cpp:499
+#: ktorrent/viewmanager.cpp:500
 msgid "Add Peers"
 msgstr "Partner hozzáadása"
 
@@ -374,76 +370,74 @@ msgstr "Partner hozzáadása"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_5)
 #. i18n: file: plugins/stats/Settings.ui:234
 #. i18n: ectx: property (text), widget (QLabel, label_12)
-#: ktorrent/viewmanager.cpp:503 rc.cpp:1638 rc.cpp:1725 rc.cpp:1788
+#: ktorrent/viewmanager.cpp:504 rc.cpp:1638 rc.cpp:1725 rc.cpp:1788
 #: plugins/infowidget/peerviewmodel.cpp:374
 #: libbtcore/util/logsystemmanager.cpp:36
 msgid "DHT"
 msgstr "DHT"
 
-#: ktorrent/viewmanager.cpp:509
+#: ktorrent/viewmanager.cpp:510
 msgid "Peer Exchange"
 msgstr "PEX"
 
 #. i18n: file: plugins/infowidget/trackerview.ui:189
 #. i18n: ectx: property (text), widget (KPushButton, m_announce)
-#: ktorrent/viewmanager.cpp:514 rc.cpp:1441
+#: ktorrent/viewmanager.cpp:515 rc.cpp:1441
 msgid "Manual Announce"
 msgstr "Kézi bejelentés"
 
 #. i18n: file: plugins/infowidget/trackerview.ui:196
 #. i18n: ectx: property (text), widget (QPushButton, m_scrape)
-#: ktorrent/viewmanager.cpp:519 rc.cpp:1444
+#: ktorrent/viewmanager.cpp:520 rc.cpp:1444
 msgid "Scrape"
 msgstr "Eltávolítás"
 
-#: ktorrent/viewmanager.cpp:523 plugins/infowidget/iwfilelistmodel.cpp:78
+#: ktorrent/viewmanager.cpp:524 plugins/infowidget/iwfilelistmodel.cpp:78
 #: plugins/infowidget/iwfiletreemodel.cpp:89
 msgid "Preview"
 msgstr "Előnézet"
 
-#: ktorrent/viewmanager.cpp:527
+#: ktorrent/viewmanager.cpp:528
 msgid "Data Directory"
 msgstr "Letöltési könyvtár"
 
-#: ktorrent/viewmanager.cpp:531
+#: ktorrent/viewmanager.cpp:532
 msgid "Temporary Directory"
 msgstr "Ideiglenes könyvtár"
 
-#: ktorrent/viewmanager.cpp:535
+#: ktorrent/viewmanager.cpp:536
 msgid "Move Data"
-msgstr "Adatok eltávolítása"
+msgstr "Az adatok áthelyezése"
 
-#: ktorrent/viewmanager.cpp:540
+#: ktorrent/viewmanager.cpp:541
 msgid "Remove from Group"
 msgstr "Eltávolítás a csoportból"
 
 #. i18n: file: ktorrent/ktorrentui.rc:62
 #. i18n: ectx: Menu (OpenDirMenu)
-#: ktorrent/viewmanager.cpp:558 rc.cpp:619
+#: ktorrent/viewmanager.cpp:559 rc.cpp:619
 msgid "Open Directory"
 msgstr "Könyvtár megnyitása"
 
 #. i18n: file: ktorrent/ktorrentui.rc:69
 #. i18n: ectx: Menu (GroupsSubMenu)
-#: ktorrent/viewmanager.cpp:561 rc.cpp:622
+#: ktorrent/viewmanager.cpp:562 rc.cpp:622
 msgid "Add to Group"
 msgstr "Hozzáadás a csoporthoz"
 
-#: ktorrent/viewmanager.cpp:564
+#: ktorrent/viewmanager.cpp:565
 msgid "Copy Torrent URL"
 msgstr "Torrent URL másolása"
 
 #: ktorrent/ipfilterlist.cpp:95
-#, fuzzy, kde-format
-#| msgid "Invalid IP address %1"
+#, kde-format
 msgid "Invalid IP address %1 !"
 msgstr "Érvénytelen IP-cím: %1"
 
 #: ktorrent/ipfilterlist.cpp:100
-#, fuzzy, kde-format
-#| msgid "Duplicate IP address %1"
+#, kde-format
 msgid "Duplicate IP address %1 !"
-msgstr "Dupla IP-cím: %1"
+msgstr "Duplikált IP-cím: %1"
 
 #. i18n: file: ktorrent/queuemanagerwidget.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, QueueManagerWidget)
@@ -800,40 +794,27 @@ msgid "Select the directory where the data now is."
 msgstr "Válassza ki az adatok jelenlegi könyvtárát."
 
 #: ktorrent/missingfilesdlg.cpp:91
-#, fuzzy
-#| msgid ""
-#| "The data files are not present in the location you selected. Do you want "
-#| "to create all the files in the selected directory?"
 msgid ""
 "The data files are not present in the location you selected! Do you want to "
 "create all the files in the selected directory ?"
 msgstr ""
 "Nincs adatfájl a megadott helyen. Létre szeretné hozni az összes fájlt a "
-"megadott könyvtárban?"
+"megadott mappában?"
 
 #: ktorrent/missingfilesdlg.cpp:93
-#, fuzzy
-#| msgid ""
-#| "Not all files were found in the new location; some are still missing. Do "
-#| "you want to create the missing files in the selected directory?"
 msgid ""
 "Not all files were found in the new location; some are still missing! Do you "
 "want to create the missing files in the selected directory ?"
 msgstr ""
-"Nincs meg minden fájl az új könyvtárban, néhány még hiányzik. Létre szeretné "
-"hozni a hiányzó fájlokat a megadott könyvtárban?"
+"Nem található meg az összes fájl az új mappában, néhány hiányzik. Létre "
+"szeretné hozni a hiányzó fájlokat a megadott mappában?"
 
 #: ktorrent/missingfilesdlg.cpp:122
-#, fuzzy
-#| msgid ""
-#| "The data file is not present in the location you selected. Do you want to "
-#| "create the file in the selected directory?"
 msgid ""
 "The data file is not present in the location you selected! Do you want to "
 "create the file in the selected directory ?"
 msgstr ""
-"Az adatfájl nincs a megadott helyen. Létre szeretné hozni a megadott "
-"könyvtárban?"
+"Az adatfájl nem található a megadott mappában. Létre szeretné hozni a fájlt?"
 
 #: ktorrent/torrentcreatordlg.cpp:38
 msgid "Create A Torrent"
@@ -850,10 +831,8 @@ msgid "Invalid url %1"
 msgstr "Érvénytelen URL: %1"
 
 #: ktorrent/torrentcreatordlg.cpp:222
-#, fuzzy
-#| msgid "Only HTTP is supported for webseeding."
 msgid "Only HTTP is supported for webseeding!"
-msgstr "A webseed-hez csak a HTTP támogatott."
+msgstr "Webes megosztáshoz csak a HTTP protokoll támogatott."
 
 #: ktorrent/torrentcreatordlg.cpp:253
 msgid "You must select a file or a folder."
@@ -902,7 +881,7 @@ msgid "Name"
 msgstr "Név"
 
 #: ktorrent/viewmodel.cpp:428 ktorrent/queuemanagermodel.cpp:99
-#: plugins/infowidget/infowidgetplugin.cpp:80
+#: plugins/infowidget/infowidgetplugin.cpp:81
 #: plugins/infowidget/webseedsmodel.cpp:127
 msgid "Status"
 msgstr "Állapot"
@@ -1033,10 +1012,9 @@ msgid "The location of the torrent's data on disk"
 msgstr "A torrent adatainak helye a lemezen"
 
 #: ktorrent/viewmodel.cpp:509
-#, fuzzy, kde-format
-#| msgid "There already is a tracker named <b>%1</b>."
+#, kde-format
 msgid "There is a problem with the tracker: <br><b>%1</b>"
-msgstr "Már létezik <b>%1</b> nevű követő."
+msgstr "Valamilyen probléma történt a következő követőnél: <br><b>%1</b>"
 
 #: ktorrent/viewmodel.cpp:515
 #, kde-format
@@ -1116,13 +1094,7 @@ msgid "Checking Data Integrity"
 msgstr "Adatintegritás ellenőrzése"
 
 #: ktorrent/core.cpp:1200
-#, fuzzy, kde-format
-#| msgid ""
-#| "KTorrent has found a torrent from the KDE3 version of KTorrent, do you "
-#| "want to import it?"
-#| msgid_plural ""
-#| "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
-#| "want to import them?"
+#, kde-format
 msgid ""
 "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
 "want to import them ?"
@@ -1131,8 +1103,6 @@ msgstr ""
 "Szeretné importálni ezeket?"
 
 #: ktorrent/core.cpp:1222
-#, fuzzy
-#| msgid "No torrents from the KDE3 version were found."
 msgid "No torrents from the KDE3 version were found !"
 msgstr "Nem található a KDE3-as verzióhoz tartozó torrent."
 
@@ -1181,53 +1151,42 @@ msgid "Opening %1"
 msgstr "%1 megnyitása"
 
 #: ktorrent/fileselectdlg.cpp:149
-#, fuzzy, kde-format
-#| msgid "The directory %1 does not exist, do you want to create it?"
+#, kde-format
 msgid "The directory %1 does not exist, do you want to create it ?"
-msgstr "A(z) %1 könyvtár nem létezik. Létre szeretné hozni?"
+msgstr "Nem létezik %1 nevű mappa. Létre szeretné hozni?"
 
 #: ktorrent/fileselectdlg.cpp:184
-#, fuzzy
-#| msgid ""
-#| "You have deselected the following existing files. You will lose all data "
-#| "in these files, are you sure you want to do this?"
 msgid ""
 "You have deselected the following existing files. You will lose all data in "
 "these files, are you sure you want to do this ?"
 msgstr ""
-"Megszüntette a kijelölését az alábbi létező fájloknak. A fájlok minden adata "
-"el fog veszni. Biztosan ezt szeretné?"
+"Megszüntette az alábbi fájlok kijelöltségét. A fájlok minden adata el fog "
+"veszni, biztosan ezt szeretné?"
 
 #: ktorrent/fileselectdlg.cpp:188
 msgid "Yes, delete the files"
-msgstr "Igen, a fájlok törlése"
+msgstr "Igen, a fájlok törölhetők"
 
 #: ktorrent/fileselectdlg.cpp:189
 msgid "No, keep the files"
-msgstr "Nem, a fájlok meghagyása"
+msgstr "Nem, maradjanak meg a fájlok"
 
 #: ktorrent/fileselectdlg.cpp:341
-#, fuzzy, kde-format
-#| msgctxt "We are %1 bytes short of what we need"
-#| msgid "%1 short"
+#, kde-format
 msgid "%1 short!"
 msgstr "%1 hiányzik"
 
 #: ktorrent/gui.cpp:85
-#, fuzzy
-#| msgid "Group"
 msgid "Groups"
-msgstr "Csoport"
+msgstr "Csoportok"
 
 #: ktorrent/gui.cpp:85
-#, fuzzy
-#| msgid "Widget to manage the torrent queue"
 msgid "Widget to manage torrent groups"
-msgstr "Kisalkalmazás a letöltési sor kezelésére"
+msgstr "Grafikus elem torrentcsoportok kezeléséhez"
 
 #: ktorrent/gui.cpp:91
 msgid "Widget to manage the torrent queue"
-msgstr "Kisalkalmazás a letöltési sor kezelésére"
+msgstr "Grafikus elem a letöltési sor kezeléséhez"
 
 #: ktorrent/gui.cpp:272 ktorrent/gui.cpp:287
 msgid "Torrent Files"
@@ -1346,8 +1305,6 @@ msgid "Open URL"
 msgstr "URL megnyitása"
 
 #: ktorrent/gui.cpp:488
-#, fuzzy
-#| msgid "Open a URL which points to a torrent"
 msgid "Open an URL which points to a torrent"
 msgstr "Torrentfájlra mutató URL megnyitása"
 
@@ -1356,10 +1313,8 @@ msgid "Enqueue/Dequeue"
 msgstr "Sorkezelő be/ki"
 
 #: ktorrent/gui.cpp:494
-#, fuzzy
-#| msgid "Enqueue or dequeue a torrent"
 msgid "Enqueue or dequeue all selected torrents in the current tab"
-msgstr "Torrent sorkezelése be/ki"
+msgstr "A sorkezelés átállítása az aktuális lap kijelölt torrentjeinél"
 
 #: ktorrent/gui.cpp:499
 msgid "Pause KTorrent"
@@ -1663,22 +1618,16 @@ msgid "Select a directory to move the data to."
 msgstr "Válassza ki az adatok célkönyvtárát."
 
 #: libktcore/dbus/dbustorrent.cpp:321
-#, fuzzy
-#| msgid "Maximum share ratio reached."
 msgid "Maximum share ratio reached !"
 msgstr "A megosztási arány elérte a maximumot."
 
 #: libktcore/dbus/dbustorrent.cpp:324
-#, fuzzy
-#| msgid "Maximum seed time reached."
 msgid "Maximum seed time reached !"
-msgstr "A feltöltési idő elérte a maximumot."
+msgstr "A megosztási idő elérte a maximumot."
 
 #: libktcore/util/mmapfile.cpp:164
-#, fuzzy
-#| msgid "Cannot write beyond end of the mmap buffer."
 msgid "Cannot write beyond end of the mmap buffer!"
-msgstr "Az mmap puffer végén túl nem lehetséges az írás."
+msgstr "Nem lehet az mmap-puffer végén túl írni."
 
 #: libktcore/pluginmanagerprefpage.cpp:38
 #: libktcore/pluginmanagerprefpage.cpp:54
@@ -1712,40 +1661,28 @@ msgid "Not Running Downloads"
 msgstr "Nem futó letöltések"
 
 #: libktcore/groups/groupmanager.cpp:126
-#, fuzzy
-#| msgid "&User controlled"
 msgid "User Controlled"
-msgstr "&Egyedi irányítás"
+msgstr "Egyedi kezelésűek"
 
 #: libktcore/groups/groupmanager.cpp:128
-#, fuzzy
-#| msgid "&User controlled"
 msgid "User Controlled Uploads"
-msgstr "&Egyedi irányítás"
+msgstr "Egyedi kezelésű feltöltések"
 
 #: libktcore/groups/groupmanager.cpp:130
-#, fuzzy
-#| msgid "User downloads"
 msgid "User Controlled Downloads"
-msgstr "Felhasználói letöltések"
+msgstr "Egyedi kezelésű letöltések"
 
 #: libktcore/groups/groupmanager.cpp:134
-#, fuzzy
-#| msgid "Queue Manager"
 msgid "Queue Manager Controlled"
-msgstr "Sorkezelő"
+msgstr "Automatikus sorkezelés"
 
 #: libktcore/groups/groupmanager.cpp:136
-#, fuzzy
-#| msgid "Queue Manager"
 msgid "Queue Manager Controlled Uploads"
-msgstr "Sorkezelő"
+msgstr "Automatikus kezelésű feltöltések"
 
 #: libktcore/groups/groupmanager.cpp:138
-#, fuzzy
-#| msgid "Queue Manager"
 msgid "Queue Manager Controlled Downloads"
-msgstr "Sorkezelő"
+msgstr "Automatikus kezelésű letöltések"
 
 #: libktcore/groups/groupmanager.cpp:141
 msgid "Active Torrents"
@@ -1794,44 +1731,35 @@ msgid "Insufficient disk space for %1"
 msgstr "%1 számára kevés a lemezterület."
 
 #: libktcore/torrent/queuemanager.cpp:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "The torrent \"%1\" has reached its maximum share ratio and its maximum "
-#| "seed time. Ignore the limit and start seeding anyway?"
+#, kde-format
 msgid ""
 "The torrent \"%1\" has reached it's maximum share ratio and it's maximum "
 "seed time. Ignore the limit and start seeding anyway?"
 msgstr ""
-"\"%1\" torrent elérte a maximális megosztási arányt és feltöltési időt. A "
-"korlátok figyelmen kívül hagyásával folytatódhat a feltöltés?"
+"Egy torrent (\"%1\") elérte a maximális megosztási arányt és megosztási "
+"időt. A korlátok figyelmen kívül hagyásával induljon a megosztás?"
 
 #: libktcore/torrent/queuemanager.cpp:134
-#, fuzzy, kde-format
-#| msgid ""
-#| "The torrent \"%1\" has reached its maximum share ratio. Ignore the limit "
-#| "and start seeding anyway?"
+#, kde-format
 msgid ""
 "The torrent \"%1\" has reached it's maximum share ratio. Ignore the limit "
 "and start seeding anyway?"
 msgstr ""
-"\"%1\" torrent elérte a maximális megosztási arányt. A korlátozás figyelmen "
-"kívül hagyásával folytatódhat a feltöltés?"
+"Egy torrent (\"%1\") elérte a maximális megosztási arányt. A korlátozás "
+"figyelmen kívül hagyásával induljon a megosztás?"
 
 #: libktcore/torrent/queuemanager.cpp:136
-#, fuzzy, kde-format
-#| msgid ""
-#| "The torrent \"%1\" has reached its maximum seed time. Ignore the limit "
-#| "and start seeding anyway?"
+#, kde-format
 msgid ""
 "The torrent \"%1\" has reached it's maximum seed time. Ignore the limit and "
 "start seeding anyway?"
 msgstr ""
-"\"%1\" torrent elérte a maximális feltöltési időt. A korlátozás figyelmen "
-"kívül hagyásával folytatódhat a feltöltés?"
+"Egy torrent (\"%1\") elérte a maximális megosztási időt. A korlátozás "
+"figyelmen kívül hagyásával induljon a megosztás?"
 
 #: libktcore/torrent/queuemanager.cpp:138
 msgid "Maximum share ratio limit reached."
-msgstr "Maximális megosztási arány elérve."
+msgstr "A maximális megosztási arány elérve."
 
 #: libktcore/torrent/queuemanager.cpp:224
 msgid ""
@@ -1885,8 +1813,6 @@ msgstr ""
 "\"excluded_color\">&nbsp; - Mellőzőtt darabok"
 
 #: libktupnp/httprequest.cpp:80
-#, fuzzy
-#| msgid "Connection closed unexpectedly."
 msgid "Connection closed unexpectedly !"
 msgstr "A kapcsolat váratlanul megszakadt."
 
@@ -1900,29 +1826,20 @@ msgid "Failed to download %1 : %2"
 msgstr "Nem sikerült letölteni: %1. %2"
 
 #: libktupnp/upnprouter.cpp:152
-#, fuzzy
-#| msgid "Error parsing router description."
 msgid "Error parsing router description !"
-msgstr "Nem sikerült feldolgozni a router leírását."
+msgstr "Nem sikerült feldolgozni az útválasztó leírását."
 
 #: libktupnp/upnprouter.cpp:276
-#, fuzzy
-#| msgid ""
-#| "Forwarding failed: \n"
-#| "Device does not have a WANIPConnection or WANPPPConnection."
 msgid ""
 "Forwarding failed: \n"
 "Device does not have a WANIPConnection or WANPPPConnection !"
 msgstr ""
 "Sikertelen átirányítás: \n"
-"Az eszköz nem rendelkezik WANIPConnection, vagy WANPPPConnection "
-"lehetőségekkel."
+"Az eszköz nem rendelkezik WANIPConnection vagy WANPPPConnection funkcióval."
 
 #: libktupnp/upnprouter.cpp:434 libktupnp/upnprouter.cpp:447
-#, fuzzy
-#| msgid "Cannot find port forwarding service in the device's description."
 msgid "Cannot find port forwarding service in the device's description!"
-msgstr "Az eszköz leírásában nem található port-átirányítási szolgáltatás."
+msgstr "Az eszköz leírásában nem található portátirányítási szolgáltatás."
 
 #: ktupnptest/main.cpp:39
 msgid "KTUPnPTest"
@@ -1937,27 +1854,19 @@ msgid "(C) 2005 - 2007 Joris Guisson and Ivan Vasic"
 msgstr "(C) Joris Guisson és Ivan Vasic, 2005-2007."
 
 #: plasma/applet/applet.cpp:123
-#, fuzzy
-#| msgid "KTorrent is not running."
 msgid "KTorrent is not running !"
 msgstr "A KTorrent nem fut."
 
 #: plasma/applet/applet.cpp:125
-#, fuzzy
-#| msgid "No torrents loaded."
 msgid "No torrents loaded !"
-msgstr "Nincs torrent betöltve."
+msgstr "Egy torrent se lett betöltve."
 
 #: plasma/applet/applet.cpp:268
 msgid "KTorrent is not running."
 msgstr "A KTorrent nem fut."
 
 #: plasma/applet/applet.cpp:292 plasma/applet/applet.cpp:360
-#, fuzzy, kde-format
-#| msgid ""
-#| "<table>\t\t\t\t<tr><td>Download Speed:</td><td>%5 </td><td>Seeders: </"
-#| "td><td>%1 (%2)</td></tr>\t\t\t\t<tr><td>Upload Speed:</td><td>%6 </"
-#| "td><td>Leechers: </td><td>%3 (%4)</td></tr>"
+#, kde-format
 msgid ""
 "<table>\t\t\t\t<tr><td>Download Speed:</td><td>%5 </td><td>Seeders: </td><td>"
 "%1 (%2)</td></tr>\t\t\t\t<tr><td>Upload Speed:</td><td>%6 </td><td>Leechers: "
@@ -1965,8 +1874,9 @@ msgid ""
 "td><td>Uploaded: </td><td>%9</td></tr>\t\t\t\t</table>"
 msgstr ""
 "<table>\t\t\t\t<tr><td>Letöltési sebesség:</td><td>%5 </td><td>Feltöltők: </"
-"td><td>%1 (%2)</td></tr>\t\t\t\t<tr><td>Feltöltés sebessége:</td><td>%6 </"
-"td><td>Letöltők: </td><td>%3 (%4)</td></tr>"
+"td><td>%1 (%2)</td></tr>\t\t\t\t<tr><td>Feltöltési sebesség:</td><td>%6 </"
+"td><td>Letöltők: </td><td>%3 (%4)</td></tr>\t\t\t\t<tr><td>Letöltve:</td><td>"
+"%7 / %8 </td><td>Feltöltve: </td><td>%9</td></tr>\t\t\t\t</table>"
 
 #: plasma/applet/applet.cpp:300
 #, kde-format
@@ -2427,24 +2337,6 @@ msgstr "Szöveg kódolása:"
 #. i18n: file: ktorrent/fileselectdlg.ui:176
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_skip_data_check)
 #: rc.cpp:179
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">When existing files "
-#| "have been found, skip the data check and assume that the files are fully "
-#| "downloaded.</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">Note: </span>only do this when you are absolutely sure.</"
-#| "p></body></html>"
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -2469,8 +2361,8 @@ msgstr ""
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">A már létező fájlok "
-"adatellenőrzés nélkül minősüljenek letöltöttnek.</p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">A már létező fájlokat "
+"ellenőrzés nélkül úgy kell tekinteni, hogy teljesen le vannak töltve.</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
 "p>\n"
@@ -2488,8 +2380,6 @@ msgstr "Már létező fájlok esetén adatellenőrzés kihagyása"
 #. i18n: file: ktorrent/fileselectdlg.ui:186
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
 #: rc.cpp:190
-#, fuzzy
-#| msgid "Disk Space"
 msgid "Disk space"
 msgstr "Lemezterület"
 
@@ -2641,16 +2531,6 @@ msgstr "Egyéb"
 #. i18n: file: ktorrent/generalpref.ui:128
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useFileList)
 #: rc.cpp:256
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Color to use for last "
-#| "priority files.</p></body></html>"
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -2668,8 +2548,9 @@ msgstr ""
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Utolsó prioritású fájlok "
-"színe.</p></body></html>"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Fastruktúra helyet "
+"egyszerű listában jelenjenek meg a torrentben található fájlok.</p></body></"
+"html>"
 
 #. i18n: file: ktorrent/generalpref.ui:131
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useFileList)
@@ -3301,7 +3182,7 @@ msgstr "Torrent hozzáadása egy csoporthoz:"
 
 #. i18n: file: ktorrent/torrentcreatordlg.ui:168
 #. i18n: ectx: attribute (title), widget (QWidget, m_tracker_tab)
-#: rc.cpp:463 plugins/infowidget/infowidgetplugin.cpp:262
+#: rc.cpp:463 plugins/infowidget/infowidgetplugin.cpp:264
 msgid "Trackers"
 msgstr "Követők"
 
@@ -5538,7 +5419,7 @@ msgstr "Webes feltöltő eltávolítása"
 #. i18n: ectx: property (windowTitle), widget (QWidget, ChunkDownloadView)
 #. i18n: file: plugins/infowidget/statustab.ui:210
 #. i18n: ectx: property (text), widget (QLabel, hdr_chunks)
-#: rc.cpp:1399 rc.cpp:1543 plugins/infowidget/infowidgetplugin.cpp:241
+#: rc.cpp:1399 rc.cpp:1543 plugins/infowidget/infowidgetplugin.cpp:243
 msgid "Chunks"
 msgstr "Darabok"
 
@@ -6080,7 +5961,7 @@ msgstr "Letöltés"
 #. i18n: file: plugins/stats/Settings.ui:166
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: rc.cpp:1647 rc.cpp:1668 rc.cpp:1782
-#: plugins/infowidget/infowidgetplugin.cpp:220
+#: plugins/infowidget/infowidgetplugin.cpp:222
 msgid "Peers"
 msgstr "Partnerek"
 
@@ -7592,20 +7473,20 @@ msgstr "Szeretnénk-e letölteni ettől a partnertől"
 msgid "Info Widget"
 msgstr "Információs kisalkalmazás"
 
-#: plugins/infowidget/infowidgetplugin.cpp:81
+#: plugins/infowidget/infowidgetplugin.cpp:82
 msgid "Displays status information about a torrent"
 msgstr "Megjeleníti a torrent állapotát érintő információkat"
 
-#: plugins/infowidget/infowidgetplugin.cpp:82
+#: plugins/infowidget/infowidgetplugin.cpp:83
 #: plugins/infowidget/chunkdownloadmodel.cpp:214
 msgid "Files"
 msgstr "Fájlok"
 
-#: plugins/infowidget/infowidgetplugin.cpp:83
+#: plugins/infowidget/infowidgetplugin.cpp:84
 msgid "Shows all the files in a torrent"
 msgstr "A torrenthez tartozó összes fájl megjelenítése"
 
-#: plugins/infowidget/infowidgetplugin.cpp:93
+#: plugins/infowidget/infowidgetplugin.cpp:94
 #: plugins/bwscheduler/bwschedulerplugin.cpp:80
 #: plugins/bwscheduler/bwschedulerplugin.cpp:83
 #: plugins/bwscheduler/bwschedulerplugin.cpp:115
@@ -7613,23 +7494,23 @@ msgstr "A torrenthez tartozó összes fájl megjelenítése"
 msgid "Bandwidth Scheduler"
 msgstr "Sávszélesség ütemező"
 
-#: plugins/infowidget/infowidgetplugin.cpp:221
+#: plugins/infowidget/infowidgetplugin.cpp:223
 msgid "Displays all the peers you are connected to for a torrent"
 msgstr "Megjeleníti a torrenten keresztül kapcsolódó összes felhasználót"
 
-#: plugins/infowidget/infowidgetplugin.cpp:242
+#: plugins/infowidget/infowidgetplugin.cpp:244
 msgid "Displays all the chunks you are downloading, of a torrent"
 msgstr "Megjeleníti a torrent összes letöltés alatt álló darabját"
 
-#: plugins/infowidget/infowidgetplugin.cpp:263
+#: plugins/infowidget/infowidgetplugin.cpp:265
 msgid "Displays information about all the trackers of a torrent"
 msgstr "Megjeleníti a torrenthez tartozó követőket"
 
-#: plugins/infowidget/infowidgetplugin.cpp:278
+#: plugins/infowidget/infowidgetplugin.cpp:280
 msgid "Webseeds"
 msgstr "Webes feltöltők"
 
-#: plugins/infowidget/infowidgetplugin.cpp:279
+#: plugins/infowidget/infowidgetplugin.cpp:281
 msgid "Displays all the webseeds of a torrent"
 msgstr "Megjeleníti a torrenthez tartozó webes feltöltőket"
 
@@ -9015,663 +8896,3 @@ msgstr "Érvénytelen követő-URL"
 #, kde-format
 msgid "Cannot open file : %1 : %2"
 msgstr "Nem sikerült megnyitni ezt a fájlt: %1. %2"
-
-#~| msgid "Import Torrent"
-#~ msgid "Export Torrent"
-#~ msgstr "Torrent exportálása"
-
-#~| msgid "Torrent Files (*.torrent)"
-#~ msgid "Torrents (*.torrent)"
-#~ msgstr "Torrentfájlok (*.torrent)"
-
-#~| msgid "KTorrent"
-#~ msgid "Torrents"
-#~ msgstr "Torrentek"
-
-#~ msgid "Ian Higginson"
-#~ msgstr "Ian Higginson"
-
-#~ msgid "Patch to cleanup the plugin list"
-#~ msgstr "Javítófolt a bővítmények listájához"
-
-#~| msgid "Choose a file to save the torrent"
-#~ msgid "Show a file tree"
-#~ msgstr "Fastruktúra megjelenítése"
-
-#~| msgid "Choose a file"
-#~ msgid "Show a file list"
-#~ msgstr "Fájllista megjelenítése"
-
-#~ msgid ""
-#~ "Files of the torrent have been found in the completed downloads "
-#~ "directory. Do you want to use them, and download to the completed "
-#~ "downloads directory?"
-#~ msgstr ""
-#~ "A torrenthez tartozó fájlok találhatóak a befejezett letöltések "
-#~ "könyvtárában. Fel szeretné használni ezeket egy új letöltéshez?"
-
-#~ msgid "Little icons"
-#~ msgstr "Kis ikonok"
-
-#~ msgid "Normal icons"
-#~ msgstr "Normál ikonok"
-
-#~ msgid "Big icons"
-#~ msgstr "Nagy ikonok"
-
-#~ msgid "Icons only"
-#~ msgstr "Csak ikonok"
-
-#~ msgid "Text only"
-#~ msgstr "Csak szöveg"
-
-#~ msgid "Icons and text"
-#~ msgstr "Ikonok és szöveg"
-
-#~| msgid "Time Left"
-#~ msgid "Left"
-#~ msgstr "Balra"
-
-#~ msgid "Right"
-#~ msgstr "Jobbra"
-
-#~ msgid "Bottom"
-#~ msgstr "Lent"
-
-#~ msgid "Applet"
-#~ msgstr "Alkalmazás"
-
-#~ msgid ""
-#~ "<tr><td>Downloaded:</td><td>%1 </td><td>Size: </td><td>%2</td></tr>\t\t\t"
-#~ "\t<tr><td>Uploaded:</td><td>%3 </td><td>Complete: </td><td>%4 %</td></tr>"
-#~ "\t\t\t\t</table>"
-#~ msgstr ""
-#~ "<tr><td>Letöltve:</td><td>%1 </td><td>Méret: </td><td>%2</td></tr>\t\t\t"
-#~ "\t<tr><td>Feltöltve:</td><td>%3 </td><td>Teljes: </td><td>%4 %</td></tr>\t"
-#~ "\t\t\t</table>"
-
-#~ msgid "Selected torrent is unavailable."
-#~ msgstr "A kiválasztott torrent nem elérhető."
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgid "Features"
-#~ msgstr "Jellemzők"
-
-#~ msgid ""
-#~ "Enable or disable the use of webseeds when they are present in a torrent."
-#~ msgstr ""
-#~ "Webes feltöltők engedélyezése, vagy tiltása, ha a torrent tartalmaz ilyen "
-#~ "lehetőséget."
-
-#~| msgid "Webseeds"
-#~ msgid "Use webseeds"
-#~ msgstr "Webes feltöltők használata"
-
-#~ msgid ""
-#~ "When enabled, the queue manager will be totally disabled, allowing you to "
-#~ "fully control all torrents manually."
-#~ msgstr ""
-#~ "Ha ez engedélyezett, akkor a letöltési sorkezelő tiltásra kerül, "
-#~ "teljeskörű testreszabási lehetőséget biztosítva."
-
-#~ msgid "Control torrents manually"
-#~ msgstr "Torrentek manuális kezelése"
-
-#~| msgid "Global max share ratio patch"
-#~ msgid "Default maximum share ratio:"
-#~ msgstr "Alapértelmezett maximális megosztási arány:"
-
-#~| msgid "Global max share ratio patch"
-#~ msgid "Default maximum seed time:"
-#~ msgstr "Alapértelmezett maximális feltöltési idő:"
-
-#~ msgid "Maximum number of downloads (0 = no limit)"
-#~ msgstr "Letöltések maximális száma (0 = nincs korlátozás)"
-
-#~ msgid "Maximum number of seeds (0 = no limit)"
-#~ msgstr "Feltöltések maximális száma (0 = nincs korlátozás)"
-
-#~ msgid "Start downloads on low disk space?"
-#~ msgstr "Letöltés indítása kevés lemezterület esetén?"
-
-#~ msgid "Maximum number of connections per torrent (0 = no limit)"
-#~ msgstr "A kapcsolatok maximális száma torrentenként (0 = nincs korlátozás)"
-
-#~ msgid "Maximum number of connections for all torrents (0 = no limit) "
-#~ msgstr ""
-#~ "A kapcsolatok maximális száma az összes torrentre vonatkozóan  (0 = nincs "
-#~ "korlátozás)"
-
-#~ msgid "Maximum upload speed in KiB/sec (0 = no limit)"
-#~ msgstr "Maximális feltöltési sebesség (KiB/sec,  0 = nincs korlátozás)"
-
-#~ msgid "Maximum download speed in KiB/sec (0 = no limit)"
-#~ msgstr "Maximális letöltési sebesség (KiB/sec,  0 = nincs korlátozás)"
-
-#~| msgid "Global max share ratio patch"
-#~ msgid "Maximum share ratio (0 = no limit)"
-#~ msgstr "Maximális megosztási arány  (0 = nincs korlátozás)"
-
-#~ msgid "Show a system tray icon"
-#~ msgstr "Ikon megjelenítése a paneltálcán"
-
-#~ msgid "Show speed bar in tray icon"
-#~ msgstr "Sebességjelző megjelenítése a paneltálca-ikonon"
-
-#~ msgid "Download bandwidth (in kb/s):"
-#~ msgstr "Letöltési sávszélesség (KiB/sec):"
-
-#~ msgid "Upload bandwidth (in kb/s):"
-#~ msgstr "Feltöltési sávszélesség (KiB/sec):"
-
-#~ msgid "Show popup messages when torrent is finished."
-#~ msgstr "Értesítőüzenet megjelenítése, ha a torrent letöltése befejeződött."
-
-#~ msgid "Keep seeding after download has finished"
-#~ msgstr "Befejezett letöltés után feltöltés folytatása"
-
-#~ msgid "Folder to store temporary files"
-#~ msgstr "Az ideiglenes fájlok könyvtára"
-
-#~ msgid "Whether to automatically save downloads to saveDir"
-#~ msgstr "Letöltés automatikusan a letöltési könyvtárba"
-
-#~ msgid "Folder to store downloaded files"
-#~ msgstr "A letöltött fájlok könyvtára"
-
-#~ msgid "Whether to automatically copy .torrent files to torrentCopyDir"
-#~ msgstr "A .torrent fájlok automatikus másolása a megadott könyvtárba"
-
-#~ msgid "Folder to copy .torrent files to"
-#~ msgstr "Mappa, amelybe a .torrent fájlok másolásra kerülnek"
-
-#~ msgid "Whether to use a custom IP to pass to the tracker"
-#~ msgstr ""
-#~ "Meghatározza, hogy egyedi IP-cím legyen-e használva a követőhöz való "
-#~ "kapcsolódáskor"
-
-#~ msgid "Directory which was used as the last save directory"
-#~ msgstr "A legutóbb használt mentési könyvtár"
-
-#~ msgid "IP to pass to the tracker"
-#~ msgstr "A követőnél használt IP-cím"
-
-#~ msgid "GUI update interval"
-#~ msgstr "A felhasználói felület frissítési időtartama"
-
-#~ msgid "Support for DHT"
-#~ msgstr "DHT-támogatás"
-
-#~ msgid "DHT port"
-#~ msgstr "DHT-port"
-
-#~ msgid "Number of upload slots"
-#~ msgstr "Feltöltési szálak száma"
-
-#~ msgid "Columns shown in KTorrentView"
-#~ msgstr "A KTorrentView-ben megjelenített oszlopok száma"
-
-#~ msgid "Algorithm to estimate the time when a torrent is finished"
-#~ msgstr "A torrent befejezésének idejét megbecsülő algoritmus"
-
-#~ msgid ""
-#~ "When there is no space left to complete download, and the available disk "
-#~ "space is less than this value, the torrent will be stopped."
-#~ msgstr ""
-#~ "A torrent leállításra kerül, ha már nincs elegendő lemezterület a "
-#~ "letöltés befejezéséhez, és a rendelkezésre álló terület kevesebb, mint ez "
-#~ "az érték."
-
-#~ msgid "Whether to automatically move completed downloads to completedDir"
-#~ msgstr "Befejezett letöltések automatikus áthelyezése a megadott könyvtárba"
-
-#~ msgid "Folder to move completed downloaded files to"
-#~ msgstr "A befejezett letöltések ebbe a mappába kerülnek átmozgatásra"
-
-#~ msgid "Maximum seed time in hours (0 = no limit)"
-#~ msgstr "Maximális feltöltési idő (óra, 0 = nincs korlátozás)"
-
-#~ msgid "Default UPnP device to use"
-#~ msgstr "Alapértelmezett  UPnP-eszköz"
-
-#~| msgid "torrent files"
-#~ msgid "Whether to open torrent silently or not."
-#~ msgstr ""
-#~ "Torrentek háttérben történő megnyitásának engedélyezése, vagy tiltása."
-
-#~ msgid "Delete action checked."
-#~ msgstr "Törlési művelet aktiválva."
-
-#~ msgid "Move action checked."
-#~ msgstr "Áthelyezési művelet aktiválva."
-
-#~ msgid "Scan directories recursively."
-#~ msgstr "Könyvtárak ismétlődő vizsgálata."
-
-#~ msgid "Port number"
-#~ msgstr "Port száma"
-
-#~ msgid "forward Port"
-#~ msgstr "Port átirányítása"
-
-#~ msgid "Session time to live"
-#~ msgstr "A munkafolyamat ideje"
-
-#~| msgid "Webinterface Plugin"
-#~ msgid "interface skin"
-#~ msgstr "Felület témája"
-
-#~ msgid "username"
-#~ msgstr "felhasználónév"
-
-#~ msgid "password"
-#~ msgstr "jelszó"
-
-#~ msgid "Enable All"
-#~ msgstr "Az összes engedélyezése"
-
-#~ msgid "Disable All"
-#~ msgstr "Az összes letiltása"
-
-#~ msgid "Show peer view tab in main window"
-#~ msgstr "Partnerek lapjának megjelenítése a főablakban"
-
-#~ msgid "Show chunk download view tab in main window"
-#~ msgstr "Darabok lapjának megjelenítése a főablakban"
-
-#~ msgid "Show trackers view tab in main window"
-#~ msgstr "Követők lapjának megjelenítése a főablakban"
-
-#~| msgid "Update Tracker"
-#~ msgid "Update Trackers"
-#~ msgstr "Követők frissítése"
-
-#~ msgid "KSqueezedTextLabel"
-#~ msgstr "KSqueezedTextLabel"
-
-#~| msgid "Remove Filter"
-#~ msgid "Level1 filter url"
-#~ msgstr "1-es szintű szűrő hivatkozás"
-
-#~ msgid "Use level1 filter?"
-#~ msgstr "1-es szintű szürő kerüljön alkalmazásra?"
-
-#~ msgid "Update charts every n gui updates"
-#~ msgstr ""
-#~ "Grafikonok frissítése a grafikus felület minden n-edik frissülésekor"
-
-#~ msgid "Interval in miliseconds between data gathering"
-#~ msgstr "Adatgyűjtési időköz ezredmásodpercben"
-
-#~ msgid "Method of determining maximum value of the scale"
-#~ msgstr "A maximális skálaérték megadásának módja"
-
-#~ msgid "Whether to show seeds in swarms"
-#~ msgstr "Feltöltők megjelenítése a bolyokban"
-
-#~ msgid "Whether to show leachers in swarms"
-#~ msgstr "Letöltők megjelenítése a bolyokban"
-
-#~ msgid "Samples to show on download chart"
-#~ msgstr "Minták megjelenítése a letöltési grafikonon"
-
-#~ msgid "Samples to show on peers chart"
-#~ msgstr "Minták megjelenítése a partnerek grafikonján"
-
-#~ msgid "Samples to show on upload chart"
-#~ msgstr "Minták megjelenítése a feltöltési grafikonon"
-
-#~ msgid "Samples to show on connections chart"
-#~ msgstr "Minták megjelenítése a kapcsolatok grafikonján"
-
-#~ msgid "Samples to show on DHT chart"
-#~ msgstr "Minták megjelenítése a DHT-grafikonon"
-
-#~ msgid "Color of the speed on dl chart"
-#~ msgstr "Sebesség színe a letöltési grafikonon"
-
-#~ msgid "Color of the average on dl chart"
-#~ msgstr "Átlag színe a letöltési grafikonon"
-
-#~ msgid "Color of the limit on dl chart"
-#~ msgstr "Korlát színe a letöltési grafikonon"
-
-#~ msgid "Color of the avg from leecher on peers chart"
-#~ msgstr "Letöltőktől érkező adat átlagának színe a partnerek grafikonján"
-
-#~ msgid "Color of the avg to leecher on peers chart"
-#~ msgstr "Letöltőkhöz küldött adat átlagának színe a partnerek grafikonján"
-
-#~ msgid "Color of the avg from seeds on peers chart"
-#~ msgstr "Feltöltőktől érkező adat átlagának színe a partnerek grafikonján"
-
-#~ msgid "Color of the leechers on peers chart"
-#~ msgstr "Letöltők színe a partnerek grafikonján"
-
-#~ msgid "Color of the seeds on peers chart"
-#~ msgstr "Feltöltők színe a partnerek grafikonján"
-
-#~ msgid "Color of the speed on upload chart"
-#~ msgstr "Sebesség színe a feltöltési grafikonon"
-
-#~ msgid "Color of the avg on upload chart"
-#~ msgstr "Átlag színe a feltöltési grafikonon"
-
-#~ msgid "Color of the limit on upload chart"
-#~ msgstr "Korlát színe a feltöltési grafikonon"
-
-#~ msgid "Color of the connected leechers on connections chart"
-#~ msgstr "Kapcsolódott letöltők színe a kapcsolatok grafikonján"
-
-#~ msgid "Color of the leechers in swarms on connections chart"
-#~ msgstr "Letöltők színe a bolyokban a kapcsolatok grafikonján"
-
-#~ msgid "Color of the connected seeds on connections chart"
-#~ msgstr "Kapcsolódott feltöltők színe a kapcsolatok grafikonján"
-
-#~ msgid "Color of the seeds in swarms on connections chart"
-#~ msgstr "Feltöltők színe a bolyokban a kapcsolatok grafikonján"
-
-#~ msgid "Color of the avg connected leecher per torrent on connections chart"
-#~ msgstr ""
-#~ "Torrentenként kapcsolódott letöltők átlagának színe a kapcsolatok "
-#~ "grafikonján"
-
-#~ msgid "Color of the avg connected seeds per torrent on connections chart"
-#~ msgstr ""
-#~ "Torrentenként kapcsolódott feltöltők átlagának színe a kapcsolatok "
-#~ "grafikonján"
-
-#~ msgid ""
-#~ "Color of the avg connected leechers per running torrent on connections "
-#~ "chart"
-#~ msgstr ""
-#~ "Futó torrentenként kapcsolódott letöltők átlagának színe a kapcsolatok "
-#~ "grafikonján"
-
-#~ msgid ""
-#~ "Color of the avg connected seeds per running torrent on connections chart"
-#~ msgstr ""
-#~ "Futó torrentenként kapcsolódott feltöltők átlagának színe a kapcsolatok "
-#~ "grafikonján"
-
-#~ msgid "Color of the nodes on DHT chart"
-#~ msgstr "Csomópontok színe a DHT-grafikonon"
-
-#~ msgid "Color of the tasks on DHT chart"
-#~ msgstr "Feladatok színe a DHT-grafikonon"
-
-#~ msgid "Use anti aliasing on charts?"
-#~ msgstr "Legyen élsimítás a grafikonoknál?"
-
-#~ msgid "Draw ugly grey background grid?"
-#~ msgstr "Legyen megjelenítve a ronda szürke négyzetrács a háttérben?"
-
-#~ msgid "Type of widget used for chart drawing"
-#~ msgstr "A grafikon megjelenítéséhez szükséges kisalkalmazás típusa"
-
-#~ msgid "Shutdown"
-#~ msgstr "Leállítás"
-
-#~| msgid "Search Toolbar"
-#~ msgid "Shutdown Toolbar"
-#~ msgstr "Leállítási eszköztár"
-
-#~ msgid "Shutdown Settings"
-#~ msgstr "Leállítási opciók"
-
-#~ msgid "Action to execute:"
-#~ msgstr "Végrehajtandó művelet:"
-
-#~ msgid "Execute action when:"
-#~ msgstr "Művelet végrehajtása ha:"
-
-#~ msgid "Use rich log text"
-#~ msgstr "Formázott naplószöveg használata"
-
-#~ msgid "Log widget position:"
-#~ msgstr "Naplózó kisalkalmazás pozíciója"
-
-#~ msgid "Separate activity"
-#~ msgstr "Tevékenység elválasztása"
-
-#~ msgid "Dockable widget"
-#~ msgstr "Dokkolható kisalkalmazás"
-
-#~| msgid "Torrent Limits"
-#~ msgid "Torrent activity"
-#~ msgstr "Torrent-tevékenység"
-
-#~ msgid "Current search engine"
-#~ msgstr "Aktuális keresőmotor"
-
-#~ msgid "Use custom browser"
-#~ msgstr "Egyéni böngésző használata"
-
-#~ msgid "Custom browser executable path"
-#~ msgstr "Egyéni böngésző elérési útja"
-
-#~ msgid "Auto remove a torrent when:"
-#~ msgstr "Torrent automatikus eltávolítása, ha:"
-
-#~ msgid "The torrent finishes downloading"
-#~ msgstr "A torrent letöltése befejeződött"
-
-#~ msgid "The torrent finishes seeding"
-#~ msgstr "A torrent feltöltése befejeződött"
-
-#~| msgid "Speed Limits"
-#~ msgid "Special Limits"
-#~ msgstr "Speciális korlátozások"
-
-#~ msgid ""
-#~ "Use these global limits when the screensaver is activated, instead of the "
-#~ "ones configured in the network settings."
-#~ msgstr ""
-#~ "Aktív képernyővédő esetén az általános korlátozások használata a hálózati "
-#~ "beállításoknál megadottak helyett."
-
-#~ msgid "Use different speed limits when the screensaver is activated"
-#~ msgstr "Eltérő sebességkorlátok használata aktív képernyőkímélő esetén"
-
-#~ msgid "Global upload limit when the screensaver is activated."
-#~ msgstr "Általános feltöltési korlát aktív képernyőkímélő esetén."
-
-#~ msgid "Global download limit when the screensaver is activated."
-#~ msgstr "Általános letöltési korlát aktív képernyőkímélő esetén."
-
-#~ msgid "When screensaver is activated:"
-#~ msgstr "Ha a képernyővédő aktív:"
-
-#~| msgid "Torrent Limits"
-#~ msgid "Connection Limits"
-#~ msgstr "Kapcsolati korlátozások"
-
-#~| msgid "Filter"
-#~ msgid "File Tree"
-#~ msgstr "Fastruktúra"
-
-#~| msgid "IP Filter"
-#~ msgid "File List"
-#~ msgstr "Fájllista"
-
-#~| msgid "Add New Filter"
-#~ msgid "Show Filter"
-#~ msgstr "Szűrő megjelenítése"
-
-#~ msgid "Private"
-#~ msgstr "Privát"
-
-#~ msgid "Public"
-#~ msgstr "Publikus"
-
-#~ msgid "Url"
-#~ msgstr "Cím"
-
-#~| msgid "Next Update In:"
-#~ msgid "Next Update"
-#~ msgstr "Következő frissítés"
-
-#~ msgid "Enter the URL of the tracker:"
-#~ msgstr "Követő hivatkozásának megadása:"
-
-#~| msgid "Downloaded"
-#~ msgid "Downloading finishes"
-#~ msgstr "Letöltés befejezve"
-
-#~ msgid "Seeding finishes"
-#~ msgstr "Feltöltés befejezve"
-
-#~ msgid "Event"
-#~ msgstr "Esemény"
-
-#~ msgid "Shutdown Enabled"
-#~ msgstr "Leállítás engedélyezve"
-
-#~ msgid "Configure Shutdown"
-#~ msgstr "Kikapcsolás beállítása"
-
-#~| msgid "Lucke"
-#~ msgid "Lock"
-#~ msgstr "Zárolás"
-
-#~ msgid "Standby"
-#~ msgstr "Készenlét"
-
-#~ msgid "Sleep (suspend to RAM)"
-#~ msgstr "Altatás (felfüggesztés memóriába)"
-
-#~ msgid "Hibernate (suspend to disk)"
-#~ msgstr "Hibernálás (felfüggesztés merevlemezre)"
-
-#~ msgid "When all torrents finish downloading"
-#~ msgstr "Ha minden torrent letöltése befejeződött"
-
-#~ msgid "When all torrents finish seeding"
-#~ msgstr "Ha minden torrent feltöltése befejeződött"
-
-#~ msgid "When the events below happen"
-#~ msgstr "Ha az alábbi esemény bekövetkezik"
-
-#~ msgid "Log"
-#~ msgstr "Napló"
-
-#~| msgid "Play"
-#~ msgid "Play List"
-#~ msgstr "Lejátszási lista"
-
-#~| msgid "Add Webseed"
-#~ msgid "Add Media"
-#~ msgstr "Média hozzáadása"
-
-#~ msgid "Clear Playlist"
-#~ msgstr "Lejátszólista törlése"
-
-#~ msgid "KTorrent is playing a video."
-#~ msgstr "A KTorrent videót játszik le."
-
-#~ msgid "Artist"
-#~ msgstr "Előadó"
-
-#~ msgid "Album"
-#~ msgstr "Album"
-
-#~| msgid "Time Left"
-#~ msgid "Length"
-#~ msgstr "Hossz"
-
-#~ msgid "Year"
-#~ msgstr "Év"
-
-#~| msgid "Play"
-#~ msgid "Playlist"
-#~ msgstr "Lejátszólista"
-
-#~| msgid "Location"
-#~ msgid "Collection:"
-#~ msgstr "Gyűjtemény:"
-
-#~ msgid "Home"
-#~ msgstr "Alapkönyvtár"
-
-#~ msgid "KTorrent Script Packages"
-#~ msgstr "KTorrent szkriptcsomagok"
-
-#~ msgid ""
-#~ "Removing these scripts will fully delete them from your disk. Are you "
-#~ "sure you want to do this ?"
-#~ msgstr ""
-#~ "A szkriptek eltávolításával véglegesen törlésre kerülnek. Biztosan ezt "
-#~ "szeretné?"
-
-#~ msgid "Cannot open archive for reading."
-#~ msgstr "Az archívum nem nyitható meg olvasásra."
-
-#~| msgid "Invalid tracker URL"
-#~ msgid "Invalid archive."
-#~ msgstr "Érvénytelen archívum."
-
-#~ msgid "There is already a script package named %1 installed."
-#~ msgstr "Már létezik %1 néven telepített szkript."
-
-#~ msgid ""
-#~ "Failed to load script from archive. There is something wrong with the "
-#~ "desktop file."
-#~ msgstr ""
-#~ "A szkript archívumból történő betöltése sikertelen. Valószínűleg sérült a "
-#~ "fájl."
-
-#~ msgid "No script found in archive."
-#~ msgstr "Nem található szkript az archívumban."
-
-#~ msgid ""
-#~ "Bandwidth\n"
-#~ "Schedule"
-#~ msgstr ""
-#~ "Sávszélesség\n"
-#~ "ütemezés"
-
-#~ msgid "Error: %1"
-#~ msgstr "Hiba: %1"
-
-#~ msgid "Cannot expand file : %1"
-#~ msgstr "Nem sikerült kitömöríteni: %1"
-
-#~ msgctxt "Status of a torrent file"
-#~ msgid "Seeding"
-#~ msgstr "Feltöltés"
-
-#~ msgid "Queued for seeding"
-#~ msgstr "Ütemezve feltöltéshez"
-
-#~ msgid "Queued for downloading"
-#~ msgstr "Ütemezve letöltéshez"
-
-#~ msgid "%1 KB/s"
-#~ msgstr "%1 KB/s"
-
-#~ msgid "User uploads"
-#~ msgstr "Felhasználói feltöltések"
-
-#, fuzzy
-#~| msgid "%1 KB/s"
-#~ msgid "Up: %1 KB/s"
-#~ msgstr "%1 KB/s"
-
-#, fuzzy
-#~| msgid "%1 KB/s"
-#~ msgid "Down: %1 KB/s"
-#~ msgstr "%1 KB/s"
-
-#, fuzzy
-#~| msgid "Cannot open %1 : %2"
-#~ msgid "Cannot open %s : %s"
-#~ msgstr "Nem sikerült megnyitni a(z) %1 fájlt: %2"
-
-#~ msgid "Update From Internet"
-#~ msgstr "Frissítés az internetről"
-
-#~ msgid "Toplevel directory:"
-#~ msgstr "Felső szintű könyvtár:"
