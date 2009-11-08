@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-10-22 01:31+0200\n"
+"POT-Creation-Date: 2009-11-08 01:29+0100\n"
 "PO-Revision-Date: 2009-02-09 13:33+0000\n"
 "Last-Translator: Ni Hui <shuizhuyuanluo@126.com>\n"
 "Language-Team: 简体中文 <kde-china@kde.org>\n"
@@ -422,7 +422,7 @@ msgstr "启动当前标签页中全部所选种子"
 
 #: ktorrent/viewmanager.cpp:539
 #: plugins/mediaplayer/mediaplayeractivity.cpp:105
-#: plugins/mediaplayer/videowidget.cpp:59
+#: plugins/mediaplayer/videowidget.cpp:60
 msgid "Stop"
 msgstr "停止"
 
@@ -8980,12 +8980,12 @@ msgid "Play List"
 msgstr "播放"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:97
-#: plugins/mediaplayer/videowidget.cpp:57
+#: plugins/mediaplayer/videowidget.cpp:58
 msgid "Play"
 msgstr "播放"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:101
-#: plugins/mediaplayer/videowidget.cpp:58
+#: plugins/mediaplayer/videowidget.cpp:59
 msgid "Pause"
 msgstr "暂停"
 
@@ -9018,11 +9018,11 @@ msgstr ""
 msgid "Movie player"
 msgstr "电影播放器"
 
-#: plugins/mediaplayer/videowidget.cpp:60
+#: plugins/mediaplayer/videowidget.cpp:61
 msgid "Toggle Fullscreen"
 msgstr "切换全屏"
 
-#: plugins/mediaplayer/videowidget.cpp:196
+#: plugins/mediaplayer/videowidget.cpp:197
 #, fuzzy
 #| msgid "KTorrent is not running !"
 msgid "KTorrent is playing a video."
@@ -9873,7 +9873,7 @@ msgstr " 无法打开种子文件 %1：%2"
 msgid "Parse Error"
 msgstr "语法错误"
 
-#: libbtcore/torrent/torrentcontrol.cpp:469
+#: libbtcore/torrent/torrentcontrol.cpp:468
 #, fuzzy, kde-format
 #| msgid ""
 #| "An error occurred while loading the torrent <b>%1</b>\n"
@@ -9885,7 +9885,7 @@ msgstr ""
 "装入种子 <b>%1</b> 出错。\n"
 "种子文件可能已经损坏，或者根本就不是一个种子文件。"
 
-#: libbtcore/torrent/torrentcontrol.cpp:498
+#: libbtcore/torrent/torrentcontrol.cpp:497
 #, fuzzy, kde-format
 #| msgid ""
 #| "An error occurred while loading the torrent <b>%1</b>\n"
@@ -9897,19 +9897,19 @@ msgstr ""
 "装入种子 <b>%1</b> 出错。\n"
 "种子文件可能已经损坏，或者根本就不是一个种子文件。"
 
-#: libbtcore/torrent/torrentcontrol.cpp:508
+#: libbtcore/torrent/torrentcontrol.cpp:507
 #, kde-format
 msgid "Unable to create %1 : %2"
 msgstr "无法创建 %1：%2"
 
-#: libbtcore/torrent/torrentcontrol.cpp:523
+#: libbtcore/torrent/torrentcontrol.cpp:522
 #, kde-format
 msgid ""
 "You are already downloading this torrent %1, the list of trackers of both "
 "torrents has been merged."
 msgstr "您已经下载过这个种子 %1，两个种子的 trackers 列表已经被合并。"
 
-#: libbtcore/torrent/torrentcontrol.cpp:527
+#: libbtcore/torrent/torrentcontrol.cpp:526
 #, kde-format
 msgid "You are already downloading the torrent %1"
 msgstr "您已经下载过这个种子 %1"
@@ -9978,12 +9978,13 @@ msgstr "无法创建索引文件：%1"
 msgid "Redirect without a redirect location"
 msgstr "重定向没有新位置！"
 
-#: libbtcore/tracker/udptracker.cpp:288 libbtcore/tracker/udptracker.cpp:298
+#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
 msgstr ""
 
-#: libbtcore/tracker/udptracker.cpp:320
+#: libbtcore/tracker/udptracker.cpp:330
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "无法解析主机名 %1"
@@ -9993,16 +9994,16 @@ msgstr "无法解析主机名 %1"
 msgid "Cannot bind to udp port %1 or the 10 following ports."
 msgstr "无法绑定 UDP 端口 %1 或其顺延的 10 个端口。"
 
-#: libbtcore/tracker/httptracker.cpp:270 libbtcore/tracker/httptracker.cpp:290
-#: libbtcore/tracker/httptracker.cpp:330 libbtcore/tracker/httptracker.cpp:444
+#: libbtcore/tracker/httptracker.cpp:282 libbtcore/tracker/httptracker.cpp:302
+#: libbtcore/tracker/httptracker.cpp:342 libbtcore/tracker/httptracker.cpp:461
 msgid "Invalid response from tracker"
 msgstr "无效的 tracker 响应"
 
-#: libbtcore/tracker/httptracker.cpp:283
+#: libbtcore/tracker/httptracker.cpp:295
 msgid "Invalid data from tracker"
 msgstr "无效的 tracker 数据"
 
-#: libbtcore/tracker/httptracker.cpp:461
+#: libbtcore/tracker/httptracker.cpp:478
 msgid "Invalid tracker URL"
 msgstr "无效的 tracker URL"
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-10-22 01:31+0200\n"
+"POT-Creation-Date: 2009-11-08 01:29+0100\n"
 "PO-Revision-Date: 2009-06-17 16:28+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -424,7 +424,7 @@ msgstr "ចាប់ផ្ដើម torrents ដែល​បាន​ជ្រ�
 
 #: ktorrent/viewmanager.cpp:539
 #: plugins/mediaplayer/mediaplayeractivity.cpp:105
-#: plugins/mediaplayer/videowidget.cpp:59
+#: plugins/mediaplayer/videowidget.cpp:60
 msgid "Stop"
 msgstr "បញ្ឈប់"
 
@@ -8969,12 +8969,12 @@ msgid "Play List"
 msgstr "ចាក់"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:97
-#: plugins/mediaplayer/videowidget.cpp:57
+#: plugins/mediaplayer/videowidget.cpp:58
 msgid "Play"
 msgstr "ចាក់"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:101
-#: plugins/mediaplayer/videowidget.cpp:58
+#: plugins/mediaplayer/videowidget.cpp:59
 msgid "Pause"
 msgstr "ផ្អាក"
 
@@ -9007,11 +9007,11 @@ msgstr ""
 msgid "Movie player"
 msgstr "កម្មវិធី​ចាក់​ភាពយន្ដ"
 
-#: plugins/mediaplayer/videowidget.cpp:60
+#: plugins/mediaplayer/videowidget.cpp:61
 msgid "Toggle Fullscreen"
 msgstr "បិទ​បើក ពេញ​អេក្រង់"
 
-#: plugins/mediaplayer/videowidget.cpp:196
+#: plugins/mediaplayer/videowidget.cpp:197
 #, fuzzy
 #| msgid "KTorrent is not running !"
 msgid "KTorrent is playing a video."
@@ -9869,7 +9869,7 @@ msgstr " មិន​អាច​បើក​ឯកសារ​ torrent %1 ៖ 
 msgid "Parse Error"
 msgstr "កំហុស​ញែក"
 
-#: libbtcore/torrent/torrentcontrol.cpp:469
+#: libbtcore/torrent/torrentcontrol.cpp:468
 #, fuzzy, kde-format
 #| msgid ""
 #| "An error occurred while loading the torrent <b>%1</b>\n"
@@ -9881,7 +9881,7 @@ msgstr ""
 "កំហុស​មួយ​កើតឡើង​នៅពេល​ផ្ទុក torrent <b>%1</b> ។\n"
 "torrent ប្រហែល​ជា​ខូច ឬ​មិនមែន​ជា​ឯកសារ torrent ។"
 
-#: libbtcore/torrent/torrentcontrol.cpp:498
+#: libbtcore/torrent/torrentcontrol.cpp:497
 #, fuzzy, kde-format
 #| msgid ""
 #| "An error occurred while loading the torrent <b>%1</b>\n"
@@ -9893,12 +9893,12 @@ msgstr ""
 "កំហុស​មួយ​កើតឡើង​នៅពេល​ផ្ទុក torrent <b>%1</b> ។\n"
 "torrent ប្រហែល​ជា​ខូច ឬ​មិនមែន​ជា​ឯកសារ torrent ។"
 
-#: libbtcore/torrent/torrentcontrol.cpp:508
+#: libbtcore/torrent/torrentcontrol.cpp:507
 #, kde-format
 msgid "Unable to create %1 : %2"
 msgstr "មិន​អាច​បង្កើត %1 ៖ %2"
 
-#: libbtcore/torrent/torrentcontrol.cpp:523
+#: libbtcore/torrent/torrentcontrol.cpp:522
 #, kde-format
 msgid ""
 "You are already downloading this torrent %1, the list of trackers of both "
@@ -9907,7 +9907,7 @@ msgstr ""
 "អ្នក​កំពុង​តែ​ទាញ​យក torrent %1 នេះ​រួ​ចហើយ បញ្ជី​របស់​កម្មវិធី​តាមដាន​របស់​ torrents ទាំងពីរ​ត្រូវ​បាន​"
 "បញ្ចូលចូល​គ្នា ។"
 
-#: libbtcore/torrent/torrentcontrol.cpp:527
+#: libbtcore/torrent/torrentcontrol.cpp:526
 #, kde-format
 msgid "You are already downloading the torrent %1"
 msgstr "អ្នក​កំពុង​ទាញយក torrent %1 រួចហើយ"
@@ -9976,12 +9976,13 @@ msgstr "មិនអាច​បង្កើត​ឯកសារ​លិបិ
 msgid "Redirect without a redirect location"
 msgstr "បាន​បញ្ជូន​បន្ត​ដោយ​គ្មាន​ទីតាំង​ថ្មី !"
 
-#: libbtcore/tracker/udptracker.cpp:288 libbtcore/tracker/udptracker.cpp:298
+#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
 msgstr ""
 
-#: libbtcore/tracker/udptracker.cpp:320
+#: libbtcore/tracker/udptracker.cpp:330
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "មិនអាច​ដោះស្រាយ​ឈ្មោះ​ម៉ាស៊ីន %1 បានទេ"
@@ -9991,16 +9992,16 @@ msgstr "មិនអាច​ដោះស្រាយ​ឈ្មោះ​ម៉
 msgid "Cannot bind to udp port %1 or the 10 following ports."
 msgstr "មិនអាច​ចង​ទៅកាន់ច្រក %1 ឬ​ច្រក ១០ ខាងក្រោម ។"
 
-#: libbtcore/tracker/httptracker.cpp:270 libbtcore/tracker/httptracker.cpp:290
-#: libbtcore/tracker/httptracker.cpp:330 libbtcore/tracker/httptracker.cpp:444
+#: libbtcore/tracker/httptracker.cpp:282 libbtcore/tracker/httptracker.cpp:302
+#: libbtcore/tracker/httptracker.cpp:342 libbtcore/tracker/httptracker.cpp:461
 msgid "Invalid response from tracker"
 msgstr "ការ​ឆ្លើយ​តប​មិន​ត្រឹមត្រូវ​ពី​កម្មវិធី​តាមដាន"
 
-#: libbtcore/tracker/httptracker.cpp:283
+#: libbtcore/tracker/httptracker.cpp:295
 msgid "Invalid data from tracker"
 msgstr "ទិន្នន័យ​មិនត្រឹមត្រូវ​ពី​កម្មវិធី​តាមដាន"
 
-#: libbtcore/tracker/httptracker.cpp:461
+#: libbtcore/tracker/httptracker.cpp:478
 msgid "Invalid tracker URL"
 msgstr "URL កម្មវិធី​តាមដាន​បទ​មិន​ត្រឹមត្រូវ"
 

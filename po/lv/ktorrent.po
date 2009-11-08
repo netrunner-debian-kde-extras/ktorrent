@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-10-22 01:31+0200\n"
-"PO-Revision-Date: 2009-03-27 18:53+0200\n"
+"POT-Creation-Date: 2009-11-08 01:29+0100\n"
+"PO-Revision-Date: 2009-10-23 08:52+0300\n"
 "Last-Translator: Viesturs Zariņš <viesturs.zarins@mii.lu.lv>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 "X-Launchpad-Export-Date: 2008-02-07 18:04+0000\n"
-"X-Generator: Lokalize 0.3\n"
+"X-Generator: Lokalize 1.0\n"
 
 #: ktorrent/groupview.cpp:129
 msgid "Custom Groups"
@@ -76,11 +76,9 @@ msgid "BitTorrent"
 msgstr "BitTorrent"
 
 #: ktorrent/btpref.cpp:31
-#, fuzzy
-#| msgid " corrupted chunks"
 msgid " corrupted chunk"
 msgid_plural " corrupted chunks"
-msgstr[0] " bojāti gabali"
+msgstr[0] " bojāti gabals"
 msgstr[1] " bojāti gabali"
 msgstr[2] " bojāti gabali"
 
@@ -102,16 +100,13 @@ msgid "Importing <b>%1</b> ..."
 msgstr "Importē <b>%1</b> ..."
 
 #: ktorrent/torrentmigratordlg.cpp:110
-#, fuzzy
-#| msgid "Finished import !"
 msgid "Finished import."
-msgstr "Importēšana pabeigta !"
+msgstr "Importēšana pabeigta."
 
 #: ktorrent/torrentmigratordlg.cpp:145
-#, fuzzy, kde-format
-#| msgid "Torrent <b>%1</b> already loaded !"
+#, kde-format
 msgid "Torrent <b>%1</b> already loaded."
-msgstr "Torrents <b>%1</b> jau ir ielādēts !"
+msgstr "Torrents <b>%1</b> jau ir ielādēts."
 
 #: ktorrent/torrentmigratordlg.cpp:152
 #, kde-format
@@ -430,7 +425,7 @@ msgstr "Sākt visus aktīvajā cilnē izvēlētos torrentus "
 
 #: ktorrent/viewmanager.cpp:539
 #: plugins/mediaplayer/mediaplayeractivity.cpp:105
-#: plugins/mediaplayer/videowidget.cpp:59
+#: plugins/mediaplayer/videowidget.cpp:60
 msgid "Stop"
 msgstr "Apturēt"
 
@@ -571,10 +566,8 @@ msgid "Copy Torrent URL"
 msgstr "Kopēt torrenta URL"
 
 #: ktorrent/viewmanager.cpp:645
-#, fuzzy
-#| msgid "Import Torrent"
 msgid "Export Torrent"
-msgstr "Importēt torrentu"
+msgstr "Eksportēt torrentu"
 
 #. i18n: file: ktorrent/speedlimitsdlg.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpeedLimitsDlg)
@@ -587,22 +580,18 @@ msgid "Set the speed limits of individual torrents"
 msgstr "Iestata ātruma ierobežojumus individuāliem torrentiem"
 
 #: ktorrent/viewmanager.cpp:739
-#, fuzzy
-#| msgid "Torrent Files (*.torrent)"
 msgid "Torrents (*.torrent)"
-msgstr "Torrent faili (*.torrent)"
+msgstr "Torrenti (*.torrent)"
 
 #: ktorrent/ipfilterlist.cpp:95
-#, fuzzy, kde-format
-#| msgid "Invalid IP address %1 !"
+#, kde-format
 msgid "Invalid IP address %1"
-msgstr "Nederīga IP adrese %1 !"
+msgstr "Nederīga IP adrese %1"
 
 #: ktorrent/ipfilterlist.cpp:100
-#, fuzzy, kde-format
-#| msgid "Duplicate IP address %1 !"
+#, kde-format
 msgid "Duplicate IP address %1"
-msgstr "Dublicēta IP adrese %1 !"
+msgstr "Dublicēta IP adrese %1"
 
 #: ktorrent/recommendedsettingsdlg.cpp:37
 msgid "Calculate Recommended Settings"
@@ -615,10 +604,8 @@ msgid "(= %1/s)"
 msgstr "(= %1/s)"
 
 #: ktorrent/torrentactivity.cpp:39
-#, fuzzy
-#| msgid "Torrent"
 msgid "Torrents"
-msgstr "Torrents"
+msgstr "Torrenti"
 
 #. i18n: file: ktorrent/queuemanagerwidget.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, QueueManagerWidget)
@@ -941,19 +928,19 @@ msgstr "Vilkšanas un nomešanas atbalsts Plasma sīkrīkam"
 
 #: ktorrent/main.cpp:131
 msgid "Ian Higginson"
-msgstr ""
+msgstr "Ian Higginson"
 
 #: ktorrent/main.cpp:131
 msgid "Patch to cleanup the plugin list"
-msgstr ""
+msgstr "Ielāps, kas satīra spraudņu sarakstu"
 
 #: ktorrent/main.cpp:132
 msgid "Amichai Rothman"
-msgstr ""
+msgstr "Amichai Rothman"
 
 #: ktorrent/main.cpp:132
 msgid "Patch to make the plasma applet a popup applet"
-msgstr ""
+msgstr "Ielāps, kas padara plasma sīkrīku uznirstošu"
 
 #: ktorrent/main.cpp:136
 msgid "Document to open"
@@ -973,38 +960,26 @@ msgid "Select the directory where the data now is."
 msgstr "Norādiet mapi, kurā tagad atrodas dati."
 
 #: ktorrent/missingfilesdlg.cpp:83
-#, fuzzy
-#| msgid ""
-#| "The data files are not present in the location you selected! Do you want "
-#| "to create all the files in the selected directory ?"
 msgid ""
 "The data files are not present in the location you selected. Do you want to "
 "create all the files in the selected directory?"
 msgstr ""
-"Jūsu norādītjā vietā nav datu failu! Vai vēlaties tajā izveidot visus failus?"
+"Jūsu norādītjā vietā nav datu failu. Vai vēlaties tajā izveidot visus failus?"
 
 #: ktorrent/missingfilesdlg.cpp:85
-#, fuzzy
-#| msgid ""
-#| "Not all files were found in the new location; some are still missing! Do "
-#| "you want to create the missing files in the selected directory ?"
 msgid ""
 "Not all files were found in the new location; some are still missing. Do you "
 "want to create the missing files in the selected directory?"
 msgstr ""
-"Ne visi faili tika atrasti jaunajā vietā, dažu trūkst! Vai vēlaties izveidot "
+"Ne visi faili tika atrasti jaunajā vietā, dažu trūkst. Vai vēlaties izveidot "
 "trūkstošos failus?"
 
 #: ktorrent/missingfilesdlg.cpp:114
-#, fuzzy
-#| msgid ""
-#| "The data file is not present in the location you selected! Do you want to "
-#| "create the file in the selected directory ?"
 msgid ""
 "The data file is not present in the location you selected. Do you want to "
 "create the file in the selected directory?"
 msgstr ""
-"Datu fails neatrodas jūsu norādītajā vietā! Vai vēlaties to tur izveidot?"
+"Datu fails neatrodas jūsu norādītajā vietā. Vai vēlaties to tur izveidot?"
 
 #: ktorrent/torrentcreatordlg.cpp:43
 msgid "Create A Torrent"
@@ -1021,10 +996,8 @@ msgid "Invalid url %1"
 msgstr "Nederīgs URL %1"
 
 #: ktorrent/torrentcreatordlg.cpp:252
-#, fuzzy
-#| msgid "Only HTTP is supported for webseeding!"
 msgid "Only HTTP is supported for webseeding."
-msgstr "Tīmekļa piedāvāšana atbalsta tikai HTTP!"
+msgstr "Tīmekļa piedāvāšana atbalsta tikai HTTP."
 
 #: ktorrent/torrentcreatordlg.cpp:284
 msgid "You must select a file or a folder."
@@ -1268,10 +1241,7 @@ msgid "Cannot recreate data file: %1"
 msgstr "Neizdodas izveidot datu failu: %1"
 
 #: ktorrent/core.cpp:1182
-#, fuzzy, kde-format
-#| msgid ""
-#| "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
-#| "want to import them ?"
+#, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
 "to import it?"
@@ -1279,8 +1249,8 @@ msgid_plural ""
 "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
 "want to import them?"
 msgstr[0] ""
-"KTorrent atrada %1 torrentus no KTorrent KDE3 versijasm vai vēlaties "
-"importēt tos?"
+"KTorrent atrada %1 torrentu no KTorrent KDE3 versijasm vai vēlaties importēt "
+"tos?"
 msgstr[1] ""
 "KTorrent atrada %1 torrentus no KTorrent KDE3 versijasm vai vēlaties "
 "importēt tos?"
@@ -1289,10 +1259,8 @@ msgstr[2] ""
 "importēt tos?"
 
 #: ktorrent/core.cpp:1204
-#, fuzzy
-#| msgid "No torrents from the KDE3 version were found !"
 msgid "No torrents from the KDE3 version were found."
-msgstr "Neitka atrasts neviens torrents no KDE3 versijas !"
+msgstr "Neitka atrasts neviens torrents no KDE3 versijas."
 
 #: ktorrent/statusbar.cpp:39 ktorrent/statusbar.cpp:71
 #, kde-format
@@ -1331,19 +1299,15 @@ msgstr "Paplašināti"
 
 #: ktorrent/scanextender.cpp:40 ktorrent/scanextender.cpp:89
 msgid "Checked %v of %m chunks"
-msgstr ""
+msgstr "Pārbaudīti %v no %m gabaliem"
 
 #: ktorrent/fileselectdlg.cpp:75
-#, fuzzy
-#| msgid "Shows all the files in a torrent"
 msgid "Show a file tree"
-msgstr "Rāda visus torrenta failus"
+msgstr "Rādīt failu koku"
 
 #: ktorrent/fileselectdlg.cpp:78
-#, fuzzy
-#| msgid "Choose a file"
 msgid "Show a file list"
-msgstr "Izvēlieties failu"
+msgstr "Rādīt failu sarakstu"
 
 #: ktorrent/fileselectdlg.cpp:87 plugins/infowidget/fileview.cpp:70
 msgid "Filter"
@@ -1360,6 +1324,8 @@ msgid ""
 "directory. Do you want to import these files and use the completed downloads "
 "directory as the location ?"
 msgstr ""
+"Daži no šī torrenta failiem tika trasti pabeigto lejupielāžu mapē. Vai "
+"vēlaties importēt šos failus un izmantot pabeigto lejupielāžu mapi?"
 
 #: ktorrent/fileselectdlg.cpp:205
 msgid ""
@@ -1367,29 +1333,24 @@ msgid ""
 "directory. Do you want to import these files and use the completed downloads "
 "directory as the location ?"
 msgstr ""
+"Visi šī torrenta faili tika trasti pabeigto lejupielāžu mapē. Vai vēlaties "
+"importēt šos failus un izmantot pabeigto lejupielāžu mapi?"
 
 #: ktorrent/fileselectdlg.cpp:209
-#, fuzzy, kde-format
-#| msgid ""
-#| "The torrent <b>%1</b> has not finished downloading, do you want to delete "
-#| "the incomplete data, too?"
+#, kde-format
 msgid ""
 "The file <b>%1</b> was found in the completed downloads directory. Do you "
 "want to import this file ?"
 msgstr ""
-"Torrents <b>%1</b> nav pabeigts, vai vēlaties izdzēst arī nepabeigtos datus?"
+"Fails <b>%1</b> tika atrasts pabeigto lejupielāžu mapē. Vai vēlaties to "
+"importērt?"
 
 #: ktorrent/fileselectdlg.cpp:226
-#, fuzzy, kde-format
-#| msgid "The directory %1 does not exist, do you want to create it ?"
+#, kde-format
 msgid "The directory %1 does not exist, do you want to create it?"
 msgstr "Mape %1 nepastāv, vai vēlaties to izveidot?"
 
 #: ktorrent/fileselectdlg.cpp:259
-#, fuzzy
-#| msgid ""
-#| "You have deselected the following existing files. You will lose all data "
-#| "in these files, are you sure you want to do this ?"
 msgid ""
 "You have deselected the following existing files. You will lose all data in "
 "these files, are you sure you want to do this?"
@@ -1406,41 +1367,31 @@ msgid "No, keep the files"
 msgstr "Nē, paturēt failus"
 
 #: ktorrent/fileselectdlg.cpp:423
-#, fuzzy, kde-format
-#| msgid "%1 short!"
+#, kde-format
 msgctxt "We are %1 bytes short of what we need"
 msgid "%1 short"
-msgstr "pietrūkst %1!"
+msgstr "pietrūkst %1"
 
 #: ktorrent/fileselectdlg.cpp:442
-#, fuzzy
-#| msgid "Title: <b>%1</b>"
 msgid "Existing files: <b>None</b>"
-msgstr "Nosaukums: <b>%1</b>"
+msgstr "Eksistējošie faili: <b>Nav</b>"
 
 #: ktorrent/fileselectdlg.cpp:444
-#, fuzzy
-#| msgid "Title: <b>%1</b>"
 msgid "Existing files: <b>All</b>"
-msgstr "Nosaukums: <b>%1</b>"
+msgstr "Eksistējošie faili: <b>Visi</b>"
 
 #: ktorrent/fileselectdlg.cpp:446
-#, fuzzy, kde-format
-#| msgid "Title: <b>%1</b><br/>Artist: <b>%2</b>"
+#, kde-format
 msgid "Existing files: <b>%1</b> of <b>%2</b>"
-msgstr "Nosaukums: <b>%1</b><br/>Mākslinieks: <b>%2</b>"
+msgstr "Eksistējošie faili: <b>%1</b> no <b>%2</b>"
 
 #: ktorrent/fileselectdlg.cpp:452
-#, fuzzy
-#| msgid "Title: <b>%1</b>"
 msgid "Existing file: <b>No</b>"
-msgstr "Nosaukums: <b>%1</b>"
+msgstr "Eksistējošs fails: <b>Nē</b>"
 
 #: ktorrent/fileselectdlg.cpp:454
-#, fuzzy
-#| msgid "Title: <b>%1</b>"
 msgid "Existing file: <b>Yes</b>"
-msgstr "Nosaukums: <b>%1</b>"
+msgstr "Eksistējošs fails: <b>Jā</b>"
 
 #: ktorrent/gui.cpp:229 ktorrent/gui.cpp:244
 msgid "Torrent Files"
@@ -1496,8 +1447,6 @@ msgid "Open URL"
 msgstr "Atvērt URL"
 
 #: ktorrent/gui.cpp:404
-#, fuzzy
-#| msgid "Open an URL which points to a torrent"
 msgid "Open a URL which points to a torrent"
 msgstr "Atvērt URL, kas rāda uz torrentu"
 
@@ -1549,11 +1498,11 @@ msgstr "Rādīt/Slēpt KTorrent"
 
 #: ktorrent/gui.cpp:446
 msgid "Group View Visible"
-msgstr ""
+msgstr "Grupu skats redzams"
 
 #: ktorrent/gui.cpp:447
 msgid "Show or hide the group view"
-msgstr ""
+msgstr "Rādīt vai slēpt grupu skatu"
 
 #: ktorrent/proxypref.cpp:27
 msgid "Proxy"
@@ -1801,70 +1750,57 @@ msgstr "Izvēlieties mapi, uz kuru pārvietot datus."
 
 #: libktcore/gui/activitylistwidget.cpp:66
 msgid "Little icons"
-msgstr ""
+msgstr "Mazas ikonas"
 
 #: libktcore/gui/activitylistwidget.cpp:68
-#, fuzzy
-#| msgctxt "Download Normal (not as first or last)"
-#| msgid "Normal"
 msgid "Normal icons"
-msgstr "Normāla"
+msgstr "Normālas ikonas"
 
 #: libktcore/gui/activitylistwidget.cpp:70
 msgid "Big icons"
-msgstr ""
+msgstr "Lielas ikonas"
 
 #: libktcore/gui/activitylistwidget.cpp:80
 msgid "Icons only"
-msgstr ""
+msgstr "Tikai ikonas"
 
 #: libktcore/gui/activitylistwidget.cpp:84
-#, fuzzy
-#| msgid "Text encoding:"
 msgid "Text only"
-msgstr "Teksta kodējums:"
+msgstr "Tikai teksts"
 
 #: libktcore/gui/activitylistwidget.cpp:88
 msgid "Icons and text"
-msgstr ""
+msgstr "Ikonas un teksts"
 
 #: libktcore/gui/activitylistwidget.cpp:95
-#, fuzzy
-#| msgid "Left:"
 msgid "Left"
-msgstr "Palikuši:"
+msgstr "Pa kreisi"
 
 #: libktcore/gui/activitylistwidget.cpp:99
 msgid "Right"
-msgstr ""
+msgstr "Pa labi"
 
 #. i18n: file: plugins/stats/Settings.ui:272
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MaxMode)
 #: libktcore/gui/activitylistwidget.cpp:103 rc.cpp:2072
 msgid "Top"
-msgstr "Augšējā"
+msgstr "Virs"
 
 #: libktcore/gui/activitylistwidget.cpp:107
 msgid "Bottom"
-msgstr ""
+msgstr "Zem"
 
 #: libktcore/dbus/dbustorrent.cpp:316
-#, fuzzy
-#| msgid "Maximum share ratio reached !"
 msgid "Maximum share ratio reached."
-msgstr "Sasniegta maksimālā došanas attiecība!"
+msgstr "Sasniegta maksimālā došanas attiecība."
 
 #: libktcore/dbus/dbustorrent.cpp:319
-#, fuzzy
-#| msgid "Maximum seed time reached !"
 msgid "Maximum seed time reached."
-msgstr "Sasniegts maksimālais piedāvāšanas ilgums!"
+msgstr "Sasniegts maksimālais piedāvāšanas ilgums."
 
 #: libktcore/util/mmapfile.cpp:164
-#, fuzzy
-#| msgid "Cannot write beyond end of the mmap buffer!"
 msgid "Cannot write beyond end of the mmap buffer."
-msgstr "Nevar ierakstīt ārpus mmap bufera beigām!"
+msgstr "Nevar ierakstīt ārpus mmap bufera beigām."
 
 #: libktcore/groups/groupmanager.cpp:100
 msgid "Uploads"
@@ -1941,10 +1877,7 @@ msgid "Insufficient disk space for %1"
 msgstr "Nepietiek vietas uz diska, lai saglabātu %1"
 
 #: libktcore/torrent/queuemanager.cpp:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "The torrent \"%1\" has reached it's maximum share ratio and it's maximum "
-#| "seed time. Ignore the limit and start seeding anyway?"
+#, kde-format
 msgid ""
 "The torrent \"%1\" has reached its maximum share ratio and its maximum seed "
 "time. Ignore the limit and start seeding anyway?"
@@ -1953,10 +1886,7 @@ msgstr ""
 "piedāvāšanas laiks. Vai ignorēt to un tomēr sākt piedāvāt?"
 
 #: libktcore/torrent/queuemanager.cpp:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "The torrent \"%1\" has reached it's maximum share ratio. Ignore the limit "
-#| "and start seeding anyway?"
+#, kde-format
 msgid ""
 "The torrent \"%1\" has reached its maximum share ratio. Ignore the limit and "
 "start seeding anyway?"
@@ -1965,10 +1895,7 @@ msgstr ""
 "tomēr sākt piedāvāt?"
 
 #: libktcore/torrent/queuemanager.cpp:130
-#, fuzzy, kde-format
-#| msgid ""
-#| "The torrent \"%1\" has reached it's maximum seed time. Ignore the limit "
-#| "and start seeding anyway?"
+#, kde-format
 msgid ""
 "The torrent \"%1\" has reached its maximum seed time. Ignore the limit and "
 "start seeding anyway?"
@@ -2035,10 +1962,8 @@ msgid "Plugins"
 msgstr "Spraudņi"
 
 #: libktupnp/httprequest.cpp:80
-#, fuzzy
-#| msgid "Connection closed unexpectedly !"
 msgid "Connection closed unexpectedly."
-msgstr "Savienojums tika negaidīti aizvērts !"
+msgstr "Savienojums tika negaidīti aizvērts."
 
 #: libktupnp/httprequest.cpp:120
 msgid "Timeout occurred"
@@ -2050,28 +1975,20 @@ msgid "Failed to download %1 : %2"
 msgstr "Neizdevās lejupielādēt %1 : %2"
 
 #: libktupnp/upnprouter.cpp:152
-#, fuzzy
-#| msgid "Error parsing router description !"
 msgid "Error parsing router description."
-msgstr "Kļūda analizējot maršutētāja aprakstu !"
+msgstr "Kļūda analizējot maršutētāja aprakstu."
 
 #: libktupnp/upnprouter.cpp:276
-#, fuzzy
-#| msgid ""
-#| "Forwarding failed: \n"
-#| "Device does not have a WANIPConnection or WANPPPConnection !"
 msgid ""
 "Forwarding failed: \n"
 "Device does not have a WANIPConnection or WANPPPConnection."
 msgstr ""
 "Neizdevās pārsūtīt: \n"
-"Ierīcei nav WANIPConnection vai WANPPPConnection !"
+"Ierīcei nav WANIPConnection vai WANPPPConnection."
 
 #: libktupnp/upnprouter.cpp:434 libktupnp/upnprouter.cpp:447
-#, fuzzy
-#| msgid "Cannot find port forwarding service in the device's description!"
 msgid "Cannot find port forwarding service in the device's description."
-msgstr "Neizdevās ierīces aprakstā atrast portu pāradresēšanas servisu!"
+msgstr "Neizdevās ierīces aprakstā atrast portu pāradresēšanas servisu."
 
 #: ktupnptest/main.cpp:39
 msgid "KTUPnPTest"
@@ -2088,18 +2005,11 @@ msgstr "(C) 2005 - 2007 Joris Guisson un Ivan Vasic"
 #. i18n: file: plasma/applet/appletconfig.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, AppletConfig)
 #: plasma/applet/applet.cpp:234 rc.cpp:1396
-#, fuzzy
-#| msgid "Apply"
 msgid "Applet"
-msgstr "Pielietot"
+msgstr "Sīkrīks"
 
 #: plasma/applet/applet.cpp:298 plasma/applet/applet.cpp:363
-#, fuzzy, kde-format
-#| msgid ""
-#| "<table>\t\t\t\t<tr><td>Download Speed:</td><td>%5 </td><td>Seeders: </"
-#| "td><td>%1 (%2)</td></tr>\t\t\t\t<tr><td>Upload Speed:</td><td>%6 </"
-#| "td><td>Leechers: </td><td>%3 (%4)</td></tr>\t\t\t\t<tr><td>Downloaded:</"
-#| "td><td>%7 / %8 </td><td>Uploaded: </td><td>%9</td></tr>\t\t\t\t</table>"
+#, kde-format
 msgid ""
 "<table>\t\t\t\t<tr><td>Download Speed:</td><td>%5 </td><td>Seeders: </td><td>"
 "%1 (%2)</td></tr>\t\t\t\t<tr><td>Upload Speed:</td><td>%6 </td><td>Leechers: "
@@ -2107,25 +2017,18 @@ msgid ""
 msgstr ""
 "<table>\t\t\t\t<tr><td>Lejupielādes ātrums:</td><td>%5  </td><td>Devēji: </"
 "td><td>%1 (%2)</td></tr>\t\t\t\t<tr><td>Augšupielādes ātrums:</td><td>%6 </"
-"td><td>Ņēmēji: </td><td>%3 (%4)</td></tr>\t\t\t\t<tr><td>Lejupielādēts:</"
-"td><td>%7 / %8 </td><td>Augšupielādēts: </td><td>%9</td></tr>\t\t\t\t</table>"
+"td><td>Ņēmēji: </td><td>%3 (%4)</td></tr>"
 
 #: plasma/applet/applet.cpp:303 plasma/applet/applet.cpp:368
-#, fuzzy, kde-format
-#| msgid ""
-#| "<table>\t\t\t\t<tr><td>Download Speed:</td><td>%5 </td><td>Seeders: </"
-#| "td><td>%1 (%2)</td></tr>\t\t\t\t<tr><td>Upload Speed:</td><td>%6 </"
-#| "td><td>Leechers: </td><td>%3 (%4)</td></tr>\t\t\t\t<tr><td>Downloaded:</"
-#| "td><td>%7 / %8 </td><td>Uploaded: </td><td>%9</td></tr>\t\t\t\t</table>"
+#, kde-format
 msgid ""
 "<tr><td>Downloaded:</td><td>%1 </td><td>Size: </td><td>%2</td></tr>\t\t\t"
 "\t<tr><td>Uploaded:</td><td>%3 </td><td>Complete: </td><td>%4 %</td></tr>\t\t"
 "\t\t</table>"
 msgstr ""
-"<table>\t\t\t\t<tr><td>Lejupielādes ātrums:</td><td>%5  </td><td>Devēji: </"
-"td><td>%1 (%2)</td></tr>\t\t\t\t<tr><td>Augšupielādes ātrums:</td><td>%6 </"
-"td><td>Ņēmēji: </td><td>%3 (%4)</td></tr>\t\t\t\t<tr><td>Lejupielādēts:</"
-"td><td>%7 / %8 </td><td>Augšupielādēts: </td><td>%9</td></tr>\t\t\t\t</table>"
+"<tr><td>Leupielādēts:</td><td>%1 </td><td>Izmērs: </td><td>%2</td></tr>\t\t\t"
+"\t<tr><td>Augušupielādēts:</td><td>%3 </td><td>Pabeigts: </td><td>%4 %</td></"
+"tr>\t\t\t\t</table>"
 
 #: plasma/applet/applet.cpp:309
 #, kde-format
@@ -2133,20 +2036,16 @@ msgid "<b>%1</b><br/>%2 (Share Ratio: <font color=\"%4\">%3</font>)"
 msgstr "<b>%1</b><br/>%2 (Došanas attiecība: <font color=\"%4\">%3</font>)"
 
 #: plasma/applet/applet.cpp:374
-#, fuzzy
-#| msgid "KTorrent is not running !"
 msgid "KTorrent is not running."
-msgstr "Torrents nedarbojas!"
+msgstr "Torrents nedarbojas."
 
 #: plasma/applet/applet.cpp:376
-#, fuzzy
-#| msgid "No torrents loaded !"
 msgid "No torrents loaded."
-msgstr "Nav ielādētu torrentu!"
+msgstr "Nav ielādētu torrentu."
 
 #: plasma/applet/applet.cpp:378
 msgid "Selected torrent is unavailable."
-msgstr ""
+msgstr "Izvēlētais torrents nav pieejams."
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -2592,10 +2491,8 @@ msgstr "Saglabāt iekš:"
 #. i18n: file: ktorrent/fileselectdlg.ui:49
 #. i18n: ectx: property (text), widget (QToolButton, m_list)
 #: rc.cpp:149 rc.cpp:152
-#, fuzzy
-#| msgid "Open..."
 msgid "..."
-msgstr "Atvērt..."
+msgstr "..."
 
 #. i18n: file: ktorrent/fileselectdlg.ui:59
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -2643,10 +2540,8 @@ msgstr "Izplest visu"
 #. i18n: file: ktorrent/fileselectdlg.ui:147
 #. i18n: ectx: property (text), widget (QLabel, m_existing_found)
 #: rc.cpp:176
-#, fuzzy
-#| msgid "Skip data check if existing files are found"
 msgid "No existing files are found"
-msgstr "Izlaist datu pārbaudi, ja atrasti jau eksistējoši faili"
+msgstr "Nav atrasti eksistējoši faili"
 
 #. i18n: file: ktorrent/fileselectdlg.ui:156
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
@@ -2687,24 +2582,6 @@ msgstr "Sākt torrentu"
 #. i18n: file: ktorrent/fileselectdlg.ui:222
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_skip_data_check)
 #: rc.cpp:188
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">When existing files "
-#| "have been found, skip the data check and assume that the files are fully "
-#| "downloaded.</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">Note: </span>only do this when you are absolutely sure !</"
-#| "p></body></html>"
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -2738,7 +2615,7 @@ msgstr ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Piezīme: </span>lietojiet šo tikai ja esat pilnībā "
-"pārliecināts!</p></body></html>"
+"pārliecināts.</p></body></html>"
 
 #. i18n: file: ktorrent/fileselectdlg.ui:225
 #. i18n: ectx: property (text), widget (QCheckBox, m_skip_data_check)
@@ -2749,26 +2626,20 @@ msgstr "Izlaist datu pārbaudi, ja atrasti jau eksistējoši faili"
 #. i18n: file: ktorrent/fileselectdlg.ui:235
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
 #: rc.cpp:199
-#, fuzzy
-#| msgid "Disk space"
 msgid "Disk Space"
 msgstr "Diska vieta"
 
 #. i18n: file: ktorrent/fileselectdlg.ui:243
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: rc.cpp:202
-#, fuzzy
-#| msgid "Required disk space:"
 msgid "Required:"
-msgstr "Nepieciešamā vieta uz diska:"
+msgstr "Nepieciešams:"
 
 #. i18n: file: ktorrent/fileselectdlg.ui:253
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
 #: rc.cpp:205
-#, fuzzy
-#| msgid "Available"
 msgid "Available:"
-msgstr "Pieejams"
+msgstr "Pieejams:"
 
 #. i18n: file: ktorrent/fileselectdlg.ui:263
 #. i18n: ectx: property (text), widget (QLabel, textLabel6)
@@ -2958,10 +2829,8 @@ msgstr "Apspiest gulēšanu, kamēr darbojas torrenti"
 #. i18n: file: ktorrent/btpref.ui:16
 #. i18n: ectx: property (title), widget (QGroupBox, dhtGroupBox)
 #: rc.cpp:283
-#, fuzzy
-#| msgid "Captures"
 msgid "Features"
-msgstr "Tvērumi"
+msgstr "Iespējas"
 
 #. i18n: file: ktorrent/btpref.ui:22
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_dhtSupport)
@@ -3045,15 +2914,13 @@ msgstr "Lietot dalībnieku apmaiņu"
 #: rc.cpp:310
 msgid ""
 "Enable or disable the use of webseeds when they are present in a torrent."
-msgstr ""
+msgstr "Ieslēgt vai izslēgt tīmekļa devējus ja tie ir pieejami torrentam."
 
 #. i18n: file: ktorrent/btpref.ui:78
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_webseedsEnabled)
 #: rc.cpp:313
-#, fuzzy
-#| msgid "Webseeds"
 msgid "Use webseeds"
-msgstr "Tīmekļa devēji"
+msgstr "Lietot tīmekļa devējus"
 
 #. i18n: file: ktorrent/btpref.ui:90
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
@@ -3198,8 +3065,6 @@ msgstr ""
 #. i18n: file: ktorrent/btpref.ui:189
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useMaxSizeForUploadDataCheck)
 #: rc.cpp:362
-#, fuzzy
-#| msgid "Don't recheck when chunks are bigger than"
 msgid "Do not recheck when chunks are bigger than"
 msgstr "Nepārbaudīt, ja gabali ir lielāki par"
 
@@ -3836,10 +3701,8 @@ msgstr "&Fails"
 #. i18n: file: ktorrent/ktorrentui.rc:16
 #. i18n: ectx: Menu (view)
 #: rc.cpp:610
-#, fuzzy
-#| msgid "ViewMenu"
 msgid "&View"
-msgstr "SkataIzvēlne"
+msgstr "&Skats"
 
 #. i18n: file: ktorrent/ktorrentui.rc:36
 #. i18n: ectx: Menu (GroupsMenu)
@@ -3878,12 +3741,14 @@ msgid ""
 "When enabled, the queue manager will be totally disabled, allowing you to "
 "fully control all torrents manually."
 msgstr ""
+"Kad ieslēgts, rindas pārvaldnieks būs pilnībā atslēgts, ļaujot jums "
+"pašrocīgi kontorlēt torrentus."
 
 #. i18n: file: ktorrent/qmpref.ui:19
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_manuallyControlTorrents)
 #: rc.cpp:643
 msgid "Control torrents manually"
-msgstr ""
+msgstr "Pašrocīgi kontrolēt torrentus"
 
 #. i18n: file: ktorrent/qmpref.ui:41
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxDownloads)
@@ -4045,8 +3910,6 @@ msgstr " minūtes"
 #. i18n: file: ktorrent/qmpref.ui:193
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: rc.cpp:715
-#, fuzzy
-#| msgid "Seeding"
 msgctxt "@title:group Options regarging Seeding"
 msgid "Seeding"
 msgstr "Piedāvāšana"
@@ -4080,10 +3943,8 @@ msgstr ""
 #. i18n: file: ktorrent/qmpref.ui:232
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: rc.cpp:730
-#, fuzzy
-#| msgid "Maximum share ratio:"
 msgid "Default maximum share ratio:"
-msgstr "Maksimālā došanas attiecība:"
+msgstr "Noklusētā maksimālā došanas attiecība:"
 
 #. i18n: file: ktorrent/qmpref.ui:245
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_maxRatio)
@@ -4132,10 +3993,8 @@ msgstr ""
 #. i18n: file: ktorrent/qmpref.ui:261
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: rc.cpp:745
-#, fuzzy
-#| msgid "Maximum seed time:"
 msgid "Default maximum seed time:"
-msgstr "Maksimālais piedāvāšanas ilgums:"
+msgstr "Noklusētais maksimālais piedāvāšanas ilgums:"
 
 #. i18n: file: ktorrent/qmpref.ui:268
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_maxSeedTime)
@@ -4283,23 +4142,19 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: rc.cpp:805
 msgid "Found:"
-msgstr ""
+msgstr "Atrasti:"
 
 #. i18n: file: ktorrent/scanextender.ui:69
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
 #: rc.cpp:817
-#, fuzzy
-#| msgid "File"
 msgid "Failed:"
-msgstr "Fails"
+msgstr "Neizdevās:"
 
 #. i18n: file: ktorrent/scanextender.ui:114
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: rc.cpp:829
-#, fuzzy
-#| msgid "Downloaded:"
 msgid "Not downloaded:"
-msgstr "Lejupielādēti:"
+msgstr "Nav lejupielādēti:"
 
 #. i18n: file: ktorrent/scanextender.ui:162
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -4316,18 +4171,15 @@ msgstr "Lejupielādēti:"
 #. i18n: file: ktorrent/speedlimitsdlg.ui:23
 #. i18n: ectx: property (text), widget (QLabel, m_main_caption)
 #: rc.cpp:862
-#, fuzzy
-#| msgid "Speed limits for all torrents (double click to edit):"
 msgid "Speed limits for individual torrents (double click to edit):"
-msgstr "Ātruma ierobežojumi visiem torrentiem (dubultklikšķis lai rediģētu):"
+msgstr ""
+"Ātruma ierobežojumi individuāliem torrentiem (dubultklikšķis lai rediģētu):"
 
 #. i18n: file: ktorrent/speedlimitsdlg.ui:35
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: rc.cpp:865
-#, fuzzy
-#| msgid "Filter"
 msgid "Filter:"
-msgstr "Filtrs"
+msgstr "Filtrs:"
 
 #. i18n: file: ktorrent/speedlimitsdlg.ui:64
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
@@ -4895,25 +4747,6 @@ msgstr "Tīkla ierīce:"
 #. i18n: file: ktorrent/networkpref.ui:246
 #. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_networkInterface)
 #: rc.cpp:1119
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Which network interface "
-#| "to use for all network traffic.</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
-#| "font-family:'OpenSymbol';\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; font-family:'OpenSymbol';"
-#| "\"><span style=\" font-weight:600;\">Note: </span>Requires a restart to "
-#| "take effect !</p></body></html>"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -4949,7 +4782,7 @@ msgstr ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px; font-family:'OpenSymbol';"
 "\"><span style=\" font-weight:600;\">Piezīme: </span>Lai iedarbotos, "
-"nepieciešama pārstartēšana!</p></body></html>"
+"nepieciešama pārstartēšana.</p></body></html>"
 
 #. i18n: file: ktorrent/networkpref.ui:289
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_recommended_settings)
@@ -5297,14 +5130,16 @@ msgid ""
 "This is experimental and should only be used if you are getting a lot of "
 "connection to host broken errors."
 msgstr ""
+"Atslēdz KDE KIO bibliotēkas lietošanu trakeru izziņošanai.\n"
+"\n"
+"Šī ir eksperimentāla iespēja un to vajadzētu lietot tikai ja jums ir daudz "
+"bojātu savienojumu kļūdu."
 
 #. i18n: file: ktorrent/advancedpref.ui:276
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useQHttpAnnounce)
 #: rc.cpp:1244
-#, fuzzy
-#| msgid "Use proxy for tracker connections"
 msgid "Do not use KIO for tracker announces"
-msgstr "Izmantot starpniekserveri trakera savienojumiem"
+msgstr "Neizmantot KIO trakera paziņojumiem"
 
 #. i18n: file: ktorrent/advancedpref.ui:285
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_lookUpHostnameOfPeers)
@@ -8892,63 +8727,53 @@ msgstr "Vidēji vienam torrentam pieslēgušies devēji"
 
 #: plugins/shutdown/shutdowntorrentmodel.cpp:92
 #: plugins/shutdown/shutdowntorrentmodel.cpp:235
-#, fuzzy
-#| msgid "Downloading"
 msgid "Downloading finishes"
-msgstr "Lejupielādē"
+msgstr "Lejupielāde pabeigta"
 
 #: plugins/shutdown/shutdowntorrentmodel.cpp:94
 #: plugins/shutdown/shutdowntorrentmodel.cpp:236
-#, fuzzy
-#| msgid "Search finished"
 msgid "Seeding finishes"
-msgstr "Meklēšana pabeigta"
+msgstr "Piedāvāšana pabeigta"
 
 #: plugins/shutdown/shutdowntorrentmodel.cpp:154
 msgid "Event"
-msgstr ""
+msgstr "Notikums"
 
 #: plugins/shutdown/shutdownplugin.cpp:45
 msgid "Shutdown Enabled"
-msgstr ""
+msgstr "Izslēgšana ieslēgta"
 
 #: plugins/shutdown/shutdownplugin.cpp:49 plugins/shutdown/shutdowndlg.cpp:29
-#, fuzzy
-#| msgid "Configure Columns"
 msgid "Configure Shutdown"
-msgstr "Konfigurēt klonnas"
+msgstr "Konfigurēt izslēgšanu"
 
 #: plugins/shutdown/shutdownplugin.cpp:152 plugins/shutdown/shutdowndlg.cpp:33
-#, fuzzy
-#| msgid "Lucke"
 msgid "Lock"
-msgstr "Lucke"
+msgstr "Slēgt"
 
 #: plugins/shutdown/shutdownplugin.cpp:156 plugins/shutdown/shutdowndlg.cpp:36
 msgid "Standby"
-msgstr ""
+msgstr "Iemidzināt"
 
 #: plugins/shutdown/shutdownplugin.cpp:160 plugins/shutdown/shutdowndlg.cpp:39
 msgid "Sleep (suspend to RAM)"
-msgstr ""
+msgstr "Gulēt (sastindzināt uz RAM)"
 
 #: plugins/shutdown/shutdownplugin.cpp:164 plugins/shutdown/shutdowndlg.cpp:42
 msgid "Hibernate (suspend to disk)"
-msgstr ""
+msgstr "Hibernēt (sastindzināt uz disku)"
 
 #: plugins/shutdown/shutdowndlg.cpp:44
-#, fuzzy
-#| msgid "Directory to move data to when a torrent has finished downloading."
 msgid "When all torrents finish downloading"
-msgstr "Kad lejupielāde pabeigta, dati tiks pārvietoti uz šo mapi."
+msgstr "Kad pabeigta visu torrentu lejupielāde"
 
 #: plugins/shutdown/shutdowndlg.cpp:45
 msgid "When all torrents finish seeding"
-msgstr ""
+msgstr "Kad pabeigta visu torrentu piedāvāšana"
 
 #: plugins/shutdown/shutdowndlg.cpp:46
 msgid "When the events below happen"
-msgstr ""
+msgstr "Kad noteik zemāk norādītie notikumi"
 
 #: plugins/logviewer/logprefpage.cpp:30
 msgid "Log Viewer"
@@ -8989,25 +8814,23 @@ msgstr "Nekas"
 
 #: plugins/logviewer/logviewer.cpp:49
 msgid "Log"
-msgstr ""
+msgstr "Žurnāls"
 
 #: plugins/logviewer/logviewer.cpp:51
-#, fuzzy
-#| msgid "Display the logging output generated by KTorrent"
 msgid "View the logging output generated by KTorrent"
 msgstr "Parāda KTorrent žurnāla izvadu"
 
 #: plugins/logviewer/logviewer.cpp:61
 msgid "Suspend Output"
-msgstr ""
+msgstr "Apturēt izvadu"
 
 #: plugins/logviewer/logviewer.cpp:131
 msgid "<font color=\"#FF0000\">Logging output suspended</font>"
-msgstr ""
+msgstr "<font color=\"#FF0000\">Žurnalēšanas izvads apturēts</font>"
 
 #: plugins/logviewer/logviewer.cpp:133
 msgid "<font color=\"#00FF00\">Logging output resumed</font>"
-msgstr ""
+msgstr "<font color=\"#00FF00\">Žurnalēšanas izvads atsākts</font>"
 
 #: plugins/downloadorder/downloadorderdialog.cpp:39
 #, kde-format
@@ -9022,18 +8845,16 @@ msgid "Media Player"
 msgstr "Atskaņotājs"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:73
-#, fuzzy
-#| msgid "Play"
 msgid "Play List"
-msgstr "Atskaņot"
+msgstr "Atskaņot repertuāru"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:97
-#: plugins/mediaplayer/videowidget.cpp:57
+#: plugins/mediaplayer/videowidget.cpp:58
 msgid "Play"
 msgstr "Atskaņot"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:101
-#: plugins/mediaplayer/videowidget.cpp:58
+#: plugins/mediaplayer/videowidget.cpp:59
 msgid "Pause"
 msgstr "Pauze"
 
@@ -9051,30 +8872,26 @@ msgstr "Rādīt video"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:121
 #: plugins/mediaplayer/playlistwidget.cpp:109
-#, fuzzy
-#| msgid "Add Feed"
 msgid "Add Media"
-msgstr "Pievienot barotni"
+msgstr "Pievienot failus"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:125
 #: plugins/mediaplayer/playlistwidget.cpp:110
 msgid "Clear Playlist"
-msgstr ""
+msgstr "Tīrīt repertuāru"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:164
 #: plugins/mediaplayer/mediaplayeractivity.cpp:366
 msgid "Movie player"
 msgstr "Video atskaņotājs"
 
-#: plugins/mediaplayer/videowidget.cpp:60
+#: plugins/mediaplayer/videowidget.cpp:61
 msgid "Toggle Fullscreen"
 msgstr "Pārslēgt pilnekrānu"
 
-#: plugins/mediaplayer/videowidget.cpp:196
-#, fuzzy
-#| msgid "KTorrent is not running !"
+#: plugins/mediaplayer/videowidget.cpp:197
 msgid "KTorrent is playing a video."
-msgstr "Torrents nedarbojas!"
+msgstr "Torrents atskaņo video."
 
 #: plugins/mediaplayer/playlist.cpp:86
 #: plugins/syndication/feedwidgetmodel.cpp:81
@@ -9083,21 +8900,19 @@ msgstr "Nosaukums"
 
 #: plugins/mediaplayer/playlist.cpp:87
 msgid "Artist"
-msgstr ""
+msgstr "Izpildītājs"
 
 #: plugins/mediaplayer/playlist.cpp:88
 msgid "Album"
-msgstr ""
+msgstr "Albums"
 
 #: plugins/mediaplayer/playlist.cpp:89
 msgid "Length"
-msgstr ""
+msgstr "Garums"
 
 #: plugins/mediaplayer/playlist.cpp:90
-#, fuzzy
-#| msgid "Clear"
 msgid "Year"
-msgstr "Attīrīt"
+msgstr "Gads"
 
 #: plugins/mediaplayer/playlistwidget.cpp:71
 #: plugins/mediaplayer/playlistwidget.cpp:164
@@ -9113,16 +8928,12 @@ msgid "Single File"
 msgstr "Viens fails"
 
 #: plugins/mediaplayer/playlistwidget.cpp:88
-#, fuzzy
-#| msgid "Play"
 msgid "Playlist"
-msgstr "Atskaņot"
+msgstr "Repertuārs"
 
 #: plugins/mediaplayer/playlistwidget.cpp:89
-#, fuzzy
-#| msgid "Random Files"
 msgid "Random"
-msgstr "Nejauši faili"
+msgstr "Nejauši"
 
 #: plugins/mediaplayer/playlistwidget.cpp:190
 #, kde-format
@@ -9156,10 +8967,8 @@ msgid "Playing: <b>%1</b>"
 msgstr "Atskaņo: <b>%1</b>"
 
 #: plugins/mediaplayer/mediaview.cpp:46
-#, fuzzy
-#| msgid "Connections"
 msgid "Collection:"
-msgstr "Savienojumi:"
+msgstr "Kolekcija:"
 
 #: plugins/mediaplayer/mediamodel.cpp:125
 #: plugins/mediaplayer/mediamodel.cpp:152
@@ -9208,8 +9017,7 @@ msgid "Feed: <b>%1</b>"
 msgstr "Barotne: <b>%1</b>"
 
 #: plugins/syndication/linkdownloader.cpp:158
-#, fuzzy, kde-format
-#| msgid "Couldn't find a valid link to a torrent on %1"
+#, kde-format
 msgid "Could not find a valid link to a torrent on %1"
 msgstr "Neizdevās atrast derīgu saiti uz torrentu iekš %1"
 
@@ -9219,10 +9027,9 @@ msgid "Edit Filter"
 msgstr "Rediģēt filtru"
 
 #: plugins/syndication/filtereditor.cpp:199
-#, fuzzy, kde-format
-#| msgid "There already is a filter named %1, filter names must be unique !"
+#, kde-format
 msgid "There already is a filter named %1, filter names must be unique."
-msgstr "Jau ir filtrs ar nosaukumu %1, filtru nosaukumiem jābūt unikāliem !"
+msgstr "Jau ir filtrs ar nosaukumu %1, filtru nosaukumiem jābūt unikāliem."
 
 #: plugins/syndication/syndicationplugin.cpp:42
 #: plugins/syndication/syndicationplugin.cpp:47
@@ -9243,10 +9050,8 @@ msgid "Show Feed"
 msgstr "Rādīt barotni"
 
 #: plugins/syndication/syndicationplugin.cpp:98
-#, fuzzy
-#| msgid "Username:"
 msgid "Rename"
-msgstr "Lietotājvārds:"
+msgstr "Pārdēvēt"
 
 #: plugins/syndication/syndicationplugin.cpp:101
 msgid "Add Filter"
@@ -9257,10 +9062,8 @@ msgid "Remove Filter"
 msgstr "Izņemt filtru"
 
 #: plugins/syndication/syndicationactivity.cpp:53
-#, fuzzy
-#| msgid "Widget to manage RSS and Atom feeds"
 msgid "Manages RSS and Atom feeds"
-msgstr "Logdaļa RSS un Atom barotņu pārvaldībai"
+msgstr "Pārvalda RSS un Atom barotnes pārvaldībai"
 
 #: plugins/syndication/syndicationactivity.cpp:130
 msgid "Enter the URL"
@@ -9271,10 +9074,9 @@ msgid "Please enter the URL of the RSS or Atom feed."
 msgstr "Lūdzu ievadiet RSS vai Atom barotnes URL."
 
 #: plugins/syndication/syndicationactivity.cpp:144
-#, fuzzy, kde-format
-#| msgid "Failed to load feed %1 !"
+#, kde-format
 msgid "Failed to load feed %1."
-msgstr "Neizdevās lejupielādēt barotni %1 !"
+msgstr "Neizdevās lejupielādēt barotni %1."
 
 #: plugins/syndication/syndicationactivity.cpp:160
 #, kde-format
@@ -9334,25 +9136,22 @@ msgstr ""
 "URL. URL ir jāsatur {searchTerms}, ko KTorrent aizviedos ar meklēto tekstu."
 
 #: plugins/search/searchprefpage.cpp:150
-#, fuzzy, kde-format
-#| msgid "The URL %1, does not contain {searchTerms}."
+#, kde-format
 msgid "The URL %1 does not contain {searchTerms}."
-msgstr "URL %s nesatur {searchTerms}."
+msgstr "URL %1 nesatur {searchTerms}."
 
 #: plugins/search/homepage.cpp:117
 msgid "Home"
-msgstr ""
+msgstr "Mājas"
 
 #: plugins/search/homepage.cpp:119
 msgctxt "KDE 4 tag line, see http://kde.org/img/kde40.png"
 msgid "Be free."
-msgstr ""
+msgstr "Esiet brīvs."
 
 #: plugins/search/homepage.cpp:120
-#, fuzzy
-#| msgid "Folders to scan for torrents:"
 msgid "Search the web for torrents."
-msgstr "Mapes, kurās meklēt torrentus:"
+msgstr "Meklēt torrentus tīmeklī."
 
 #: plugins/search/searchenginelist.cpp:216
 #, kde-format
@@ -9448,10 +9247,8 @@ msgid "Scripting"
 msgstr "Skriptēšana"
 
 #: plugins/scripting/scriptingplugin.cpp:216
-#, fuzzy
-#| msgid "KTorrent Blacklisted Peers"
 msgid "KTorrent Script Packages"
-msgstr "KTorrent izraidītie dalībnieki"
+msgstr "KTorrent skriptu pakotnes"
 
 #: plugins/scripting/scriptingplugin.cpp:217
 #: plugins/scripting/scriptmanager.cpp:41
@@ -9459,13 +9256,12 @@ msgid "Scripts"
 msgstr "Skripti"
 
 #: plugins/scripting/scriptingplugin.cpp:277
-#, fuzzy
-#| msgid ""
-#| "You will lose all the downloaded data. Are you sure you want to do this?"
 msgid ""
 "Removing these scripts will fully delete them from your disk. Are you sure "
 "you want to do this ?"
-msgstr "Jūs pazaudēsiet visus ielādētos datus. Vai tiešām vēlaties to darīt?"
+msgstr ""
+"Izņemot šos skriptus, tie tiks pilnībā izdzēsti no jūsu cietā diska. Vai "
+"tiešām vēlaties to darīt?"
 
 #: plugins/scripting/scriptmanager.cpp:43
 msgid "Widget to start, stop and manage scripts"
@@ -9473,29 +9269,27 @@ msgstr "Logdaļa skriptu palaišanai, apturēšanai un pārvaldībai"
 
 #: plugins/scripting/scriptmodel.cpp:112
 msgid "Cannot open archive for reading."
-msgstr ""
+msgstr "Nevar atvērt arhīvu lasīšanai."
 
 #: plugins/scripting/scriptmodel.cpp:116
-#, fuzzy
-#| msgid "Invalid tracker URL"
 msgid "Invalid archive."
-msgstr "Nederīgs trakera URL"
+msgstr "Nederīgs arhīvs"
 
 #: plugins/scripting/scriptmodel.cpp:143
-#, fuzzy, kde-format
-#| msgid "There already is a tracker named <b>%1</b> !"
+#, kde-format
 msgid "There is already a script package named %1 installed."
-msgstr "Jau ir trakeris ar nosaukumu <b>%1</b> !"
+msgstr "Jau ir instalēts skripts ar nosaukumu %1."
 
 #: plugins/scripting/scriptmodel.cpp:149
 msgid ""
 "Failed to load script from archive. There is something wrong with the "
 "desktop file."
 msgstr ""
+"Neizdevās ielādēt skripta failu. Kautkas nav kārtībā ar .desktop failu."
 
 #: plugins/scripting/scriptmodel.cpp:154
 msgid "No script found in archive."
-msgstr ""
+msgstr "Arhīvā netika atrasts skripts."
 
 #: plugins/zeroconf/zeroconfplugin.cpp:51
 #: plugins/zeroconf/zeroconfplugin.cpp:68
@@ -9511,10 +9305,9 @@ msgid "Cannot open file %1: %2"
 msgstr "Neizdevās atvērt failu %1: %2"
 
 #: plugins/bwscheduler/schedule.cpp:140 plugins/bwscheduler/schedule.cpp:146
-#, fuzzy, kde-format
-#| msgid "The file %1 is corrupted or not a proper KTorrent schedule file !"
+#, kde-format
 msgid "The file %1 is corrupted or not a proper KTorrent schedule file."
-msgstr "Fails %1 ir bojāts vai nav KTorrent plānotāja fails !"
+msgstr "Fails %1 ir bojāts vai nav KTorrent plānotāja fails."
 
 #: plugins/bwscheduler/weekscene.cpp:71
 msgid "Current schedule: paused"
@@ -9548,32 +9341,22 @@ msgid "Add an item"
 msgstr "Pievienot ierakstu"
 
 #: plugins/bwscheduler/additemdlg.cpp:74
-#, fuzzy
-#| msgid "No day has been selected !"
 msgid "No day has been selected."
-msgstr "Nav izvēlēta diena !"
+msgstr "Nav izvēlēta diena."
 
 #: plugins/bwscheduler/additemdlg.cpp:106
-#, fuzzy
-#| msgid ""
-#| "Failed to add item, because it conflicts with another item on the "
-#| "schedule !"
 msgid ""
 "Failed to add item, because it conflicts with another item on the schedule."
 msgstr ""
-"Neizdevās pievienot ierakstu, jo tas konfliktē ar citu plānošanas ierakstu !"
+"Neizdevās pievienot ierakstu, jo tas konfliktē ar citu plānošanas ierakstu."
 
 #: plugins/bwscheduler/additemdlg.cpp:111
-#, fuzzy
-#| msgid ""
-#| "This item could not be added to all selected days, because it conflicts "
-#| "with another item on the schedule !"
 msgid ""
 "This item could not be added to all selected days, because it conflicts with "
 "another item on the schedule."
 msgstr ""
 "Šo ierakstu nevar pievienot visām izvēlētajām dienām, jo tas konfliktē ar "
-"citu plānošanas ierakstu !"
+"citu plānošanas ierakstu."
 
 #: plugins/bwscheduler/schedulegraphicsitem.cpp:77
 msgid "Paused"
@@ -9589,18 +9372,16 @@ msgstr ""
 "%2 ārā"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:40
-#, fuzzy
-#| msgid "Bandwidth Schedule"
 msgid ""
 "Bandwidth\n"
 "Schedule"
-msgstr "Tīkla slodzes plāns"
+msgstr ""
+"Tīkla slodzes\n"
+"plāns"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:42
-#, fuzzy
-#| msgid "Tab to edit the bandwidth schedule"
 msgid "Edit the bandwidth schedule"
-msgstr "Cilne tīkla slodzes plāna rediģēšanai"
+msgstr "Rediģēt tīkla slodzes plānu"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:50
 msgid "Load Schedule"
@@ -9632,14 +9413,10 @@ msgid "KTorrent scheduler files"
 msgstr "KTorrent plānotāja faili"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:164
-#, fuzzy
-#| msgid ""
-#| "This item conflicts with another item in the schedule, we cannot change "
-#| "it !"
 msgid ""
 "This item conflicts with another item in the schedule, we cannot change it."
 msgstr ""
-"Šis ieraksts konfliktē ar citu plānošanas ierakstu, nevar veikt šo izmaiņu !"
+"Šis ieraksts konfliktē ar citu plānošanas ierakstu, nevar veikt šo izmaiņu."
 
 #: libbtcore/interfaces/trackerinterface.cpp:58
 msgid "OK"
@@ -9651,10 +9428,9 @@ msgstr "Paziņo"
 
 #: libbtcore/interfaces/trackerinterface.cpp:60
 #: libbtcore/torrent/torrentstats.cpp:82
-#, fuzzy, kde-format
-#| msgid "Error: "
+#, kde-format
 msgid "Error: %1"
-msgstr "Kļūda: "
+msgstr "Kļūda: %1"
 
 #: libbtcore/peer/peerid.cpp:203
 msgid "Unknown client"
@@ -9807,10 +9583,8 @@ msgid "Error: request timed out"
 msgstr "Kļūda: pieprasījuma noildze"
 
 #: libbtcore/download/httpconnection.cpp:391
-#, fuzzy
-#| msgid "Redirected without a new location !"
 msgid "Redirected without a new location."
-msgstr "Pārsūtīts bez jaunas vietas !"
+msgstr "Pārsūtīts bez jaunas vietas."
 
 #: libbtcore/download/chunkdownload.cpp:385
 #, kde-format
@@ -9844,10 +9618,8 @@ msgid "Cannot convert %1 to an int"
 msgstr "Neizdevās pārveidot %1 par int"
 
 #: libbtcore/bcodec/bdecoder.cpp:202
-#, fuzzy
-#| msgid "Torrent is incomplete!"
 msgid "Torrent is incomplete."
-msgstr "Torrents ir nepilnīgs!"
+msgstr "Torrents ir nepilnīgs."
 
 #: libbtcore/diskio/singlefilecache.cpp:72
 #: libbtcore/diskio/multifilecache.cpp:106
@@ -9923,10 +9695,8 @@ msgstr "Neizdevās atvērt failu %1 : %2"
 #: libbtcore/torrent/torrent.cpp:182 libbtcore/torrent/torrent.cpp:189
 #: libbtcore/torrent/torrent.cpp:197 libbtcore/torrent/torrent.cpp:201
 #: libbtcore/torrent/torrent.cpp:222 libbtcore/torrent/torrent.cpp:293
-#, fuzzy
-#| msgid "Corrupted torrent!"
 msgid "Corrupted torrent."
-msgstr "Bojāts torrents!"
+msgstr "Bojāts torrents."
 
 #: libbtcore/torrent/torrent.cpp:145
 #, kde-format
@@ -9937,36 +9707,30 @@ msgstr " Neizdevās atvērt torrenta failu %1 : %2"
 msgid "Parse Error"
 msgstr "Parsēšanas kļūda"
 
-#: libbtcore/torrent/torrentcontrol.cpp:469
-#, fuzzy, kde-format
-#| msgid ""
-#| "An error occurred while loading the torrent <b>%1</b>\n"
-#| "The torrent is probably corrupt or is not a torrent file."
+#: libbtcore/torrent/torrentcontrol.cpp:468
+#, kde-format
 msgid ""
 "An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
 "torrent is probably corrupt or is not a valid torrent file."
 msgstr ""
-"Gadījās kļūda ielādējot torrentu. <b>%1</b>\n"
-"Tas droši vien ir bojāts vai nav torrent fails."
+"Gadījās kļūda ielādējot torrentu <b>%1</b>>:<br/><b>%2</b><br/>Tas droši "
+"vien ir bojāts vai nav torrent fails."
 
-#: libbtcore/torrent/torrentcontrol.cpp:498
-#, fuzzy, kde-format
-#| msgid ""
-#| "An error occurred while loading the torrent <b>%1</b>\n"
-#| "The torrent is probably corrupt or is not a torrent file."
+#: libbtcore/torrent/torrentcontrol.cpp:497
+#, kde-format
 msgid ""
 "An error occurred while loading the torrent:<br/><b>%1</b><br/>The torrent "
 "is probably corrupt or is not a valid torrent file."
 msgstr ""
-"Gadījās kļūda ielādējot torrentu. <b>%1</b>\n"
-"Tas droši vien ir bojāts vai nav torrent fails."
+"Gadījās kļūda ielādējot torrentu:<br/><b>%1</b><br/>Tas droši vien ir bojāts "
+"vai nav torrent fails."
 
-#: libbtcore/torrent/torrentcontrol.cpp:508
+#: libbtcore/torrent/torrentcontrol.cpp:507
 #, kde-format
 msgid "Unable to create %1 : %2"
 msgstr "Neizdevās izveidot %1 ; %2"
 
-#: libbtcore/torrent/torrentcontrol.cpp:523
+#: libbtcore/torrent/torrentcontrol.cpp:522
 #, kde-format
 msgid ""
 "You are already downloading this torrent %1, the list of trackers of both "
@@ -9975,7 +9739,7 @@ msgstr ""
 "Jūs jau ielādējat šo torrentu %1, esošā torrenta trakeru saraksts tika "
 "papildināts no jaunā."
 
-#: libbtcore/torrent/torrentcontrol.cpp:527
+#: libbtcore/torrent/torrentcontrol.cpp:526
 #, kde-format
 msgid "You are already downloading the torrent %1"
 msgstr "Jūs jau ielādējat šo torrentu %1"
@@ -9993,11 +9757,9 @@ msgid "Seeding completed"
 msgstr "Piedāvāšana pabeigta"
 
 #: libbtcore/torrent/torrentstats.cpp:74
-#, fuzzy
-#| msgid "Seeding"
 msgctxt "Status of a torrent file"
 msgid "Seeding"
-msgstr "Piedāvāšana"
+msgstr "Piedāvā"
 
 #: libbtcore/torrent/torrentstats.cpp:76
 msgid "Downloading"
@@ -10017,13 +9779,11 @@ msgstr "Rezervē viedu uz diska"
 
 #: libbtcore/torrent/torrentstats.cpp:86
 msgid "Queued for seeding"
-msgstr ""
+msgstr "Ierindots piedāvāšanai"
 
 #: libbtcore/torrent/torrentstats.cpp:86
-#, fuzzy
-#| msgid "Currently downloading:"
 msgid "Queued for downloading"
-msgstr "Šobrīt ielādē:"
+msgstr "Ierindots lejuipielādei"
 
 #: libbtcore/torrent/torrentstats.cpp:88
 msgid "Checking data"
@@ -10039,17 +9799,16 @@ msgid "Cannot create index file: %1"
 msgstr "Nevar izveidot indeksa failu: %1"
 
 #: libbtcore/tracker/httpannouncejob.cpp:119
-#, fuzzy
-#| msgid "Redirected without a new location !"
 msgid "Redirect without a redirect location"
-msgstr "Pārsūtīts bez jaunas vietas !"
+msgstr "Pārsūtīts bez jaunas vietas"
 
-#: libbtcore/tracker/udptracker.cpp:288 libbtcore/tracker/udptracker.cpp:298
+#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
-msgstr ""
+msgstr "Noildze sazinoties ar trakeri %1"
 
-#: libbtcore/tracker/udptracker.cpp:320
+#: libbtcore/tracker/udptracker.cpp:330
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "Neizdevās atpazīt datora nosaukumu %1"
@@ -10059,16 +9818,16 @@ msgstr "Neizdevās atpazīt datora nosaukumu %1"
 msgid "Cannot bind to udp port %1 or the 10 following ports."
 msgstr "Neizdevās pieslēgties ne UDP portam %1, ne kādam no 10 nākamajiem."
 
-#: libbtcore/tracker/httptracker.cpp:270 libbtcore/tracker/httptracker.cpp:290
-#: libbtcore/tracker/httptracker.cpp:330 libbtcore/tracker/httptracker.cpp:444
+#: libbtcore/tracker/httptracker.cpp:282 libbtcore/tracker/httptracker.cpp:302
+#: libbtcore/tracker/httptracker.cpp:342 libbtcore/tracker/httptracker.cpp:461
 msgid "Invalid response from tracker"
 msgstr "Nepareiza atbilde no trakera"
 
-#: libbtcore/tracker/httptracker.cpp:283
+#: libbtcore/tracker/httptracker.cpp:295
 msgid "Invalid data from tracker"
 msgstr "Nederīgi dati no trakera"
 
-#: libbtcore/tracker/httptracker.cpp:461
+#: libbtcore/tracker/httptracker.cpp:478
 msgid "Invalid tracker URL"
 msgstr "Nederīgs trakera URL"
 

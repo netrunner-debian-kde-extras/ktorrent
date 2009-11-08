@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-10-22 01:31+0200\n"
+"POT-Creation-Date: 2009-11-08 01:29+0100\n"
 "PO-Revision-Date: 2009-10-22 12:50+0200\n"
 "Last-Translator: Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -421,7 +421,7 @@ msgstr "Iniciar todos los torrents seleccionados en la solapa actual"
 
 #: ktorrent/viewmanager.cpp:539
 #: plugins/mediaplayer/mediaplayeractivity.cpp:105
-#: plugins/mediaplayer/videowidget.cpp:59
+#: plugins/mediaplayer/videowidget.cpp:60
 msgid "Stop"
 msgstr "Detener"
 
@@ -8761,12 +8761,12 @@ msgid "Play List"
 msgstr "Lista de reproducción"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:97
-#: plugins/mediaplayer/videowidget.cpp:57
+#: plugins/mediaplayer/videowidget.cpp:58
 msgid "Play"
 msgstr "Reproducir"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:101
-#: plugins/mediaplayer/videowidget.cpp:58
+#: plugins/mediaplayer/videowidget.cpp:59
 msgid "Pause"
 msgstr "Pausa"
 
@@ -8797,11 +8797,11 @@ msgstr "Limpiar la lista de reproducción"
 msgid "Movie player"
 msgstr "Reproductor multimedia"
 
-#: plugins/mediaplayer/videowidget.cpp:60
+#: plugins/mediaplayer/videowidget.cpp:61
 msgid "Toggle Fullscreen"
 msgstr "Conmutar a/de pantalla completa"
 
-#: plugins/mediaplayer/videowidget.cpp:196
+#: plugins/mediaplayer/videowidget.cpp:197
 msgid "KTorrent is playing a video."
 msgstr "KTorrent está reproduciendo un vídeo."
 
@@ -9621,7 +9621,7 @@ msgstr " No se puede abrir el archivo torrent %1: %2"
 msgid "Parse Error"
 msgstr "Error de análisis sintáctico"
 
-#: libbtcore/torrent/torrentcontrol.cpp:469
+#: libbtcore/torrent/torrentcontrol.cpp:468
 #, kde-format
 msgid ""
 "An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
@@ -9631,7 +9631,7 @@ msgstr ""
 "2</b><br/>Probablemente el torrent esté dañado, o no sea un archivo torrent "
 "válido."
 
-#: libbtcore/torrent/torrentcontrol.cpp:498
+#: libbtcore/torrent/torrentcontrol.cpp:497
 #, kde-format
 msgid ""
 "An error occurred while loading the torrent:<br/><b>%1</b><br/>The torrent "
@@ -9640,12 +9640,12 @@ msgstr ""
 "Se ha producido un error mientras se cargaba el torrent:<br/><b>%1</b><br/"
 ">Probablemente el torrent esté dañado, o no sea un archivo torrent válido."
 
-#: libbtcore/torrent/torrentcontrol.cpp:508
+#: libbtcore/torrent/torrentcontrol.cpp:507
 #, kde-format
 msgid "Unable to create %1 : %2"
 msgstr "No se ha podido crear %1: %2"
 
-#: libbtcore/torrent/torrentcontrol.cpp:523
+#: libbtcore/torrent/torrentcontrol.cpp:522
 #, kde-format
 msgid ""
 "You are already downloading this torrent %1, the list of trackers of both "
@@ -9654,7 +9654,7 @@ msgstr ""
 "Ya está descargando este torrent %1, la lista de localizadores de ambos "
 "torrents ha sido fusionada."
 
-#: libbtcore/torrent/torrentcontrol.cpp:527
+#: libbtcore/torrent/torrentcontrol.cpp:526
 #, kde-format
 msgid "You are already downloading the torrent %1"
 msgstr "Ya está descargando el torrent %1"
@@ -9717,12 +9717,13 @@ msgstr "No se puede crear el archivo índice: %1"
 msgid "Redirect without a redirect location"
 msgstr "Redirección sin una nueva ubicación"
 
-#: libbtcore/tracker/udptracker.cpp:288 libbtcore/tracker/udptracker.cpp:298
+#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
 msgstr "Expiró el tiempo límite para contactar con el localizador %1"
 
-#: libbtcore/tracker/udptracker.cpp:320
+#: libbtcore/tracker/udptracker.cpp:330
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "No fue posible resolver el nombre de máquina %1"
@@ -9733,16 +9734,16 @@ msgid "Cannot bind to udp port %1 or the 10 following ports."
 msgstr ""
 "No se puede conectar al puerto UDP %1 ni a los diez puertos siguientes."
 
-#: libbtcore/tracker/httptracker.cpp:270 libbtcore/tracker/httptracker.cpp:290
-#: libbtcore/tracker/httptracker.cpp:330 libbtcore/tracker/httptracker.cpp:444
+#: libbtcore/tracker/httptracker.cpp:282 libbtcore/tracker/httptracker.cpp:302
+#: libbtcore/tracker/httptracker.cpp:342 libbtcore/tracker/httptracker.cpp:461
 msgid "Invalid response from tracker"
 msgstr "Respuesta no válida del localizador"
 
-#: libbtcore/tracker/httptracker.cpp:283
+#: libbtcore/tracker/httptracker.cpp:295
 msgid "Invalid data from tracker"
 msgstr "Datos no válidos del localizador"
 
-#: libbtcore/tracker/httptracker.cpp:461
+#: libbtcore/tracker/httptracker.cpp:478
 msgid "Invalid tracker URL"
 msgstr "URL no válido del localizador"
 

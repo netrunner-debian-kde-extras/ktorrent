@@ -5,13 +5,14 @@
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2006, 2007, 2008.
 # Danny Kukawka <danny.kukawka@web.de>, 2006.
 # Jannick Kuhr <opensource@kuhr.org>, 2006, 2007, 2008, 2009.
+# Panagiotis Papadopoulos <pano_90@gmx.net>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-10-22 01:31+0200\n"
-"PO-Revision-Date: 2009-09-09 23:24+0200\n"
-"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
+"POT-Creation-Date: 2009-11-08 01:29+0100\n"
+"PO-Revision-Date: 2009-10-27 18:27+0100\n"
+"Last-Translator: Panagiotis Papadopoulos <pano_90@gmx.net>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -419,7 +420,7 @@ msgstr "Alle ausgewählten Torrents im aktuellen Unterfenster starten"
 
 #: ktorrent/viewmanager.cpp:539
 #: plugins/mediaplayer/mediaplayeractivity.cpp:105
-#: plugins/mediaplayer/videowidget.cpp:59
+#: plugins/mediaplayer/videowidget.cpp:60
 msgid "Stop"
 msgstr "Anhalten"
 
@@ -1317,48 +1318,33 @@ msgid "Opening %1"
 msgstr "%1 wird geöffnet"
 
 #: ktorrent/fileselectdlg.cpp:202
-#, fuzzy
-#| msgid ""
-#| "Files of the torrent have been found in the completed downloads "
-#| "directory. Do you want to use them, and download to the completed "
-#| "downloads directory?"
 msgid ""
 "Some files of this torrent have been found in the completed downloads "
 "directory. Do you want to import these files and use the completed downloads "
 "directory as the location ?"
 msgstr ""
-"Es wurden Dateien des Torrents im Ordner für abgeschlossene Downloads "
-"gefunden. Möchten Sie diese verwenden und den Download in diesen Ordner "
-"fortsetzen?"
+"Einige Dateien dieses Torrents sind im Ordner für abgeschlossene Downloads "
+"gefunden worden. Möchten Sie diese Dateien importieren und den Ordner für "
+"abgeschlossene Dateien als Speicherort verwenden?"
 
 #: ktorrent/fileselectdlg.cpp:205
-#, fuzzy
-#| msgid ""
-#| "Files of the torrent have been found in the completed downloads "
-#| "directory. Do you want to use them, and download to the completed "
-#| "downloads directory?"
 msgid ""
 "All files of this torrent have been found in the completed downloads "
 "directory. Do you want to import these files and use the completed downloads "
 "directory as the location ?"
 msgstr ""
-"Es wurden Dateien des Torrents im Ordner für abgeschlossene Downloads "
-"gefunden. Möchten Sie diese verwenden und den Download in diesen Ordner "
-"fortsetzen?"
+"Alle Dateien dieses Torrents sind im Ordner für abgeschlossene Dateien "
+"gefunden worden. Möchten Sie diese Dateien importieren und den Ordner für "
+"abgeschlossene Dateien als Speicherort verwenden?"
 
 #: ktorrent/fileselectdlg.cpp:209
-#, fuzzy, kde-format
-#| msgid ""
-#| "Files of the torrent have been found in the completed downloads "
-#| "directory. Do you want to use them, and download to the completed "
-#| "downloads directory?"
+#, kde-format
 msgid ""
 "The file <b>%1</b> was found in the completed downloads directory. Do you "
 "want to import this file ?"
 msgstr ""
-"Es wurden Dateien des Torrents im Ordner für abgeschlossene Downloads "
-"gefunden. Möchten Sie diese verwenden und den Download in diesen Ordner "
-"fortsetzen?"
+"Die Datei <b>%1</b> ist im Ordner für abgeschlossene Dateien gefunden "
+"worden. Möchten Sie diese Datei importieren?"
 
 #: ktorrent/fileselectdlg.cpp:226
 #, kde-format
@@ -8815,12 +8801,12 @@ msgid "Play List"
 msgstr "Liste abspielen"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:97
-#: plugins/mediaplayer/videowidget.cpp:57
+#: plugins/mediaplayer/videowidget.cpp:58
 msgid "Play"
 msgstr "Wiedergabe"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:101
-#: plugins/mediaplayer/videowidget.cpp:58
+#: plugins/mediaplayer/videowidget.cpp:59
 msgid "Pause"
 msgstr "Pause"
 
@@ -8851,11 +8837,11 @@ msgstr "Wiedergabeliste leeren"
 msgid "Movie player"
 msgstr "Film-Wiedergabe"
 
-#: plugins/mediaplayer/videowidget.cpp:60
+#: plugins/mediaplayer/videowidget.cpp:61
 msgid "Toggle Fullscreen"
 msgstr "Vollbildmodus umschalten"
 
-#: plugins/mediaplayer/videowidget.cpp:196
+#: plugins/mediaplayer/videowidget.cpp:197
 msgid "KTorrent is playing a video."
 msgstr "KTorrent spielt ein Video ab."
 
@@ -9019,10 +9005,8 @@ msgid "Show Feed"
 msgstr "Nachrichtenquelle anzeigen"
 
 #: plugins/syndication/syndicationplugin.cpp:98
-#, fuzzy
-#| msgid "username"
 msgid "Rename"
-msgstr "Benutzername"
+msgstr "Umbenennen"
 
 #: plugins/syndication/syndicationplugin.cpp:101
 msgid "Add Filter"
@@ -9117,13 +9101,11 @@ msgstr "Startseite"
 #: plugins/search/homepage.cpp:119
 msgctxt "KDE 4 tag line, see http://kde.org/img/kde40.png"
 msgid "Be free."
-msgstr ""
+msgstr "Freiheit genießen!"
 
 #: plugins/search/homepage.cpp:120
-#, fuzzy
-#| msgid "Folders to scan for torrents:"
 msgid "Search the web for torrents."
-msgstr "Ordner zum Durchsuchen nach Torrents:"
+msgstr "Im Internet nach Torrents suchen."
 
 #: plugins/search/searchenginelist.cpp:216
 #, kde-format
@@ -9680,7 +9662,7 @@ msgstr "Torrent-Datei %1 kann nicht geöffnet werden: %2"
 msgid "Parse Error"
 msgstr "Verarbeitungsfehler"
 
-#: libbtcore/torrent/torrentcontrol.cpp:469
+#: libbtcore/torrent/torrentcontrol.cpp:468
 #, kde-format
 msgid ""
 "An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
@@ -9690,7 +9672,7 @@ msgstr ""
 "b><br/>Der Torrent ist möglicherweise beschädigt oder es handelt sich nicht "
 "um eine gültige Torrent-Datei."
 
-#: libbtcore/torrent/torrentcontrol.cpp:498
+#: libbtcore/torrent/torrentcontrol.cpp:497
 #, kde-format
 msgid ""
 "An error occurred while loading the torrent:<br/><b>%1</b><br/>The torrent "
@@ -9700,12 +9682,12 @@ msgstr ""
 "Torrent ist möglicherweise beschädigt oder es handelt sich nicht um eine "
 "gültige Torrent-Datei."
 
-#: libbtcore/torrent/torrentcontrol.cpp:508
+#: libbtcore/torrent/torrentcontrol.cpp:507
 #, kde-format
 msgid "Unable to create %1 : %2"
 msgstr "%1 kann nicht erstellt werden: %2"
 
-#: libbtcore/torrent/torrentcontrol.cpp:523
+#: libbtcore/torrent/torrentcontrol.cpp:522
 #, kde-format
 msgid ""
 "You are already downloading this torrent %1, the list of trackers of both "
@@ -9714,7 +9696,7 @@ msgstr ""
 "Sie laden den Torrent %1 bereits herunter. Die Liste der Tracker von beiden "
 "Torrents wurde zusammengeführt."
 
-#: libbtcore/torrent/torrentcontrol.cpp:527
+#: libbtcore/torrent/torrentcontrol.cpp:526
 #, kde-format
 msgid "You are already downloading the torrent %1"
 msgstr "Sie laden den Torrent %1 bereits herunter."
@@ -9774,17 +9756,16 @@ msgid "Cannot create index file: %1"
 msgstr "Die Indexdatei %1 lässt sich nicht erstellen."
 
 #: libbtcore/tracker/httpannouncejob.cpp:119
-#, fuzzy
-#| msgid "Redirected without a new location."
 msgid "Redirect without a redirect location"
-msgstr "Ohne neue Adresse umgeleitet."
+msgstr "Umleitung ohne Zieladresse"
 
-#: libbtcore/tracker/udptracker.cpp:288 libbtcore/tracker/udptracker.cpp:298
+#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
-msgstr ""
+msgstr "Zeitüberschreitung beim Verbinden mit dem Tracker %1"
 
-#: libbtcore/tracker/udptracker.cpp:320
+#: libbtcore/tracker/udptracker.cpp:330
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "Der Rechnername %1 wurde nicht gefunden"
@@ -9796,16 +9777,16 @@ msgstr ""
 "Der UDP-Port %1 und die 10 darauffolgenden Ports können nicht verwendet "
 "werden."
 
-#: libbtcore/tracker/httptracker.cpp:270 libbtcore/tracker/httptracker.cpp:290
-#: libbtcore/tracker/httptracker.cpp:330 libbtcore/tracker/httptracker.cpp:444
+#: libbtcore/tracker/httptracker.cpp:282 libbtcore/tracker/httptracker.cpp:302
+#: libbtcore/tracker/httptracker.cpp:342 libbtcore/tracker/httptracker.cpp:461
 msgid "Invalid response from tracker"
 msgstr "Ungültige Antwort vom Tracker"
 
-#: libbtcore/tracker/httptracker.cpp:283
+#: libbtcore/tracker/httptracker.cpp:295
 msgid "Invalid data from tracker"
 msgstr "Ungültige Daten vom Tracker"
 
-#: libbtcore/tracker/httptracker.cpp:461
+#: libbtcore/tracker/httptracker.cpp:478
 msgid "Invalid tracker URL"
 msgstr "Ungültige Tracker-Adresse"
 
