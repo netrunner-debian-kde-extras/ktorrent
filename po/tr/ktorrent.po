@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-10-22 01:31+0200\n"
-"PO-Revision-Date: 2009-09-10 13:57+0300\n"
+"POT-Creation-Date: 2009-11-08 01:29+0100\n"
+"PO-Revision-Date: 2009-10-28 16:46+0200\n"
 "Last-Translator: Serdar Soytetir <tulliana@gmail.com>\n"
 "Language-Team: Turkish <yerellestirme@kde.org.tr>\n"
 "MIME-Version: 1.0\n"
@@ -419,7 +419,7 @@ msgstr "Mevcut sekmedeki seçili tüm torrentleri başlat"
 
 #: ktorrent/viewmanager.cpp:539
 #: plugins/mediaplayer/mediaplayeractivity.cpp:105
-#: plugins/mediaplayer/videowidget.cpp:59
+#: plugins/mediaplayer/videowidget.cpp:60
 msgid "Stop"
 msgstr "Durdur"
 
@@ -1286,7 +1286,7 @@ msgstr "Gelişmiş"
 
 #: ktorrent/scanextender.cpp:40 ktorrent/scanextender.cpp:89
 msgid "Checked %v of %m chunks"
-msgstr ""
+msgstr "%v/%m parça denetlendi"
 
 #: ktorrent/fileselectdlg.cpp:75
 msgid "Show a file tree"
@@ -1306,45 +1306,33 @@ msgid "Opening %1"
 msgstr "%1 açılıyor"
 
 #: ktorrent/fileselectdlg.cpp:202
-#, fuzzy
-#| msgid ""
-#| "Files of the torrent have been found in the completed downloads "
-#| "directory. Do you want to use them, and download to the completed "
-#| "downloads directory?"
 msgid ""
 "Some files of this torrent have been found in the completed downloads "
 "directory. Do you want to import these files and use the completed downloads "
 "directory as the location ?"
 msgstr ""
-"Tamamlanmış indirmeler dizininde torrent dosyaları bulundu. Onları "
-"kullanmak, ve tamamlanmış indirmeler dizinine indirmek ister misiniz?"
+"Bu torrentle gelen bazı dosyalar tamamlanmış indirmeler dizininde bulundu. "
+"Bu dosyaları almak ve konum olarak tamamlanmış indirmeler dizinini kullanmak "
+"ister misiniz?"
 
 #: ktorrent/fileselectdlg.cpp:205
-#, fuzzy
-#| msgid ""
-#| "Files of the torrent have been found in the completed downloads "
-#| "directory. Do you want to use them, and download to the completed "
-#| "downloads directory?"
 msgid ""
 "All files of this torrent have been found in the completed downloads "
 "directory. Do you want to import these files and use the completed downloads "
 "directory as the location ?"
 msgstr ""
-"Tamamlanmış indirmeler dizininde torrent dosyaları bulundu. Onları "
-"kullanmak, ve tamamlanmış indirmeler dizinine indirmek ister misiniz?"
+"Bu torrentle gelen tüm dosyalar tamamlanmış indirmeler dizininde bulundu. Bu "
+"dosyaları almak ve konum olarak tamamlanmış indirmeler dizinini kullanmak "
+"ister misiniz?"
 
 #: ktorrent/fileselectdlg.cpp:209
-#, fuzzy, kde-format
-#| msgid ""
-#| "Files of the torrent have been found in the completed downloads "
-#| "directory. Do you want to use them, and download to the completed "
-#| "downloads directory?"
+#, kde-format
 msgid ""
 "The file <b>%1</b> was found in the completed downloads directory. Do you "
 "want to import this file ?"
 msgstr ""
-"Tamamlanmış indirmeler dizininde torrent dosyaları bulundu. Onları "
-"kullanmak, ve tamamlanmış indirmeler dizinine indirmek ister misiniz?"
+"<b>%1</b> dosyası tamamlanmış indirmeler dizininde bulundu. Bu dosyayı almak "
+"istiyor musunuz?"
 
 #: ktorrent/fileselectdlg.cpp:226
 #, kde-format
@@ -1499,11 +1487,11 @@ msgstr "TKorrent Uygulamasını Göster / Gizle"
 
 #: ktorrent/gui.cpp:446
 msgid "Group View Visible"
-msgstr ""
+msgstr "Grup Görünümü Etkin"
 
 #: ktorrent/gui.cpp:447
 msgid "Show or hide the group view"
-msgstr ""
+msgstr "Grup görünümünü göster/gizle"
 
 #: ktorrent/proxypref.cpp:27
 msgid "Proxy"
@@ -8699,12 +8687,12 @@ msgid "Play List"
 msgstr "Çalma Listesi"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:97
-#: plugins/mediaplayer/videowidget.cpp:57
+#: plugins/mediaplayer/videowidget.cpp:58
 msgid "Play"
 msgstr "Oynat"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:101
-#: plugins/mediaplayer/videowidget.cpp:58
+#: plugins/mediaplayer/videowidget.cpp:59
 msgid "Pause"
 msgstr "Duraklat"
 
@@ -8735,11 +8723,11 @@ msgstr "Parça Listesini Temizle"
 msgid "Movie player"
 msgstr "Video oynatıcısı"
 
-#: plugins/mediaplayer/videowidget.cpp:60
+#: plugins/mediaplayer/videowidget.cpp:61
 msgid "Toggle Fullscreen"
 msgstr "Tam Ekranı Aç/Kapat"
 
-#: plugins/mediaplayer/videowidget.cpp:196
+#: plugins/mediaplayer/videowidget.cpp:197
 msgid "KTorrent is playing a video."
 msgstr "KTorrent bir video oynatıyor."
 
@@ -8900,10 +8888,8 @@ msgid "Show Feed"
 msgstr "Kaynağı Göster"
 
 #: plugins/syndication/syndicationplugin.cpp:98
-#, fuzzy
-#| msgid "username"
 msgid "Rename"
-msgstr "kullanıcı adı"
+msgstr "Yeniden İsimlendir"
 
 #: plugins/syndication/syndicationplugin.cpp:101
 msgid "Add Filter"
@@ -8994,13 +8980,11 @@ msgstr "Ev Dizini"
 #: plugins/search/homepage.cpp:119
 msgctxt "KDE 4 tag line, see http://kde.org/img/kde40.png"
 msgid "Be free."
-msgstr ""
+msgstr "Özgür olun."
 
 #: plugins/search/homepage.cpp:120
-#, fuzzy
-#| msgid "Folders to scan for torrents:"
 msgid "Search the web for torrents."
-msgstr "Torrentlerin taranacağı dizin:"
+msgstr "Web ağını torrentler için ara."
 
 #: plugins/search/searchenginelist.cpp:216
 #, kde-format
@@ -9547,7 +9531,7 @@ msgstr " %1 torrent dosyası açılamıyor: %2"
 msgid "Parse Error"
 msgstr "Ayrıştırma Hatası"
 
-#: libbtcore/torrent/torrentcontrol.cpp:469
+#: libbtcore/torrent/torrentcontrol.cpp:468
 #, kde-format
 msgid ""
 "An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
@@ -9556,7 +9540,7 @@ msgstr ""
 "Torrent dosyası yüklenirken bir hata oluştu <b>%1</b>:<br/><b>%2</b><br/"
 ">Büyük olasılıkla torrent dosyası bozuk ya da bu bir torrent dosyası değil."
 
-#: libbtcore/torrent/torrentcontrol.cpp:498
+#: libbtcore/torrent/torrentcontrol.cpp:497
 #, kde-format
 msgid ""
 "An error occurred while loading the torrent:<br/><b>%1</b><br/>The torrent "
@@ -9565,12 +9549,12 @@ msgstr ""
 "Torrent dosyası yüklenirken bir hata oluştu:<br/><b>%1</b><br/>Büyük "
 "olasılıkla torrent dosyası bozuk ya da bu bir torrent dosyası değil."
 
-#: libbtcore/torrent/torrentcontrol.cpp:508
+#: libbtcore/torrent/torrentcontrol.cpp:507
 #, kde-format
 msgid "Unable to create %1 : %2"
 msgstr "%1 oluşturulamıyor : %2"
 
-#: libbtcore/torrent/torrentcontrol.cpp:523
+#: libbtcore/torrent/torrentcontrol.cpp:522
 #, kde-format
 msgid ""
 "You are already downloading this torrent %1, the list of trackers of both "
@@ -9579,7 +9563,7 @@ msgstr ""
 "%1 torrentini zaten indiriyorsunuz, iki torrentin izleyici listesi "
 "birleştirildi."
 
-#: libbtcore/torrent/torrentcontrol.cpp:527
+#: libbtcore/torrent/torrentcontrol.cpp:526
 #, kde-format
 msgid "You are already downloading the torrent %1"
 msgstr "%1 torrentini zaten indiriyorsunuz"
@@ -9639,17 +9623,16 @@ msgid "Cannot create index file: %1"
 msgstr "İçerik dosyası oluşturulamıyor: %1"
 
 #: libbtcore/tracker/httpannouncejob.cpp:119
-#, fuzzy
-#| msgid "Redirected without a new location."
 msgid "Redirect without a redirect location"
-msgstr "Bir konum olmadan yeniden yönlendirildi."
+msgstr "Bir konum olmadan yeniden yönlendir"
 
-#: libbtcore/tracker/udptracker.cpp:288 libbtcore/tracker/udptracker.cpp:298
+#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
 msgstr ""
 
-#: libbtcore/tracker/udptracker.cpp:320
+#: libbtcore/tracker/udptracker.cpp:330
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "%1 makine adı çözümlenemedi"
@@ -9659,16 +9642,16 @@ msgstr "%1 makine adı çözümlenemedi"
 msgid "Cannot bind to udp port %1 or the 10 following ports."
 msgstr "%1 ve sonraki 10 udp portuna erişilemiliyor."
 
-#: libbtcore/tracker/httptracker.cpp:270 libbtcore/tracker/httptracker.cpp:290
-#: libbtcore/tracker/httptracker.cpp:330 libbtcore/tracker/httptracker.cpp:444
+#: libbtcore/tracker/httptracker.cpp:282 libbtcore/tracker/httptracker.cpp:302
+#: libbtcore/tracker/httptracker.cpp:342 libbtcore/tracker/httptracker.cpp:461
 msgid "Invalid response from tracker"
 msgstr "İzleyiciden geçersiz yanıt"
 
-#: libbtcore/tracker/httptracker.cpp:283
+#: libbtcore/tracker/httptracker.cpp:295
 msgid "Invalid data from tracker"
 msgstr "İzleyiciden geçersiz veri"
 
-#: libbtcore/tracker/httptracker.cpp:461
+#: libbtcore/tracker/httptracker.cpp:478
 msgid "Invalid tracker URL"
 msgstr "Geçersiz izleyici adresi"
 

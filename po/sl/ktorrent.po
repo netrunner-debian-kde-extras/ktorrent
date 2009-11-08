@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-10-22 01:31+0200\n"
-"PO-Revision-Date: 2009-07-17 13:37+0200\n"
+"POT-Creation-Date: 2009-11-08 01:29+0100\n"
+"PO-Revision-Date: 2009-08-18 14:29+0200\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "MIME-Version: 1.0\n"
@@ -425,7 +425,7 @@ msgstr "Zaženi vse izbrane torrente iz trenutnega zavihka"
 
 #: ktorrent/viewmanager.cpp:539
 #: plugins/mediaplayer/mediaplayeractivity.cpp:105
-#: plugins/mediaplayer/videowidget.cpp:59
+#: plugins/mediaplayer/videowidget.cpp:60
 msgid "Stop"
 msgstr "Ustavi"
 
@@ -6195,7 +6195,7 @@ msgstr "Sledilniki"
 #. i18n: ectx: property (text), widget (KPushButton, m_restore_defaults)
 #: rc.cpp:1629
 msgid "Restore Defaults"
-msgstr "Povrni privzete vrednosti"
+msgstr "Obnovi privzete vrednosti"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:16
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
@@ -9042,12 +9042,12 @@ msgid "Play List"
 msgstr "Predvajaj"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:97
-#: plugins/mediaplayer/videowidget.cpp:57
+#: plugins/mediaplayer/videowidget.cpp:58
 msgid "Play"
 msgstr "Predvajaj"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:101
-#: plugins/mediaplayer/videowidget.cpp:58
+#: plugins/mediaplayer/videowidget.cpp:59
 msgid "Pause"
 msgstr "Premor"
 
@@ -9080,11 +9080,11 @@ msgstr ""
 msgid "Movie player"
 msgstr "Predvajalnik filmov"
 
-#: plugins/mediaplayer/videowidget.cpp:60
+#: plugins/mediaplayer/videowidget.cpp:61
 msgid "Toggle Fullscreen"
 msgstr "Preklopi celozaslonski način"
 
-#: plugins/mediaplayer/videowidget.cpp:196
+#: plugins/mediaplayer/videowidget.cpp:197
 #, fuzzy
 #| msgid "KTorrent is not running !"
 msgid "KTorrent is playing a video."
@@ -9779,7 +9779,7 @@ msgstr "Ni v uporabi"
 #: libbtcore/download/webseed.cpp:319
 #: libbtcore/download/httpconnection.cpp:125
 msgid "Connection closed"
-msgstr "Povezava prekinjena"
+msgstr "Povezava je bila prekinjena"
 
 #: libbtcore/download/httpconnection.cpp:103
 #, kde-format
@@ -9955,7 +9955,7 @@ msgstr " Ni moč odpreti torrenta %1: %2"
 msgid "Parse Error"
 msgstr "Napaka pri razčlenjevanju"
 
-#: libbtcore/torrent/torrentcontrol.cpp:469
+#: libbtcore/torrent/torrentcontrol.cpp:468
 #, kde-format
 msgid ""
 "An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
@@ -9964,7 +9964,7 @@ msgstr ""
 "Prišlo je do napake pri nalaganju torrenta <b>%1</b>:<br/><b>%2</b><br/"
 ">Torrent je verjetno poškodovan, ali pa to ni veljavna datoteka torrent."
 
-#: libbtcore/torrent/torrentcontrol.cpp:498
+#: libbtcore/torrent/torrentcontrol.cpp:497
 #, kde-format
 msgid ""
 "An error occurred while loading the torrent:<br/><b>%1</b><br/>The torrent "
@@ -9973,12 +9973,12 @@ msgstr ""
 "Prišlo je do napake pri nalaganju torrenta:<br/><b>%1</b><br/>Torrent je "
 "verjetno poškodovan, ali pa to ni veljavna datoteka torrent."
 
-#: libbtcore/torrent/torrentcontrol.cpp:508
+#: libbtcore/torrent/torrentcontrol.cpp:507
 #, kde-format
 msgid "Unable to create %1 : %2"
 msgstr "Ni bilo moč ustvariti %1 : %2"
 
-#: libbtcore/torrent/torrentcontrol.cpp:523
+#: libbtcore/torrent/torrentcontrol.cpp:522
 #, kde-format
 msgid ""
 "You are already downloading this torrent %1, the list of trackers of both "
@@ -9987,7 +9987,7 @@ msgstr ""
 "Torent %1 že prejemate, seznama sledilnikov iz obeh torrentov sta bila "
 "združena."
 
-#: libbtcore/torrent/torrentcontrol.cpp:527
+#: libbtcore/torrent/torrentcontrol.cpp:526
 #, kde-format
 msgid "You are already downloading the torrent %1"
 msgstr "Torrent %1 že prejemate"
@@ -10056,12 +10056,13 @@ msgstr "Ni moč ustvariti indeksne datoteke: %1"
 msgid "Redirect without a redirect location"
 msgstr "Preusmerjen brez nove lokacije."
 
-#: libbtcore/tracker/udptracker.cpp:288 libbtcore/tracker/udptracker.cpp:298
+#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
 msgstr ""
 
-#: libbtcore/tracker/udptracker.cpp:320
+#: libbtcore/tracker/udptracker.cpp:330
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "Ni moč razrešiti imena gostitelja %1"
@@ -10071,16 +10072,16 @@ msgstr "Ni moč razrešiti imena gostitelja %1"
 msgid "Cannot bind to udp port %1 or the 10 following ports."
 msgstr "Ni se moč povezati z vrati UDP %1, ali sledečimi 10 vrati."
 
-#: libbtcore/tracker/httptracker.cpp:270 libbtcore/tracker/httptracker.cpp:290
-#: libbtcore/tracker/httptracker.cpp:330 libbtcore/tracker/httptracker.cpp:444
+#: libbtcore/tracker/httptracker.cpp:282 libbtcore/tracker/httptracker.cpp:302
+#: libbtcore/tracker/httptracker.cpp:342 libbtcore/tracker/httptracker.cpp:461
 msgid "Invalid response from tracker"
 msgstr "Neveljaven odziv sledilnika"
 
-#: libbtcore/tracker/httptracker.cpp:283
+#: libbtcore/tracker/httptracker.cpp:295
 msgid "Invalid data from tracker"
 msgstr "Neveljavni podatki s sledilnika"
 
-#: libbtcore/tracker/httptracker.cpp:461
+#: libbtcore/tracker/httptracker.cpp:478
 msgid "Invalid tracker URL"
 msgstr "Neveljaven URL sledilnika"
 

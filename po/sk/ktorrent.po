@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-10-22 01:31+0200\n"
+"POT-Creation-Date: 2009-11-08 01:29+0100\n"
 "PO-Revision-Date: 2009-08-27 22:14+0200\n"
 "Last-Translator: Milan Baša <minkob@mail.t-com.sk>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -428,7 +428,7 @@ msgstr "Spustiť všetky vybrané torrenty v aktuálnej karte"
 
 #: ktorrent/viewmanager.cpp:539
 #: plugins/mediaplayer/mediaplayeractivity.cpp:105
-#: plugins/mediaplayer/videowidget.cpp:59
+#: plugins/mediaplayer/videowidget.cpp:60
 msgid "Stop"
 msgstr "Zastaviť"
 
@@ -8861,12 +8861,12 @@ msgid "Play List"
 msgstr "Prehrať"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:97
-#: plugins/mediaplayer/videowidget.cpp:57
+#: plugins/mediaplayer/videowidget.cpp:58
 msgid "Play"
 msgstr "Prehrať"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:101
-#: plugins/mediaplayer/videowidget.cpp:58
+#: plugins/mediaplayer/videowidget.cpp:59
 msgid "Pause"
 msgstr "Pauza"
 
@@ -8898,11 +8898,11 @@ msgstr ""
 msgid "Movie player"
 msgstr "Prehrávač filmov"
 
-#: plugins/mediaplayer/videowidget.cpp:60
+#: plugins/mediaplayer/videowidget.cpp:61
 msgid "Toggle Fullscreen"
 msgstr "Prepnúť do celoobrazovkového režimu"
 
-#: plugins/mediaplayer/videowidget.cpp:196
+#: plugins/mediaplayer/videowidget.cpp:197
 #, fuzzy
 msgid "KTorrent is playing a video."
 msgstr "KTorrent nie je spustený!"
@@ -9737,7 +9737,7 @@ msgstr "Nie je možné otvoriť torrent súbor %1: %2"
 msgid "Parse Error"
 msgstr "Chyba analýzy"
 
-#: libbtcore/torrent/torrentcontrol.cpp:469
+#: libbtcore/torrent/torrentcontrol.cpp:468
 #, fuzzy, kde-format
 #| msgid ""
 #| "An error occurred while loading the torrent <b>%1</b>\n"
@@ -9749,7 +9749,7 @@ msgstr ""
 "Pri načítaní torrentu <b>%1</b> došlo k chybe.\n"
 "Torrent je pravdepodobne poškodený alebo sa nejedná o súbor torrentu."
 
-#: libbtcore/torrent/torrentcontrol.cpp:498
+#: libbtcore/torrent/torrentcontrol.cpp:497
 #, fuzzy, kde-format
 #| msgid ""
 #| "An error occurred while loading the torrent <b>%1</b>\n"
@@ -9761,19 +9761,19 @@ msgstr ""
 "Pri načítaní torrentu <b>%1</b> došlo k chybe.\n"
 "Torrent je pravdepodobne poškodený alebo sa nejedná o súbor torrentu."
 
-#: libbtcore/torrent/torrentcontrol.cpp:508
+#: libbtcore/torrent/torrentcontrol.cpp:507
 #, kde-format
 msgid "Unable to create %1 : %2"
 msgstr "Nie je možné vytvoriť %1 : %2"
 
-#: libbtcore/torrent/torrentcontrol.cpp:523
+#: libbtcore/torrent/torrentcontrol.cpp:522
 #, kde-format
 msgid ""
 "You are already downloading this torrent %1, the list of trackers of both "
 "torrents has been merged."
 msgstr "Torrent %1 už sťahujete. Zoznam trackerov oboch torrentov bol zlúčený."
 
-#: libbtcore/torrent/torrentcontrol.cpp:527
+#: libbtcore/torrent/torrentcontrol.cpp:526
 #, kde-format
 msgid "You are already downloading the torrent %1"
 msgstr "Už sťahujete torrent %1"
@@ -9839,12 +9839,13 @@ msgstr "Nie je možné vytvoriť indexový súbor: %1"
 msgid "Redirect without a redirect location"
 msgstr "Presmerované bez nového umiestenia !"
 
-#: libbtcore/tracker/udptracker.cpp:288 libbtcore/tracker/udptracker.cpp:298
+#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
 msgstr ""
 
-#: libbtcore/tracker/udptracker.cpp:320
+#: libbtcore/tracker/udptracker.cpp:330
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "Nie je možné rozpoznať meno hostiteľa %1"
@@ -9854,16 +9855,16 @@ msgstr "Nie je možné rozpoznať meno hostiteľa %1"
 msgid "Cannot bind to udp port %1 or the 10 following ports."
 msgstr "Nie je možné zviazať UDP port %1 ani ďalších 10 portov."
 
-#: libbtcore/tracker/httptracker.cpp:270 libbtcore/tracker/httptracker.cpp:290
-#: libbtcore/tracker/httptracker.cpp:330 libbtcore/tracker/httptracker.cpp:444
+#: libbtcore/tracker/httptracker.cpp:282 libbtcore/tracker/httptracker.cpp:302
+#: libbtcore/tracker/httptracker.cpp:342 libbtcore/tracker/httptracker.cpp:461
 msgid "Invalid response from tracker"
 msgstr "Neplatná odpoveď od trackeru"
 
-#: libbtcore/tracker/httptracker.cpp:283
+#: libbtcore/tracker/httptracker.cpp:295
 msgid "Invalid data from tracker"
 msgstr "Neplatné dáta z trackeru"
 
-#: libbtcore/tracker/httptracker.cpp:461
+#: libbtcore/tracker/httptracker.cpp:478
 msgid "Invalid tracker URL"
 msgstr "Neplatné URL trackeru"
 

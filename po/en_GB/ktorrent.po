@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-10-22 01:31+0200\n"
-"PO-Revision-Date: 2009-10-18 21:31+0100\n"
+"POT-Creation-Date: 2009-11-08 01:29+0100\n"
+"PO-Revision-Date: 2009-11-04 22:15+0000\n"
 "Last-Translator: Andrew Coles <andrew_coles@yahoo.co.uk>\n"
 "Language-Team: British English <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -417,7 +417,7 @@ msgstr "Start all selected torrents in the current tab"
 
 #: ktorrent/viewmanager.cpp:539
 #: plugins/mediaplayer/mediaplayeractivity.cpp:105
-#: plugins/mediaplayer/videowidget.cpp:59
+#: plugins/mediaplayer/videowidget.cpp:60
 msgid "Stop"
 msgstr "Stop"
 
@@ -1313,11 +1313,6 @@ msgid "Opening %1"
 msgstr "Opening %1"
 
 #: ktorrent/fileselectdlg.cpp:202
-#, fuzzy
-#| msgid ""
-#| "Files of the torrent have been found in the completed downloads "
-#| "directory. Do you want to use them, and download to the completed "
-#| "downloads directory?"
 msgid ""
 "Some files of this torrent have been found in the completed downloads "
 "directory. Do you want to import these files and use the completed downloads "
@@ -1325,14 +1320,9 @@ msgid ""
 msgstr ""
 "Some files of this torrent have been found in the completed downloads "
 "directory. Do you want to import these files and use the completed downloads "
-"directory as the location ?"
+"directory as the location?"
 
 #: ktorrent/fileselectdlg.cpp:205
-#, fuzzy
-#| msgid ""
-#| "Files of the torrent have been found in the completed downloads "
-#| "directory. Do you want to use them, and download to the completed "
-#| "downloads directory?"
 msgid ""
 "All files of this torrent have been found in the completed downloads "
 "directory. Do you want to import these files and use the completed downloads "
@@ -1340,20 +1330,16 @@ msgid ""
 msgstr ""
 "All files of this torrent have been found in the completed downloads "
 "directory. Do you want to import these files and use the completed downloads "
-"directory as the location ?"
+"directory as the location?"
 
 #: ktorrent/fileselectdlg.cpp:209
-#, fuzzy, kde-format
-#| msgid ""
-#| "Files of the torrent have been found in the completed downloads "
-#| "directory. Do you want to use them, and download to the completed "
-#| "downloads directory?"
+#, kde-format
 msgid ""
 "The file <b>%1</b> was found in the completed downloads directory. Do you "
 "want to import this file ?"
 msgstr ""
 "The file <b>%1</b> was found in the completed downloads directory. Do you "
-"want to import this file ?"
+"want to import this file?"
 
 #: ktorrent/fileselectdlg.cpp:226
 #, kde-format
@@ -8003,10 +7989,8 @@ msgid "Failed to open temporary file"
 msgstr "Failed to open temporary file"
 
 #: plugins/webinterface/httpserver.cpp:317
-#, fuzzy
-#| msgid "Web interface skin:"
 msgid "Cannot find webinterface skins!"
-msgstr "Cannot find webinterface skins!"
+msgstr "Cannot find web interface skins."
 
 #: plugins/webinterface/httpserver.cpp:478
 msgid "Unsupported HTTP method"
@@ -8699,12 +8683,12 @@ msgid "Play List"
 msgstr "Play List"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:97
-#: plugins/mediaplayer/videowidget.cpp:57
+#: plugins/mediaplayer/videowidget.cpp:58
 msgid "Play"
 msgstr "Play"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:101
-#: plugins/mediaplayer/videowidget.cpp:58
+#: plugins/mediaplayer/videowidget.cpp:59
 msgid "Pause"
 msgstr "Pause"
 
@@ -8735,11 +8719,11 @@ msgstr "Clear Playlist"
 msgid "Movie player"
 msgstr "Movie player"
 
-#: plugins/mediaplayer/videowidget.cpp:60
+#: plugins/mediaplayer/videowidget.cpp:61
 msgid "Toggle Fullscreen"
 msgstr "Toggle Fullscreen"
 
-#: plugins/mediaplayer/videowidget.cpp:196
+#: plugins/mediaplayer/videowidget.cpp:197
 msgid "KTorrent is playing a video."
 msgstr "KTorrent is playing a video."
 
@@ -9552,7 +9536,7 @@ msgstr " Unable to open torrent file %1 : %2"
 msgid "Parse Error"
 msgstr "Parse Error"
 
-#: libbtcore/torrent/torrentcontrol.cpp:469
+#: libbtcore/torrent/torrentcontrol.cpp:468
 #, kde-format
 msgid ""
 "An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
@@ -9561,7 +9545,7 @@ msgstr ""
 "An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
 "torrent is probably corrupt or is not a valid torrent file."
 
-#: libbtcore/torrent/torrentcontrol.cpp:498
+#: libbtcore/torrent/torrentcontrol.cpp:497
 #, kde-format
 msgid ""
 "An error occurred while loading the torrent:<br/><b>%1</b><br/>The torrent "
@@ -9570,12 +9554,12 @@ msgstr ""
 "An error occurred while loading the torrent:<br/><b>%1</b><br/>The torrent "
 "is probably corrupt or is not a valid torrent file."
 
-#: libbtcore/torrent/torrentcontrol.cpp:508
+#: libbtcore/torrent/torrentcontrol.cpp:507
 #, kde-format
 msgid "Unable to create %1 : %2"
 msgstr "Unable to create %1 : %2"
 
-#: libbtcore/torrent/torrentcontrol.cpp:523
+#: libbtcore/torrent/torrentcontrol.cpp:522
 #, kde-format
 msgid ""
 "You are already downloading this torrent %1, the list of trackers of both "
@@ -9584,7 +9568,7 @@ msgstr ""
 "You are already downloading this torrent %1, the list of trackers of both "
 "torrents has been merged."
 
-#: libbtcore/torrent/torrentcontrol.cpp:527
+#: libbtcore/torrent/torrentcontrol.cpp:526
 #, kde-format
 msgid "You are already downloading the torrent %1"
 msgstr "You are already downloading the torrent %1"
@@ -9647,12 +9631,13 @@ msgstr "Cannot create index file: %1"
 msgid "Redirect without a redirect location"
 msgstr "Redirect without a redirect location"
 
-#: libbtcore/tracker/udptracker.cpp:288 libbtcore/tracker/udptracker.cpp:298
+#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
-msgstr ""
+msgstr "Timeout contacting tracker %1"
 
-#: libbtcore/tracker/udptracker.cpp:320
+#: libbtcore/tracker/udptracker.cpp:330
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "Unable to resolve hostname %1"
@@ -9662,16 +9647,16 @@ msgstr "Unable to resolve hostname %1"
 msgid "Cannot bind to udp port %1 or the 10 following ports."
 msgstr "Cannot bind to udp port %1 or the 10 following ports."
 
-#: libbtcore/tracker/httptracker.cpp:270 libbtcore/tracker/httptracker.cpp:290
-#: libbtcore/tracker/httptracker.cpp:330 libbtcore/tracker/httptracker.cpp:444
+#: libbtcore/tracker/httptracker.cpp:282 libbtcore/tracker/httptracker.cpp:302
+#: libbtcore/tracker/httptracker.cpp:342 libbtcore/tracker/httptracker.cpp:461
 msgid "Invalid response from tracker"
 msgstr "Invalid response from tracker"
 
-#: libbtcore/tracker/httptracker.cpp:283
+#: libbtcore/tracker/httptracker.cpp:295
 msgid "Invalid data from tracker"
 msgstr "Invalid data from tracker"
 
-#: libbtcore/tracker/httptracker.cpp:461
+#: libbtcore/tracker/httptracker.cpp:478
 msgid "Invalid tracker URL"
 msgstr "Invalid tracker URL"
 

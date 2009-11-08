@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-10-22 01:31+0200\n"
+"POT-Creation-Date: 2009-11-03 01:30+0100\n"
 "PO-Revision-Date: 2009-08-25 20:11+0200\n"
 "Last-Translator: Eirik U. Birkeland <eirbir@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
@@ -420,7 +420,7 @@ msgstr "Start alle dei valde torrentane i den gjeldande fana"
 
 #: ktorrent/viewmanager.cpp:539
 #: plugins/mediaplayer/mediaplayeractivity.cpp:105
-#: plugins/mediaplayer/videowidget.cpp:59
+#: plugins/mediaplayer/videowidget.cpp:60
 msgid "Stop"
 msgstr "Stopp"
 
@@ -8726,12 +8726,12 @@ msgid "Play List"
 msgstr "Speleliste"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:97
-#: plugins/mediaplayer/videowidget.cpp:57
+#: plugins/mediaplayer/videowidget.cpp:58
 msgid "Play"
 msgstr "Spel"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:101
-#: plugins/mediaplayer/videowidget.cpp:58
+#: plugins/mediaplayer/videowidget.cpp:59
 msgid "Pause"
 msgstr "Pause"
 
@@ -8762,11 +8762,11 @@ msgstr "Tøm speleliste"
 msgid "Movie player"
 msgstr "Mediespelar"
 
-#: plugins/mediaplayer/videowidget.cpp:60
+#: plugins/mediaplayer/videowidget.cpp:61
 msgid "Toggle Fullscreen"
 msgstr "Slå av/på fullskjerm"
 
-#: plugins/mediaplayer/videowidget.cpp:196
+#: plugins/mediaplayer/videowidget.cpp:197
 msgid "KTorrent is playing a video."
 msgstr "KTorrent spelar ein film."
 
@@ -9583,7 +9583,7 @@ msgstr " Klarte ikkje opna torrentfila «%1»: %2"
 msgid "Parse Error"
 msgstr "Tolkingsfeil"
 
-#: libbtcore/torrent/torrentcontrol.cpp:469
+#: libbtcore/torrent/torrentcontrol.cpp:468
 #, kde-format
 msgid ""
 "An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
@@ -9592,7 +9592,7 @@ msgstr ""
 "Det oppstod ein feil under opninga av torrenten <b>%1</b>:<br/><b>%2</b><br/"
 ">Torrenten er truleg øydelagd eller ugyldig."
 
-#: libbtcore/torrent/torrentcontrol.cpp:498
+#: libbtcore/torrent/torrentcontrol.cpp:497
 #, kde-format
 msgid ""
 "An error occurred while loading the torrent:<br/><b>%1</b><br/>The torrent "
@@ -9601,12 +9601,12 @@ msgstr ""
 "Det oppstod ein feil under opninga av torrenten:<br/><b>%1</b><br/>Torrenten "
 "er truleg øydelagd eller ugyldig."
 
-#: libbtcore/torrent/torrentcontrol.cpp:508
+#: libbtcore/torrent/torrentcontrol.cpp:507
 #, kde-format
 msgid "Unable to create %1 : %2"
 msgstr "Klarte ikkje laga «%1»: %2"
 
-#: libbtcore/torrent/torrentcontrol.cpp:523
+#: libbtcore/torrent/torrentcontrol.cpp:522
 #, kde-format
 msgid ""
 "You are already downloading this torrent %1, the list of trackers of both "
@@ -9615,7 +9615,7 @@ msgstr ""
 "Du held allereie på å lasta ned torrenten «%1», og listene over "
 "deltakarsentralane i begge torrentane er slått saman."
 
-#: libbtcore/torrent/torrentcontrol.cpp:527
+#: libbtcore/torrent/torrentcontrol.cpp:526
 #, kde-format
 msgid "You are already downloading the torrent %1"
 msgstr "Du held allereie på å lasta ned torrenten «%1»"
@@ -9678,12 +9678,13 @@ msgstr "Klarte ikkje laga indeksfil: %1"
 msgid "Redirect without a redirect location"
 msgstr ""
 
-#: libbtcore/tracker/udptracker.cpp:288 libbtcore/tracker/udptracker.cpp:298
+#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/httptracker.cpp:558
 #, kde-format
 msgid "Timeout contacting tracker %1"
 msgstr ""
 
-#: libbtcore/tracker/udptracker.cpp:320
+#: libbtcore/tracker/udptracker.cpp:330
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "Klarte ikkje gjera namneoppslag på vertsnamnet «%1»"
@@ -9693,16 +9694,16 @@ msgstr "Klarte ikkje gjera namneoppslag på vertsnamnet «%1»"
 msgid "Cannot bind to udp port %1 or the 10 following ports."
 msgstr "Klarte ikkje binda til UDP-porten %1 og dei ti neste portane."
 
-#: libbtcore/tracker/httptracker.cpp:270 libbtcore/tracker/httptracker.cpp:290
-#: libbtcore/tracker/httptracker.cpp:330 libbtcore/tracker/httptracker.cpp:444
+#: libbtcore/tracker/httptracker.cpp:281 libbtcore/tracker/httptracker.cpp:301
+#: libbtcore/tracker/httptracker.cpp:341 libbtcore/tracker/httptracker.cpp:460
 msgid "Invalid response from tracker"
 msgstr "Ugyldig svar frå deltakarsentralen"
 
-#: libbtcore/tracker/httptracker.cpp:283
+#: libbtcore/tracker/httptracker.cpp:294
 msgid "Invalid data from tracker"
 msgstr "Ugyldig data frå deltakarsentralen"
 
-#: libbtcore/tracker/httptracker.cpp:461
+#: libbtcore/tracker/httptracker.cpp:477
 msgid "Invalid tracker URL"
 msgstr "Ugyldig nettadresse til deltakarsentral"
 

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-10-22 01:31+0200\n"
-"PO-Revision-Date: 2009-03-12 20:00+0900\n"
+"POT-Creation-Date: 2009-11-08 01:29+0100\n"
+"PO-Revision-Date: 2009-10-31 23:24+0900\n"
 "Last-Translator: Yukiko Bando <ybando@k6.dion.ne.jp>\n"
 "Language-Team: Japanese <Kdeveloper@kde.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -70,8 +70,6 @@ msgid "BitTorrent"
 msgstr "BitTorrent"
 
 #: ktorrent/btpref.cpp:31
-#, fuzzy
-#| msgid " corrupted chunks"
 msgid " corrupted chunk"
 msgid_plural " corrupted chunks"
 msgstr[0] " ピース"
@@ -94,14 +92,11 @@ msgid "Importing <b>%1</b> ..."
 msgstr "<b>%1</b> をインポート中..."
 
 #: ktorrent/torrentmigratordlg.cpp:110
-#, fuzzy
-#| msgid "Finished import !"
 msgid "Finished import."
-msgstr "インポート完了"
+msgstr "インポート完了。"
 
 #: ktorrent/torrentmigratordlg.cpp:145
-#, fuzzy, kde-format
-#| msgid "Torrent <b>%1</b> already loaded !"
+#, kde-format
 msgid "Torrent <b>%1</b> already loaded."
 msgstr "torrent <b>%1</b> は既にロードされています。"
 
@@ -422,7 +417,7 @@ msgstr "現在のタブで選択したすべての torrent を開始します"
 
 #: ktorrent/viewmanager.cpp:539
 #: plugins/mediaplayer/mediaplayeractivity.cpp:105
-#: plugins/mediaplayer/videowidget.cpp:59
+#: plugins/mediaplayer/videowidget.cpp:60
 msgid "Stop"
 msgstr "停止"
 
@@ -563,10 +558,8 @@ msgid "Copy Torrent URL"
 msgstr "torrent の URL をコピー"
 
 #: ktorrent/viewmanager.cpp:645
-#, fuzzy
-#| msgid "Import Torrent"
 msgid "Export Torrent"
-msgstr "torrent をインポート"
+msgstr "torrent をエクスポート"
 
 #. i18n: file: ktorrent/speedlimitsdlg.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpeedLimitsDlg)
@@ -579,20 +572,16 @@ msgid "Set the speed limits of individual torrents"
 msgstr "torrent ごとに速度制限を設定します"
 
 #: ktorrent/viewmanager.cpp:739
-#, fuzzy
-#| msgid "Torrent Files (*.torrent)"
 msgid "Torrents (*.torrent)"
-msgstr "torrent ファイル (*.torrent)"
+msgstr "torrent (*.torrent)"
 
 #: ktorrent/ipfilterlist.cpp:95
-#, fuzzy, kde-format
-#| msgid "Invalid IP address %1 !"
+#, kde-format
 msgid "Invalid IP address %1"
 msgstr "無効な IP アドレス %1"
 
 #: ktorrent/ipfilterlist.cpp:100
-#, fuzzy, kde-format
-#| msgid "Duplicate IP address %1 !"
+#, kde-format
 msgid "Duplicate IP address %1"
 msgstr "重複した IP アドレス %1"
 
@@ -939,11 +928,11 @@ msgstr "プラグインのリストを整理するパッチ"
 
 #: ktorrent/main.cpp:132
 msgid "Amichai Rothman"
-msgstr ""
+msgstr "Amichai Rothman"
 
 #: ktorrent/main.cpp:132
 msgid "Patch to make the plasma applet a popup applet"
-msgstr ""
+msgstr "Plasma アプレットをポップアップアプレットにするパッチ"
 
 #: ktorrent/main.cpp:136
 msgid "Document to open"
@@ -963,10 +952,6 @@ msgid "Select the directory where the data now is."
 msgstr "現在データが保存されているフォルダを選択します。"
 
 #: ktorrent/missingfilesdlg.cpp:83
-#, fuzzy
-#| msgid ""
-#| "The data files are not present in the location you selected! Do you want "
-#| "to create all the files in the selected directory ?"
 msgid ""
 "The data files are not present in the location you selected. Do you want to "
 "create all the files in the selected directory?"
@@ -975,10 +960,6 @@ msgstr ""
 "ファイルを作成しますか？"
 
 #: ktorrent/missingfilesdlg.cpp:85
-#, fuzzy
-#| msgid ""
-#| "Not all files were found in the new location; some are still missing! Do "
-#| "you want to create the missing files in the selected directory ?"
 msgid ""
 "Not all files were found in the new location; some are still missing. Do you "
 "want to create the missing files in the selected directory?"
@@ -987,10 +968,6 @@ msgstr ""
 "ファイルを作成しますか？"
 
 #: ktorrent/missingfilesdlg.cpp:114
-#, fuzzy
-#| msgid ""
-#| "The data file is not present in the location you selected! Do you want to "
-#| "create the file in the selected directory ?"
 msgid ""
 "The data file is not present in the location you selected. Do you want to "
 "create the file in the selected directory?"
@@ -1013,8 +990,6 @@ msgid "Invalid url %1"
 msgstr "無効な URL %1"
 
 #: ktorrent/torrentcreatordlg.cpp:252
-#, fuzzy
-#| msgid "Only HTTP is supported for webseeding!"
 msgid "Only HTTP is supported for webseeding."
 msgstr "ウェブシードには HTTP しか使えません。"
 
@@ -1257,24 +1232,18 @@ msgid "Cannot recreate data file: %1"
 msgstr "データファイルを作成し直せません: %1"
 
 #: ktorrent/core.cpp:1182
-#, fuzzy, kde-format
-#| msgid ""
-#| "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
-#| "want to import them ?"
+#, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
 "to import it?"
 msgid_plural ""
 "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
 "want to import them?"
-msgstr[0] ""
-"KDE3 バージョンの torrent が %1 個見つかりました。インポートしますか？"
+msgstr[0] "KDE3 バージョンの torrent が見つかりました。インポートしますか？"
 msgstr[1] ""
 "KDE3 バージョンの torrent が %1 個見つかりました。インポートしますか？"
 
 #: ktorrent/core.cpp:1204
-#, fuzzy
-#| msgid "No torrents from the KDE3 version were found !"
 msgid "No torrents from the KDE3 version were found."
 msgstr "KDE3 バージョンの torrent は見つかりませんでした。"
 
@@ -1315,23 +1284,17 @@ msgstr "詳細"
 
 #: ktorrent/scanextender.cpp:40 ktorrent/scanextender.cpp:89
 msgid "Checked %v of %m chunks"
-msgstr ""
+msgstr "%v / %m 個のピースをチェック"
 
 #: ktorrent/fileselectdlg.cpp:75
-#, fuzzy
-#| msgid "Shows all the files in a torrent"
 msgid "Show a file tree"
-msgstr "torrent 中のすべてのファイルを表示します"
+msgstr "ファイルツリーを表示"
 
 #: ktorrent/fileselectdlg.cpp:78
-#, fuzzy
-#| msgid "Choose a file"
 msgid "Show a file list"
-msgstr "ファイルを選択"
+msgstr "ファイル一覧を表示"
 
 #: ktorrent/fileselectdlg.cpp:87 plugins/infowidget/fileview.cpp:70
-#, fuzzy
-#| msgid "Filters"
 msgid "Filter"
 msgstr "フィルタ"
 
@@ -1341,57 +1304,40 @@ msgid "Opening %1"
 msgstr "<filename>%1</filename> を開く"
 
 #: ktorrent/fileselectdlg.cpp:202
-#, fuzzy
-#| msgid ""
-#| "Files of the torrent have been found in the completed downloads "
-#| "directory. Do you want to use them, and download to the completed "
-#| "downloads directory ?"
 msgid ""
 "Some files of this torrent have been found in the completed downloads "
 "directory. Do you want to import these files and use the completed downloads "
 "directory as the location ?"
 msgstr ""
-"torrent のファイルが完了したダウンロード用のフォルダに見つかりました。それら"
-"のファイルを使って完了したダウンロード用のフォルダにダウンロードしますか？"
+"この torrent のいくつかのファイルが完了したダウンロード用のフォルダに見つかり"
+"ました。それらのファイルをインポートし、完了したダウンロード用のフォルダを場"
+"所として使いますか？"
 
 #: ktorrent/fileselectdlg.cpp:205
-#, fuzzy
-#| msgid ""
-#| "Files of the torrent have been found in the completed downloads "
-#| "directory. Do you want to use them, and download to the completed "
-#| "downloads directory ?"
 msgid ""
 "All files of this torrent have been found in the completed downloads "
 "directory. Do you want to import these files and use the completed downloads "
 "directory as the location ?"
 msgstr ""
-"torrent のファイルが完了したダウンロード用のフォルダに見つかりました。それら"
-"のファイルを使って完了したダウンロード用のフォルダにダウンロードしますか？"
+"この torrent のすべてのファイルが完了したダウンロード用のフォルダに見つかりま"
+"した。それらのファイルをインポートし、完了したダウンロード用のフォルダを場所"
+"として使いますか？"
 
 #: ktorrent/fileselectdlg.cpp:209
-#, fuzzy, kde-format
-#| msgid ""
-#| "Files of the torrent have been found in the completed downloads "
-#| "directory. Do you want to use them, and download to the completed "
-#| "downloads directory ?"
+#, kde-format
 msgid ""
 "The file <b>%1</b> was found in the completed downloads directory. Do you "
 "want to import this file ?"
 msgstr ""
-"torrent のファイルが完了したダウンロード用のフォルダに見つかりました。それら"
-"のファイルを使って完了したダウンロード用のフォルダにダウンロードしますか？"
+"ファイル <filename>%1</filename> が完了したダウンロード用のフォルダに見つかり"
+"ました。このファイルをインポートしますか？"
 
 #: ktorrent/fileselectdlg.cpp:226
-#, fuzzy, kde-format
-#| msgid "The directory %1 does not exist, do you want to create it ?"
+#, kde-format
 msgid "The directory %1 does not exist, do you want to create it?"
 msgstr "フォルダ <filename>%1</filename> は存在しません。作成しますか？"
 
 #: ktorrent/fileselectdlg.cpp:259
-#, fuzzy
-#| msgid ""
-#| "You have deselected the following existing files. You will lose all data "
-#| "in these files, are you sure you want to do this ?"
 msgid ""
 "You have deselected the following existing files. You will lose all data in "
 "these files, are you sure you want to do this?"
@@ -1408,42 +1354,31 @@ msgid "No, keep the files"
 msgstr "いいえ、ファイルを保持します"
 
 #: ktorrent/fileselectdlg.cpp:423
-#, fuzzy, kde-format
-#| msgid "%1 short!"
+#, kde-format
 msgctxt "We are %1 bytes short of what we need"
 msgid "%1 short"
-msgstr "%1 不足!"
+msgstr "%1 不足"
 
 #: ktorrent/fileselectdlg.cpp:442
-#, fuzzy
-#| msgid "Title: <b>%1</b>"
 msgid "Existing files: <b>None</b>"
-msgstr "タイトル: %1"
+msgstr "既存のファイル: なし"
 
 #: ktorrent/fileselectdlg.cpp:444
-#, fuzzy
-#| msgid "Title: <b>%1</b>"
 msgid "Existing files: <b>All</b>"
-msgstr "タイトル: %1"
+msgstr "既存のファイル: すべて"
 
-# dummy markup
 #: ktorrent/fileselectdlg.cpp:446
-#, fuzzy, kde-format
-#| msgid "Title: <b>%1</b><br/>Artist: <b>%2</b>"
+#, kde-format
 msgid "Existing files: <b>%1</b> of <b>%2</b>"
-msgstr "<i></i>タイトル: %1<br/>アーティスト: %2"
+msgstr "既存のファイル: %1 / %2"
 
 #: ktorrent/fileselectdlg.cpp:452
-#, fuzzy
-#| msgid "Title: <b>%1</b>"
 msgid "Existing file: <b>No</b>"
-msgstr "タイトル: %1"
+msgstr "既存のファイル: いいえ"
 
 #: ktorrent/fileselectdlg.cpp:454
-#, fuzzy
-#| msgid "Title: <b>%1</b>"
 msgid "Existing file: <b>Yes</b>"
-msgstr "タイトル: %1"
+msgstr "既存のファイル: はい"
 
 #: ktorrent/gui.cpp:229 ktorrent/gui.cpp:244
 msgid "Torrent Files"
@@ -1499,8 +1434,6 @@ msgid "Open URL"
 msgstr "URL を開く"
 
 #: ktorrent/gui.cpp:404
-#, fuzzy
-#| msgid "Open an URL which points to a torrent"
 msgid "Open a URL which points to a torrent"
 msgstr "torrent の URL を開きます"
 
@@ -1552,11 +1485,11 @@ msgstr "KTorrent を表示/隠す"
 
 #: ktorrent/gui.cpp:446
 msgid "Group View Visible"
-msgstr ""
+msgstr "グループビューの表示"
 
 #: ktorrent/gui.cpp:447
 msgid "Show or hide the group view"
-msgstr ""
+msgstr "グループビューを表示/隠す"
 
 #: ktorrent/proxypref.cpp:27
 msgid "Proxy"
@@ -1842,20 +1775,14 @@ msgid "Bottom"
 msgstr "下"
 
 #: libktcore/dbus/dbustorrent.cpp:316
-#, fuzzy
-#| msgid "Maximum share ratio reached !"
 msgid "Maximum share ratio reached."
 msgstr "最大負担率に達しました。"
 
 #: libktcore/dbus/dbustorrent.cpp:319
-#, fuzzy
-#| msgid "Maximum seed time reached !"
 msgid "Maximum seed time reached."
 msgstr "最長シード時間に達しました。"
 
 #: libktcore/util/mmapfile.cpp:164
-#, fuzzy
-#| msgid "Cannot write beyond end of the mmap buffer!"
 msgid "Cannot write beyond end of the mmap buffer."
 msgstr "mmap バッファの終端を越えて書き込むことはできません。"
 
@@ -1934,10 +1861,7 @@ msgid "Insufficient disk space for %1"
 msgstr "<resource>%1</resource> に必要なディスク領域がありません"
 
 #: libktcore/torrent/queuemanager.cpp:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "The torrent \"%1\" has reached it's maximum share ratio and it's maximum "
-#| "seed time. Ignore the limit and start seeding anyway?"
+#, kde-format
 msgid ""
 "The torrent \"%1\" has reached its maximum share ratio and its maximum seed "
 "time. Ignore the limit and start seeding anyway?"
@@ -1946,10 +1870,7 @@ msgstr ""
 "限を無視してシードを開始しますか？"
 
 #: libktcore/torrent/queuemanager.cpp:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "The torrent \"%1\" has reached it's maximum share ratio. Ignore the limit "
-#| "and start seeding anyway?"
+#, kde-format
 msgid ""
 "The torrent \"%1\" has reached its maximum share ratio. Ignore the limit and "
 "start seeding anyway?"
@@ -1958,10 +1879,7 @@ msgstr ""
 "ドを開始しますか？"
 
 #: libktcore/torrent/queuemanager.cpp:130
-#, fuzzy, kde-format
-#| msgid ""
-#| "The torrent \"%1\" has reached it's maximum seed time. Ignore the limit "
-#| "and start seeding anyway?"
+#, kde-format
 msgid ""
 "The torrent \"%1\" has reached its maximum seed time. Ignore the limit and "
 "start seeding anyway?"
@@ -2023,10 +1941,8 @@ msgid "Plugins"
 msgstr "プラグイン"
 
 #: libktupnp/httprequest.cpp:80
-#, fuzzy
-#| msgid "Connection closed unexpectedly !"
 msgid "Connection closed unexpectedly."
-msgstr "接続が突然閉じられました"
+msgstr "接続が突然閉じられました。"
 
 #: libktupnp/httprequest.cpp:120
 msgid "Timeout occurred"
@@ -2038,16 +1954,10 @@ msgid "Failed to download %1 : %2"
 msgstr "%1 のダウンロードに失敗しました: %2"
 
 #: libktupnp/upnprouter.cpp:152
-#, fuzzy
-#| msgid "Error parsing router description !"
 msgid "Error parsing router description."
-msgstr "ルータの説明の解析でエラーが発生しました"
+msgstr "ルータの説明の解析でエラーが発生しました。"
 
 #: libktupnp/upnprouter.cpp:276
-#, fuzzy
-#| msgid ""
-#| "Forwarding failed: \n"
-#| "Device does not have a WANIPConnection or WANPPPConnection !"
 msgid ""
 "Forwarding failed: \n"
 "Device does not have a WANIPConnection or WANPPPConnection."
@@ -2056,8 +1966,6 @@ msgstr ""
 "デバイスに WANIPConnection または WANPPPConnection がありません。"
 
 #: libktupnp/upnprouter.cpp:434 libktupnp/upnprouter.cpp:447
-#, fuzzy
-#| msgid "Cannot find port forwarding service in the device's description!"
 msgid "Cannot find port forwarding service in the device's description."
 msgstr "デバイスの説明にポートフォワーディングサービスが見つかりません。"
 
@@ -2080,12 +1988,7 @@ msgid "Applet"
 msgstr "アプレット"
 
 #: plasma/applet/applet.cpp:298 plasma/applet/applet.cpp:363
-#, fuzzy, kde-format
-#| msgid ""
-#| "<table>\t\t\t\t<tr><td>Download Speed:</td><td>%5 </td><td>Seeders: </"
-#| "td><td>%1 (%2)</td></tr>\t\t\t\t<tr><td>Upload Speed:</td><td>%6 </"
-#| "td><td>Leechers: </td><td>%3 (%4)</td></tr>\t\t\t\t<tr><td>Downloaded:</"
-#| "td><td>%7 / %8 </td><td>Uploaded: </td><td>%9</td></tr>\t\t\t\t</table>"
+#, kde-format
 msgid ""
 "<table>\t\t\t\t<tr><td>Download Speed:</td><td>%5 </td><td>Seeders: </td><td>"
 "%1 (%2)</td></tr>\t\t\t\t<tr><td>Upload Speed:</td><td>%6 </td><td>Leechers: "
@@ -2093,27 +1996,18 @@ msgid ""
 msgstr ""
 "<table>\t\t\t\t<tr><td>ダウンロード速度:</td><td>%5 </td><td>シーダー: </"
 "td><td>%1 (%2)</td></tr>\t\t\t\t<tr><td>アップロード速度:</td><td>%6 </"
-"td><td>リーチャー: </td><td>%3 (%4)</td></tr>\t\t\t\t<tr><td>ダウンロード済"
-"み:</td><td>%7 / %8 </td><td>アップロード済み: </td><td>%9</td></tr>\t\t\t"
-"\t</table>"
+"td><td>リーチャー: </td><td>%3 (%4)</td></tr>"
 
 #: plasma/applet/applet.cpp:303 plasma/applet/applet.cpp:368
-#, fuzzy, kde-format
-#| msgid ""
-#| "<table>\t\t\t\t<tr><td>Download Speed:</td><td>%5 </td><td>Seeders: </"
-#| "td><td>%1 (%2)</td></tr>\t\t\t\t<tr><td>Upload Speed:</td><td>%6 </"
-#| "td><td>Leechers: </td><td>%3 (%4)</td></tr>\t\t\t\t<tr><td>Downloaded:</"
-#| "td><td>%7 / %8 </td><td>Uploaded: </td><td>%9</td></tr>\t\t\t\t</table>"
+#, kde-format
 msgid ""
 "<tr><td>Downloaded:</td><td>%1 </td><td>Size: </td><td>%2</td></tr>\t\t\t"
 "\t<tr><td>Uploaded:</td><td>%3 </td><td>Complete: </td><td>%4 %</td></tr>\t\t"
 "\t\t</table>"
 msgstr ""
-"<table>\t\t\t\t<tr><td>ダウンロード速度:</td><td>%5 </td><td>シーダー: </"
-"td><td>%1 (%2)</td></tr>\t\t\t\t<tr><td>アップロード速度:</td><td>%6 </"
-"td><td>リーチャー: </td><td>%3 (%4)</td></tr>\t\t\t\t<tr><td>ダウンロード済"
-"み:</td><td>%7 / %8 </td><td>アップロード済み: </td><td>%9</td></tr>\t\t\t"
-"\t</table>"
+"<tr><td>ダウンロード済み:</td><td>%1 </td><td>サイズ: </td><td>%2</td></tr>\t"
+"\t\t\t<tr><td>アップロード済み:</td><td>%3 </td><td>完了: </td><td>%4%</td></"
+"tr>\t\t\t\t</table>"
 
 #: plasma/applet/applet.cpp:309
 #, kde-format
@@ -2121,20 +2015,16 @@ msgid "<b>%1</b><br/>%2 (Share Ratio: <font color=\"%4\">%3</font>)"
 msgstr "<b>%1</b><br/>%2 (負担率: <font color=\"%4\">%3</font>)"
 
 #: plasma/applet/applet.cpp:374
-#, fuzzy
-#| msgid "KTorrent is not running !"
 msgid "KTorrent is not running."
-msgstr "KTorrent が起動していません"
+msgstr "KTorrent が起動していません。"
 
 #: plasma/applet/applet.cpp:376
-#, fuzzy
-#| msgid "No torrents loaded !"
 msgid "No torrents loaded."
-msgstr "torrent がロードされていません"
+msgstr "torrent がロードされていません。"
 
 #: plasma/applet/applet.cpp:378
 msgid "Selected torrent is unavailable."
-msgstr ""
+msgstr "選択された torrent は利用できません。"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -2548,10 +2438,8 @@ msgstr "ダウンロード先:"
 #. i18n: file: ktorrent/fileselectdlg.ui:49
 #. i18n: ectx: property (text), widget (QToolButton, m_list)
 #: rc.cpp:149 rc.cpp:152
-#, fuzzy
-#| msgid "Open..."
 msgid "..."
-msgstr "開く..."
+msgstr "..."
 
 #. i18n: file: ktorrent/fileselectdlg.ui:59
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -2600,10 +2488,8 @@ msgstr "すべて展開"
 #. i18n: file: ktorrent/fileselectdlg.ui:147
 #. i18n: ectx: property (text), widget (QLabel, m_existing_found)
 #: rc.cpp:176
-#, fuzzy
-#| msgid "Skip data check if existing files are found"
 msgid "No existing files are found"
-msgstr "既存のファイルが見つかった場合はデータチェックを省略する"
+msgstr "既存のファイルは見つかりません"
 
 #. i18n: file: ktorrent/fileselectdlg.ui:156
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
@@ -2644,24 +2530,6 @@ msgstr "torrent を開始"
 #. i18n: file: ktorrent/fileselectdlg.ui:222
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_skip_data_check)
 #: rc.cpp:188
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">When existing files "
-#| "have been found, skip the data check and assume that the files are fully "
-#| "downloaded.</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">Note: </span>only do this when you are absolutely sure !</"
-#| "p></body></html>"
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -2693,26 +2561,20 @@ msgstr "既存のファイルが見つかった場合はデータチェックを
 #. i18n: file: ktorrent/fileselectdlg.ui:235
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
 #: rc.cpp:199
-#, fuzzy
-#| msgid "Disk space"
 msgid "Disk Space"
 msgstr "ディスク領域"
 
 #. i18n: file: ktorrent/fileselectdlg.ui:243
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: rc.cpp:202
-#, fuzzy
-#| msgid "Required disk space:"
 msgid "Required:"
-msgstr "必要なディスク領域:"
+msgstr "必要:"
 
 #. i18n: file: ktorrent/fileselectdlg.ui:253
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
 #: rc.cpp:205
-#, fuzzy
-#| msgid "Available"
 msgid "Available:"
-msgstr "利用可能"
+msgstr "利用可能:"
 
 #. i18n: file: ktorrent/fileselectdlg.ui:263
 #. i18n: ectx: property (text), widget (QLabel, textLabel6)
@@ -3103,8 +2965,6 @@ msgstr ""
 #. i18n: file: ktorrent/btpref.ui:189
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useMaxSizeForUploadDataCheck)
 #: rc.cpp:362
-#, fuzzy
-#| msgid "Don't recheck when chunks are bigger than"
 msgid "Do not recheck when chunks are bigger than"
 msgstr "次より大きいピースは再チェックしない"
 
@@ -3684,10 +3544,8 @@ msgstr "ファイル(&F)"
 #. i18n: file: ktorrent/ktorrentui.rc:16
 #. i18n: ectx: Menu (view)
 #: rc.cpp:610
-#, fuzzy
-#| msgid "ViewMenu"
 msgid "&View"
-msgstr "表示メニュー"
+msgstr "表示(&V)"
 
 #. i18n: file: ktorrent/ktorrentui.rc:36
 #. i18n: ectx: Menu (GroupsMenu)
@@ -3869,8 +3727,6 @@ msgstr " 分"
 #. i18n: file: ktorrent/qmpref.ui:193
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: rc.cpp:715
-#, fuzzy
-#| msgid "Seeding"
 msgctxt "@title:group Options regarging Seeding"
 msgid "Seeding"
 msgstr "シード"
@@ -3904,10 +3760,8 @@ msgstr ""
 #. i18n: file: ktorrent/qmpref.ui:232
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: rc.cpp:730
-#, fuzzy
-#| msgid "Maximum share ratio:"
 msgid "Default maximum share ratio:"
-msgstr "最大負担率:"
+msgstr "デフォルトの最大負担率:"
 
 #. i18n: file: ktorrent/qmpref.ui:245
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_maxRatio)
@@ -3941,10 +3795,8 @@ msgstr ""
 #. i18n: file: ktorrent/qmpref.ui:261
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: rc.cpp:745
-#, fuzzy
-#| msgid "Maximum seed time:"
 msgid "Default maximum seed time:"
-msgstr "最長シード時間:"
+msgstr "デフォルトの最長シード時間:"
 
 #. i18n: file: ktorrent/qmpref.ui:268
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_maxSeedTime)
@@ -4061,23 +3913,19 @@ msgstr "<html>キャンセルします。torrent を開始しません。</html>
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: rc.cpp:805
 msgid "Found:"
-msgstr ""
+msgstr "発見:"
 
 #. i18n: file: ktorrent/scanextender.ui:69
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
 #: rc.cpp:817
-#, fuzzy
-#| msgid "File"
 msgid "Failed:"
-msgstr "ファイル"
+msgstr "失敗:"
 
 #. i18n: file: ktorrent/scanextender.ui:114
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: rc.cpp:829
-#, fuzzy
-#| msgid "Downloaded:"
 msgid "Not downloaded:"
-msgstr "ダウンロード済み:"
+msgstr "未ダウンロード:"
 
 #. i18n: file: ktorrent/scanextender.ui:162
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -4094,24 +3942,20 @@ msgstr "ダウンロード済み:"
 #. i18n: file: ktorrent/speedlimitsdlg.ui:23
 #. i18n: ectx: property (text), widget (QLabel, m_main_caption)
 #: rc.cpp:862
-#, fuzzy
-#| msgid "Speed limits for all torrents (double click to edit):"
 msgid "Speed limits for individual torrents (double click to edit):"
-msgstr "すべての torrent の速度制限 (ダブルクリックで編集):"
+msgstr "個々の torrent の速度制限 (ダブルクリックで編集):"
 
 #. i18n: file: ktorrent/speedlimitsdlg.ui:35
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: rc.cpp:865
-#, fuzzy
-#| msgid "Filters"
 msgid "Filter:"
-msgstr "フィルタ"
+msgstr "フィルタ:"
 
 #. i18n: file: ktorrent/speedlimitsdlg.ui:64
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: rc.cpp:868
 msgid "Global Limits"
-msgstr "グローバル制限"
+msgstr "全体の制限"
 
 #. i18n: file: ktorrent/ipfilterwidget.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, IPFilterWidget)
@@ -4550,25 +4394,6 @@ msgstr "ネットワークインターフェース:"
 #. i18n: file: ktorrent/networkpref.ui:246
 #. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_networkInterface)
 #: rc.cpp:1119
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Which network interface "
-#| "to use for all network traffic.</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
-#| "font-family:'OpenSymbol';\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; font-family:'OpenSymbol';"
-#| "\"><span style=\" font-weight:600;\">Note: </span>Requires a restart to "
-#| "take effect !</p></body></html>"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -4862,10 +4687,8 @@ msgstr ""
 #. i18n: file: ktorrent/advancedpref.ui:276
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useQHttpAnnounce)
 #: rc.cpp:1244
-#, fuzzy
-#| msgid "Use proxy for tracker connections"
 msgid "Do not use KIO for tracker announces"
-msgstr "トラッカー接続にプロキシを使う"
+msgstr "トラッカーのアナウンスに KIO を使わない"
 
 #. i18n: file: ktorrent/advancedpref.ui:285
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_lookUpHostnameOfPeers)
@@ -4877,28 +4700,28 @@ msgid ""
 "It can be disabled if you do not like the additional network traffic it "
 "generates"
 msgstr ""
+"ピアのホスト名を解決し、IP アドレスの代わりにホスト名を表示します。\n"
+"\n"
+"これによってネットワークトラフィックを増やしたくない場合は、このオプションを"
+"無効にしてください。"
 
 #. i18n: file: ktorrent/advancedpref.ui:288
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_lookUpHostnameOfPeers)
 #: rc.cpp:1252
-#, fuzzy
-#| msgid "Resolving hostname %1"
 msgid "Resolve hostnames of peers"
-msgstr "ホスト名 %1 を解決"
+msgstr "ピアのホスト名を解決する"
 
 #. i18n: file: libktcore/ktorrent.kcfg:10
 #. i18n: ectx: label, entry (maxDownloads), group (downloads)
 #: rc.cpp:1255
-#, fuzzy
-#| msgid "Maximum number of connection setups:"
 msgid "Maximum number of downloads (0 = no limit)"
-msgstr "最大接続数の設定:"
+msgstr "ダウンロードの最大数 (0 = 無制限)"
 
 #. i18n: file: libktcore/ktorrent.kcfg:15
 #. i18n: ectx: label, entry (maxSeeds), group (downloads)
 #: rc.cpp:1258
 msgid "Maximum number of seeds (0 = no limit)"
-msgstr ""
+msgstr "シードの最大数 (0 = 無制限)"
 
 #. i18n: file: libktcore/ktorrent.kcfg:20
 #. i18n: ectx: label, entry (startDownloadsOnLowDiskSpace), group (downloads)
@@ -4909,72 +4732,56 @@ msgstr ""
 #. i18n: file: libktcore/ktorrent.kcfg:25
 #. i18n: ectx: label, entry (maxConnections), group (downloads)
 #: rc.cpp:1264
-#, fuzzy
-#| msgid "The maximum number of connections allowed per torrent."
 msgid "Maximum number of connections per torrent (0 = no limit)"
-msgstr "torrent ごとに許可する最大接続数"
+msgstr "torrent ごとに許可する最大接続数 (0 = 無制限)"
 
 #. i18n: file: libktcore/ktorrent.kcfg:30
 #. i18n: ectx: label, entry (maxTotalConnections), group (downloads)
 #: rc.cpp:1267
-#, fuzzy
-#| msgid "The maximum number of connections allowed per torrent."
 msgid "Maximum number of connections for all torrents (0 = no limit) "
-msgstr "torrent ごとに許可する最大接続数"
+msgstr "torrent 全体に許可する最大接続数 (0 = 無制限)"
 
 #. i18n: file: libktcore/ktorrent.kcfg:35
 #. i18n: ectx: label, entry (maxUploadRate), group (downloads)
 #: rc.cpp:1270
-#, fuzzy
-#| msgid "The maximum upload speed in KiB/s"
 msgid "Maximum upload speed in KiB/sec (0 = no limit)"
-msgstr "アップロードの最大速度 (KiB/秒)"
+msgstr "アップロードの最大速度 (KiB/秒, 0 = 無制限)"
 
 #. i18n: file: libktcore/ktorrent.kcfg:40
 #. i18n: ectx: label, entry (maxDownloadRate), group (downloads)
 #: rc.cpp:1273
-#, fuzzy
-#| msgid "The maximum download speed in KiB/s."
 msgid "Maximum download speed in KiB/sec (0 = no limit)"
-msgstr "ダウンロードの最大速度 (KiB/秒)"
+msgstr "ダウンロードの最大速度 (KiB/秒, 0 = 無制限)"
 
 #. i18n: file: libktcore/ktorrent.kcfg:45
 #. i18n: ectx: label, entry (maxRatio), group (downloads)
 #: rc.cpp:1276
-#, fuzzy
-#| msgid "Maximum share ratio limit reached."
 msgid "Maximum share ratio (0 = no limit)"
-msgstr "最大負担率に達しました。"
+msgstr "最大負担率 (0 = 無制限)"
 
 #. i18n: file: libktcore/ktorrent.kcfg:62
 #. i18n: ectx: label, entry (showSystemTrayIcon), group (downloads)
 #: rc.cpp:1285
-#, fuzzy
-#| msgid "Show system tray icon"
 msgid "Show a system tray icon"
 msgstr "システムトレイにアイコンを表示する"
 
 #. i18n: file: libktcore/ktorrent.kcfg:66
 #. i18n: ectx: label, entry (showSpeedBarInTrayIcon), group (downloads)
 #: rc.cpp:1288
-#, fuzzy
-#| msgid "Show system tray icon"
 msgid "Show speed bar in tray icon"
-msgstr "システムトレイにアイコンを表示する"
+msgstr "システムトレイアイコンに速度バーを表示する"
 
 #. i18n: file: libktcore/ktorrent.kcfg:70
 #. i18n: ectx: label, entry (downloadBandwidth), group (downloads)
 #: rc.cpp:1291
-#, fuzzy
-#| msgid "Available download bandwidth:"
 msgid "Download bandwidth (in kb/s):"
-msgstr "利用可能なダウンロード帯域幅:"
+msgstr "ダウンロード帯域幅 (kb/秒):"
 
 #. i18n: file: libktcore/ktorrent.kcfg:76
 #. i18n: ectx: label, entry (uploadBandwidth), group (downloads)
 #: rc.cpp:1294
 msgid "Upload bandwidth (in kb/s):"
-msgstr ""
+msgstr "アップロード帯域幅 (kb/秒):"
 
 #. i18n: file: libktcore/ktorrent.kcfg:82
 #. i18n: ectx: label, entry (showPopups), group (downloads)
@@ -4985,18 +4792,14 @@ msgstr ""
 #. i18n: file: libktcore/ktorrent.kcfg:86
 #. i18n: ectx: label, entry (keepSeeding), group (downloads)
 #: rc.cpp:1300
-#, fuzzy
-#| msgid "Keep seeding after download is finished"
 msgid "Keep seeding after download has finished"
 msgstr "ダウンロード完了後シードを続ける"
 
 #. i18n: file: libktcore/ktorrent.kcfg:90
 #. i18n: ectx: label, entry (tempDir), group (downloads)
 #: rc.cpp:1303
-#, fuzzy
-#| msgid "Folder to store torrent information:"
 msgid "Folder to store temporary files"
-msgstr "torrent 情報を保存するフォルダ:"
+msgstr "一時ファイルを保存するフォルダ"
 
 #. i18n: file: libktcore/ktorrent.kcfg:93
 #. i18n: ectx: label, entry (useSaveDir), group (downloads)
@@ -5007,10 +4810,8 @@ msgstr ""
 #. i18n: file: libktcore/ktorrent.kcfg:97
 #. i18n: ectx: label, entry (saveDir), group (downloads)
 #: rc.cpp:1309
-#, fuzzy
-#| msgid "Folder to store torrent information:"
 msgid "Folder to store downloaded files"
-msgstr "torrent 情報を保存するフォルダ:"
+msgstr "ダウンロードしたファイルを保存するフォルダ"
 
 #. i18n: file: libktcore/ktorrent.kcfg:100
 #. i18n: ectx: label, entry (useTorrentCopyDir), group (downloads)
@@ -5021,18 +4822,14 @@ msgstr ""
 #. i18n: file: libktcore/ktorrent.kcfg:104
 #. i18n: ectx: label, entry (torrentCopyDir), group (downloads)
 #: rc.cpp:1315
-#, fuzzy
-#| msgid "Copy torrent files to:"
 msgid "Folder to copy .torrent files to"
-msgstr "torrent ファイルのコピー先:"
+msgstr ".torrent ファイルのコピー先フォルダ"
 
 #. i18n: file: libktcore/ktorrent.kcfg:107
 #. i18n: ectx: label, entry (useCustomIP), group (downloads)
 #: rc.cpp:1318
-#, fuzzy
-#| msgid "Send the tracker a custom IP address or hostname"
 msgid "Whether to use a custom IP to pass to the tracker"
-msgstr "トラッカーにカスタム IP アドレスまたはホスト名を送る"
+msgstr "トラッカーにカスタム IP アドレスを送るかどうか"
 
 #. i18n: file: libktcore/ktorrent.kcfg:111
 #. i18n: ectx: label, entry (lastSaveDir), group (downloads)
@@ -5043,18 +4840,14 @@ msgstr ""
 #. i18n: file: libktcore/ktorrent.kcfg:115
 #. i18n: ectx: label, entry (customIP), group (downloads)
 #: rc.cpp:1324
-#, fuzzy
-#| msgid "IP address of the peer"
 msgid "IP to pass to the tracker"
-msgstr "ピアの IP アドレス"
+msgstr "トラッカーへ送る IP アドレス"
 
 #. i18n: file: libktcore/ktorrent.kcfg:119
 #. i18n: ectx: label, entry (guiUpdateInterval), group (downloads)
 #: rc.cpp:1327
-#, fuzzy
-#| msgid "GUI update interval:"
 msgid "GUI update interval"
-msgstr "GUI の更新間隔:"
+msgstr "GUI の更新間隔"
 
 #. i18n: file: libktcore/ktorrent.kcfg:125
 #. i18n: ectx: label, entry (dhtSupport), group (downloads)
@@ -5065,18 +4858,14 @@ msgstr ""
 #. i18n: file: libktcore/ktorrent.kcfg:129
 #. i18n: ectx: label, entry (dhtPort), group (downloads)
 #: rc.cpp:1333
-#, fuzzy
-#| msgid "DHT: off"
 msgid "DHT port"
-msgstr "DHT: オフ"
+msgstr "DHT ポート"
 
 #. i18n: file: libktcore/ktorrent.kcfg:138
 #. i18n: ectx: label, entry (numUploadSlots), group (downloads)
 #: rc.cpp:1336
-#, fuzzy
-#| msgid "Number of upload slots:"
 msgid "Number of upload slots"
-msgstr "アップロードスロットの数:"
+msgstr "アップロードスロットの数"
 
 #. i18n: file: libktcore/ktorrent.kcfg:188
 #. i18n: ectx: label, entry (shownColumns), group (downloads)
@@ -5087,10 +4876,8 @@ msgstr ""
 #. i18n: file: libktcore/ktorrent.kcfg:233
 #. i18n: ectx: label, entry (eta), group (downloads)
 #: rc.cpp:1348
-#, fuzzy
-#| msgid "Directory to move data to when a torrent has finished downloading."
 msgid "Algorithm to estimate the time when a torrent is finished"
-msgstr "torrent のダウンロードが完了したときにデータを移動するフォルダ"
+msgstr "torrent の完了時間を推測するアルゴリズム"
 
 #. i18n: file: libktcore/ktorrent.kcfg:245
 #. i18n: ectx: label, entry (minDiskSpace), group (downloads)
@@ -5109,10 +4896,8 @@ msgstr ""
 #. i18n: file: libktcore/ktorrent.kcfg:260
 #. i18n: ectx: label, entry (completedDir), group (downloads)
 #: rc.cpp:1357
-#, fuzzy
-#| msgid "Move completed downloads to:"
 msgid "Folder to move completed downloaded files to"
-msgstr "完了したダウンロードの移動先:"
+msgstr "ダウンロードを完了したファイルの移動先フォルダ"
 
 #. i18n: file: libktcore/ktorrent.kcfg:263
 #. i18n: ectx: label, entry (maxSeedTime), group (downloads)
@@ -5135,10 +4920,8 @@ msgstr "ルータ:"
 #. i18n: file: ktupnptest/upnptestwidget.ui:39
 #. i18n: ectx: property (text), widget (QLabel, m_router)
 #: rc.cpp:1369
-#, fuzzy
-#| msgid "No routers found !"
 msgid "No routers found."
-msgstr "ルータが見つかりません"
+msgstr "ルータが見つかりません。"
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:48
 #. i18n: ectx: property (text), widget (QPushButton, m_find_routers)
@@ -5205,7 +4988,7 @@ msgstr "表示する torrent:"
 #. i18n: ectx: label, entry (defaultDevice), group (general)
 #: rc.cpp:1402
 msgid "Default UPnP device to use"
-msgstr ""
+msgstr "デフォルトで使用する UPnP デバイス"
 
 #. i18n: file: plugins/upnp/upnpwidget.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, UPnPWidget)
@@ -5362,10 +5145,8 @@ msgstr "torrent を追加するグループ"
 #. i18n: file: plugins/scanfolder/ktscanfolderplugin.kcfg:13
 #. i18n: ectx: label, entry (openSilently), group (general)
 #: rc.cpp:1483
-#, fuzzy
-#| msgid "Open torrents silently"
 msgid "Whether to open torrent silently or not."
-msgstr "質問せずに torrent を開く"
+msgstr "質問せずに torrent を開くかどうか"
 
 #. i18n: file: plugins/scanfolder/ktscanfolderplugin.kcfg:18
 #. i18n: ectx: label, entry (actionDelete), group (general)
@@ -5450,26 +5231,6 @@ msgstr "ウェブインターフェースが待ち受けするポート"
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:179
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_forward)
 #: rc.cpp:1528
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">If you are behind a "
-#| "router and you want to access the webinterface from somewhere on the "
-#| "internet you need to forward the correct port.</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">This checkbox will "
-#| "ensure that the UPnP plugin automatically forwards the port. The UPnP "
-#| "plugin needs to be loaded for this to work.</p></body></html>"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -5524,7 +5285,7 @@ msgstr " 秒"
 #. i18n: ectx: label, entry (port), group (general)
 #: rc.cpp:1549
 msgid "Port number"
-msgstr ""
+msgstr "ポート番号"
 
 #. i18n: file: plugins/webinterface/ktwebinterfaceplugin.kcfg:15
 #. i18n: ectx: label, entry (forward), group (general)
@@ -5543,26 +5304,20 @@ msgstr ""
 #. i18n: file: plugins/webinterface/ktwebinterfaceplugin.kcfg:26
 #. i18n: ectx: label, entry (skin), group (general)
 #: rc.cpp:1558
-#, fuzzy
-#| msgid "Web interface skin:"
 msgid "interface skin"
-msgstr "ウェブインターフェースのスキン:"
+msgstr "インターフェースのスキン"
 
 #. i18n: file: plugins/webinterface/ktwebinterfaceplugin.kcfg:31
 #. i18n: ectx: label, entry (username), group (general)
 #: rc.cpp:1561
-#, fuzzy
-#| msgid "Username:"
 msgid "username"
-msgstr "ユーザ名:"
+msgstr "ユーザ名"
 
 #. i18n: file: plugins/webinterface/ktwebinterfaceplugin.kcfg:35
 #. i18n: ectx: label, entry (password), group (general)
 #: rc.cpp:1564
-#, fuzzy
-#| msgid "Password:"
 msgid "password"
-msgstr "パスワード:"
+msgstr "パスワード"
 
 #. i18n: file: plugins/infowidget/webseedstab.ui:21
 #. i18n: ectx: property (toolTip), widget (KLineEdit, m_webseed)
@@ -5692,10 +5447,8 @@ msgstr "トラッカーを変更"
 #. i18n: file: plugins/infowidget/trackerview.ui:42
 #. i18n: ectx: property (text), widget (QPushButton, m_scrape)
 #: rc.cpp:1626
-#, fuzzy
-#| msgid "Trackers"
 msgid "Update Trackers"
-msgstr "トラッカー"
+msgstr "トラッカーを更新"
 
 #. i18n: file: plugins/infowidget/trackerview.ui:62
 #. i18n: ectx: property (text), widget (KPushButton, m_restore_defaults)
@@ -5847,7 +5600,7 @@ msgstr "下り平均速度:"
 #. i18n: ectx: property (text), widget (QLabel, label_16)
 #: rc.cpp:1698
 msgid "Type:"
-msgstr ""
+msgstr "タイプ:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:100
 #. i18n: ectx: property (text), widget (QLabel, label_15)
@@ -5920,18 +5673,14 @@ msgstr "キャンセル(&A)"
 #. i18n: file: plugins/ipfilter/ktipfilterplugin.kcfg:10
 #. i18n: ectx: label, entry (filterURL), group (general)
 #: rc.cpp:1749
-#, fuzzy
-#| msgid "Remove Filter"
 msgid "Level1 filter url"
-msgstr "フィルタを削除"
+msgstr "Level1 フィルタの URL"
 
 #. i18n: file: plugins/ipfilter/ktipfilterplugin.kcfg:14
 #. i18n: ectx: label, entry (useLevel1), group (general)
 #: rc.cpp:1752
-#, fuzzy
-#| msgid "Use PeerGuardian filter"
 msgid "Use level1 filter?"
-msgstr "PeerGuardian フィルタを使う"
+msgstr "Level1 フィルタを使いますか？"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, IPBlockingPrefPage)
@@ -6317,18 +6066,14 @@ msgstr ""
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:25
 #. i18n: ectx: label, entry (ShowSeedsInSwarms), group (general)
 #: rc.cpp:1937
-#, fuzzy
-#| msgid "Show seeds in swarms"
 msgid "Whether to show seeds in swarms"
-msgstr "スウォームのシードを表示する"
+msgstr "スウォームのシードを表示するかどうか"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:30
 #. i18n: ectx: label, entry (ShowLeechersInSwarms), group (general)
 #: rc.cpp:1940
-#, fuzzy
-#| msgid "Show leechers in swarms"
 msgid "Whether to show leachers in swarms"
-msgstr "スウォームのリーチャーを表示する"
+msgstr "スウォームのリーチャーを表示するかどうか"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:35
 #. i18n: ectx: label, entry (DlSpdSamples), group (general)
@@ -6363,22 +6108,20 @@ msgstr ""
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:60
 #. i18n: ectx: label, entry (DlSpdColor), group (general)
 #: rc.cpp:1958
-#, fuzzy
-#| msgid "Color of the schedule background."
 msgid "Color of the speed on dl chart"
-msgstr "スケジュール表の背景色"
+msgstr "ダウンロードチャートの速度の色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:65
 #. i18n: ectx: label, entry (DlAvgColor), group (general)
 #: rc.cpp:1961
 msgid "Color of the average on dl chart"
-msgstr ""
+msgstr "ダウンロードチャートの平均の色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:70
 #. i18n: ectx: label, entry (DlLimitColor), group (general)
 #: rc.cpp:1964
 msgid "Color of the limit on dl chart"
-msgstr ""
+msgstr "ダウンロードチャートの制限の色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:75
 #. i18n: ectx: label, entry (PrAvgFromLColor), group (general)
@@ -6402,35 +6145,31 @@ msgstr ""
 #. i18n: ectx: label, entry (PrFromLColor), group (general)
 #: rc.cpp:1976
 msgid "Color of the leechers on peers chart"
-msgstr ""
+msgstr "ピアチャートのリーチャーの色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:95
 #. i18n: ectx: label, entry (PrFromSColor), group (general)
 #: rc.cpp:1979
-#, fuzzy
-#| msgid "Color of the schedule background."
 msgid "Color of the seeds on peers chart"
-msgstr "スケジュール表の背景色"
+msgstr "ピアチャートのシードの色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:100
 #. i18n: ectx: label, entry (UlSpdColor), group (general)
 #: rc.cpp:1982
-#, fuzzy
-#| msgid "Color of the schedule background."
 msgid "Color of the speed on upload chart"
-msgstr "スケジュール表の背景色"
+msgstr "アップロードチャートの速度の色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:105
 #. i18n: ectx: label, entry (UlAvgColor), group (general)
 #: rc.cpp:1985
 msgid "Color of the avg on upload chart"
-msgstr ""
+msgstr "アップロードチャートの平均の色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:110
 #. i18n: ectx: label, entry (UlLimitColor), group (general)
 #: rc.cpp:1988
 msgid "Color of the limit on upload chart"
-msgstr ""
+msgstr "アップロードチャートの制限の色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:115
 #. i18n: ectx: label, entry (CnLConnColor), group (general)
@@ -6485,32 +6224,26 @@ msgstr ""
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:155
 #. i18n: ectx: label, entry (DhtNodesColor), group (general)
 #: rc.cpp:2015
-#, fuzzy
-#| msgid "Color of all lines on the schedule."
 msgid "Color of the nodes on DHT chart"
-msgstr "スケジュール表のすべての線の色"
+msgstr "DHT チャートのノードの色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:160
 #. i18n: ectx: label, entry (DhtTasksColor), group (general)
 #: rc.cpp:2018
 msgid "Color of the tasks on DHT chart"
-msgstr ""
+msgstr "DHT チャートのタスクの色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:165
 #. i18n: ectx: label, entry (AntiAliasing), group (general)
 #: rc.cpp:2021
-#, fuzzy
-#| msgid "Use anti-aliasing"
 msgid "Use anti aliasing on charts?"
-msgstr "アンチエイリアシングを使う"
+msgstr "チャートにアンチエイリアシングを使うかどうか"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:170
 #. i18n: ectx: label, entry (DrawBgdGrid), group (general)
 #: rc.cpp:2024
-#, fuzzy
-#| msgid "Draw background grid"
 msgid "Draw ugly grey background grid?"
-msgstr "背景のグリッドを描画する"
+msgstr "グレーの背景グリッドを描画しますか？"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:175
 #. i18n: ectx: label, entry (WidgetType), group (general)
@@ -6630,8 +6363,6 @@ msgstr "アクションを実行するとき:"
 #. i18n: file: plugins/logviewer/ktlogviewerplugin.kcfg:11
 #. i18n: ectx: label, entry (useRichText), group (general)
 #: rc.cpp:2102
-#, fuzzy
-#| msgid "Use rich text for logging output"
 msgid "Use rich log text"
 msgstr "ログ出力にリッチテキストを使う"
 
@@ -6778,16 +6509,14 @@ msgstr "状態:"
 #. i18n: file: plugins/syndication/feedwidget.ui:81
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: rc.cpp:2177
-#, fuzzy
-#| msgid "Refresh"
 msgid "Refresh every:"
-msgstr "更新"
+msgstr "更新間隔:"
 
 #. i18n: file: plugins/syndication/feedwidget.ui:88
 #. i18n: ectx: property (toolTip), widget (QSpinBox, m_refresh_rate)
 #: rc.cpp:2180
 msgid "Time between automatic refreshes of the feed."
-msgstr ""
+msgstr "フィードの自動更新間隔"
 
 #. i18n: file: plugins/syndication/feedwidget.ui:91
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_refresh_rate)
@@ -7191,26 +6920,20 @@ msgstr "標準エンジンを追加(&L)"
 #. i18n: file: plugins/search/ktsearchplugin.kcfg:10
 #. i18n: ectx: label, entry (searchEngine), group (general)
 #: rc.cpp:2381
-#, fuzzy
-#| msgid "Current schedule:"
 msgid "Current search engine"
-msgstr "現在のスケジュール:"
+msgstr "現在の検索エンジン"
 
 #. i18n: file: plugins/search/ktsearchplugin.kcfg:19
 #. i18n: ectx: label, entry (useCustomBrowser), group (general)
 #: rc.cpp:2387
-#, fuzzy
-#| msgid "Use a custom browser."
 msgid "Use custom browser"
-msgstr "指定したブラウザを使います。"
+msgstr "指定したブラウザを使う"
 
 #. i18n: file: plugins/search/ktsearchplugin.kcfg:23
 #. i18n: ectx: label, entry (customBrowser), group (general)
 #: rc.cpp:2390
-#, fuzzy
-#| msgid "Custom browser path:"
 msgid "Custom browser executable path"
-msgstr "次のブラウザを使う (パスを指定):"
+msgstr "指定ブラウザの実行ファイルのパス"
 
 #. i18n: file: plugins/search/ktsearchpluginui.rc:3
 #. i18n: ectx: ToolBar (SearchToolBar)
@@ -7233,26 +6956,20 @@ msgstr "自動再開の設定"
 #. i18n: file: plugins/scripting/scripts/auto_remove/auto_remove.ui:19
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: rc.cpp:2399
-#, fuzzy
-#| msgid "Auto resume after:"
 msgid "Auto remove a torrent when:"
-msgstr "指定した時間後に自動的に再開する:"
+msgstr "torrent の自動削除:"
 
 #. i18n: file: plugins/scripting/scripts/auto_remove/auto_remove.ui:26
 #. i18n: ectx: property (text), widget (QCheckBox, finish_downloading)
 #: rc.cpp:2402
-#, fuzzy
-#| msgid "When all torrents finish downloading"
 msgid "The torrent finishes downloading"
-msgstr "すべての torrent のダウンロードが完了したとき"
+msgstr "ダウンロードが完了したとき"
 
 #. i18n: file: plugins/scripting/scripts/auto_remove/auto_remove.ui:33
 #. i18n: ectx: property (text), widget (QCheckBox, finish_seeding)
 #: rc.cpp:2405
-#, fuzzy
-#| msgid "When all torrents finish seeding"
 msgid "The torrent finishes seeding"
-msgstr "すべての torrent のシードが完了したとき"
+msgstr "シードが完了したとき"
 
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:19
 #. i18n: ectx: property (text), widget (QCheckBox, auto_resume)
@@ -7359,10 +7076,8 @@ msgstr "ウェブサイト:"
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:16
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: rc.cpp:2479
-#, fuzzy
-#| msgid "Speed Limits"
 msgid "Special Limits"
-msgstr "速度制限"
+msgstr "特別な制限"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:22
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_screensaverLimits)
@@ -7371,24 +7086,26 @@ msgid ""
 "Use these global limits when the screensaver is activated, instead of the "
 "ones configured in the network settings."
 msgstr ""
+"スクリーンセーバーが起動している間は、ネットワークの設定で設定されている制限"
+"ではなく、ここで設定する全体の制限を使います。"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:25
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_screensaverLimits)
 #: rc.cpp:2485
 msgid "Use different speed limits when the screensaver is activated"
-msgstr ""
+msgstr "スクリーンセーバーの起動時には別の速度制限を使う"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:49
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_screensaverUploadLimit)
 #: rc.cpp:2491
 msgid "Global upload limit when the screensaver is activated."
-msgstr ""
+msgstr "スクリーンセーバー起動時のアップロード全体の制限"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:78
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_screensaverDownloadLimit)
 #: rc.cpp:2503
 msgid "Global download limit when the screensaver is activated."
-msgstr ""
+msgstr "スクリーンセーバー起動時のダウンロード全体の制限"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:120
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -7568,7 +7285,7 @@ msgstr "アップロード制限:"
 #. i18n: ectx: property (text), widget (QCheckBox, m_screensaver_limits)
 #: rc.cpp:2584 rc.cpp:2677
 msgid "When screensaver is activated:"
-msgstr ""
+msgstr "スクリーンセーバーの起動時:"
 
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:203
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
@@ -7579,10 +7296,8 @@ msgstr ""
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:243
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: rc.cpp:2605 rc.cpp:2698
-#, fuzzy
-#| msgid "Set connection limits"
 msgid "Connection Limits"
-msgstr "接続制限を設定する"
+msgstr "接続制限"
 
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:209
 #. i18n: ectx: property (text), widget (QCheckBox, m_set_connection_limits)
@@ -7665,33 +7380,27 @@ msgstr "ロード済み"
 #: plugins/webinterface/httpclienthandler.cpp:199
 #, kde-format
 msgid "An internal server error occurred: %1"
-msgstr ""
+msgstr "サーバの内部エラーが発生しました: %1"
 
 #: plugins/webinterface/torrentposthandler.cpp:52
 msgid "HTTP Get not supported when uploading a torrent"
-msgstr ""
+msgstr "torrent のアップロードには HTTP GET メソッドは使えません"
 
 #: plugins/webinterface/torrentposthandler.cpp:65
-#, fuzzy
-#| msgid "Invalid tracker URL"
 msgid "Invalid data received"
-msgstr "無効なトラッカー URL"
+msgstr "無効な日付を受け取りました"
 
 #: plugins/webinterface/torrentposthandler.cpp:77
-#, fuzzy
-#| msgid "Folder to store torrent information:"
 msgid "Failed to open temporary file"
-msgstr "torrent 情報を保存するフォルダ:"
+msgstr "一時ファイルを開けませんでした"
 
 #: plugins/webinterface/httpserver.cpp:317
-#, fuzzy
-#| msgid "Web interface skin:"
 msgid "Cannot find webinterface skins!"
-msgstr "ウェブインターフェースのスキン:"
+msgstr "ウェブインターフェースのスキンが見つかりません。"
 
 #: plugins/webinterface/httpserver.cpp:478
 msgid "Unsupported HTTP method"
-msgstr ""
+msgstr "サポートされていない HTTP メソッド"
 
 #: plugins/infowidget/fileview.cpp:113
 msgctxt "Open file"
@@ -7727,42 +7436,33 @@ msgid "Expand Folder Tree"
 msgstr "フォルダツリーを展開"
 
 #: plugins/infowidget/fileview.cpp:129
-#, fuzzy
-#| msgid "Filters"
 msgid "File Tree"
-msgstr "フィルタ"
+msgstr "ファイルツリー"
 
 #: plugins/infowidget/fileview.cpp:131
-#, fuzzy
-#| msgid "File Exists"
 msgid "File List"
-msgstr "ファイルは存在します"
+msgstr "ファイル一覧"
 
 #: plugins/infowidget/fileview.cpp:141
-#, fuzzy
-#| msgid "New Filter"
 msgid "Show Filter"
-msgstr "新しいフィルタ"
+msgstr "フィルタを表示"
 
 #: plugins/infowidget/fileview.cpp:305
-#, fuzzy
-#| msgid ""
-#| "You will lose all data in this file, are you sure you want to do this ?"
 msgid "You will lose all data in this file, are you sure you want to do this?"
 msgid_plural ""
 "You will lose all data in these files, are you sure you want to do this?"
 msgstr[0] ""
-"これらのファイルのすべてのデータを失うことになります。本当によろしいですか？"
+"このファイルのすべてのデータを失うことになります。本当によろしいですか？"
 msgstr[1] ""
 "これらのファイルのすべてのデータを失うことになります。本当によろしいですか？"
 
 #: plugins/infowidget/statustab.cpp:100
 msgid "Private"
-msgstr ""
+msgstr "非公開"
 
 #: plugins/infowidget/statustab.cpp:100
 msgid "Public"
-msgstr ""
+msgstr "公開"
 
 #: plugins/infowidget/peerviewmodel.cpp:147
 msgctxt "Choked"
@@ -7805,10 +7505,8 @@ msgid "No"
 msgstr "いいえ"
 
 #: plugins/infowidget/peerviewmodel.cpp:304
-#, fuzzy
-#| msgid "IP Address"
 msgid "Address"
-msgstr "IP アドレス"
+msgstr "アドレス"
 
 #: plugins/infowidget/peerviewmodel.cpp:305
 msgid "Country"
@@ -7871,10 +7569,6 @@ msgid "Upload speed"
 msgstr "アップロード速度"
 
 #: plugins/infowidget/peerviewmodel.cpp:332
-#, fuzzy
-#| msgid ""
-#| "Whether or not the peer has choked us, when we are choked the peer will "
-#| "not send any data to us"
 msgid ""
 "Whether or not the peer has choked us - when we are choked the peer will not "
 "send us any data"
@@ -7883,8 +7577,6 @@ msgstr ""
 "と、ピアはこちらに何もデータを送ってきません。"
 
 #: plugins/infowidget/peerviewmodel.cpp:333
-#, fuzzy
-#| msgid "Snubbed means the peer hasn't sent us any data in the last 2 minutes"
 msgid "Snubbed means the peer has not sent us any data in the last 2 minutes"
 msgstr ""
 "ピアが 2 分間こちらに何もデータを送信してこなかった場合、Snubbed (スナッブ) "
@@ -7913,14 +7605,10 @@ msgid "The number of download and upload requests"
 msgstr "ダウンロード/アップロード要求の数"
 
 #: plugins/infowidget/peerviewmodel.cpp:339
-#, fuzzy
-#| msgid "How much data we downloaded from this peer"
 msgid "How much data we have downloaded from this peer"
 msgstr "このピアからダウンロードしたデータ"
 
 #: plugins/infowidget/peerviewmodel.cpp:340
-#, fuzzy
-#| msgid "How much data we uploaded to this peer"
 msgid "How much data we have uploaded to this peer"
 msgstr "このピアにアップロードしたデータ"
 
@@ -7981,19 +7669,15 @@ msgstr "torrent のすべてのウェブシードを表示します"
 
 #: plugins/infowidget/trackermodel.cpp:147
 msgid "Url"
-msgstr ""
+msgstr "URL"
 
 #: plugins/infowidget/trackermodel.cpp:151
-#, fuzzy
-#| msgid "Times Downloaded:"
 msgid "Times Downloaded"
-msgstr "ダウンロード回数:"
+msgstr "ダウンロード回数"
 
 #: plugins/infowidget/trackermodel.cpp:152
-#, fuzzy
-#| msgid "Next update:"
 msgid "Next Update"
-msgstr "次回の更新:"
+msgstr "次回の更新"
 
 #: plugins/infowidget/webseedsmodel.cpp:124
 msgid "URL"
@@ -8013,20 +7697,17 @@ msgstr ""
 "ウェブシード <resource>%1</resource> は torrent の一部なので削除できません。"
 
 #: plugins/infowidget/trackerview.cpp:86
-#, fuzzy
-#| msgid "IP address of the peer"
 msgid "Enter the URL of the tracker:"
-msgstr "ピアの IP アドレス"
+msgstr "トラッカーの URL を入力:"
 
 #: plugins/infowidget/trackerview.cpp:94
 msgid "Malformed URL."
 msgstr "URL の形式が不正です。"
 
 #: plugins/infowidget/trackerview.cpp:101
-#, fuzzy, kde-format
-#| msgid "There already is a tracker named <b>%1</b> !"
+#, kde-format
 msgid "There already is a tracker named <b>%1</b>."
-msgstr "%1 という名前のトラッカーは既に存在します。"
+msgstr "<resource>%1</resource> という名前のトラッカーは既に存在します。"
 
 #: plugins/infowidget/peerview.cpp:56
 msgid "Kick Peer"
@@ -8162,14 +7843,11 @@ msgid "Status: Downloading and converting new block list..."
 msgstr "状態: 新しいブロックリストをダウンロードして変換中..."
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:193
-#, fuzzy
-#| msgid "No update done yet!"
 msgid "No update done yet."
-msgstr "まだ更新されていません"
+msgstr "まだ更新されていません。"
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:197
-#, fuzzy, kde-format
-#| msgid "%1 (Last update attempt failed!)"
+#, kde-format
 msgid "%1 (Last update attempt failed.)"
 msgstr "%1 (前回の更新は失敗しました)"
 
@@ -8178,16 +7856,15 @@ msgid "Never"
 msgstr "なし"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:133
-#, fuzzy, kde-format
-#| msgid "Cannot open file %1: %2"
+#, kde-format
 msgid "Cannot open zip file %1."
-msgstr "ファイル <filename>%1</filename> を開けません: %2"
+msgstr "ZIP ファイル <filename>%1</filename> を開けません。"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:157
-#, fuzzy, kde-format
-#| msgid "Cannot deselect missing files: %1"
+#, kde-format
 msgid "Cannot find blocklist in zip file %1."
-msgstr "欠落したファイルを選択解除できません: %1"
+msgstr ""
+"ZIP ファイル <filename>%1</filename> にブロックリストが見つかりません。"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:228
 msgid ""
@@ -8208,52 +7885,41 @@ msgid "There are no IP addresses to convert in %1"
 msgstr "<filename>%1</filename> には変換する IP アドレスがありません"
 
 #: plugins/stats/SpdTabPage.cc:69 plugins/stats/SpdTabPage.cc:70
-#, fuzzy
-#| msgid "Speed Limits"
 msgid "Speed limit"
 msgstr "速度制限"
 
 #: plugins/stats/SettingsPage.cc:27
-#, fuzzy
-#| msgid "Statistics Plugin"
 msgid "Statistics"
-msgstr "統計プラグイン"
+msgstr "統計"
 
 #: plugins/stats/SettingsPage.cc:48
-#, fuzzy, kde-format
-#| msgid "(= %1/s)"
+#, kde-format
 msgid "(= %1 ms)"
-msgstr "(= %1/秒)"
+msgstr "(= %1/ミリ秒)"
 
 #: plugins/stats/drawer/ChartDrawerData.cc:25
-#, fuzzy
-#| msgid "Unknown client"
 msgid "Unknown"
-msgstr "未知のクライアント"
+msgstr "不明"
 
 #: plugins/stats/drawer/PlainChartDrawer.cc:323
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:383
 msgid "Save as image…"
-msgstr ""
+msgstr "画像として保存..."
 
 #: plugins/stats/drawer/PlainChartDrawer.cc:327
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:387
-#, fuzzy
-#| msgid "Rescan"
 msgid "Rescale"
-msgstr "再スキャン"
+msgstr "再計測"
 
 #: plugins/stats/drawer/PlainChartDrawer.cc:331
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:391
-#, fuzzy
-#| msgid "Test"
 msgid "Reset"
-msgstr "テスト"
+msgstr "リセット"
 
 #: plugins/stats/drawer/PlainChartDrawer.cc:343
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:403
 msgid "Select path to save image…"
-msgstr ""
+msgstr "画像の保存先を選択..."
 
 #: plugins/stats/drawer/PlainChartDrawer.cc:530
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:340
@@ -8261,6 +7927,8 @@ msgid ""
 "<h1 align='center' style='font-size: large; text-decoration: "
 "underline'>Legend:</h1><ul type='square'>"
 msgstr ""
+"<h1 align='center' style='font-size: large; text-decoration: underline'>凡例:"
+"</h1><ul type='square'>"
 
 #: plugins/stats/drawer/PlainChartDrawer.cc:534
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:344
@@ -8269,51 +7937,39 @@ msgid ""
 "<li><span style='background-color: %1; font-size: 14px; font-family: "
 "monospace'>&nbsp;&nbsp;</span>&nbsp;—&nbsp;%2</li>"
 msgstr ""
+"<li><span style='background-color: %1; font-size: 14px; font-family: "
+"monospace'>&nbsp;&nbsp;</span>&nbsp;—&nbsp;%2</li>"
 
 #: plugins/stats/drawer/ChartDrawer.cc:26
-#, fuzzy
-#| msgid " KiB/s"
 msgid "KiB/s"
-msgstr " KiB/秒"
+msgstr "KiB/秒"
 
 #: plugins/stats/StatsPlugin.cc:51
-#, fuzzy
-#| msgid "Speed Limits"
 msgid "Speed charts"
-msgstr "速度制限"
+msgstr "速度チャート"
 
 #: plugins/stats/StatsPlugin.cc:51
-#, fuzzy
-#| msgid "The number of download and upload requests"
 msgid "Displays charts about download and upload speed"
-msgstr "ダウンロード/アップロード要求の数"
+msgstr "ダウンロード/アップロード速度に関するチャートを表示します"
 
 #: plugins/stats/StatsPlugin.cc:52
-#, fuzzy
-#| msgid "Connections"
 msgid "Connections charts"
-msgstr "接続"
+msgstr "接続チャート"
 
 #: plugins/stats/StatsPlugin.cc:52
 msgid "Displays charts about connections"
-msgstr ""
+msgstr "接続に関するチャートを表示します"
 
 #: plugins/stats/ConnsTabPage.cc:68 plugins/stats/ConnsTabPage.cc:120
 #: plugins/stats/ConnsTabPage.cc:122
-#, fuzzy
-#| msgid "Seeds  in swarms"
 msgid "Seeds in swarms"
 msgstr "スウォームのシード"
 
 #: plugins/stats/ConnsTabPage.cc:75
-#, fuzzy
-#| msgid "Average leechers connected per torrent"
 msgid "Average leechers connected per running torrent"
-msgstr "torrent あたりのリーチャーの平均接続数"
+msgstr "実行中の torrent あたりのリーチャーの平均接続数"
 
 #: plugins/stats/ConnsTabPage.cc:77
-#, fuzzy
-#| msgid "Avg. seeds connected per running torrent"
 msgid "Average seeds connected per running torrent"
 msgstr "実行中の torrent あたりのシードの平均接続数"
 
@@ -8414,15 +8070,15 @@ msgstr "KTorrent が生成するログ出力を表示します"
 
 #: plugins/logviewer/logviewer.cpp:61
 msgid "Suspend Output"
-msgstr ""
+msgstr "出力を一時停止"
 
 #: plugins/logviewer/logviewer.cpp:131
 msgid "<font color=\"#FF0000\">Logging output suspended</font>"
-msgstr ""
+msgstr "<font color=\"#FF0000\">ログ出力が一時停止されました</font>"
 
 #: plugins/logviewer/logviewer.cpp:133
 msgid "<font color=\"#00FF00\">Logging output resumed</font>"
-msgstr ""
+msgstr "<font color=\"#00FF00\">ログ出力が再開されました</font>"
 
 #: plugins/downloadorder/downloadorderdialog.cpp:39
 #, kde-format
@@ -8441,12 +8097,12 @@ msgid "Play List"
 msgstr "プレイリスト"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:97
-#: plugins/mediaplayer/videowidget.cpp:57
+#: plugins/mediaplayer/videowidget.cpp:58
 msgid "Play"
 msgstr "再生"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:101
-#: plugins/mediaplayer/videowidget.cpp:58
+#: plugins/mediaplayer/videowidget.cpp:59
 msgid "Pause"
 msgstr "一時停止"
 
@@ -8477,15 +8133,13 @@ msgstr "プレイリストをクリア"
 msgid "Movie player"
 msgstr "動画プレーヤー"
 
-#: plugins/mediaplayer/videowidget.cpp:60
+#: plugins/mediaplayer/videowidget.cpp:61
 msgid "Toggle Fullscreen"
 msgstr "フルスクリーンの切り替え"
 
-#: plugins/mediaplayer/videowidget.cpp:196
-#, fuzzy
-#| msgid "KTorrent is not running !"
+#: plugins/mediaplayer/videowidget.cpp:197
 msgid "KTorrent is playing a video."
-msgstr "KTorrent が起動していません"
+msgstr "KTorrent は動画を再生しています。"
 
 #: plugins/mediaplayer/playlist.cpp:86
 #: plugins/syndication/feedwidgetmodel.cpp:81
@@ -8614,8 +8268,7 @@ msgid "Feed: <b>%1</b>"
 msgstr "フィード: %1"
 
 #: plugins/syndication/linkdownloader.cpp:158
-#, fuzzy, kde-format
-#| msgid "Couldn't find a valid link to a torrent on %1"
+#, kde-format
 msgid "Could not find a valid link to a torrent on %1"
 msgstr "torrent への有効なリンクが %1 に見つかりませんでした"
 
@@ -8625,8 +8278,7 @@ msgid "Edit Filter"
 msgstr "フィルタを編集"
 
 #: plugins/syndication/filtereditor.cpp:199
-#, fuzzy, kde-format
-#| msgid "There already is a filter named %1, filter names must be unique !"
+#, kde-format
 msgid "There already is a filter named %1, filter names must be unique."
 msgstr ""
 "<resource>%1</resource> という名前のフィルタは既に存在します。フィルタ名は一"
@@ -8651,10 +8303,8 @@ msgid "Show Feed"
 msgstr "フィードを表示"
 
 #: plugins/syndication/syndicationplugin.cpp:98
-#, fuzzy
-#| msgid "Username:"
 msgid "Rename"
-msgstr "ユーザ名:"
+msgstr "名前変更"
 
 #: plugins/syndication/syndicationplugin.cpp:101
 msgid "Add Filter"
@@ -8677,8 +8327,7 @@ msgid "Please enter the URL of the RSS or Atom feed."
 msgstr "RSS または Atom フィードの URL を入力してください。"
 
 #: plugins/syndication/syndicationactivity.cpp:144
-#, fuzzy, kde-format
-#| msgid "Failed to load feed %1 !"
+#, kde-format
 msgid "Failed to load feed %1."
 msgstr "フィード <resource>%1</resource> の読み込みに失敗しました。"
 
@@ -8738,10 +8387,9 @@ msgstr ""
 "れをユーザが入力する検索語に置き換えます。"
 
 #: plugins/search/searchprefpage.cpp:150
-#, fuzzy, kde-format
-#| msgid "The URL %s, does not contain {searchTerms} !"
+#, kde-format
 msgid "The URL %1 does not contain {searchTerms}."
-msgstr "URL %s には {searchTerms} が含まれていません。"
+msgstr "URL %1 には {searchTerms} が含まれていません。"
 
 #: plugins/search/homepage.cpp:117
 msgid "Home"
@@ -8750,13 +8398,11 @@ msgstr "ホーム"
 #: plugins/search/homepage.cpp:119
 msgctxt "KDE 4 tag line, see http://kde.org/img/kde40.png"
 msgid "Be free."
-msgstr ""
+msgstr "Be free."
 
 #: plugins/search/homepage.cpp:120
-#, fuzzy
-#| msgid "Folders to scan for torrents:"
 msgid "Search the web for torrents."
-msgstr "torrent をスキャンするフォルダ:"
+msgstr "ウェブで torrent を検索します。"
 
 #: plugins/search/searchenginelist.cpp:216
 #, kde-format
@@ -8852,10 +8498,8 @@ msgid "Scripting"
 msgstr "スクリプティング"
 
 #: plugins/scripting/scriptingplugin.cpp:216
-#, fuzzy
-#| msgid "KTorrent Blacklisted Peers"
 msgid "KTorrent Script Packages"
-msgstr "KTorrent ブラックリストのピア"
+msgstr "KTorrent スクリプトパッケージ"
 
 #: plugins/scripting/scriptingplugin.cpp:217
 #: plugins/scripting/scriptmanager.cpp:41
@@ -8863,13 +8507,12 @@ msgid "Scripts"
 msgstr "スクリプト"
 
 #: plugins/scripting/scriptingplugin.cpp:277
-#, fuzzy
-#| msgid ""
-#| "You will lose all the downloaded data. Are you sure you want to do this?"
 msgid ""
 "Removing these scripts will fully delete them from your disk. Are you sure "
 "you want to do this ?"
-msgstr "ダウンロード済みのすべてのデータが失われます。本当によろしいですか？"
+msgstr ""
+"これらのスクリプトを削除するとディスクから完全に削除されます。本当によろしい"
+"ですか？"
 
 #: plugins/scripting/scriptmanager.cpp:43
 msgid "Widget to start, stop and manage scripts"
@@ -8877,29 +8520,30 @@ msgstr "スクリプトの開始/停止と管理を行うためのウィジェ�
 
 #: plugins/scripting/scriptmodel.cpp:112
 msgid "Cannot open archive for reading."
-msgstr ""
+msgstr "アーカイブを読み取りのために開けません。"
 
 #: plugins/scripting/scriptmodel.cpp:116
-#, fuzzy
-#| msgid "Invalid tracker URL"
 msgid "Invalid archive."
-msgstr "無効なトラッカー URL"
+msgstr "無効なアーカイブです。"
 
 #: plugins/scripting/scriptmodel.cpp:143
-#, fuzzy, kde-format
-#| msgid "There already is a tracker named <b>%1</b> !"
+#, kde-format
 msgid "There is already a script package named %1 installed."
-msgstr "%1 という名前のトラッカーは既に存在します。"
+msgstr ""
+"<resource>%1</resource> という名前のスクリプトは既にインストールされていま"
+"す。"
 
 #: plugins/scripting/scriptmodel.cpp:149
 msgid ""
 "Failed to load script from archive. There is something wrong with the "
 "desktop file."
 msgstr ""
+"アーカイブからスクリプトを読み込めませんでした。デスクトップファイルに問題が"
+"あります。"
 
 #: plugins/scripting/scriptmodel.cpp:154
 msgid "No script found in archive."
-msgstr ""
+msgstr "アーカイブの中にスクリプトが見つかりません。"
 
 #: plugins/zeroconf/zeroconfplugin.cpp:51
 #: plugins/zeroconf/zeroconfplugin.cpp:68
@@ -8915,8 +8559,7 @@ msgid "Cannot open file %1: %2"
 msgstr "ファイル <filename>%1</filename> を開けません: %2"
 
 #: plugins/bwscheduler/schedule.cpp:140 plugins/bwscheduler/schedule.cpp:146
-#, fuzzy, kde-format
-#| msgid "The file %1 is corrupted or not a proper KTorrent schedule file !"
+#, kde-format
 msgid "The file %1 is corrupted or not a proper KTorrent schedule file."
 msgstr ""
 "ファイル <filename>%1</filename> は壊れているか、有効な KTorrent スケジュール"
@@ -8954,26 +8597,16 @@ msgid "Add an item"
 msgstr "アイテムを追加"
 
 #: plugins/bwscheduler/additemdlg.cpp:74
-#, fuzzy
-#| msgid "No day has been selected !"
 msgid "No day has been selected."
 msgstr "曜日が選択されていません。"
 
 #: plugins/bwscheduler/additemdlg.cpp:106
-#, fuzzy
-#| msgid ""
-#| "Failed to add item, because it conflicts with another item on the "
-#| "schedule !"
 msgid ""
 "Failed to add item, because it conflicts with another item on the schedule."
 msgstr ""
 "スケジュールの他のアイテムと競合するため、アイテムを追加できませんでした。"
 
 #: plugins/bwscheduler/additemdlg.cpp:111
-#, fuzzy
-#| msgid ""
-#| "This item could not be added to all selected days, because it conflicts "
-#| "with another item on the schedule !"
 msgid ""
 "This item could not be added to all selected days, because it conflicts with "
 "another item on the schedule."
@@ -9036,10 +8669,6 @@ msgid "KTorrent scheduler files"
 msgstr "KTorrent スケジュールファイル"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:164
-#, fuzzy
-#| msgid ""
-#| "This item conflicts with another item in the schedule, we cannot change "
-#| "it !"
 msgid ""
 "This item conflicts with another item in the schedule, we cannot change it."
 msgstr ""
@@ -9055,10 +8684,9 @@ msgstr "アナウンス"
 
 #: libbtcore/interfaces/trackerinterface.cpp:60
 #: libbtcore/torrent/torrentstats.cpp:82
-#, fuzzy, kde-format
-#| msgid "Error: "
+#, kde-format
 msgid "Error: %1"
-msgstr "エラー: "
+msgstr "エラー: %1"
 
 #: libbtcore/peer/peerid.cpp:203
 msgid "Unknown client"
@@ -9161,10 +8789,8 @@ msgid "Not connected"
 msgstr "接続していません"
 
 #: libbtcore/download/webseed.cpp:301 libbtcore/download/webseed.cpp:515
-#, fuzzy
-#| msgid "Notice"
 msgid "Not in use"
-msgstr "通知"
+msgstr "使用されていません"
 
 #: libbtcore/download/webseed.cpp:319
 #: libbtcore/download/httpconnection.cpp:125
@@ -9216,10 +8842,8 @@ msgid "Error: request timed out"
 msgstr "エラー: 要求がタイムアウトしました"
 
 #: libbtcore/download/httpconnection.cpp:391
-#, fuzzy
-#| msgid "Redirected without a new location !"
 msgid "Redirected without a new location."
-msgstr "新しい場所なしでリダイレクトされました"
+msgstr "新しい場所なしでリダイレクトされました。"
 
 #: libbtcore/download/chunkdownload.cpp:385
 #, kde-format
@@ -9252,10 +8876,8 @@ msgid "Cannot convert %1 to an int"
 msgstr "%1 を整数に変換できません"
 
 #: libbtcore/bcodec/bdecoder.cpp:202
-#, fuzzy
-#| msgid "Torrent is incomplete!"
 msgid "Torrent is incomplete."
-msgstr "torrent が不完全です!"
+msgstr "torrent が不完全です。"
 
 #: libbtcore/diskio/singlefilecache.cpp:72
 #: libbtcore/diskio/multifilecache.cpp:106
@@ -9332,10 +8954,8 @@ msgstr "ファイル <filename>%1</filename> を開けません: %2"
 #: libbtcore/torrent/torrent.cpp:182 libbtcore/torrent/torrent.cpp:189
 #: libbtcore/torrent/torrent.cpp:197 libbtcore/torrent/torrent.cpp:201
 #: libbtcore/torrent/torrent.cpp:222 libbtcore/torrent/torrent.cpp:293
-#, fuzzy
-#| msgid "Corrupted torrent!"
 msgid "Corrupted torrent."
-msgstr "torrent が壊れています!"
+msgstr "torrent が壊れています。"
 
 #: libbtcore/torrent/torrent.cpp:145
 #, kde-format
@@ -9346,36 +8966,30 @@ msgstr "torrent ファイル <filename>%1</filename> を開けません: %2"
 msgid "Parse Error"
 msgstr "解析エラー"
 
-#: libbtcore/torrent/torrentcontrol.cpp:469
-#, fuzzy, kde-format
-#| msgid ""
-#| "An error occurred while loading the torrent <b>%1</b>\n"
-#| "The torrent is probably corrupt or is not a torrent file."
+#: libbtcore/torrent/torrentcontrol.cpp:468
+#, kde-format
 msgid ""
 "An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
 "torrent is probably corrupt or is not a valid torrent file."
 msgstr ""
-"torrent <b>%1</b> のロード中にエラーが発生しました。\n"
-"torrent が壊れているか、元々 torrent ファイルではないようです。"
+"torrent <b>%1</b> のロード中にエラーが発生しました:<br/>%2<br/>おそらく "
+"torrent が壊れているか、有効な torrent ファイルではありません。"
 
-#: libbtcore/torrent/torrentcontrol.cpp:498
-#, fuzzy, kde-format
-#| msgid ""
-#| "An error occurred while loading the torrent <b>%1</b>\n"
-#| "The torrent is probably corrupt or is not a torrent file."
+#: libbtcore/torrent/torrentcontrol.cpp:497
+#, kde-format
 msgid ""
 "An error occurred while loading the torrent:<br/><b>%1</b><br/>The torrent "
 "is probably corrupt or is not a valid torrent file."
 msgstr ""
-"torrent <b>%1</b> のロード中にエラーが発生しました。\n"
-"torrent が壊れているか、元々 torrent ファイルではないようです。"
+"torrent のロード中にエラーが発生しました:<br/>%1<br/>おそらく torrent が壊れ"
+"ているか、有効な torrent ファイルではありません。"
 
-#: libbtcore/torrent/torrentcontrol.cpp:508
+#: libbtcore/torrent/torrentcontrol.cpp:507
 #, kde-format
 msgid "Unable to create %1 : %2"
 msgstr "<resource>%1</resource> を作成できません: %2"
 
-#: libbtcore/torrent/torrentcontrol.cpp:523
+#: libbtcore/torrent/torrentcontrol.cpp:522
 #, kde-format
 msgid ""
 "You are already downloading this torrent %1, the list of trackers of both "
@@ -9384,7 +8998,7 @@ msgstr ""
 "torrent <resource>%1</resource> は既にダウンロード中です。両方の torrent のト"
 "ラッカーリストをマージしました。"
 
-#: libbtcore/torrent/torrentcontrol.cpp:527
+#: libbtcore/torrent/torrentcontrol.cpp:526
 #, kde-format
 msgid "You are already downloading the torrent %1"
 msgstr "torrent <resource>%1</resource> は既にダウンロード中です"
@@ -9402,11 +9016,9 @@ msgid "Seeding completed"
 msgstr "シード完了"
 
 #: libbtcore/torrent/torrentstats.cpp:74
-#, fuzzy
-#| msgid "Seeding"
 msgctxt "Status of a torrent file"
 msgid "Seeding"
-msgstr "シード"
+msgstr "シード中"
 
 #: libbtcore/torrent/torrentstats.cpp:76
 msgid "Downloading"
@@ -9446,17 +9058,16 @@ msgid "Cannot create index file: %1"
 msgstr "インデックスファイルを作成できません: %1"
 
 #: libbtcore/tracker/httpannouncejob.cpp:119
-#, fuzzy
-#| msgid "Redirected without a new location !"
 msgid "Redirect without a redirect location"
-msgstr "新しい場所なしでリダイレクトされました"
+msgstr "リダイレクト先なしでリダイレクトされました"
 
-#: libbtcore/tracker/udptracker.cpp:288 libbtcore/tracker/udptracker.cpp:298
+#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
-msgstr ""
+msgstr "トラッカー %1 への接続中にタイムアウト"
 
-#: libbtcore/tracker/udptracker.cpp:320
+#: libbtcore/tracker/udptracker.cpp:330
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "ホスト名 %1 を解決できませんでした"
@@ -9468,16 +9079,16 @@ msgstr ""
 "UDP ポート <numid>%1</numid> またはそれに続く 10 個のポートにバインドできませ"
 "ん。"
 
-#: libbtcore/tracker/httptracker.cpp:270 libbtcore/tracker/httptracker.cpp:290
-#: libbtcore/tracker/httptracker.cpp:330 libbtcore/tracker/httptracker.cpp:444
+#: libbtcore/tracker/httptracker.cpp:282 libbtcore/tracker/httptracker.cpp:302
+#: libbtcore/tracker/httptracker.cpp:342 libbtcore/tracker/httptracker.cpp:461
 msgid "Invalid response from tracker"
 msgstr "トラッカーから無効な応答"
 
-#: libbtcore/tracker/httptracker.cpp:283
+#: libbtcore/tracker/httptracker.cpp:295
 msgid "Invalid data from tracker"
 msgstr "トラッカーから無効なデータ"
 
-#: libbtcore/tracker/httptracker.cpp:461
+#: libbtcore/tracker/httptracker.cpp:478
 msgid "Invalid tracker URL"
 msgstr "無効なトラッカー URL"
 
@@ -9485,144 +9096,3 @@ msgstr "無効なトラッカー URL"
 #, kde-format
 msgid "Cannot open file : %1 : %2"
 msgstr "ファイル <filename>%1</filename> を開けません: %2"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:10pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Quit KTorrent</p></"
-#~ "body></html>"
-#~ msgstr "<html>KTorrent を終了</html>"
-
-#~ msgid "Quit"
-#~ msgstr "終了"
-
-#~ msgid "Free disk space:"
-#~ msgstr "ディスクの空き領域:"
-
-#~ msgid ""
-#~ "You will lose all data in these files, are you sure you want to do this ?"
-#~ msgstr ""
-#~ "これらのファイルのすべてのデータを失うことになります。本当によろしいです"
-#~ "か？"
-
-#, fuzzy
-#~| msgid "From:"
-#~ msgid "Form"
-#~ msgstr "開始:"
-
-#~ msgid "Cannot expand file : %1"
-#~ msgstr "ファイルを展開できません: %1"
-
-#~ msgid "Cannot add a tracker to a private torrent."
-#~ msgstr "非公開 torrent にトラッカーを追加することはできません。"
-
-#~ msgid "Checking Data Integrity"
-#~ msgstr "データの整合性をチェック"
-
-#~ msgid "Cannot migrate %1 : %2"
-#~ msgstr "<resource>%1</resource> を移行できません: %2"
-
-#~ msgid ""
-#~ "The torrent %1 was started with a previous version of KTorrent. To make "
-#~ "sure this torrent still works with this version of KTorrent, we will "
-#~ "migrate this torrent. You will be asked for a location to save the "
-#~ "torrent to. If you press cancel, we will select your home directory."
-#~ msgstr ""
-#~ "torrent <resource>%1</resource> は前のバージョンの KTorrent で開始されてい"
-#~ "ます。このバージョンの KTorrent で間違いなく動くように、この torrent を移"
-#~ "行します。その際に torrent を保存する場所を確認します。キャンセルを押すと"
-#~ "ホームディレクトリになります。"
-
-#~ msgid "Select Folder to Save To"
-#~ msgstr "保存先フォルダを選択"
-
-#~ msgid "Error: "
-#~ msgstr "エラー: "
-
-#~ msgid "Apply"
-#~ msgstr "適用"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#~ "size:8pt; font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Instead of using a tree "
-#~ "of files to display the contents of a torrent, use a flat list of files.</"
-#~ "p></body></html>"
-#~ msgstr ""
-#~ "<html>torrent のファイルをツリー状に表示せずにフラットなリストで表示しま"
-#~ "す。</html>"
-
-#~ msgid "Use a list of files when displaying the files of a torrent"
-#~ msgstr "torrent のファイルをフラット表示する"
-
-#~ msgid "Torrent has no announce or nodes field"
-#~ msgstr "torrent にアナウンスまたはノードフィールドがありません"
-
-#~ msgid ""
-#~ "An error occurred while loading the torrent.\n"
-#~ "The torrent is probably corrupt or is not a torrent file."
-#~ msgstr ""
-#~ "torrent のロード中にエラーが発生しました。\n"
-#~ "torrent が壊れているか、元々 torrent ファイルではないようです。"
-
-#~ msgid "There is a problem with the tracker: <br><b>%1</b>"
-#~ msgstr "トラッカーに問題があります: <br><b>%1</b>"
-
-#~ msgid "Disk space reservation method:"
-#~ msgstr "ディスク領域の確保方法:"
-
-#~ msgid ""
-#~ "<html>Which method to use for reserving diskspace.\n"
-#~ "<ul><li>\n"
-#~ "<b>Basic:</b> Will work on all filesystems, but is slow.\n"
-#~ "</li><li>\n"
-#~ "<b>Filesystem Specific:</b> Will use special methods provided by some "
-#~ "filesystems, which are faster than the basic method.\n"
-#~ "</li></ul>\n"
-#~ "</html>"
-#~ msgstr ""
-#~ "<html><para>ディスク領域を確保する方法を指定します。<list><item>基本的: す"
-#~ "べてのファイルシステムで使用できますが、時間がかかります。</item><item>"
-#~ "ファイルシステム専用: 一部のファイルシステムが提供する特別な方法を用いま"
-#~ "す。基本的な方法より高速です。</item></list></para></html>"
-
-#~ msgid "Basic"
-#~ msgstr "基本的"
-
-#~ msgid "Filesystem Specific"
-#~ msgstr "ファイルシステム専用"
-
-#~ msgid "Current Tracker"
-#~ msgstr "現在のトラッカー"
-
-#~ msgid "Seeders:"
-#~ msgstr "シーダー:"
-
-#~ msgid "Leechers:"
-#~ msgstr "リーチャー:"
-
-#~ msgid "Next Update In:"
-#~ msgstr "次の更新までの時間:"
-
-#~ msgid "Available Trackers"
-#~ msgstr "利用可能なトラッカー"
-
-#~ msgid "Tracker status:"
-#~ msgstr "トラッカーの状態:"
-
-#~ msgid "Next update in:"
-#~ msgstr "次の更新までの時間:"
-
-#~ msgid "Cannot remove torrent default tracker."
-#~ msgstr "torrent の標準のトラッカーは削除できません。"
-
-#~ msgid "You cannot add trackers to a private torrent"
-#~ msgstr "非公開 torrent にトラッカーを追加することはできません"
