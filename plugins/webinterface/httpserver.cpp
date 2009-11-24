@@ -71,6 +71,7 @@ namespace kt
 	{
 		qsrand(time(0));
 		sock = new net::Socket(true,4);
+		content_generators.setAutoDelete(true);
 		addContentGenerator(new TorrentListGenerator(core,this));
 		addContentGenerator(new ChallengeGenerator(this));
 		addContentGenerator(new LoginHandler(this));
@@ -112,6 +113,7 @@ namespace kt
 	{
 		sock->close();
 		delete sock;
+		qDeleteAll(clients);
 	}
 
 	QString HttpServer::skinDir() const
@@ -150,6 +152,7 @@ namespace kt
 		HttpClientHandler* handler = new HttpClientHandler(this,socket);
 		connect(handler,SIGNAL(closed()),this,SLOT(slotConnectionClosed()));
 		Out(SYS_WEB|LOG_NOTICE) << "connection from "<< addr.toString()  << endl;
+		clients.append(handler);
 	}
 
 	bool HttpServer::checkLogin(const QHttpRequestHeader & hdr,const QByteArray & data)
@@ -481,6 +484,7 @@ namespace kt
 	void HttpServer::slotConnectionClosed()
 	{
 		HttpClientHandler* client = (HttpClientHandler*)sender();
+		clients.removeAll(client);
 		client->deleteLater();
 	}
 

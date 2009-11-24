@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-08 01:29+0100\n"
+"POT-Creation-Date: 2009-11-21 01:31+0100\n"
 "PO-Revision-Date: 2009-10-31 23:24+0900\n"
 "Last-Translator: Yukiko Bando <ybando@k6.dion.ne.jp>\n"
 "Language-Team: Japanese <Kdeveloper@kde.gr.jp>\n"
@@ -184,9 +184,9 @@ msgstr "<b>%1</b> をインポートしました"
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:213
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_upload_limit)
 #: ktorrent/spinboxdelegate.cpp:39 rc.cpp:98 rc.cpp:569 rc.cpp:578 rc.cpp:877
-#: rc.cpp:886 rc.cpp:1080 rc.cpp:1092 rc.cpp:2497 rc.cpp:2509 rc.cpp:2572
-#: rc.cpp:2581 rc.cpp:2593 rc.cpp:2602 rc.cpp:2665 rc.cpp:2674 rc.cpp:2686
-#: rc.cpp:2695
+#: rc.cpp:886 rc.cpp:1080 rc.cpp:1092 rc.cpp:2488 rc.cpp:2500 rc.cpp:2563
+#: rc.cpp:2572 rc.cpp:2584 rc.cpp:2593 rc.cpp:2656 rc.cpp:2665 rc.cpp:2677
+#: rc.cpp:2686
 msgid " KiB/s"
 msgstr " KiB/秒"
 
@@ -313,10 +313,10 @@ msgstr " KiB/秒"
 #: ktorrent/spinboxdelegate.cpp:41 ktorrent/speedlimitsmodel.cpp:138
 #: ktorrent/speedlimitsmodel.cpp:143 rc.cpp:566 rc.cpp:575 rc.cpp:584
 #: rc.cpp:593 rc.cpp:655 rc.cpp:664 rc.cpp:742 rc.cpp:751 rc.cpp:874
-#: rc.cpp:883 rc.cpp:1059 rc.cpp:1068 rc.cpp:1077 rc.cpp:1089 rc.cpp:1728
-#: rc.cpp:1734 rc.cpp:2494 rc.cpp:2506 rc.cpp:2569 rc.cpp:2578 rc.cpp:2590
-#: rc.cpp:2599 rc.cpp:2614 rc.cpp:2620 rc.cpp:2662 rc.cpp:2671 rc.cpp:2683
-#: rc.cpp:2692 rc.cpp:2707 rc.cpp:2713 plugins/infowidget/statustab.cpp:65
+#: rc.cpp:883 rc.cpp:1059 rc.cpp:1068 rc.cpp:1077 rc.cpp:1089 rc.cpp:1719
+#: rc.cpp:1725 rc.cpp:2485 rc.cpp:2497 rc.cpp:2560 rc.cpp:2569 rc.cpp:2581
+#: rc.cpp:2590 rc.cpp:2605 rc.cpp:2611 rc.cpp:2653 rc.cpp:2662 rc.cpp:2674
+#: rc.cpp:2683 rc.cpp:2698 rc.cpp:2704 plugins/infowidget/statustab.cpp:65
 msgid "No limit"
 msgstr "制限なし"
 
@@ -376,7 +376,7 @@ msgstr "<filename>%1</filename> を開けません: %2"
 
 #: ktorrent/importdialog.cpp:385 ktorrent/importdialog.cpp:402
 #: libbtcore/diskio/singlefilecache.cpp:83
-#: libbtcore/diskio/multifilecache.cpp:133
+#: libbtcore/diskio/multifilecache.cpp:134
 #, kde-format
 msgid "Failed to create %1 : %2"
 msgstr "<filename>%1</filename> を作成できませんでした: %2"
@@ -416,7 +416,7 @@ msgid "Start all selected torrents in the current tab"
 msgstr "現在のタブで選択したすべての torrent を開始します"
 
 #: ktorrent/viewmanager.cpp:539
-#: plugins/mediaplayer/mediaplayeractivity.cpp:105
+#: plugins/mediaplayer/mediaplayeractivity.cpp:106
 #: plugins/mediaplayer/videowidget.cpp:60
 msgid "Stop"
 msgstr "停止"
@@ -446,7 +446,7 @@ msgstr "現在のタブで選択したすべての torrent を停止します"
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:67
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
 #: ktorrent/viewmanager.cpp:545 rc.cpp:472 rc.cpp:499 rc.cpp:508 rc.cpp:901
-#: rc.cpp:2207 plugins/mediaplayer/playlistwidget.cpp:107
+#: rc.cpp:2198 plugins/mediaplayer/playlistwidget.cpp:107
 msgid "Remove"
 msgstr "削除"
 
@@ -494,7 +494,7 @@ msgstr "ピアを追加"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_5)
 #. i18n: file: plugins/stats/Settings.ui:234
 #. i18n: ectx: property (text), widget (QLabel, label_12)
-#: ktorrent/viewmanager.cpp:576 rc.cpp:1811 rc.cpp:1898 rc.cpp:2063
+#: ktorrent/viewmanager.cpp:576 rc.cpp:1802 rc.cpp:1889 rc.cpp:2054
 #: plugins/infowidget/peerviewmodel.cpp:312
 #: libbtcore/util/logsystemmanager.cpp:36
 msgid "DHT"
@@ -513,7 +513,7 @@ msgid "Scrape"
 msgstr "スクレイプ"
 
 #: ktorrent/viewmanager.cpp:596 plugins/infowidget/iwfilelistmodel.cpp:78
-#: plugins/infowidget/iwfiletreemodel.cpp:89
+#: plugins/infowidget/iwfiletreemodel.cpp:90
 msgid "Preview"
 msgstr "プレビュー"
 
@@ -589,8 +589,8 @@ msgstr "重複した IP アドレス %1"
 msgid "Calculate Recommended Settings"
 msgstr "推奨設定を計算"
 
-#: ktorrent/recommendedsettingsdlg.cpp:242
-#: ktorrent/recommendedsettingsdlg.cpp:248
+#: ktorrent/recommendedsettingsdlg.cpp:245
+#: ktorrent/recommendedsettingsdlg.cpp:251
 #, kde-format
 msgid "(= %1/s)"
 msgstr "(= %1/秒)"
@@ -1425,7 +1425,7 @@ msgstr "すべての torrent を開始します"
 #. i18n: ectx: property (text), widget (QCheckBox, m_paused)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:123
 #. i18n: ectx: property (text), widget (QCheckBox, m_paused)
-#: ktorrent/gui.cpp:400 rc.cpp:2563 rc.cpp:2656
+#: ktorrent/gui.cpp:400 rc.cpp:2554 rc.cpp:2647
 msgid "Stop all torrents"
 msgstr "すべての torrent を停止する"
 
@@ -1635,7 +1635,7 @@ msgstr "ストール時間"
 
 #: ktorrent/queuemanagermodel.cpp:122
 #: plugins/infowidget/iwfilelistmodel.cpp:77
-#: plugins/infowidget/iwfiletreemodel.cpp:88
+#: plugins/infowidget/iwfiletreemodel.cpp:89
 msgid "Priority"
 msgstr "優先度"
 
@@ -1766,7 +1766,7 @@ msgstr "右"
 
 #. i18n: file: plugins/stats/Settings.ui:272
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MaxMode)
-#: libktcore/gui/activitylistwidget.cpp:103 rc.cpp:2072
+#: libktcore/gui/activitylistwidget.cpp:103 rc.cpp:2063
 msgid "Top"
 msgstr "上"
 
@@ -1944,7 +1944,7 @@ msgstr "プラグイン"
 msgid "Connection closed unexpectedly."
 msgstr "接続が突然閉じられました。"
 
-#: libktupnp/httprequest.cpp:120
+#: libktupnp/httprequest.cpp:122
 msgid "Timeout occurred"
 msgstr "タイムアウトが発生しました"
 
@@ -1965,7 +1965,7 @@ msgstr ""
 "フォワーディングに失敗しました: \n"
 "デバイスに WANIPConnection または WANPPPConnection がありません。"
 
-#: libktupnp/upnprouter.cpp:434 libktupnp/upnprouter.cpp:447
+#: libktupnp/upnprouter.cpp:433 libktupnp/upnprouter.cpp:446
 msgid "Cannot find port forwarding service in the device's description."
 msgstr "デバイスの説明にポートフォワーディングサービスが見つかりません。"
 
@@ -2311,7 +2311,7 @@ msgstr "推奨設定:"
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:36
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:113 rc.cpp:880 rc.cpp:1083 rc.cpp:2488
+#: rc.cpp:113 rc.cpp:880 rc.cpp:1083 rc.cpp:2479
 msgid "Maximum upload speed:"
 msgstr "最大アップロード速度:"
 
@@ -2331,7 +2331,7 @@ msgstr "最大アップロード速度:"
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:65
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:117 rc.cpp:871 rc.cpp:1071 rc.cpp:2500
+#: rc.cpp:117 rc.cpp:871 rc.cpp:1071 rc.cpp:2491
 msgid "Maximum download speed:"
 msgstr "最大ダウンロード速度:"
 
@@ -2351,7 +2351,7 @@ msgstr "最大ダウンロード速度:"
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:258
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:121 rc.cpp:1053 rc.cpp:2611 rc.cpp:2704
+#: rc.cpp:121 rc.cpp:1053 rc.cpp:2602 rc.cpp:2695
 msgid "Maximum connections per torrent:"
 msgstr "torrent あたりの最大接続数:"
 
@@ -2371,7 +2371,7 @@ msgstr "torrent あたりの最大接続数:"
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:275
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:125 rc.cpp:1062 rc.cpp:2617 rc.cpp:2710
+#: rc.cpp:125 rc.cpp:1062 rc.cpp:2608 rc.cpp:2701
 msgid "Global connection limit:"
 msgstr "全体の接続制限:"
 
@@ -2425,7 +2425,7 @@ msgstr "ダウンロードするファイルを選んでください。"
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #. i18n: file: plugins/syndication/filtereditor.ui:239
 #. i18n: ectx: property (text), widget (QCheckBox, m_use_custom_download_location)
-#: rc.cpp:146 rc.cpp:2309
+#: rc.cpp:146 rc.cpp:2300
 msgid "Download to:"
 msgstr "ダウンロード先:"
 
@@ -2511,7 +2511,7 @@ msgstr "既存のファイルは見つかりません"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #. i18n: file: plugins/syndication/filtereditor.ui:183
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: rc.cpp:179 rc.cpp:421 rc.cpp:1435 rc.cpp:2118 rc.cpp:2297
+#: rc.cpp:179 rc.cpp:421 rc.cpp:1435 rc.cpp:2109 rc.cpp:2288
 msgid "Options"
 msgstr "オプション"
 
@@ -3118,7 +3118,7 @@ msgstr "127.0.0.1"
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:61
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: rc.cpp:406 rc.cpp:487 rc.cpp:935 rc.cpp:981 rc.cpp:1029 rc.cpp:1375
-#: rc.cpp:1522 rc.cpp:2438
+#: rc.cpp:1522 rc.cpp:2429
 msgid "Port:"
 msgstr "ポート:"
 
@@ -3150,8 +3150,8 @@ msgstr "ポート:"
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
 #. i18n: file: plugins/search/searchpref.ui:139
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
-#: rc.cpp:409 rc.cpp:469 rc.cpp:490 rc.cpp:505 rc.cpp:898 rc.cpp:2204
-#: rc.cpp:2360
+#: rc.cpp:409 rc.cpp:469 rc.cpp:490 rc.cpp:505 rc.cpp:898 rc.cpp:2195
+#: rc.cpp:2351
 msgid "Add"
 msgstr "追加"
 
@@ -3279,7 +3279,7 @@ msgstr "torrent をこのグループに追加:"
 
 #. i18n: file: ktorrent/torrentcreatordlg.ui:168
 #. i18n: ectx: attribute (title), widget (QWidget, m_tracker_tab)
-#: rc.cpp:466 plugins/infowidget/infowidgetplugin.cpp:271
+#: rc.cpp:466 plugins/infowidget/infowidgetplugin.cpp:266
 msgid "Trackers"
 msgstr "トラッカー"
 
@@ -3291,7 +3291,7 @@ msgstr "トラッカー"
 #. i18n: ectx: property (text), widget (KPushButton, m_move_up)
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:50
 #. i18n: ectx: property (text), widget (KPushButton, m_move_up)
-#: rc.cpp:475 rc.cpp:2154
+#: rc.cpp:475 rc.cpp:2145
 msgid "Move Up"
 msgstr "上へ移動"
 
@@ -3303,7 +3303,7 @@ msgstr "上へ移動"
 #. i18n: ectx: property (text), widget (KPushButton, m_move_down)
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:57
 #. i18n: ectx: property (text), widget (KPushButton, m_move_down)
-#: rc.cpp:478 rc.cpp:2157
+#: rc.cpp:478 rc.cpp:2148
 msgid "Move Down"
 msgstr "下へ移動"
 
@@ -3355,7 +3355,7 @@ msgstr "ウェブシード"
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: file: plugins/infowidget/statustab.ui:123
 #. i18n: ectx: property (text), widget (QLabel, label_17)
-#: rc.cpp:511 rc.cpp:1704
+#: rc.cpp:511 rc.cpp:1695
 msgid "Comments:"
 msgstr "コメント:"
 
@@ -3493,7 +3493,7 @@ msgstr "最長シード時間:"
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, m_max_seed_time)
 #. i18n: file: plugins/infowidget/statustab.ui:318
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, time_limit)
-#: rc.cpp:587 rc.cpp:1737
+#: rc.cpp:587 rc.cpp:1728
 msgid " Hours"
 msgstr " 時間"
 
@@ -4178,7 +4178,7 @@ msgstr "ユーザ名とパスワードが必要"
 #. i18n: ectx: property (text), widget (QLabel, textLabel5)
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:25
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1000 rc.cpp:1507 rc.cpp:2429
+#: rc.cpp:1000 rc.cpp:1507 rc.cpp:2420
 msgid "Username:"
 msgstr "ユーザ名:"
 
@@ -4211,7 +4211,7 @@ msgstr "<html>SOCKS プロキシサーバのユーザ名</html>"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:35
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1010 rc.cpp:1513 rc.cpp:2432
+#: rc.cpp:1010 rc.cpp:1513 rc.cpp:2423
 msgid "Password:"
 msgstr "パスワード:"
 
@@ -4240,7 +4240,7 @@ msgstr "<html>SOCKS プロキシサーバのパスワード</html>"
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #. i18n: file: plugins/syndication/feedwidget.ui:27
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1023 rc.cpp:2169
+#: rc.cpp:1023 rc.cpp:2160
 msgid "URL:"
 msgstr "URL:"
 
@@ -5176,7 +5176,7 @@ msgstr ""
 #. i18n: ectx: property (windowTitle), widget (QWidget, WebInterfacePrefWidget)
 #. i18n: file: plugins/search/searchpref.ui:25
 #. i18n: ectx: property (windowTitle), widget (QWidget, SearchPref)
-#: rc.cpp:1495 rc.cpp:2324
+#: rc.cpp:1495 rc.cpp:2315
 msgid "Search Preferences"
 msgstr "検索のオプション設定"
 
@@ -5374,7 +5374,7 @@ msgstr "すべて無効にする"
 #. i18n: ectx: property (windowTitle), widget (QWidget, ChunkDownloadView)
 #. i18n: file: plugins/infowidget/statustab.ui:164
 #. i18n: ectx: property (text), widget (QLabel, hdr_chunks)
-#: rc.cpp:1587 rc.cpp:1710 plugins/infowidget/infowidgetplugin.cpp:249
+#: rc.cpp:1587 rc.cpp:1701 plugins/infowidget/infowidgetplugin.cpp:244
 msgid "Chunks"
 msgstr "ピース"
 
@@ -5456,49 +5456,49 @@ msgstr "トラッカーを更新"
 msgid "Restore Defaults"
 msgstr "標準設定に戻す"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:16
+#. i18n: file: plugins/infowidget/iwprefpage.ui:17
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: rc.cpp:1632
 msgid "Tabs"
 msgstr "タブ"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:22
+#. i18n: file: plugins/infowidget/iwprefpage.ui:23
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showPeerView)
 #: rc.cpp:1635
 msgid "Whether or not to show the peers tab in the bottom of the window."
 msgstr "ウィンドウの下部にピアのタブを表示するかどうか"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:25
+#. i18n: file: plugins/infowidget/iwprefpage.ui:26
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showPeerView)
 #: rc.cpp:1638
 msgid "Show list of peers"
 msgstr "ピアの一覧を表示する"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:32
+#. i18n: file: plugins/infowidget/iwprefpage.ui:33
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showChunkView)
 #: rc.cpp:1641
 msgid "Whether or not to show the chunks tab in the bottom of the window."
 msgstr "ウィンドウの下部にピースのタブを表示するかどうか"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:35
+#. i18n: file: plugins/infowidget/iwprefpage.ui:36
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showChunkView)
 #: rc.cpp:1644
 msgid "Show list of chunks currently downloading"
 msgstr "ダウンロード中のピースの一覧を表示する"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:42
+#. i18n: file: plugins/infowidget/iwprefpage.ui:43
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showTrackersView)
 #: rc.cpp:1647
 msgid "Whether or not to show the trackers tab in the bottom of the window."
 msgstr "ウィンドウの下部にトラッカーのタブを表示するかどうか"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:45
+#. i18n: file: plugins/infowidget/iwprefpage.ui:46
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showTrackersView)
 #: rc.cpp:1650
 msgid "Show list of trackers"
 msgstr "トラッカーの一覧を表示する"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:55
+#. i18n: file: plugins/infowidget/iwprefpage.ui:56
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showWebSeedsTab)
 #: rc.cpp:1653
 msgid ""
@@ -5512,25 +5512,25 @@ msgid ""
 "webseeds tab at the bottom of the window.</p></body></html>"
 msgstr "<html>ウィンドウの下部にウェブシードのタブを表示するかどうか</html>"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:58
+#. i18n: file: plugins/infowidget/iwprefpage.ui:59
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showWebSeedsTab)
 #: rc.cpp:1659
 msgid "Show list of webseeds"
 msgstr "ウェブシードの一覧を表示する"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:68
+#. i18n: file: plugins/infowidget/iwprefpage.ui:69
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: rc.cpp:1662
 msgid "File Priority Colors"
 msgstr "ファイルの優先順位を表す色"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:74
+#. i18n: file: plugins/infowidget/iwprefpage.ui:75
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: rc.cpp:1665
 msgid "First priority:"
 msgstr "最初にダウンロード:"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:84
+#. i18n: file: plugins/infowidget/iwprefpage.ui:85
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_firstColor)
 #: rc.cpp:1668
 msgid ""
@@ -5544,35 +5544,15 @@ msgid ""
 "priority files.</p></body></html>"
 msgstr "<html>最初にダウンロードするファイルを示す色を指定します。</html>"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:91
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1674
-msgid "Normal priority:"
-msgstr "普通にダウンロード:"
-
-#. i18n: file: plugins/infowidget/iwprefpage.ui:101
-#. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_normalColor)
-#: rc.cpp:1677
-msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-"size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Color to use for normal "
-"priority files.</p></body></html>"
-msgstr "<html>普通にダウンロードするファイルを示す色を指定します。</html>"
-
-#. i18n: file: plugins/infowidget/iwprefpage.ui:108
+#. i18n: file: plugins/infowidget/iwprefpage.ui:92
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:1683
+#: rc.cpp:1674
 msgid "Last priority:"
 msgstr "最後にダウンロード:"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:118
+#. i18n: file: plugins/infowidget/iwprefpage.ui:102
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_lastColor)
-#: rc.cpp:1686
+#: rc.cpp:1677
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -5586,79 +5566,79 @@ msgstr "<html>最後にダウンロードするファイルの色を指定しま
 
 #. i18n: file: plugins/infowidget/statustab.ui:32
 #. i18n: ectx: property (text), widget (QLabel, hdr_info)
-#: rc.cpp:1692
+#: rc.cpp:1683
 msgid "Info"
 msgstr "情報"
 
 #. i18n: file: plugins/infowidget/statustab.ui:41
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:1695
+#: rc.cpp:1686
 msgid "Average down speed:"
 msgstr "下り平均速度:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:64
 #. i18n: ectx: property (text), widget (QLabel, label_16)
-#: rc.cpp:1698
+#: rc.cpp:1689
 msgid "Type:"
 msgstr "タイプ:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:100
 #. i18n: ectx: property (text), widget (QLabel, label_15)
-#: rc.cpp:1701
+#: rc.cpp:1692
 msgid "Average up speed:"
 msgstr "上り平均速度:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:139
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, comments)
-#: rc.cpp:1707
+#: rc.cpp:1698
 msgid "KSqueezedTextLabel"
 msgstr ""
 
 #. i18n: file: plugins/infowidget/statustab.ui:171
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:1713
+#: rc.cpp:1704
 msgid "Downloaded chunks:"
 msgstr "ダウンロード済みのピース:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:194
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:1716
+#: rc.cpp:1707
 msgid "Available chunks:"
 msgstr "利用可能なピース:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:256
 #. i18n: ectx: property (text), widget (QLabel, hdr_sharing)
-#: rc.cpp:1719
+#: rc.cpp:1710
 msgid "Sharing"
 msgstr "共有"
 
 #. i18n: file: plugins/infowidget/statustab.ui:265
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:1722
+#: rc.cpp:1713
 msgid "Share ratio:"
 msgstr "負担率:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:282
 #. i18n: ectx: property (text), widget (QCheckBox, use_ratio_limit)
-#: rc.cpp:1725
+#: rc.cpp:1716
 msgid "Ratio limit:"
 msgstr "負担率制限:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:308
 #. i18n: ectx: property (text), widget (QCheckBox, use_time_limit)
-#: rc.cpp:1731
+#: rc.cpp:1722
 msgid "Time limit:"
 msgstr "時間制限:"
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:19
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
-#: rc.cpp:1740 plugins/ipfilter/convertthread.cpp:174
+#: rc.cpp:1731 plugins/ipfilter/convertthread.cpp:174
 msgid "Converting..."
 msgstr "変換中..."
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:28
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:1743
+#: rc.cpp:1734
 msgid "Converting block list to KTorrent format. This might take some time."
 msgstr ""
 "ブロックリストを KTorrent のフォーマットに変換しています。しばらく時間がかか"
@@ -5666,55 +5646,55 @@ msgstr ""
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:95
 #. i18n: ectx: property (text), widget (QPushButton, m_cancel)
-#: rc.cpp:1746
+#: rc.cpp:1737
 msgid "C&ancel"
 msgstr "キャンセル(&A)"
 
 #. i18n: file: plugins/ipfilter/ktipfilterplugin.kcfg:10
 #. i18n: ectx: label, entry (filterURL), group (general)
-#: rc.cpp:1749
+#: rc.cpp:1740
 msgid "Level1 filter url"
 msgstr "Level1 フィルタの URL"
 
 #. i18n: file: plugins/ipfilter/ktipfilterplugin.kcfg:14
 #. i18n: ectx: label, entry (useLevel1), group (general)
-#: rc.cpp:1752
+#: rc.cpp:1743
 msgid "Use level1 filter?"
 msgstr "Level1 フィルタを使いますか？"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, IPBlockingPrefPage)
-#: rc.cpp:1755
+#: rc.cpp:1746
 msgid "IPBlocking Preferences"
 msgstr "IPBlocking の設定"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:22
 #. i18n: ectx: property (title), widget (Q3GroupBox, groupBox1)
-#: rc.cpp:1758
+#: rc.cpp:1749
 msgid "PeerGuardian Filter File "
 msgstr "PeerGuardian フィルタファイル"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:28
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useLevel1)
-#: rc.cpp:1761
+#: rc.cpp:1752
 msgid "Enable this if you want the IP filter plugin to work."
 msgstr "IP フィルタプラグインを使う場合、これを有効にします。"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:31
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useLevel1)
-#: rc.cpp:1764
+#: rc.cpp:1755
 msgid "Use PeerGuardian filter"
 msgstr "PeerGuardian フィルタを使う"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:43
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:1767
+#: rc.cpp:1758
 msgid "IP filter file:"
 msgstr "IP フィルタファイル:"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:53
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_filterURL)
-#: rc.cpp:1770
+#: rc.cpp:1761
 msgid "Filter file to use, this can be a local file or a remote file."
 msgstr ""
 "使用するフィルタファイル。これはローカルファイルでもリモートファイルでもかま"
@@ -5722,19 +5702,19 @@ msgstr ""
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:80
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_download)
-#: rc.cpp:1773
+#: rc.cpp:1764
 msgid "Download and convert the IP filter file."
 msgstr "IP フィルタファイルをダウンロードして変換します。"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:83
 #. i18n: ectx: property (text), widget (QPushButton, m_download)
-#: rc.cpp:1776
+#: rc.cpp:1767
 msgid "Dow&nload/Convert"
 msgstr "ダウンロード/変換(&N)"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:93
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: rc.cpp:1779
+#: rc.cpp:1770
 msgid ""
 "Download PeerGuardian filter from bluetack.co.uk or blocklist.org.\n"
 "NOTE: ZIP file from bluetack.co.uk is supported."
@@ -5745,43 +5725,43 @@ msgstr ""
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:116
 #. i18n: ectx: property (title), widget (QGroupBox, m_auto_update_group_box)
-#: rc.cpp:1783
+#: rc.cpp:1774
 msgid "Automatic Update"
 msgstr "自動更新"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:124
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_autoUpdate)
-#: rc.cpp:1786
+#: rc.cpp:1777
 msgid "Enable this if you want to automatically update the filter file."
 msgstr "フィルタファイルを自動的に更新するには、これを有効にします。"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:127
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_autoUpdate)
-#: rc.cpp:1789
+#: rc.cpp:1780
 msgid "Update file every:"
 msgstr "ファイルの更新間隔:"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:140
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_autoUpdateInterval)
-#: rc.cpp:1792
+#: rc.cpp:1783
 msgid "Update interval in days."
 msgstr "更新間隔を日数で指定します。"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:143
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_autoUpdateInterval)
-#: rc.cpp:1795
+#: rc.cpp:1786
 msgid " days"
 msgstr " 日"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:163
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1798
+#: rc.cpp:1789
 msgid "Last updated:"
 msgstr "前回の更新:"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:183
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1802
+#: rc.cpp:1793
 msgid "Next update:"
 msgstr "次回の更新:"
 
@@ -5801,14 +5781,14 @@ msgstr "次回の更新:"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. i18n: file: plugins/stats/Settings.ui:140
 #. i18n: ectx: property (text), widget (QLabel, label_11)
-#: rc.cpp:1805 rc.cpp:1808 rc.cpp:1871 rc.cpp:2054
+#: rc.cpp:1796 rc.cpp:1799 rc.cpp:1862 rc.cpp:2045
 #: libbtcore/util/logsystemmanager.cpp:34
 msgid "Connections"
 msgstr "接続"
 
 #. i18n: file: plugins/stats/Spd.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpdWgt)
-#: rc.cpp:1814 plugins/infowidget/webseedsmodel.cpp:125
+#: rc.cpp:1805 plugins/infowidget/webseedsmodel.cpp:125
 msgid "Speed"
 msgstr "速度"
 
@@ -5832,7 +5812,7 @@ msgstr "速度"
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: file: plugins/syndication/feedwidget.ui:125
 #. i18n: ectx: property (text), widget (KPushButton, m_download)
-#: rc.cpp:1817 rc.cpp:1829 rc.cpp:1832 rc.cpp:2051 rc.cpp:2186
+#: rc.cpp:1808 rc.cpp:1820 rc.cpp:1823 rc.cpp:2042 rc.cpp:2177
 #: plugins/search/htmlpart.cpp:196
 msgid "Download"
 msgstr "ダウンロード"
@@ -5849,8 +5829,8 @@ msgstr "ダウンロード"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #. i18n: file: plugins/stats/Settings.ui:166
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:1820 rc.cpp:1841 rc.cpp:2057
-#: plugins/infowidget/infowidgetplugin.cpp:227
+#: rc.cpp:1811 rc.cpp:1832 rc.cpp:2048
+#: plugins/infowidget/infowidgetplugin.cpp:222
 msgid "Peers"
 msgstr "ピア"
 
@@ -5870,7 +5850,7 @@ msgstr "ピア"
 #. i18n: ectx: property (text), widget (QLabel, label_15)
 #. i18n: file: plugins/stats/Settings.ui:192
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:1823 rc.cpp:1859 rc.cpp:1862 rc.cpp:2060
+#: rc.cpp:1814 rc.cpp:1850 rc.cpp:1853 rc.cpp:2051
 msgid "Upload"
 msgstr "アップロード"
 
@@ -5882,7 +5862,7 @@ msgstr "アップロード"
 #. i18n: ectx: property (title), widget (QGroupBox, ColorsGbw)
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:114
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:1826 rc.cpp:2512
+#: rc.cpp:1817 rc.cpp:2503
 msgid "Colors"
 msgstr "色"
 
@@ -5894,7 +5874,7 @@ msgstr "色"
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #. i18n: file: plugins/stats/DisplaySettings.ui:412
 #. i18n: ectx: property (text), widget (QLabel, label_16)
-#: rc.cpp:1835 rc.cpp:1865
+#: rc.cpp:1826 rc.cpp:1856
 msgid "Average"
 msgstr "平均"
 
@@ -5906,146 +5886,146 @@ msgstr "平均"
 #. i18n: ectx: property (text), widget (QLabel, label_13)
 #. i18n: file: plugins/stats/DisplaySettings.ui:451
 #. i18n: ectx: property (text), widget (QLabel, label_17)
-#: rc.cpp:1838 rc.cpp:1868
+#: rc.cpp:1829 rc.cpp:1859
 msgid "Limit"
 msgstr "制限"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:172
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:1844 plugins/stats/SpdTabPage.cc:72
+#: rc.cpp:1835 plugins/stats/SpdTabPage.cc:72
 msgid "Average from leechers"
 msgstr "リーチャーからの平均速度"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:207
 #. i18n: ectx: property (text), widget (QLabel, label_19)
-#: rc.cpp:1847 plugins/stats/SpdTabPage.cc:73
+#: rc.cpp:1838 plugins/stats/SpdTabPage.cc:73
 msgid "Average to leechers"
 msgstr "リーチャーへの平均速度"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:242
 #. i18n: ectx: property (text), widget (QLabel, label_20)
-#: rc.cpp:1850 plugins/stats/SpdTabPage.cc:74
+#: rc.cpp:1841 plugins/stats/SpdTabPage.cc:74
 msgid "Average from seeds"
 msgstr "シードからの平均速度"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:277
 #. i18n: ectx: property (text), widget (QLabel, label_21)
-#: rc.cpp:1853 plugins/stats/SpdTabPage.cc:75
+#: rc.cpp:1844 plugins/stats/SpdTabPage.cc:75
 msgid "From leechers"
 msgstr "リーチャーから"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:312
 #. i18n: ectx: property (text), widget (QLabel, label_22)
-#: rc.cpp:1856 plugins/stats/SpdTabPage.cc:76
+#: rc.cpp:1847 plugins/stats/SpdTabPage.cc:76
 msgid "From seeds"
 msgstr "シードから"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:512
 #. i18n: ectx: property (text), widget (QLabel, label_23)
-#: rc.cpp:1874 plugins/stats/ConnsTabPage.cc:57
+#: rc.cpp:1865 plugins/stats/ConnsTabPage.cc:57
 msgid "Leechers connected"
 msgstr "接続中のリーチャー"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:547
 #. i18n: ectx: property (text), widget (QLabel, label_24)
-#: rc.cpp:1877 plugins/stats/ConnsTabPage.cc:61
+#: rc.cpp:1868 plugins/stats/ConnsTabPage.cc:61
 #: plugins/stats/ConnsTabPage.cc:106
 msgid "Leechers in swarms"
 msgstr "スウォームのリーチャー"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:582
 #. i18n: ectx: property (text), widget (QLabel, label_25)
-#: rc.cpp:1880 plugins/stats/ConnsTabPage.cc:64
+#: rc.cpp:1871 plugins/stats/ConnsTabPage.cc:64
 msgid "Seeds connected"
 msgstr "接続中のシード"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:617
 #. i18n: ectx: property (text), widget (QLabel, label_26)
-#: rc.cpp:1883
+#: rc.cpp:1874
 msgid "Seeds  in swarms"
 msgstr "スウォームのシード"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:652
 #. i18n: ectx: property (text), widget (QLabel, label_27)
-#: rc.cpp:1886 plugins/stats/ConnsTabPage.cc:71
+#: rc.cpp:1877 plugins/stats/ConnsTabPage.cc:71
 msgid "Average leechers connected per torrent"
 msgstr "torrent あたりのリーチャーの平均接続数"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:687
 #. i18n: ectx: property (text), widget (QLabel, label_28)
-#: rc.cpp:1889 plugins/stats/ConnsTabPage.cc:73
+#: rc.cpp:1880 plugins/stats/ConnsTabPage.cc:73
 msgid "Average seeds connected per torrent"
 msgstr "torrent あたりのシードの平均接続数"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:722
 #. i18n: ectx: property (text), widget (QLabel, label_29)
-#: rc.cpp:1892
+#: rc.cpp:1883
 msgid "Avg. leechers connected per running torr."
 msgstr "実行中の torrent あたりのリーチャーの平均接続数"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:757
 #. i18n: ectx: property (text), widget (QLabel, label_30)
-#: rc.cpp:1895
+#: rc.cpp:1886
 msgid "Avg. seeds connected per running torrent"
 msgstr "実行中の torrent あたりのシードの平均接続数"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:805
 #. i18n: ectx: property (text), widget (QLabel, label_31)
-#: rc.cpp:1901 plugins/stats/ConnsTabPage.cc:83
+#: rc.cpp:1892 plugins/stats/ConnsTabPage.cc:83
 msgid "Nodes"
 msgstr "ノード"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:844
 #. i18n: ectx: property (text), widget (QLabel, label_32)
-#: rc.cpp:1904 plugins/stats/ConnsTabPage.cc:84
+#: rc.cpp:1895 plugins/stats/ConnsTabPage.cc:84
 msgid "Tasks"
 msgstr "タスク"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:903
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:1907 plugins/stats/DisplaySettingsPage.cc:28
+#: rc.cpp:1898 plugins/stats/DisplaySettingsPage.cc:28
 msgid "Display"
 msgstr "表示"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:909
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AntiAliasing)
-#: rc.cpp:1910
+#: rc.cpp:1901
 msgid "Use anti-aliasing"
 msgstr "アンチエイリアシングを使う"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:919
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_DrawBgdGrid)
-#: rc.cpp:1913
+#: rc.cpp:1904
 msgid "Draw background grid"
 msgstr "背景のグリッドを描画する"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:931
 #. i18n: ectx: property (text), widget (QLabel, label_18)
-#: rc.cpp:1916
+#: rc.cpp:1907
 msgid "Widget type:"
 msgstr "ウィジェットのタイプ:"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:939
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_WidgetType)
-#: rc.cpp:1919
+#: rc.cpp:1910
 msgid "Native"
 msgstr "ネイティブ"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:944
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_WidgetType)
-#: rc.cpp:1922
+#: rc.cpp:1913
 msgid "KDE"
 msgstr "KDE"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:952
 #. i18n: ectx: property (text), widget (QLabel, label_33)
-#: rc.cpp:1925
+#: rc.cpp:1916
 msgid "(plugin reload is needed after change)"
 msgstr "(変更を適用するにはプラグインの再ロードが必要です)"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:10
 #. i18n: ectx: label, entry (UpdateEveryGuiUpdates), group (general)
-#: rc.cpp:1928
+#: rc.cpp:1919
 #, fuzzy
 #| msgid "Update charts every"
 msgid "Update charts every n gui updates"
@@ -6053,322 +6033,322 @@ msgstr "チャートの更新間隔"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:15
 #. i18n: ectx: label, entry (DataGatherIval), group (general)
-#: rc.cpp:1931
+#: rc.cpp:1922
 msgid "Interval in miliseconds between data gathering"
 msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:20
 #. i18n: ectx: label, entry (MaxMode), group (general)
-#: rc.cpp:1934
+#: rc.cpp:1925
 msgid "Method of determining maximum value of the scale"
 msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:25
 #. i18n: ectx: label, entry (ShowSeedsInSwarms), group (general)
-#: rc.cpp:1937
+#: rc.cpp:1928
 msgid "Whether to show seeds in swarms"
 msgstr "スウォームのシードを表示するかどうか"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:30
 #. i18n: ectx: label, entry (ShowLeechersInSwarms), group (general)
-#: rc.cpp:1940
+#: rc.cpp:1931
 msgid "Whether to show leachers in swarms"
 msgstr "スウォームのリーチャーを表示するかどうか"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:35
 #. i18n: ectx: label, entry (DlSpdSamples), group (general)
-#: rc.cpp:1943
+#: rc.cpp:1934
 msgid "Samples to show on download chart"
 msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:40
 #. i18n: ectx: label, entry (PeersSpdSamples), group (general)
-#: rc.cpp:1946
+#: rc.cpp:1937
 msgid "Samples to show on peers chart"
 msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:45
 #. i18n: ectx: label, entry (UlSpdSamples), group (general)
-#: rc.cpp:1949
+#: rc.cpp:1940
 msgid "Samples to show on upload chart"
 msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:50
 #. i18n: ectx: label, entry (ConnsSamples), group (general)
-#: rc.cpp:1952
+#: rc.cpp:1943
 msgid "Samples to show on connections chart"
 msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:55
 #. i18n: ectx: label, entry (DhtSpdSamples), group (general)
-#: rc.cpp:1955
+#: rc.cpp:1946
 msgid "Samples to show on DHT chart"
 msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:60
 #. i18n: ectx: label, entry (DlSpdColor), group (general)
-#: rc.cpp:1958
+#: rc.cpp:1949
 msgid "Color of the speed on dl chart"
 msgstr "ダウンロードチャートの速度の色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:65
 #. i18n: ectx: label, entry (DlAvgColor), group (general)
-#: rc.cpp:1961
+#: rc.cpp:1952
 msgid "Color of the average on dl chart"
 msgstr "ダウンロードチャートの平均の色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:70
 #. i18n: ectx: label, entry (DlLimitColor), group (general)
-#: rc.cpp:1964
+#: rc.cpp:1955
 msgid "Color of the limit on dl chart"
 msgstr "ダウンロードチャートの制限の色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:75
 #. i18n: ectx: label, entry (PrAvgFromLColor), group (general)
-#: rc.cpp:1967
+#: rc.cpp:1958
 msgid "Color of the avg from leecher on peers chart"
 msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:80
 #. i18n: ectx: label, entry (PrAvgToLColor), group (general)
-#: rc.cpp:1970
+#: rc.cpp:1961
 msgid "Color of the avg to leecher on peers chart"
 msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:85
 #. i18n: ectx: label, entry (PrAvgFromSColor), group (general)
-#: rc.cpp:1973
+#: rc.cpp:1964
 msgid "Color of the avg from seeds on peers chart"
 msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:90
 #. i18n: ectx: label, entry (PrFromLColor), group (general)
-#: rc.cpp:1976
+#: rc.cpp:1967
 msgid "Color of the leechers on peers chart"
 msgstr "ピアチャートのリーチャーの色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:95
 #. i18n: ectx: label, entry (PrFromSColor), group (general)
-#: rc.cpp:1979
+#: rc.cpp:1970
 msgid "Color of the seeds on peers chart"
 msgstr "ピアチャートのシードの色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:100
 #. i18n: ectx: label, entry (UlSpdColor), group (general)
-#: rc.cpp:1982
+#: rc.cpp:1973
 msgid "Color of the speed on upload chart"
 msgstr "アップロードチャートの速度の色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:105
 #. i18n: ectx: label, entry (UlAvgColor), group (general)
-#: rc.cpp:1985
+#: rc.cpp:1976
 msgid "Color of the avg on upload chart"
 msgstr "アップロードチャートの平均の色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:110
 #. i18n: ectx: label, entry (UlLimitColor), group (general)
-#: rc.cpp:1988
+#: rc.cpp:1979
 msgid "Color of the limit on upload chart"
 msgstr "アップロードチャートの制限の色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:115
 #. i18n: ectx: label, entry (CnLConnColor), group (general)
-#: rc.cpp:1991
+#: rc.cpp:1982
 msgid "Color of the connected leechers on connections chart"
 msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:120
 #. i18n: ectx: label, entry (CnLSwarmsColor), group (general)
-#: rc.cpp:1994
+#: rc.cpp:1985
 msgid "Color of the leechers in swarms on connections chart"
 msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:125
 #. i18n: ectx: label, entry (CnSConnColor), group (general)
-#: rc.cpp:1997
+#: rc.cpp:1988
 msgid "Color of the connected seeds on connections chart"
 msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:130
 #. i18n: ectx: label, entry (CnSSwarmsColor), group (general)
-#: rc.cpp:2000
+#: rc.cpp:1991
 msgid "Color of the seeds in swarms on connections chart"
 msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:135
 #. i18n: ectx: label, entry (CnAvgLConnPerTorrColor), group (general)
-#: rc.cpp:2003
+#: rc.cpp:1994
 msgid "Color of the avg connected leecher per torrent on connections chart"
 msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:140
 #. i18n: ectx: label, entry (CnAvgSConnPerTorrColor), group (general)
-#: rc.cpp:2006
+#: rc.cpp:1997
 msgid "Color of the avg connected seeds per torrent on connections chart"
 msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:145
 #. i18n: ectx: label, entry (CnAvgLConnPerRunTorrColor), group (general)
-#: rc.cpp:2009
+#: rc.cpp:2000
 msgid ""
 "Color of the avg connected leechers per running torrent on connections chart"
 msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:150
 #. i18n: ectx: label, entry (CnAvgSConnPerRunTorrColor), group (general)
-#: rc.cpp:2012
+#: rc.cpp:2003
 msgid ""
 "Color of the avg connected seeds per running torrent on connections chart"
 msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:155
 #. i18n: ectx: label, entry (DhtNodesColor), group (general)
-#: rc.cpp:2015
+#: rc.cpp:2006
 msgid "Color of the nodes on DHT chart"
 msgstr "DHT チャートのノードの色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:160
 #. i18n: ectx: label, entry (DhtTasksColor), group (general)
-#: rc.cpp:2018
+#: rc.cpp:2009
 msgid "Color of the tasks on DHT chart"
 msgstr "DHT チャートのタスクの色"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:165
 #. i18n: ectx: label, entry (AntiAliasing), group (general)
-#: rc.cpp:2021
+#: rc.cpp:2012
 msgid "Use anti aliasing on charts?"
 msgstr "チャートにアンチエイリアシングを使うかどうか"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:170
 #. i18n: ectx: label, entry (DrawBgdGrid), group (general)
-#: rc.cpp:2024
+#: rc.cpp:2015
 msgid "Draw ugly grey background grid?"
 msgstr "グレーの背景グリッドを描画しますか？"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:175
 #. i18n: ectx: label, entry (WidgetType), group (general)
-#: rc.cpp:2027
+#: rc.cpp:2018
 msgid "Type of widget used for chart drawing"
 msgstr ""
 
 #. i18n: file: plugins/stats/Settings.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, StatsSettingsWgt)
-#: rc.cpp:2030
+#: rc.cpp:2021
 msgid "Settings"
 msgstr "設定"
 
 #. i18n: file: plugins/stats/Settings.ui:19
 #. i18n: ectx: property (title), widget (QGroupBox, UpdateGbw)
-#: rc.cpp:2033
+#: rc.cpp:2024
 msgid "Update"
 msgstr "更新"
 
 #. i18n: file: plugins/stats/Settings.ui:25
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2036
+#: rc.cpp:2027
 msgid "Update charts every"
 msgstr "チャートの更新間隔"
 
 #. i18n: file: plugins/stats/Settings.ui:50
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2039
+#: rc.cpp:2030
 msgid "GUI updates"
 msgstr "GUI の更新ごと"
 
 #. i18n: file: plugins/stats/Settings.ui:69
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2042
+#: rc.cpp:2033
 msgid "Gather data every"
 msgstr "データの収集間隔"
 
 #. i18n: file: plugins/stats/Settings.ui:95
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:2045
+#: rc.cpp:2036
 msgid "milliseconds"
 msgstr "ミリ秒"
 
 #. i18n: file: plugins/stats/Settings.ui:108
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:2048
+#: rc.cpp:2039
 msgid "Measurements counts"
 msgstr "測定数"
 
 #. i18n: file: plugins/stats/Settings.ui:247
 #. i18n: ectx: property (title), widget (QGroupBox, MaxModeGbw)
-#: rc.cpp:2066
+#: rc.cpp:2057
 msgid "Maximum"
 msgstr "最大"
 
 #. i18n: file: plugins/stats/Settings.ui:255
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2069
+#: rc.cpp:2060
 msgid "Maximum speed scale mode: "
 msgstr "速度スケールの最大モード: "
 
 #. i18n: file: plugins/stats/Settings.ui:277
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MaxMode)
-#: rc.cpp:2075
+#: rc.cpp:2066
 msgid "Exact"
 msgstr "正確"
 
 #. i18n: file: plugins/stats/Settings.ui:290
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:2078
+#: rc.cpp:2069
 msgid "Peers connections"
 msgstr "ピアの接続数"
 
 #. i18n: file: plugins/stats/Settings.ui:296
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowSeedsInSwarms)
-#: rc.cpp:2081
+#: rc.cpp:2072
 msgid "Show seeds in swarms"
 msgstr "スウォームのシードを表示する"
 
 #. i18n: file: plugins/stats/Settings.ui:303
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowLeechersInSwarms)
-#: rc.cpp:2084
+#: rc.cpp:2075
 msgid "Show leechers in swarms"
 msgstr "スウォームのリーチャーを表示する"
 
 #. i18n: file: plugins/shutdown/ktshutdownpluginui.rc:5
 #. i18n: ectx: Menu (shutdown)
-#: rc.cpp:2087 plugins/shutdown/shutdownplugin.cpp:148
+#: rc.cpp:2078 plugins/shutdown/shutdownplugin.cpp:148
 #: plugins/shutdown/shutdowndlg.cpp:32
 msgid "Shutdown"
 msgstr "シャットダウン"
 
 #. i18n: file: plugins/shutdown/ktshutdownpluginui.rc:11
 #. i18n: ectx: ToolBar (ShutdownToolBar)
-#: rc.cpp:2090
+#: rc.cpp:2081
 msgid "Shutdown Toolbar"
 msgstr "シャットダウンツールバー"
 
 #. i18n: file: plugins/shutdown/shutdowndlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, ShutdownDlg)
-#: rc.cpp:2093
+#: rc.cpp:2084
 msgid "Shutdown Settings"
 msgstr "シャットダウンの設定"
 
 #. i18n: file: plugins/shutdown/shutdowndlg.ui:24
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2096
+#: rc.cpp:2087
 msgid "Action to execute:"
 msgstr "実行するアクション:"
 
 #. i18n: file: plugins/shutdown/shutdowndlg.ui:34
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2099
+#: rc.cpp:2090
 msgid "Execute action when:"
 msgstr "アクションを実行するとき:"
 
 #. i18n: file: plugins/logviewer/ktlogviewerplugin.kcfg:11
 #. i18n: ectx: label, entry (useRichText), group (general)
-#: rc.cpp:2102
+#: rc.cpp:2093
 msgid "Use rich log text"
 msgstr "ログ出力にリッチテキストを使う"
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:26
 #. i18n: ectx: property (toolTip), widget (QTreeView, m_logging_flags)
-#: rc.cpp:2105
+#: rc.cpp:2096
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -6410,7 +6390,7 @@ msgstr ""
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:45
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useRichText)
-#: rc.cpp:2121
+#: rc.cpp:2112
 msgid ""
 "Whether or not to use rich text or just plain text, for the logging output "
 "shown in the logviewer."
@@ -6419,62 +6399,62 @@ msgstr ""
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:48
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useRichText)
-#: rc.cpp:2124
+#: rc.cpp:2115
 msgid "Use rich text for logging output"
 msgstr "ログ出力にリッチテキストを使う"
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:57
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2127
+#: rc.cpp:2118
 msgid "Log widget position:"
 msgstr "ログウィジェットの位置:"
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:71
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
-#: rc.cpp:2130
+#: rc.cpp:2121
 msgid "Separate activity"
 msgstr "別のアクティビティ"
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:76
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
-#: rc.cpp:2133
+#: rc.cpp:2124
 msgid "Dockable widget"
 msgstr "ドッキング可能なウィジェット"
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:81
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
-#: rc.cpp:2136
+#: rc.cpp:2127
 msgid "Torrent activity"
 msgstr "torrent のアクティビティ"
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, DownloadOrderWidget)
-#: rc.cpp:2139 plugins/downloadorder/downloadorderdialog.cpp:38
+#: rc.cpp:2130 plugins/downloadorder/downloadorderdialog.cpp:38
 #: plugins/downloadorder/downloadorderplugin.cpp:46
 msgid "File Download Order"
 msgstr "ファイルのダウンロード順序"
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:22
 #. i18n: ectx: property (text), widget (QLabel, m_top_label)
-#: rc.cpp:2142
+#: rc.cpp:2133
 msgid "File download order for:"
 msgstr "次のファイルのダウンロード順序: "
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:29
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_custom_order_enabled)
-#: rc.cpp:2145
+#: rc.cpp:2136
 msgid "Whether or not to enable a custom download order."
 msgstr "ファイルのダウンロード順序を指定できるようにするかどうか。"
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:32
 #. i18n: ectx: property (text), widget (QCheckBox, m_custom_order_enabled)
-#: rc.cpp:2148
+#: rc.cpp:2139
 msgid "Custom file download order enabled"
 msgstr "ファイルのダウンロード順序を指定する"
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:41
 #. i18n: ectx: property (toolTip), widget (QListView, m_order)
-#: rc.cpp:2151
+#: rc.cpp:2142
 msgid ""
 "Order in which to download the files of a torrent. The file at the top will "
 "be downloaded first, followed by the second, then the third ..."
@@ -6484,37 +6464,37 @@ msgstr ""
 
 #. i18n: file: plugins/mediaplayer/ktmediaplayerpluginui.rc:3
 #. i18n: ectx: Menu (MediaPlayerMenu)
-#: rc.cpp:2160
+#: rc.cpp:2151
 msgid "Media Player Menu"
 msgstr "メディアプレーヤーメニュー"
 
 #. i18n: file: plugins/mediaplayer/ktmediaplayerpluginui.rc:11
 #. i18n: ectx: ToolBar (MediaPlayerToolBar)
-#: rc.cpp:2163
+#: rc.cpp:2154
 msgid "Media Player Toolbar"
 msgstr "メディアプレーヤーツールバー"
 
 #. i18n: file: plugins/syndication/ktsyndicationpluginui.rc:4
 #. i18n: ectx: ToolBar (SyndicationToolBar)
-#: rc.cpp:2166
+#: rc.cpp:2157
 msgid "Syndication Toolbar"
 msgstr "シンジケーションツールバー"
 
 #. i18n: file: plugins/syndication/feedwidget.ui:57
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2173
+#: rc.cpp:2164
 msgid "Status:"
 msgstr "状態:"
 
 #. i18n: file: plugins/syndication/feedwidget.ui:81
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2177
+#: rc.cpp:2168
 msgid "Refresh every:"
 msgstr "更新間隔:"
 
 #. i18n: file: plugins/syndication/feedwidget.ui:88
 #. i18n: ectx: property (toolTip), widget (QSpinBox, m_refresh_rate)
-#: rc.cpp:2180
+#: rc.cpp:2171
 msgid "Time between automatic refreshes of the feed."
 msgstr "フィードの自動更新間隔"
 
@@ -6526,73 +6506,73 @@ msgstr "フィードの自動更新間隔"
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_refresh_rate)
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:51
 #. i18n: ectx: property (suffix), widget (QSpinBox, minutes)
-#: rc.cpp:2183 rc.cpp:2417
+#: rc.cpp:2174 rc.cpp:2408
 msgid " minutes"
 msgstr " 分"
 
 #. i18n: file: plugins/syndication/feedwidget.ui:132
 #. i18n: ectx: property (text), widget (KPushButton, m_refresh)
-#: rc.cpp:2189
+#: rc.cpp:2180
 msgid "Refresh"
 msgstr "更新"
 
 #. i18n: file: plugins/syndication/feedwidget.ui:152
 #. i18n: ectx: property (text), widget (KPushButton, m_filters)
-#: rc.cpp:2192
+#: rc.cpp:2183
 msgid "Filters"
 msgstr "フィルタ"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, ManageFiltersDlg)
-#: rc.cpp:2195
+#: rc.cpp:2186
 msgid "Manage Filters"
 msgstr "フィルタの管理"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:22
 #. i18n: ectx: property (text), widget (QLabel, m_feed_text)
-#: rc.cpp:2198
+#: rc.cpp:2189
 msgid "Feed:"
 msgstr "フィード:"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:33
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2201
+#: rc.cpp:2192
 msgid "Active filters:"
 msgstr "アクティブなフィルタ:"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:91
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2210
+#: rc.cpp:2201
 msgid "Available filters:"
 msgstr "利用可能なフィルタ:"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:107
 #. i18n: ectx: property (text), widget (QPushButton, m_remove_all)
-#: rc.cpp:2213
+#: rc.cpp:2204
 msgid "Remove All"
 msgstr "すべて削除"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:127
 #. i18n: ectx: property (text), widget (QPushButton, m_new_filter)
-#: rc.cpp:2216 plugins/syndication/syndicationactivity.cpp:264
+#: rc.cpp:2207 plugins/syndication/syndicationactivity.cpp:264
 msgid "New Filter"
 msgstr "新しいフィルタ"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:21
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2219
+#: rc.cpp:2210
 msgid "Name:"
 msgstr "名前:"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:37
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: rc.cpp:2222
+#: rc.cpp:2213
 msgid "String Matching"
 msgstr "文字列マッチ"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:71
 #. i18n: ectx: property (toolTip), widget (KEditListBox, m_word_matches)
-#: rc.cpp:2225
+#: rc.cpp:2216
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -6675,7 +6655,7 @@ msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:84
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_reg_exp_syntax)
-#: rc.cpp:2256
+#: rc.cpp:2247
 msgid ""
 "By default strings will use wildcard matching. If you want to use regular "
 "expressions, this needs to be enabled."
@@ -6685,43 +6665,43 @@ msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:87
 #. i18n: ectx: property (text), widget (QCheckBox, m_reg_exp_syntax)
-#: rc.cpp:2259
+#: rc.cpp:2250
 msgid "Strings are regular expressions"
 msgstr "正規表現を使う"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:94
 #. i18n: ectx: property (text), widget (QCheckBox, m_all_words_must_match)
-#: rc.cpp:2262
+#: rc.cpp:2253
 msgid "Item must match all strings"
 msgstr "すべての文字列にマッチするアイテム"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:101
 #. i18n: ectx: property (text), widget (QCheckBox, m_match_case_sensitive)
-#: rc.cpp:2265
+#: rc.cpp:2256
 msgid "Case sensitive matching"
 msgstr "大文字と小文字を区別する"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:109
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: rc.cpp:2268
+#: rc.cpp:2259
 msgid "Seasons && Episodes"
 msgstr "シーズンとエピソード"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:115
 #. i18n: ectx: property (text), widget (QCheckBox, m_use_se_matching)
-#: rc.cpp:2271
+#: rc.cpp:2262
 msgid "Use season and episode matching"
 msgstr "シーズンとエピソードを指定する"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:124
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2274
+#: rc.cpp:2265
 msgid "Seasons: "
 msgstr "シーズン: "
 
 #. i18n: file: plugins/syndication/filtereditor.ui:135
 #. i18n: ectx: property (toolTip), widget (QLineEdit, m_seasons)
-#: rc.cpp:2277
+#: rc.cpp:2268
 msgid ""
 "Specify the seasons to download, multiple seasons can be separated by a , "
 "and you can also use ranges by using a -\n"
@@ -6739,13 +6719,13 @@ msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:142
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:2284
+#: rc.cpp:2275
 msgid "Episodes:"
 msgstr "エピソード:"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:153
 #. i18n: ectx: property (toolTip), widget (QLineEdit, m_episodes)
-#: rc.cpp:2287
+#: rc.cpp:2278
 msgid ""
 "Specify the episodes to download, multiple episodes can be separated by a , "
 "and you can also use ranges by using a -\n"
@@ -6763,31 +6743,31 @@ msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:162
 #. i18n: ectx: property (text), widget (QCheckBox, m_se_no_duplicates)
-#: rc.cpp:2294
+#: rc.cpp:2285
 msgid "Do not download multiple items with the same season and episode"
 msgstr "同じシーズンとエピソードのアイテムを複数ダウンロードしない"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:189
 #. i18n: ectx: property (text), widget (QCheckBox, m_download_matches)
-#: rc.cpp:2300
+#: rc.cpp:2291
 msgid "Download torrents of matching items"
 msgstr "マッチするアイテムの torrent をダウンロードする"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:196
 #. i18n: ectx: property (text), widget (QCheckBox, m_download_non_matches)
-#: rc.cpp:2303
+#: rc.cpp:2294
 msgid "Download torrents of non matching items"
 msgstr "マッチしないアイテムの torrent をダウンロードする"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:205
 #. i18n: ectx: property (text), widget (QCheckBox, m_add_to_group)
-#: rc.cpp:2306
+#: rc.cpp:2297
 msgid "Add to group:"
 msgstr "グループに追加:"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:251
 #. i18n: ectx: property (text), widget (QCheckBox, m_silently)
-#: rc.cpp:2312
+#: rc.cpp:2303
 msgid "Open torrents silently"
 msgstr "質問せずに torrent を開く"
 
@@ -6799,43 +6779,43 @@ msgstr "質問せずに torrent を開く"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. i18n: file: plugins/syndication/filtereditor.ui:280
 #. i18n: ectx: property (text), widget (QPushButton, m_test)
-#: rc.cpp:2315 rc.cpp:2318
+#: rc.cpp:2306 rc.cpp:2309
 msgid "Test"
 msgstr "テスト"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:287
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2321
+#: rc.cpp:2312
 msgid "filter on feed:"
 msgstr "フィルタをテストするフィード:"
 
 #. i18n: file: plugins/search/searchpref.ui:33
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_clear_history)
-#: rc.cpp:2327
+#: rc.cpp:2318
 msgid "Clear the search history combo boxes."
 msgstr "コンボボックスの検索履歴をクリアします。"
 
 #. i18n: file: plugins/search/searchpref.ui:36
 #. i18n: ectx: property (text), widget (QPushButton, m_clear_history)
-#: rc.cpp:2330
+#: rc.cpp:2321
 msgid "Clear Search History"
 msgstr "検索履歴をクリア"
 
 #. i18n: file: plugins/search/searchpref.ui:58
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openInExternal)
-#: rc.cpp:2333
+#: rc.cpp:2324
 msgid "Whether or not to open searches in an external browser."
 msgstr "検索を外部ブラウザで開くかどうか"
 
 #. i18n: file: plugins/search/searchpref.ui:61
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openInExternal)
-#: rc.cpp:2336
+#: rc.cpp:2327
 msgid "Open searches in external browser"
 msgstr "検索結果を外部ブラウザで開く"
 
 #. i18n: file: plugins/search/searchpref.ui:68
 #. i18n: ectx: property (toolTip), widget (QRadioButton, kcfg_useDefaultBrowser)
-#: rc.cpp:2339
+#: rc.cpp:2330
 msgid "Use the default browser configured in the system settings."
 msgstr "KDE システム設定で設定されているデフォルトのブラウザを使います。"
 
@@ -6847,97 +6827,97 @@ msgstr "KDE システム設定で設定されているデフォルトのブラ�
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_useDefaultBrowser)
 #. i18n: file: plugins/search/ktsearchplugin.kcfg:15
 #. i18n: ectx: label, entry (useDefaultBrowser), group (general)
-#: rc.cpp:2342 rc.cpp:2384
+#: rc.cpp:2333 rc.cpp:2375
 msgid "Use default browser"
 msgstr "デフォルトのブラウザを使う"
 
 #. i18n: file: plugins/search/searchpref.ui:83
 #. i18n: ectx: property (toolTip), widget (QRadioButton, kcfg_useCustomBrowser)
-#: rc.cpp:2345
+#: rc.cpp:2336
 msgid "Use a custom browser."
 msgstr "指定したブラウザを使います。"
 
 #. i18n: file: plugins/search/searchpref.ui:86
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_useCustomBrowser)
-#: rc.cpp:2348
+#: rc.cpp:2339
 msgid "Custom browser path:"
 msgstr "次のブラウザを使う (パスを指定):"
 
 #. i18n: file: plugins/search/searchpref.ui:96
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_customBrowser)
-#: rc.cpp:2351
+#: rc.cpp:2342
 msgid "Path of the custom browser."
 msgstr "使用するブラウザのパスを入力します。"
 
 #. i18n: file: plugins/search/searchpref.ui:121
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox8)
-#: rc.cpp:2354
+#: rc.cpp:2345
 msgid "Search Engines"
 msgstr "検索エンジン"
 
 #. i18n: file: plugins/search/searchpref.ui:136
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_add)
-#: rc.cpp:2357
+#: rc.cpp:2348
 msgid "Add a new search engine."
 msgstr "新しい検索エンジンを追加します。"
 
 #. i18n: file: plugins/search/searchpref.ui:146
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_remove)
-#: rc.cpp:2363
+#: rc.cpp:2354
 msgid "Remove all selected search engines."
 msgstr "選択したすべての検索エンジンを削除します。"
 
 #. i18n: file: plugins/search/searchpref.ui:149
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
-#: rc.cpp:2366
+#: rc.cpp:2357
 msgid "&Remove"
 msgstr "削除(&R)"
 
 #. i18n: file: plugins/search/searchpref.ui:156
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_remove_all)
-#: rc.cpp:2369
+#: rc.cpp:2360
 msgid "Remove all search engines."
 msgstr "すべての検索エンジンを削除します。"
 
 #. i18n: file: plugins/search/searchpref.ui:159
 #. i18n: ectx: property (text), widget (QPushButton, m_remove_all)
-#: rc.cpp:2372
+#: rc.cpp:2363
 msgid "R&emove All"
 msgstr "すべて削除(&E)"
 
 #. i18n: file: plugins/search/searchpref.ui:179
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_add_default)
-#: rc.cpp:2375
+#: rc.cpp:2366
 msgid "Add all default search engines."
 msgstr "標準のすべての検索エンジンを追加します。"
 
 #. i18n: file: plugins/search/searchpref.ui:182
 #. i18n: ectx: property (text), widget (QPushButton, m_add_default)
-#: rc.cpp:2378
+#: rc.cpp:2369
 msgid "Add Defau&lt"
 msgstr "標準エンジンを追加(&L)"
 
 #. i18n: file: plugins/search/ktsearchplugin.kcfg:10
 #. i18n: ectx: label, entry (searchEngine), group (general)
-#: rc.cpp:2381
+#: rc.cpp:2372
 msgid "Current search engine"
 msgstr "現在の検索エンジン"
 
 #. i18n: file: plugins/search/ktsearchplugin.kcfg:19
 #. i18n: ectx: label, entry (useCustomBrowser), group (general)
-#: rc.cpp:2387
+#: rc.cpp:2378
 msgid "Use custom browser"
 msgstr "指定したブラウザを使う"
 
 #. i18n: file: plugins/search/ktsearchplugin.kcfg:23
 #. i18n: ectx: label, entry (customBrowser), group (general)
-#: rc.cpp:2390
+#: rc.cpp:2381
 msgid "Custom browser executable path"
 msgstr "指定ブラウザの実行ファイルのパス"
 
 #. i18n: file: plugins/search/ktsearchpluginui.rc:3
 #. i18n: ectx: ToolBar (SearchToolBar)
-#: rc.cpp:2393
+#: rc.cpp:2384
 msgid "Search Toolbar"
 msgstr "検索ツールバー"
 
@@ -6949,139 +6929,139 @@ msgstr "検索ツールバー"
 #. i18n: ectx: property (windowTitle), widget (QWidget, AutoRemoveConfig)
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, AutoResumeConfig)
-#: rc.cpp:2396 rc.cpp:2408
+#: rc.cpp:2387 rc.cpp:2399
 msgid "Auto Resume Settings"
 msgstr "自動再開の設定"
 
 #. i18n: file: plugins/scripting/scripts/auto_remove/auto_remove.ui:19
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2399
+#: rc.cpp:2390
 msgid "Auto remove a torrent when:"
 msgstr "torrent の自動削除:"
 
 #. i18n: file: plugins/scripting/scripts/auto_remove/auto_remove.ui:26
 #. i18n: ectx: property (text), widget (QCheckBox, finish_downloading)
-#: rc.cpp:2402
+#: rc.cpp:2393
 msgid "The torrent finishes downloading"
 msgstr "ダウンロードが完了したとき"
 
 #. i18n: file: plugins/scripting/scripts/auto_remove/auto_remove.ui:33
 #. i18n: ectx: property (text), widget (QCheckBox, finish_seeding)
-#: rc.cpp:2405
+#: rc.cpp:2396
 msgid "The torrent finishes seeding"
 msgstr "シードが完了したとき"
 
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:19
 #. i18n: ectx: property (text), widget (QCheckBox, auto_resume)
-#: rc.cpp:2411
+#: rc.cpp:2402
 msgid "Auto resume after:"
 msgstr "指定した時間後に自動的に再開する:"
 
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:41
 #. i18n: ectx: property (suffix), widget (QSpinBox, hours)
-#: rc.cpp:2414
+#: rc.cpp:2405
 msgid " hours"
 msgstr " 時間"
 
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:61
 #. i18n: ectx: property (suffix), widget (QSpinBox, seconds)
-#: rc.cpp:2420
+#: rc.cpp:2411
 msgid " seconds"
 msgstr " 秒"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, EMailConfigWidget)
-#: rc.cpp:2423
+#: rc.cpp:2414
 msgid "EMail Settings"
 msgstr "メールの設定"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:19
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:2426
+#: rc.cpp:2417
 msgid "SMTP Server"
 msgstr "SMTP サーバ"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:49
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2435
+#: rc.cpp:2426
 msgid "SMTP server:"
 msgstr "SMTP サーバ:"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:80
 #. i18n: ectx: property (text), widget (QCheckBox, tls)
-#: rc.cpp:2441
+#: rc.cpp:2432
 msgid "Use SSL/TLS encryption"
 msgstr "SSL/TLS 暗号化を使う"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:90
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:2444
+#: rc.cpp:2435
 msgid "Destination"
 msgstr "宛先"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:96
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2447
+#: rc.cpp:2438
 msgid "Send mails to:"
 msgstr "メールの宛先:"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:106
 #. i18n: ectx: property (text), widget (QCheckBox, add_cc)
-#: rc.cpp:2450
+#: rc.cpp:2441
 msgid "Add CC:"
 msgstr "CC を追加:"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:116
 #. i18n: ectx: property (text), widget (QCheckBox, add_bcc)
-#: rc.cpp:2453
+#: rc.cpp:2444
 msgid "Add BCC:"
 msgstr "BBC を追加:"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, ScriptProperties)
-#: rc.cpp:2456 plugins/scripting/scriptingplugin.cpp:340
+#: rc.cpp:2447 plugins/scripting/scriptingplugin.cpp:340
 msgid "Script Properties"
 msgstr "スクリプトのプロパティ"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:51
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2460
+#: rc.cpp:2451
 msgid "Description:"
 msgstr "説明:"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:65
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2464
+#: rc.cpp:2455
 msgid "License:"
 msgstr "ライセンス:"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:79
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2468
+#: rc.cpp:2459
 msgid "Author:"
 msgstr "作者:"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:93
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:2472
+#: rc.cpp:2463
 msgid "E-Mail:"
 msgstr "メールアドレス:"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:107
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:2476
+#: rc.cpp:2467
 msgid "Website:"
 msgstr "ウェブサイト:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:16
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:2479
+#: rc.cpp:2470
 msgid "Special Limits"
 msgstr "特別な制限"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:22
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_screensaverLimits)
-#: rc.cpp:2482
+#: rc.cpp:2473
 msgid ""
 "Use these global limits when the screensaver is activated, instead of the "
 "ones configured in the network settings."
@@ -7091,73 +7071,73 @@ msgstr ""
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:25
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_screensaverLimits)
-#: rc.cpp:2485
+#: rc.cpp:2476
 msgid "Use different speed limits when the screensaver is activated"
 msgstr "スクリーンセーバーの起動時には別の速度制限を使う"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:49
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_screensaverUploadLimit)
-#: rc.cpp:2491
+#: rc.cpp:2482
 msgid "Global upload limit when the screensaver is activated."
 msgstr "スクリーンセーバー起動時のアップロード全体の制限"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:78
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_screensaverDownloadLimit)
-#: rc.cpp:2503
+#: rc.cpp:2494
 msgid "Global download limit when the screensaver is activated."
 msgstr "スクリーンセーバー起動時のダウンロード全体の制限"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:120
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2515
+#: rc.cpp:2506
 msgid "Schedule background color:"
 msgstr "スケジュール表の背景色:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:127
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_scheduleBackgroundColor)
-#: rc.cpp:2518
+#: rc.cpp:2509
 msgid "Color of the schedule background."
 msgstr "スケジュール表の背景色"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:134
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2521
+#: rc.cpp:2512
 msgid "Schedule line color:"
 msgstr "スケジュール表の線の色:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:141
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_scheduleLineColor)
-#: rc.cpp:2524
+#: rc.cpp:2515
 msgid "Color of all lines on the schedule."
 msgstr "スケジュール表のすべての線の色"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:148
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:2527
+#: rc.cpp:2518
 msgid "Schedule Item color:"
 msgstr "アイテムの色:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:155
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_itemColor)
-#: rc.cpp:2530
+#: rc.cpp:2521
 msgid "Color of each normal item on the schedule."
 msgstr "スケジュール表の通常のアイテムの色"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:162
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2533
+#: rc.cpp:2524
 msgid "Paused schedule item color:"
 msgstr "一時停止中のアイテムの色:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:169
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_pausedColor)
-#: rc.cpp:2536
+#: rc.cpp:2527
 msgid "Color of each paused item on the schedule."
 msgstr "スケジュール表の一時停止中のアイテムの色"
 
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, EditItemDlg)
-#: rc.cpp:2539 plugins/bwscheduler/edititemdlg.cpp:44
+#: rc.cpp:2530 plugins/bwscheduler/edititemdlg.cpp:44
 msgid "Edit an item"
 msgstr "アイテムを編集"
 
@@ -7169,7 +7149,7 @@ msgstr "アイテムを編集"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:24
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:2542 rc.cpp:2626
+#: rc.cpp:2533 rc.cpp:2617
 msgid "Time"
 msgstr "時間"
 
@@ -7181,7 +7161,7 @@ msgstr "時間"
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:32
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2545 rc.cpp:2629
+#: rc.cpp:2536 rc.cpp:2620
 msgid "From:"
 msgstr "開始:"
 
@@ -7201,7 +7181,7 @@ msgstr "開始:"
 #. i18n: ectx: property (displayFormat), widget (QTimeEdit, m_from)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:53
 #. i18n: ectx: property (displayFormat), widget (QTimeEdit, m_to)
-#: rc.cpp:2548 rc.cpp:2554 rc.cpp:2632 rc.cpp:2638
+#: rc.cpp:2539 rc.cpp:2545 rc.cpp:2623 rc.cpp:2629
 msgid "hh:mm"
 msgstr "hh:mm"
 
@@ -7213,13 +7193,13 @@ msgstr "hh:mm"
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:46
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:2551 rc.cpp:2635
+#: rc.cpp:2542 rc.cpp:2626
 msgid "To:"
 msgstr "終了:"
 
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:62
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2557
+#: rc.cpp:2548
 msgid "Day:"
 msgstr "曜日:"
 
@@ -7231,7 +7211,7 @@ msgstr "曜日:"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:117
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:2560 rc.cpp:2653
+#: rc.cpp:2551 rc.cpp:2644
 msgid "Limits"
 msgstr "制限"
 
@@ -7251,7 +7231,7 @@ msgstr "制限"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:183
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:2566 rc.cpp:2587 rc.cpp:2659 rc.cpp:2680
+#: rc.cpp:2557 rc.cpp:2578 rc.cpp:2650 rc.cpp:2671
 msgid "Download limit:"
 msgstr "ダウンロード制限:"
 
@@ -7271,7 +7251,7 @@ msgstr "ダウンロード制限:"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:203
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:2575 rc.cpp:2596 rc.cpp:2668 rc.cpp:2689
+#: rc.cpp:2566 rc.cpp:2587 rc.cpp:2659 rc.cpp:2680
 msgid "Upload limit:"
 msgstr "アップロード制限:"
 
@@ -7283,7 +7263,7 @@ msgstr "アップロード制限:"
 #. i18n: ectx: property (text), widget (QCheckBox, m_screensaver_limits)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:174
 #. i18n: ectx: property (text), widget (QCheckBox, m_screensaver_limits)
-#: rc.cpp:2584 rc.cpp:2677
+#: rc.cpp:2575 rc.cpp:2668
 msgid "When screensaver is activated:"
 msgstr "スクリーンセーバーの起動時:"
 
@@ -7295,7 +7275,7 @@ msgstr "スクリーンセーバーの起動時:"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:243
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:2605 rc.cpp:2698
+#: rc.cpp:2596 rc.cpp:2689
 msgid "Connection Limits"
 msgstr "接続制限"
 
@@ -7307,37 +7287,37 @@ msgstr "接続制限"
 #. i18n: ectx: property (text), widget (QCheckBox, m_set_connection_limits)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:249
 #. i18n: ectx: property (text), widget (QCheckBox, m_set_connection_limits)
-#: rc.cpp:2608 rc.cpp:2701
+#: rc.cpp:2599 rc.cpp:2692
 msgid "Set connection limits"
 msgstr "接続制限を設定する"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, AddItemDlg)
-#: rc.cpp:2623
+#: rc.cpp:2614
 msgid "Add a new item to the schedule"
 msgstr "スケジュールに新しいアイテムを追加"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:62
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2641
+#: rc.cpp:2632
 msgid "Days:"
 msgstr "曜日:"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:76
 #. i18n: ectx: property (text), widget (QPushButton, m_entire_week)
-#: rc.cpp:2644
+#: rc.cpp:2635
 msgid "Entire Week"
 msgstr "すべての曜日"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:83
 #. i18n: ectx: property (text), widget (QPushButton, m_weekdays_only)
-#: rc.cpp:2647
+#: rc.cpp:2638
 msgid "Weekdays Only"
 msgstr "平日のみ"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:90
 #. i18n: ectx: property (text), widget (QPushButton, m_weekend)
-#: rc.cpp:2650
+#: rc.cpp:2641
 msgid "Weekend"
 msgstr "週末"
 
@@ -7394,11 +7374,11 @@ msgstr "無効な日付を受け取りました"
 msgid "Failed to open temporary file"
 msgstr "一時ファイルを開けませんでした"
 
-#: plugins/webinterface/httpserver.cpp:317
+#: plugins/webinterface/httpserver.cpp:320
 msgid "Cannot find webinterface skins!"
 msgstr "ウェブインターフェースのスキンが見つかりません。"
 
-#: plugins/webinterface/httpserver.cpp:478
+#: plugins/webinterface/httpserver.cpp:481
 msgid "Unsupported HTTP method"
 msgstr "サポートされていない HTTP メソッド"
 
@@ -7642,28 +7622,28 @@ msgstr "torrent 中のすべてのファイルを表示します"
 
 #: plugins/infowidget/infowidgetplugin.cpp:96
 #: plugins/bwscheduler/bwschedulerplugin.cpp:83
-#: plugins/bwscheduler/bwschedulerplugin.cpp:114
+#: plugins/bwscheduler/bwschedulerplugin.cpp:115
 #: plugins/bwscheduler/bwprefpage.cpp:27
 msgid "Bandwidth Scheduler"
 msgstr "帯域幅スケジューラ"
 
-#: plugins/infowidget/infowidgetplugin.cpp:228
+#: plugins/infowidget/infowidgetplugin.cpp:223
 msgid "Displays all the peers you are connected to for a torrent"
 msgstr "torrent ごとに接続中のすべてのピアを表示します"
 
-#: plugins/infowidget/infowidgetplugin.cpp:250
+#: plugins/infowidget/infowidgetplugin.cpp:245
 msgid "Displays all the chunks you are downloading, of a torrent"
 msgstr "torrent ごとにダウンロード中のすべてのピースを表示します"
 
-#: plugins/infowidget/infowidgetplugin.cpp:272
+#: plugins/infowidget/infowidgetplugin.cpp:267
 msgid "Displays information about all the trackers of a torrent"
 msgstr "torrent のすべてのトラッカーに関する情報を表示します"
 
-#: plugins/infowidget/infowidgetplugin.cpp:290
+#: plugins/infowidget/infowidgetplugin.cpp:285
 msgid "Webseeds"
 msgstr "ウェブシード"
 
-#: plugins/infowidget/infowidgetplugin.cpp:291
+#: plugins/infowidget/infowidgetplugin.cpp:286
 msgid "Displays all the webseeds of a torrent"
 msgstr "torrent のすべてのウェブシードを表示します"
 
@@ -7728,20 +7708,20 @@ msgstr ""
 "\">&nbsp; - 対象外</html>"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:80
-#: plugins/infowidget/iwfiletreemodel.cpp:91
+#: plugins/infowidget/iwfiletreemodel.cpp:92
 #, no-c-format
 msgctxt "Percent of File Downloaded"
 msgid "% Complete"
 msgstr "% 完了"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:89
-#: plugins/infowidget/iwfiletreemodel.cpp:100
+#: plugins/infowidget/iwfiletreemodel.cpp:101
 msgctxt "Download first"
 msgid "First"
 msgstr "最初に"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:90
-#: plugins/infowidget/iwfiletreemodel.cpp:101
+#: plugins/infowidget/iwfiletreemodel.cpp:102
 msgctxt "Download last"
 msgid "Last"
 msgstr "最後に"
@@ -7753,32 +7733,32 @@ msgstr "普通に"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:146
 #: plugins/infowidget/iwfilelistmodel.cpp:169
-#: plugins/infowidget/iwfiletreemodel.cpp:181
+#: plugins/infowidget/iwfiletreemodel.cpp:182
 msgctxt "Preview available"
 msgid "Available"
 msgstr "利用可能"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:148
 #: plugins/infowidget/iwfilelistmodel.cpp:171
-#: plugins/infowidget/iwfiletreemodel.cpp:160
-#: plugins/infowidget/iwfiletreemodel.cpp:183
+#: plugins/infowidget/iwfiletreemodel.cpp:161
+#: plugins/infowidget/iwfiletreemodel.cpp:184
 msgctxt "Preview pending"
 msgid "Pending"
 msgstr "保留"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:151
 #: plugins/infowidget/iwfilelistmodel.cpp:174
-#: plugins/infowidget/iwfiletreemodel.cpp:163
-#: plugins/infowidget/iwfiletreemodel.cpp:186
+#: plugins/infowidget/iwfiletreemodel.cpp:164
+#: plugins/infowidget/iwfiletreemodel.cpp:187
 msgctxt "No preview available"
 msgid "No"
 msgstr "なし"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:155
 #: plugins/infowidget/iwfilelistmodel.cpp:178
-#: plugins/infowidget/iwfiletreemodel.cpp:168
-#: plugins/infowidget/iwfiletreemodel.cpp:188
-#: plugins/infowidget/iwfiletreemodel.cpp:194
+#: plugins/infowidget/iwfiletreemodel.cpp:169
+#: plugins/infowidget/iwfiletreemodel.cpp:189
+#: plugins/infowidget/iwfiletreemodel.cpp:195
 #, kde-format
 msgid "%1 %"
 msgstr "%1%"
@@ -7815,12 +7795,12 @@ msgstr "ピースのダウンロード速度"
 msgid "Which files the chunk is located in"
 msgstr "ピースがどのファイルにあるか"
 
-#: plugins/infowidget/iwfiletreemodel.cpp:106
+#: plugins/infowidget/iwfiletreemodel.cpp:107
 msgctxt "Download normally(not as first or last)"
 msgid "Normal"
 msgstr "普通に"
 
-#: plugins/infowidget/iwfiletreemodel.cpp:158
+#: plugins/infowidget/iwfiletreemodel.cpp:159
 msgctxt "preview available"
 msgid "Available"
 msgstr "利用可能"
@@ -7860,18 +7840,18 @@ msgstr "なし"
 msgid "Cannot open zip file %1."
 msgstr "ZIP ファイル <filename>%1</filename> を開けません。"
 
-#: plugins/ipfilter/downloadandconvertjob.cpp:157
+#: plugins/ipfilter/downloadandconvertjob.cpp:158
 #, kde-format
 msgid "Cannot find blocklist in zip file %1."
 msgstr ""
 "ZIP ファイル <filename>%1</filename> にブロックリストが見つかりません。"
 
-#: plugins/ipfilter/downloadandconvertjob.cpp:228
+#: plugins/ipfilter/downloadandconvertjob.cpp:229
 msgid ""
 "Filter file (level1.dat) already exists, do you want to convert it again?"
 msgstr "フィルタファイル (level1.dat) は既にあります。もう一度変換しますか？"
 
-#: plugins/ipfilter/downloadandconvertjob.cpp:229
+#: plugins/ipfilter/downloadandconvertjob.cpp:230
 msgid "File Exists"
 msgstr "ファイルは存在します"
 
@@ -8086,50 +8066,50 @@ msgid "File download order for <b>%1</b>:"
 msgstr "<b>%1</b> のファイルのダウンロード順序:"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:47
-#: plugins/mediaplayer/mediaplayeractivity.cpp:150
+#: plugins/mediaplayer/mediaplayeractivity.cpp:151
 #: plugins/mediaplayer/mediaplayerplugin.cpp:49
 #: plugins/mediaplayer/mediaplayerplugin.cpp:61
 msgid "Media Player"
 msgstr "メディアプレーヤー"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:73
+#: plugins/mediaplayer/mediaplayeractivity.cpp:74
 msgid "Play List"
 msgstr "プレイリスト"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:97
+#: plugins/mediaplayer/mediaplayeractivity.cpp:98
 #: plugins/mediaplayer/videowidget.cpp:58
 msgid "Play"
 msgstr "再生"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:101
+#: plugins/mediaplayer/mediaplayeractivity.cpp:102
 #: plugins/mediaplayer/videowidget.cpp:59
 msgid "Pause"
 msgstr "一時停止"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:109
+#: plugins/mediaplayer/mediaplayeractivity.cpp:110
 msgid "Previous"
 msgstr "前へ"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:113
+#: plugins/mediaplayer/mediaplayeractivity.cpp:114
 msgid "Next"
 msgstr "次へ"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:117
+#: plugins/mediaplayer/mediaplayeractivity.cpp:118
 msgid "Show Video"
 msgstr "動画を表示"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:121
+#: plugins/mediaplayer/mediaplayeractivity.cpp:122
 #: plugins/mediaplayer/playlistwidget.cpp:109
 msgid "Add Media"
 msgstr "メディアを追加"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:125
+#: plugins/mediaplayer/mediaplayeractivity.cpp:126
 #: plugins/mediaplayer/playlistwidget.cpp:110
 msgid "Clear Playlist"
 msgstr "プレイリストをクリア"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:164
-#: plugins/mediaplayer/mediaplayeractivity.cpp:366
+#: plugins/mediaplayer/mediaplayeractivity.cpp:165
+#: plugins/mediaplayer/mediaplayeractivity.cpp:367
 msgid "Movie player"
 msgstr "動画プレーヤー"
 
@@ -8363,7 +8343,7 @@ msgstr "<b>%1</b><br/><br/>%2"
 #: plugins/search/searchprefpage.cpp:58 plugins/search/homepage.cpp:121
 #: plugins/search/searchactivity.cpp:35 plugins/search/searchtoolbar.cpp:72
 #: plugins/search/searchplugin.cpp:67 plugins/search/searchplugin.cpp:89
-#: plugins/search/searchplugin.cpp:144
+#: plugins/search/searchplugin.cpp:145
 msgid "Search"
 msgstr "検索"
 
@@ -8614,11 +8594,11 @@ msgstr ""
 "スケジュールの他のアイテムと競合するため、アイテムを選択されたすべての曜日に"
 "追加できませんでした。"
 
-#: plugins/bwscheduler/schedulegraphicsitem.cpp:77
+#: plugins/bwscheduler/schedulegraphicsitem.cpp:78
 msgid "Paused"
 msgstr "一時停止"
 
-#: plugins/bwscheduler/schedulegraphicsitem.cpp:82
+#: plugins/bwscheduler/schedulegraphicsitem.cpp:83
 #, kde-format
 msgid ""
 "%1 Down\n"
@@ -8683,7 +8663,7 @@ msgid "Announcing"
 msgstr "アナウンス"
 
 #: libbtcore/interfaces/trackerinterface.cpp:60
-#: libbtcore/torrent/torrentstats.cpp:82
+#: libbtcore/torrent/torrentstats.cpp:83
 #, kde-format
 msgid "Error: %1"
 msgstr "エラー: %1"
@@ -8704,7 +8684,7 @@ msgid_plural "%1 days "
 msgstr[0] "1 日"
 msgstr[1] "%1 日"
 
-#: libbtcore/util/log.cpp:112
+#: libbtcore/util/log.cpp:115
 #, kde-format
 msgid "Cannot open log file %1 : %2"
 msgstr "ログファイル <filename>%1</filename> を開けません: %2"
@@ -8880,7 +8860,7 @@ msgid "Torrent is incomplete."
 msgstr "torrent が不完全です。"
 
 #: libbtcore/diskio/singlefilecache.cpp:72
-#: libbtcore/diskio/multifilecache.cpp:106
+#: libbtcore/diskio/multifilecache.cpp:107
 #, kde-format
 msgid "Failed to open %1 : %2"
 msgstr "<filename>%1</filename> を開けませんでした: %2"
@@ -8939,13 +8919,13 @@ msgstr "<filename>%1</filename> からの読み取りエラー"
 msgid "Failed to write to file %1 : %2"
 msgstr "ファイル <filename>%1</filename> に書き込めませんでした: %2"
 
-#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:794
+#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:795
 #, kde-format
 msgid "Cannot preallocate diskspace : %1"
 msgstr "ディスク領域の事前割り当てができません: %1"
 
-#: libbtcore/diskio/multifilecache.cpp:738
-#: libbtcore/diskio/multifilecache.cpp:802
+#: libbtcore/diskio/multifilecache.cpp:739
+#: libbtcore/diskio/multifilecache.cpp:803
 #, kde-format
 msgid "Cannot open file %1 : %2"
 msgstr "ファイル <filename>%1</filename> を開けません: %2"
@@ -9003,52 +8983,52 @@ msgstr ""
 msgid "You are already downloading the torrent %1"
 msgstr "torrent <resource>%1</resource> は既にダウンロード中です"
 
-#: libbtcore/torrent/torrentstats.cpp:68
+#: libbtcore/torrent/torrentstats.cpp:69
 msgid "Not started"
 msgstr "開始していません"
 
-#: libbtcore/torrent/torrentstats.cpp:70
+#: libbtcore/torrent/torrentstats.cpp:71
 msgid "Download completed"
 msgstr "ダウンロード完了"
 
-#: libbtcore/torrent/torrentstats.cpp:72
+#: libbtcore/torrent/torrentstats.cpp:73
 msgid "Seeding completed"
 msgstr "シード完了"
 
-#: libbtcore/torrent/torrentstats.cpp:74
+#: libbtcore/torrent/torrentstats.cpp:75
 msgctxt "Status of a torrent file"
 msgid "Seeding"
 msgstr "シード中"
 
-#: libbtcore/torrent/torrentstats.cpp:76
+#: libbtcore/torrent/torrentstats.cpp:77
 msgid "Downloading"
 msgstr "ダウンロード中"
 
-#: libbtcore/torrent/torrentstats.cpp:78
+#: libbtcore/torrent/torrentstats.cpp:79
 msgid "Stalled"
 msgstr "ストールしました"
 
-#: libbtcore/torrent/torrentstats.cpp:80
+#: libbtcore/torrent/torrentstats.cpp:81
 msgid "Stopped"
 msgstr "停止中"
 
-#: libbtcore/torrent/torrentstats.cpp:84
+#: libbtcore/torrent/torrentstats.cpp:85
 msgid "Allocating diskspace"
 msgstr "ディスク領域を割り当て中"
 
-#: libbtcore/torrent/torrentstats.cpp:86
+#: libbtcore/torrent/torrentstats.cpp:87
 msgid "Queued for seeding"
 msgstr "シード待ち"
 
-#: libbtcore/torrent/torrentstats.cpp:86
+#: libbtcore/torrent/torrentstats.cpp:87
 msgid "Queued for downloading"
 msgstr "ダウンロード待ち"
 
-#: libbtcore/torrent/torrentstats.cpp:88
+#: libbtcore/torrent/torrentstats.cpp:89
 msgid "Checking data"
 msgstr "データをチェック中"
 
-#: libbtcore/torrent/torrentstats.cpp:90
+#: libbtcore/torrent/torrentstats.cpp:91
 msgid "Stopped. No space left on device."
 msgstr "停止しました。デバイスに空き領域が残っていません。"
 
@@ -9096,3 +9076,17 @@ msgstr "無効なトラッカー URL"
 #, kde-format
 msgid "Cannot open file : %1 : %2"
 msgstr "ファイル <filename>%1</filename> を開けません: %2"
+
+#~ msgid "Normal priority:"
+#~ msgstr "普通にダウンロード:"
+
+#~ msgid ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
+#~ "size:8pt; font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Color to use for normal "
+#~ "priority files.</p></body></html>"
+#~ msgstr "<html>普通にダウンロードするファイルを示す色を指定します。</html>"

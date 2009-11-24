@@ -58,22 +58,36 @@ namespace dht
 			for (Uint32 i = 0;i < nval;i++)
 			{
 				// add node to todo list
-				KBucketEntry e = UnpackBucketEntry(n,i*26,4);
-				if (!visited.contains(e) && todo.size() < 100)
+				try
 				{
-					todo.insert(e);
-				//	Out(SYS_DHT|LOG_DEBUG) << "DHT: GetPeers returned node " << e.getAddress().toString() << endl;
+					KBucketEntry e = UnpackBucketEntry(n,i*26,4);
+					if (!visited.contains(e) && todo.size() < 100)
+					{
+						todo.insert(e);
+					//	Out(SYS_DHT|LOG_DEBUG) << "DHT: GetPeers returned node " << e.getAddress().toString() << endl;
+					}
+				}
+				catch (...)
+				{
+					// not enough size in buffer, just ignore the error
 				}
 			}
 			
 			for (PackedNodeContainer::CItr itr = gpr->begin();itr != gpr->end();itr++)
 			{
 				const QByteArray & ba = *itr;
-				KBucketEntry e = UnpackBucketEntry(ba,0,6);
-				if (!visited.contains(e) && todo.size() < 100)
+				try
 				{
-					todo.insert(e);
-				//	Out(SYS_DHT|LOG_DEBUG) << "DHT: GetPeers returned node " << e.getAddress().toString() << endl;
+					KBucketEntry e = UnpackBucketEntry(ba,0,6);
+					if (!visited.contains(e) && todo.size() < 100)
+					{
+						todo.insert(e);
+					//	Out(SYS_DHT|LOG_DEBUG) << "DHT: GetPeers returned node " << e.getAddress().toString() << endl;
+					}
+				}
+				catch (...)
+				{
+					// bad data, ignore
 				}
 			}
 		}
@@ -144,8 +158,15 @@ namespace dht
 			todo.erase(itr);
 		}
 		
+		
 		if (todo.empty() && answered.empty() && getNumOutstandingRequests() == 0 && !isFinished())
 		{
+			Out(SYS_DHT|LOG_NOTICE) << "DHT: AnnounceTask done" << endl;
+			done();
+		}
+		else if (answered_visited.size() > 50 || visited.size() > 200)
+		{
+			// don't let the task run forever
 			Out(SYS_DHT|LOG_NOTICE) << "DHT: AnnounceTask done" << endl;
 			done();
 		}
