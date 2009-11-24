@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-03 01:30+0100\n"
+"POT-Creation-Date: 2009-11-17 01:29+0100\n"
 "PO-Revision-Date: 2009-08-25 20:11+0200\n"
 "Last-Translator: Eirik U. Birkeland <eirbir@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
@@ -516,7 +516,7 @@ msgid "Scrape"
 msgstr "Hent status"
 
 #: ktorrent/viewmanager.cpp:596 plugins/infowidget/iwfilelistmodel.cpp:78
-#: plugins/infowidget/iwfiletreemodel.cpp:89
+#: plugins/infowidget/iwfiletreemodel.cpp:90
 msgid "Preview"
 msgstr "Førehandsvising"
 
@@ -592,8 +592,8 @@ msgstr "IP-duplikat %1"
 msgid "Calculate Recommended Settings"
 msgstr "Finn tilrådde innstillingar"
 
-#: ktorrent/recommendedsettingsdlg.cpp:242
-#: ktorrent/recommendedsettingsdlg.cpp:248
+#: ktorrent/recommendedsettingsdlg.cpp:245
+#: ktorrent/recommendedsettingsdlg.cpp:251
 #, kde-format
 msgid "(= %1/s)"
 msgstr "(= %1/s)"
@@ -1636,7 +1636,7 @@ msgstr "Tid oppstoppa"
 
 #: ktorrent/queuemanagermodel.cpp:122
 #: plugins/infowidget/iwfilelistmodel.cpp:77
-#: plugins/infowidget/iwfiletreemodel.cpp:88
+#: plugins/infowidget/iwfiletreemodel.cpp:89
 msgid "Priority"
 msgstr "Prioritet"
 
@@ -1951,7 +1951,7 @@ msgstr "Programtillegg"
 msgid "Connection closed unexpectedly."
 msgstr "Tilkoplinga vart uventa avbroten."
 
-#: libktupnp/httprequest.cpp:120
+#: libktupnp/httprequest.cpp:122
 msgid "Timeout occurred"
 msgstr "Tidsavbrot"
 
@@ -1972,7 +1972,7 @@ msgstr ""
 "Klarte ikkje vidaresenda: \n"
 "Eininga har inga WANIP- eller WANPPP-tilkopling."
 
-#: libktupnp/upnprouter.cpp:434 libktupnp/upnprouter.cpp:447
+#: libktupnp/upnprouter.cpp:433 libktupnp/upnprouter.cpp:446
 msgid "Cannot find port forwarding service in the device's description."
 msgstr ""
 "Klarer ikkje finna tenesta for vidaresending av portar i skildringa til "
@@ -3400,7 +3400,7 @@ msgstr "Legg torrenten til ei gruppe:"
 
 #. i18n: file: ktorrent/torrentcreatordlg.ui:168
 #. i18n: ectx: attribute (title), widget (QWidget, m_tracker_tab)
-#: rc.cpp:466 plugins/infowidget/infowidgetplugin.cpp:271
+#: rc.cpp:466 plugins/infowidget/infowidgetplugin.cpp:266
 msgid "Trackers"
 msgstr "Deltakarsentralar"
 
@@ -5895,7 +5895,7 @@ msgstr "Ta alle ut av bruk"
 #. i18n: ectx: property (windowTitle), widget (QWidget, ChunkDownloadView)
 #. i18n: file: plugins/infowidget/statustab.ui:164
 #. i18n: ectx: property (text), widget (QLabel, hdr_chunks)
-#: rc.cpp:1587 rc.cpp:1710 plugins/infowidget/infowidgetplugin.cpp:249
+#: rc.cpp:1587 rc.cpp:1710 plugins/infowidget/infowidgetplugin.cpp:244
 msgid "Chunks"
 msgstr "Blokker"
 
@@ -6400,7 +6400,7 @@ msgstr "Last ned"
 #. i18n: file: plugins/stats/Settings.ui:166
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: rc.cpp:1820 rc.cpp:1841 rc.cpp:2057
-#: plugins/infowidget/infowidgetplugin.cpp:227
+#: plugins/infowidget/infowidgetplugin.cpp:222
 msgid "Peers"
 msgstr "Deltakarar"
 
@@ -8023,11 +8023,11 @@ msgstr "Fekk ugyldige data"
 msgid "Failed to open temporary file"
 msgstr "Klarte ikkje opna mellombelsfil"
 
-#: plugins/webinterface/httpserver.cpp:317
+#: plugins/webinterface/httpserver.cpp:320
 msgid "Cannot find webinterface skins!"
 msgstr "Finn ikkje tema for vevgrensesnitt."
 
-#: plugins/webinterface/httpserver.cpp:478
+#: plugins/webinterface/httpserver.cpp:481
 msgid "Unsupported HTTP method"
 msgstr "Ustøtta HTTP-metode"
 
@@ -8272,28 +8272,28 @@ msgstr "Viser alle filene i ein torrent"
 
 #: plugins/infowidget/infowidgetplugin.cpp:96
 #: plugins/bwscheduler/bwschedulerplugin.cpp:83
-#: plugins/bwscheduler/bwschedulerplugin.cpp:114
+#: plugins/bwscheduler/bwschedulerplugin.cpp:115
 #: plugins/bwscheduler/bwprefpage.cpp:27
 msgid "Bandwidth Scheduler"
 msgstr "Bandbreiddeplanlegging"
 
-#: plugins/infowidget/infowidgetplugin.cpp:228
+#: plugins/infowidget/infowidgetplugin.cpp:223
 msgid "Displays all the peers you are connected to for a torrent"
 msgstr "Viser alle deltakarane som er tilkopla ein torrent"
 
-#: plugins/infowidget/infowidgetplugin.cpp:250
+#: plugins/infowidget/infowidgetplugin.cpp:245
 msgid "Displays all the chunks you are downloading, of a torrent"
 msgstr "Viser alle blokkene du lastar ned i ein torrent"
 
-#: plugins/infowidget/infowidgetplugin.cpp:272
+#: plugins/infowidget/infowidgetplugin.cpp:267
 msgid "Displays information about all the trackers of a torrent"
 msgstr "Viser informasjon om alle deltakarsentralane i ein torrent"
 
-#: plugins/infowidget/infowidgetplugin.cpp:290
+#: plugins/infowidget/infowidgetplugin.cpp:285
 msgid "Webseeds"
 msgstr "Vevkjelder"
 
-#: plugins/infowidget/infowidgetplugin.cpp:291
+#: plugins/infowidget/infowidgetplugin.cpp:286
 msgid "Displays all the webseeds of a torrent"
 msgstr "Viser alle vevkjeldene i ein torrent"
 
@@ -8357,20 +8357,20 @@ msgstr ""
 "\"excluded_color\">&nbsp; – blokker som ikkje skal lastast ned"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:80
-#: plugins/infowidget/iwfiletreemodel.cpp:91
+#: plugins/infowidget/iwfiletreemodel.cpp:92
 #, no-c-format
 msgctxt "Percent of File Downloaded"
 msgid "% Complete"
 msgstr "% ferdig"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:89
-#: plugins/infowidget/iwfiletreemodel.cpp:100
+#: plugins/infowidget/iwfiletreemodel.cpp:101
 msgctxt "Download first"
 msgid "First"
 msgstr "Først"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:90
-#: plugins/infowidget/iwfiletreemodel.cpp:101
+#: plugins/infowidget/iwfiletreemodel.cpp:102
 msgctxt "Download last"
 msgid "Last"
 msgstr "Sist"
@@ -8382,32 +8382,32 @@ msgstr "Normal"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:146
 #: plugins/infowidget/iwfilelistmodel.cpp:169
-#: plugins/infowidget/iwfiletreemodel.cpp:181
+#: plugins/infowidget/iwfiletreemodel.cpp:182
 msgctxt "Preview available"
 msgid "Available"
 msgstr "Tilgjengeleg"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:148
 #: plugins/infowidget/iwfilelistmodel.cpp:171
-#: plugins/infowidget/iwfiletreemodel.cpp:160
-#: plugins/infowidget/iwfiletreemodel.cpp:183
+#: plugins/infowidget/iwfiletreemodel.cpp:161
+#: plugins/infowidget/iwfiletreemodel.cpp:184
 msgctxt "Preview pending"
 msgid "Pending"
 msgstr "Ventar"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:151
 #: plugins/infowidget/iwfilelistmodel.cpp:174
-#: plugins/infowidget/iwfiletreemodel.cpp:163
-#: plugins/infowidget/iwfiletreemodel.cpp:186
+#: plugins/infowidget/iwfiletreemodel.cpp:164
+#: plugins/infowidget/iwfiletreemodel.cpp:187
 msgctxt "No preview available"
 msgid "No"
 msgstr "Nei"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:155
 #: plugins/infowidget/iwfilelistmodel.cpp:178
-#: plugins/infowidget/iwfiletreemodel.cpp:168
-#: plugins/infowidget/iwfiletreemodel.cpp:188
-#: plugins/infowidget/iwfiletreemodel.cpp:194
+#: plugins/infowidget/iwfiletreemodel.cpp:169
+#: plugins/infowidget/iwfiletreemodel.cpp:189
+#: plugins/infowidget/iwfiletreemodel.cpp:195
 #, kde-format
 msgid "%1 %"
 msgstr "%1 %"
@@ -8444,12 +8444,12 @@ msgstr "Nedlastingsfart for blokka"
 msgid "Which files the chunk is located in"
 msgstr "Kva for filer blokka er ein del av"
 
-#: plugins/infowidget/iwfiletreemodel.cpp:106
+#: plugins/infowidget/iwfiletreemodel.cpp:107
 msgctxt "Download normally(not as first or last)"
 msgid "Normal"
 msgstr "Normal"
 
-#: plugins/infowidget/iwfiletreemodel.cpp:158
+#: plugins/infowidget/iwfiletreemodel.cpp:159
 msgctxt "preview available"
 msgid "Available"
 msgstr "Tilgjengeleg"
@@ -8987,7 +8987,7 @@ msgstr "<b>%1</b><br/><br/>%2"
 #: plugins/search/searchprefpage.cpp:58 plugins/search/homepage.cpp:121
 #: plugins/search/searchactivity.cpp:35 plugins/search/searchtoolbar.cpp:72
 #: plugins/search/searchplugin.cpp:67 plugins/search/searchplugin.cpp:89
-#: plugins/search/searchplugin.cpp:144
+#: plugins/search/searchplugin.cpp:145
 msgid "Search"
 msgstr "Søk"
 
@@ -9237,11 +9237,11 @@ msgstr ""
 "Klarte ikkje leggja til elementet på alle dei valde dagane. Det kjem i "
 "konflikt med eit anna element på planen."
 
-#: plugins/bwscheduler/schedulegraphicsitem.cpp:77
+#: plugins/bwscheduler/schedulegraphicsitem.cpp:78
 msgid "Paused"
 msgstr "Pause"
 
-#: plugins/bwscheduler/schedulegraphicsitem.cpp:82
+#: plugins/bwscheduler/schedulegraphicsitem.cpp:83
 #, kde-format
 msgid ""
 "%1 Down\n"
@@ -9307,7 +9307,7 @@ msgid "Announcing"
 msgstr "Annonserer"
 
 #: libbtcore/interfaces/trackerinterface.cpp:60
-#: libbtcore/torrent/torrentstats.cpp:82
+#: libbtcore/torrent/torrentstats.cpp:83
 #, kde-format
 msgid "Error: %1"
 msgstr "Feil: %1"
@@ -9620,52 +9620,52 @@ msgstr ""
 msgid "You are already downloading the torrent %1"
 msgstr "Du held allereie på å lasta ned torrenten «%1»"
 
-#: libbtcore/torrent/torrentstats.cpp:68
+#: libbtcore/torrent/torrentstats.cpp:69
 msgid "Not started"
 msgstr "Ikkje starta"
 
-#: libbtcore/torrent/torrentstats.cpp:70
+#: libbtcore/torrent/torrentstats.cpp:71
 msgid "Download completed"
 msgstr "Nedlastinga er ferdig"
 
-#: libbtcore/torrent/torrentstats.cpp:72
+#: libbtcore/torrent/torrentstats.cpp:73
 msgid "Seeding completed"
 msgstr "Delinga er ferdig"
 
-#: libbtcore/torrent/torrentstats.cpp:74
+#: libbtcore/torrent/torrentstats.cpp:75
 msgctxt "Status of a torrent file"
 msgid "Seeding"
 msgstr "Deler"
 
-#: libbtcore/torrent/torrentstats.cpp:76
+#: libbtcore/torrent/torrentstats.cpp:77
 msgid "Downloading"
 msgstr "Lastar ned"
 
-#: libbtcore/torrent/torrentstats.cpp:78
+#: libbtcore/torrent/torrentstats.cpp:79
 msgid "Stalled"
 msgstr "Stoppa opp"
 
-#: libbtcore/torrent/torrentstats.cpp:80
+#: libbtcore/torrent/torrentstats.cpp:81
 msgid "Stopped"
 msgstr "Stoppa"
 
-#: libbtcore/torrent/torrentstats.cpp:84
+#: libbtcore/torrent/torrentstats.cpp:85
 msgid "Allocating diskspace"
 msgstr "Gjer klar diskplass"
 
-#: libbtcore/torrent/torrentstats.cpp:86
+#: libbtcore/torrent/torrentstats.cpp:87
 msgid "Queued for seeding"
 msgstr "Lagd i kø for deling"
 
-#: libbtcore/torrent/torrentstats.cpp:86
+#: libbtcore/torrent/torrentstats.cpp:87
 msgid "Queued for downloading"
 msgstr "Lagd i kø for nedlasting"
 
-#: libbtcore/torrent/torrentstats.cpp:88
+#: libbtcore/torrent/torrentstats.cpp:89
 msgid "Checking data"
 msgstr "Sjekkar data"
 
-#: libbtcore/torrent/torrentstats.cpp:90
+#: libbtcore/torrent/torrentstats.cpp:91
 msgid "Stopped. No space left on device."
 msgstr "Stoppa. Ikkje meir plass på disken."
 
@@ -9679,7 +9679,7 @@ msgid "Redirect without a redirect location"
 msgstr ""
 
 #: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
-#: libbtcore/tracker/httptracker.cpp:558
+#: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
 msgstr ""
@@ -9694,16 +9694,16 @@ msgstr "Klarte ikkje gjera namneoppslag på vertsnamnet «%1»"
 msgid "Cannot bind to udp port %1 or the 10 following ports."
 msgstr "Klarte ikkje binda til UDP-porten %1 og dei ti neste portane."
 
-#: libbtcore/tracker/httptracker.cpp:281 libbtcore/tracker/httptracker.cpp:301
-#: libbtcore/tracker/httptracker.cpp:341 libbtcore/tracker/httptracker.cpp:460
+#: libbtcore/tracker/httptracker.cpp:282 libbtcore/tracker/httptracker.cpp:302
+#: libbtcore/tracker/httptracker.cpp:342 libbtcore/tracker/httptracker.cpp:461
 msgid "Invalid response from tracker"
 msgstr "Ugyldig svar frå deltakarsentralen"
 
-#: libbtcore/tracker/httptracker.cpp:294
+#: libbtcore/tracker/httptracker.cpp:295
 msgid "Invalid data from tracker"
 msgstr "Ugyldig data frå deltakarsentralen"
 
-#: libbtcore/tracker/httptracker.cpp:477
+#: libbtcore/tracker/httptracker.cpp:478
 msgid "Invalid tracker URL"
 msgstr "Ugyldig nettadresse til deltakarsentral"
 

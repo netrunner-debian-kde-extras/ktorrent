@@ -137,6 +137,7 @@ namespace kt
 		tracker_view = 0;
 		delete webseeds_tab;
 		webseeds_tab = 0;
+		delete pref;
 		pref = 0;
 	}
 
@@ -193,12 +194,6 @@ namespace kt
 		{
 			save = true;
 			InfoWidgetPluginSettings::setFirstColor(Qt::green);
-		}
-		
-		if (!InfoWidgetPluginSettings::normalColor().isValid())
-		{
-			save = true;
-			InfoWidgetPluginSettings::setNormalColor(QPalette().color(QPalette::Text));
 		}
 		
 		if (!InfoWidgetPluginSettings::lastColor().isValid())

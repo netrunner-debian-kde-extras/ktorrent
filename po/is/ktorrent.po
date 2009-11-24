@@ -1,4 +1,4 @@
-# translation of ktorrent.po to Icelandic
+# translation of ktorrent.po to
 # íslenskun ktorrent.po
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
@@ -9,10 +9,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-08 01:29+0100\n"
-"PO-Revision-Date: 2009-06-10 09:02+0000\n"
-"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
-"Language-Team: Icelandic <kde-isl@molar.is>\n"
+"POT-Creation-Date: 2009-11-21 01:31+0100\n"
+"PO-Revision-Date: 2009-11-10 16:16+0000\n"
+"Last-Translator: \n"
+"Language-Team:  <is@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -73,19 +73,19 @@ msgstr "BitTorrent"
 #: ktorrent/btpref.cpp:31
 msgid " corrupted chunk"
 msgid_plural " corrupted chunks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " skemmdur bútur"
+msgstr[1] " skemmdir bútar"
 
 #: ktorrent/btpref.cpp:33
 msgid " corrupted chunks"
-msgstr ""
+msgstr " skemmdir bútar"
 
 #: ktorrent/torrentmigratordlg.cpp:97
 #, kde-format
 msgid "Importing 1 torrent ..."
 msgid_plural "Importing %1 torrents ..."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Flyt inn 1 straum ..."
+msgstr[1] "Flyt inn %1 strauma ..."
 
 #: ktorrent/torrentmigratordlg.cpp:105
 #, kde-format
@@ -185,9 +185,9 @@ msgstr "Flutti inn <b>%1</b>"
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:213
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_upload_limit)
 #: ktorrent/spinboxdelegate.cpp:39 rc.cpp:98 rc.cpp:569 rc.cpp:578 rc.cpp:877
-#: rc.cpp:886 rc.cpp:1080 rc.cpp:1092 rc.cpp:2497 rc.cpp:2509 rc.cpp:2572
-#: rc.cpp:2581 rc.cpp:2593 rc.cpp:2602 rc.cpp:2665 rc.cpp:2674 rc.cpp:2686
-#: rc.cpp:2695
+#: rc.cpp:886 rc.cpp:1080 rc.cpp:1092 rc.cpp:2488 rc.cpp:2500 rc.cpp:2563
+#: rc.cpp:2572 rc.cpp:2584 rc.cpp:2593 rc.cpp:2656 rc.cpp:2665 rc.cpp:2677
+#: rc.cpp:2686
 msgid " KiB/s"
 msgstr " KiB/s"
 
@@ -314,10 +314,10 @@ msgstr " KiB/s"
 #: ktorrent/spinboxdelegate.cpp:41 ktorrent/speedlimitsmodel.cpp:138
 #: ktorrent/speedlimitsmodel.cpp:143 rc.cpp:566 rc.cpp:575 rc.cpp:584
 #: rc.cpp:593 rc.cpp:655 rc.cpp:664 rc.cpp:742 rc.cpp:751 rc.cpp:874
-#: rc.cpp:883 rc.cpp:1059 rc.cpp:1068 rc.cpp:1077 rc.cpp:1089 rc.cpp:1728
-#: rc.cpp:1734 rc.cpp:2494 rc.cpp:2506 rc.cpp:2569 rc.cpp:2578 rc.cpp:2590
-#: rc.cpp:2599 rc.cpp:2614 rc.cpp:2620 rc.cpp:2662 rc.cpp:2671 rc.cpp:2683
-#: rc.cpp:2692 rc.cpp:2707 rc.cpp:2713 plugins/infowidget/statustab.cpp:65
+#: rc.cpp:883 rc.cpp:1059 rc.cpp:1068 rc.cpp:1077 rc.cpp:1089 rc.cpp:1719
+#: rc.cpp:1725 rc.cpp:2485 rc.cpp:2497 rc.cpp:2560 rc.cpp:2569 rc.cpp:2581
+#: rc.cpp:2590 rc.cpp:2605 rc.cpp:2611 rc.cpp:2653 rc.cpp:2662 rc.cpp:2674
+#: rc.cpp:2683 rc.cpp:2698 rc.cpp:2704 plugins/infowidget/statustab.cpp:65
 msgid "No limit"
 msgstr "Engin mörk"
 
@@ -380,7 +380,7 @@ msgstr "2"
 
 #: ktorrent/importdialog.cpp:385 ktorrent/importdialog.cpp:402
 #: libbtcore/diskio/singlefilecache.cpp:83
-#: libbtcore/diskio/multifilecache.cpp:133
+#: libbtcore/diskio/multifilecache.cpp:134
 #, fuzzy, kde-format
 msgid "Failed to create %1 : %2"
 msgstr "Mistókst til 2"
@@ -428,7 +428,7 @@ msgid "Start all selected torrents in the current tab"
 msgstr "Ræsa allir \""
 
 #: ktorrent/viewmanager.cpp:539
-#: plugins/mediaplayer/mediaplayeractivity.cpp:105
+#: plugins/mediaplayer/mediaplayeractivity.cpp:106
 #: plugins/mediaplayer/videowidget.cpp:60
 #, fuzzy
 msgid "Stop"
@@ -460,7 +460,7 @@ msgstr "Stöðva allir \""
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:67
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
 #: ktorrent/viewmanager.cpp:545 rc.cpp:472 rc.cpp:499 rc.cpp:508 rc.cpp:901
-#: rc.cpp:2207 plugins/mediaplayer/playlistwidget.cpp:107
+#: rc.cpp:2198 plugins/mediaplayer/playlistwidget.cpp:107
 #, fuzzy
 msgid "Remove"
 msgstr "Fjarlægja"
@@ -491,19 +491,16 @@ msgid "Stop all torrents in the current tab"
 msgstr "Stöðva allir \""
 
 #: ktorrent/viewmanager.cpp:563
-#, fuzzy
 msgid "Remove Torrent and Data"
-msgstr "Fjarlægja og Gögn"
+msgstr "Fjarlægja straum og gögn hans"
 
 #: ktorrent/viewmanager.cpp:568
-#, fuzzy
 msgid "Rename Torrent"
-msgstr "Endurnefna"
+msgstr "Endurnefna straum"
 
 #: ktorrent/viewmanager.cpp:572
-#, fuzzy
 msgid "Add Peers"
-msgstr "Bæta við"
+msgstr "Bæta við jafningjum"
 
 #. i18n: file: plugins/stats/Conns.ui:31
 #. i18n: ectx: property (title), widget (QGroupBox, DhtGbw)
@@ -517,11 +514,11 @@ msgstr "Bæta við"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_5)
 #. i18n: file: plugins/stats/Settings.ui:234
 #. i18n: ectx: property (text), widget (QLabel, label_12)
-#: ktorrent/viewmanager.cpp:576 rc.cpp:1811 rc.cpp:1898 rc.cpp:2063
+#: ktorrent/viewmanager.cpp:576 rc.cpp:1802 rc.cpp:1889 rc.cpp:2054
 #: plugins/infowidget/peerviewmodel.cpp:312
 #: libbtcore/util/logsystemmanager.cpp:36
 msgid "DHT"
-msgstr ""
+msgstr "DHT"
 
 #: ktorrent/viewmanager.cpp:582
 #, fuzzy
@@ -529,114 +526,100 @@ msgid "Peer Exchange"
 msgstr "Exchange"
 
 #: ktorrent/viewmanager.cpp:587
-#, fuzzy
 msgid "Manual Announce"
-msgstr "Handvirkt"
+msgstr "Handvirk tilkynning"
 
 #: ktorrent/viewmanager.cpp:592
+#, fuzzy
 msgid "Scrape"
-msgstr ""
+msgstr "Fá stöðu"
 
 #: ktorrent/viewmanager.cpp:596 plugins/infowidget/iwfilelistmodel.cpp:78
-#: plugins/infowidget/iwfiletreemodel.cpp:89
-#, fuzzy
+#: plugins/infowidget/iwfiletreemodel.cpp:90
 msgid "Preview"
-msgstr "Forsýn"
+msgstr "Forsýning"
 
 #: ktorrent/viewmanager.cpp:600
-#, fuzzy
 msgid "Data Directory"
-msgstr "Gögn Mappa"
+msgstr "Gagnamappa"
 
 #: ktorrent/viewmanager.cpp:604
-#, fuzzy
 msgid "Temporary Directory"
-msgstr "Vinnumappa"
+msgstr "Bráðabirgðamappa"
 
 #: ktorrent/viewmanager.cpp:608
-#, fuzzy
 msgid "Move Data"
-msgstr "Flytja Gögn"
+msgstr "Flytja gögn"
 
 #: ktorrent/viewmanager.cpp:613
-#, fuzzy
 msgid "Remove from Group"
-msgstr "Fjarlægja frá Hópur"
+msgstr "Fjarlægja úr hóp"
 
 #: ktorrent/viewmanager.cpp:621
-#, fuzzy
 msgid "Check Data"
-msgstr "Virkja Gögn"
+msgstr "Athuga gögn"
 
 #: ktorrent/viewmanager.cpp:622
-#, fuzzy
 msgid "Check all the data of a torrent"
-msgstr "Virkja allir af a"
+msgstr "Athuga öll gögn straums"
 
 #. i18n: file: ktorrent/ktorrentui.rc:65
 #. i18n: ectx: Menu (OpenDirMenu)
 #: ktorrent/viewmanager.cpp:635 rc.cpp:625
-#, fuzzy
 msgid "Open Directory"
-msgstr "Open Directory"
+msgstr "Opna möppu"
 
 #. i18n: file: ktorrent/ktorrentui.rc:72
 #. i18n: ectx: Menu (GroupsSubMenu)
 #: ktorrent/viewmanager.cpp:638 rc.cpp:628
-#, fuzzy
 msgid "Add to Group"
-msgstr "Bæta við til Hópur"
+msgstr "Bæta við hóp"
 
 #: ktorrent/viewmanager.cpp:641
-#, fuzzy
 msgid "Copy Torrent URL"
-msgstr "Afrita Slóð"
+msgstr "Afrita slóð straums"
 
 #: ktorrent/viewmanager.cpp:645
-#, fuzzy
 msgid "Export Torrent"
-msgstr "Flytja út"
+msgstr "Flytja út straum"
 
 #. i18n: file: ktorrent/speedlimitsdlg.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpeedLimitsDlg)
 #: ktorrent/viewmanager.cpp:649 ktorrent/speedlimitsdlg.cpp:50 rc.cpp:859
-#, fuzzy
 msgid "Speed Limits"
-msgstr "Hraði Takmörk"
+msgstr "Hraðatakmörk"
 
 #: ktorrent/viewmanager.cpp:650
-#, fuzzy
 msgid "Set the speed limits of individual torrents"
-msgstr "Setja af"
+msgstr "Stilla hraðatakmörk einstakra strauma"
 
 #: ktorrent/viewmanager.cpp:739
 msgid "Torrents (*.torrent)"
-msgstr ""
+msgstr "Straumar (*.torrent)"
 
 #: ktorrent/ipfilterlist.cpp:95
-#, fuzzy, kde-format
+#, kde-format
 msgid "Invalid IP address %1"
-msgstr "Ógilt IP heimilisfang 1"
+msgstr "Ógilt IP vistfang %1"
 
 #: ktorrent/ipfilterlist.cpp:100
-#, fuzzy, kde-format
+#, kde-format
 msgid "Duplicate IP address %1"
-msgstr "Klóna IP heimilisfang 1"
+msgstr "Klóna IP vistfang %1"
 
 #: ktorrent/recommendedsettingsdlg.cpp:37
-#, fuzzy
 msgid "Calculate Recommended Settings"
-msgstr "Reikna Stillingar"
+msgstr "Reikna stillingar sem mælt er með"
 
-#: ktorrent/recommendedsettingsdlg.cpp:242
-#: ktorrent/recommendedsettingsdlg.cpp:248
-#, fuzzy, kde-format
+#: ktorrent/recommendedsettingsdlg.cpp:245
+#: ktorrent/recommendedsettingsdlg.cpp:251
+#, kde-format
 msgid "(= %1/s)"
-msgstr "s"
+msgstr "(= %1/sek)"
 
 #: ktorrent/torrentactivity.cpp:39
 msgid "Torrents"
-msgstr ""
+msgstr "Straumar"
 
 #. i18n: file: ktorrent/queuemanagerwidget.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, QueueManagerWidget)
@@ -652,396 +635,328 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, m_qm_group_box)
 #: ktorrent/torrentactivity.cpp:70 ktorrent/qmpref.cpp:25 rc.cpp:59 rc.cpp:129
 #: rc.cpp:646
-#, fuzzy
 msgid "Queue Manager"
 msgstr "Biðraðarstjóri"
 
 #: ktorrent/torrentactivity.cpp:70
-#, fuzzy
 msgid "Widget to manage the torrent queue"
-msgstr "til"
+msgstr "Græja til að sýsla með straumabiðröðina"
 
 #. i18n: file: ktorrent/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
 #: ktorrent/main.cpp:84 rc.cpp:1200 plugins/search/homepage.cpp:118
 msgid "KTorrent"
-msgstr ""
+msgstr "KTorrent"
 
 #: ktorrent/main.cpp:85
-#, fuzzy
 msgid "Bittorrent client for KDE"
-msgstr "Bittorrent fyrir KDE"
+msgstr "Bittorrent forrit fyrir KDE"
 
 #: ktorrent/main.cpp:87
-#, fuzzy
 msgid "(C) 2005 - 2008 Joris Guisson and Ivan Vasic"
-msgstr "(C) 2005 - 2008 Joris Guisson and Ivan Vasic"
+msgstr "(C) 2005 - 2008 Joris Guisson og Ivan Vasic"
 
 #: ktorrent/main.cpp:91
-#, fuzzy
 msgid "Joris Guisson"
 msgstr "Joris Guisson"
 
 #: ktorrent/main.cpp:92
-#, fuzzy
 msgid "Ivan Vasic"
 msgstr "Ivan Vasic"
 
 #: ktorrent/main.cpp:93
-#, fuzzy
 msgid "Alan Jones"
 msgstr "Alan Jones"
 
 #: ktorrent/main.cpp:93
-#, fuzzy
 msgid "BitFinder Plugin"
-msgstr "Íforrit"
+msgstr "BitFinder íforrit"
 
 #: ktorrent/main.cpp:94
-#, fuzzy
 msgid "Diego R. Brogna"
 msgstr "Diego R. Brogna"
 
 #: ktorrent/main.cpp:94
-#, fuzzy
 msgid "Webinterface Plugin"
-msgstr "Vefviðmót Íforrit"
+msgstr "Vefviðmótsíforrit"
 
 #: ktorrent/main.cpp:95
-#, fuzzy
 msgid "Krzysztof Kundzicz"
 msgstr "Krzysztof Kundzicz"
 
 #: ktorrent/main.cpp:95
-#, fuzzy
 msgid "Statistics Plugin"
-msgstr "Tölfræði Íforrit"
+msgstr "Tölfræðiíforrit"
 
 #: ktorrent/main.cpp:97
-#, fuzzy
 msgid "Mladen Babic"
 msgstr "Mladen Babic"
 
 #: ktorrent/main.cpp:97
-#, fuzzy
 msgid "Application icon and a couple of others"
-msgstr "Forrit og a af"
+msgstr "Forritstákn og nokkur önnur"
 
 #: ktorrent/main.cpp:98
-#, fuzzy
 msgid "Adam Treat"
 msgstr "Adam Treat"
 
 #: ktorrent/main.cpp:99
-#, fuzzy
 msgid "Danny Allen"
 msgstr "Danny Allen"
 
 #: ktorrent/main.cpp:99
 msgid "1.0 application icon"
-msgstr ""
+msgstr "1.0 forritstáknið"
 
 #: ktorrent/main.cpp:100
-#, fuzzy
 msgid "Vincent Wagelaar"
 msgstr "Vincent Wagelaar"
 
 #: ktorrent/main.cpp:101
 msgid "Knut Morten Johansson"
-msgstr ""
+msgstr "Knut Morten Johansson"
 
 #: ktorrent/main.cpp:102
-#, fuzzy
 msgid "Felix Berger"
 msgstr "Felix Berger"
 
 #: ktorrent/main.cpp:102
-#, fuzzy
 msgid "ChunkBar's tooltip and IWFileTreeItem sorting"
-msgstr "s og"
+msgstr "Ábendingar í ChunkBar og röðun í IWFileTreeItem"
 
 #: ktorrent/main.cpp:103
-#, fuzzy
 msgid "Andreas Kling"
 msgstr "Andreas Kling"
 
 #: ktorrent/main.cpp:104
-#, fuzzy
 msgid "Felipe Sateler"
 msgstr "Felipe Sateler"
 
 #: ktorrent/main.cpp:105
 msgid "Maxmind"
-msgstr ""
+msgstr "Maxmind"
 
 #: ktorrent/main.cpp:105
-#, fuzzy
 msgid ""
 "Country locator for InfoWidget plugin. Flags are taken from http://flags."
 "blogpotato.de/ so thanks to them too."
-msgstr "Land fyrir íforrit Flögg fráhttp://flags.blogpotato.de/ til."
+msgstr ""
+"Landastaðsetning fyrir InfoWidget íforritið. Flöggin koma frá http://flags."
+"blogpotato.de/, bestu þakkir til þeirra allra."
 
 #: ktorrent/main.cpp:106
-#, fuzzy
 msgid "Adam Forsyth"
 msgstr "Adam Forsyth"
 
 #: ktorrent/main.cpp:106
-#, fuzzy
 msgid "File prioritization and some other patches"
-msgstr "Skrá og eitthvað annað"
+msgstr "Skráaforgangur og nokkrar aðrar viðbætur"
 
 #: ktorrent/main.cpp:107
-#, fuzzy
 msgid "Thomas Bernard"
 msgstr "Thomas Bernard"
 
 #: ktorrent/main.cpp:107
-#, fuzzy
 msgid "Miniupnp was used as an example for our own UPnP implementation"
-msgstr "sem fyrir"
+msgstr "Miniupnp var notað sem dæmi um okkar eigin UPnP framsetningu"
 
 #: ktorrent/main.cpp:108
-#, fuzzy
 msgid "Diego Rosario Brogna"
 msgstr "Diego Rosario Brogna"
 
 #: ktorrent/main.cpp:108
-#, fuzzy
 msgid "Global max share ratio patch"
-msgstr "Víðvært max hlutfall"
+msgstr "Viðbót fyrir víðvært mesta-deilihlutfall"
 
 #: ktorrent/main.cpp:109
-#, fuzzy
 msgid "Lesly Weyts"
 msgstr "Lesly Weyts"
 
 #: ktorrent/main.cpp:109 ktorrent/main.cpp:110
 msgid "Zeroconf enhancements"
-msgstr ""
+msgstr "Zeroconf viðbætur"
 
 #: ktorrent/main.cpp:110
-#, fuzzy
 msgid "Kevin Andre"
 msgstr "Kevin Andre"
 
 #: ktorrent/main.cpp:111
-#, fuzzy
 msgid "Dagur Valberg Johannsson"
 msgstr "Dagur Valberg Johannsson"
 
 #: ktorrent/main.cpp:111
 msgid "Coldmilk webgui"
-msgstr ""
+msgstr "Coldmilk vefviðmót"
 
 #: ktorrent/main.cpp:112
-#, fuzzy
 msgid "Alexander Dymo"
 msgstr "Alexander Dymo"
 
 #: ktorrent/main.cpp:112
-#, fuzzy
 msgid "IDEAl code from KDevelop"
-msgstr "frá KDevelop"
+msgstr "IDEAl kóði frá KDevelop"
 
 #: ktorrent/main.cpp:113
-#, fuzzy
 msgid "Scott Wolchok"
 msgstr "Scott Wolchok"
 
 #: ktorrent/main.cpp:113
-#, fuzzy
 msgid "Conversion speed improvement in ipfilter plugin"
-msgstr "Umbreyting \" íforrit"
+msgstr "Aukning umbreytingahraða í ipfilter íforriti"
 
 #: ktorrent/main.cpp:114
-#, fuzzy
 msgid "Bryan Burns of Juniper Networks"
 msgstr "Bryan Burns frá Juniper Networks"
 
 #: ktorrent/main.cpp:114
-#, fuzzy
 msgid "Discovered 2 security vulnerabilities (both are fixed)"
-msgstr "lagað"
+msgstr "Fann 2 öryggisholur (báðar lagaðar)"
 
 #: ktorrent/main.cpp:115
-#, fuzzy
 msgid "Goten Xiao"
 msgstr "Goten Xiao"
 
 #: ktorrent/main.cpp:115
-#, fuzzy
 msgid "Patch to load silently with a save location"
-msgstr "til með a"
+msgstr "Víðbót sel gerir kleift að vista á fjarlægan stað án meldinga"
 
 #: ktorrent/main.cpp:116
-#, fuzzy
 msgid "Rapsys"
 msgstr "Rapsys"
 
 #: ktorrent/main.cpp:116
-#, fuzzy
 msgid "Fixes in PHP code of webinterface"
-msgstr "\" PHP af"
+msgstr "Viðgerðir á PHP-kóða vefviðmóts"
 
 #: ktorrent/main.cpp:117
-#, fuzzy
 msgid "Athantor"
 msgstr "Athantor"
 
 #: ktorrent/main.cpp:117
-#, fuzzy
 msgid "XFS specific disk preallocation"
-msgstr "diskur"
+msgstr "XFS sértæk forúthlutun diska"
 
 #: ktorrent/main.cpp:118
-#, fuzzy
 msgid "twisted_fall"
 msgstr "twisted_fall"
 
 #: ktorrent/main.cpp:118
-#, fuzzy
 msgid "Patch to not show very low speeds"
-msgstr "til ekki lár"
+msgstr "Viðbót til að sýna ekki mjög lágan hraða"
 
 #: ktorrent/main.cpp:119
-#, fuzzy
 msgid "Lucke"
 msgstr "Lucke"
 
 #: ktorrent/main.cpp:119
-#, fuzzy
 msgid "Patch to show potentially firewalled status"
-msgstr "til staða"
+msgstr "Viðbót til að sýna hugsanlega stöðu eldveggja"
 
 #: ktorrent/main.cpp:120
-#, fuzzy
 msgid "Modestas Vainius"
 msgstr "Modestas Vainius"
 
 #: ktorrent/main.cpp:120
 msgid "Several patches"
-msgstr ""
+msgstr "Ýmsar betrumbætur"
 
 #: ktorrent/main.cpp:121
-#, fuzzy
 msgid "Stefan Monov"
 msgstr "Stefan Monov"
 
 #: ktorrent/main.cpp:121
-#, fuzzy
 msgid "Patch to hide menu bar"
-msgstr "til"
+msgstr "Viðbót til að fela valmyndaslá"
 
 #: ktorrent/main.cpp:122
-#, fuzzy
 msgid "The_Kernel"
 msgstr "The_Kernel"
 
 #: ktorrent/main.cpp:122
-#, fuzzy
 msgid "Patch to change file priorities in the webgui"
-msgstr "til \""
+msgstr "Viðbót til að breyta skráaforgangi í vefviðmóti"
 
 #: ktorrent/main.cpp:123
-#, fuzzy
 msgid "Rafał Miłecki"
 msgstr "Rafał Miłecki"
 
 #: ktorrent/main.cpp:123
 msgid "Several webgui patches"
-msgstr ""
+msgstr "Ýmsar betrumbætur vefviðmóts"
 
 #: ktorrent/main.cpp:124
-#, fuzzy
 msgid "Ozzi"
 msgstr "Ozzi"
 
 #: ktorrent/main.cpp:124
-#, fuzzy
 msgid "Fixes for several warnings"
-msgstr "fyrir"
+msgstr "Lagaðar ýmsar viðvaranir"
 
 #: ktorrent/main.cpp:125
-#, fuzzy
 msgid "Markus Brueffer"
 msgstr "Markus Brueffer"
 
 #: ktorrent/main.cpp:125
-#, fuzzy
 msgid "Patch to fix free diskspace calculation on FreeBSD"
-msgstr "til á"
+msgstr "Lagaði útreikninga á lausu diskaplássi á FreeBSD"
 
 #: ktorrent/main.cpp:126
-#, fuzzy
 msgid "Lukas Appelhans"
 msgstr "Lukas Appelhans"
 
 #: ktorrent/main.cpp:126
-#, fuzzy
 msgid "Patch to fix a crash in ChunkDownloadView"
-msgstr "til a \""
+msgstr "Gerði við hrun í ChunkDownloadView"
 
 #: ktorrent/main.cpp:127
-#, fuzzy
 msgid "Rickard Närström"
 msgstr "Rickard Närström"
 
 #: ktorrent/main.cpp:127
-#, fuzzy
 msgid "A couple of bugfixes"
-msgstr "A af"
+msgstr "Nokkrar villuviðgerðir"
 
 #: ktorrent/main.cpp:128
-#, fuzzy
 msgid "caruccio"
 msgstr "caruccio"
 
 #: ktorrent/main.cpp:128
-#, fuzzy
 msgid "Patch to load torrents silently from the command line"
-msgstr "til frá lína"
+msgstr "Viðbót sem hleður straumum hljóðlega inn af skipanalínu"
 
 #: ktorrent/main.cpp:129
-#, fuzzy
 msgid "Lee Olson"
 msgstr "Lee Olson"
 
 #: ktorrent/main.cpp:129
-#, fuzzy
 msgid "New set of icons"
-msgstr "Nýtt af táknmyndir"
+msgstr "Nýtt sett af táknmyndum"
 
 #: ktorrent/main.cpp:130
-#, fuzzy
 msgid "Aaron J. Seigo"
 msgstr "Aaron J. Seigo"
 
 #: ktorrent/main.cpp:130
-#, fuzzy
 msgid "Drag and drop support for plasma applet"
-msgstr "Draga og fyrir"
+msgstr "Draga og sleppa stuðningur fyrir Plasma forritling"
 
 #: ktorrent/main.cpp:131
 msgid "Ian Higginson"
-msgstr ""
+msgstr "Ian Higginson"
 
 #: ktorrent/main.cpp:131
-#, fuzzy
 msgid "Patch to cleanup the plugin list"
-msgstr "til íforrit"
+msgstr "Viðbót sem hreinsar íforritalista"
 
 #: ktorrent/main.cpp:132
 msgid "Amichai Rothman"
-msgstr ""
+msgstr "Amichai Rothman"
 
 #: ktorrent/main.cpp:132
-#, fuzzy
 msgid "Patch to make the plasma applet a popup applet"
-msgstr "til a"
+msgstr "Breytti plasma forritlingi í sprettglugga"
 
 #: ktorrent/main.cpp:136
-#, fuzzy
 msgid "Document to open"
 msgstr "Skjal sem á að opna"
 
@@ -1119,77 +1034,67 @@ msgid "You must add at least one node."
 msgstr "Þú einn."
 
 #: ktorrent/torrentcreatordlg.cpp:338
-#, fuzzy
 msgid "Torrent Files (*.torrent)"
-msgstr "Skrár"
+msgstr "Torrent skrár (*.torrent)"
 
 #: ktorrent/torrentcreatordlg.cpp:339
-#, fuzzy
 msgid "Choose a file to save the torrent"
-msgstr "a til"
+msgstr "Veldu skrá til að vista strauminn"
 
 #: ktorrent/torrentcreatordlg.cpp:348
-#, fuzzy
 msgid "Creating Torrent"
-msgstr "Bý til"
+msgstr "Bý til straum"
 
 #: ktorrent/torrentcreatordlg.cpp:349
-#, fuzzy, kde-format
+#, kde-format
 msgid "Creating %1..."
-msgstr "Bý til."
+msgstr "Bý til %1..."
 
 #: ktorrent/viewmodel.cpp:432 ktorrent/queuemanagermodel.cpp:119
-#, fuzzy
 msgid "Name"
-msgstr "Nafn"
+msgstr "Heiti"
 
 #: ktorrent/viewmodel.cpp:433 ktorrent/queuemanagermodel.cpp:120
 #: plugins/infowidget/infowidgetplugin.cpp:83
 #: plugins/infowidget/trackermodel.cpp:148
 #: plugins/infowidget/webseedsmodel.cpp:127
-#, fuzzy
 msgid "Status"
 msgstr "Staða"
 
 #: ktorrent/viewmodel.cpp:434 plugins/infowidget/peerviewmodel.cpp:316
 #: plugins/infowidget/webseedsmodel.cpp:126
 msgid "Downloaded"
-msgstr ""
+msgstr "Hlaðið inn"
 
 #: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:399
 #: libktcore/torrent/torrentfilelistmodel.cpp:77
-#, fuzzy
 msgid "Size"
 msgstr "Stærð"
 
 #: ktorrent/viewmodel.cpp:436 plugins/infowidget/peerviewmodel.cpp:317
-#, fuzzy
 msgid "Uploaded"
-msgstr "Hlaðið inn"
+msgstr "Sent"
 
 #: ktorrent/viewmodel.cpp:437 plugins/infowidget/peerviewmodel.cpp:307
 #: plugins/infowidget/chunkdownloadmodel.cpp:213
-#, fuzzy
 msgid "Down Speed"
-msgstr "Niður Hraði"
+msgstr "Sóknarhraði"
 
 #: ktorrent/viewmodel.cpp:438 plugins/infowidget/peerviewmodel.cpp:308
-#, fuzzy
 msgid "Up Speed"
-msgstr "Upp Hraði"
+msgstr "Sendingarhraði"
 
 #: ktorrent/viewmodel.cpp:439
-#, fuzzy
 msgid "Time Left"
-msgstr "Tími Vinstri"
+msgstr "Tími eftir"
 
 #: ktorrent/viewmodel.cpp:440 plugins/infowidget/trackermodel.cpp:149
 msgid "Seeders"
-msgstr ""
+msgstr "Sáðmenn"
 
 #: ktorrent/viewmodel.cpp:441 plugins/infowidget/trackermodel.cpp:150
 msgid "Leechers"
-msgstr ""
+msgstr "Sleikjarar"
 
 #: ktorrent/viewmodel.cpp:443
 #, fuzzy, no-c-format
@@ -1217,28 +1122,24 @@ msgid "Location"
 msgstr "Staðsetning"
 
 #: ktorrent/viewmodel.cpp:455
-#, fuzzy
 msgid "How much data we have downloaded of the torrent"
-msgstr "af"
+msgstr "Hversu mikið af gögnum er búið að ná í af straumnum"
 
 #: ktorrent/viewmodel.cpp:456
-#, fuzzy
 msgid "Total size of the torrent, excluded files are not included"
-msgstr "Samtals stærð af ekki"
+msgstr "Samtals stærð straumsins, útilokaðar skrár ekki meðtaldar"
 
 #: ktorrent/viewmodel.cpp:457
 msgid "How much data we have uploaded"
-msgstr ""
+msgstr "Hversu mikið af gögnum er búið að senda út"
 
 #: ktorrent/viewmodel.cpp:458
-#, fuzzy
 msgid "Current download speed"
-msgstr "Núverandi"
+msgstr "Núverandi niðurhalshraði"
 
 #: ktorrent/viewmodel.cpp:459
-#, fuzzy
 msgid "Current upload speed"
-msgstr "Núverandi"
+msgstr "Núverandi sendingarhraði"
 
 #: ktorrent/viewmodel.cpp:460
 #, fuzzy
@@ -1347,9 +1248,8 @@ msgid ""
 msgstr "er af er til?"
 
 #: ktorrent/core.cpp:1067 ktorrent/core.cpp:1078
-#, fuzzy
 msgid "Data file is missing"
-msgstr "Gögn er"
+msgstr "Gagnaskrá vantar"
 
 #: ktorrent/core.cpp:1077
 #, fuzzy, kde-format
@@ -1427,14 +1327,13 @@ msgid "Show a file list"
 msgstr "Veldu skrá"
 
 #: ktorrent/fileselectdlg.cpp:87 plugins/infowidget/fileview.cpp:70
-#, fuzzy
 msgid "Filter"
-msgstr "Síur"
+msgstr "Sía"
 
 #: ktorrent/fileselectdlg.cpp:96
-#, fuzzy, kde-format
+#, kde-format
 msgid "Opening %1"
-msgstr "1"
+msgstr "Opna %1"
 
 #: ktorrent/fileselectdlg.cpp:202
 #, fuzzy
@@ -1565,7 +1464,7 @@ msgstr "Ræsa allir"
 #. i18n: ectx: property (text), widget (QCheckBox, m_paused)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:123
 #. i18n: ectx: property (text), widget (QCheckBox, m_paused)
-#: ktorrent/gui.cpp:400 rc.cpp:2563 rc.cpp:2656
+#: ktorrent/gui.cpp:400 rc.cpp:2554 rc.cpp:2647
 #, fuzzy
 msgid "Stop all torrents"
 msgstr "Stöðva allir"
@@ -1783,7 +1682,7 @@ msgstr "Tími Töf"
 
 #: ktorrent/queuemanagermodel.cpp:122
 #: plugins/infowidget/iwfilelistmodel.cpp:77
-#: plugins/infowidget/iwfiletreemodel.cpp:88
+#: plugins/infowidget/iwfiletreemodel.cpp:89
 #, fuzzy
 msgid "Priority"
 msgstr "Forgangur"
@@ -1935,7 +1834,7 @@ msgstr "Hægri"
 
 #. i18n: file: plugins/stats/Settings.ui:272
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MaxMode)
-#: libktcore/gui/activitylistwidget.cpp:103 rc.cpp:2072
+#: libktcore/gui/activitylistwidget.cpp:103 rc.cpp:2063
 #, fuzzy
 msgid "Top"
 msgstr "Efst"
@@ -2129,7 +2028,7 @@ msgstr "Íforrit"
 msgid "Connection closed unexpectedly."
 msgstr "Tenging."
 
-#: libktupnp/httprequest.cpp:120
+#: libktupnp/httprequest.cpp:122
 #, fuzzy
 msgid "Timeout occurred"
 msgstr "Timeout"
@@ -2151,7 +2050,7 @@ msgid ""
 "Device does not have a WANIPConnection or WANPPPConnection."
 msgstr "mistókst ekki a eða."
 
-#: libktupnp/upnprouter.cpp:434 libktupnp/upnprouter.cpp:447
+#: libktupnp/upnprouter.cpp:433 libktupnp/upnprouter.cpp:446
 #, fuzzy
 msgid "Cannot find port forwarding service in the device's description."
 msgstr "\" s lýsing."
@@ -2173,8 +2072,9 @@ msgstr "C og"
 #. i18n: file: plasma/applet/appletconfig.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, AppletConfig)
 #: plasma/applet/applet.cpp:234 rc.cpp:1396
+#, fuzzy
 msgid "Applet"
-msgstr ""
+msgstr "Smáforrit"
 
 #: plasma/applet/applet.cpp:298 plasma/applet/applet.cpp:363
 #, fuzzy, kde-format
@@ -2548,9 +2448,10 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:36
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:113 rc.cpp:880 rc.cpp:1083 rc.cpp:2488
+#: rc.cpp:113 rc.cpp:880 rc.cpp:1083 rc.cpp:2479
+#, fuzzy
 msgid "Maximum upload speed:"
-msgstr ""
+msgstr "Mesti sendingarhraði:"
 
 #. i18n: file: ktorrent/recommendedsettingsdlg.ui:221
 #. i18n: ectx: property (text), widget (QLabel, label_5)
@@ -2568,9 +2469,10 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:65
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:117 rc.cpp:871 rc.cpp:1071 rc.cpp:2500
+#: rc.cpp:117 rc.cpp:871 rc.cpp:1071 rc.cpp:2491
+#, fuzzy
 msgid "Maximum download speed:"
-msgstr ""
+msgstr "Mesti sóknarhraði:"
 
 #. i18n: file: ktorrent/recommendedsettingsdlg.ui:235
 #. i18n: ectx: property (text), widget (QLabel, label_7)
@@ -2588,7 +2490,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:258
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:121 rc.cpp:1053 rc.cpp:2611 rc.cpp:2704
+#: rc.cpp:121 rc.cpp:1053 rc.cpp:2602 rc.cpp:2695
 msgid "Maximum connections per torrent:"
 msgstr ""
 
@@ -2608,7 +2510,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:275
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:125 rc.cpp:1062 rc.cpp:2617 rc.cpp:2710
+#: rc.cpp:125 rc.cpp:1062 rc.cpp:2608 rc.cpp:2701
 #, fuzzy
 msgid "Global connection limit:"
 msgstr "Víðvært:"
@@ -2665,7 +2567,7 @@ msgstr "Velja Skrár Þú til Hlaða niður"
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #. i18n: file: plugins/syndication/filtereditor.ui:239
 #. i18n: ectx: property (text), widget (QCheckBox, m_use_custom_download_location)
-#: rc.cpp:146 rc.cpp:2309
+#: rc.cpp:146 rc.cpp:2300
 #, fuzzy
 msgid "Download to:"
 msgstr "Hlaða niður í:"
@@ -2760,7 +2662,7 @@ msgstr "Sleppa"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #. i18n: file: plugins/syndication/filtereditor.ui:183
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: rc.cpp:179 rc.cpp:421 rc.cpp:1435 rc.cpp:2118 rc.cpp:2297
+#: rc.cpp:179 rc.cpp:421 rc.cpp:1435 rc.cpp:2109 rc.cpp:2288
 #, fuzzy
 msgid "Options"
 msgstr "Valmöguleikar"
@@ -3213,8 +3115,9 @@ msgstr "Leyfa"
 #. i18n: file: ktorrent/btpref.ui:123
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: rc.cpp:335 libbtcore/util/logsystemmanager.cpp:35
+#, fuzzy
 msgid "Tracker"
-msgstr ""
+msgstr "Skrásetjari (tracker)"
 
 #. i18n: file: ktorrent/btpref.ui:129
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useCustomIP)
@@ -3455,7 +3358,7 @@ msgstr "1"
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:61
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: rc.cpp:406 rc.cpp:487 rc.cpp:935 rc.cpp:981 rc.cpp:1029 rc.cpp:1375
-#: rc.cpp:1522 rc.cpp:2438
+#: rc.cpp:1522 rc.cpp:2429
 #, fuzzy
 msgid "Port:"
 msgstr "Gátt:"
@@ -3488,8 +3391,8 @@ msgstr "Gátt:"
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
 #. i18n: file: plugins/search/searchpref.ui:139
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
-#: rc.cpp:409 rc.cpp:469 rc.cpp:490 rc.cpp:505 rc.cpp:898 rc.cpp:2204
-#: rc.cpp:2360
+#: rc.cpp:409 rc.cpp:469 rc.cpp:490 rc.cpp:505 rc.cpp:898 rc.cpp:2195
+#: rc.cpp:2351
 #, fuzzy
 msgid "Add"
 msgstr "Bæta við"
@@ -3634,9 +3537,10 @@ msgstr "Bæta við til flokkur:"
 
 #. i18n: file: ktorrent/torrentcreatordlg.ui:168
 #. i18n: ectx: attribute (title), widget (QWidget, m_tracker_tab)
-#: rc.cpp:466 plugins/infowidget/infowidgetplugin.cpp:271
+#: rc.cpp:466 plugins/infowidget/infowidgetplugin.cpp:266
+#, fuzzy
 msgid "Trackers"
-msgstr ""
+msgstr "Skrásetjarar (trackers)"
 
 #. i18n: file: ktorrent/torrentcreatordlg.ui:196
 #. i18n: ectx: property (text), widget (KPushButton, m_move_up)
@@ -3646,7 +3550,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KPushButton, m_move_up)
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:50
 #. i18n: ectx: property (text), widget (KPushButton, m_move_up)
-#: rc.cpp:475 rc.cpp:2154
+#: rc.cpp:475 rc.cpp:2145
 #, fuzzy
 msgid "Move Up"
 msgstr "Færa upp"
@@ -3659,7 +3563,7 @@ msgstr "Færa upp"
 #. i18n: ectx: property (text), widget (KPushButton, m_move_down)
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:57
 #. i18n: ectx: property (text), widget (KPushButton, m_move_down)
-#: rc.cpp:478 rc.cpp:2157
+#: rc.cpp:478 rc.cpp:2148
 #, fuzzy
 msgid "Move Down"
 msgstr "Færa niður"
@@ -3715,7 +3619,7 @@ msgstr "Vefur Fræ"
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: file: plugins/infowidget/statustab.ui:123
 #. i18n: ectx: property (text), widget (QLabel, label_17)
-#: rc.cpp:511 rc.cpp:1704
+#: rc.cpp:511 rc.cpp:1695
 #, fuzzy
 msgid "Comments:"
 msgstr "Athugasemdir:"
@@ -3889,7 +3793,7 @@ msgstr "Tími:"
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, m_max_seed_time)
 #. i18n: file: plugins/infowidget/statustab.ui:318
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, time_limit)
-#: rc.cpp:587 rc.cpp:1737
+#: rc.cpp:587 rc.cpp:1728
 #, fuzzy
 msgid " Hours"
 msgstr "Klukkustundir"
@@ -4168,9 +4072,10 @@ msgstr "Mínútur"
 #. i18n: file: ktorrent/qmpref.ui:193
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: rc.cpp:715
+#, fuzzy
 msgctxt "@title:group Options regarging Seeding"
 msgid "Seeding"
-msgstr ""
+msgstr "Sái"
 
 #. i18n: file: ktorrent/qmpref.ui:199
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_keepSeeding)
@@ -4397,8 +4302,9 @@ msgstr ""
 #. i18n: file: ktorrent/scanextender.ui:21
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: rc.cpp:805
+#, fuzzy
 msgid "Found:"
-msgstr ""
+msgstr "Fannst:"
 
 #. i18n: file: ktorrent/scanextender.ui:69
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
@@ -4733,7 +4639,7 @@ msgstr "Notandanafn og"
 #. i18n: ectx: property (text), widget (QLabel, textLabel5)
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:25
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1000 rc.cpp:1507 rc.cpp:2429
+#: rc.cpp:1000 rc.cpp:1507 rc.cpp:2420
 #, fuzzy
 msgid "Username:"
 msgstr "Notandanafn:"
@@ -4776,7 +4682,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:35
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1010 rc.cpp:1513 rc.cpp:2432
+#: rc.cpp:1010 rc.cpp:1513 rc.cpp:2423
 #, fuzzy
 msgid "Password:"
 msgstr "Lykilorð:"
@@ -4815,7 +4721,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #. i18n: file: plugins/syndication/feedwidget.ui:27
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1023 rc.cpp:2169
+#: rc.cpp:1023 rc.cpp:2160
 #, fuzzy
 msgid "URL:"
 msgstr "Slóð:"
@@ -5954,7 +5860,7 @@ msgstr "Leita."
 #. i18n: ectx: property (windowTitle), widget (QWidget, WebInterfacePrefWidget)
 #. i18n: file: plugins/search/searchpref.ui:25
 #. i18n: ectx: property (windowTitle), widget (QWidget, SearchPref)
-#: rc.cpp:1495 rc.cpp:2324
+#: rc.cpp:1495 rc.cpp:2315
 #, fuzzy
 msgid "Search Preferences"
 msgstr "Leitarstillingar"
@@ -6188,9 +6094,10 @@ msgstr "Slökkva á Allt"
 #. i18n: ectx: property (windowTitle), widget (QWidget, ChunkDownloadView)
 #. i18n: file: plugins/infowidget/statustab.ui:164
 #. i18n: ectx: property (text), widget (QLabel, hdr_chunks)
-#: rc.cpp:1587 rc.cpp:1710 plugins/infowidget/infowidgetplugin.cpp:249
+#: rc.cpp:1587 rc.cpp:1701 plugins/infowidget/infowidgetplugin.cpp:244
+#, fuzzy
 msgid "Chunks"
-msgstr ""
+msgstr "Bútar"
 
 #. i18n: file: plugins/infowidget/chunkdownloadview.ui:26
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
@@ -6202,8 +6109,9 @@ msgstr "Alls:"
 #. i18n: file: plugins/infowidget/chunkdownloadview.ui:62
 #. i18n: ectx: property (text), widget (QLabel, textLabel5)
 #: rc.cpp:1593
+#, fuzzy
 msgid "Currently downloading:"
-msgstr ""
+msgstr "Í niðurhali núna:"
 
 #. i18n: file: plugins/infowidget/chunkdownloadview.ui:134
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
@@ -6282,55 +6190,56 @@ msgstr "Uppfæra"
 msgid "Restore Defaults"
 msgstr "Endurheimta sjálfgefið"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:16
+#. i18n: file: plugins/infowidget/iwprefpage.ui:17
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: rc.cpp:1632
+#, fuzzy
 msgid "Tabs"
-msgstr ""
+msgstr "Flipar"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:22
+#. i18n: file: plugins/infowidget/iwprefpage.ui:23
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showPeerView)
 #: rc.cpp:1635
 #, fuzzy
 msgid "Whether or not to show the peers tab in the bottom of the window."
 msgstr "eða ekki til \" botn af."
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:25
+#. i18n: file: plugins/infowidget/iwprefpage.ui:26
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showPeerView)
 #: rc.cpp:1638
 #, fuzzy
 msgid "Show list of peers"
 msgstr "Sýna af"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:32
+#. i18n: file: plugins/infowidget/iwprefpage.ui:33
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showChunkView)
 #: rc.cpp:1641
 #, fuzzy
 msgid "Whether or not to show the chunks tab in the bottom of the window."
 msgstr "eða ekki til \" botn af."
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:35
+#. i18n: file: plugins/infowidget/iwprefpage.ui:36
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showChunkView)
 #: rc.cpp:1644
 #, fuzzy
 msgid "Show list of chunks currently downloading"
 msgstr "Sýna af"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:42
+#. i18n: file: plugins/infowidget/iwprefpage.ui:43
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showTrackersView)
 #: rc.cpp:1647
 #, fuzzy
 msgid "Whether or not to show the trackers tab in the bottom of the window."
 msgstr "eða ekki til \" botn af."
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:45
+#. i18n: file: plugins/infowidget/iwprefpage.ui:46
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showTrackersView)
 #: rc.cpp:1650
 #, fuzzy
 msgid "Show list of trackers"
 msgstr "Sýna af"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:55
+#. i18n: file: plugins/infowidget/iwprefpage.ui:56
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showWebSeedsTab)
 #: rc.cpp:1653
 #, fuzzy
@@ -6352,28 +6261,28 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"> eða ekki til botn af</p></"
 "body></html>"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:58
+#. i18n: file: plugins/infowidget/iwprefpage.ui:59
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showWebSeedsTab)
 #: rc.cpp:1659
 #, fuzzy
 msgid "Show list of webseeds"
 msgstr "Sýna af"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:68
+#. i18n: file: plugins/infowidget/iwprefpage.ui:69
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: rc.cpp:1662
 #, fuzzy
 msgid "File Priority Colors"
 msgstr "Skrá Forgangur Litir"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:74
+#. i18n: file: plugins/infowidget/iwprefpage.ui:75
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: rc.cpp:1665
 #, fuzzy
 msgid "First priority:"
 msgstr "Fyrsti forgangur:"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:84
+#. i18n: file: plugins/infowidget/iwprefpage.ui:85
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_firstColor)
 #: rc.cpp:1668
 #, fuzzy
@@ -6395,45 +6304,16 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"> Litur til fyrir 1. "
 "forgangur</p></body></html>"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:91
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1674
-#, fuzzy
-msgid "Normal priority:"
-msgstr "Venjulegt forgangur:"
-
-#. i18n: file: plugins/infowidget/iwprefpage.ui:101
-#. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_normalColor)
-#: rc.cpp:1677
-#, fuzzy
-msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-"size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Color to use for normal "
-"priority files.</p></body></html>"
-msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\"> hvítur\n"
-"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-"size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"> Litur til fyrir samræmt "
-"forgangur</p></body></html>"
-
-#. i18n: file: plugins/infowidget/iwprefpage.ui:108
+#. i18n: file: plugins/infowidget/iwprefpage.ui:92
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:1683
+#: rc.cpp:1674
 #, fuzzy
 msgid "Last priority:"
 msgstr "Síðasta forgangur:"
 
-#. i18n: file: plugins/infowidget/iwprefpage.ui:118
+#. i18n: file: plugins/infowidget/iwprefpage.ui:102
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_lastColor)
-#: rc.cpp:1686
+#: rc.cpp:1677
 #, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
@@ -6455,173 +6335,174 @@ msgstr ""
 
 #. i18n: file: plugins/infowidget/statustab.ui:32
 #. i18n: ectx: property (text), widget (QLabel, hdr_info)
-#: rc.cpp:1692
+#: rc.cpp:1683
 #, fuzzy
 msgid "Info"
 msgstr "Upplýsingar"
 
 #. i18n: file: plugins/infowidget/statustab.ui:41
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:1695
+#: rc.cpp:1686
 #, fuzzy
 msgid "Average down speed:"
 msgstr "Meðaltal:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:64
 #. i18n: ectx: property (text), widget (QLabel, label_16)
-#: rc.cpp:1698
+#: rc.cpp:1689
 #, fuzzy
 msgid "Type:"
 msgstr "Tegund:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:100
 #. i18n: ectx: property (text), widget (QLabel, label_15)
-#: rc.cpp:1701
+#: rc.cpp:1692
 #, fuzzy
 msgid "Average up speed:"
 msgstr "Meðaltal:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:139
 #. i18n: ectx: property (text), widget (KSqueezedTextLabel, comments)
-#: rc.cpp:1707
+#: rc.cpp:1698
 #, fuzzy
 msgid "KSqueezedTextLabel"
 msgstr "KSqueezedTextLabel"
 
 #. i18n: file: plugins/infowidget/statustab.ui:171
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:1713
+#: rc.cpp:1704
 msgid "Downloaded chunks:"
 msgstr ""
 
 #. i18n: file: plugins/infowidget/statustab.ui:194
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:1716
+#: rc.cpp:1707
 #, fuzzy
 msgid "Available chunks:"
 msgstr "Tiltækt:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:256
 #. i18n: ectx: property (text), widget (QLabel, hdr_sharing)
-#: rc.cpp:1719
+#: rc.cpp:1710
 #, fuzzy
 msgid "Sharing"
 msgstr "Deiling"
 
 #. i18n: file: plugins/infowidget/statustab.ui:265
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:1722
+#: rc.cpp:1713
 #, fuzzy
 msgid "Share ratio:"
 msgstr "Deila hlutfall:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:282
 #. i18n: ectx: property (text), widget (QCheckBox, use_ratio_limit)
-#: rc.cpp:1725
+#: rc.cpp:1716
 #, fuzzy
 msgid "Ratio limit:"
 msgstr "Hlutfall:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:308
 #. i18n: ectx: property (text), widget (QCheckBox, use_time_limit)
-#: rc.cpp:1731
+#: rc.cpp:1722
 #, fuzzy
 msgid "Time limit:"
 msgstr "Tímatakmark:"
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:19
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
-#: rc.cpp:1740 plugins/ipfilter/convertthread.cpp:174
+#: rc.cpp:1731 plugins/ipfilter/convertthread.cpp:174
+#, fuzzy
 msgid "Converting..."
-msgstr ""
+msgstr "Umbreyting..."
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:28
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:1743
+#: rc.cpp:1734
 #, fuzzy
 msgid "Converting block list to KTorrent format. This might take some time."
 msgstr "til forsníða eitthvað Tími."
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:95
 #. i18n: ectx: property (text), widget (QPushButton, m_cancel)
-#: rc.cpp:1746
+#: rc.cpp:1737
 #, fuzzy
 msgid "C&ancel"
 msgstr "Hætt&a við"
 
 #. i18n: file: plugins/ipfilter/ktipfilterplugin.kcfg:10
 #. i18n: ectx: label, entry (filterURL), group (general)
-#: rc.cpp:1749
+#: rc.cpp:1740
 #, fuzzy
 msgid "Level1 filter url"
 msgstr "sía slóð"
 
 #. i18n: file: plugins/ipfilter/ktipfilterplugin.kcfg:14
 #. i18n: ectx: label, entry (useLevel1), group (general)
-#: rc.cpp:1752
+#: rc.cpp:1743
 #, fuzzy
 msgid "Use level1 filter?"
 msgstr "Nota sía?"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, IPBlockingPrefPage)
-#: rc.cpp:1755
+#: rc.cpp:1746
 #, fuzzy
 msgid "IPBlocking Preferences"
 msgstr "Stillingar"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:22
 #. i18n: ectx: property (title), widget (Q3GroupBox, groupBox1)
-#: rc.cpp:1758
+#: rc.cpp:1749
 #, fuzzy
 msgid "PeerGuardian Filter File "
 msgstr "Sía Skrá "
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:28
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useLevel1)
-#: rc.cpp:1761
+#: rc.cpp:1752
 #, fuzzy
 msgid "Enable this if you want the IP filter plugin to work."
 msgstr "Virkja IP sía íforrit til."
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:31
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useLevel1)
-#: rc.cpp:1764
+#: rc.cpp:1755
 #, fuzzy
 msgid "Use PeerGuardian filter"
 msgstr "Nota sía"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:43
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:1767
+#: rc.cpp:1758
 #, fuzzy
 msgid "IP filter file:"
 msgstr "IP sía:"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:53
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_filterURL)
-#: rc.cpp:1770
+#: rc.cpp:1761
 #, fuzzy
 msgid "Filter file to use, this can be a local file or a remote file."
 msgstr "Sía til a staðvært eða a."
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:80
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_download)
-#: rc.cpp:1773
+#: rc.cpp:1764
 #, fuzzy
 msgid "Download and convert the IP filter file."
 msgstr "Hlaða niður og IP sía."
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:83
 #. i18n: ectx: property (text), widget (QPushButton, m_download)
-#: rc.cpp:1776
+#: rc.cpp:1767
 #, fuzzy
 msgid "Dow&nload/Convert"
 msgstr "Hlaða &niður Umbreyta"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:93
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: rc.cpp:1779
+#: rc.cpp:1770
 #, fuzzy
 msgid ""
 "Download PeerGuardian filter from bluetack.co.uk or blocklist.org.\n"
@@ -6630,49 +6511,49 @@ msgstr "Hlaða niður sía frá eða frá er."
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:116
 #. i18n: ectx: property (title), widget (QGroupBox, m_auto_update_group_box)
-#: rc.cpp:1783
+#: rc.cpp:1774
 #, fuzzy
 msgid "Automatic Update"
 msgstr "Sjálfvirk Uppfæra"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:124
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_autoUpdate)
-#: rc.cpp:1786
+#: rc.cpp:1777
 #, fuzzy
 msgid "Enable this if you want to automatically update the filter file."
 msgstr "Virkja til sía."
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:127
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_autoUpdate)
-#: rc.cpp:1789
+#: rc.cpp:1780
 #, fuzzy
 msgid "Update file every:"
 msgstr "Uppfæra:"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:140
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_autoUpdateInterval)
-#: rc.cpp:1792
+#: rc.cpp:1783
 #, fuzzy
 msgid "Update interval in days."
 msgstr "Uppfæra \" dagar."
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:143
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_autoUpdateInterval)
-#: rc.cpp:1795
+#: rc.cpp:1786
 #, fuzzy
 msgid " days"
 msgstr " dagar"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:163
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1798
+#: rc.cpp:1789
 #, fuzzy
 msgid "Last updated:"
 msgstr "Síðasta:"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:183
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1802
+#: rc.cpp:1793
 #, fuzzy
 msgid "Next update:"
 msgstr "Næsta:"
@@ -6693,14 +6574,15 @@ msgstr "Næsta:"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. i18n: file: plugins/stats/Settings.ui:140
 #. i18n: ectx: property (text), widget (QLabel, label_11)
-#: rc.cpp:1805 rc.cpp:1808 rc.cpp:1871 rc.cpp:2054
+#: rc.cpp:1796 rc.cpp:1799 rc.cpp:1862 rc.cpp:2045
 #: libbtcore/util/logsystemmanager.cpp:34
+#, fuzzy
 msgid "Connections"
-msgstr ""
+msgstr "Tengingar"
 
 #. i18n: file: plugins/stats/Spd.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpdWgt)
-#: rc.cpp:1814 plugins/infowidget/webseedsmodel.cpp:125
+#: rc.cpp:1805 plugins/infowidget/webseedsmodel.cpp:125
 #, fuzzy
 msgid "Speed"
 msgstr "Hraði"
@@ -6725,7 +6607,7 @@ msgstr "Hraði"
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: file: plugins/syndication/feedwidget.ui:125
 #. i18n: ectx: property (text), widget (KPushButton, m_download)
-#: rc.cpp:1817 rc.cpp:1829 rc.cpp:1832 rc.cpp:2051 rc.cpp:2186
+#: rc.cpp:1808 rc.cpp:1820 rc.cpp:1823 rc.cpp:2042 rc.cpp:2177
 #: plugins/search/htmlpart.cpp:196
 #, fuzzy
 msgid "Download"
@@ -6743,10 +6625,11 @@ msgstr "Hlaða niður"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #. i18n: file: plugins/stats/Settings.ui:166
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:1820 rc.cpp:1841 rc.cpp:2057
-#: plugins/infowidget/infowidgetplugin.cpp:227
+#: rc.cpp:1811 rc.cpp:1832 rc.cpp:2048
+#: plugins/infowidget/infowidgetplugin.cpp:222
+#, fuzzy
 msgid "Peers"
-msgstr ""
+msgstr "Jafningjar"
 
 #. i18n: file: plugins/stats/Spd.ui:43
 #. i18n: ectx: property (title), widget (QGroupBox, UlSpdGbw)
@@ -6764,7 +6647,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_15)
 #. i18n: file: plugins/stats/Settings.ui:192
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:1823 rc.cpp:1859 rc.cpp:1862 rc.cpp:2060
+#: rc.cpp:1814 rc.cpp:1850 rc.cpp:1853 rc.cpp:2051
 #, fuzzy
 msgid "Upload"
 msgstr "Senda"
@@ -6777,7 +6660,7 @@ msgstr "Senda"
 #. i18n: ectx: property (title), widget (QGroupBox, ColorsGbw)
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:114
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:1826 rc.cpp:2512
+#: rc.cpp:1817 rc.cpp:2503
 #, fuzzy
 msgid "Colors"
 msgstr "Litir"
@@ -6790,7 +6673,7 @@ msgstr "Litir"
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #. i18n: file: plugins/stats/DisplaySettings.ui:412
 #. i18n: ectx: property (text), widget (QLabel, label_16)
-#: rc.cpp:1835 rc.cpp:1865
+#: rc.cpp:1826 rc.cpp:1856
 #, fuzzy
 msgid "Average"
 msgstr "Meðaltal"
@@ -6803,55 +6686,56 @@ msgstr "Meðaltal"
 #. i18n: ectx: property (text), widget (QLabel, label_13)
 #. i18n: file: plugins/stats/DisplaySettings.ui:451
 #. i18n: ectx: property (text), widget (QLabel, label_17)
-#: rc.cpp:1838 rc.cpp:1868
+#: rc.cpp:1829 rc.cpp:1859
+#, fuzzy
 msgid "Limit"
-msgstr ""
+msgstr "Takmörk"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:172
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:1844 plugins/stats/SpdTabPage.cc:72
+#: rc.cpp:1835 plugins/stats/SpdTabPage.cc:72
 #, fuzzy
 msgid "Average from leechers"
 msgstr "Meðaltal frá"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:207
 #. i18n: ectx: property (text), widget (QLabel, label_19)
-#: rc.cpp:1847 plugins/stats/SpdTabPage.cc:73
+#: rc.cpp:1838 plugins/stats/SpdTabPage.cc:73
 #, fuzzy
 msgid "Average to leechers"
 msgstr "Meðaltal til"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:242
 #. i18n: ectx: property (text), widget (QLabel, label_20)
-#: rc.cpp:1850 plugins/stats/SpdTabPage.cc:74
+#: rc.cpp:1841 plugins/stats/SpdTabPage.cc:74
 #, fuzzy
 msgid "Average from seeds"
 msgstr "Meðaltal frá"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:277
 #. i18n: ectx: property (text), widget (QLabel, label_21)
-#: rc.cpp:1853 plugins/stats/SpdTabPage.cc:75
+#: rc.cpp:1844 plugins/stats/SpdTabPage.cc:75
 #, fuzzy
 msgid "From leechers"
 msgstr "Frá"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:312
 #. i18n: ectx: property (text), widget (QLabel, label_22)
-#: rc.cpp:1856 plugins/stats/SpdTabPage.cc:76
+#: rc.cpp:1847 plugins/stats/SpdTabPage.cc:76
 #, fuzzy
 msgid "From seeds"
 msgstr "Frá"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:512
 #. i18n: ectx: property (text), widget (QLabel, label_23)
-#: rc.cpp:1874 plugins/stats/ConnsTabPage.cc:57
+#: rc.cpp:1865 plugins/stats/ConnsTabPage.cc:57
 #, fuzzy
 msgid "Leechers connected"
 msgstr "tengd(ur)"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:547
 #. i18n: ectx: property (text), widget (QLabel, label_24)
-#: rc.cpp:1877 plugins/stats/ConnsTabPage.cc:61
+#: rc.cpp:1868 plugins/stats/ConnsTabPage.cc:61
 #: plugins/stats/ConnsTabPage.cc:106
 #, fuzzy
 msgid "Leechers in swarms"
@@ -6859,299 +6743,299 @@ msgstr "\""
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:582
 #. i18n: ectx: property (text), widget (QLabel, label_25)
-#: rc.cpp:1880 plugins/stats/ConnsTabPage.cc:64
+#: rc.cpp:1871 plugins/stats/ConnsTabPage.cc:64
 #, fuzzy
 msgid "Seeds connected"
 msgstr "Fræ tengd(ur)"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:617
 #. i18n: ectx: property (text), widget (QLabel, label_26)
-#: rc.cpp:1883
+#: rc.cpp:1874
 #, fuzzy
 msgid "Seeds  in swarms"
 msgstr "Fræ \""
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:652
 #. i18n: ectx: property (text), widget (QLabel, label_27)
-#: rc.cpp:1886 plugins/stats/ConnsTabPage.cc:71
+#: rc.cpp:1877 plugins/stats/ConnsTabPage.cc:71
 #, fuzzy
 msgid "Average leechers connected per torrent"
 msgstr "Meðaltal tengd(ur)"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:687
 #. i18n: ectx: property (text), widget (QLabel, label_28)
-#: rc.cpp:1889 plugins/stats/ConnsTabPage.cc:73
+#: rc.cpp:1880 plugins/stats/ConnsTabPage.cc:73
 #, fuzzy
 msgid "Average seeds connected per torrent"
 msgstr "Meðaltal tengd(ur)"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:722
 #. i18n: ectx: property (text), widget (QLabel, label_29)
-#: rc.cpp:1892
+#: rc.cpp:1883
 #, fuzzy
 msgid "Avg. leechers connected per running torr."
 msgstr "tengd(ur) keyri."
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:757
 #. i18n: ectx: property (text), widget (QLabel, label_30)
-#: rc.cpp:1895
+#: rc.cpp:1886
 #, fuzzy
 msgid "Avg. seeds connected per running torrent"
 msgstr "tengd(ur) keyri"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:805
 #. i18n: ectx: property (text), widget (QLabel, label_31)
-#: rc.cpp:1901 plugins/stats/ConnsTabPage.cc:83
+#: rc.cpp:1892 plugins/stats/ConnsTabPage.cc:83
 msgid "Nodes"
 msgstr ""
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:844
 #. i18n: ectx: property (text), widget (QLabel, label_32)
-#: rc.cpp:1904 plugins/stats/ConnsTabPage.cc:84
+#: rc.cpp:1895 plugins/stats/ConnsTabPage.cc:84
 #, fuzzy
 msgid "Tasks"
 msgstr "Verkefni"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:903
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:1907 plugins/stats/DisplaySettingsPage.cc:28
+#: rc.cpp:1898 plugins/stats/DisplaySettingsPage.cc:28
 #, fuzzy
 msgid "Display"
 msgstr "Skjár"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:909
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AntiAliasing)
-#: rc.cpp:1910
+#: rc.cpp:1901
 #, fuzzy
 msgid "Use anti-aliasing"
 msgstr "Nota"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:919
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_DrawBgdGrid)
-#: rc.cpp:1913
+#: rc.cpp:1904
 #, fuzzy
 msgid "Draw background grid"
 msgstr "Jafntefli bakgrunnur"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:931
 #. i18n: ectx: property (text), widget (QLabel, label_18)
-#: rc.cpp:1916
+#: rc.cpp:1907
 #, fuzzy
 msgid "Widget type:"
 msgstr "tegund:"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:939
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_WidgetType)
-#: rc.cpp:1919
+#: rc.cpp:1910
 msgid "Native"
 msgstr ""
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:944
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_WidgetType)
-#: rc.cpp:1922
+#: rc.cpp:1913
 #, fuzzy
 msgid "KDE"
 msgstr "KDE"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:952
 #. i18n: ectx: property (text), widget (QLabel, label_33)
-#: rc.cpp:1925
+#: rc.cpp:1916
 #, fuzzy
 msgid "(plugin reload is needed after change)"
 msgstr "íforrit endurlesa er"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:10
 #. i18n: ectx: label, entry (UpdateEveryGuiUpdates), group (general)
-#: rc.cpp:1928
+#: rc.cpp:1919
 #, fuzzy
 msgid "Update charts every n gui updates"
 msgstr "Uppfæra n"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:15
 #. i18n: ectx: label, entry (DataGatherIval), group (general)
-#: rc.cpp:1931
+#: rc.cpp:1922
 #, fuzzy
 msgid "Interval in miliseconds between data gathering"
 msgstr "Bil \" á milli"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:20
 #. i18n: ectx: label, entry (MaxMode), group (general)
-#: rc.cpp:1934
+#: rc.cpp:1925
 #, fuzzy
 msgid "Method of determining maximum value of the scale"
 msgstr "Aðferð af af skali"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:25
 #. i18n: ectx: label, entry (ShowSeedsInSwarms), group (general)
-#: rc.cpp:1937
+#: rc.cpp:1928
 #, fuzzy
 msgid "Whether to show seeds in swarms"
 msgstr "til \""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:30
 #. i18n: ectx: label, entry (ShowLeechersInSwarms), group (general)
-#: rc.cpp:1940
+#: rc.cpp:1931
 #, fuzzy
 msgid "Whether to show leachers in swarms"
 msgstr "til \""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:35
 #. i18n: ectx: label, entry (DlSpdSamples), group (general)
-#: rc.cpp:1943
+#: rc.cpp:1934
 #, fuzzy
 msgid "Samples to show on download chart"
 msgstr "Sýni til á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:40
 #. i18n: ectx: label, entry (PeersSpdSamples), group (general)
-#: rc.cpp:1946
+#: rc.cpp:1937
 #, fuzzy
 msgid "Samples to show on peers chart"
 msgstr "Sýni til á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:45
 #. i18n: ectx: label, entry (UlSpdSamples), group (general)
-#: rc.cpp:1949
+#: rc.cpp:1940
 #, fuzzy
 msgid "Samples to show on upload chart"
 msgstr "Sýni til á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:50
 #. i18n: ectx: label, entry (ConnsSamples), group (general)
-#: rc.cpp:1952
+#: rc.cpp:1943
 #, fuzzy
 msgid "Samples to show on connections chart"
 msgstr "Sýni til á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:55
 #. i18n: ectx: label, entry (DhtSpdSamples), group (general)
-#: rc.cpp:1955
+#: rc.cpp:1946
 #, fuzzy
 msgid "Samples to show on DHT chart"
 msgstr "Sýni til á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:60
 #. i18n: ectx: label, entry (DlSpdColor), group (general)
-#: rc.cpp:1958
+#: rc.cpp:1949
 #, fuzzy
 msgid "Color of the speed on dl chart"
 msgstr "Litur af á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:65
 #. i18n: ectx: label, entry (DlAvgColor), group (general)
-#: rc.cpp:1961
+#: rc.cpp:1952
 #, fuzzy
 msgid "Color of the average on dl chart"
 msgstr "Litur af á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:70
 #. i18n: ectx: label, entry (DlLimitColor), group (general)
-#: rc.cpp:1964
+#: rc.cpp:1955
 #, fuzzy
 msgid "Color of the limit on dl chart"
 msgstr "Litur af á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:75
 #. i18n: ectx: label, entry (PrAvgFromLColor), group (general)
-#: rc.cpp:1967
+#: rc.cpp:1958
 #, fuzzy
 msgid "Color of the avg from leecher on peers chart"
 msgstr "Litur af frá á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:80
 #. i18n: ectx: label, entry (PrAvgToLColor), group (general)
-#: rc.cpp:1970
+#: rc.cpp:1961
 #, fuzzy
 msgid "Color of the avg to leecher on peers chart"
 msgstr "Litur af til á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:85
 #. i18n: ectx: label, entry (PrAvgFromSColor), group (general)
-#: rc.cpp:1973
+#: rc.cpp:1964
 #, fuzzy
 msgid "Color of the avg from seeds on peers chart"
 msgstr "Litur af frá á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:90
 #. i18n: ectx: label, entry (PrFromLColor), group (general)
-#: rc.cpp:1976
+#: rc.cpp:1967
 #, fuzzy
 msgid "Color of the leechers on peers chart"
 msgstr "Litur af á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:95
 #. i18n: ectx: label, entry (PrFromSColor), group (general)
-#: rc.cpp:1979
+#: rc.cpp:1970
 #, fuzzy
 msgid "Color of the seeds on peers chart"
 msgstr "Litur af á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:100
 #. i18n: ectx: label, entry (UlSpdColor), group (general)
-#: rc.cpp:1982
+#: rc.cpp:1973
 #, fuzzy
 msgid "Color of the speed on upload chart"
 msgstr "Litur af á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:105
 #. i18n: ectx: label, entry (UlAvgColor), group (general)
-#: rc.cpp:1985
+#: rc.cpp:1976
 #, fuzzy
 msgid "Color of the avg on upload chart"
 msgstr "Litur af á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:110
 #. i18n: ectx: label, entry (UlLimitColor), group (general)
-#: rc.cpp:1988
+#: rc.cpp:1979
 #, fuzzy
 msgid "Color of the limit on upload chart"
 msgstr "Litur af á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:115
 #. i18n: ectx: label, entry (CnLConnColor), group (general)
-#: rc.cpp:1991
+#: rc.cpp:1982
 #, fuzzy
 msgid "Color of the connected leechers on connections chart"
 msgstr "Litur af tengd(ur) á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:120
 #. i18n: ectx: label, entry (CnLSwarmsColor), group (general)
-#: rc.cpp:1994
+#: rc.cpp:1985
 #, fuzzy
 msgid "Color of the leechers in swarms on connections chart"
 msgstr "Litur af \" á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:125
 #. i18n: ectx: label, entry (CnSConnColor), group (general)
-#: rc.cpp:1997
+#: rc.cpp:1988
 #, fuzzy
 msgid "Color of the connected seeds on connections chart"
 msgstr "Litur af tengd(ur) á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:130
 #. i18n: ectx: label, entry (CnSSwarmsColor), group (general)
-#: rc.cpp:2000
+#: rc.cpp:1991
 #, fuzzy
 msgid "Color of the seeds in swarms on connections chart"
 msgstr "Litur af \" á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:135
 #. i18n: ectx: label, entry (CnAvgLConnPerTorrColor), group (general)
-#: rc.cpp:2003
+#: rc.cpp:1994
 #, fuzzy
 msgid "Color of the avg connected leecher per torrent on connections chart"
 msgstr "Litur af tengd(ur) á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:140
 #. i18n: ectx: label, entry (CnAvgSConnPerTorrColor), group (general)
-#: rc.cpp:2006
+#: rc.cpp:1997
 #, fuzzy
 msgid "Color of the avg connected seeds per torrent on connections chart"
 msgstr "Litur af tengd(ur) á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:145
 #. i18n: ectx: label, entry (CnAvgLConnPerRunTorrColor), group (general)
-#: rc.cpp:2009
+#: rc.cpp:2000
 #, fuzzy
 msgid ""
 "Color of the avg connected leechers per running torrent on connections chart"
@@ -7159,7 +7043,7 @@ msgstr "Litur af tengd(ur) keyri á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:150
 #. i18n: ectx: label, entry (CnAvgSConnPerRunTorrColor), group (general)
-#: rc.cpp:2012
+#: rc.cpp:2003
 #, fuzzy
 msgid ""
 "Color of the avg connected seeds per running torrent on connections chart"
@@ -7167,129 +7051,130 @@ msgstr "Litur af tengd(ur) keyri á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:155
 #. i18n: ectx: label, entry (DhtNodesColor), group (general)
-#: rc.cpp:2015
+#: rc.cpp:2006
 #, fuzzy
 msgid "Color of the nodes on DHT chart"
 msgstr "Litur af á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:160
 #. i18n: ectx: label, entry (DhtTasksColor), group (general)
-#: rc.cpp:2018
+#: rc.cpp:2009
 #, fuzzy
 msgid "Color of the tasks on DHT chart"
 msgstr "Litur af á"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:165
 #. i18n: ectx: label, entry (AntiAliasing), group (general)
-#: rc.cpp:2021
+#: rc.cpp:2012
 #, fuzzy
 msgid "Use anti aliasing on charts?"
 msgstr "Nota á?"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:170
 #. i18n: ectx: label, entry (DrawBgdGrid), group (general)
-#: rc.cpp:2024
+#: rc.cpp:2015
 #, fuzzy
 msgid "Draw ugly grey background grid?"
 msgstr "Jafntefli bakgrunnur?"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:175
 #. i18n: ectx: label, entry (WidgetType), group (general)
-#: rc.cpp:2027
+#: rc.cpp:2018
 #, fuzzy
 msgid "Type of widget used for chart drawing"
 msgstr "Tegund af fyrir"
 
 #. i18n: file: plugins/stats/Settings.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, StatsSettingsWgt)
-#: rc.cpp:2030
+#: rc.cpp:2021
 #, fuzzy
 msgid "Settings"
 msgstr "Stillingar"
 
 #. i18n: file: plugins/stats/Settings.ui:19
 #. i18n: ectx: property (title), widget (QGroupBox, UpdateGbw)
-#: rc.cpp:2033
+#: rc.cpp:2024
 #, fuzzy
 msgid "Update"
 msgstr "Uppfæra"
 
 #. i18n: file: plugins/stats/Settings.ui:25
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2036
+#: rc.cpp:2027
 #, fuzzy
 msgid "Update charts every"
 msgstr "Uppfæra"
 
 #. i18n: file: plugins/stats/Settings.ui:50
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2039
+#: rc.cpp:2030
 msgid "GUI updates"
 msgstr ""
 
 #. i18n: file: plugins/stats/Settings.ui:69
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2042
+#: rc.cpp:2033
 #, fuzzy
 msgid "Gather data every"
 msgstr "Safna"
 
 #. i18n: file: plugins/stats/Settings.ui:95
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:2045
+#: rc.cpp:2036
 #, fuzzy
 msgid "milliseconds"
 msgstr "millisekúndur"
 
 #. i18n: file: plugins/stats/Settings.ui:108
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:2048
+#: rc.cpp:2039
 msgid "Measurements counts"
 msgstr ""
 
 #. i18n: file: plugins/stats/Settings.ui:247
 #. i18n: ectx: property (title), widget (QGroupBox, MaxModeGbw)
-#: rc.cpp:2066
+#: rc.cpp:2057
+#, fuzzy
 msgid "Maximum"
-msgstr ""
+msgstr "Hámark"
 
 #. i18n: file: plugins/stats/Settings.ui:255
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2069
+#: rc.cpp:2060
 #, fuzzy
 msgid "Maximum speed scale mode: "
 msgstr "skali "
 
 #. i18n: file: plugins/stats/Settings.ui:277
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MaxMode)
-#: rc.cpp:2075
+#: rc.cpp:2066
 #, fuzzy
 msgid "Exact"
 msgstr "Nákvæmt"
 
 #. i18n: file: plugins/stats/Settings.ui:290
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:2078
+#: rc.cpp:2069
 msgid "Peers connections"
 msgstr ""
 
 #. i18n: file: plugins/stats/Settings.ui:296
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowSeedsInSwarms)
-#: rc.cpp:2081
+#: rc.cpp:2072
 #, fuzzy
 msgid "Show seeds in swarms"
 msgstr "Sýna \""
 
 #. i18n: file: plugins/stats/Settings.ui:303
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowLeechersInSwarms)
-#: rc.cpp:2084
+#: rc.cpp:2075
 #, fuzzy
 msgid "Show leechers in swarms"
 msgstr "Sýna \""
 
 #. i18n: file: plugins/shutdown/ktshutdownpluginui.rc:5
 #. i18n: ectx: Menu (shutdown)
-#: rc.cpp:2087 plugins/shutdown/shutdownplugin.cpp:148
+#: rc.cpp:2078 plugins/shutdown/shutdownplugin.cpp:148
 #: plugins/shutdown/shutdowndlg.cpp:32
 #, fuzzy
 msgid "Shutdown"
@@ -7297,42 +7182,42 @@ msgstr "Slökkva"
 
 #. i18n: file: plugins/shutdown/ktshutdownpluginui.rc:11
 #. i18n: ectx: ToolBar (ShutdownToolBar)
-#: rc.cpp:2090
+#: rc.cpp:2081
 #, fuzzy
 msgid "Shutdown Toolbar"
 msgstr "Slökkva Tækjaslá"
 
 #. i18n: file: plugins/shutdown/shutdowndlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, ShutdownDlg)
-#: rc.cpp:2093
+#: rc.cpp:2084
 #, fuzzy
 msgid "Shutdown Settings"
 msgstr "Slökkva Stillingar"
 
 #. i18n: file: plugins/shutdown/shutdowndlg.ui:24
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2096
+#: rc.cpp:2087
 #, fuzzy
 msgid "Action to execute:"
 msgstr "Aðgerð til:"
 
 #. i18n: file: plugins/shutdown/shutdowndlg.ui:34
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2099
+#: rc.cpp:2090
 #, fuzzy
 msgid "Execute action when:"
 msgstr "Keyra:"
 
 #. i18n: file: plugins/logviewer/ktlogviewerplugin.kcfg:11
 #. i18n: ectx: label, entry (useRichText), group (general)
-#: rc.cpp:2102
+#: rc.cpp:2093
 #, fuzzy
 msgid "Use rich log text"
 msgstr "Nota texti"
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:26
 #. i18n: ectx: property (toolTip), widget (QTreeView, m_logging_flags)
-#: rc.cpp:2105
+#: rc.cpp:2096
 #, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
@@ -7394,7 +7279,7 @@ msgstr ""
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:45
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useRichText)
-#: rc.cpp:2121
+#: rc.cpp:2112
 #, fuzzy
 msgid ""
 "Whether or not to use rich text or just plain text, for the logging output "
@@ -7403,40 +7288,40 @@ msgstr "eða ekki til texti eða venjuleg texti fyrir úttak \"."
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:48
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useRichText)
-#: rc.cpp:2124
+#: rc.cpp:2115
 #, fuzzy
 msgid "Use rich text for logging output"
 msgstr "Nota texti fyrir úttak"
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:57
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2127
+#: rc.cpp:2118
 #, fuzzy
 msgid "Log widget position:"
 msgstr "Annálar:"
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:71
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
-#: rc.cpp:2130
+#: rc.cpp:2121
 msgid "Separate activity"
 msgstr ""
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:76
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
-#: rc.cpp:2133
+#: rc.cpp:2124
 #, fuzzy
 msgid "Dockable widget"
 msgstr "Tengjanlegt"
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:81
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
-#: rc.cpp:2136
+#: rc.cpp:2127
 msgid "Torrent activity"
 msgstr ""
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, DownloadOrderWidget)
-#: rc.cpp:2139 plugins/downloadorder/downloadorderdialog.cpp:38
+#: rc.cpp:2130 plugins/downloadorder/downloadorderdialog.cpp:38
 #: plugins/downloadorder/downloadorderplugin.cpp:46
 #, fuzzy
 msgid "File Download Order"
@@ -7444,28 +7329,28 @@ msgstr "Skrá Hlaða niður Uppröðun"
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:22
 #. i18n: ectx: property (text), widget (QLabel, m_top_label)
-#: rc.cpp:2142
+#: rc.cpp:2133
 #, fuzzy
 msgid "File download order for:"
 msgstr "Skrá fyrir:"
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:29
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_custom_order_enabled)
-#: rc.cpp:2145
+#: rc.cpp:2136
 #, fuzzy
 msgid "Whether or not to enable a custom download order."
 msgstr "eða ekki til a sérsniðið."
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:32
 #. i18n: ectx: property (text), widget (QCheckBox, m_custom_order_enabled)
-#: rc.cpp:2148
+#: rc.cpp:2139
 #, fuzzy
 msgid "Custom file download order enabled"
 msgstr "Sérsniðið virkt"
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:41
 #. i18n: ectx: property (toolTip), widget (QListView, m_order)
-#: rc.cpp:2151
+#: rc.cpp:2142
 #, fuzzy
 msgid ""
 "Order in which to download the files of a torrent. The file at the top will "
@@ -7474,42 +7359,42 @@ msgstr "Uppröðun \" til af a toppur 1. 2. 3.."
 
 #. i18n: file: plugins/mediaplayer/ktmediaplayerpluginui.rc:3
 #. i18n: ectx: Menu (MediaPlayerMenu)
-#: rc.cpp:2160
+#: rc.cpp:2151
 #, fuzzy
 msgid "Media Player Menu"
 msgstr "Miðill Leikmaður Valmynd"
 
 #. i18n: file: plugins/mediaplayer/ktmediaplayerpluginui.rc:11
 #. i18n: ectx: ToolBar (MediaPlayerToolBar)
-#: rc.cpp:2163
+#: rc.cpp:2154
 #, fuzzy
 msgid "Media Player Toolbar"
 msgstr "Miðill Leikmaður Tækjaslá"
 
 #. i18n: file: plugins/syndication/ktsyndicationpluginui.rc:4
 #. i18n: ectx: ToolBar (SyndicationToolBar)
-#: rc.cpp:2166
+#: rc.cpp:2157
 #, fuzzy
 msgid "Syndication Toolbar"
 msgstr "Tækjaslá"
 
 #. i18n: file: plugins/syndication/feedwidget.ui:57
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2173
+#: rc.cpp:2164
 #, fuzzy
 msgid "Status:"
 msgstr "Staða:"
 
 #. i18n: file: plugins/syndication/feedwidget.ui:81
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2177
+#: rc.cpp:2168
 #, fuzzy
 msgid "Refresh every:"
 msgstr "Endurlesa"
 
 #. i18n: file: plugins/syndication/feedwidget.ui:88
 #. i18n: ectx: property (toolTip), widget (QSpinBox, m_refresh_rate)
-#: rc.cpp:2180
+#: rc.cpp:2171
 msgid "Time between automatic refreshes of the feed."
 msgstr ""
 
@@ -7521,84 +7406,84 @@ msgstr ""
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_refresh_rate)
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:51
 #. i18n: ectx: property (suffix), widget (QSpinBox, minutes)
-#: rc.cpp:2183 rc.cpp:2417
+#: rc.cpp:2174 rc.cpp:2408
 #, fuzzy
 msgid " minutes"
 msgstr " mínútu"
 
 #. i18n: file: plugins/syndication/feedwidget.ui:132
 #. i18n: ectx: property (text), widget (KPushButton, m_refresh)
-#: rc.cpp:2189
+#: rc.cpp:2180
 #, fuzzy
 msgid "Refresh"
 msgstr "Endurlesa"
 
 #. i18n: file: plugins/syndication/feedwidget.ui:152
 #. i18n: ectx: property (text), widget (KPushButton, m_filters)
-#: rc.cpp:2192
+#: rc.cpp:2183
 #, fuzzy
 msgid "Filters"
 msgstr "Síur"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, ManageFiltersDlg)
-#: rc.cpp:2195
+#: rc.cpp:2186
 #, fuzzy
 msgid "Manage Filters"
 msgstr "Síur"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:22
 #. i18n: ectx: property (text), widget (QLabel, m_feed_text)
-#: rc.cpp:2198
+#: rc.cpp:2189
 #, fuzzy
 msgid "Feed:"
 msgstr "Straumur:"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:33
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2201
+#: rc.cpp:2192
 #, fuzzy
 msgid "Active filters:"
 msgstr "Virk:"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:91
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2210
+#: rc.cpp:2201
 #, fuzzy
 msgid "Available filters:"
 msgstr "Tiltækt:"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:107
 #. i18n: ectx: property (text), widget (QPushButton, m_remove_all)
-#: rc.cpp:2213
+#: rc.cpp:2204
 #, fuzzy
 msgid "Remove All"
 msgstr "Fjarlægja allt"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:127
 #. i18n: ectx: property (text), widget (QPushButton, m_new_filter)
-#: rc.cpp:2216 plugins/syndication/syndicationactivity.cpp:264
+#: rc.cpp:2207 plugins/syndication/syndicationactivity.cpp:264
 #, fuzzy
 msgid "New Filter"
 msgstr "Ný sía"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:21
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2219
+#: rc.cpp:2210
 #, fuzzy
 msgid "Name:"
 msgstr "Nafn:"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:37
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: rc.cpp:2222
+#: rc.cpp:2213
 #, fuzzy
 msgid "String Matching"
 msgstr "Strengur"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:71
 #. i18n: ectx: property (toolTip), widget (KEditListBox, m_word_matches)
-#: rc.cpp:2225
+#: rc.cpp:2216
 #, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
@@ -7724,7 +7609,7 @@ msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:84
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_reg_exp_syntax)
-#: rc.cpp:2256
+#: rc.cpp:2247
 #, fuzzy
 msgid ""
 "By default strings will use wildcard matching. If you want to use regular "
@@ -7733,47 +7618,47 @@ msgstr "sjálfgefið til regluleg til virkt."
 
 #. i18n: file: plugins/syndication/filtereditor.ui:87
 #. i18n: ectx: property (text), widget (QCheckBox, m_reg_exp_syntax)
-#: rc.cpp:2259
+#: rc.cpp:2250
 #, fuzzy
 msgid "Strings are regular expressions"
 msgstr "Strengir regluleg"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:94
 #. i18n: ectx: property (text), widget (QCheckBox, m_all_words_must_match)
-#: rc.cpp:2262
+#: rc.cpp:2253
 #, fuzzy
 msgid "Item must match all strings"
 msgstr "Hlutur passa við allir"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:101
 #. i18n: ectx: property (text), widget (QCheckBox, m_match_case_sensitive)
-#: rc.cpp:2265
+#: rc.cpp:2256
 #, fuzzy
 msgid "Case sensitive matching"
 msgstr "Stafstaða"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:109
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: rc.cpp:2268
+#: rc.cpp:2259
 msgid "Seasons && Episodes"
 msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:115
 #. i18n: ectx: property (text), widget (QCheckBox, m_use_se_matching)
-#: rc.cpp:2271
+#: rc.cpp:2262
 #, fuzzy
 msgid "Use season and episode matching"
 msgstr "Nota og"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:124
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2274
+#: rc.cpp:2265
 msgid "Seasons: "
 msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:135
 #. i18n: ectx: property (toolTip), widget (QLineEdit, m_seasons)
-#: rc.cpp:2277
+#: rc.cpp:2268
 #, fuzzy
 msgid ""
 "Specify the seasons to download, multiple seasons can be separated by a , "
@@ -7786,13 +7671,13 @@ msgstr "til a og a n n og 9"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:142
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:2284
+#: rc.cpp:2275
 msgid "Episodes:"
 msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:153
 #. i18n: ectx: property (toolTip), widget (QLineEdit, m_episodes)
-#: rc.cpp:2287
+#: rc.cpp:2278
 #, fuzzy
 msgid ""
 "Specify the episodes to download, multiple episodes can be separated by a , "
@@ -7805,35 +7690,35 @@ msgstr "til a og a n n og 9"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:162
 #. i18n: ectx: property (text), widget (QCheckBox, m_se_no_duplicates)
-#: rc.cpp:2294
+#: rc.cpp:2285
 #, fuzzy
 msgid "Do not download multiple items with the same season and episode"
 msgstr "Framkvæma ekki hlutir með og"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:189
 #. i18n: ectx: property (text), widget (QCheckBox, m_download_matches)
-#: rc.cpp:2300
+#: rc.cpp:2291
 #, fuzzy
 msgid "Download torrents of matching items"
 msgstr "Hlaða niður af hlutir"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:196
 #. i18n: ectx: property (text), widget (QCheckBox, m_download_non_matches)
-#: rc.cpp:2303
+#: rc.cpp:2294
 #, fuzzy
 msgid "Download torrents of non matching items"
 msgstr "Hlaða niður af hlutir"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:205
 #. i18n: ectx: property (text), widget (QCheckBox, m_add_to_group)
-#: rc.cpp:2306
+#: rc.cpp:2297
 #, fuzzy
 msgid "Add to group:"
 msgstr "Bæta við til flokkur:"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:251
 #. i18n: ectx: property (text), widget (QCheckBox, m_silently)
-#: rc.cpp:2312
+#: rc.cpp:2303
 #, fuzzy
 msgid "Open torrents silently"
 msgstr "Opna"
@@ -7846,49 +7731,49 @@ msgstr "Opna"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. i18n: file: plugins/syndication/filtereditor.ui:280
 #. i18n: ectx: property (text), widget (QPushButton, m_test)
-#: rc.cpp:2315 rc.cpp:2318
+#: rc.cpp:2306 rc.cpp:2309
 #, fuzzy
 msgid "Test"
 msgstr "Prófa"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:287
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2321
+#: rc.cpp:2312
 #, fuzzy
 msgid "filter on feed:"
 msgstr "sía á:"
 
 #. i18n: file: plugins/search/searchpref.ui:33
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_clear_history)
-#: rc.cpp:2327
+#: rc.cpp:2318
 #, fuzzy
 msgid "Clear the search history combo boxes."
 msgstr "Hreinsa."
 
 #. i18n: file: plugins/search/searchpref.ui:36
 #. i18n: ectx: property (text), widget (QPushButton, m_clear_history)
-#: rc.cpp:2330
+#: rc.cpp:2321
 #, fuzzy
 msgid "Clear Search History"
 msgstr "Hreinsa Leita Ferill"
 
 #. i18n: file: plugins/search/searchpref.ui:58
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openInExternal)
-#: rc.cpp:2333
+#: rc.cpp:2324
 #, fuzzy
 msgid "Whether or not to open searches in an external browser."
 msgstr "eða ekki til \"."
 
 #. i18n: file: plugins/search/searchpref.ui:61
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openInExternal)
-#: rc.cpp:2336
+#: rc.cpp:2327
 #, fuzzy
 msgid "Open searches in external browser"
 msgstr "Opna \""
 
 #. i18n: file: plugins/search/searchpref.ui:68
 #. i18n: ectx: property (toolTip), widget (QRadioButton, kcfg_useDefaultBrowser)
-#: rc.cpp:2339
+#: rc.cpp:2330
 #, fuzzy
 msgid "Use the default browser configured in the system settings."
 msgstr "Nota sjálfgefið \"."
@@ -7901,112 +7786,112 @@ msgstr "Nota sjálfgefið \"."
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_useDefaultBrowser)
 #. i18n: file: plugins/search/ktsearchplugin.kcfg:15
 #. i18n: ectx: label, entry (useDefaultBrowser), group (general)
-#: rc.cpp:2342 rc.cpp:2384
+#: rc.cpp:2333 rc.cpp:2375
 #, fuzzy
 msgid "Use default browser"
 msgstr "Nota sjálfgefið"
 
 #. i18n: file: plugins/search/searchpref.ui:83
 #. i18n: ectx: property (toolTip), widget (QRadioButton, kcfg_useCustomBrowser)
-#: rc.cpp:2345
+#: rc.cpp:2336
 #, fuzzy
 msgid "Use a custom browser."
 msgstr "Nota a sérsniðið."
 
 #. i18n: file: plugins/search/searchpref.ui:86
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_useCustomBrowser)
-#: rc.cpp:2348
+#: rc.cpp:2339
 #, fuzzy
 msgid "Custom browser path:"
 msgstr "Sérsniðið:"
 
 #. i18n: file: plugins/search/searchpref.ui:96
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_customBrowser)
-#: rc.cpp:2351
+#: rc.cpp:2342
 #, fuzzy
 msgid "Path of the custom browser."
 msgstr "Slóð af sérsniðið."
 
 #. i18n: file: plugins/search/searchpref.ui:121
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox8)
-#: rc.cpp:2354
+#: rc.cpp:2345
 #, fuzzy
 msgid "Search Engines"
 msgstr "Leita"
 
 #. i18n: file: plugins/search/searchpref.ui:136
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_add)
-#: rc.cpp:2357
+#: rc.cpp:2348
 #, fuzzy
 msgid "Add a new search engine."
 msgstr "Bæta við a nýtt."
 
 #. i18n: file: plugins/search/searchpref.ui:146
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_remove)
-#: rc.cpp:2363
+#: rc.cpp:2354
 #, fuzzy
 msgid "Remove all selected search engines."
 msgstr "Fjarlægja allir."
 
 #. i18n: file: plugins/search/searchpref.ui:149
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
-#: rc.cpp:2366
+#: rc.cpp:2357
 #, fuzzy
 msgid "&Remove"
 msgstr "&Fjarlægja"
 
 #. i18n: file: plugins/search/searchpref.ui:156
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_remove_all)
-#: rc.cpp:2369
+#: rc.cpp:2360
 #, fuzzy
 msgid "Remove all search engines."
 msgstr "Fjarlægja allir."
 
 #. i18n: file: plugins/search/searchpref.ui:159
 #. i18n: ectx: property (text), widget (QPushButton, m_remove_all)
-#: rc.cpp:2372
+#: rc.cpp:2363
 #, fuzzy
 msgid "R&emove All"
 msgstr "Fj&arlægja allt"
 
 #. i18n: file: plugins/search/searchpref.ui:179
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_add_default)
-#: rc.cpp:2375
+#: rc.cpp:2366
 #, fuzzy
 msgid "Add all default search engines."
 msgstr "Bæta við allir sjálfgefið."
 
 #. i18n: file: plugins/search/searchpref.ui:182
 #. i18n: ectx: property (text), widget (QPushButton, m_add_default)
-#: rc.cpp:2378
+#: rc.cpp:2369
 #, fuzzy
 msgid "Add Defau&lt"
 msgstr "Bæta við Sjá&lfgefið"
 
 #. i18n: file: plugins/search/ktsearchplugin.kcfg:10
 #. i18n: ectx: label, entry (searchEngine), group (general)
-#: rc.cpp:2381
+#: rc.cpp:2372
 #, fuzzy
 msgid "Current search engine"
 msgstr "Núverandi"
 
 #. i18n: file: plugins/search/ktsearchplugin.kcfg:19
 #. i18n: ectx: label, entry (useCustomBrowser), group (general)
-#: rc.cpp:2387
+#: rc.cpp:2378
 #, fuzzy
 msgid "Use custom browser"
 msgstr "Nota sérsniðið"
 
 #. i18n: file: plugins/search/ktsearchplugin.kcfg:23
 #. i18n: ectx: label, entry (customBrowser), group (general)
-#: rc.cpp:2390
+#: rc.cpp:2381
 #, fuzzy
 msgid "Custom browser executable path"
 msgstr "Sérsniðið"
 
 #. i18n: file: plugins/search/ktsearchpluginui.rc:3
 #. i18n: ectx: ToolBar (SearchToolBar)
-#: rc.cpp:2393
+#: rc.cpp:2384
 #, fuzzy
 msgid "Search Toolbar"
 msgstr "Leitar tækjaslá"
@@ -8019,159 +7904,159 @@ msgstr "Leitar tækjaslá"
 #. i18n: ectx: property (windowTitle), widget (QWidget, AutoRemoveConfig)
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, AutoResumeConfig)
-#: rc.cpp:2396 rc.cpp:2408
+#: rc.cpp:2387 rc.cpp:2399
 #, fuzzy
 msgid "Auto Resume Settings"
 msgstr "Sjálfvirkt Halda áfram Stillingar"
 
 #. i18n: file: plugins/scripting/scripts/auto_remove/auto_remove.ui:19
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2399
+#: rc.cpp:2390
 #, fuzzy
 msgid "Auto remove a torrent when:"
 msgstr "Sjálfvirkt a:"
 
 #. i18n: file: plugins/scripting/scripts/auto_remove/auto_remove.ui:26
 #. i18n: ectx: property (text), widget (QCheckBox, finish_downloading)
-#: rc.cpp:2402
+#: rc.cpp:2393
 msgid "The torrent finishes downloading"
 msgstr ""
 
 #. i18n: file: plugins/scripting/scripts/auto_remove/auto_remove.ui:33
 #. i18n: ectx: property (text), widget (QCheckBox, finish_seeding)
-#: rc.cpp:2405
+#: rc.cpp:2396
 msgid "The torrent finishes seeding"
 msgstr ""
 
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:19
 #. i18n: ectx: property (text), widget (QCheckBox, auto_resume)
-#: rc.cpp:2411
+#: rc.cpp:2402
 #, fuzzy
 msgid "Auto resume after:"
 msgstr "Sjálfvirkt:"
 
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:41
 #. i18n: ectx: property (suffix), widget (QSpinBox, hours)
-#: rc.cpp:2414
+#: rc.cpp:2405
 #, fuzzy
 msgid " hours"
 msgstr "klukkustundir"
 
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:61
 #. i18n: ectx: property (suffix), widget (QSpinBox, seconds)
-#: rc.cpp:2420
+#: rc.cpp:2411
 #, fuzzy
 msgid " seconds"
 msgstr " sekúndur"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, EMailConfigWidget)
-#: rc.cpp:2423
+#: rc.cpp:2414
 #, fuzzy
 msgid "EMail Settings"
 msgstr "Stillingar"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:19
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:2426
+#: rc.cpp:2417
 #, fuzzy
 msgid "SMTP Server"
 msgstr "Þjónn"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:49
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2435
+#: rc.cpp:2426
 #, fuzzy
 msgid "SMTP server:"
 msgstr "SMTP miðlari:"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:80
 #. i18n: ectx: property (text), widget (QCheckBox, tls)
-#: rc.cpp:2441
+#: rc.cpp:2432
 #, fuzzy
 msgid "Use SSL/TLS encryption"
 msgstr "Nota SSL TLS"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:90
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:2444
+#: rc.cpp:2435
 #, fuzzy
 msgid "Destination"
 msgstr "Áfangastaður"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:96
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2447
+#: rc.cpp:2438
 #, fuzzy
 msgid "Send mails to:"
 msgstr "Senda til:"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:106
 #. i18n: ectx: property (text), widget (QCheckBox, add_cc)
-#: rc.cpp:2450
+#: rc.cpp:2441
 #, fuzzy
 msgid "Add CC:"
 msgstr "Bæta við CC:"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:116
 #. i18n: ectx: property (text), widget (QCheckBox, add_bcc)
-#: rc.cpp:2453
+#: rc.cpp:2444
 #, fuzzy
 msgid "Add BCC:"
 msgstr "Bæta við BCC:"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, ScriptProperties)
-#: rc.cpp:2456 plugins/scripting/scriptingplugin.cpp:340
+#: rc.cpp:2447 plugins/scripting/scriptingplugin.cpp:340
 #, fuzzy
 msgid "Script Properties"
 msgstr "Skrifta Eiginleikar"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:51
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2460
+#: rc.cpp:2451
 #, fuzzy
 msgid "Description:"
 msgstr "Lýsing:"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:65
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2464
+#: rc.cpp:2455
 #, fuzzy
 msgid "License:"
 msgstr "Leyfi:"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:79
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2468
+#: rc.cpp:2459
 #, fuzzy
 msgid "Author:"
 msgstr "Höfundur:"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:93
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:2472
+#: rc.cpp:2463
 #, fuzzy
 msgid "E-Mail:"
 msgstr "Tölvupóstur:"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:107
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:2476
+#: rc.cpp:2467
 #, fuzzy
 msgid "Website:"
 msgstr "Vefsíða:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:16
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:2479
+#: rc.cpp:2470
 #, fuzzy
 msgid "Special Limits"
 msgstr "Sérstakt Takmörk"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:22
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_screensaverLimits)
-#: rc.cpp:2482
+#: rc.cpp:2473
 #, fuzzy
 msgid ""
 "Use these global limits when the screensaver is activated, instead of the "
@@ -8180,84 +8065,84 @@ msgstr "Nota er af \"."
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:25
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_screensaverLimits)
-#: rc.cpp:2485
+#: rc.cpp:2476
 #, fuzzy
 msgid "Use different speed limits when the screensaver is activated"
 msgstr "Nota er"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:49
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_screensaverUploadLimit)
-#: rc.cpp:2491
+#: rc.cpp:2482
 #, fuzzy
 msgid "Global upload limit when the screensaver is activated."
 msgstr "Víðvært er."
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:78
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_screensaverDownloadLimit)
-#: rc.cpp:2503
+#: rc.cpp:2494
 #, fuzzy
 msgid "Global download limit when the screensaver is activated."
 msgstr "Víðvært er."
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:120
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2515
+#: rc.cpp:2506
 #, fuzzy
 msgid "Schedule background color:"
 msgstr "Vinnuáætlun bakgrunnur:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:127
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_scheduleBackgroundColor)
-#: rc.cpp:2518
+#: rc.cpp:2509
 #, fuzzy
 msgid "Color of the schedule background."
 msgstr "Litur af bakgrunnur."
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:134
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2521
+#: rc.cpp:2512
 #, fuzzy
 msgid "Schedule line color:"
 msgstr "Vinnuáætlun lína:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:141
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_scheduleLineColor)
-#: rc.cpp:2524
+#: rc.cpp:2515
 #, fuzzy
 msgid "Color of all lines on the schedule."
 msgstr "Litur af allir línur á."
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:148
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:2527
+#: rc.cpp:2518
 #, fuzzy
 msgid "Schedule Item color:"
 msgstr "Vinnuáætlun Hlutur:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:155
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_itemColor)
-#: rc.cpp:2530
+#: rc.cpp:2521
 #, fuzzy
 msgid "Color of each normal item on the schedule."
 msgstr "Litur af samræmt á."
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:162
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2533
+#: rc.cpp:2524
 #, fuzzy
 msgid "Paused schedule item color:"
 msgstr "Í bið:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:169
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_pausedColor)
-#: rc.cpp:2536
+#: rc.cpp:2527
 #, fuzzy
 msgid "Color of each paused item on the schedule."
 msgstr "Litur af í bið á."
 
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, EditItemDlg)
-#: rc.cpp:2539 plugins/bwscheduler/edititemdlg.cpp:44
+#: rc.cpp:2530 plugins/bwscheduler/edititemdlg.cpp:44
 #, fuzzy
 msgid "Edit an item"
 msgstr "Breyta"
@@ -8270,7 +8155,7 @@ msgstr "Breyta"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:24
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:2542 rc.cpp:2626
+#: rc.cpp:2533 rc.cpp:2617
 #, fuzzy
 msgid "Time"
 msgstr "Tími"
@@ -8283,7 +8168,7 @@ msgstr "Tími"
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:32
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2545 rc.cpp:2629
+#: rc.cpp:2536 rc.cpp:2620
 #, fuzzy
 msgid "From:"
 msgstr "Frá:"
@@ -8304,7 +8189,7 @@ msgstr "Frá:"
 #. i18n: ectx: property (displayFormat), widget (QTimeEdit, m_from)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:53
 #. i18n: ectx: property (displayFormat), widget (QTimeEdit, m_to)
-#: rc.cpp:2548 rc.cpp:2554 rc.cpp:2632 rc.cpp:2638
+#: rc.cpp:2539 rc.cpp:2545 rc.cpp:2623 rc.cpp:2629
 #, fuzzy
 msgid "hh:mm"
 msgstr "mm"
@@ -8317,14 +8202,14 @@ msgstr "mm"
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:46
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:2551 rc.cpp:2635
+#: rc.cpp:2542 rc.cpp:2626
 #, fuzzy
 msgid "To:"
 msgstr "Til:"
 
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:62
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2557
+#: rc.cpp:2548
 #, fuzzy
 msgid "Day:"
 msgstr "Dagur:"
@@ -8337,7 +8222,7 @@ msgstr "Dagur:"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:117
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:2560 rc.cpp:2653
+#: rc.cpp:2551 rc.cpp:2644
 #, fuzzy
 msgid "Limits"
 msgstr "Takmörk"
@@ -8358,7 +8243,7 @@ msgstr "Takmörk"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:183
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:2566 rc.cpp:2587 rc.cpp:2659 rc.cpp:2680
+#: rc.cpp:2557 rc.cpp:2578 rc.cpp:2650 rc.cpp:2671
 #, fuzzy
 msgid "Download limit:"
 msgstr "Hlaða niður:"
@@ -8379,7 +8264,7 @@ msgstr "Hlaða niður:"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:203
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:2575 rc.cpp:2596 rc.cpp:2668 rc.cpp:2689
+#: rc.cpp:2566 rc.cpp:2587 rc.cpp:2659 rc.cpp:2680
 #, fuzzy
 msgid "Upload limit:"
 msgstr "Senda:"
@@ -8392,7 +8277,7 @@ msgstr "Senda:"
 #. i18n: ectx: property (text), widget (QCheckBox, m_screensaver_limits)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:174
 #. i18n: ectx: property (text), widget (QCheckBox, m_screensaver_limits)
-#: rc.cpp:2584 rc.cpp:2677
+#: rc.cpp:2575 rc.cpp:2668
 #, fuzzy
 msgid "When screensaver is activated:"
 msgstr "er:"
@@ -8405,7 +8290,7 @@ msgstr "er:"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:243
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:2605 rc.cpp:2698
+#: rc.cpp:2596 rc.cpp:2689
 #, fuzzy
 msgid "Connection Limits"
 msgstr "Tenging Takmörk"
@@ -8418,42 +8303,42 @@ msgstr "Tenging Takmörk"
 #. i18n: ectx: property (text), widget (QCheckBox, m_set_connection_limits)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:249
 #. i18n: ectx: property (text), widget (QCheckBox, m_set_connection_limits)
-#: rc.cpp:2608 rc.cpp:2701
+#: rc.cpp:2599 rc.cpp:2692
 #, fuzzy
 msgid "Set connection limits"
 msgstr "Setja"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, AddItemDlg)
-#: rc.cpp:2623
+#: rc.cpp:2614
 #, fuzzy
 msgid "Add a new item to the schedule"
 msgstr "Bæta við a nýtt til"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:62
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2641
+#: rc.cpp:2632
 #, fuzzy
 msgid "Days:"
 msgstr "Dagar:"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:76
 #. i18n: ectx: property (text), widget (QPushButton, m_entire_week)
-#: rc.cpp:2644
+#: rc.cpp:2635
 #, fuzzy
 msgid "Entire Week"
 msgstr "Vika"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:83
 #. i18n: ectx: property (text), widget (QPushButton, m_weekdays_only)
-#: rc.cpp:2647
+#: rc.cpp:2638
 #, fuzzy
 msgid "Weekdays Only"
 msgstr "Aðeins"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:90
 #. i18n: ectx: property (text), widget (QPushButton, m_weekend)
-#: rc.cpp:2650
+#: rc.cpp:2641
 #, fuzzy
 msgid "Weekend"
 msgstr "Helgi"
@@ -8519,12 +8404,12 @@ msgstr "Ógilt."
 msgid "Failed to open temporary file"
 msgstr "Mappa til"
 
-#: plugins/webinterface/httpserver.cpp:317
+#: plugins/webinterface/httpserver.cpp:320
 #, fuzzy
 msgid "Cannot find webinterface skins!"
 msgstr "Vefur:"
 
-#: plugins/webinterface/httpserver.cpp:478
+#: plugins/webinterface/httpserver.cpp:481
 msgid "Unsupported HTTP method"
 msgstr ""
 
@@ -8667,16 +8552,19 @@ msgid "Client"
 msgstr "Biðlari"
 
 #: plugins/infowidget/peerviewmodel.cpp:309
+#, fuzzy
 msgid "Choked"
-msgstr ""
+msgstr "Yfirfylltist"
 
 #: plugins/infowidget/peerviewmodel.cpp:310
+#, fuzzy
 msgid "Snubbed"
-msgstr ""
+msgstr "Sniðgengið"
 
 #: plugins/infowidget/peerviewmodel.cpp:311
+#, fuzzy
 msgid "Availability"
-msgstr ""
+msgstr "Aðgengi"
 
 #: plugins/infowidget/peerviewmodel.cpp:313
 msgid "Score"
@@ -8802,31 +8690,32 @@ msgstr "allir \" a"
 
 #: plugins/infowidget/infowidgetplugin.cpp:96
 #: plugins/bwscheduler/bwschedulerplugin.cpp:83
-#: plugins/bwscheduler/bwschedulerplugin.cpp:114
+#: plugins/bwscheduler/bwschedulerplugin.cpp:115
 #: plugins/bwscheduler/bwprefpage.cpp:27
 msgid "Bandwidth Scheduler"
-msgstr ""
+msgstr "Bandvíddarstýring"
 
-#: plugins/infowidget/infowidgetplugin.cpp:228
+#: plugins/infowidget/infowidgetplugin.cpp:223
 #, fuzzy
 msgid "Displays all the peers you are connected to for a torrent"
 msgstr "allir tengd(ur) til fyrir a"
 
-#: plugins/infowidget/infowidgetplugin.cpp:250
+#: plugins/infowidget/infowidgetplugin.cpp:245
 #, fuzzy
 msgid "Displays all the chunks you are downloading, of a torrent"
 msgstr "allir af a"
 
-#: plugins/infowidget/infowidgetplugin.cpp:272
+#: plugins/infowidget/infowidgetplugin.cpp:267
 #, fuzzy
 msgid "Displays information about all the trackers of a torrent"
 msgstr "allir af a"
 
-#: plugins/infowidget/infowidgetplugin.cpp:290
+#: plugins/infowidget/infowidgetplugin.cpp:285
+#, fuzzy
 msgid "Webseeds"
-msgstr ""
+msgstr "Vefsáningar"
 
-#: plugins/infowidget/infowidgetplugin.cpp:291
+#: plugins/infowidget/infowidgetplugin.cpp:286
 #, fuzzy
 msgid "Displays all the webseeds of a torrent"
 msgstr "allir af a"
@@ -8890,20 +8779,20 @@ msgstr ""
 "\">&nbsp;<br><img src=\"excluded_color\">&nbsp; Hafnað"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:80
-#: plugins/infowidget/iwfiletreemodel.cpp:91
+#: plugins/infowidget/iwfiletreemodel.cpp:92
 #, no-c-format
 msgctxt "Percent of File Downloaded"
 msgid "% Complete"
 msgstr "% lokið"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:89
-#: plugins/infowidget/iwfiletreemodel.cpp:100
+#: plugins/infowidget/iwfiletreemodel.cpp:101
 msgctxt "Download first"
 msgid "First"
 msgstr "Fyrst"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:90
-#: plugins/infowidget/iwfiletreemodel.cpp:101
+#: plugins/infowidget/iwfiletreemodel.cpp:102
 msgctxt "Download last"
 msgid "Last"
 msgstr "Síðast"
@@ -8915,39 +8804,40 @@ msgstr "Venjulega"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:146
 #: plugins/infowidget/iwfilelistmodel.cpp:169
-#: plugins/infowidget/iwfiletreemodel.cpp:181
+#: plugins/infowidget/iwfiletreemodel.cpp:182
 msgctxt "Preview available"
 msgid "Available"
 msgstr "Tiltækt"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:148
 #: plugins/infowidget/iwfilelistmodel.cpp:171
-#: plugins/infowidget/iwfiletreemodel.cpp:160
-#: plugins/infowidget/iwfiletreemodel.cpp:183
+#: plugins/infowidget/iwfiletreemodel.cpp:161
+#: plugins/infowidget/iwfiletreemodel.cpp:184
 msgctxt "Preview pending"
 msgid "Pending"
 msgstr "Í bið"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:151
 #: plugins/infowidget/iwfilelistmodel.cpp:174
-#: plugins/infowidget/iwfiletreemodel.cpp:163
-#: plugins/infowidget/iwfiletreemodel.cpp:186
+#: plugins/infowidget/iwfiletreemodel.cpp:164
+#: plugins/infowidget/iwfiletreemodel.cpp:187
 msgctxt "No preview available"
 msgid "No"
 msgstr "Nei"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:155
 #: plugins/infowidget/iwfilelistmodel.cpp:178
-#: plugins/infowidget/iwfiletreemodel.cpp:168
-#: plugins/infowidget/iwfiletreemodel.cpp:188
-#: plugins/infowidget/iwfiletreemodel.cpp:194
+#: plugins/infowidget/iwfiletreemodel.cpp:169
+#: plugins/infowidget/iwfiletreemodel.cpp:189
+#: plugins/infowidget/iwfiletreemodel.cpp:195
 #, fuzzy, kde-format
 msgid "%1 %"
 msgstr "%1 %"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:210
+#, fuzzy
 msgid "Chunk"
-msgstr ""
+msgstr "Bútur"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:211
 msgid "Progress"
@@ -8982,12 +8872,12 @@ msgstr "Hlaða niður af"
 msgid "Which files the chunk is located in"
 msgstr "er \""
 
-#: plugins/infowidget/iwfiletreemodel.cpp:106
+#: plugins/infowidget/iwfiletreemodel.cpp:107
 msgctxt "Download normally(not as first or last)"
 msgid "Normal"
 msgstr "Venjulega"
 
-#: plugins/infowidget/iwfiletreemodel.cpp:158
+#: plugins/infowidget/iwfiletreemodel.cpp:159
 msgctxt "preview available"
 msgid "Available"
 msgstr "Tiltækt"
@@ -9029,18 +8919,18 @@ msgstr "Aldrei"
 msgid "Cannot open zip file %1."
 msgstr "2"
 
-#: plugins/ipfilter/downloadandconvertjob.cpp:157
+#: plugins/ipfilter/downloadandconvertjob.cpp:158
 #, fuzzy, kde-format
 msgid "Cannot find blocklist in zip file %1."
 msgstr "1"
 
-#: plugins/ipfilter/downloadandconvertjob.cpp:228
+#: plugins/ipfilter/downloadandconvertjob.cpp:229
 #, fuzzy
 msgid ""
 "Filter file (level1.dat) already exists, do you want to convert it again?"
 msgstr "Sía til?"
 
-#: plugins/ipfilter/downloadandconvertjob.cpp:229
+#: plugins/ipfilter/downloadandconvertjob.cpp:230
 msgid "File Exists"
 msgstr "Skráin er þegar til"
 
@@ -9111,14 +9001,12 @@ msgid ""
 msgstr ""
 
 #: plugins/stats/drawer/ChartDrawer.cc:26
-#, fuzzy
 msgid "KiB/s"
-msgstr "KiB s"
+msgstr "KiB/sek"
 
 #: plugins/stats/StatsPlugin.cc:51
-#, fuzzy
 msgid "Speed charts"
-msgstr "Hraði"
+msgstr "Hraðarit"
 
 #: plugins/stats/StatsPlugin.cc:51
 #, fuzzy
@@ -9127,7 +9015,7 @@ msgstr "og"
 
 #: plugins/stats/StatsPlugin.cc:52
 msgid "Connections charts"
-msgstr ""
+msgstr "Tengingarit"
 
 #: plugins/stats/StatsPlugin.cc:52
 msgid "Displays charts about connections"
@@ -9135,9 +9023,8 @@ msgstr ""
 
 #: plugins/stats/ConnsTabPage.cc:68 plugins/stats/ConnsTabPage.cc:120
 #: plugins/stats/ConnsTabPage.cc:122
-#, fuzzy
 msgid "Seeds in swarms"
-msgstr "Fræ \""
+msgstr ""
 
 #: plugins/stats/ConnsTabPage.cc:75
 #, fuzzy
@@ -9151,14 +9038,13 @@ msgstr "Meðaltal tengd(ur) keyri"
 
 #: plugins/shutdown/shutdowntorrentmodel.cpp:92
 #: plugins/shutdown/shutdowntorrentmodel.cpp:235
-#, fuzzy
 msgid "Downloading finishes"
-msgstr "Sæki"
+msgstr "Niðurhali lýkur"
 
 #: plugins/shutdown/shutdowntorrentmodel.cpp:94
 #: plugins/shutdown/shutdowntorrentmodel.cpp:236
 msgid "Seeding finishes"
-msgstr ""
+msgstr "Sáningu lýkur"
 
 #: plugins/shutdown/shutdowntorrentmodel.cpp:154
 #, fuzzy
@@ -9210,54 +9096,45 @@ msgid "When the events below happen"
 msgstr ""
 
 #: plugins/logviewer/logprefpage.cpp:30
-#, fuzzy
 msgid "Log Viewer"
-msgstr "Annálar Skoðari"
+msgstr "Annálaskoðari"
 
 #: plugins/logviewer/logflags.cpp:121
-#, fuzzy
 msgid "System"
 msgstr "Kerfi"
 
 #: plugins/logviewer/logflags.cpp:122
-#, fuzzy
 msgid "Log Level"
-msgstr "Annálar Borð"
+msgstr "Annálsstig"
 
 #: plugins/logviewer/logflags.cpp:201
 #: plugins/logviewer/logflagsdelegate.cpp:46
-#, fuzzy
 msgid "Debug"
-msgstr "Aflúsa"
+msgstr "Aflúsun"
 
 #: plugins/logviewer/logflags.cpp:202
 #: plugins/logviewer/logflagsdelegate.cpp:45
-#, fuzzy
 msgid "Notice"
-msgstr "Athugaðu"
+msgstr "Tilkynningar"
 
 #: plugins/logviewer/logflags.cpp:203
 #: plugins/logviewer/logflagsdelegate.cpp:44
-#, fuzzy
 msgid "Important"
 msgstr "Mikilvægt"
 
 #: plugins/logviewer/logflags.cpp:204
 #: plugins/logviewer/logflagsdelegate.cpp:43
-#, fuzzy
 msgid "All"
 msgstr "Allt"
 
 #: plugins/logviewer/logflags.cpp:205
 #: plugins/logviewer/logflagsdelegate.cpp:47
-#, fuzzy
 msgid "None"
 msgstr "Ekkert"
 
 #: plugins/logviewer/logviewer.cpp:49
-#, fuzzy
 msgid "Log"
-msgstr "Annálar"
+msgstr "Skrá í annál"
 
 #: plugins/logviewer/logviewer.cpp:51
 #, fuzzy
@@ -9282,59 +9159,59 @@ msgid "File download order for <b>%1</b>:"
 msgstr "Skrá fyrir<b></b>:"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:47
-#: plugins/mediaplayer/mediaplayeractivity.cpp:150
+#: plugins/mediaplayer/mediaplayeractivity.cpp:151
 #: plugins/mediaplayer/mediaplayerplugin.cpp:49
 #: plugins/mediaplayer/mediaplayerplugin.cpp:61
 #, fuzzy
 msgid "Media Player"
 msgstr "Margmiðlunarspilari"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:73
+#: plugins/mediaplayer/mediaplayeractivity.cpp:74
 #, fuzzy
 msgid "Play List"
 msgstr "Spila Listi"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:97
+#: plugins/mediaplayer/mediaplayeractivity.cpp:98
 #: plugins/mediaplayer/videowidget.cpp:58
 #, fuzzy
 msgid "Play"
 msgstr "Spila"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:101
+#: plugins/mediaplayer/mediaplayeractivity.cpp:102
 #: plugins/mediaplayer/videowidget.cpp:59
 #, fuzzy
 msgid "Pause"
 msgstr "Bíða"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:109
+#: plugins/mediaplayer/mediaplayeractivity.cpp:110
 #, fuzzy
 msgid "Previous"
 msgstr "Fyrra"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:113
+#: plugins/mediaplayer/mediaplayeractivity.cpp:114
 #, fuzzy
 msgid "Next"
 msgstr "Næsta"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:117
+#: plugins/mediaplayer/mediaplayeractivity.cpp:118
 #, fuzzy
 msgid "Show Video"
 msgstr "Sýna Vídeó"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:121
+#: plugins/mediaplayer/mediaplayeractivity.cpp:122
 #: plugins/mediaplayer/playlistwidget.cpp:109
 #, fuzzy
 msgid "Add Media"
 msgstr "Bæta við Miðill"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:125
+#: plugins/mediaplayer/mediaplayeractivity.cpp:126
 #: plugins/mediaplayer/playlistwidget.cpp:110
 #, fuzzy
 msgid "Clear Playlist"
 msgstr "Hreinsa Lagalisti"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:164
-#: plugins/mediaplayer/mediaplayeractivity.cpp:366
+#: plugins/mediaplayer/mediaplayeractivity.cpp:165
+#: plugins/mediaplayer/mediaplayeractivity.cpp:367
 #, fuzzy
 msgid "Movie player"
 msgstr "Kvikmynd"
@@ -9512,39 +9389,32 @@ msgid "Syndication"
 msgstr ""
 
 #: plugins/syndication/syndicationplugin.cpp:86
-#, fuzzy
 msgid "Add Feed"
-msgstr "Bæta við straum"
+msgstr "Bæta við fréttastraum"
 
 #: plugins/syndication/syndicationplugin.cpp:89
-#, fuzzy
 msgid "Remove Feed"
-msgstr "Fjarlægja Straumur"
+msgstr "Fjarlægja fréttastraum"
 
 #: plugins/syndication/syndicationplugin.cpp:92
-#, fuzzy
 msgid "Show Feed"
-msgstr "Sýna Straumur"
+msgstr "Sýna fréttatraum"
 
 #: plugins/syndication/syndicationplugin.cpp:98
-#, fuzzy
 msgid "Rename"
-msgstr "Fjarlægja"
+msgstr "Endurnefna"
 
 #: plugins/syndication/syndicationplugin.cpp:101
-#, fuzzy
 msgid "Add Filter"
-msgstr "Bæta síu við"
+msgstr "Bæta við síu"
 
 #: plugins/syndication/syndicationplugin.cpp:104
-#, fuzzy
 msgid "Remove Filter"
-msgstr "Fjarlægja Sía"
+msgstr "Fjarlægja síu"
 
 #: plugins/syndication/syndicationactivity.cpp:53
-#, fuzzy
 msgid "Manages RSS and Atom feeds"
-msgstr "RSS og"
+msgstr "Sýslar með RSS og Atom fréttastrauma"
 
 #: plugins/syndication/syndicationactivity.cpp:130
 #, fuzzy
@@ -9552,14 +9422,13 @@ msgid "Enter the URL"
 msgstr "Sláðu inn vefslóð"
 
 #: plugins/syndication/syndicationactivity.cpp:130
-#, fuzzy
 msgid "Please enter the URL of the RSS or Atom feed."
-msgstr "Slóð af RSS eða."
+msgstr "Slóð á RSS eða Atom fréttastraum."
 
 #: plugins/syndication/syndicationactivity.cpp:144
-#, fuzzy, kde-format
+#, kde-format
 msgid "Failed to load feed %1."
-msgstr "Mistókst til."
+msgstr "Tókst ekki að hlaða inn fréttastraumi %1."
 
 #: plugins/syndication/syndicationactivity.cpp:160
 #, fuzzy, kde-format
@@ -9590,7 +9459,7 @@ msgstr "<b></b><br/><br/> 2"
 #: plugins/search/searchprefpage.cpp:58 plugins/search/homepage.cpp:121
 #: plugins/search/searchactivity.cpp:35 plugins/search/searchtoolbar.cpp:72
 #: plugins/search/searchplugin.cpp:67 plugins/search/searchplugin.cpp:89
-#: plugins/search/searchplugin.cpp:144
+#: plugins/search/searchplugin.cpp:145
 #, fuzzy
 msgid "Search"
 msgstr "Leita"
@@ -9623,9 +9492,10 @@ msgid "Home"
 msgstr "Heim"
 
 #: plugins/search/homepage.cpp:119
+#, fuzzy
 msgctxt "KDE 4 tag line, see http://kde.org/img/kde40.png"
 msgid "Be free."
-msgstr ""
+msgstr "Vertu frjáls."
 
 #: plugins/search/homepage.cpp:120
 #, fuzzy
@@ -9848,11 +9718,11 @@ msgid ""
 "another item on the schedule."
 msgstr "ekki til allir dagar árekstur við með á."
 
-#: plugins/bwscheduler/schedulegraphicsitem.cpp:77
+#: plugins/bwscheduler/schedulegraphicsitem.cpp:78
 msgid "Paused"
 msgstr "Í bið"
 
-#: plugins/bwscheduler/schedulegraphicsitem.cpp:82
+#: plugins/bwscheduler/schedulegraphicsitem.cpp:83
 #, fuzzy, kde-format
 msgid ""
 "%1 Down\n"
@@ -9864,21 +9734,20 @@ msgid ""
 "Bandwidth\n"
 "Schedule"
 msgstr ""
+"Bandbreidd\n"
+"Áætlun"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:42
-#, fuzzy
 msgid "Edit the bandwidth schedule"
-msgstr "Breyta"
+msgstr "Breyta áætlun um bandbreidd"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:50
-#, fuzzy
 msgid "Load Schedule"
-msgstr "Hlaða Vinnuáætlun"
+msgstr "Hlaða inn vinnuáætlun"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:51
-#, fuzzy
 msgid "Save Schedule"
-msgstr "Vista Vinnuáætlun"
+msgstr "Vista vinnuáætlun"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:53
 msgid "New Item"
@@ -9893,14 +9762,13 @@ msgid "Edit Item"
 msgstr "Sýsla með hlut"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:57
-#, fuzzy
 msgid "Clear Schedule"
-msgstr "Hreinsa Vinnuáætlun"
+msgstr "Hreinsa vinnuáætlun"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:101
 #: plugins/bwscheduler/scheduleeditor.cpp:117
 msgid "KTorrent scheduler files"
-msgstr ""
+msgstr "KTorrent áætlanaskrár"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:164
 #, fuzzy
@@ -9909,16 +9777,15 @@ msgid ""
 msgstr "árekstur við með \"."
 
 #: libbtcore/interfaces/trackerinterface.cpp:58
-#, fuzzy
 msgid "OK"
 msgstr "Í lagi"
 
 #: libbtcore/interfaces/trackerinterface.cpp:59
 msgid "Announcing"
-msgstr ""
+msgstr "Tilkynning"
 
 #: libbtcore/interfaces/trackerinterface.cpp:60
-#: libbtcore/torrent/torrentstats.cpp:82
+#: libbtcore/torrent/torrentstats.cpp:83
 #, fuzzy, kde-format
 msgid "Error: %1"
 msgstr "Villa: %1"
@@ -9940,7 +9807,7 @@ msgid_plural "%1 days "
 msgstr[0] "daginn "
 msgstr[1] "daginn "
 
-#: libbtcore/util/log.cpp:112
+#: libbtcore/util/log.cpp:115
 #, fuzzy, kde-format
 msgid "Cannot open log file %1 : %2"
 msgstr "2"
@@ -10075,234 +9942,221 @@ msgid "Error: failed to connect, server not responding"
 msgstr "Villa mistókst til ekki"
 
 #: libbtcore/download/httpconnection.cpp:327
-#, fuzzy
 msgid "Error: request timed out"
-msgstr "Villa"
+msgstr "Villa: fyrirspurn rann út á tíma"
 
 #: libbtcore/download/httpconnection.cpp:391
-#, fuzzy
 msgid "Redirected without a new location."
-msgstr "a nýtt."
+msgstr ""
 
 #: libbtcore/download/chunkdownload.cpp:385
 #, kde-format
 msgid "1 peer"
 msgid_plural "%1 peers"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 jafningi"
+msgstr[1] "%1 jafningjar"
 
 #: libbtcore/migrate/migrate.cpp:45
-#, fuzzy, kde-format
+#, kde-format
 msgid "The directory %1 does not exist"
-msgstr "ekki"
+msgstr "Mappan %1 er ekki til"
 
 #: libbtcore/bcodec/bdecoder.cpp:61
-#, fuzzy, kde-format
+#, kde-format
 msgid "Illegal token: %1"
-msgstr "1"
+msgstr "Ógilt skráningarmerki (token): %1"
 
 #: libbtcore/bcodec/bdecoder.cpp:82
-#, fuzzy
 msgid "Decode error"
-msgstr "villa"
+msgstr "Afkóðunarvilla"
 
 #: libbtcore/bcodec/bdecoder.cpp:143 libbtcore/bcodec/bdecoder.cpp:188
-#, fuzzy
 msgid "Unexpected end of input"
-msgstr "Óvænt af"
+msgstr "Óvænt ending á inntaki"
 
 #: libbtcore/bcodec/bdecoder.cpp:163 libbtcore/bcodec/bdecoder.cpp:197
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cannot convert %1 to an int"
-msgstr "til int"
+msgstr "Gat ekki umbreytt %1 í heiltölu (int)"
 
 #: libbtcore/bcodec/bdecoder.cpp:202
-#, fuzzy
 msgid "Torrent is incomplete."
-msgstr "er ókláraður."
+msgstr "Straumurinn er ókláraður."
 
 #: libbtcore/diskio/singlefilecache.cpp:72
-#: libbtcore/diskio/multifilecache.cpp:106
-#, fuzzy, kde-format
+#: libbtcore/diskio/multifilecache.cpp:107
+#, kde-format
 msgid "Failed to open %1 : %2"
-msgstr "Mistókst til 2"
+msgstr "Mistókst að opna %1 : %2"
 
 #: libbtcore/diskio/chunkmanager.cpp:209 libbtcore/diskio/chunkmanager.cpp:324
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cannot open index file %1 : %2"
-msgstr "2"
+msgstr "Get ekki opnað yfirlitsskrá %1 : %2"
 
 #: libbtcore/diskio/dndfile.cpp:89
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cannot create file %1 : %2"
-msgstr "2"
+msgstr "Gat ekki búið til skrána %1 : %2"
 
 #: libbtcore/diskio/dndfile.cpp:137
-#, fuzzy, kde-format
+#, kde-format
 msgid "Failed to write first chunk to DND file : %1"
-msgstr "Mistókst til 1. til 1"
+msgstr "Gat ekki skrifað fyrsta bútinn í DND skrá: %1"
 
 #: libbtcore/diskio/dndfile.cpp:155
-#, fuzzy, kde-format
+#, kde-format
 msgid "Failed to write last chunk to DND file : %1"
-msgstr "Mistókst til til 1"
+msgstr "Gat ekki skrifað síðasta bútinn í DND skrá: %1"
 
 #: libbtcore/diskio/cachefile.cpp:120 libbtcore/diskio/cachefile.cpp:243
 #: libbtcore/diskio/cachefile.cpp:429 libbtcore/diskio/cachefile.cpp:496
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cannot open %1 for writing : readonly filesystem"
-msgstr "fyrir"
+msgstr "Gat ekki opnað %1 til skrifunar : skrifvarið skráakerfi (readonly)"
 
 #: libbtcore/diskio/cachefile.cpp:253
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cannot expand file %1 : %2"
-msgstr "2"
+msgstr "Gat ekki afþjappað skrá %1 : %2"
 
 #: libbtcore/diskio/cachefile.cpp:395
-#, fuzzy, kde-format
+#, kde-format
 msgid "Error : Reading past the end of the file %1"
-msgstr "Villa Les af 1"
+msgstr "Villa : las framyfir enda skráarinnar %1"
 
 #: libbtcore/diskio/cachefile.cpp:400 libbtcore/diskio/cachefile.cpp:446
-#, fuzzy, kde-format
+#, kde-format
 msgid "Failed to seek file %1 : %2"
-msgstr "Mistókst til 2"
+msgstr "Gat ekki leitað að skrá %1 : %2"
 
 #: libbtcore/diskio/cachefile.cpp:408
-#, fuzzy, kde-format
+#, kde-format
 msgid "Error reading from %1"
-msgstr "Villa frá 1"
+msgstr "Villa við lestur frá %1"
 
 #: libbtcore/diskio/cachefile.cpp:450
-#, fuzzy, kde-format
+#, kde-format
 msgid "Failed to write to file %1 : %2"
-msgstr "Mistókst til til 2"
+msgstr "Gat ekki skrifað í skrá %1 : %2"
 
-#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:794
-#, fuzzy, kde-format
+#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:795
+#, kde-format
 msgid "Cannot preallocate diskspace : %1"
-msgstr "1"
+msgstr "Gat ekki tekið frá diskpláss : %1"
 
-#: libbtcore/diskio/multifilecache.cpp:738
-#: libbtcore/diskio/multifilecache.cpp:802
-#, fuzzy, kde-format
+#: libbtcore/diskio/multifilecache.cpp:739
+#: libbtcore/diskio/multifilecache.cpp:803
+#, kde-format
 msgid "Cannot open file %1 : %2"
-msgstr "2"
+msgstr "Gat ekki opnað skrá %1 : %2"
 
 #: libbtcore/torrent/torrent.cpp:83 libbtcore/torrent/torrent.cpp:154
 #: libbtcore/torrent/torrent.cpp:182 libbtcore/torrent/torrent.cpp:189
 #: libbtcore/torrent/torrent.cpp:197 libbtcore/torrent/torrent.cpp:201
 #: libbtcore/torrent/torrent.cpp:222 libbtcore/torrent/torrent.cpp:293
 msgid "Corrupted torrent."
-msgstr ""
+msgstr "Skemmdur straumur."
 
 #: libbtcore/torrent/torrent.cpp:145
-#, fuzzy, kde-format
+#, kde-format
 msgid " Unable to open torrent file %1 : %2"
-msgstr "til 2"
+msgstr "Gat ekki opnað torrent skrá %1 : %2"
 
 #: libbtcore/torrent/torrent.cpp:275
-#, fuzzy
 msgid "Parse Error"
 msgstr "Þáttunarvilla"
 
 #: libbtcore/torrent/torrentcontrol.cpp:468
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
 "torrent is probably corrupt or is not a valid torrent file."
-msgstr "villa<b></b><br/><b></b><br/> er eða er ekki a."
+msgstr ""
 
 #: libbtcore/torrent/torrentcontrol.cpp:497
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "An error occurred while loading the torrent:<br/><b>%1</b><br/>The torrent "
 "is probably corrupt or is not a valid torrent file."
-msgstr "villa<br/><b></b><br/> er eða er ekki a."
+msgstr ""
 
 #: libbtcore/torrent/torrentcontrol.cpp:507
-#, fuzzy, kde-format
+#, kde-format
 msgid "Unable to create %1 : %2"
-msgstr "til 2"
+msgstr "Gat ekki búið til %1 : %2"
 
 #: libbtcore/torrent/torrentcontrol.cpp:522
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "You are already downloading this torrent %1, the list of trackers of both "
 "torrents has been merged."
-msgstr "Þú af af."
+msgstr ""
+"Þú ert nú þegar að ná í þennan torrent staum %1, listi skrásetjara beggja "
+"straumanna hefur verið sameinaður."
 
 #: libbtcore/torrent/torrentcontrol.cpp:526
-#, fuzzy, kde-format
+#, kde-format
 msgid "You are already downloading the torrent %1"
-msgstr "Þú 1"
+msgstr "Þú ert nú þegar að ná í torrent stauminn %1"
 
-#: libbtcore/torrent/torrentstats.cpp:68
-#, fuzzy
+#: libbtcore/torrent/torrentstats.cpp:69
 msgid "Not started"
-msgstr "Ekki"
+msgstr "Ekki byrjað"
 
-#: libbtcore/torrent/torrentstats.cpp:70
-#, fuzzy
+#: libbtcore/torrent/torrentstats.cpp:71
 msgid "Download completed"
-msgstr "Hlaða niður"
+msgstr "Niðurhali lokið"
 
-#: libbtcore/torrent/torrentstats.cpp:72
+#: libbtcore/torrent/torrentstats.cpp:73
 msgid "Seeding completed"
-msgstr ""
+msgstr "Sáningu lokið"
 
-#: libbtcore/torrent/torrentstats.cpp:74
+#: libbtcore/torrent/torrentstats.cpp:75
 msgctxt "Status of a torrent file"
 msgid "Seeding"
-msgstr ""
+msgstr "Sái"
 
-#: libbtcore/torrent/torrentstats.cpp:76
-#, fuzzy
+#: libbtcore/torrent/torrentstats.cpp:77
 msgid "Downloading"
 msgstr "Sæki"
 
-#: libbtcore/torrent/torrentstats.cpp:78
-#, fuzzy
+#: libbtcore/torrent/torrentstats.cpp:79
 msgid "Stalled"
 msgstr "Töf"
 
-#: libbtcore/torrent/torrentstats.cpp:80
-#, fuzzy
+#: libbtcore/torrent/torrentstats.cpp:81
 msgid "Stopped"
 msgstr "Stöðvað"
 
-#: libbtcore/torrent/torrentstats.cpp:84
+#: libbtcore/torrent/torrentstats.cpp:85
 msgid "Allocating diskspace"
-msgstr ""
+msgstr "Úthluta diskplássi"
 
-#: libbtcore/torrent/torrentstats.cpp:86
-#, fuzzy
+#: libbtcore/torrent/torrentstats.cpp:87
 msgid "Queued for seeding"
-msgstr "Í biðröð fyrir"
+msgstr "Í biðröð fyrir sáningu"
 
-#: libbtcore/torrent/torrentstats.cpp:86
-#, fuzzy
+#: libbtcore/torrent/torrentstats.cpp:87
 msgid "Queued for downloading"
-msgstr "Í biðröð fyrir"
+msgstr "Í biðröð fyrir niðurhal"
 
-#: libbtcore/torrent/torrentstats.cpp:88
+#: libbtcore/torrent/torrentstats.cpp:89
 msgid "Checking data"
-msgstr ""
+msgstr "Yfirfer gögn"
 
-#: libbtcore/torrent/torrentstats.cpp:90
-#, fuzzy
+#: libbtcore/torrent/torrentstats.cpp:91
 msgid "Stopped. No space left on device."
-msgstr "Stöðvað Nei vinstri á."
+msgstr "Stöðvað. Ekkert pláss eftir á tækinu."
 
 #: libbtcore/torrent/torrentcreator.cpp:359
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cannot create index file: %1"
-msgstr "1"
+msgstr "Gat ekki búið til yfirlitsskrá: %1"
 
 #: libbtcore/tracker/httpannouncejob.cpp:119
-#, fuzzy
 msgid "Redirect without a redirect location"
-msgstr "a nýtt."
+msgstr ""
 
 #: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
 #: libbtcore/tracker/httptracker.cpp:559
@@ -10311,106 +10165,36 @@ msgid "Timeout contacting tracker %1"
 msgstr ""
 
 #: libbtcore/tracker/udptracker.cpp:330
-#, fuzzy, kde-format
+#, kde-format
 msgid "Unable to resolve hostname %1"
-msgstr "til 1"
+msgstr "Tókst ekki að greina vélarheiti %1"
 
 #: libbtcore/tracker/udptrackersocket.cpp:66
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cannot bind to udp port %1 or the 10 following ports."
-msgstr "til eða."
+msgstr "Get ekki bundist udp gátt %1 eða 10 gáttum þar á eftir."
 
 #: libbtcore/tracker/httptracker.cpp:282 libbtcore/tracker/httptracker.cpp:302
 #: libbtcore/tracker/httptracker.cpp:342 libbtcore/tracker/httptracker.cpp:461
-#, fuzzy
 msgid "Invalid response from tracker"
-msgstr "Ógilt frá"
+msgstr "Ógilt svar frá skrásetjara (tracker)"
 
 #: libbtcore/tracker/httptracker.cpp:295
-#, fuzzy
 msgid "Invalid data from tracker"
-msgstr "Ógilt frá"
+msgstr "Ógild gögn frá skrásetjara (tracker)"
 
 #: libbtcore/tracker/httptracker.cpp:478
-#, fuzzy
 msgid "Invalid tracker URL"
-msgstr "Ógilt Slóð"
+msgstr "Ógild slóð á skrásetjara (tracker)"
 
 #: libbtcore/datachecker/singledatachecker.cpp:49
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cannot open file : %1 : %2"
-msgstr "2"
+msgstr "Gat ekki opnað skrá : %1 : %2"
 
 #, fuzzy
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:10pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Quit KTorrent</p></"
-#~ "body></html>"
-#~ msgstr ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\"> hvítur\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:10pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"> Hætta</p></body></html>"
-
-#, fuzzy
-#~ msgid "Quit"
-#~ msgstr "Hætta"
-
-#, fuzzy
-#~ msgid "Free disk space:"
-#~ msgstr "Laust pláss:"
-
-#, fuzzy
-#~ msgid ""
-#~ "You will lose all data in these files, are you sure you want to do this ?"
-#~ msgstr "Þú allir \" til?"
-
-#, fuzzy
-#~ msgid "Form"
-#~ msgstr "Frá:"
-
-#, fuzzy
-#~ msgid "Cannot expand file : %1"
-#~ msgstr "1"
-
-#, fuzzy
-#~ msgid "Cannot add a tracker to a private torrent."
-#~ msgstr "a til a."
-
-#, fuzzy
-#~ msgid "Checking Data Integrity"
-#~ msgstr "Gögn"
-
-#, fuzzy
-#~ msgid "Cannot migrate %1 : %2"
-#~ msgstr "2"
-
-#, fuzzy
-#~ msgid ""
-#~ "The torrent %1 was started with a previous version of KTorrent. To make "
-#~ "sure this torrent still works with this version of KTorrent, we will "
-#~ "migrate this torrent. You will be asked for a location to save the "
-#~ "torrent to. If you press cancel, we will select your home directory."
-#~ msgstr "með a útgáfa af Til með útgáfa af Þú fyrir a til til."
-
-#, fuzzy
-#~ msgid "Select Folder to Save To"
-#~ msgstr "Velja Mappa til Vista Til"
-
-#, fuzzy
-#~ msgid "Error: "
-#~ msgstr "Villa: "
-
-#, fuzzy
-#~ msgid "Apply"
-#~ msgstr "Virkja"
+#~ msgid "Normal priority:"
+#~ msgstr "Venjulegt forgangur:"
 
 #, fuzzy
 #~ msgid ""
@@ -10420,18 +10204,13 @@ msgstr "2"
 #~ "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 #~ "size:8pt; font-weight:400; font-style:normal;\">\n"
 #~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Instead of using a tree "
-#~ "of files to display the contents of a torrent, use a flat list of files.</"
-#~ "p></body></html>"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Color to use for normal "
+#~ "priority files.</p></body></html>"
 #~ msgstr ""
 #~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
 #~ "css\"> hvítur\n"
 #~ "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 #~ "size:8pt; font-weight:400; font-style:normal;\">\n"
 #~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"> af a af til af a a af</"
-#~ "p></body></html>"
-
-#, fuzzy
-#~ msgid "Use a list of files when displaying the files of a torrent"
-#~ msgstr "Nota a af af a"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"> Litur til fyrir "
+#~ "samræmt forgangur</p></body></html>"
