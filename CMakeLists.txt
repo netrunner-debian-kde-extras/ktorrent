@@ -16,6 +16,8 @@ endif(NOT KDE_VERSION_OK)
 
 # set some default settings
 include(KDE4Defaults)
+enable_testing()
+set(BUILD_TESTING ON)
 
 # make some more macros available
 include (MacroLibrary)
@@ -30,17 +32,6 @@ include(CheckTypeSize) #XFS
 # according to http://www.cmake.org/pipermail/cmake/2008-June/022381.html
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${KDE4_ENABLE_EXCEPTIONS}")
 add_definitions( ${KDE4_DEFINITIONS} )
-
-option(ENABLE_DHT_SUPPORT "Whether to build KTorrent with DHT support or not" true)
-if (ENABLE_DHT_SUPPORT)
-  message(STATUS "Building KTorrent with DHT support (-DENABLE_DHT_SUPPORT=false to disable)")
-  add_definitions(-DENABLE_DHT_SUPPORT)
-endif (ENABLE_DHT_SUPPORT)
-
-# option(ENABLE_GEOIP "Wether or not to enable support for the GeoIP library" true)
-#if (ENABLE_GEOIP)
-#  message(STATUS "Building KTorrent with GeoIP support")
-#endif (ENABLE_GEOIP)
 
 set (KTORRENT_DBUS_XML_DIR ${KTORRENT_SOURCE_DIR}/dbus_xml)
 
@@ -65,9 +56,12 @@ add_subdirectory(ktupnptest)
 if( PLASMA_FOUND )
     add_subdirectory(plasma)
 endif(PLASMA_FOUND)
+add_subdirectory(ktutpd)
+add_subdirectory(ktmagnetdownloader)
 
 # --- show log ---
 macro_display_feature_log()
+
 
 find_package(Msgfmt REQUIRED)
 find_package(Gettext REQUIRED)

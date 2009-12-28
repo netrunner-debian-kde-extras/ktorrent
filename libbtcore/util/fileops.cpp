@@ -211,7 +211,11 @@ namespace bt
 		for (QStringList::iterator i = files.begin(); i != files.end();i++)
 		{
 			QString file = d.absoluteFilePath(*i);
-			if (!QFile::remove(file))
+			QFile fp(file);
+			if (!QFileInfo(file).isWritable() && !fp.setPermissions(QFile::ReadUser | QFile::WriteUser))
+				return false;
+
+			if (!fp.remove())
 				return false;	
 		}
 
@@ -438,6 +442,9 @@ namespace bt
 		if (statvfs(QFile::encodeName(path), &stfs) == 0)
 #endif
 		{
+			if (stfs.f_blocks == 0) // if this is 0, then we are using gvfs
+				return false;
+
 			bytes_free = ((Uint64)stfs.f_bavail) * ((Uint64)stfs.f_frsize);
 			return true;
 		}
