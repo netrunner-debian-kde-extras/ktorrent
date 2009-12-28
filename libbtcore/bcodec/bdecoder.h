@@ -43,6 +43,7 @@ namespace bt
 		const QByteArray & data;
 		Uint32 pos;
 		bool verbose;
+		int level;
 	public:
 		/**
 		 * Constructor, passes in the data to decode.
@@ -59,6 +60,12 @@ namespace bt
 		 * @return The root node
 		 */
 		BNode* decode();
+		
+		/// Get the current position in the data
+		Uint32 position() const {return pos;}
+	private:
+		void debugMsg(const QString & msg);
+		
 	private:
 		BDictNode* parseDict();
 		BListNode* parseList();

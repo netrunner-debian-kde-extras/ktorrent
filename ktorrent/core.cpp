@@ -49,21 +49,20 @@
 #include <util/fileops.h>
 #include <util/functions.h>
 #include <util/waitjob.h>
+#include <bcodec/bencoder.h>
 #include <plugin/pluginmanager.h>
 #include <groups/groupmanager.h>
 #include <groups/group.h>
-
-#ifdef ENABLE_DHT_SUPPORT
 #include <dht/dht.h>
-#endif
-
 #include "settings.h"
 #include "core.h"
-#include "fileselectdlg.h"
-#include "missingfilesdlg.h"
+#include "dialogs/fileselectdlg.h"
+#include "dialogs/missingfilesdlg.h"
 #include "gui.h"
-#include "torrentmigratordlg.h"
+#include "dialogs/torrentmigratordlg.h"
 #include "scanlistener.h"
+#include "tools/magnetmodel.h"
+
 
 
 using namespace bt;
@@ -145,16 +144,21 @@ namespace kt
 			Out(SYS_GEN|LOG_IMPORTANT) << "Cannot find free port" << endl;
 		}
 
-		
+		magnet = new kt::MagnetModel(this);
 		pman = new kt::PluginManager(this,gui);
 		gman = new kt::GroupManager();
 		applySettings();
 		gman->loadGroups();
+		
 		connect(qman,SIGNAL(queueOrdered()),this,SLOT(startUpdateTimer()));
 		connect(qman,SIGNAL(pauseStateChanged(bool)),gui,SLOT(onPausedStateChanged(bool)));
+		connect(magnet,SIGNAL(metadataFound(bt::MagnetLink,QByteArray,bool)),
+				this,SLOT(onMetadataDownloaded(bt::MagnetLink,QByteArray,bool)));
 		
 		if (!Settings::oldTorrentsImported()) // check for old torrents if this hasn't happened yet
 			QTimer::singleShot(1000,this,SLOT(checkForKDE3Torrents()));
+		
+		magnet->loadMagnets(kt::DataDir() + "magnets");
 	}
 	
 	Core::~Core()
@@ -313,25 +317,31 @@ namespace kt
 			startUpdateTimer();
 			return true;
 		}
+		catch (bt::Warning & warning)
+		{
+			bt::Out(SYS_GEN|LOG_NOTICE) << warning.toString() << endl;
+			if (!silently)
+				gui->infoMsg(warning.toString());
+			else
+				canNotLoadSilently(warning.toString());
+		}
 		catch (bt::Error & err)
 		{
+			bt::Out(SYS_GEN|LOG_IMPORTANT) << err.toString() << endl;
 			if (!silently)
 				gui->errorMsg(err.toString());
 			else
 				canNotLoadSilently(err.toString());
-			
-			bt::Out(SYS_GEN|LOG_IMPORTANT) << err.toString() << endl;
-			
-			delete tc;
-			tc = 0;
-			// delete tdir if necesarry
-			if (bt::Exists(tdir))
-				bt::Delete(tdir,true);
-			
-			loadingFinished(url, false, false);
-			
-			return false;
 		}
+		
+		delete tc;
+		tc = 0;
+		// delete tdir if necesarry
+		if (bt::Exists(tdir))
+			bt::Delete(tdir,true);
+		
+		loadingFinished(url, false, false);
+		return false;
 	}
 
 	bool Core::loadFromFile(const QString & target,const QString & dir,const QString & group,bool silently)
@@ -349,22 +359,29 @@ namespace kt
 			startUpdateTimer();
 			return true;
 		}
+		catch (bt::Warning & warning)
+		{
+			bt::Out(SYS_GEN|LOG_NOTICE) << warning.toString() << endl;
+			if (!silently)
+				gui->infoMsg(warning.toString());
+			else
+				canNotLoadSilently(warning.toString());
+		}
 		catch (bt::Error & err)
 		{
+			bt::Out(SYS_GEN|LOG_IMPORTANT) << err.toString() << endl;
 			if (!silently)
 				gui->errorMsg(err.toString());
 			else
 				canNotLoadSilently(err.toString());
-			
-			bt::Out(SYS_GEN|LOG_IMPORTANT) << err.toString() << endl;
-			
-			delete tc;
-			tc = 0;
-			// delete tdir if necesarry
-			if (bt::Exists(tdir))
-				bt::Delete(tdir,true);
-			return false;
 		}
+		
+		delete tc;
+		tc = 0;
+		// delete tdir if necesarry
+		if (bt::Exists(tdir))
+			bt::Delete(tdir,true);
+		return false;
 	}
 
 	void Core::downloadFinished(KJob *job)
@@ -390,10 +407,11 @@ namespace kt
 				dir = QDir::homePath();
 			
 			QString group;
-			if (add_to_groups.contains(j))
+			QMap<KUrl,QString>::iterator i = add_to_groups.find(j->url());
+			if (i != add_to_groups.end())
 			{
-				group = add_to_groups[j];
-				add_to_groups.remove(j);
+				group = i.value();
+				add_to_groups.erase(i);
 			}
 		
 			if (dir != QString::null && loadFromData(j->data(),dir,group,false, j->url()))
@@ -405,7 +423,11 @@ namespace kt
 
 	void Core::load(const KUrl& url,const QString & group)
 	{
-		if (url.isLocalFile())
+		if (url.protocol() == "magnet")
+		{
+			load(bt::MagnetLink(url.prettyUrl()),group);
+		}
+		else if (url.isLocalFile())
 		{
 			QString path = url.toLocalFile();
 			QString dir = Settings::saveDir().toLocalFile();
@@ -422,7 +444,7 @@ namespace kt
 			KIO::Job* j = KIO::storedGet(url);
 			connect(j,SIGNAL(result(KJob*)),this,SLOT(downloadFinished( KJob* )));
 			if (!group.isNull())
-				add_to_groups.insert(j,group);
+				add_to_groups.insert(url,group);
 		}
 	}
 
@@ -437,6 +459,7 @@ namespace kt
 		else if (err)
 		{
 			loadingFinished(j->url(),false,false);
+			canNotLoadSilently(j->errorString());
 		}
 		else
 		{
@@ -460,10 +483,11 @@ namespace kt
 			}
 			
 			QString group;
-			if (add_to_groups.contains(j))
+			QMap<KUrl,QString>::iterator i = add_to_groups.find(j->url());
+			if (i != add_to_groups.end())
 			{
-				group = add_to_groups[j];
-				add_to_groups.remove(j);
+				group = i.value();
+				add_to_groups.erase(i);
 			}
 				
 			
@@ -476,7 +500,11 @@ namespace kt
 
 	void Core::loadSilently(const KUrl& url,const QString & group)
 	{
-		if (url.isLocalFile())
+		if (url.protocol() == "magnet")
+		{
+			loadSilently(bt::MagnetLink(url.prettyUrl()),group);
+		}
+		else if (url.isLocalFile())
 		{
 			QString path = url.toLocalFile(); 
 			QString dir = Settings::saveDir().toLocalFile();
@@ -498,7 +526,7 @@ namespace kt
 			KIO::Job* j = KIO::storedGet(url);
 			connect(j,SIGNAL(result(KJob*)),this,SLOT(downloadFinishedSilently( KJob* )));
 			if (!group.isNull())
-				add_to_groups.insert(j,group);
+				add_to_groups.insert(url,group);
 		}
 	}
 	
@@ -619,6 +647,12 @@ namespace kt
 			gui->errorMsg(err.toString());
 			delete tc;
 		}
+		catch (bt::Warning & warning)
+		{
+			bt::Out(SYS_GEN|LOG_NOTICE) << warning.toString() << endl;
+			gui->infoMsg(warning.toString());
+			bt::Delete(tor_dir,true);
+		}
 	}
 
 	void Core::loadTorrents()
@@ -707,10 +741,9 @@ namespace kt
 
 	void Core::onExit()
 	{
-#ifdef ENABLE_DHT_SUPPORT
+		magnet->saveMagnets(kt::DataDir() + "magnets");
 		// make sure DHT is stopped
 		Globals::instance().getDHT().stop();
-#endif
 		// stop timer to prevent updates during wait
 		update_timer.stop();
 		// stop all authentications going on
@@ -856,7 +889,7 @@ namespace kt
 				i++;
 			}
 			
-			if (!updated)
+			if (!updated && magnet->rowCount() == 0)
 			{
 				Out(SYS_GEN|LOG_DEBUG) << "Stopped update timer" << endl;
 				update_timer.stop(); // stop timer when not necessary
@@ -869,6 +902,7 @@ namespace kt
 			}
 			else
 			{
+				magnet->updateMagnetDownloaders();
 				// check if the priority of stalled torrents must be decreased
 				if (Settings::decreasePriorityOfStalledTorrents())
 					qman->checkStalledTorrents(bt::GetCurrentTime(),Settings::stallTimer());
@@ -1215,6 +1249,75 @@ namespace kt
 		Q_UNUSED(tc);
 		gui->updateActions();
 	}
+	
+	void Core::load(const bt::MagnetLink& mlink,const QString & group)
+	{
+		if (!mlink.isValid())
+		{
+			gui->errorMsg(i18n("Invalid magnet bittorrent link: %1",mlink.toString()));
+		}
+		else
+		{
+			if (!Globals::instance().getDHT().isRunning())
+				dhtNotEnabled(i18n("You are attempting to download a magnet link, and DHT is not enabled. "
+						"For optimum results enable DHT."));
+			magnet->download(mlink,false);
+			startUpdateTimer();
+			if (!group.isNull())
+				add_to_groups.insert(KUrl(mlink.toString()),group);
+		}
+	}
+	
+	void Core::loadSilently(const bt::MagnetLink& mlink,const QString & group)
+	{
+		if (!mlink.isValid())
+		{
+			Out(SYS_GEN|LOG_IMPORTANT) << "Invalid magnet bittorrent link: " << mlink.toString() << endl;
+			canNotLoadSilently(i18n("Invalid magnet bittorrent link: %1",mlink.toString()));
+		}
+		else
+		{
+			if (!Globals::instance().getDHT().isRunning())
+				dhtNotEnabled(i18n("You are attempting to download a magnet link, and DHT is not enabled. "
+							"For optimum results enable DHT."));
+			magnet->download(mlink,true);
+			startUpdateTimer();
+			if (!group.isNull())
+				add_to_groups.insert(KUrl(mlink.toString()),group);
+		}
+	}
+
+	void Core::onMetadataDownloaded(const bt::MagnetLink& mlink, const QByteArray& data,bool silently)
+	{
+		QByteArray tmp;
+		BEncoderBufferOutput* out = new BEncoderBufferOutput(tmp);
+		BEncoder enc(out);
+		enc.beginDict();
+		if (!mlink.tracker().isEmpty())
+		{
+			enc.write("announce");
+			enc.write(mlink.tracker());
+		}
+		enc.write("info");
+		out->write(data.data(),data.size());
+		enc.end();
+		
+		KUrl url = mlink.toString();
+		QString group;
+		QMap<KUrl,QString>::iterator i = add_to_groups.find(url);
+		if (i != add_to_groups.end())
+		{
+			group = i.value();
+			add_to_groups.erase(i);
+		}
+		
+		if (silently)
+			loadSilently(tmp,url,group,QString());
+		else
+			load(tmp,url,group,QString());
+		
+	}
+
 }
 
 #include "core.moc"

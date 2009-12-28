@@ -89,7 +89,9 @@ set(libbtcore_SRC
 	peer/peeruploader.cpp
 	peer/packetwriter.cpp
 	peer/packetreader.cpp
+	peer/peerprotocolextension.cpp
 	peer/utpex.cpp
+	peer/utmetadata.cpp
 	peer/accessmanager.cpp
 	peer/badpeerslist.cpp
 
@@ -142,7 +144,7 @@ set(libbtcore_SRC
 	dht/rpcmsg.cpp     
 	dht/taskmanager.cpp
 	dht/database.cpp      
-	dht/dhttrackerbackend.cpp  
+	dht/dhtpeersource.cpp 
 	dht/key.cpp                  
 	dht/pack.cpp        
 	dht/rpcserver.cpp
@@ -183,6 +185,10 @@ set(libbtcore_SRC
 	migrate/ccmigrate.cpp  
 	migrate/migrate.cpp
 	
+	magnet/magnetdownloader.cpp
+	magnet/magnetlink.cpp
+	magnet/metadatadownload.cpp
+	
 	btversion.cpp
 )
 
@@ -201,7 +207,7 @@ target_link_libraries(btcore ${KDE4_KDEUI_LIBS} ${KDE4_KIO_LIBS} ${GMP_LIBRARIES
 if(WIN32)
 target_link_libraries(btcore ws2_32)
 endif(WIN32)
-set_target_properties(btcore PROPERTIES VERSION 12.1.0 SOVERSION 12 )
+set_target_properties(btcore PROPERTIES VERSION 13.0.0 SOVERSION 13 )
 install(TARGETS btcore  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 set(net_HDR  
@@ -254,7 +260,9 @@ set (peer_HDR
 	./peer/peermanager.h
 	./peer/authenticatebase.h
 	./peer/authenticate.h
+	./peer/peerprotocolextension.h
 	./peer/utpex.h
+	./peer/utmetadata.h
 	./peer/packetreader.h
 	./peer/authenticationmonitor.h
 	./peer/peerid.h
@@ -364,7 +372,7 @@ set (dht_HDR
 	./dht/key.h
 	./dht/pack.h
 	./dht/rpcmsg.h
-	./dht/dhttrackerbackend.h
+	./dht/dhtpeersource.h
 	./dht/announcetask.h
 	./dht/rpccall.h
 	./dht/kclosestnodessearch.h
@@ -383,6 +391,8 @@ set (migrate_HDR
 	./migrate/cachemigrate.h
 )
 
+
+
 install(FILES ${tracker_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore/tracker COMPONENT Devel)
 install(FILES ${torrent_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore/torrent COMPONENT Devel)
 install(FILES ${diskio_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore/diskio COMPONENT Devel)
@@ -398,3 +408,4 @@ install(FILES ${migrate_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore/migrat
 install(FILES ${download_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore/download COMPONENT Devel)
 install(FILES ${btcore_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore COMPONENT Devel)
 
+add_subdirectory(magnet)

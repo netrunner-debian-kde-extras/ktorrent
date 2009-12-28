@@ -518,12 +518,13 @@ namespace bt
 			if (!stats.priv_torrent)
 			{
 				qman->mergeAnnounceList(tor->getInfoHash(),tor->getTrackerList());
-
-				throw Error(i18n("You are already downloading this torrent %1, the list of trackers of both torrents has been merged.",tor->getNameSuggestion()));
+				throw Warning(i18n(
+					"You are already downloading the torrent <b>%1</b>. "
+					"The tracker lists from both torrents have been merged.",tor->getNameSuggestion()));
 			}
 			else
 			{
-				throw Error(i18n("You are already downloading the torrent %1",tor->getNameSuggestion()));
+				throw Warning(i18n("You are already downloading the torrent <b>%1</b>.",tor->getNameSuggestion()));
 			}
 		}
 	}
@@ -678,11 +679,9 @@ namespace bt
 		
 		if (!stats.priv_torrent)
 		{
-#ifdef ENABLE_DHT_SUPPORT
 			if (p->isDHTSupported())
 				p->getPacketWriter().sendPort(Globals::instance().getDHT().getPort());
 			else
-#endif
 				// WORKAROUND so we can contact µTorrent's DHT
 				// They do not properly support the standard and do not turn on
 				// the DHT bit in the handshake, so we just ping each peer by default.

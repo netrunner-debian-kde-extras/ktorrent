@@ -3,69 +3,79 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 #  set(kt4_SRC app.cpp mainwindow.cpp core.cpp view.cpp viewmodel.cpp main.cpp)
 set(ktorrent_SRC 
 	main.cpp 
-	fileselectdlg.cpp 
 	core.cpp 
 	gui.cpp 
 	app.cpp 
-	view.cpp 
-	viewmodel.cpp
-	viewmanager.cpp 
-	viewdelegate.cpp
 	torrentactivity.cpp
-	viewselectionmodel.cpp
-	groupfiltermodel.cpp
-	prefdialog.cpp 
-	advancedpref.cpp
-	networkpref.cpp
-	proxypref.cpp
-	qmpref.cpp
-	generalpref.cpp
-	btpref.cpp
 	statusbar.cpp 
-	groupview.cpp
-	scandlg.cpp
-	scanextender.cpp
 	scanlistener.cpp
 	trayicon.cpp
-	pastedialog.cpp
 	ipfilterlist.cpp
 	ipfilterwidget.cpp
-	speedlimitsdlg.cpp
-	speedlimitsmodel.cpp
-	spinboxdelegate.cpp
-	torrentcreatordlg.cpp
-	missingfilesdlg.cpp
-	importdialog.cpp
-	addpeersdlg.cpp
-	queuemanagerwidget.cpp
-	queuemanagermodel.cpp
-	grouppolicydlg.cpp
-	torrentmigratordlg.cpp
-	recommendedsettingsdlg.cpp
+	
+	tools/queuemanagerwidget.cpp
+	tools/queuemanagermodel.cpp
+	tools/magnetmodel.cpp
+	tools/magnetview.cpp
+	
+	groups/grouppolicydlg.cpp
+	groups/groupfiltermodel.cpp
+	groups/groupview.cpp
+	
+	dialogs/pastedialog.cpp
+	dialogs/speedlimitsdlg.cpp
+	dialogs/speedlimitsmodel.cpp
+	dialogs/spinboxdelegate.cpp
+	dialogs/torrentcreatordlg.cpp
+	dialogs/missingfilesdlg.cpp
+	dialogs/importdialog.cpp
+	dialogs/addpeersdlg.cpp
+	dialogs/torrentmigratordlg.cpp
+	dialogs/fileselectdlg.cpp 
+	
+	pref/prefdialog.cpp 
+	pref/advancedpref.cpp
+	pref/networkpref.cpp
+	pref/proxypref.cpp
+	pref/qmpref.cpp
+	pref/generalpref.cpp
+	pref/recommendedsettingsdlg.cpp
+	pref/btpref.cpp
+	
+	view/view.cpp 
+	view/viewmodel.cpp
+	view/viewmanager.cpp 
+	view/viewdelegate.cpp
+	view/viewselectionmodel.cpp
+	view/scanextender.cpp
 )
 	
 
 kde4_add_ui_files(ktorrent_SRC 
-	fileselectdlg.ui 
-	qmpref.ui 
-	btpref.ui
-	scandlg.ui 
-	scanextender.ui
-	generalpref.ui 
-	advancedpref.ui 
-	networkpref.ui
-	proxypref.ui
-	pastedlgbase.ui 
 	ipfilterwidget.ui 
-	speedlimitsdlg.ui 
-	torrentcreatordlg.ui 
-	missingfilesdlg.ui
-	importdialog.ui
-	addpeersdlg.ui
-	queuemanagerwidget.ui
-	grouppolicydlg.ui
-	torrentmigratordlg.ui
-	recommendedsettingsdlg.ui
+	
+	dialogs/speedlimitsdlg.ui 
+	dialogs/pastedlgbase.ui 
+	dialogs/torrentcreatordlg.ui 
+	dialogs/missingfilesdlg.ui
+	dialogs/importdialog.ui
+	dialogs/addpeersdlg.ui
+	dialogs/torrentmigratordlg.ui
+	dialogs/fileselectdlg.ui 
+	
+	groups/grouppolicydlg.ui
+	
+	tools/queuemanagerwidget.ui
+	
+	pref/qmpref.ui 
+	pref/btpref.ui
+	pref/generalpref.ui 
+	pref/advancedpref.ui 
+	pref/networkpref.ui
+	pref/proxypref.ui
+	pref/recommendedsettingsdlg.ui
+	
+	view/scanextender.ui
 )
 
 kde4_add_app_icon(ktorrent_SRC "${CMAKE_CURRENT_SOURCE_DIR}/icons/hi*-app-ktorrent.png")
@@ -76,6 +86,7 @@ target_link_libraries(ktorrent btcore ktideal ktcore ${KDE4_SOLID_LIBS} ${KDE4_K
 install(TARGETS ktorrent ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES ktorrent.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
 install(FILES ktorrentplugin.desktop  DESTINATION  ${SERVICETYPES_INSTALL_DIR} )
+install(FILES magnet.protocol  DESTINATION  ${SERVICES_INSTALL_DIR} )
 install(FILES ktorrentui.rc DESTINATION ${DATA_INSTALL_DIR}/ktorrent )
 install(FILES ktorrent.notifyrc DESTINATION ${DATA_INSTALL_DIR}/ktorrent )
 

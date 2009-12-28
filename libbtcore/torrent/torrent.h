@@ -80,6 +80,7 @@ namespace bt
 	{
 	public:
 		Torrent();
+		Torrent(const bt::SHA1Hash & hash);
 		virtual ~Torrent();
 		
 		/**
@@ -213,6 +214,9 @@ namespace bt
 		/// See if the torrent is private
 		bool isPrivate() const {return priv_torrent;}
 		
+		/// Is the torrent loaded
+		bool isLoaded() const {return loaded;}
+		
 		///Gets a pointer to AnnounceList
 		const TrackerTier* getTrackerList() const { return trackers; }
 		
@@ -247,6 +251,9 @@ namespace bt
 		
 		/// Set the monitor
 		void setMonitor(MonitorInterface* m) {tmon = m;}
+		
+		/// Get the metadata
+		const QByteArray & getMetaData() const {return metadata;}
 
 	private:
 		void loadInfo(BDictNode* node);
@@ -278,6 +285,8 @@ namespace bt
 		mutable Uint32 pos_cache_file;
 		MonitorInterface* tmon;
 		QString comments;
+		QByteArray metadata;
+		bool loaded;
 	};
 
 }

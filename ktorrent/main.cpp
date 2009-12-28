@@ -38,6 +38,7 @@
 #include "ktversion.h"
 #include <kdebug.h>
 #include <torrent/globals.h>
+#include <util/functions.h>
 
 #ifndef Q_WS_WIN
 bool GrabPIDLock()
@@ -130,6 +131,7 @@ int main(int argc, char **argv)
 	about.addCredit(ki18n("Aaron J. Seigo"),ki18n("Drag and drop support for plasma applet"),"aseigo@kde.org");
 	about.addCredit(ki18n("Ian Higginson"),ki18n("Patch to cleanup the plugin list"),"xeriouxi@fastmail.fm");
 	about.addCredit(ki18n("Amichai Rothman"),ki18n("Patch to make the plasma applet a popup applet"),"amichai@amichais.net");
+	about.addCredit(ki18n("Leo Trubach"),ki18n("Patch to add support for IP ranges in IP filter dialog"),"leotrubach@gmail.com");
 	KCmdLineArgs::init(argc, argv, &about);
 
 	KCmdLineOptions options;
@@ -155,10 +157,7 @@ int main(int argc, char **argv)
 #endif
 
 #ifdef Q_WS_WIN
-	WSADATA wsaData;
-	WORD wVersionRequested = MAKEWORD(2, 2);
-	int err = WSAStartup( wVersionRequested, &wsaData );
-	if (err != 0) 
+	if (!bt::InitWindowsSocketsAPI())
 	{
 		kError()<< "Couldn't load winsock dll";
 		return 0;

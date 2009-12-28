@@ -24,6 +24,7 @@
 #include <btcore_export.h>
 #include <net/address.h>
 #include <util/constants.h>
+#include "peerprotocolextension.h"
 
 namespace bt
 {
@@ -36,7 +37,7 @@ namespace bt
 	 * 
 	 * Class which handles µTorrent's peer exchange
 	*/
-	class BTCORE_EXPORT UTPex
+	class BTCORE_EXPORT UTPex : public PeerProtocolExtension
 	{
 	public:
 		UTPex(Peer* peer,Uint32 id);
@@ -47,13 +48,13 @@ namespace bt
 		 * @param packet The packet 
 		 * @param size The size of the packet
 		 */
-		void handlePexPacket(const Uint8* packet,Uint32 size);
+		void handlePacket(const Uint8* packet,Uint32 size);
 		
 		/// Do we need to update PEX (should happen every minute)
 		bool needsUpdate() const;
 		
 		/// Send a new PEX packet to the Peer
-		void update(PeerManager* pman);
+		void update();
 		
 		/// Change the ID used in the extended packets
 		void changeID(Uint32 nid) {id = nid;}
@@ -68,8 +69,6 @@ namespace bt
 		void encodeFlags(BEncoder & enc,const std::map<Uint32,Uint8> & flags);
 		
 	private:
-		Peer* peer;
-		Uint32 id; 
 		std::map<Uint32,net::Address> peers; 
 		TimeStamp last_updated;
 		static bool pex_enabled;

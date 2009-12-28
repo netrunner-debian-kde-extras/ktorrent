@@ -52,20 +52,19 @@
 #include <settings.h>
 #include "gui.h"
 #include "core.h"
-#include "view.h"
-#include "viewmanager.h"
-#include "fileselectdlg.h"
-#include "prefdialog.h"
+#include "view/view.h"
+#include "view/viewmanager.h"
+#include "dialogs/fileselectdlg.h"
+#include "pref/prefdialog.h"
 #include "statusbar.h"
-#include "groupview.h"
-#include "scandlg.h"
+#include "groups/groupview.h"
 #include "trayicon.h"
 #include "dbus/dbus.h"
-#include "pastedialog.h"
+#include "dialogs/pastedialog.h"
 #include "ipfilterwidget.h"
-#include "torrentcreatordlg.h"
-#include "importdialog.h"
-#include "queuemanagerwidget.h"
+#include "dialogs/torrentcreatordlg.h"
+#include "dialogs/importdialog.h"
+#include "tools/queuemanagerwidget.h"
 #include <util/timer.h>
 #include <gui/activitybar.h>
 #include "torrentactivity.h"
@@ -293,7 +292,9 @@ namespace kt
 	void GUI::pasteURL()
 	{
 		PasteDialog dlg(core, this);
+		dlg.loadState(KGlobal::config());
 		dlg.exec();
+		dlg.saveState(KGlobal::config());
 	}
 	
 	void GUI::paste()
@@ -400,8 +401,8 @@ namespace kt
 		stop_all_action->setToolTip(i18n("Stop all torrents"));
 		connect(stop_all_action,SIGNAL(triggered()),this,SLOT(stopAllTorrents()));
 		
-		paste_url_action = new KAction(KIcon(open_action->icon()),i18n("Open URL"),this);
-		paste_url_action->setToolTip(i18n("Open a URL which points to a torrent"));
+		paste_url_action = new KAction(KIcon("document-open-remote"),i18n("Open URL"),this);
+		paste_url_action->setToolTip(i18n("Open a URL which points to a torrent, magnet links are supported"));
 		paste_url_action->setShortcut(KShortcut(Qt::CTRL + Qt::Key_P));
 		connect(paste_url_action,SIGNAL(triggered()),this,SLOT(pasteURL()));
 		ac->addAction("paste_url",paste_url_action);
@@ -559,7 +560,6 @@ namespace kt
 		{
 			saveState(KGlobal::config());
 			timer.stop();
-			ScanDlg::cancelAllScans();
 			hide();
 			tray_icon->hide();
 			core->onExit();
