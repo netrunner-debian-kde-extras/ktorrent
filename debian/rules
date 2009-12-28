@@ -9,16 +9,6 @@ endif
 
 override_dh_auto_configure:
 	dh_auto_configure -Skde -- -DCMAKE_USE_RELATIVE_PATHS=ON \
-	                           -DWITH_SYSTEM_GEOIP:BOOL=ON -DWITH_BUILTIN_COUNTRY_FLAGS:BOOL=OFF
+	                           -DWITH_SYSTEM_GEOIP:BOOL=ON
 %:
 	dh --dbg-package=ktorrent-dbg --with kde $@
-
-prune-tarball:
-	# Remove non-free components: flags and geoip stuff
-	rm -f plugins/infowidget/geoip/*.png
-	rm -f plugins/infowidget/geoip/FLAGS_LICENCE
-#	rm -f plugins/infowidget/geoip/geoip.dat
-#	rm -f plugins/infowidget/geoip/GeoIP-LICENSE.txt
-	rm -f plugins/infowidget/GeoIP.c
-	rm -f plugins/infowidget/GeoIP.h
-.PHONY: prune-tarball
