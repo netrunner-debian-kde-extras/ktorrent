@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-21 01:31+0100\n"
+"POT-Creation-Date: 2009-11-27 01:29+0100\n"
 "PO-Revision-Date: 2009-10-23 10:37+0200\n"
 "Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -79,7 +79,6 @@ msgstr "BitTorrent"
 
 #: ktorrent/btpref.cpp:31
 #, fuzzy
-#| msgid " corrupted chunks"
 msgid " corrupted chunk"
 msgid_plural " corrupted chunks"
 msgstr[0] "poškozené bloky"
@@ -1306,13 +1305,11 @@ msgstr ""
 
 #: ktorrent/fileselectdlg.cpp:75
 #, fuzzy
-#| msgid "Shows all the files in a torrent"
 msgid "Show a file tree"
 msgstr "Zobrazit všechny soubory v torrentu"
 
 #: ktorrent/fileselectdlg.cpp:78
 #, fuzzy
-#| msgid "Choose a file"
 msgid "Show a file list"
 msgstr "Vybrat soubor"
 
@@ -1341,9 +1338,6 @@ msgstr ""
 
 #: ktorrent/fileselectdlg.cpp:209
 #, fuzzy, kde-format
-#| msgid ""
-#| "The torrent <b>%1</b> has not finished downloading, do you want to delete "
-#| "the incomplete data, too?"
 msgid ""
 "The file <b>%1</b> was found in the completed downloads directory. Do you "
 "want to import this file ?"
@@ -1380,31 +1374,26 @@ msgstr "%1 krátké"
 
 #: ktorrent/fileselectdlg.cpp:442
 #, fuzzy
-#| msgid "Title: <b>%1</b>"
 msgid "Existing files: <b>None</b>"
 msgstr "Název: <b>%1</b>"
 
 #: ktorrent/fileselectdlg.cpp:444
 #, fuzzy
-#| msgid "Title: <b>%1</b>"
 msgid "Existing files: <b>All</b>"
 msgstr "Název: <b>%1</b>"
 
 #: ktorrent/fileselectdlg.cpp:446
 #, fuzzy, kde-format
-#| msgid "Title: <b>%1</b><br/>Artist: <b>%2</b>"
 msgid "Existing files: <b>%1</b> of <b>%2</b>"
 msgstr "Název: <b>%1</b><br/>Interpret: <b>%2</b>"
 
 #: ktorrent/fileselectdlg.cpp:452
 #, fuzzy
-#| msgid "Title: <b>%1</b>"
 msgid "Existing file: <b>No</b>"
 msgstr "Název: <b>%1</b>"
 
 #: ktorrent/fileselectdlg.cpp:454
 #, fuzzy
-#| msgid "Title: <b>%1</b>"
 msgid "Existing file: <b>Yes</b>"
 msgstr "Název: <b>%1</b>"
 
@@ -2553,7 +2542,6 @@ msgstr "Rozbalit vše"
 #. i18n: ectx: property (text), widget (QLabel, m_existing_found)
 #: rc.cpp:176
 #, fuzzy
-#| msgid "Skip data check if existing files are found"
 msgid "No existing files are found"
 msgstr ""
 "Přeskočit kontrolu integrity dat, pokud jsou existující soubory nalezeny"
@@ -3961,7 +3949,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: rc.cpp:730
 #, fuzzy
-#| msgid "Maximum share ratio:"
 msgid "Default maximum share ratio:"
 msgstr "Maximální poměr sdílení:"
 
@@ -4013,7 +4000,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: rc.cpp:745
 #, fuzzy
-#| msgid "Maximum seed time:"
 msgid "Default maximum seed time:"
 msgstr "Maximální doba sdílení:"
 
@@ -4193,7 +4179,6 @@ msgstr "Staženo:"
 #. i18n: ectx: property (text), widget (QLabel, m_main_caption)
 #: rc.cpp:862
 #, fuzzy
-#| msgid "Speed limits for all torrents (double click to edit):"
 msgid "Speed limits for individual torrents (double click to edit):"
 msgstr ""
 "Omezení rychlosti pro všechny torrenty (chcete-li ji upravit, poklikejte):"
@@ -5157,7 +5142,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useQHttpAnnounce)
 #: rc.cpp:1244
 #, fuzzy
-#| msgid "Use proxy for tracker connections"
 msgid "Do not use KIO for tracker announces"
 msgstr "Použít proxy pro spojení s trackerem"
 
@@ -5176,7 +5160,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_lookUpHostnameOfPeers)
 #: rc.cpp:1252
 #, fuzzy
-#| msgid "Resolving hostname %1"
 msgid "Resolve hostnames of peers"
 msgstr "Zjišťuji jméno počítače %1"
 
@@ -8032,7 +8015,6 @@ msgstr "Složka pro uložení informací o torrentu:"
 
 #: plugins/webinterface/httpserver.cpp:320
 #, fuzzy
-#| msgid "Web interface skin:"
 msgid "Cannot find webinterface skins!"
 msgstr "Vzhled webového rozhraní:"
 
@@ -8083,14 +8065,11 @@ msgstr "Seznam souborů"
 
 #: plugins/infowidget/fileview.cpp:141
 #, fuzzy
-#| msgid "New Filter"
 msgid "Show Filter"
 msgstr "Nový filtr"
 
 #: plugins/infowidget/fileview.cpp:305
 #, fuzzy
-#| msgid ""
-#| "You will lose all data in this file, are you sure you want to do this ?"
 msgid "You will lose all data in this file, are you sure you want to do this?"
 msgid_plural ""
 "You will lose all data in these files, are you sure you want to do this?"
@@ -8504,13 +8483,11 @@ msgstr "Nikdy"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:133
 #, fuzzy, kde-format
-#| msgid "Cannot open file %1: %2"
 msgid "Cannot open zip file %1."
 msgstr "Nelze otevřít soubor %1: %2"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:158
 #, fuzzy, kde-format
-#| msgid "Cannot deselect missing files: %1"
 msgid "Cannot find blocklist in zip file %1."
 msgstr "Nelze odznačit chybějící soubory: %1"
 
@@ -8990,7 +8967,7 @@ msgstr "Selhalo vytvoření adresáře pro kanál %1 : %2"
 msgid "Add New Filter"
 msgstr "Přidat nový filtr"
 
-#: plugins/syndication/feedlist.cpp:171
+#: plugins/syndication/feedlist.cpp:172
 #, kde-format
 msgid ""
 "%2\n"
@@ -9008,7 +8985,7 @@ msgstr[2] ""
 "%2\n"
 " %1 aktivních filtrů"
 
-#: plugins/syndication/feedlist.cpp:176 plugins/scripting/scriptmodel.cpp:178
+#: plugins/syndication/feedlist.cpp:177 plugins/scripting/scriptmodel.cpp:178
 #, kde-format
 msgid "<b>%1</b><br/><br/>%2"
 msgstr "<b>%1</b><br/><br/>%2"
@@ -9055,7 +9032,6 @@ msgstr ""
 
 #: plugins/search/homepage.cpp:120
 #, fuzzy
-#| msgid "Folders to scan for torrents:"
 msgid "Search the web for torrents."
 msgstr "Složky, v kterým se mají hledat torrenty:"
 
