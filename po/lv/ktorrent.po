@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-27 01:29+0100\n"
+"POT-Creation-Date: 2010-01-16 01:28+0100\n"
 "PO-Revision-Date: 2009-10-23 08:52+0300\n"
 "Last-Translator: Viesturs Zariņš <viesturs.zarins@mii.lu.lv>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -1047,7 +1047,7 @@ msgstr "Stāvoklis"
 msgid "Downloaded"
 msgstr "Lejupielādēts"
 
-#: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:399
+#: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:400
 #: libktcore/torrent/torrentfilelistmodel.cpp:77
 msgid "Size"
 msgstr "Izmērs"
@@ -1172,7 +1172,7 @@ msgstr "Torrenta datu atrašanās vieta uz diska"
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "%1<br>Url: <b>%2</b>"
 
-#: ktorrent/core.cpp:135
+#: ktorrent/core.cpp:137
 #, kde-format
 msgid ""
 "Specified port (%1) is unavailable or in use by another application. "
@@ -1181,7 +1181,7 @@ msgstr ""
 "Norādītais ports (%1) nav pieejams, vai arī to izmanto cita programma. "
 "KTorrent tā vietā izmanto %2. portu."
 
-#: ktorrent/core.cpp:143
+#: ktorrent/core.cpp:145
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -1190,16 +1190,16 @@ msgstr ""
 "KTorrent nevar pieņemt savienojumus, jo portus no %1 līdz %2 jau lieto cita "
 "programma."
 
-#: ktorrent/core.cpp:826
+#: ktorrent/core.cpp:822
 msgid "KTorrent is running one or more torrents"
 msgstr "KTorrent darbina vienu vai vairākus torrentus"
 
-#: ktorrent/core.cpp:925
+#: ktorrent/core.cpp:921
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Nevar izveidot torrentu: %1"
 
-#: ktorrent/core.cpp:1015
+#: ktorrent/core.cpp:1011
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1208,21 +1208,21 @@ msgstr ""
 "Trīkst vairāku torrentā \"%1\" norādīto datu failu. \n"
 "Vai vēlaties tos ielādēt no jauna?"
 
-#: ktorrent/core.cpp:1024 ktorrent/core.cpp:1036 ktorrent/core.cpp:1049
+#: ktorrent/core.cpp:1020 ktorrent/core.cpp:1032 ktorrent/core.cpp:1045
 msgid "Data files are missing"
 msgstr "Pazuduši datu faili"
 
-#: ktorrent/core.cpp:1035
+#: ktorrent/core.cpp:1031
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Neizdodas noņemt trūkstošos failus: %1"
 
-#: ktorrent/core.cpp:1048
+#: ktorrent/core.cpp:1044
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Neizdodas izveidot trūkstošos failus: %1"
 
-#: ktorrent/core.cpp:1060
+#: ktorrent/core.cpp:1056
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -1231,16 +1231,16 @@ msgstr ""
 "Fails, kurā tiek saglabāti torrenta \"%1\" dati ir pazudis. \n"
 "Vai vēlaties to atjaunot?"
 
-#: ktorrent/core.cpp:1067 ktorrent/core.cpp:1078
+#: ktorrent/core.cpp:1063 ktorrent/core.cpp:1074
 msgid "Data file is missing"
 msgstr "Pazudis datu fails"
 
-#: ktorrent/core.cpp:1077
+#: ktorrent/core.cpp:1073
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Neizdodas izveidot datu failu: %1"
 
-#: ktorrent/core.cpp:1182
+#: ktorrent/core.cpp:1178
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -1258,7 +1258,7 @@ msgstr[2] ""
 "KTorrent atrada %1 torrentus no KTorrent KDE3 versijasm vai vēlaties "
 "importēt tos?"
 
-#: ktorrent/core.cpp:1204
+#: ktorrent/core.cpp:1200
 msgid "No torrents from the KDE3 version were found."
 msgstr "Neitka atrasts neviens torrents no KDE3 versijas."
 
@@ -1856,7 +1856,7 @@ msgstr "Neaktīvās augšupielādes"
 msgid "Ungrouped Torrents"
 msgstr "Negrupēti torrenti"
 
-#: libktcore/torrent/torrentfiletreemodel.cpp:398
+#: libktcore/torrent/torrentfiletreemodel.cpp:399
 #: libktcore/torrent/torrentfilelistmodel.cpp:76
 msgid "File"
 msgstr "Fails"
@@ -1907,7 +1907,7 @@ msgstr ""
 msgid "Maximum share ratio limit reached."
 msgstr "Sasniegta maksimālā došanas attiecība."
 
-#: libktcore/torrent/queuemanager.cpp:241
+#: libktcore/torrent/queuemanager.cpp:232
 msgid ""
 "Not enough disk space for the following torrents. Do you want to start them "
 "anyway ?"
@@ -1915,7 +1915,7 @@ msgstr ""
 "Jums nepietiek vietas uz diska šo torrentu ielādei. Vai tiešām vēlaties sākt "
 "tos?"
 
-#: libktcore/torrent/queuemanager.cpp:280
+#: libktcore/torrent/queuemanager.cpp:271
 msgid ""
 "The following torrents have reached their maximum seed time. Do you want to "
 "start them anyway ?"
@@ -1923,7 +1923,7 @@ msgstr ""
 "Šiem torrentiem ir sasniegts maksimālais piedāvāšanas laiks. Vai ignorēt to "
 "un tomēr sākt piedāvāt?"
 
-#: libktcore/torrent/queuemanager.cpp:309
+#: libktcore/torrent/queuemanager.cpp:300
 msgid ""
 "The following torrents have reached their maximum share ratio. Do you want "
 "to start them anyway ?"
@@ -1931,17 +1931,17 @@ msgstr ""
 "Šiem torrentiem sasniegta maksimālā došanas attiecība. Vai ignorēt to un "
 "tomēr sākt piedāvāt?"
 
-#: libktcore/torrent/queuemanager.cpp:730
+#: libktcore/torrent/queuemanager.cpp:721
 #, kde-format
 msgid "Error starting torrent %1 : %2"
 msgstr "Kļūda sākot torrentu %1 : %2"
 
-#: libktcore/torrent/queuemanager.cpp:732
-#: libktcore/torrent/queuemanager.cpp:748
+#: libktcore/torrent/queuemanager.cpp:723
+#: libktcore/torrent/queuemanager.cpp:739
 msgid "Error"
 msgstr "Kļūda"
 
-#: libktcore/torrent/queuemanager.cpp:746
+#: libktcore/torrent/queuemanager.cpp:737
 #, kde-format
 msgid "Error stopping torrent %1 : %2"
 msgstr "Kļūda apturot torrentu %1 : %2"
@@ -8420,7 +8420,7 @@ msgstr "Ievadiet URL"
 msgid "Malformed URL."
 msgstr "Nekorekts URL."
 
-#: plugins/infowidget/trackerview.cpp:101
+#: plugins/infowidget/trackerview.cpp:102
 #, fuzzy, kde-format
 #| msgid "There already is a tracker named <b>%1</b> !"
 msgid "There already is a tracker named <b>%1</b>."
@@ -9774,13 +9774,13 @@ msgstr "Nevar izveidot indeksa failu: %1"
 msgid "Redirect without a redirect location"
 msgstr "Pārsūtīts bez jaunas vietas"
 
-#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/udptracker.cpp:299 libbtcore/tracker/udptracker.cpp:309
 #: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
 msgstr "Noildze sazinoties ar trakeri %1"
 
-#: libbtcore/tracker/udptracker.cpp:330
+#: libbtcore/tracker/udptracker.cpp:331
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "Neizdevās atpazīt datora nosaukumu %1"

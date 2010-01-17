@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-27 01:29+0100\n"
-"PO-Revision-Date: 2009-11-29 02:49+0100\n"
+"POT-Creation-Date: 2010-01-16 01:28+0100\n"
+"PO-Revision-Date: 2009-12-22 13:23+0100\n"
 "Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -1044,7 +1044,7 @@ msgstr "Estat"
 msgid "Downloaded"
 msgstr "Baixat"
 
-#: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:399
+#: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:400
 #: libktcore/torrent/torrentfilelistmodel.cpp:77
 msgid "Size"
 msgstr "Mida"
@@ -1173,7 +1173,7 @@ msgstr "La ubicació de les dades del torrent en el disc"
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "%1<br>URL: <b>%2</b>"
 
-#: ktorrent/core.cpp:135
+#: ktorrent/core.cpp:137
 #, kde-format
 msgid ""
 "Specified port (%1) is unavailable or in use by another application. "
@@ -1182,7 +1182,7 @@ msgstr ""
 "El port especificat (%1) no és accessible o està en ús per una altra "
 "aplicació. KTorrent es vincularà al port %2."
 
-#: ktorrent/core.cpp:143
+#: ktorrent/core.cpp:145
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -1191,16 +1191,16 @@ msgstr ""
 "El KTorrent no pot acceptar connexions perquè un altre programa està usant "
 "els ports del %1 al %2."
 
-#: ktorrent/core.cpp:826
+#: ktorrent/core.cpp:822
 msgid "KTorrent is running one or more torrents"
 msgstr "El KTorrent està treballant amb un o més torrents"
 
-#: ktorrent/core.cpp:925
+#: ktorrent/core.cpp:921
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "No es pot crear el torrent: %1"
 
-#: ktorrent/core.cpp:1015
+#: ktorrent/core.cpp:1011
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1209,21 +1209,21 @@ msgstr ""
 "S'han perdut alguns fitxers de dades del torrent \"%1\". \n"
 "Voleu tornar-los a crear, o no els voleu baixar?"
 
-#: ktorrent/core.cpp:1024 ktorrent/core.cpp:1036 ktorrent/core.cpp:1049
+#: ktorrent/core.cpp:1020 ktorrent/core.cpp:1032 ktorrent/core.cpp:1045
 msgid "Data files are missing"
 msgstr "S'ha perdut els fitxers de dades"
 
-#: ktorrent/core.cpp:1035
+#: ktorrent/core.cpp:1031
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "No s'ha pogut desseleccionar els fitxers perduts: %1"
 
-#: ktorrent/core.cpp:1048
+#: ktorrent/core.cpp:1044
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "No s'ha pogut tornar a crear els fitxers perduts: %1"
 
-#: ktorrent/core.cpp:1060
+#: ktorrent/core.cpp:1056
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -1232,16 +1232,16 @@ msgstr ""
 "El fitxer on s'han desat les dades del torrent \"%1\" s'ha perdut. \n"
 "Voleu tornar-lo a crear?"
 
-#: ktorrent/core.cpp:1067 ktorrent/core.cpp:1078
+#: ktorrent/core.cpp:1063 ktorrent/core.cpp:1074
 msgid "Data file is missing"
 msgstr "Falta el fitxer de dades"
 
-#: ktorrent/core.cpp:1077
+#: ktorrent/core.cpp:1073
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "No es pot tornar a crear el fitxer de dades: %1"
 
-#: ktorrent/core.cpp:1182
+#: ktorrent/core.cpp:1178
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -1256,7 +1256,7 @@ msgstr[1] ""
 "El KTorrent ha trobat %1 torrents de la versió KDE3 del KTorrent, els voleu "
 "importar?"
 
-#: ktorrent/core.cpp:1204
+#: ktorrent/core.cpp:1200
 msgid "No torrents from the KDE3 version were found."
 msgstr "No s'han trobat torrents de la versió del KDE3."
 
@@ -1851,7 +1851,7 @@ msgstr "Pujades inactives"
 msgid "Ungrouped Torrents"
 msgstr "Torrents sense grup"
 
-#: libktcore/torrent/torrentfiletreemodel.cpp:398
+#: libktcore/torrent/torrentfiletreemodel.cpp:399
 #: libktcore/torrent/torrentfilelistmodel.cpp:76
 msgid "File"
 msgstr "Fitxer"
@@ -1902,7 +1902,7 @@ msgstr ""
 msgid "Maximum share ratio limit reached."
 msgstr "S'ha assolit la ràtio màxima de compartició."
 
-#: libktcore/torrent/queuemanager.cpp:241
+#: libktcore/torrent/queuemanager.cpp:232
 msgid ""
 "Not enough disk space for the following torrents. Do you want to start them "
 "anyway ?"
@@ -1910,7 +1910,7 @@ msgstr ""
 "No disposeu de prou espai al disc per a baixar aquest torrent. Esteu segur "
 "que voleu continuar?"
 
-#: libktcore/torrent/queuemanager.cpp:280
+#: libktcore/torrent/queuemanager.cpp:271
 msgid ""
 "The following torrents have reached their maximum seed time. Do you want to "
 "start them anyway ?"
@@ -1918,7 +1918,7 @@ msgstr ""
 "Els següents torrents han assolit el seu temps màxim de compartició. Els "
 "voleu tornar a sembrar?"
 
-#: libktcore/torrent/queuemanager.cpp:309
+#: libktcore/torrent/queuemanager.cpp:300
 msgid ""
 "The following torrents have reached their maximum share ratio. Do you want "
 "to start them anyway ?"
@@ -1926,17 +1926,17 @@ msgstr ""
 "Els següents torrents han assolit la seva ràtio màxima de compartició. Els "
 "voleu tornar a sembrar?"
 
-#: libktcore/torrent/queuemanager.cpp:730
+#: libktcore/torrent/queuemanager.cpp:721
 #, kde-format
 msgid "Error starting torrent %1 : %2"
 msgstr "Error en engegar el torrent %1 : %2"
 
-#: libktcore/torrent/queuemanager.cpp:732
-#: libktcore/torrent/queuemanager.cpp:748
+#: libktcore/torrent/queuemanager.cpp:723
+#: libktcore/torrent/queuemanager.cpp:739
 msgid "Error"
 msgstr "Error"
 
-#: libktcore/torrent/queuemanager.cpp:746
+#: libktcore/torrent/queuemanager.cpp:737
 #, kde-format
 msgid "Error stopping torrent %1 : %2"
 msgstr "Error en aturar el torrent %1 : %2"
@@ -8275,7 +8275,7 @@ msgstr "Mostra tots els sembradors web d'un torrent"
 
 #: plugins/infowidget/trackermodel.cpp:147
 msgid "Url"
-msgstr "Url"
+msgstr "URL"
 
 #: plugins/infowidget/trackermodel.cpp:151
 msgid "Times Downloaded"
@@ -8309,7 +8309,7 @@ msgstr "Introduïu l'URL del seguidor:"
 msgid "Malformed URL."
 msgstr "URL erroni."
 
-#: plugins/infowidget/trackerview.cpp:101
+#: plugins/infowidget/trackerview.cpp:102
 #, kde-format
 msgid "There already is a tracker named <b>%1</b>."
 msgstr "Ja hi ha un seguidor anomenat <b>%1</b>."
@@ -9658,13 +9658,13 @@ msgstr "No es pot crear el fitxer índex:%1"
 msgid "Redirect without a redirect location"
 msgstr "S'ha redireccionat sense cap ubicació nova"
 
-#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/udptracker.cpp:299 libbtcore/tracker/udptracker.cpp:309
 #: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
 msgstr "Temps exhaurit en connectar amb el seguidor %1"
 
-#: libbtcore/tracker/udptracker.cpp:330
+#: libbtcore/tracker/udptracker.cpp:331
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "No s'ha pogut resoldre el nom de màquina %1"

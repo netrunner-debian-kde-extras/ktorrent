@@ -52,6 +52,7 @@
 #include <plugin/pluginmanager.h>
 #include <groups/groupmanager.h>
 #include <groups/group.h>
+#include <torrent/jobqueue.h>
 
 #ifdef ENABLE_DHT_SUPPORT
 #include <dht/dht.h>
@@ -64,6 +65,7 @@
 #include "gui.h"
 #include "torrentmigratordlg.h"
 #include "scanlistener.h"
+
 
 
 using namespace bt;
@@ -385,10 +387,7 @@ namespace kt
 		else
 		{
 			// load in the file (target is always local)
-			QString dir = Settings::saveDir().toLocalFile();
-			if (!Settings::useSaveDir() ||  dir.isNull())
-				dir = QDir::homePath();
-			
+			QString dir = locationHint();
 			QString group;
 			if (add_to_groups.contains(j))
 			{
@@ -408,10 +407,7 @@ namespace kt
 		if (url.isLocalFile())
 		{
 			QString path = url.toLocalFile();
-			QString dir = Settings::saveDir().toLocalFile();
-			if (!Settings::useSaveDir()  || dir.isNull())
-				dir =  QDir::homePath();
-		
+			QString dir = locationHint();
 			if (dir != QString::null && loadFromFile(path,dir,group,false))
 				loadingFinished(url,true,false);
 			else
@@ -479,13 +475,7 @@ namespace kt
 		if (url.isLocalFile())
 		{
 			QString path = url.toLocalFile(); 
-			QString dir = Settings::saveDir().toLocalFile();
-			if (!Settings::useSaveDir())
-			{
-				Out(SYS_GEN|LOG_NOTICE) << "Cannot load " << path << " silently, default save location not set !" << endl;
-				Out(SYS_GEN|LOG_NOTICE) << "Using home directory instead !" << endl;
-				dir = QDir::homePath();
-			}
+			QString dir = locationHint();
 		
 			if (dir != QString::null && loadFromFile(path,dir,group,true))
 				loadingFinished(url,true,false);
@@ -506,11 +496,7 @@ namespace kt
 	{
 		QString dir;
 		if (savedir.isEmpty() || !bt::Exists(savedir))
-		{
-			dir = Settings::saveDir().toLocalFile();
-			if (!Settings::useSaveDir()  || dir.isNull())
-				dir =  QDir::homePath();
-		}
+			dir = locationHint();
 		else
 			dir = savedir;
 		
@@ -524,15 +510,7 @@ namespace kt
 	{
 		QString dir;
 		if (savedir.isEmpty() || !bt::Exists(savedir))
-		{
-			dir = Settings::saveDir().toLocalFile();
-			if (!Settings::useSaveDir())
-			{
-				Out(SYS_GEN|LOG_NOTICE) << "Cannot load " << url.prettyUrl() << " silently, default save location not set !" << endl;
-				Out(SYS_GEN|LOG_NOTICE) << "Using home directory instead !" << endl;
-				dir = QDir::homePath();
-			}
-		}
+			dir = locationHint();
 		else
 			dir = savedir;
 		
@@ -646,6 +624,15 @@ namespace kt
 	{
 		try
 		{
+			if (tc->getJobQueue()->runningJobs())
+			{
+				// if there are running jobs, schedule delete when they finish
+				delayed_removal.insert(tc,data_to);
+				connect(tc,SIGNAL(runningJobsDone(bt::TorrentInterface*)),
+						this,SLOT(delayedRemove(bt::TorrentInterface*)));
+				return;
+			}
+			
 			const bt::TorrentStats & s = tc->getStats();
 			removed_bytes_up += s.session_bytes_uploaded;
 			removed_bytes_down += s.session_bytes_downloaded;
@@ -673,11 +660,20 @@ namespace kt
 			qman->torrentRemoved(tc);
 			gui->updateActions();
 			bt::Delete(dir,false);
+			delayed_removal.remove(tc);
 		}
 		catch (Error & e)
 		{
 			gui->errorMsg(e.toString());
 		}
+	}
+	
+	void Core::delayedRemove(bt::TorrentInterface* tc)
+	{
+		if (!delayed_removal.contains(tc))
+			return;
+		
+		remove(tc,delayed_removal[tc]);
 	}
 
 	void Core::setMaxDownloads(int max)
@@ -1214,6 +1210,21 @@ namespace kt
 	{
 		Q_UNUSED(tc);
 		gui->updateActions();
+	}
+	
+	QString Core::locationHint() const
+	{
+		QString dir;
+		if (Settings::useSaveDir())
+			dir = Settings::saveDir().toLocalFile();
+		else
+			dir = Settings::lastSaveDir();
+		
+		
+		if (dir.isEmpty() || !QDir(dir).exists())
+			dir = QDir::homePath();
+		
+		return dir;
 	}
 }
 

@@ -1,26 +1,26 @@
 # translation of ktorrent.po to Brazilian Portuguese
+# tradução do ktorrent.po para Brazilian Portuguese
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
 # Waldemar Silva Junior <wsjunior@kdemail.net>, 2005.
 # doutor.zero <doutor.zero@gmail.com>, 2007, 2009.
 # Henrique Marks <henriquemarks@gmail.com>, 2008.
 # Doutor Zero <doutor.zero@gmail.com>, 2008, 2009.
 # André Marcelo Alvarenga <andrealvarenga@gmx.net>, 2009.
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2009.
-# tradução do ktorrent.po para Brazilian Portuguese
-# Copyright (C) 2008 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-27 01:29+0100\n"
-"PO-Revision-Date: 2009-10-25 11:16-0200\n"
-"Last-Translator: doutor.zero <doutor.zero@gmail.com>\n"
-"Language-Team: Brazilian Portuguese <kde-i18n-pt_br@mail.kde.org>\n"
+"POT-Creation-Date: 2010-01-16 01:28+0100\n"
+"PO-Revision-Date: 2010-01-06 21:56-0200\n"
+"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@lists.kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.0\n"
 
 #: ktorrent/groupview.cpp:129
 msgid "Custom Groups"
@@ -1048,7 +1048,7 @@ msgstr "Estado"
 msgid "Downloaded"
 msgstr "Baixados"
 
-#: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:399
+#: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:400
 #: libktcore/torrent/torrentfilelistmodel.cpp:77
 msgid "Size"
 msgstr "Tamanho"
@@ -1178,7 +1178,7 @@ msgstr "A localização dos dados do torrent no disco"
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "%1<br>Url: <b>%2</b>"
 
-#: ktorrent/core.cpp:135
+#: ktorrent/core.cpp:137
 #, kde-format
 msgid ""
 "Specified port (%1) is unavailable or in use by another application. "
@@ -1187,7 +1187,7 @@ msgstr ""
 "A porta especificada (%1) não está disponível ou está em uso por outro "
 "aplicativo. O KTorrent está usando agora a porta %2."
 
-#: ktorrent/core.cpp:143
+#: ktorrent/core.cpp:145
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -1196,16 +1196,16 @@ msgstr ""
 "O KTorrent não é capaz de aceitar conexões, porque as portas %1 a %2 já "
 "estão sendo usadas por outro programa."
 
-#: ktorrent/core.cpp:826
+#: ktorrent/core.cpp:822
 msgid "KTorrent is running one or more torrents"
 msgstr "O KTorrent está executando um ou mais torrents"
 
-#: ktorrent/core.cpp:925
+#: ktorrent/core.cpp:921
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Não foi possível criar o torrent: %1"
 
-#: ktorrent/core.cpp:1015
+#: ktorrent/core.cpp:1011
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1214,21 +1214,21 @@ msgstr ""
 "Vários arquivos de dados do torrent \"%1\" estão faltando.\n"
 "Deseja recriá-los, ou deseja que eles não sejam baixados?"
 
-#: ktorrent/core.cpp:1024 ktorrent/core.cpp:1036 ktorrent/core.cpp:1049
+#: ktorrent/core.cpp:1020 ktorrent/core.cpp:1032 ktorrent/core.cpp:1045
 msgid "Data files are missing"
 msgstr "Arquivos de dados estão faltando"
 
-#: ktorrent/core.cpp:1035
+#: ktorrent/core.cpp:1031
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Não foi possível desselecionar os arquivos faltando: %1"
 
-#: ktorrent/core.cpp:1048
+#: ktorrent/core.cpp:1044
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Não foi possível recriar os arquivos faltando: %1"
 
-#: ktorrent/core.cpp:1060
+#: ktorrent/core.cpp:1056
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -1237,16 +1237,16 @@ msgstr ""
 "O arquivo onde os dados do torrent \"%1\" são salvos está faltando.\n"
 "Deseja recriá-lo?"
 
-#: ktorrent/core.cpp:1067 ktorrent/core.cpp:1078
+#: ktorrent/core.cpp:1063 ktorrent/core.cpp:1074
 msgid "Data file is missing"
 msgstr "Arquivo de dados está faltando"
 
-#: ktorrent/core.cpp:1077
+#: ktorrent/core.cpp:1073
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Não foi possível recriar o arquivo de dados: %1"
 
-#: ktorrent/core.cpp:1182
+#: ktorrent/core.cpp:1178
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -1261,7 +1261,7 @@ msgstr[1] ""
 "O KTorrent encontrou %1 torrents da versão do KTorrent para o KDE3. Deseja "
 "importá-los?"
 
-#: ktorrent/core.cpp:1204
+#: ktorrent/core.cpp:1200
 msgid "No torrents from the KDE3 version were found."
 msgstr "Nenhum torrent da versão para o KDE3 foi encontrado."
 
@@ -1862,7 +1862,7 @@ msgstr "Envios Passivos"
 msgid "Ungrouped Torrents"
 msgstr "Torrents Não Agrupados"
 
-#: libktcore/torrent/torrentfiletreemodel.cpp:398
+#: libktcore/torrent/torrentfiletreemodel.cpp:399
 #: libktcore/torrent/torrentfilelistmodel.cpp:76
 msgid "File"
 msgstr "Arquivo"
@@ -1913,7 +1913,7 @@ msgstr ""
 msgid "Maximum share ratio limit reached."
 msgstr "Limite máximo da proporção de compartilhamento atingido."
 
-#: libktcore/torrent/queuemanager.cpp:241
+#: libktcore/torrent/queuemanager.cpp:232
 msgid ""
 "Not enough disk space for the following torrents. Do you want to start them "
 "anyway ?"
@@ -1921,7 +1921,7 @@ msgstr ""
 "Não existe espaço suficiente no disco para baixar os torrents seguintes. "
 "Deseja iniciá-los assim mesmo?"
 
-#: libktcore/torrent/queuemanager.cpp:280
+#: libktcore/torrent/queuemanager.cpp:271
 msgid ""
 "The following torrents have reached their maximum seed time. Do you want to "
 "start them anyway ?"
@@ -1929,7 +1929,7 @@ msgstr ""
 "Os torrents seguintes atingiram seu tempo de semeamento máximo. Deseja "
 "iniciá-los assim mesmo?"
 
-#: libktcore/torrent/queuemanager.cpp:309
+#: libktcore/torrent/queuemanager.cpp:300
 msgid ""
 "The following torrents have reached their maximum share ratio. Do you want "
 "to start them anyway ?"
@@ -1937,17 +1937,17 @@ msgstr ""
 "Os torrents seguintes atingiram sua proporção de compartilhamento máxima. "
 "Deseja iniciá-los assim mesmo?"
 
-#: libktcore/torrent/queuemanager.cpp:730
+#: libktcore/torrent/queuemanager.cpp:721
 #, kde-format
 msgid "Error starting torrent %1 : %2"
 msgstr "Erro ao iniciar o torrent %1 : %2"
 
-#: libktcore/torrent/queuemanager.cpp:732
-#: libktcore/torrent/queuemanager.cpp:748
+#: libktcore/torrent/queuemanager.cpp:723
+#: libktcore/torrent/queuemanager.cpp:739
 msgid "Error"
 msgstr "Erro"
 
-#: libktcore/torrent/queuemanager.cpp:746
+#: libktcore/torrent/queuemanager.cpp:737
 #, kde-format
 msgid "Error stopping torrent %1 : %2"
 msgstr "Erro ao parar o torrent %1 : %2"
@@ -8326,7 +8326,7 @@ msgstr "Digite a URL do rastreador:"
 msgid "Malformed URL."
 msgstr "URL mal formada."
 
-#: plugins/infowidget/trackerview.cpp:101
+#: plugins/infowidget/trackerview.cpp:102
 #, kde-format
 msgid "There already is a tracker named <b>%1</b>."
 msgstr "Já existe um rastreador chamado <b>%1</b>."
@@ -9672,13 +9672,13 @@ msgstr "Não foi possível criar o arquivo de índice: %1"
 msgid "Redirect without a redirect location"
 msgstr "Redirecionado sem um local para fazê-lo"
 
-#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/udptracker.cpp:299 libbtcore/tracker/udptracker.cpp:309
 #: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
 msgstr "Tempo esgotado ao contactar o rastreador %1"
 
-#: libbtcore/tracker/udptracker.cpp:330
+#: libbtcore/tracker/udptracker.cpp:331
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "Falha ao resolver o nome da máquina %1"

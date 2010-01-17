@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-27 01:29+0100\n"
+"POT-Creation-Date: 2010-01-16 01:28+0100\n"
 "PO-Revision-Date: 2009-02-09 13:33+0000\n"
 "Last-Translator: Ni Hui <shuizhuyuanluo@126.com>\n"
 "Language-Team: 简体中文 <kde-china@kde.org>\n"
@@ -1061,7 +1061,7 @@ msgstr "状态"
 msgid "Downloaded"
 msgstr "已下载"
 
-#: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:399
+#: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:400
 #: libktcore/torrent/torrentfilelistmodel.cpp:77
 msgid "Size"
 msgstr "大小"
@@ -1180,7 +1180,7 @@ msgstr "磁盘上种子数据的位置"
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "%1<br>Url：<b>%2</b>"
 
-#: ktorrent/core.cpp:135
+#: ktorrent/core.cpp:137
 #, kde-format
 msgid ""
 "Specified port (%1) is unavailable or in use by another application. "
@@ -1188,23 +1188,23 @@ msgid ""
 msgstr ""
 "指定的端口(%1)不可用，或者已经被其它应用程序使用。 KTorrent 现在使用端口 %2。"
 
-#: ktorrent/core.cpp:143
+#: ktorrent/core.cpp:145
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the ports %1 to %2 are "
 "already in use by another program."
 msgstr "KTorrent 无法接受连接，因为从 %1 到 %2 的端口都被其他程序占用。"
 
-#: ktorrent/core.cpp:826
+#: ktorrent/core.cpp:822
 msgid "KTorrent is running one or more torrents"
 msgstr "KTorrent 正在以一个或多个种子运行"
 
-#: ktorrent/core.cpp:925
+#: ktorrent/core.cpp:921
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "无法创建种子：%1"
 
-#: ktorrent/core.cpp:1015
+#: ktorrent/core.cpp:1011
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1213,21 +1213,21 @@ msgstr ""
 "种子“%1”相关的一些数据文件缺失。\n"
 "您希望重新创建它们吗，或者您不想再下载它们？"
 
-#: ktorrent/core.cpp:1024 ktorrent/core.cpp:1036 ktorrent/core.cpp:1049
+#: ktorrent/core.cpp:1020 ktorrent/core.cpp:1032 ktorrent/core.cpp:1045
 msgid "Data files are missing"
 msgstr "数据文件缺失"
 
-#: ktorrent/core.cpp:1035
+#: ktorrent/core.cpp:1031
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "无法反选已缺失的文件：%1"
 
-#: ktorrent/core.cpp:1048
+#: ktorrent/core.cpp:1044
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "无法重建缺失的文件：%1"
 
-#: ktorrent/core.cpp:1060
+#: ktorrent/core.cpp:1056
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -1236,16 +1236,16 @@ msgstr ""
 "种子“%1”保存的数据文件已丢失。\n"
 "您希望重新创建它们吗？"
 
-#: ktorrent/core.cpp:1067 ktorrent/core.cpp:1078
+#: ktorrent/core.cpp:1063 ktorrent/core.cpp:1074
 msgid "Data file is missing"
 msgstr "缺少数据文件"
 
-#: ktorrent/core.cpp:1077
+#: ktorrent/core.cpp:1073
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "无法重建数据文件：%1"
 
-#: ktorrent/core.cpp:1182
+#: ktorrent/core.cpp:1178
 #, fuzzy, kde-format
 #| msgid ""
 #| "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
@@ -1259,7 +1259,7 @@ msgid_plural ""
 msgstr[0] ""
 "KTorrent 从 KDE3 版本的 KTorrent 中找到了 %1 个种子，您想要导入它们吗？"
 
-#: ktorrent/core.cpp:1204
+#: ktorrent/core.cpp:1200
 #, fuzzy
 #| msgid "No torrents from the KDE3 version were found !"
 msgid "No torrents from the KDE3 version were found."
@@ -1877,7 +1877,7 @@ msgstr "被动上传"
 msgid "Ungrouped Torrents"
 msgstr "未分组种子"
 
-#: libktcore/torrent/torrentfiletreemodel.cpp:398
+#: libktcore/torrent/torrentfiletreemodel.cpp:399
 #: libktcore/torrent/torrentfilelistmodel.cpp:76
 msgid "File"
 msgstr "文件"
@@ -1929,35 +1929,35 @@ msgstr "种子“%1”已达到最大做种时间。要忽略限制并开始做�
 msgid "Maximum share ratio limit reached."
 msgstr "已经达到最大共享率限制。"
 
-#: libktcore/torrent/queuemanager.cpp:241
+#: libktcore/torrent/queuemanager.cpp:232
 msgid ""
 "Not enough disk space for the following torrents. Do you want to start them "
 "anyway ?"
 msgstr "您的磁盘空间不足以下载以下种子。您仍然想要启动吗？"
 
-#: libktcore/torrent/queuemanager.cpp:280
+#: libktcore/torrent/queuemanager.cpp:271
 msgid ""
 "The following torrents have reached their maximum seed time. Do you want to "
 "start them anyway ?"
 msgstr "以下种子已达到最大做种时间。您仍然想要启动它们吗？"
 
-#: libktcore/torrent/queuemanager.cpp:309
+#: libktcore/torrent/queuemanager.cpp:300
 msgid ""
 "The following torrents have reached their maximum share ratio. Do you want "
 "to start them anyway ?"
 msgstr "以下种子已达到最大共享率。您仍然想要启动它们吗？"
 
-#: libktcore/torrent/queuemanager.cpp:730
+#: libktcore/torrent/queuemanager.cpp:721
 #, kde-format
 msgid "Error starting torrent %1 : %2"
 msgstr "启动种子 %1 出错：%2"
 
-#: libktcore/torrent/queuemanager.cpp:732
-#: libktcore/torrent/queuemanager.cpp:748
+#: libktcore/torrent/queuemanager.cpp:723
+#: libktcore/torrent/queuemanager.cpp:739
 msgid "Error"
 msgstr "错误"
 
-#: libktcore/torrent/queuemanager.cpp:746
+#: libktcore/torrent/queuemanager.cpp:737
 #, kde-format
 msgid "Error stopping torrent %1 : %2"
 msgstr "停止种子 %1 出错：%2"
@@ -8515,7 +8515,7 @@ msgstr "对等点的 IP 地址"
 msgid "Malformed URL."
 msgstr "错误的 URL。"
 
-#: plugins/infowidget/trackerview.cpp:101
+#: plugins/infowidget/trackerview.cpp:102
 #, fuzzy, kde-format
 #| msgid "There already is a tracker named <b>%1</b> !"
 msgid "There already is a tracker named <b>%1</b>."
@@ -9950,13 +9950,13 @@ msgstr "无法创建索引文件：%1"
 msgid "Redirect without a redirect location"
 msgstr "重定向没有新位置！"
 
-#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/udptracker.cpp:299 libbtcore/tracker/udptracker.cpp:309
 #: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
 msgstr ""
 
-#: libbtcore/tracker/udptracker.cpp:330
+#: libbtcore/tracker/udptracker.cpp:331
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "无法解析主机名 %1"
