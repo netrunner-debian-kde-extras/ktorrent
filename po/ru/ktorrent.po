@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-27 01:29+0100\n"
+"POT-Creation-Date: 2010-01-16 01:28+0100\n"
 "PO-Revision-Date: 2009-10-07 00:34+0300\n"
 "Last-Translator: Artem Sereda <overmind88@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -1043,7 +1043,7 @@ msgstr "Статус"
 msgid "Downloaded"
 msgstr "Загружено"
 
-#: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:399
+#: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:400
 #: libktcore/torrent/torrentfilelistmodel.cpp:77
 msgid "Size"
 msgstr "Размер"
@@ -1167,7 +1167,7 @@ msgstr "Расположение данных торрента на диске"
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "%1<br>Адрес: <b>%2</b>"
 
-#: ktorrent/core.cpp:135
+#: ktorrent/core.cpp:137
 #, kde-format
 msgid ""
 "Specified port (%1) is unavailable or in use by another application. "
@@ -1176,7 +1176,7 @@ msgstr ""
 "Указанный порт (%1) недоступен или используется другим приложением. KTorrent "
 "переключается на порт %2."
 
-#: ktorrent/core.cpp:143
+#: ktorrent/core.cpp:145
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -1184,16 +1184,16 @@ msgid ""
 msgstr ""
 "Не удалось получить в использование порты с %1 по %2 так как они уже заняты."
 
-#: ktorrent/core.cpp:826
+#: ktorrent/core.cpp:822
 msgid "KTorrent is running one or more torrents"
 msgstr "В KTorrent запущены один или более торрентов"
 
-#: ktorrent/core.cpp:925
+#: ktorrent/core.cpp:921
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Не удалось создать торрент: %1"
 
-#: ktorrent/core.cpp:1015
+#: ktorrent/core.cpp:1011
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1202,21 +1202,21 @@ msgstr ""
 "Несколько файлов торрента «%1» отсутствуют. \n"
 "Пересоздать или не загружать их снова?"
 
-#: ktorrent/core.cpp:1024 ktorrent/core.cpp:1036 ktorrent/core.cpp:1049
+#: ktorrent/core.cpp:1020 ktorrent/core.cpp:1032 ktorrent/core.cpp:1045
 msgid "Data files are missing"
 msgstr "Файлы данных отсутствуют"
 
-#: ktorrent/core.cpp:1035
+#: ktorrent/core.cpp:1031
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Невозможно отменить загрузку недостающих файлов: %1"
 
-#: ktorrent/core.cpp:1048
+#: ktorrent/core.cpp:1044
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Невозможно пересоздать недостающие файлы: %1"
 
-#: ktorrent/core.cpp:1060
+#: ktorrent/core.cpp:1056
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -1225,16 +1225,16 @@ msgstr ""
 "Файл, хранящий данные торрента «%1», отсутствует. \n"
 "Пересоздать его?"
 
-#: ktorrent/core.cpp:1067 ktorrent/core.cpp:1078
+#: ktorrent/core.cpp:1063 ktorrent/core.cpp:1074
 msgid "Data file is missing"
 msgstr "Отсутствует файл данных"
 
-#: ktorrent/core.cpp:1077
+#: ktorrent/core.cpp:1073
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Невозможно пересоздать файл данных: %1"
 
-#: ktorrent/core.cpp:1182
+#: ktorrent/core.cpp:1178
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -1248,7 +1248,7 @@ msgstr[1] ""
 msgstr[2] ""
 "Ktorrent обнаружил %1 торрентов из версии для KDE3, импортировать их?"
 
-#: ktorrent/core.cpp:1204
+#: ktorrent/core.cpp:1200
 msgid "No torrents from the KDE3 version were found."
 msgstr "Торренты из клиента для KDE3 не найдены."
 
@@ -1853,7 +1853,7 @@ msgstr "Неактивные раздачи"
 msgid "Ungrouped Torrents"
 msgstr "Прочие торренты"
 
-#: libktcore/torrent/torrentfiletreemodel.cpp:398
+#: libktcore/torrent/torrentfiletreemodel.cpp:399
 #: libktcore/torrent/torrentfilelistmodel.cpp:76
 msgid "File"
 msgstr "Файл"
@@ -1902,7 +1902,7 @@ msgstr ""
 msgid "Maximum share ratio limit reached."
 msgstr "Достигнут максимальный коэффициент раздачи"
 
-#: libktcore/torrent/queuemanager.cpp:241
+#: libktcore/torrent/queuemanager.cpp:232
 msgid ""
 "Not enough disk space for the following torrents. Do you want to start them "
 "anyway ?"
@@ -1910,7 +1910,7 @@ msgstr ""
 "Недостаточно места на диске для загрузки следующих торрентов. Всё равно "
 "продолжить?"
 
-#: libktcore/torrent/queuemanager.cpp:280
+#: libktcore/torrent/queuemanager.cpp:271
 msgid ""
 "The following torrents have reached their maximum seed time. Do you want to "
 "start them anyway ?"
@@ -1918,7 +1918,7 @@ msgstr ""
 "Достигнуто максимальное время сидирования следующих торрентов. Всё равно "
 "начать раздачу?"
 
-#: libktcore/torrent/queuemanager.cpp:309
+#: libktcore/torrent/queuemanager.cpp:300
 msgid ""
 "The following torrents have reached their maximum share ratio. Do you want "
 "to start them anyway ?"
@@ -1926,17 +1926,17 @@ msgstr ""
 "Достигнут максимальный коэффициент раздачи следующих торрентов. Всё равно "
 "начать сидирование?"
 
-#: libktcore/torrent/queuemanager.cpp:730
+#: libktcore/torrent/queuemanager.cpp:721
 #, kde-format
 msgid "Error starting torrent %1 : %2"
 msgstr "Ошибка при запуске торрента %1: %2"
 
-#: libktcore/torrent/queuemanager.cpp:732
-#: libktcore/torrent/queuemanager.cpp:748
+#: libktcore/torrent/queuemanager.cpp:723
+#: libktcore/torrent/queuemanager.cpp:739
 msgid "Error"
 msgstr "Ошибка"
 
-#: libktcore/torrent/queuemanager.cpp:746
+#: libktcore/torrent/queuemanager.cpp:737
 #, kde-format
 msgid "Error stopping torrent %1 : %2"
 msgstr "Ошибка при остановке торрента %1: %2"
@@ -8150,7 +8150,7 @@ msgstr "Введите адрес трекера:"
 msgid "Malformed URL."
 msgstr "Неправильный URL."
 
-#: plugins/infowidget/trackerview.cpp:101
+#: plugins/infowidget/trackerview.cpp:102
 #, kde-format
 msgid "There already is a tracker named <b>%1</b>."
 msgstr "Трекер <b>%1</b> уже существует."
@@ -9496,13 +9496,13 @@ msgstr "Не удаётся создать файл индекса %1"
 msgid "Redirect without a redirect location"
 msgstr "Перенаправление без указания расположения."
 
-#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/udptracker.cpp:299 libbtcore/tracker/udptracker.cpp:309
 #: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
 msgstr ""
 
-#: libbtcore/tracker/udptracker.cpp:330
+#: libbtcore/tracker/udptracker.cpp:331
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "Невозможно определить имя сервера %1"

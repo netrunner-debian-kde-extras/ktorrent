@@ -4,13 +4,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>, 2008.
-# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009.
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-27 01:29+0100\n"
-"PO-Revision-Date: 2009-12-07 07:48+0200\n"
+"POT-Creation-Date: 2010-01-16 01:28+0100\n"
+"PO-Revision-Date: 2010-01-11 13:28+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
 "MIME-Version: 1.0\n"
@@ -660,7 +660,7 @@ msgstr "Diego R. Brogna"
 
 #: ktorrent/main.cpp:94
 msgid "Webinterface Plugin"
-msgstr "Втулка веб-інтерфейсу"
+msgstr "Додаток веб-інтерфейсу"
 
 #: ktorrent/main.cpp:95
 msgid "Krzysztof Kundzicz"
@@ -668,7 +668,7 @@ msgstr "Krzysztof Kundzicz"
 
 #: ktorrent/main.cpp:95
 msgid "Statistics Plugin"
-msgstr "Втулка статистики"
+msgstr "Додаток статистики"
 
 #: ktorrent/main.cpp:97
 msgid "Mladen Babic"
@@ -723,7 +723,7 @@ msgid ""
 "Country locator for InfoWidget plugin. Flags are taken from http://flags."
 "blogpotato.de/ so thanks to them too."
 msgstr ""
-"Знаходження країн для втулки InfoWidget. Прапори беруться з http://flags."
+"Знаходження країн для додатка InfoWidget. Прапори взято з http://flags."
 "blogpotato.de/, за що їм також дякуємо."
 
 #: ktorrent/main.cpp:106
@@ -785,7 +785,7 @@ msgstr "Scott Wolchok"
 
 #: ktorrent/main.cpp:113
 msgid "Conversion speed improvement in ipfilter plugin"
-msgstr "Покращення швидкості перетворення у втулці ipfilter"
+msgstr "Покращення швидкості перетворення у додатку ipfilter"
 
 #: ktorrent/main.cpp:114
 msgid "Bryan Burns of Juniper Networks"
@@ -817,7 +817,7 @@ msgstr "Athantor"
 
 #: ktorrent/main.cpp:117
 msgid "XFS specific disk preallocation"
-msgstr "Виділення диску на XFS"
+msgstr "Виділення диска на XFS"
 
 #: ktorrent/main.cpp:118
 msgid "twisted_fall"
@@ -833,7 +833,7 @@ msgstr "Lucke"
 
 #: ktorrent/main.cpp:119
 msgid "Patch to show potentially firewalled status"
-msgstr "Латка для показу стану за фаєрволом"
+msgstr "Латка для показу стану за брандмауером"
 
 #: ktorrent/main.cpp:120
 msgid "Modestas Vainius"
@@ -1044,7 +1044,7 @@ msgstr "Стан"
 msgid "Downloaded"
 msgstr "Звантажено"
 
-#: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:399
+#: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:400
 #: libktcore/torrent/torrentfilelistmodel.cpp:77
 msgid "Size"
 msgstr "Розмір"
@@ -1173,7 +1173,7 @@ msgstr "Адреса даних торента на диску"
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "%1<br>Url: <b>%2</b>"
 
-#: ktorrent/core.cpp:135
+#: ktorrent/core.cpp:137
 #, kde-format
 msgid ""
 "Specified port (%1) is unavailable or in use by another application. "
@@ -1182,7 +1182,7 @@ msgstr ""
 "Вказаний порт (%1) не доступний або використовується іншою програмою. "
 "KTorrent тепер вживає порт %2."
 
-#: ktorrent/core.cpp:143
+#: ktorrent/core.cpp:145
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -1191,16 +1191,16 @@ msgstr ""
 "KTorrent не може приймати з'єднання, бо порти від %1 до %2 вже "
 "використовуються іншою системою."
 
-#: ktorrent/core.cpp:826
+#: ktorrent/core.cpp:822
 msgid "KTorrent is running one or more torrents"
 msgstr "KTorrent працює над одним або декількома торентами"
 
-#: ktorrent/core.cpp:925
+#: ktorrent/core.cpp:921
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Не вдається створити торент: %1"
 
-#: ktorrent/core.cpp:1015
+#: ktorrent/core.cpp:1011
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1209,21 +1209,21 @@ msgstr ""
 "Деякі з файлів даних торента \"%1\" відсутні. \n"
 "Чи бажаєте ви повторно створити їх, або просто не будете їх звантажувати?"
 
-#: ktorrent/core.cpp:1024 ktorrent/core.cpp:1036 ktorrent/core.cpp:1049
+#: ktorrent/core.cpp:1020 ktorrent/core.cpp:1032 ktorrent/core.cpp:1045
 msgid "Data files are missing"
 msgstr "Відсутні файли з даними"
 
-#: ktorrent/core.cpp:1035
+#: ktorrent/core.cpp:1031
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Не вдається скасувати вибір відсутніх файлів: %1"
 
-#: ktorrent/core.cpp:1048
+#: ktorrent/core.cpp:1044
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Не вдається заново створити відсутні файли: %1"
 
-#: ktorrent/core.cpp:1060
+#: ktorrent/core.cpp:1056
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -1232,16 +1232,16 @@ msgstr ""
 "Файл, до якого було збережено дані торента \"%1\" відсутній. \n"
 "Бажаєте створити його повторно?"
 
-#: ktorrent/core.cpp:1067 ktorrent/core.cpp:1078
+#: ktorrent/core.cpp:1063 ktorrent/core.cpp:1074
 msgid "Data file is missing"
 msgstr "Відсутній файл з даними"
 
-#: ktorrent/core.cpp:1077
+#: ktorrent/core.cpp:1073
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Не вдається заново створити файл з даними: %1"
 
-#: ktorrent/core.cpp:1182
+#: ktorrent/core.cpp:1178
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -1259,7 +1259,7 @@ msgstr[2] ""
 "Програмою KTorrent знайдено %1 торентів з KTorrent версії KDE3; хочете їх "
 "імпортувати?"
 
-#: ktorrent/core.cpp:1204
+#: ktorrent/core.cpp:1200
 msgid "No torrents from the KDE3 version were found."
 msgstr "Не знайдено торентів з версії KDE3."
 
@@ -1862,7 +1862,7 @@ msgstr "Пасивні вивантаження"
 msgid "Ungrouped Torrents"
 msgstr "Торенти поза групами"
 
-#: libktcore/torrent/torrentfiletreemodel.cpp:398
+#: libktcore/torrent/torrentfiletreemodel.cpp:399
 #: libktcore/torrent/torrentfilelistmodel.cpp:76
 msgid "File"
 msgstr "Файл"
@@ -1914,14 +1914,14 @@ msgstr ""
 msgid "Maximum share ratio limit reached."
 msgstr "Досягнуте максимальне значення коефіцієнта вивантаження / звантаження."
 
-#: libktcore/torrent/queuemanager.cpp:241
+#: libktcore/torrent/queuemanager.cpp:232
 msgid ""
 "Not enough disk space for the following torrents. Do you want to start them "
 "anyway ?"
 msgstr ""
 "Для наступних торентів на диску замало місця. Все одно бажаєте їх почати?"
 
-#: libktcore/torrent/queuemanager.cpp:280
+#: libktcore/torrent/queuemanager.cpp:271
 msgid ""
 "The following torrents have reached their maximum seed time. Do you want to "
 "start them anyway ?"
@@ -1929,7 +1929,7 @@ msgstr ""
 "Наступні торенти досягли максимального часу поширення. Все одно бажаєте їх "
 "розпочати?"
 
-#: libktcore/torrent/queuemanager.cpp:309
+#: libktcore/torrent/queuemanager.cpp:300
 msgid ""
 "The following torrents have reached their maximum share ratio. Do you want "
 "to start them anyway ?"
@@ -1937,17 +1937,17 @@ msgstr ""
 "Наступні торенти досягли максимального значення коефіцієнта вивантаження / "
 "звантаження. Все одно бажаєте їх розпочати?"
 
-#: libktcore/torrent/queuemanager.cpp:730
+#: libktcore/torrent/queuemanager.cpp:721
 #, kde-format
 msgid "Error starting torrent %1 : %2"
 msgstr "Помилка запуску торента %1: %2"
 
-#: libktcore/torrent/queuemanager.cpp:732
-#: libktcore/torrent/queuemanager.cpp:748
+#: libktcore/torrent/queuemanager.cpp:723
+#: libktcore/torrent/queuemanager.cpp:739
 msgid "Error"
 msgstr "Помилка"
 
-#: libktcore/torrent/queuemanager.cpp:746
+#: libktcore/torrent/queuemanager.cpp:737
 #, kde-format
 msgid "Error stopping torrent %1 : %2"
 msgstr "Помилка зупинки торента %1: %2"
@@ -1965,7 +1965,7 @@ msgstr ""
 #: libktcore/plugin/pluginactivity.cpp:38
 #: libktcore/plugin/pluginactivity.cpp:55
 msgid "Plugins"
-msgstr "Втулки"
+msgstr "Додатки"
 
 #: libktupnp/httprequest.cpp:80
 msgid "Connection closed unexpectedly."
@@ -2764,7 +2764,7 @@ msgstr "Показувати піктограму системного лотк�
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showPopups)
 #: rc.cpp:256
 msgid "Whether or not to show system tray popup messages."
-msgstr "Чи слід показувати виринаючі повідомлення у системному лотку."
+msgstr "Чи слід показувати контекстні повідомлення у системному лотку."
 
 #. i18n: file: ktorrent/generalpref.ui:110
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showPopups)
@@ -3156,7 +3156,7 @@ msgstr "Перевірити дані після завершення звант
 #. i18n: ectx: property (windowTitle), widget (QWidget, GroupPolicyDlg)
 #: rc.cpp:386 rc.cpp:532
 msgid "Dialog"
-msgstr "Діалог"
+msgstr "Діалогове вікно"
 
 #. i18n: file: ktorrent/addpeersdlg.ui:19
 #. i18n: ectx: property (text), widget (QLabel, label_3)
@@ -3702,14 +3702,14 @@ msgstr ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Якщо увімкнено цей "
 "параметр, вказані налаштування буде застосовано лише у випадку, якщо до "
-"групи за допомогою діалогу вибору файла або створення торента додається "
-"новий торент.</p>\n"
+"групи за допомогою діалогового вікна вибору файла або створення торента "
+"додається новий торент.</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
 "p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Якщо не вмикати цей "
-"параметр, налаштування завжди будуть застосовуватися одразу по додаванню "
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Якщо не позначати цей "
+"пункт, налаштування завжди будуть застосовуватися одразу по додаванню "
 "торента до цієї групи. </p></body></html>"
 
 #. i18n: file: ktorrent/grouppolicydlg.ui:169
@@ -8341,7 +8341,7 @@ msgstr "Введіть адресу URL координатора:"
 msgid "Malformed URL."
 msgstr "Неправильна адреса URL."
 
-#: plugins/infowidget/trackerview.cpp:101
+#: plugins/infowidget/trackerview.cpp:102
 #, kde-format
 msgid "There already is a tracker named <b>%1</b>."
 msgstr "Уже існує перетворювач з назвою <b>%1</b>."
@@ -9688,13 +9688,13 @@ msgstr "Не вдається створити індексний файл: %1"
 msgid "Redirect without a redirect location"
 msgstr "Переспрямовання без зазначення нової адреси"
 
-#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/udptracker.cpp:299 libbtcore/tracker/udptracker.cpp:309
 #: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
 msgstr "Перевищення часу очікування на з’єднання з координатором %1"
 
-#: libbtcore/tracker/udptracker.cpp:330
+#: libbtcore/tracker/udptracker.cpp:331
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "Не вдалося обробити назву вузла %1"

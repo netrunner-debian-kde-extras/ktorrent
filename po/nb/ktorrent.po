@@ -1,12 +1,12 @@
 # Translation of ktorrent to Norwegian Bokmål
 #
 # Alexander Nicolaysen Sørnes <alex@thehandofagony.com>, 2008.
-# Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2009.
+# Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-27 01:29+0100\n"
+"POT-Creation-Date: 2009-12-28 01:32+0100\n"
 "PO-Revision-Date: 2009-11-10 12:48+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -1043,7 +1043,7 @@ msgstr "Status"
 msgid "Downloaded"
 msgstr "Lastet ned"
 
-#: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:399
+#: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:400
 #: libktcore/torrent/torrentfilelistmodel.cpp:77
 msgid "Size"
 msgstr "Størrelse"
@@ -1170,7 +1170,7 @@ msgstr "Hvor torrentens data er plassert på disken"
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "%1<br>URL: <b>%2</b>"
 
-#: ktorrent/core.cpp:135
+#: ktorrent/core.cpp:137
 #, kde-format
 msgid ""
 "Specified port (%1) is unavailable or in use by another application. "
@@ -1179,7 +1179,7 @@ msgstr ""
 "Den oppgitte porten (%1) er ikke tilgjengelig eller i bruk av et annet "
 "program. KTorrent bruker nå port %2 i stedet."
 
-#: ktorrent/core.cpp:143
+#: ktorrent/core.cpp:145
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -1188,16 +1188,16 @@ msgstr ""
 "KTorrent kan ikke ta i mot tilkoblinger fordi portene %1 til %2 brukes av et "
 "annet program."
 
-#: ktorrent/core.cpp:826
+#: ktorrent/core.cpp:846
 msgid "KTorrent is running one or more torrents"
 msgstr "KTorrent kjører en eller flere torrrenter"
 
-#: ktorrent/core.cpp:925
+#: ktorrent/core.cpp:945
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Klarte ikke lage torrent: %1"
 
-#: ktorrent/core.cpp:1015
+#: ktorrent/core.cpp:1035
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1206,21 +1206,21 @@ msgstr ""
 "Flere datafiler i torrenten «%1» mangler. \n"
 "Vil du lage dem på nytt eller la være å laste dem ned?"
 
-#: ktorrent/core.cpp:1024 ktorrent/core.cpp:1036 ktorrent/core.cpp:1049
+#: ktorrent/core.cpp:1044 ktorrent/core.cpp:1056 ktorrent/core.cpp:1069
 msgid "Data files are missing"
 msgstr "Datafiler mangler"
 
-#: ktorrent/core.cpp:1035
+#: ktorrent/core.cpp:1055
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Klarte ikke fravelge manglende filer: %1"
 
-#: ktorrent/core.cpp:1048
+#: ktorrent/core.cpp:1068
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Klarte ikke lage manglende filer på nytt: %1"
 
-#: ktorrent/core.cpp:1060
+#: ktorrent/core.cpp:1080
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -1229,16 +1229,16 @@ msgstr ""
 "Fila som inneholder data for torrenten «%1» mangler. \n"
 "Vil du bygge den opp igjen?"
 
-#: ktorrent/core.cpp:1067 ktorrent/core.cpp:1078
+#: ktorrent/core.cpp:1087 ktorrent/core.cpp:1098
 msgid "Data file is missing"
 msgstr "Datafil mangler"
 
-#: ktorrent/core.cpp:1077
+#: ktorrent/core.cpp:1097
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Klarte ikke lage datafil på nytt: %1"
 
-#: ktorrent/core.cpp:1182
+#: ktorrent/core.cpp:1202
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -1253,7 +1253,7 @@ msgstr[1] ""
 "KTorrent har funnet %1 torrenter fra KDE3-versjonen av KTorrent. Vil du "
 "importere dem?"
 
-#: ktorrent/core.cpp:1204
+#: ktorrent/core.cpp:1224
 msgid "No torrents from the KDE3 version were found."
 msgstr "Fant ingen torrenter fra KDE3-versjonen."
 
@@ -1849,7 +1849,7 @@ msgstr "Inaktive opplastinger"
 msgid "Ungrouped Torrents"
 msgstr "Ikke grupperte torrenter"
 
-#: libktcore/torrent/torrentfiletreemodel.cpp:398
+#: libktcore/torrent/torrentfiletreemodel.cpp:399
 #: libktcore/torrent/torrentfilelistmodel.cpp:76
 msgid "File"
 msgstr "Fil"
@@ -1900,7 +1900,7 @@ msgstr ""
 msgid "Maximum share ratio limit reached."
 msgstr "Nådde grense for høyeste delingsforhold."
 
-#: libktcore/torrent/queuemanager.cpp:241
+#: libktcore/torrent/queuemanager.cpp:232
 msgid ""
 "Not enough disk space for the following torrents. Do you want to start them "
 "anyway ?"
@@ -1908,7 +1908,7 @@ msgstr ""
 "Du har ikke nok diskplass til å laste ned følgende torrenter. Vil du starte "
 "dem likevel?"
 
-#: libktcore/torrent/queuemanager.cpp:280
+#: libktcore/torrent/queuemanager.cpp:271
 msgid ""
 "The following torrents have reached their maximum seed time. Do you want to "
 "start them anyway ?"
@@ -1916,24 +1916,24 @@ msgstr ""
 "Følgende torrenter har nådd sine lengste delingstider. Vil du starte dem "
 "likevel?"
 
-#: libktcore/torrent/queuemanager.cpp:309
+#: libktcore/torrent/queuemanager.cpp:300
 msgid ""
 "The following torrents have reached their maximum share ratio. Do you want "
 "to start them anyway ?"
 msgstr ""
 "Følgende torrenter har nådd sine høyeste delingsforhold. Vil du starte dem ?"
 
-#: libktcore/torrent/queuemanager.cpp:730
+#: libktcore/torrent/queuemanager.cpp:721
 #, kde-format
 msgid "Error starting torrent %1 : %2"
 msgstr "Klarte ikke starte torrenten %1: %2"
 
-#: libktcore/torrent/queuemanager.cpp:732
-#: libktcore/torrent/queuemanager.cpp:748
+#: libktcore/torrent/queuemanager.cpp:723
+#: libktcore/torrent/queuemanager.cpp:739
 msgid "Error"
 msgstr "Feil"
 
-#: libktcore/torrent/queuemanager.cpp:746
+#: libktcore/torrent/queuemanager.cpp:737
 #, kde-format
 msgid "Error stopping torrent %1 : %2"
 msgstr "Klarte ikke stoppe torrenten %1: %2"
@@ -8272,7 +8272,7 @@ msgstr "Skriv inn URL til sporeren:"
 msgid "Malformed URL."
 msgstr "Ødelagt URL."
 
-#: plugins/infowidget/trackerview.cpp:101
+#: plugins/infowidget/trackerview.cpp:102
 #, kde-format
 msgid "There already is a tracker named <b>%1</b>."
 msgstr "Det finnes allerede en sporer kalt <b>%1</b>."
@@ -9611,13 +9611,13 @@ msgstr "Klarte ikke lage indeksfil: %1"
 msgid "Redirect without a redirect location"
 msgstr "Omdirigert uten ny plassering"
 
-#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/udptracker.cpp:299 libbtcore/tracker/udptracker.cpp:309
 #: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
 msgstr "Tidsavbrutt ved kontakt med sporer %1"
 
-#: libbtcore/tracker/udptracker.cpp:330
+#: libbtcore/tracker/udptracker.cpp:331
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "Klarte ikke slå opp vertsnavnet %1"

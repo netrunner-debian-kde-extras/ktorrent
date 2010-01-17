@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-27 01:29+0100\n"
+"POT-Creation-Date: 2010-01-16 01:28+0100\n"
 "PO-Revision-Date: 2009-11-10 10:39+0200\n"
 "Last-Translator: Petros <pvidalis@gmail.com>\n"
 "Language-Team: Ελληνικά <i18ngr@lists.hellug.gr>\n"
@@ -1050,7 +1050,7 @@ msgstr "Κατάσταση"
 msgid "Downloaded"
 msgstr "Λήφθηκε"
 
-#: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:399
+#: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:400
 #: libktcore/torrent/torrentfilelistmodel.cpp:77
 msgid "Size"
 msgstr "Μέγεθος"
@@ -1179,7 +1179,7 @@ msgstr "Η τοποθεσία των δεδομένων του torrent στο δ
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "%1<br>Url: <b>%2</b>"
 
-#: ktorrent/core.cpp:135
+#: ktorrent/core.cpp:137
 #, kde-format
 msgid ""
 "Specified port (%1) is unavailable or in use by another application. "
@@ -1188,7 +1188,7 @@ msgstr ""
 "Η καθορισμένη θύρα (%1) δεν είναι διαθέσιμη ή χρησιμοποιείται από κάποια "
 "άλλη εφαρμογή. Το KTorrent συνδέθηκε στη θύρα %2."
 
-#: ktorrent/core.cpp:143
+#: ktorrent/core.cpp:145
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -1197,16 +1197,16 @@ msgstr ""
 "Το KTorrent δεν μπορεί να δεχτεί συνδέσεις γιατί οι θύρες %1 ως %2 "
 "χρησιμοποιούνται από κάποια άλλη εφαρμογή."
 
-#: ktorrent/core.cpp:826
+#: ktorrent/core.cpp:822
 msgid "KTorrent is running one or more torrents"
 msgstr "Το KTorrent εκτελεί ένα ή περισσότερα torrent"
 
-#: ktorrent/core.cpp:925
+#: ktorrent/core.cpp:921
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Αδύνατη η δημιουργία torrent: %1"
 
-#: ktorrent/core.cpp:1015
+#: ktorrent/core.cpp:1011
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1215,21 +1215,21 @@ msgstr ""
 "Αρκετά από τα αρχεία δεδομένων του torrent \"%1\" δεν υπάρχουν. \n"
 "Επιθυμείτε την αναδημιουργία τους, ή να μη γίνει λήψη τους;"
 
-#: ktorrent/core.cpp:1024 ktorrent/core.cpp:1036 ktorrent/core.cpp:1049
+#: ktorrent/core.cpp:1020 ktorrent/core.cpp:1032 ktorrent/core.cpp:1045
 msgid "Data files are missing"
 msgstr "Λείπουν αρχεία δεδομένων"
 
-#: ktorrent/core.cpp:1035
+#: ktorrent/core.cpp:1031
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Αδύνατη η αποεπιλογή των αρχείων που λείπουν: %1"
 
-#: ktorrent/core.cpp:1048
+#: ktorrent/core.cpp:1044
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Αδύνατη η επαναδημιουργία των αρχείων που λείπουν: %1"
 
-#: ktorrent/core.cpp:1060
+#: ktorrent/core.cpp:1056
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -1239,16 +1239,16 @@ msgstr ""
 "υπάρχει. \n"
 "Επιθυμείτε την αναδημιουργία του;"
 
-#: ktorrent/core.cpp:1067 ktorrent/core.cpp:1078
+#: ktorrent/core.cpp:1063 ktorrent/core.cpp:1074
 msgid "Data file is missing"
 msgstr "Λείπει αρχείο δεδομένων"
 
-#: ktorrent/core.cpp:1077
+#: ktorrent/core.cpp:1073
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Αδύνατη η επαναδημιουργία του αρχείου δεδομένων: %1"
 
-#: ktorrent/core.cpp:1182
+#: ktorrent/core.cpp:1178
 #, fuzzy, kde-format
 #| msgid ""
 #| "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
@@ -1266,7 +1266,7 @@ msgstr[1] ""
 "Τo KTorrent εντόπισε %1 torrent από την έκδοση του KTorrent για το KDE3, "
 "επιθυμείτε την εισαγωγή τους;"
 
-#: ktorrent/core.cpp:1204
+#: ktorrent/core.cpp:1200
 #, fuzzy
 #| msgid "No torrents from the KDE3 version were found !"
 msgid "No torrents from the KDE3 version were found."
@@ -1914,7 +1914,7 @@ msgstr "Παθητικές αποστολές"
 msgid "Ungrouped Torrents"
 msgstr "Μη ομαδοποιημένα torrent"
 
-#: libktcore/torrent/torrentfiletreemodel.cpp:398
+#: libktcore/torrent/torrentfiletreemodel.cpp:399
 #: libktcore/torrent/torrentfilelistmodel.cpp:76
 msgid "File"
 msgstr "Αρχείο"
@@ -1975,7 +1975,7 @@ msgstr ""
 msgid "Maximum share ratio limit reached."
 msgstr "Συμπληρώθηκε η μέγιστη κοινόχρηστη αναλογία."
 
-#: libktcore/torrent/queuemanager.cpp:241
+#: libktcore/torrent/queuemanager.cpp:232
 msgid ""
 "Not enough disk space for the following torrents. Do you want to start them "
 "anyway ?"
@@ -1983,7 +1983,7 @@ msgstr ""
 "Δεν έχετε αρκετό ελεύθερο χώρο στο δίσκο για τα παρακάτω torrent. Επιθυμείτε "
 "σίγουρα την εκκίνησή τους ;"
 
-#: libktcore/torrent/queuemanager.cpp:280
+#: libktcore/torrent/queuemanager.cpp:271
 msgid ""
 "The following torrents have reached their maximum seed time. Do you want to "
 "start them anyway ?"
@@ -1991,7 +1991,7 @@ msgstr ""
 "Τα παρακάτω torrent έφτασαν στο μέγιστο χρόνο προσφοράς γόνου. Επιθυμείτε "
 "την εκκίνησή τους ούτως ή άλλως;"
 
-#: libktcore/torrent/queuemanager.cpp:309
+#: libktcore/torrent/queuemanager.cpp:300
 msgid ""
 "The following torrents have reached their maximum share ratio. Do you want "
 "to start them anyway ?"
@@ -1999,17 +1999,17 @@ msgstr ""
 "Τα παρακάτω torrent έφτασαν στη μέγιστη κοινόχρηστη αναλογία. Επιθυμείτε την "
 "εκκίνησή τους ούτως ή άλλως;"
 
-#: libktcore/torrent/queuemanager.cpp:730
+#: libktcore/torrent/queuemanager.cpp:721
 #, kde-format
 msgid "Error starting torrent %1 : %2"
 msgstr "Σφάλμα κατά την εκκίνηση του torrent %1 : %2"
 
-#: libktcore/torrent/queuemanager.cpp:732
-#: libktcore/torrent/queuemanager.cpp:748
+#: libktcore/torrent/queuemanager.cpp:723
+#: libktcore/torrent/queuemanager.cpp:739
 msgid "Error"
 msgstr "Σφάλμα"
 
-#: libktcore/torrent/queuemanager.cpp:746
+#: libktcore/torrent/queuemanager.cpp:737
 #, kde-format
 msgid "Error stopping torrent %1 : %2"
 msgstr "Σφάλμα κατά το σταμάτημα του torrent %1 : %2"
@@ -8490,7 +8490,7 @@ msgstr "Διεύθυνση IP του υπολογιστή"
 msgid "Malformed URL."
 msgstr "Λανθασμένη URL."
 
-#: plugins/infowidget/trackerview.cpp:101
+#: plugins/infowidget/trackerview.cpp:102
 #, fuzzy, kde-format
 #| msgid "There already is a tracker named <b>%1</b> !"
 msgid "There already is a tracker named <b>%1</b>."
@@ -9950,13 +9950,13 @@ msgstr "Αδύνατη η δημιουργία αρχείου ευρετηρίο
 msgid "Redirect without a redirect location"
 msgstr "Ανακατεύθυνση χωρίς μια νέα τοποθεσία !"
 
-#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/udptracker.cpp:299 libbtcore/tracker/udptracker.cpp:309
 #: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
 msgstr ""
 
-#: libbtcore/tracker/udptracker.cpp:330
+#: libbtcore/tracker/udptracker.cpp:331
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "Αδυναμία επίλυσης ονόματος υπολογιστή %1"

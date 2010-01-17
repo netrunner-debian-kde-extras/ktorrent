@@ -243,6 +243,7 @@ namespace kt
 		void rollback(const QList<bt::TorrentInterface*> & success);
 		void connectSignals(bt::TorrentInterface* tc);
 		bool init(bt::TorrentControl* tc,const QString & group,const QString & location,bool silently);
+		QString locationHint() const;
 
 	public:
 		void loadTorrents();
@@ -257,6 +258,7 @@ namespace kt
 		void autoCheckData(bt::TorrentInterface* tc);
 		void checkForKDE3Torrents();
 		void closeScanListener(ScanListener* sl);
+		void delayedRemove(bt::TorrentInterface* tc);
 
 	private:
 		GUI* gui;
@@ -271,6 +273,7 @@ namespace kt
 		QMap<KJob*,QString> add_to_groups; // Map to keep track of which group to add a torrent to
 		int sleep_suppression_cookie;
 		QMap<bt::TorrentInterface*,ScanListener*> active_scans;
+		QMap<bt::TorrentInterface*,bool> delayed_removal;
 	};
 }
 

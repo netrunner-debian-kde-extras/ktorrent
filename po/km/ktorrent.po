@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-27 01:29+0100\n"
+"POT-Creation-Date: 2010-01-16 01:28+0100\n"
 "PO-Revision-Date: 2009-06-17 16:28+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -1048,7 +1048,7 @@ msgstr "ស្ថានភាព"
 msgid "Downloaded"
 msgstr "បាន​ទាញយក​"
 
-#: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:399
+#: ktorrent/viewmodel.cpp:435 libktcore/torrent/torrentfiletreemodel.cpp:400
 #: libktcore/torrent/torrentfilelistmodel.cpp:77
 msgid "Size"
 msgstr "ទំហំ"
@@ -1171,7 +1171,7 @@ msgstr "ទីតាំង​ទិន្នន័យ​របស់ torrent ន
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "%1<br>Url ៖ <b>%2</b>"
 
-#: ktorrent/core.cpp:135
+#: ktorrent/core.cpp:137
 #, kde-format
 msgid ""
 "Specified port (%1) is unavailable or in use by another application. "
@@ -1179,7 +1179,7 @@ msgid ""
 msgstr ""
 "មិនមាន​ថត​ដែល​បាន​បញ្ជាក់ (%1) ឬ​កំពុង​ប្រើ​ដោយ​កម្មវិធី​ផ្សេង​ទៀត ។ KTorrent ឥឡូវ​កំពុងប្រើ​ច្រក %2 ។"
 
-#: ktorrent/core.cpp:143
+#: ktorrent/core.cpp:145
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -1187,16 +1187,16 @@ msgid ""
 msgstr ""
 "KTorrent មិន​អាច​ទទួល​យក​ការ​តភ្ជាប់ទេ ពីព្រោះច្រក %1 ទៅ %2 កំពុង​ប្រើ​រួច​ហើយ​ដោយ​កម្មវិធី​ផ្សេង ។"
 
-#: ktorrent/core.cpp:826
+#: ktorrent/core.cpp:822
 msgid "KTorrent is running one or more torrents"
 msgstr "KTorrent កំពុង​រត់​មួយ ឬ​ច្រើន"
 
-#: ktorrent/core.cpp:925
+#: ktorrent/core.cpp:921
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "មិន​អាច​បង្កើត torrent ៖ %1"
 
-#: ktorrent/core.cpp:1015
+#: ktorrent/core.cpp:1011
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1205,21 +1205,21 @@ msgstr ""
 "ឯកសារ​ទិន្នន័យ​របស់ torrent \"%1\" មួយ​ចំនួន​បាត់ ។ \n"
 "តើ​អ្នក​ពិតជា​ចង់​បង្កើត​ពួកវា​ឡើងវិញ​ ឬ​អ្នក​មិន​ទាញយក​ពួកវា ?"
 
-#: ktorrent/core.cpp:1024 ktorrent/core.cpp:1036 ktorrent/core.cpp:1049
+#: ktorrent/core.cpp:1020 ktorrent/core.cpp:1032 ktorrent/core.cpp:1045
 msgid "Data files are missing"
 msgstr "បាត់​ឯកសារ​ទិន្នន័យ"
 
-#: ktorrent/core.cpp:1035
+#: ktorrent/core.cpp:1031
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "មិន​អាច​ដោះជ្រើស​ឯកសារ​ដែល​បាត់ ៖ %1"
 
-#: ktorrent/core.cpp:1048
+#: ktorrent/core.cpp:1044
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "មិន​អាច​បង្កើត​ឯកសារ​ដែល​បាត់ ៖ %1"
 
-#: ktorrent/core.cpp:1060
+#: ktorrent/core.cpp:1056
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -1228,16 +1228,16 @@ msgstr ""
 "បាត់​ឯកសារ​ដែល​រក្សាទុក torrent \"%1\" ។ \n"
 "តើ​អ្នក​ចង់​បង្កើត​ឡើងវិញ​ឬ​ទេ ?"
 
-#: ktorrent/core.cpp:1067 ktorrent/core.cpp:1078
+#: ktorrent/core.cpp:1063 ktorrent/core.cpp:1074
 msgid "Data file is missing"
 msgstr "បាត់​ឯកសារ​ទិន្នន័យ"
 
-#: ktorrent/core.cpp:1077
+#: ktorrent/core.cpp:1073
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "មិន​អាច​បង្កើត​ឯកសារ​ទិន្នន័យ​ឡើង​វិញ ៖ %1"
 
-#: ktorrent/core.cpp:1182
+#: ktorrent/core.cpp:1178
 #, fuzzy, kde-format
 #| msgid ""
 #| "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
@@ -1251,7 +1251,7 @@ msgid_plural ""
 msgstr[0] ""
 "KTorrent បាន​រកឃើញ torrent %1 ពី KTorrent កំណែ KDE3 តើ​អ្នក​ចង់​នាំចូល​ពួកវា​ទេ ?"
 
-#: ktorrent/core.cpp:1204
+#: ktorrent/core.cpp:1200
 #, fuzzy
 #| msgid "No torrents from the KDE3 version were found !"
 msgid "No torrents from the KDE3 version were found."
@@ -1879,7 +1879,7 @@ msgstr "ការ​ផ្ទុកឡើង​អសកម្ម"
 msgid "Ungrouped Torrents"
 msgstr "Torrent មិនបាន​ដាក់​ជា​ក្រុម"
 
-#: libktcore/torrent/torrentfiletreemodel.cpp:398
+#: libktcore/torrent/torrentfiletreemodel.cpp:399
 #: libktcore/torrent/torrentfilelistmodel.cpp:76
 msgid "File"
 msgstr "ឯកសារ"
@@ -1937,20 +1937,20 @@ msgstr ""
 msgid "Maximum share ratio limit reached."
 msgstr "បាន​ដល់​ដែន​កំណត់​សមាមាត្រ​ចែករំលែក​អតិបរមា ។"
 
-#: libktcore/torrent/queuemanager.cpp:241
+#: libktcore/torrent/queuemanager.cpp:232
 msgid ""
 "Not enough disk space for the following torrents. Do you want to start them "
 "anyway ?"
 msgstr "គ្មាន​ទំហំ​ថាស​គ្រប់គ្រាន់​សម្រាប់ torrent ដូចខាងក្រោម​ទេ  តើ​អ្នក​ចង់​ចាប់ផ្ដើម​ពួកវា​ឬ ?"
 
-#: libktcore/torrent/queuemanager.cpp:280
+#: libktcore/torrent/queuemanager.cpp:271
 msgid ""
 "The following torrents have reached their maximum seed time. Do you want to "
 "start them anyway ?"
 msgstr ""
 "torrent ខាងក្រោម​បាន​ដល់​ពេលវេលា​បណ្ដុះ​អតិបរមា​របស់​វា​ហើយ ។ តើ​អ្នក​ចង់​ចាប់ផ្ដើម​ពួកវា​ឬ​ទេ ?"
 
-#: libktcore/torrent/queuemanager.cpp:309
+#: libktcore/torrent/queuemanager.cpp:300
 msgid ""
 "The following torrents have reached their maximum share ratio. Do you want "
 "to start them anyway ?"
@@ -1958,17 +1958,17 @@ msgstr ""
 "torrent ខាងក្រោម​បាន​ដល់​សមាមាត្រ​ចែករំលែក​អតិបរមា​របស់​ពួកវា​ហើយ ។ តើ​អ្នក​ពិតជា​ចង់​ចាប់ផ្ដើម​ពួកវា​"
 "ឬ ?"
 
-#: libktcore/torrent/queuemanager.cpp:730
+#: libktcore/torrent/queuemanager.cpp:721
 #, kde-format
 msgid "Error starting torrent %1 : %2"
 msgstr "កំហុស​កំពុង​ចាប់​ផ្តើម torrent %1 ៖​ %2"
 
-#: libktcore/torrent/queuemanager.cpp:732
-#: libktcore/torrent/queuemanager.cpp:748
+#: libktcore/torrent/queuemanager.cpp:723
+#: libktcore/torrent/queuemanager.cpp:739
 msgid "Error"
 msgstr "កំហុស"
 
-#: libktcore/torrent/queuemanager.cpp:746
+#: libktcore/torrent/queuemanager.cpp:737
 #, kde-format
 msgid "Error stopping torrent %1 : %2"
 msgstr "កំហុស​ក្នុងការ​បញ្ឈប់ torrent %1 ៖​ %2"
@@ -8506,7 +8506,7 @@ msgstr "អាសយដ្ឋាន IP របស់​ម៉ាស៊ីន​�
 msgid "Malformed URL."
 msgstr "URL ដែល​មិន​ត្រឹមត្រូវ ។"
 
-#: plugins/infowidget/trackerview.cpp:101
+#: plugins/infowidget/trackerview.cpp:102
 #, fuzzy, kde-format
 #| msgid "There already is a tracker named <b>%1</b> !"
 msgid "There already is a tracker named <b>%1</b>."
@@ -9948,13 +9948,13 @@ msgstr "មិនអាច​បង្កើត​ឯកសារ​លិបិ
 msgid "Redirect without a redirect location"
 msgstr "បាន​បញ្ជូន​បន្ត​ដោយ​គ្មាន​ទីតាំង​ថ្មី !"
 
-#: libbtcore/tracker/udptracker.cpp:298 libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/udptracker.cpp:299 libbtcore/tracker/udptracker.cpp:309
 #: libbtcore/tracker/httptracker.cpp:559
 #, kde-format
 msgid "Timeout contacting tracker %1"
 msgstr ""
 
-#: libbtcore/tracker/udptracker.cpp:330
+#: libbtcore/tracker/udptracker.cpp:331
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "មិនអាច​ដោះស្រាយ​ឈ្មោះ​ម៉ាស៊ីន %1 បានទេ"
