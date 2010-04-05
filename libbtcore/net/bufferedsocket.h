@@ -70,7 +70,7 @@ namespace net
 	 * 
 	 * Extends the Socket class with
 	 */
-	class BufferedSocket : public Socket
+	class BufferedSocket
 	{
 		mutable QMutex mutex;
 		SocketReader* rdr;
@@ -80,15 +80,18 @@ namespace net
 		Uint32 bytes_sent; // bytes written of the output buffer
 		Speed* down_speed;
 		Speed* up_speed;
-		int poll_index;
 		Uint32 up_gid;
- 		Uint32 down_gid; // group id which this torrent belongs to, group 0 means the default group
+		Uint32 down_gid; // group id which this torrent belongs to, group 0 means the default group
+		SocketDevice* sock;
 
 	public:
+		BufferedSocket(SocketDevice* sock);
 		BufferedSocket(int fd,int ip_version);
 		BufferedSocket(bool tcp,int ip_version);
 		virtual ~BufferedSocket();
 
+		SocketDevice* socketDevice() {return sock;}
+		const SocketDevice* socketDevice() const {return sock;}
 		
 		void setReader(SocketReader* r) {rdr = r;}
 		void setWriter(SocketWriter* r) {wrt = r;}
@@ -137,9 +140,6 @@ namespace net
  		
  		/// Get the upload group ID
  		Uint32 uploadGroupID() const {return up_gid;}
-
-		int getPollIndex() const {return poll_index;}
-		void setPollIndex(int pi) {poll_index = pi;}
 
 	private:
 		Uint32 sendOutputBuffer(Uint32 max,bt::TimeStamp now);

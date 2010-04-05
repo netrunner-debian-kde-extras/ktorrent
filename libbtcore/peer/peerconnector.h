@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009 by Joris Guisson                                   *
+ *   Copyright (C) 2010 by Joris Guisson                                   *
  *   joris.guisson@gmail.com                                               *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,43 +18,54 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef UTP_UTPDAEMON_H
-#define UTP_UTPDAEMON_H
+#ifndef BT_PEERCONNECTOR_H
+#define BT_PEERCONNECTOR_H
 
-#include <QObject>
-#include <QUdpSocket>
+#include <QSet>
+#include <btcore_export.h>
+#include <util/constants.h>
 
 
-namespace utp
+namespace bt
 {
+	class Authenticate;
+	class PeerManager;
+
 	/**
-		Class which implements the UTPDaemon dbus interface
+		Class which connects to a peer.
 	*/
-	class UTPDaemon : public QObject
+	class BTCORE_EXPORT PeerConnector : public QObject
 	{
 		Q_OBJECT
-		Q_CLASSINFO("D-Bus Interface", "org.ktorrent.UTPDaemon")
 	public:
-		UTPDaemon(quint16 port,QObject* parent = 0);
-		virtual ~UTPDaemon();
+		enum Method
+		{
+			TCP_WITH_ENCRYPTION,
+			TCP_WITHOUT_ENCRYPTION,
+			UTP_WITH_ENCRYPTION,
+			UTP_WITHOUT_ENCRYPTION
+		};
 		
-		/// Start the daemon
-		bool start();
-		
-	public Q_SLOTS:
-		Q_SCRIPTABLE QString connectToPeer(const QString & ip,int port);
-		
-	Q_SIGNALS:
-		Q_SCRIPTABLE void acceptedPeer(const QString & fifo,const QString & ip,int port);
-		
-	private Q_SLOTS:
-		void handlePacket();
+		PeerConnector(const QString & ip,Uint16 port,bool local,PeerManager* pman);
+		virtual ~PeerConnector();
+	
+		/// Called when an authentication attempt is finished
+		void authenticationFinished(bt::Authenticate* auth, bool ok);
 		
 	private:
-		quint16 port;
-		QUdpSocket* socket;
+		void start(Method method);
+		
+	private:
+		QSet<Method> tried_methods;
+		Method current_method;
+		QString ip;
+		Uint16 port;
+		bool local;
+		PeerManager* pman;
+		Authenticate* auth;
+		bool stopping;
 	};
 
 }
 
-#endif // UTP_UTPDAEMON_H
+#endif // BT_PEERCONNECTOR_H

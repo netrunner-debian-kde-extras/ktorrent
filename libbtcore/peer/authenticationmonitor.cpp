@@ -20,11 +20,6 @@
 #include "authenticationmonitor.h"
 #include <math.h>
 #include <unistd.h>
-#ifndef Q_WS_WIN
-#include <sys/poll.h>
-#else
-#include <util/win32.h>
-#endif
 #include <util/functions.h>
 #include <util/log.h>
 #include <mse/streamsocket.h>
@@ -73,7 +68,7 @@ namespace bt
 		if (auths.size() == 0)
 			return;
 		
-		unsigned int i = 0;
+		reset();
 		
 		std::list<AuthenticateBase*>::iterator itr = auths.begin();
 		while (itr != auths.end())
@@ -88,35 +83,21 @@ namespace bt
 			}
 			else
 			{
-				ab->setPollIndex(-1);
-				if (ab->getSocket() && ab->getSocket()->fd() >= 0)
+				mse::StreamSocket* socket = ab->getSocket();
+				if (socket)
 				{
-					int fd = ab->getSocket()->fd();
-					if (i >= fd_vec.size())
+					net::SocketDevice* dev = socket->socketDevice();
+					if (dev)
 					{
-						struct pollfd pfd = {-1,0,0};
-						fd_vec.push_back(pfd);
+						net::Poll::Mode m = socket->connecting() ? Poll::OUTPUT : Poll::INPUT;
+						dev->prepare(this,m);
 					}
-					
-					struct pollfd & pfd = fd_vec[i];
-					pfd.fd = fd;
-					pfd.revents = 0;
-					if (!ab->getSocket()->connecting())
-						pfd.events = POLLIN;
-					else
-						pfd.events = POLLOUT;
-					ab->setPollIndex(i);
-					i++;
 				}
 				itr++;
 			}
 		}
 		
-#ifndef Q_WS_WIN
-		if (poll(&fd_vec[0],i,1) > 0)
-#else
-        if (mingw_poll(&fd_vec[0],i,1) > 0)
-#endif
+		if (poll(50))
 		{
 			handleData();
 		}
@@ -128,26 +109,27 @@ namespace bt
 		while (itr != auths.end())
 		{
 			AuthenticateBase* ab = *itr;
-			if (ab && ab->getSocket() && ab->getSocket()->fd() >= 0 && ab->getPollIndex() >= 0)
-			{
-				int pi = ab->getPollIndex();
-				if (fd_vec[pi].revents & POLLIN)
-				{
-					ab->onReadyRead();
-				}
-				else if (fd_vec[pi].revents & POLLOUT)
-				{
-					ab->onReadyWrite();
-				}
-			}
-			
 			if (!ab || ab->isFinished())
 			{
-				ab->deleteLater();
+				if (ab)
+					ab->deleteLater();
 				itr = auths.erase(itr);
 			}
 			else
+			{
+				mse::StreamSocket* socket = ab->getSocket();
+				if (socket)
+				{
+					net::SocketDevice* dev = socket->socketDevice();
+					bool r = dev && dev->ready(this,Poll::INPUT);
+					bool w = dev && dev->ready(this,Poll::OUTPUT);
+					if (r)
+						ab->onReadyRead();
+					if (w)
+						ab->onReadyWrite();
+				}
 				itr++;
+			}
 		}
 	}
 	

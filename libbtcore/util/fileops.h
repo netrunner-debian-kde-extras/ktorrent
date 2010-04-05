@@ -22,10 +22,13 @@
 
 #include <util/constants.h>
 #include <btcore_export.h>
+
 class QString;
+
 #ifdef CopyFile
 #undef CopyFile
 #endif
+
 namespace bt
 {
 
@@ -132,16 +135,6 @@ namespace bt
 	 * @throw Error if the file doesn't exist, or something else goes wrong
 	 */
 	BTCORE_EXPORT void TruncateFile(const QString & path,Uint64 size);
-	
-	/**
-	 * Special truncate for FAT file systems.
-	*/
-	BTCORE_EXPORT bool FatPreallocate(int fd,Uint64 size);
-	
-	/**
-	 * Special truncate for FAT file systems.
-	 */
-	BTCORE_EXPORT bool FatPreallocate(const QString & path,Uint64 size);
 
 #ifdef HAVE_XFS_XFS_H
 	/**
@@ -178,6 +171,12 @@ namespace bt
 	 * @return The shortened path
 	 */
 	BTCORE_EXPORT QString ShortenFileName(const QString & path,int extra_number = -1);
+	
+	/// Calculate the amount of space a file is taking up (this is not the filesize!)
+	BTCORE_EXPORT Uint64 DiskUsage(const QString & filename);
+	
+	/// Calculate the amount of space a file is taking up (this is not the filesize!)
+	BTCORE_EXPORT Uint64 DiskUsage(int fd);
 }
 
 #endif

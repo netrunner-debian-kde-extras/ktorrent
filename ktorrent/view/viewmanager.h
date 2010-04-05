@@ -26,6 +26,7 @@
 #include <ksharedconfig.h>
 #include <torrent/queuemanager.h>
 
+class QTabWidget;
 class QWidget;
 class KAction;
 
@@ -49,7 +50,7 @@ namespace kt
 		View* newView(Core* core,QWidget* parent);
 		
 		/// Save all views
-		void saveState(KSharedConfigPtr cfg);
+		void saveState(KSharedConfigPtr cfg,QTabWidget* tabs);
 		
 		/// Restore all views from configuration
 		void loadState(KSharedConfigPtr cfg);
@@ -107,6 +108,9 @@ namespace kt
 		
 		/// Stop all downloads in the current view
 		void stopAllTorrents();
+		
+		/// Pause all selected torrents in the current view
+		void pauseTorrents();
 
 		/// Check the data of the selected torrent
 		void checkData();
@@ -186,6 +190,8 @@ namespace kt
 		KAction* start_all;
 		KAction* stop_torrent;
 		KAction* stop_all;
+		KAction* pause_torrent;
+		KAction* unpause_torrent;
 		KAction* remove_torrent;
 		KAction* remove_torrent_and_data;
 		KAction* add_peers;

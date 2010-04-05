@@ -33,6 +33,7 @@
 #include <kio/job.h>
 #include <kio/netaccess.h>
 #include <kio/scheduler.h>
+#include <kprotocolmanager.h>
 #include <bcodec/bnode.h>
 #include <bcodec/bdecoder.h>
 #include <peer/peermanager.h>
@@ -40,8 +41,7 @@
 #include <torrent/globals.h>
 #include "btversion.h"
 #include "httpannouncejob.h"
-#include <kprotocolmanager.h>
-
+#include "kioannouncejob.h"
 
 
 namespace bt
@@ -212,7 +212,7 @@ namespace bt
 			return;
 		}
 
-		Uint16 port = Globals::instance().getServer().getPortInUse();;
+		Uint16 port = ServerInterface::getPort();
 		
 		u.addQueryItem("peer_id",peer_id.toString());
 		u.addQueryItem("port",QString::number(port));
@@ -399,9 +399,9 @@ namespace bt
 	
 	void HTTPTracker::onKIOAnnounceResult(KJob* j)
 	{
-		KIO::StoredTransferJob* st = (KIO::StoredTransferJob*)j;
-		KUrl u = st->url();
-		onAnnounceResult(u,st->data(),j);
+		KIOAnnounceJob* st = (KIOAnnounceJob*)j;
+		KUrl u = st->announceUrl();
+		onAnnounceResult(u,st->replyData(),j);
 	}
 
 	void HTTPTracker::onQHttpAnnounceResult(KJob* j)
@@ -411,7 +411,7 @@ namespace bt
 		onAnnounceResult(u,st->replyData(),j);
 	}
 
-	void HTTPTracker::onAnnounceResult(const KUrl& url, const QByteArray& data,KJob* j)
+	void HTTPTracker::onAnnounceResult(const KUrl& url,const QByteArray& data,KJob* j)
 	{
 		timer.stop();
 		active_job = 0;
@@ -517,11 +517,8 @@ namespace bt
 		{
 			KIO::MetaData md;
 			setupMetaData(md);
-			KIO::StoredTransferJob* j = KIO::storedGet(u, KIO::NoReload, KIO::HideProgressInfo);
-			// set the meta data
-			j->setMetaData(md);
+			KIOAnnounceJob* j = new KIOAnnounceJob(u,md);
 			connect(j,SIGNAL(result(KJob* )),this,SLOT(onKIOAnnounceResult( KJob* )));
-			KIO::Scheduler::scheduleJob(j);
 			active_job = j;
 		}
 		else

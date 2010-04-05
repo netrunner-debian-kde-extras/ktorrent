@@ -242,6 +242,11 @@ namespace kt
 		return ti->getDataDir();
 	}
 	
+	QString DBusTorrent::pathOnDisk() const
+	{
+		return ti->getStats().output_path;
+	}
+	
 	QString DBusTorrent::torDir() const
 	{
 		return ti->getTorDir();
@@ -438,6 +443,26 @@ namespace kt
 	bool DBusTorrent::isAllowedToStart() const
 	{
 		return ti->isAllowedToStart();
+	}
+
+	float DBusTorrent::getMaxSeedTime() const
+	{
+		return ti->getMaxSeedTime();
+	}
+	
+	float DBusTorrent::getMaxShareRatio() const
+	{
+		return ti->getMaxShareRatio();
+	}
+	
+	void DBusTorrent::setMaxSeedTime(float hours)
+	{
+		ti->setMaxSeedTime(hours);
+	}
+	
+	void DBusTorrent::setMaxShareRatio(float ratio)
+	{
+		ti->setMaxShareRatio(ratio);
 	}
 
 }

@@ -48,6 +48,9 @@ namespace kt
 		/// Load current searches
 		void loadCurrentSearches();
 		
+		void loadState(KSharedConfigPtr cfg);
+		void saveState(KSharedConfigPtr cfg);
+		
 	public slots:
 		void find();
 		void back();

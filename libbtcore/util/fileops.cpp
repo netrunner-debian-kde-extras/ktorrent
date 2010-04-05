@@ -45,6 +45,10 @@
 
 #include "limits.h"
 
+#ifndef NAME_MAX
+#define NAME_MAX 255
+#endif
+
 #ifdef HAVE_XFS_XFS_H
 
 #if !defined(HAVE___S64) || !defined(HAVE___U64)
@@ -296,36 +300,6 @@ namespace bt
 		return (Uint64)sb.st_size;
 	}
 
-	bool FatPreallocate(int fd,Uint64 size)
-	{
-		try
-		{
-			SeekFile(fd, size - 1, SEEK_SET);
-			char zero = 0;		
-			if (write(fd, &zero, 1) == -1)
-				return false;
-
-			TruncateFile(fd,size,true);
-		}
-		catch (bt::Error & e)
-		{
-			Out(SYS_DIO|LOG_NOTICE) << e.toString() << endl;
-			return false;
-		}
-		return true;
-	}
-
-	bool FatPreallocate(const QString & path,Uint64 size)
-	{
-		int fd = ::open(QFile::encodeName(path),O_RDWR | O_LARGEFILE);
-		if (fd < 0)
-			throw Error(i18n("Cannot open %1 : %2",path,strerror(errno)));
-
-		bool ret = FatPreallocate(fd,size);
-		close(fd);
-		return ret;
-	}
-
 #ifdef HAVE_XFS_XFS_H
 
 	bool XfsPreallocate(int fd, Uint64 size)
@@ -367,9 +341,9 @@ namespace bt
 #ifdef HAVE_FTRUNCATE64
 			if (ftruncate64(fd,size) == -1)
 #else
-				if (ftruncate(fd,size) == -1)
+			if (ftruncate(fd,size) == -1)
 #endif
-					throw Error(i18n("Cannot expand file: %1",strerror(errno)));
+				throw Error(i18n("Cannot expand file: %1",strerror(errno)));
 		}
 		else
 		{
@@ -380,25 +354,8 @@ namespace bt
 			if (posix_fallocate(fd,0,size) != 0)
 				throw Error(i18n("Cannot expand file: %1",strerror(errno)));
 #else
-			SeekFile(fd,0,SEEK_SET);
-			bt::Array<Uint8> buf(4096);
-			buf.fill(0);
-
-			Uint64 written = 0;
-			while (written < size)
-			{
-				int to_write = size - written;
-				if (to_write > 4096)
-					to_write = 4096;
-
-				int ret = write(fd,buf,to_write);
-				if (ret < 0)
-					throw Error(i18n("Cannot expand file: %1",strerror(errno)));
-				else if (ret == 0 || ret != (int)to_write)
-					throw Error(i18n("Cannot expand file: %1",strerror(errno)));
-				else
-					written += to_write;
-			}
+			if (ftruncate(fd,size) == -1)
+				throw Error(i18n("Cannot expand file: %1",strerror(errno)));
 #endif
 		}
 	}
@@ -426,9 +383,9 @@ namespace bt
 #ifdef HAVE_LSEEK64
 		if (lseek64(fd,off,whence) == -1)
 #else
-			if (lseek(fd,off,whence) == -1)
+		if (lseek(fd,off,whence) == -1)
 #endif
-				throw Error(i18n("Cannot seek in file : %1",strerror(errno)));
+			throw Error(i18n("Cannot seek in file : %1",strerror(errno)));
 	}
 
 	bool FreeDiskSpace(const QString & path,Uint64 & bytes_free)
@@ -438,7 +395,7 @@ namespace bt
 		struct statvfs64 stfs;
 		if (statvfs64(QFile::encodeName(path), &stfs) == 0)
 #else
-			struct statvfs stfs;
+		struct statvfs stfs;
 		if (statvfs(QFile::encodeName(path), &stfs) == 0)
 #endif
 		{
@@ -583,4 +540,51 @@ namespace bt
 		
 		return assembled;
 	}
+	
+
+	Uint64 DiskUsage(const QString& filename)
+	{
+		Uint64 ret = 0;
+#ifndef Q_WS_WIN
+#ifdef HAVE_STAT64
+		struct stat64 sb;
+		if (stat64(QFile::encodeName(filename),&sb) == 0)
+#else
+		struct stat sb;
+		if (stat(QFile::encodeName(filename),&sb) == 0)
+#endif
+		{
+			ret = (Uint64)sb.st_blocks * 512;
+		}
+#else
+		DWORD high = 0;
+		DWORD low = GetCompressedFileSize((LPWSTR)filename.utf16(),&high);
+		if (low != INVALID_FILE_SIZE)
+			ret = (high * MAXDWORD) + low;
+#endif
+		return ret;
+	}
+	
+	Uint64 DiskUsage(int fd)
+	{
+		Uint64 ret = 0;
+#ifndef Q_WS_WIN
+#ifdef HAVE_FSTAT64
+		struct stat64 sb;
+		if (fstat64(fd,&sb) == 0)
+#else
+		struct stat sb;
+		if (fstat(fd,&sb) == 0)
+#endif
+		{
+			ret = (Uint64)sb.st_blocks * 512;
+		}
+#else
+		struct _BY_HANDLE_FILE_INFORMATION info;
+		GetFileInformationByHandle((void *)&fd,&info);
+		ret = (info.nFileSizeHigh * MAXDWORD) + info.nFileSizeLow;
+#endif
+		return ret;
+	}
+
 }

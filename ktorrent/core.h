@@ -71,8 +71,8 @@ namespace kt
 		virtual void loadSilently(const bt::MagnetLink & mlink,const QString & group);
 		virtual QString findNewTorrentDir() const;
 		virtual void loadExistingTorrent(const QString & tor_dir);
-		virtual void setPausedState(bool pause);
-		virtual bool getPausedState();
+		virtual void setSuspendedState(bool suspend);
+		virtual bool getSuspendedState();
 		virtual float getGlobalMaxShareRatio() const;
 		virtual DBus* getExternalInterface();
 
@@ -85,24 +85,8 @@ namespace kt
 		/// Get the magnet model
 		kt::MagnetModel* getMagnetModel() {return magnet;}
 
-		/**
-		 * Make a torrent file
-		 * @param file The file or dir to make a torrent of
-		 * @param trackers A list of trackers
-		 * @param webseeds List of webseed URL's
-		 * @param chunk_size The size of each chunk (in KB)
-		 * @param name The torrents name (usually filename)
-		 * @param comments The comments
-		 * @param seed Whether or not to start seeding or not
-		 * @param output_file File to store the torrent file
-		 * @param priv_tor Is this a private torrent
-		 * @param prog Progress bar to update
-		 * @return The created torrent
-		 */
-		bt::TorrentInterface* makeTorrent(const QString & file,const QStringList & trackers,const KUrl::List & webseeds,
-				int chunk_size,const QString & name,const QString & comments,
-				bool seed,const QString & output_file,bool priv_tor,QProgressBar* prog, bool decentralized);
-
+		virtual  bt::TorrentInterface* createTorrent(bt::TorrentCreator* mktor,bool seed);
+		
 		/**
 		 * KT is exiting, shutdown the core
 		 */
@@ -160,6 +144,9 @@ namespace kt
 		virtual void stop(bt::TorrentInterface* tc);
 		virtual void stop(QList<bt::TorrentInterface*> & todo);
 		virtual void remove(bt::TorrentInterface* tc,bool data_to);
+		virtual void remove(QList<bt::TorrentInterface*> & todo,bool data_to);
+		virtual void pause(bt::TorrentInterface* tc);
+		virtual void pause(QList<bt::TorrentInterface*> & todo);
 		
 		/**
 		 * A torrent is about to be started. We will do some file checks upon this signal.
@@ -257,6 +244,10 @@ namespace kt
 		void rollback(const QList<bt::TorrentInterface*> & success);
 		void connectSignals(bt::TorrentInterface* tc);
 		bool init(bt::TorrentControl* tc,const QString & group,const QString & location,bool silently);
+		QString locationHint() const;
+		void startServers();
+		void startTCPServer(bt::Uint16 port);
+		void startUTPServer(bt::Uint16 port);
 
 	public:
 		void loadTorrents();
@@ -271,6 +262,7 @@ namespace kt
 		void autoCheckData(bt::TorrentInterface* tc);
 		void checkForKDE3Torrents();
 		void closeScanListener(ScanListener* sl);
+		void delayedRemove(bt::TorrentInterface* tc);
 
 	private:
 		GUI* gui;
@@ -286,6 +278,7 @@ namespace kt
 		QMap<KUrl,QString> add_to_groups; // Map to keep track of which group to add a torrent to
 		int sleep_suppression_cookie;
 		QMap<bt::TorrentInterface*,ScanListener*> active_scans;
+		QMap<bt::TorrentInterface*,bool> delayed_removal;
 	};
 }
 

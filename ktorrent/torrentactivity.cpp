@@ -18,9 +18,12 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 #include <QBoxLayout>
+#include <QToolBar>
+#include <QTreeView>
 #include <QToolButton>
-#include <klocale.h>
-#include <kicon.h>
+#include <KConfigGroup>
+#include <KLocale>
+#include <KIcon>
 #include <gui/tabbarwidget.h>
 #include <groups/groupmanager.h>
 #include "torrentactivity.h"
@@ -50,6 +53,7 @@ namespace kt
 		hsplit = new QSplitter(Qt::Horizontal,vsplit);
 		
 		tabs = new KTabWidget(hsplit);
+		tabs->setMovable(true);
 		connect(tabs,SIGNAL(currentChanged(int)),this,SLOT(currentTabPageChanged(int)));
 		group_view = new GroupView(core->getGroupManager(),view_man,gui,hsplit);
 		connect(group_view,SIGNAL(openNewTab(kt::Group*)),this,SLOT(openNewView(kt::Group*)));
@@ -194,7 +198,7 @@ namespace kt
 	
 	void TorrentActivity::saveState(KSharedConfigPtr cfg)
 	{
-		view_man->saveState(cfg);
+		view_man->saveState(cfg,tabs);
 		group_view->saveState(cfg);
 		qm->saveState(cfg);
 		tool_views->saveState(cfg,"TorrentActivityBottomTabBar");

@@ -34,7 +34,7 @@ namespace bt
 {
 
 	
-	class PeerManager;
+	class PeerConnector;
 
 
 	/**
@@ -48,18 +48,18 @@ namespace bt
 	{
 		Q_OBJECT
 	public:
-
 		/**
 		 * Connect to a remote host first and authenicate it.
 		 * @param ip IP-address of host
 		 * @param port Port of host
+		 * @param proto Transport protocol to use
 		 * @param info_hash Info hash
 		 * @param peer_id Peer ID
 		 * @param pman PeerManager
 		 */
-		Authenticate(const QString & ip,Uint16 port,
+		Authenticate(const QString & ip,Uint16 port,TransportProtocol proto,
 					 const SHA1Hash & info_hash,const PeerID & peer_id,
-					 PeerManager* pman);
+					 PeerConnector* pcon);
 		
 		virtual ~Authenticate();
 
@@ -79,10 +79,13 @@ namespace bt
 		const QString & getIP() const {return host;}
 		Uint16 getPort() const {return port;}
 		
+	public slots:
+		/// Stop the authentication
+		void stop();
+		
 	protected slots:
 		virtual void onReadyWrite();
 		virtual void onReadyRead();
-		void onPeerManagerDestroyed();
 		
 	protected:
 		void onFinish(bool succes);
@@ -95,7 +98,7 @@ namespace bt
 		QString host;
 		Uint16 port;
 		bool succes;
-		PeerManager* pman;
+		PeerConnector* pcon;
 		net::Socks* socks;
 	};
 }

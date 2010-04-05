@@ -46,9 +46,9 @@ namespace kt
 		setZValue(3);
 		setHandlesChildEvents(true);
 		
-		if (item->paused)
+		if (item->suspended)
 		{
-			setBrush(QBrush(SchedulerPluginSettings::pausedColor()));
+			setBrush(QBrush(SchedulerPluginSettings::suspendedColor()));
 		}
 		else
 		{
@@ -72,17 +72,17 @@ namespace kt
 		setRect(r);
 		setPos(QPointF(0,0));
 		QString text;
-		if (item->paused)
+		if (item->suspended)
 		{
-			setBrush(QBrush(SchedulerPluginSettings::pausedColor()));
-			text = i18n("Paused");
+			setBrush(QBrush(SchedulerPluginSettings::suspendedColor()));
+			text = i18n("Suspended");
 		}
 		else
 		{
 			setBrush(QBrush(SchedulerPluginSettings::itemColor()));
-			text = i18n("%1 Down\n%2 Up",
-						BytesPerSecToString(item->download_limit * 1024),
-						BytesPerSecToString(item->upload_limit * 1024));
+			QString ds = item->download_limit == 0 ? i18n("Unlimited") : BytesPerSecToString(item->download_limit * 1024);
+			QString us = item->upload_limit == 0 ? i18n("Unlimited") : BytesPerSecToString(item->upload_limit * 1024); 
+			text = i18n("%1 Down\n%2 Up",ds,us);
 		}
 		
 		if (text_item == 0)

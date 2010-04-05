@@ -20,9 +20,11 @@
 #ifndef BTFUNCTIONS_H
 #define BTFUNCTIONS_H
 
-#include "constants.h"
+
 #include <btcore_export.h>
-class QString;
+#include <QString>
+#include "constants.h"
+
 
 namespace bt
 {
@@ -53,7 +55,7 @@ namespace bt
 	
 	BTCORE_EXPORT extern TimeStamp global_time_stamp;
 	
-	inline TimeStamp GetCurrentTime() {return global_time_stamp;}
+	inline TimeStamp CurrentTime() {return global_time_stamp;}
 	
 	BTCORE_EXPORT TimeStamp Now();
 	
@@ -93,6 +95,11 @@ namespace bt
 			return 1;
 		else
 			return 0;
+	}
+	
+	template<class T> QString hex(T val)
+	{
+		return QString("0x%1").arg(val,0,16);
 	}
 
 #ifdef Q_WS_WIN

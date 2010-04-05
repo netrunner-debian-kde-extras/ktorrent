@@ -29,6 +29,7 @@ namespace bt
 {
 	class TorrentInterface;
 	class MagnetLink;
+	class TorrentCreator;
 }
 
 namespace kt
@@ -113,6 +114,18 @@ namespace kt
 		 * @param todo The list of torrents
 		 */
 		virtual void stop(QList<bt::TorrentInterface*> & todo) = 0;
+		
+		/**
+		 * Pause a torrent
+		 * @param tc The torrent
+		 */
+		virtual void pause(bt::TorrentInterface* tc) = 0;
+		
+		/**
+		 * Pause a list of torrents.
+		 * @param todo The list of torrents
+		 */
+		virtual void pause(QList<bt::TorrentInterface*> & todo) = 0;
 
 		/// Get CurrentStats structure
 		virtual CurrentStats getStats() = 0;
@@ -178,6 +191,13 @@ namespace kt
 		virtual void remove(bt::TorrentInterface* tc,bool data_to) = 0;
 		
 		/**
+		 * Remove a list of downloads. 
+		 * @param todo The torrent list
+		 * @param data_to Whether or not to delete the file data to
+		 */
+		virtual void remove(QList<bt::TorrentInterface*> & todo,bool data_to) = 0; 
+		
+		/**
 		 * Find the next free torX dir.
 		 * @return Path to the dir (including the torX part)
 		 */
@@ -190,13 +210,13 @@ namespace kt
 		virtual void loadExistingTorrent(const QString & tor_dir) = 0;
 		
 		/**
-		 * Sets global paused state for all torrents (QueueManager) and stopps all torrents.
+		 * Sets global suspended state for all torrents (QueueManager) and stopps all torrents.
 		 * No torrents will be automatically started/stopped.
 		 */
-		virtual void setPausedState(bool pause) = 0;
+		virtual void setSuspendedState(bool suspend) = 0;
 		
-		/// Gets the globla paused state
-		virtual bool getPausedState() = 0;
+		/// Gets the globla suspended state
+		virtual bool getSuspendedState() = 0;
 		
 		/// Get the QueueManager
 		virtual kt::QueueManager* getQueueManager() = 0;
@@ -215,6 +235,9 @@ namespace kt
 		
 		/// Load a magnet link silently
 		virtual void loadSilently(const bt::MagnetLink & mlink,const QString & group) = 0;
+		
+		/// Create a torrent (Note: hash calculation should be finished, and torrent should have been saved)
+		virtual bt::TorrentInterface* createTorrent(bt::TorrentCreator* tc,bool seed) = 0;
 	signals:
 		/**
 		 * Seeing that when load returns the loading process may not have finished yet,

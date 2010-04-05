@@ -454,9 +454,9 @@ namespace bt
 		return piece;
 	}
 	
-	PieceData* MultiFileCache::preparePiece(Chunk* c,Uint32 off,Uint32 length)
+	PieceDataPtr MultiFileCache::preparePiece(Chunk* c,Uint32 off,Uint32 length)
 	{
-		PieceData* piece = findPiece(c,off,length);
+		PieceDataPtr piece = findPiece(c,off,length);
 		if (piece)
 			return piece;
 		
@@ -494,9 +494,9 @@ namespace bt
 		}
 	}
 
-	PieceData* MultiFileCache::loadPiece(Chunk* c,Uint32 off,Uint32 length)
+	PieceDataPtr MultiFileCache::loadPiece(Chunk* c,Uint32 off,Uint32 length)
 	{
-		PieceData* piece = findPiece(c,off,length);
+		PieceDataPtr piece = findPiece(c,off,length);
 		if (piece)
 			return piece;
 
@@ -584,26 +584,15 @@ namespace bt
 		return piece;
 	}
 
-	void MultiFileCache::savePiece(PieceData* piece)
+	void MultiFileCache::savePiece(PieceDataPtr piece)
 	{
 		// in mapped mode unload the piece if not in use
 		if (piece->mapped())
-		{
-			if (piece->inUse())
-				return;
-			
-			piece->unload();
-			clearPiece(piece);
-			return; 
-		}
+			return;
 		
 		Uint8* data = piece->data();
 		if (!data) // this should not happen but just in case
-		{
-			if (!piece->inUse())
-				clearPiece(piece);
 			return;
-		}
 		
 		Chunk* c = piece->parentChunk();
 		QList<Uint32> tflist;
@@ -665,9 +654,6 @@ namespace bt
 			
 			chunk_off += cdata;
 		}
-		
-		if (!piece->inUse())
-			clearPiece(piece);
 	}
 	
 	void MultiFileCache::downloadStatusChanged(TorrentFile* tf, bool download)
@@ -770,31 +756,6 @@ namespace bt
 		MakeFilePath(output_file);
 		// create the output file
 		bt::Touch(output_file);
-		// truncate it
-		try
-		{
-			bool res = false;
-			
-#ifdef HAVE_XFS_XFS_H
-			if (Cache::preallocateFully())
-			{
-				res = XfsPreallocate(output_file, tf->getSize()) );
-			}
-#endif
-			
-			if(! res)
-			{
-				bt::TruncateFile(output_file,tf->getSize());
-			}
-		}
-		catch (bt::Error & e)
-		{
-			// first attempt failed, must be fat so try that
-			if (!FatPreallocate(output_file,tf->getSize()))
-			{	
-				throw Error(i18n("Cannot preallocate diskspace : %1",strerror(errno)));
-			}
-		}
 		
 		Uint32 cs = (tf->getFirstChunk() == tor.getNumChunks() - 1) ? tor.getLastChunkSize() : tor.getChunkSize();
 		
@@ -809,17 +770,24 @@ namespace bt
 		
 		try
 		{
-			dnd.readFirstChunk(tmp,0,cs - tf->getFirstChunkOffset());
-			fptr.write(tmp,cs - tf->getFirstChunkOffset());
+			Uint32 to_read = cs - tf->getFirstChunkOffset();
+			if (to_read > tf->getSize()) // check for files which are smaller then a chunk
+				to_read = tf->getSize();
+			
+			to_read = dnd.readFirstChunk(tmp,0,to_read);
+			if (to_read > 0)
+				fptr.write(tmp,to_read);
 			
 			if (tf->getFirstChunk() != tf->getLastChunk())
 			{
 				Uint64 off = FileOffset(tf->getLastChunk(),*tf,tor.getChunkSize());
 				fptr.seek(File::BEGIN,off);
-				dnd.readLastChunk(tmp,0,tf->getLastChunkSize());
-				fptr.write(tmp,tf->getLastChunkSize());
+				to_read = dnd.readLastChunk(tmp,0,tf->getLastChunkSize());
+				if (to_read > 0)
+					fptr.write(tmp,to_read);
 			}
 			delete [] tmp;
+			
 		}
 		catch (...)
 		{

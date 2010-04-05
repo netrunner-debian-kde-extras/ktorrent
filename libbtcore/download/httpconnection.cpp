@@ -85,7 +85,7 @@ namespace bt
 	bool HttpConnection::closed() const
 	{
 		QMutexLocker locker(&mutex);
-		return state == CLOSED || (sock && !sock->ok());
+		return state == CLOSED || (sock && !sock->socketDevice()->ok());
 	}
 	
 	bool HttpConnection::ready() const
@@ -143,7 +143,7 @@ namespace bt
 		QMutexLocker locker(&mutex);
 		if (state == CONNECTING)
 		{
-			if (sock->connectSuccesFull())
+			if (sock->socketDevice()->connectSuccesFull())
 			{
 				state = ACTIVE;
 				status = i18n("Connected");
@@ -156,7 +156,7 @@ namespace bt
 			}
 			connect_timer.stop();
 		}
-		else if (state == ACTIVE)
+		else if (state == ACTIVE && request)
 		{
 			HttpGet* g = request;
 			if (g->request_sent)
@@ -201,21 +201,21 @@ namespace bt
 			if (!sock)
 			{
 				sock = new net::BufferedSocket(true,addr.ipVersion());
-				sock->setNonBlocking();
+				sock->socketDevice()->setBlocking(false);
 				sock->setReader(this);
 				sock->setWriter(this);
 				sock->setGroupID(up_gid,true);
 				sock->setGroupID(down_gid,false);
 			}
 			
-			if (sock->connectTo(addr))
+			if (sock->socketDevice()->connectTo(addr))
 			{
 				status = i18n("Connected");
 				state = ACTIVE;
 				net::SocketMonitor::instance().add(sock);
 				net::SocketMonitor::instance().signalPacketReady();
 			}
-			else if (sock->state() == net::Socket::CONNECTING)
+			else if (sock->socketDevice()->state() == net::Socket::CONNECTING)
 			{
 				status = i18n("Connecting");
 				state = CONNECTING;
@@ -291,7 +291,7 @@ namespace bt
 				state = CLOSED;
 				Out(SYS_CON|LOG_DEBUG) << "HttpConnection: closing connection due to redirection" << endl;
 				// reset connection
-				sock->reset();
+				sock->socketDevice()->reset();
 			}
 		}
 		
@@ -303,7 +303,7 @@ namespace bt
 		QMutexLocker locker(&mutex);
 		if (sock)
 		{
-			sock->updateSpeeds(bt::GetCurrentTime());
+			sock->updateSpeeds(bt::CurrentTime());
 			return sock->getDownloadRate();
 		}
 		else

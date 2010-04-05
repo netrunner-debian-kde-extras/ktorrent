@@ -50,9 +50,12 @@ namespace kt
 		max_seeds = 0; //for testing. Needs to be added to Settings::
 		
 		keep_seeding = true; //test. Will be passed from Core
-		paused_state = false;
+		suspended_state = false;
 		exiting = false;
 		ordering = false;
+		Solid::Networking::Notifier* notifier = Solid::Networking::notifier();
+		connect(notifier,SIGNAL(statusChanged(Solid::Networking::Status)),
+				this,SLOT(networkStatusChanged(Solid::Networking::Status)));
 	}
 
 
@@ -72,7 +75,7 @@ namespace kt
 
 	void QueueManager::remove(bt::TorrentInterface* tc)
 	{
-		paused_torrents.erase(tc);
+		suspended_torrents.erase(tc);
 		int index = downloads.indexOf(tc);
 		if (index != -1)
 			downloads.takeAt(index)->deleteLater();
@@ -82,7 +85,7 @@ namespace kt
 	{
 		exiting = true;
 		Uint32 nd = downloads.count();
-		paused_torrents.clear();
+		suspended_torrents.clear();
 		
 		// wait for a second to allow all http jobs to send the stopped event
 		if (nd > 0)
@@ -155,7 +158,6 @@ namespace kt
 		else
 		{
 			tc->setAllowedToStart(true);
-			bool start_tc = false;
 			if (tc->getJobQueue()->runningJobs())
 				return BUSY_WITH_JOB;
 			
@@ -177,16 +179,7 @@ namespace kt
 				}
 			}
 			
-			if (s.completed)
-				start_tc = (max_seeds == 0 || getNumRunning(SEEDS) < max_seeds);
-			else
-				start_tc = (max_downloads == 0 || getNumRunning(DOWNLOADS) < max_downloads);
-
-			if (start_tc)
-				orderQueue();
-			else
-				return QM_LIMITS_REACHED;
-			
+			orderQueue();
 			return START_OK;
 		}
 	}
@@ -545,9 +538,12 @@ namespace kt
 		if (ordering || !downloads.count() || exiting)
 			return;
 		
-		downloads.sort(); // sort downloads, even when paused so that the QM widget is updated
-		if (Settings::manuallyControlTorrents() || paused_state)
+		downloads.sort(); // sort downloads, even when suspended so that the QM widget is updated
+		if (Settings::manuallyControlTorrents() || suspended_state)
+		{
+			emit queueOrdered();
 			return;
+		}
 		
 		ordering = true; // make sure that recursive entering of this function is not possible
 		
@@ -669,24 +665,33 @@ namespace kt
 		orderQueue();
 	}
 	
-	void QueueManager::setPausedState(bool pause)
+	void QueueManager::torrentsRemoved(QList<bt::TorrentInterface*>& tors)
 	{
-		if (paused_state == pause)
+		foreach (bt::TorrentInterface* tc,tors)
+			remove(tc);
+		rearrangeQueue();
+		orderQueue();
+	}
+
+	
+	void QueueManager::setSuspendedState(bool suspend)
+	{
+		if (suspended_state == suspend)
 			return;
 		
-		paused_state = pause;	
-		if(!pause)
+		suspended_state = suspend;	
+		if(!suspend)
 		{
 			UpdateCurrentTime();
-			std::set<bt::TorrentInterface*>::iterator it = paused_torrents.begin();
-			while (it != paused_torrents.end())
+			std::set<bt::TorrentInterface*>::iterator it = suspended_torrents.begin();
+			while (it != suspended_torrents.end())
 			{
 				TorrentInterface* tc = *it;
 				startSafely(tc);
 				it++;
 			}
 			
-			paused_torrents.clear();
+			suspended_torrents.clear();
 			orderQueue();
 		}
 		else
@@ -696,23 +701,18 @@ namespace kt
 				const TorrentStats & s = tc->getStats();
 				if (s.running)
 				{
-					paused_torrents.insert(tc);
+					suspended_torrents.insert(tc);
 					stopSafely(tc,false);
 				}
 			}
 		}
-		emit pauseStateChanged(paused_state);
+		emit suspendStateChanged(suspended_state);
 	}
 	
 	void QueueManager::rearrangeQueue()
 	{
 		downloads.sort();
-		int prio = downloads.count();
-		// make sure everybody has an unique priority
-		foreach (bt::TorrentInterface* tc,downloads)
-		{
-			tc->setPriority(prio--);
-		}
+		reindexQueue();
 	}
 	
 	void QueueManager::startSafely(bt::TorrentInterface* tc)
@@ -791,7 +791,7 @@ namespace kt
 			return;
 		
 		foreach (bt::TorrentInterface* tc,stalled)
-			Out(SYS_GEN | LOG_NOTICE) << "The torrent " << tc->getStats().torrent_name << " has stalled longer then " << min_stall_time << " minutes, decreasing it's priority" << endl;
+			Out(SYS_GEN | LOG_NOTICE) << "The torrent " << tc->getStats().torrent_name << " has stalled longer than " << min_stall_time << " minutes, decreasing its priority" << endl;
 	
 		downloads.clear();
 		downloads += newlist;
@@ -804,6 +804,44 @@ namespace kt
 		}
 		orderQueue();
 	}
+	
+	void QueueManager::networkStatusChanged(Solid::Networking::Status status)
+	{
+		if (status == Solid::Networking::Connected)
+		{
+			Out(SYS_GEN|LOG_IMPORTANT) << "Network is up" << endl;
+			// if the network has gone down, longer then 2 minutes
+			// all the connections are probably stale, so tell all 
+			// running torrents, that they need to reannounce and kill stale peers
+			if (network_down_time.isValid() && network_down_time.secsTo(QDateTime::currentDateTime()) > 120)
+			{
+				foreach (bt::TorrentInterface* tc,downloads)
+				{
+					if (tc->getStats().running)
+						tc->networkUp();
+				}
+			}
+			
+			network_down_time = QDateTime();
+		}
+		else if (status == Solid::Networking::Unconnected)
+		{
+			Out(SYS_GEN|LOG_IMPORTANT) << "Network is down" << endl;
+			network_down_time = QDateTime::currentDateTime();
+		}
+	}
+	
+	void QueueManager::reindexQueue()
+	{
+		int prio = downloads.count();
+		// make sure everybody has an unique priority
+		foreach (bt::TorrentInterface* tc,downloads)
+		{
+			tc->setPriority(prio--);
+		}
+	}
+
+	
 	/////////////////////////////////////////////////////////////////////////////////////////////
 
 	

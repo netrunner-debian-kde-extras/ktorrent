@@ -57,6 +57,7 @@ namespace mse
 	public:
 		StreamSocket(int ip_version);
 		StreamSocket(int fd,int ip_version);
+		StreamSocket(net::SocketDevice* sock);
 		virtual ~StreamSocket();
 		
 		/// Recalculate upload and download speed
@@ -126,7 +127,7 @@ namespace mse
 		bool ok() const;
 		
 		/// Get the file descriptor
-		int fd() const {return sock->fd();}
+		net::SocketDevice* socketDevice() {return sock ? sock->socketDevice() : 0;}
 		
 		/// Start monitoring of this socket by the monitor thread
 		void startMonitoring(net::SocketReader* rdr,net::SocketWriter* wrt);

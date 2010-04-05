@@ -99,6 +99,7 @@ namespace kt
 		Q_SCRIPTABLE uint numFiles() const;
 		Q_SCRIPTABLE QString dataDir() const;
 		Q_SCRIPTABLE QString torDir() const;
+		Q_SCRIPTABLE QString pathOnDisk() const;
 		Q_SCRIPTABLE QString filePath(uint file_index) const;
 		Q_SCRIPTABLE QString filePathOnDisk(uint file_index) const;
 		Q_SCRIPTABLE qulonglong fileSize(uint file_index) const;
@@ -112,6 +113,12 @@ namespace kt
 		
 		// Stats
 		Q_SCRIPTABLE QByteArray stats() const;
+		
+		// Max share ratio and seed time
+		Q_SCRIPTABLE void setMaxShareRatio(float ratio);
+		Q_SCRIPTABLE float getMaxShareRatio() const;
+		Q_SCRIPTABLE void setMaxSeedTime(float hours);
+		Q_SCRIPTABLE float getMaxSeedTime() const;
 		
 		
 	Q_SIGNALS:

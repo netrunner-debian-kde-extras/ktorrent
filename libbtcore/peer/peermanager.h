@@ -20,9 +20,9 @@
 #ifndef BTPEERMANAGER_H
 #define BTPEERMANAGER_H
 
-#include <map>
-#include <qobject.h>
-#include <qlist.h>
+
+#include <QList>
+#include <QSet>
 #include <util/ptrmap.h>
 #include <peer/peer.h>
 #include <peer/peerid.h>
@@ -44,6 +44,7 @@ namespace KNetwork
 
 namespace bt
 {
+	class PeerConnector;
 	class Piece;
 	class Torrent;
 	class Authenticate;
@@ -89,6 +90,16 @@ namespace bt
 		 * Initiate new connections. 
 		 */
 		void update();
+		
+		/**
+		 * Pause the peer connections
+		 */
+		void pause();
+		
+		/**
+		 * Unpause the peer connections 
+		 */
+		void unpause();
 		
 		/**
 		 * Remove dead peers.
@@ -144,6 +155,11 @@ namespace bt
 		 * @param older_then Time in milliseconds
 		 */
 		void killChokedPeers(Uint32 older_then);
+		
+		/**
+		 * Kill all peers who appear to be stale
+		 */
+		void killStalePeers();
 		
 		Uint32 getNumConnectedPeers() const {return peer_list.count();}
 		Uint32 getNumPending() const {return num_pending;}
@@ -201,9 +217,10 @@ namespace bt
 		/**
 		 * A peer has authenticated.
 		 * @param auth The Authenticate object
+		 * @param pcon The PeerConnector
 		 * @param ok Whether or not the attempt was succesfull
 		 */
-		void peerAuthenticated(Authenticate* auth,bool ok);
+		void peerAuthenticated(Authenticate* auth,PeerConnector* pcon,bool ok);
 		
 		/**
 		 * Save the IP's and port numbers of all peers.
@@ -282,6 +299,8 @@ namespace bt
 		bool pex_on;
 		bool wanted_changed;
 		PieceHandler* piece_handler;
+		bool paused;
+		QSet<PeerConnector*> connectors;
 		
 		static Uint32 max_connections;
 		static Uint32 max_total_connections;
