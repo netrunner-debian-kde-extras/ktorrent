@@ -21,6 +21,7 @@
 #include <QtAlgorithms>
 #include <QFile>
 #include <QTextStream>
+#include <QDateTime>
 #include <k3resolver.h>
 #include <util/log.h>
 #include <util/file.h>
@@ -33,19 +34,14 @@
 #include <klocale.h>
 #include <peer/accessmanager.h>
 #include <torrent/globals.h>
+#include <torrent/server.h>
 #include <dht/dhtbase.h>
 #include "packetwriter.h"
 #include "chunkcounter.h"
 #include "authenticationmonitor.h"
-#include <qdatetime.h>
 #include "peer.h"
-#include <torrent/globals.h>
-#include <torrent/server.h>
 #include "authenticate.h"
-
-#ifdef GetCurrentTime
-#undef GetCurrentTime
-#endif
+#include "peerconnector.h"
 
 using namespace KNetwork;
 
@@ -65,13 +61,14 @@ namespace bt
 		num_pending = 0;
 		pex_on = !tor.isPrivate();
 		piece_handler = 0;
+		paused = false;
 	}
 
 
 	PeerManager::~PeerManager()
 	{
 		delete cnt;
-		Globals::instance().getServer().removePeerManager(this);
+		ServerInterface::removePeerManager(this);
 		
 		if ((Uint32)peer_list.count() <= total_connections)
 			total_connections -= peer_list.count();
@@ -80,6 +77,32 @@ namespace bt
 		
 		qDeleteAll(peer_list.begin(),peer_list.end());
 		peer_list.clear();
+	}
+
+	void PeerManager::pause()
+	{
+		if (paused)
+			return;
+		
+		foreach (Peer* p,peer_list)
+		{
+			p->pause();
+		}
+		paused = true;
+	}
+
+	void PeerManager::unpause()
+	{
+		if (!paused)
+			return;
+		
+		foreach (Peer* p,peer_list)
+		{
+			p->unpause();
+			if (p->hasWantedChunks(wanted_chunks)) // send interested when it has wanted chunks
+				p->getPacketWriter().sendInterested();
+		}
+		paused = false;
 	}
 
 	void PeerManager::update()
@@ -122,24 +145,9 @@ namespace bt
 		}
 		if (wanted_changed)
 		{
-			i = peer_list.begin();
-			while (i != peer_list.end())
+			foreach (Peer* p,peer_list)
 			{
-				Peer* p = *i;
-				const BitSet & peer_bitset = p->getBitSet();
-				Uint32 index = 0;
-				Uint32 num_bits = peer_bitset.getNumBits();
-				bool interested = false;
-				while (index < num_bits)
-				{
-					if(wanted_chunks.get(index) && peer_bitset.get(index))
-					{
-						interested = true;
-						break;
-					}
-					index++;
-				}
-				if (interested)
+				if (p->hasWantedChunks(wanted_chunks))
 					p->getPacketWriter().sendInterested();
 				else
 					p->getPacketWriter().sendNotInterested();
@@ -152,7 +160,7 @@ namespace bt
 	void PeerManager::killChokedPeers(Uint32 older_then)
 	{
 		Out(SYS_CON|LOG_DEBUG) << "Getting rid of peers which have been choked for a long time" << endl;
-		TimeStamp now = bt::GetCurrentTime();
+		TimeStamp now = bt::CurrentTime();
 		QList<Peer*>::iterator i = peer_list.begin();
 		Uint32 num_killed = 0;
 		while (i != peer_list.end() && num_killed < 20)
@@ -266,7 +274,7 @@ namespace bt
 
 	void PeerManager::have(Peer* p,Uint32 index)
 	{
-		if (wanted_chunks.get(index))
+		if (wanted_chunks.get(index) && !paused)
 			p->getPacketWriter().sendInterested();
 		available_chunks.set(index,true);
 		cnt->inc(index);
@@ -285,7 +293,7 @@ namespace bt
 				cnt->inc(i);
 			}
 		}
-		if (interested)
+		if (interested && !paused)
 			p->getPacketWriter().sendInterested();
 	}
 	
@@ -310,41 +318,24 @@ namespace bt
 		createPeer(sock,peer_id,support,false);
 	}
 	
-	void PeerManager::peerAuthenticated(Authenticate* auth,bool ok)
+	void PeerManager::peerAuthenticated(Authenticate* auth,PeerConnector* pcon,bool ok)
 	{
 		if (!started)
+		{
+			connectors.remove(pcon);
+			pcon->deleteLater();
 			return;
+		}
 		
 		if (total_connections > 0)
 			total_connections--;
 		
 		num_pending--;
-		if (!ok)
-		{
-			mse::EncryptedAuthenticate* a = dynamic_cast<mse::EncryptedAuthenticate*>(auth);
-			if (a && Globals::instance().getServer().unencryptedConnectionsAllowed())
-			{
-				// if possible try unencrypted
-				QString ip = a->getIP();
-				Uint16 port = a->getPort();
-				Authenticate* st = new Authenticate(ip,port,tor.getInfoHash(),tor.getPeerID(),this);
-				if (auth->isLocal())
-					st->setLocal(true);
-				
-				connect(this,SIGNAL(stopped()),st,SLOT(onPeerManagerDestroyed()));
-				AuthenticationMonitor::instance().add(st);
-				num_pending++;
-				total_connections++;
-			}
-			return;
-		}
+		if (ok && !connectedTo(auth->getPeerID()))
+			createPeer(auth->takeSocket(),auth->getPeerID(),auth->supportedExtensions(),auth->isLocal());
 		
-		if (connectedTo(auth->getPeerID()))
-		{
-			return;
-		}
-			
-		createPeer(auth->takeSocket(),auth->getPeerID(),auth->supportedExtensions(),auth->isLocal());
+		connectors.remove(pcon);
+		pcon->deleteLater();
 	}
 	
 	void PeerManager::createPeer(mse::StreamSocket* sock,const PeerID & peer_id,Uint32 support,bool local)
@@ -356,7 +347,7 @@ namespace bt
 		newPeer(peer);
 		peer->setPexEnabled(pex_on);
 		// send extension protocol handshake
-		bt::Uint16 port = Globals::instance().getServer().getPortInUse();
+		bt::Uint16 port = ServerInterface::getPort();
 		peer->sendExtProtHandshake(port,tor.getMetaData().size());
 	}
 		
@@ -391,6 +382,9 @@ namespace bt
 	
 	void PeerManager::connectToPeers()
 	{
+		if(paused)
+			return;
+		
 		if (potential_peers.size() == 0)
 			return;
 		
@@ -432,21 +426,9 @@ namespace bt
 			
 			if (aman.allowed(itr->first) && !connectedTo(itr->first,itr->second.port))
 			{
-			//	Out() << "EncryptedAuthenticate : " << pp.ip << ":" << pp.port << endl;
-				Authenticate* auth = 0;
 				const PotentialPeer & pp = itr->second;
-				
-				if (Globals::instance().getServer().isEncryptionEnabled())
-					auth = new mse::EncryptedAuthenticate(pp.ip,pp.port,tor.getInfoHash(),tor.getPeerID(),this);
-				else
-					auth = new Authenticate(pp.ip,pp.port,tor.getInfoHash(),tor.getPeerID(),this);
-				
-				if (pp.local)
-					auth->setLocal(true);
-				
-				connect(this,SIGNAL(stopped()),auth,SLOT(onPeerManagerDestroyed()));
-				
-				AuthenticationMonitor::instance().add(auth);
+				PeerConnector* pcon = new PeerConnector(pp.ip,pp.port,pp.local,this);
+				connectors.insert(pcon);
 				num_pending++;
 				total_connections++;
 			}
@@ -548,7 +530,8 @@ namespace bt
 	void PeerManager::start()
 	{
 		started = true;
-		Globals::instance().getServer().addPeerManager(this);
+		unpause();
+		ServerInterface::addPeerManager(this);
 	}
 		
 	
@@ -557,7 +540,10 @@ namespace bt
 		cnt->reset();
 		available_chunks.clear();
 		started = false;
-		Globals::instance().getServer().removePeerManager(this);
+		ServerInterface::removePeerManager(this);
+		foreach (PeerConnector* pcon,connectors)
+			pcon->deleteLater();
+		connectors.clear();
 		stopped();
 		num_pending = 0;
 	}
@@ -655,7 +641,7 @@ namespace bt
 			if (!p->isKilled())
 			{
 				p->setPexEnabled(on);
-				bt::Uint16 port = Globals::instance().getServer().getPortInUse();
+				bt::Uint16 port = ServerInterface::getPort();
 				p->sendExtProtHandshake(port,tor.getMetaData().size());
 			}
 			i++;
@@ -688,6 +674,16 @@ namespace bt
 	{
 		piece_handler = ph;
 	}
+	
+	void PeerManager::killStalePeers()
+	{
+		foreach (Peer* p,peer_list)
+		{
+			if (p->getDownloadRate() == 0 && p->getUploadRate() == 0)
+				p->kill();
+		}
+	}
+
 }
 
 #include "peermanager.moc"

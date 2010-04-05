@@ -90,14 +90,10 @@ void MagnetTest::start()
 	
 	
 	Uint16 i = 0;
-	do
-	{
-		Globals::instance().initServer(port + i);
+	while (!Globals::instance().initTCPServer(port + i) && i < 10)
 		i++;
-	}
-	while (!Globals::instance().getServer().isOK() && i < 10);
 	
-	if (Globals::instance().getServer().isOK())
+	if (i != 10)
 	{
 		Out(SYS_GEN|LOG_NOTICE) << "Bound to port " << (port + i - 1) << endl;
 	}

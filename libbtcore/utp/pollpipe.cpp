@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2009 by Joris Guisson                                   *
+ *   Copyright (C) 2010 by Joris Guisson                                   *
  *   joris.guisson@gmail.com                                               *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,51 +18,50 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#include <QDBusConnection>
-#include "utpdaemon.h"
-#include "utpdaemonadaptor.h"
+#include <util/log.h>
+#include "pollpipe.h"
+#include "connection.h"
+
+using namespace bt;
 
 namespace utp
 {
-	UTPDaemon::UTPDaemon(quint16 port,QObject* parent): QObject(parent),port(port),socket(0)
-	{
-		new UTPDaemonAdaptor(this);
-		QDBusConnection dbus = QDBusConnection::sessionBus();
-		dbus.registerObject("/UTPDaemon", this);
-		dbus.registerService("org.ktorrent.UTPDaemon");
-		socket = new QUdpSocket(this);
-		connect(socket,SIGNAL(readyRead()),this,SLOT(handlePacket()));
-	}
 	
-	UTPDaemon::~UTPDaemon()
+	PollPipe::PollPipe(net::Poll::Mode mode) : mode(mode),poll_index(-1)
+	{
+	}
+		
+	PollPipe::~PollPipe()
 	{
 	}
 
-	bool UTPDaemon::start()
+	void PollPipe::prepare(net::Poll* p, bt::Uint16 conn_id)
 	{
-		if (!socket->bind(port,QUdpSocket::ShareAddress|QUdpSocket::ReuseAddressHint))
-		{
-			qWarning() << "Failed to bind to port " << port << ": " << socket->errorString();
+		QMutexLocker lock(&mutex);
+		conn_ids.insert(conn_id);
+		if (poll_index < 0)
+			poll_index = p->add(this);
+	}
+
+
+	bool PollPipe::readyToWakeUp(Connection* conn) const
+	{
+		QMutexLocker lock(&mutex);
+		if (poll_index < 0 || !conn_ids.contains(conn->receiveConnectionID()))
 			return false;
-		}
 		
-		return true;
-	}
-		
-	void UTPDaemon::handlePacket()
-	{
-		int ba = socket->bytesAvailable();
-		QByteArray packet(ba,0);
-		QHostAddress addr;
-		quint16 packet_port = 0;
-		if (socket->readDatagram(packet.data(),ba,&addr,&packet_port) == ba)
-		{
-		}
+		if (mode == net::Poll::INPUT)
+			return conn->bytesAvailable() > 0 || conn->connectionState() == CS_CLOSED;
+		else
+			return conn->isWriteable();
 	}
 
-	QString UTPDaemon::connectToPeer(const QString& ip, int port)
+	void PollPipe::reset()
 	{
-		return QString();
+		QMutexLocker lock(&mutex);
+		poll_index = -1;
+		conn_ids.clear();
 	}
 
 }
+

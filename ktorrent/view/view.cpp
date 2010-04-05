@@ -193,6 +193,14 @@ namespace kt
 			core->stop(sel);
 	}
 
+	void View::pauseTorrents()
+	{
+		QList<bt::TorrentInterface*> sel;
+		getSelection(sel);
+		if (sel.count() > 0)
+			core->pause(sel);
+	}
+	
 	void View::removeTorrents()
 	{
 		QList<bt::TorrentInterface*> sel;
@@ -235,11 +243,7 @@ namespace kt
 		if (KMessageBox::warningYesNo(this,msg, i18n("Remove Torrent"), KStandardGuiItem::remove(),KStandardGuiItem::cancel()) == KMessageBox::No)
 			return;
 
-		foreach(bt::TorrentInterface* tc,sel)
-		{
-			if (tc && !tc->getJobQueue()->runningJobs())
-				core->remove(tc,true);
-		}
+		core->remove(sel,true);
 	}
 
 	void View::startAllTorrents()

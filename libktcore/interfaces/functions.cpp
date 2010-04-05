@@ -100,11 +100,11 @@ namespace kt
 		
 		if (Settings::useEncryption())
 		{
-			Globals::instance().getServer().enableEncryption(Settings::allowUnencryptedConnections());
+			ServerInterface::enableEncryption(Settings::allowUnencryptedConnections());
 		}
 		else
 		{
-			Globals::instance().getServer().disableEncryption();
+			ServerInterface::disableEncryption();
 		}
 	
 		if (Settings::useCustomIP())

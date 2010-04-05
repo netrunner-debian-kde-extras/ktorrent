@@ -59,7 +59,7 @@ using namespace bt;
 namespace net
 {
 
-	Socket::Socket(int fd,int ip_version) : m_fd(fd),m_ip_version(ip_version),m_state(IDLE)
+	Socket::Socket(int fd,int ip_version) : m_fd(fd),m_ip_version(ip_version),r_poll_index(-1),w_poll_index(-1)
 	{
 		// check if the IP version is 4 or 6
 		if (m_ip_version != 4 && m_ip_version != 6)
@@ -75,7 +75,7 @@ namespace net
 		cacheAddress();
 	}
 	
-	Socket::Socket(bool tcp,int ip_version) : m_fd(-1),m_ip_version(ip_version),m_state(IDLE)
+	Socket::Socket(bool tcp,int ip_version) : m_fd(-1),m_ip_version(ip_version),r_poll_index(-1),w_poll_index(-1)
 	{
 		// check if the IP version is 4 or 6
 		if (m_ip_version != 4 && m_ip_version != 6)
@@ -141,12 +141,16 @@ namespace net
 		}
 	}
 	
-	void Socket::setNonBlocking()
+	void Socket::setBlocking(bool on)
 	{
 #ifndef Q_WS_WIN
-		fcntl(m_fd, F_SETFL, O_NONBLOCK);
+		int flag = fcntl(m_fd, F_GETFL, 0);
+		if (!on)
+			fcntl(m_fd, F_SETFL, flag | O_NONBLOCK);
+		else
+			fcntl(m_fd, F_SETFL, flag & ~O_NONBLOCK);
 #else
-		u_long b = 1;
+		u_long b = on ? 1 : 0;
 		ioctlsocket(m_fd, FIONBIO, &b);
 #endif
 	}
@@ -196,7 +200,7 @@ namespace net
 			return false;
 		}
 
-		if (also_listen && listen(m_fd,5) < 0)
+		if (also_listen && listen(m_fd,SOMAXCONN) < 0)
 		{
 			Out(SYS_CON|LOG_IMPORTANT) << QString("Cannot listen to port %1:%2 : %3").arg(ip).arg(port).arg(strerror(errno)) << endl;
 			return false;
@@ -206,6 +210,34 @@ namespace net
 		return true;
 	}
 	
+	bool Socket::bind(const net::Address& addr, bool also_listen)
+	{
+		int val = 1;
+#ifndef Q_WS_WIN
+		if (setsockopt(m_fd,SOL_SOCKET,SO_REUSEADDR,&val,sizeof(int)) < 0)
+#else
+		if (setsockopt(m_fd,SOL_SOCKET,SO_REUSEADDR,(char *)&val,sizeof(int)) < 0)
+#endif 
+		{
+			Out(SYS_CON|LOG_NOTICE) << QString("Failed to set the reuseaddr option : %1").arg(strerror(errno)) << endl;
+		}
+		
+		if (::bind(m_fd,addr.address(),addr.length()) != 0)
+		{
+			Out(SYS_CON|LOG_IMPORTANT) << QString("Cannot bind to port %1:%2 : %3").arg(addr.ipAddress().toString()).arg(addr.port()).arg(strerror(errno)) << endl;
+			return false;
+		}
+		
+		if (also_listen && listen(m_fd,5) < 0)
+		{
+			Out(SYS_CON|LOG_IMPORTANT) << QString("Cannot listen to port %1:%2 : %3").arg(addr.ipAddress().toString()).arg(addr.port()).arg(strerror(errno)) << endl;
+			return false;
+		}
+		
+		m_state = BOUND;
+		return true;
+	}
+
 	int Socket::send(const bt::Uint8* buf,int len)
 	{
 #ifndef Q_WS_WIN        
@@ -238,8 +270,10 @@ namespace net
 			{
 			//	Out(SYS_CON|LOG_DEBUG) << "Receive error : " << QString(strerror(errno)) << endl;
 				close();
+				return 0;
 			}
-			return 0;
+			
+			return ret;
 		}
 		else if (ret == 0)
 		{
@@ -252,20 +286,17 @@ namespace net
 	
 	int Socket::sendTo(const bt::Uint8* buf,int len,const Address & a)
 	{
-		int ns = 0;
-		while (ns < len)
+		int ret = ::sendto(m_fd,(char*)buf,len,0,a.address(),a.length());
+		if (ret < 0)
 		{
-			int left = len - ns;
-			int ret = ::sendto(m_fd,(char*)buf + ns,left,0,a.address(),a.length());
-			if (ret < 0)
-			{
-				Out(SYS_CON|LOG_DEBUG) << "Send error : " << QString(strerror(errno)) << endl;
-				return 0;
-			}
-
-			ns += ret;
+			if (errno == EAGAIN || errno == EWOULDBLOCK)
+				return SEND_WOULD_BLOCK;
+			
+			Out(SYS_CON|LOG_DEBUG) << "Send error : " << QString(strerror(errno)) << endl;
+			return SEND_FAILURE;
 		}
-		return ns;
+		
+		return ret;
 	}
 	
 	int Socket::recvFrom(bt::Uint8* buf,int max_len,Address & a)
@@ -411,4 +442,19 @@ namespace net
 		m_fd = -1;
 		return ret;
 	}
+	
+	
+	void Socket::prepare(Poll* p,Poll::Mode mode)
+	{
+		if (mode == Poll::OUTPUT)
+			w_poll_index = p->add(m_fd,mode);
+		else
+			r_poll_index = p->add(m_fd,mode);
+	}
+
+	bool Socket::ready(const Poll* p,Poll::Mode mode) const
+	{
+		return p->ready(mode == Poll::OUTPUT ? w_poll_index : r_poll_index,mode);
+	}
+
 }

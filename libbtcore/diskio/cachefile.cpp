@@ -124,8 +124,11 @@ namespace bt
 		{
 			Out(SYS_DIO|LOG_DEBUG) << "Warning : writing past the end of " << path << endl;
 			Out(SYS_DIO|LOG_DEBUG) << (off + size) << " " << max_size << endl;
-			return 0;
+			throw Error(i18n("Attempting to write beyond the maximum size of %1",path));
 		}
+		
+		if (!allocateBytes(off,size))
+			throw Error(i18n("Not enough free disk space for %1",path));
 		
 		int mmap_flag = 0;
 		switch (mode)
@@ -247,6 +250,7 @@ namespace bt
 		{
 			Out(SYS_DIO|LOG_DEBUG) << "Warning : writing past the end of " << path << endl;
 			Out(SYS_DIO|LOG_DEBUG) << (file_size + to_write) << " " << max_size << endl;
+			throw Error(i18n("Cannot expand file %1 : attempting to grow the file beyond the maximum size",path));
 		}
 		
 		if (!fptr->resize(file_size + to_write))
@@ -432,6 +436,7 @@ namespace bt
 		{
 			Out(SYS_DIO|LOG_DEBUG) << "Warning : writing past the end of " << path << endl;
 			Out(SYS_DIO|LOG_DEBUG) << (off + size) << " " << max_size << endl;
+			throw Error(i18n("Attempting to write beyond the maximum size of %1",path));
 		}
 		
 		if (file_size < off)
@@ -514,14 +519,7 @@ namespace bt
 		}
 		catch (bt::Error & e)
 		{
-			// first attempt failed, must be fat so try that
-			if (!FatPreallocate(fd,max_size))
-			{
-				if (close_again)
-					closeTemporary();
-				
-				throw Error(i18n("Cannot preallocate diskspace : %1",strerror(errno)));
-			}
+			throw Error(i18n("Cannot preallocate diskspace : %1",strerror(errno)));
 		}
 
 		file_size = FileSize(fd);
@@ -532,35 +530,21 @@ namespace bt
 
 	Uint64 CacheFile::diskUsage()
 	{
-		Uint64 ret = 0;
-		bool close_again = false;
 		if (!fptr)
-		{
-			openFile(READ);
-			close_again = true;
-		}
-		
-		int fd = fptr->handle();
-#ifndef Q_WS_WIN
-#ifdef HAVE_FSTAT64
-		struct stat64 sb;
-		if (fstat64(fd,&sb) == 0)
-#else
-		struct stat sb;
-		if (fstat(fd,&sb) == 0)
-#endif
-		{
-			ret = (Uint64)sb.st_blocks * 512;
-		}
-#else
-		struct _BY_HANDLE_FILE_INFORMATION info;
-		GetFileInformationByHandle((void *)&fd,&info);
-		ret = (info.nFileSizeHigh * MAXDWORD) + info.nFileSizeLow;
-#endif
-	//	Out(SYS_DIO|LOG_NOTICE) << "CF: " << path << " is taking up " << BytesToString(ret) << " bytes" << endl;
-		if (close_again)
-			closeTemporary();
-
-		return ret;
+			return DiskUsage(path);
+		else
+			return DiskUsage(fptr->handle());
 	}
+	
+	bool CacheFile::allocateBytes(Uint64 off, Uint64 size)
+	{
+#ifdef HAVE_POSIX_FALLOCATE64
+		return posix_fallocate64(fptr->handle(),off,size) == 0;
+#elif HAVE_POSIX_FALLOCATE
+		return posix_fallocate(fptr->handle(),off,size) == 0;
+#else
+		return true;
+#endif
+	}
+
 }

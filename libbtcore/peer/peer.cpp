@@ -69,7 +69,7 @@ namespace bt
 		
 		stalled_timer.update();
 		pwriter = new PacketWriter(this);
-		time_choked = GetCurrentTime();
+		time_choked = CurrentTime();
 		time_unchoked = 0;
 		
 		connect_time = QTime::currentTime();
@@ -77,6 +77,7 @@ namespace bt
 		stats.client = peer_id.identifyClient();
 		stats.ip_address = getIPAddresss();
 		stats.choked = true;
+		paused = false;
 		stats.interested = false;
 		stats.am_interested = false;
 		stats.download_rate = 0;
@@ -141,7 +142,6 @@ namespace bt
 		if (len == 0)
 			return;
 		const Uint8* tmp_buf = packet;
-		//Out(SYS_CON|LOG_DEBUG) << "Got packet : " << len << " type = " << type <<  endl;
 		Uint8 type = tmp_buf[0];
 		switch (type)
 		{
@@ -155,7 +155,7 @@ namespace bt
 				
 				if (!stats.choked)
 				{
-					time_choked = GetCurrentTime();
+					time_choked = CurrentTime();
 				}
 				stats.choked = true;
 				downloader->choked();
@@ -169,7 +169,7 @@ namespace bt
 				}
 				
 				if (stats.choked)
-					time_unchoked = GetCurrentTime();
+					time_unchoked = CurrentTime();
 				stats.choked = false;
 				break;
 			case INTERESTED:
@@ -256,6 +256,8 @@ namespace bt
 				}
 				break;
 			case PIECE:
+				if(paused)
+					return;
 				if (len < 9)
 				{
 					Out(SYS_CON|LOG_DEBUG) << "len err PIECE" << endl;
@@ -353,6 +355,23 @@ namespace bt
 		}
 	}
 	
+	void Peer::pause()
+	{
+		if (paused)
+			return;
+		
+		downloader->cancelAll();
+		// choke the peer and tell it we are not interested
+		choke();
+		pwriter->sendNotInterested();
+		paused = true;
+	}
+	
+	void Peer::unpause()
+	{
+		paused = false;
+	}
+
 	void Peer::handleExtendedPacket(const Uint8* packet,Uint32 size)
 	{
 		if (size <= 2)
@@ -519,12 +538,15 @@ namespace bt
 			uploader->addUploadedBytes(data_bytes);
 		}
 		
-		PtrMap<Uint32,PeerProtocolExtension>::iterator i = extensions.begin();
-		while (i != extensions.end())
+		if (!paused)
 		{
-			if (i->second->needsUpdate())
-				i->second->update();
-			i++;
+			PtrMap<Uint32,PeerProtocolExtension>::iterator i = extensions.begin();
+			while (i != extensions.end())
+			{
+				if (i->second->needsUpdate())
+					i->second->update();
+				i++;
+			}
 		}
 		
 		// if no data is being sent or recieved, and there are pending requests
@@ -699,6 +721,13 @@ namespace bt
 	void Peer::emitMetadataDownloaded(const QByteArray& data)
 	{
 		emit metadataDownloaded(data);
+	}
+
+	bool Peer::hasWantedChunks(const bt::BitSet& wanted_chunks) const
+	{
+		BitSet bs = pieces;
+		bs.andBitSet(wanted_chunks);
+		return bs.numOnBits() > 0;
 	}
 
 }

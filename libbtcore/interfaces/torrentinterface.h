@@ -43,6 +43,7 @@ namespace bt
 	class SHA1Hash;
 	class WebSeedInterface;
 	class JobQueue;
+	class ChunkSelectorInterface;
 
 	
 	enum TorrentStartResponse
@@ -99,6 +100,16 @@ namespace bt
 		 * Update the object, should be called periodically.
 		 */
 		virtual void update() = 0;
+		
+		/**
+		 * Pause the torrent.
+		 */
+		virtual void pause() = 0;
+		
+		/**
+		 * Unpause the torrent.
+		 */
+		virtual void unpause() = 0;
 		
 		/**
 		 * Start the download of the torrent.
@@ -406,6 +417,12 @@ namespace bt
 		
 		/// Get the JobQueue of the torrent
 		virtual const JobQueue* getJobQueue() const = 0;
+		
+		/// Set the ChunkSelector to use (0 resets to the default ChunkSelector)
+		virtual void setChunkSelector(ChunkSelectorInterface* csel) = 0;
+		
+		/// After some network down time, the network is back up
+		virtual void networkUp() = 0;
 	signals:
 		/**
 		 * Emitted when we have finished downloading.
@@ -491,6 +508,13 @@ namespace bt
 		 * Emitted when the torrent thinks the QM should update the queue
 		 */
 		void updateQueue();
+		
+		/**
+		 * Emitted when all running jobs are done.
+		 * @param me the torrent
+		 */
+		void runningJobsDone(bt::TorrentInterface* me);
+		
 	protected:
 		TorrentStats stats;
 		QString user_modified_name;

@@ -31,12 +31,12 @@ namespace bt
 {
 	TimeStampedRequest::TimeStampedRequest()
 	{
-		time_stamp = bt::GetCurrentTime();
+		time_stamp = bt::CurrentTime();
 	}
 			
 	TimeStampedRequest::TimeStampedRequest(const Request & r) : req(r)
 	{
-		time_stamp = bt::GetCurrentTime();
+		time_stamp = bt::CurrentTime();
 	}
 	
 	TimeStampedRequest::TimeStampedRequest(const TimeStampedRequest & t) 
@@ -59,7 +59,7 @@ namespace bt
 	
 	TimeStampedRequest & TimeStampedRequest::operator = (const Request & r)
 	{
-		time_stamp = bt::GetCurrentTime();
+		time_stamp = bt::CurrentTime();
 		req = r;
 		return *this;
 	}
@@ -163,7 +163,7 @@ namespace bt
 		wait_queue.clear();
 		reqs.clear();
 	}
-		
+
 	void PeerDownloader::piece(const Piece & p)
 	{
 		Request r(p);
@@ -204,7 +204,7 @@ namespace bt
 	
 	void PeerDownloader::checkTimeouts()
 	{
-		TimeStamp now = bt::GetCurrentTime(); 
+		TimeStamp now = bt::CurrentTime(); 
 		// we use a 60 second interval
 		const Uint32 MAX_INTERVAL = 60 * 1000;
 
@@ -214,7 +214,6 @@ namespace bt
 		while (!reqs.isEmpty() && (now - reqs.first().time_stamp > MAX_INTERVAL))
 			timedout(reqs.takeFirst().req);
 	}
-	
 	
 	Uint32 PeerDownloader::getMaxChunkDownloads() const
 	{
@@ -265,7 +264,7 @@ namespace bt
 		double pieces_per_sec = (double)peer->getDownloadRate() / MAX_PIECE_LEN;	
 		int max_reqs = 1 + (int)ceil(10*pieces_per_sec);
 		// cap if client has supplied a reqq in extended protocol handshake
-		if (peer->getStats().max_request_queue > max_reqs)
+		if (max_reqs > peer->getStats().max_request_queue && peer->getStats().max_request_queue != 0)
 			max_reqs = peer->getStats().max_request_queue;
 		
 		while (wait_queue.count() > 0 && reqs.count() < max_reqs)

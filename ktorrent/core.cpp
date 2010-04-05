@@ -39,11 +39,6 @@
 #include <torrent/torrentcreator.h>
 #include <torrent/server.h>
 #include <peer/authenticationmonitor.h>
-
-#ifdef GetCurrentTime
-#undef GetCurrentTime // on windows this is a define to GetTickCount
-#endif 
-
 #include <util/log.h>
 #include <util/error.h>
 #include <util/fileops.h>
@@ -54,6 +49,9 @@
 #include <groups/groupmanager.h>
 #include <groups/group.h>
 #include <dht/dht.h>
+#include <utp/utpserver.h>
+#include <net/socketmonitor.h>
+#include <torrent/jobqueue.h>
 #include "settings.h"
 #include "core.h"
 #include "dialogs/fileselectdlg.h"
@@ -62,7 +60,6 @@
 #include "dialogs/torrentmigratordlg.h"
 #include "scanlistener.h"
 #include "tools/magnetmodel.h"
-
 
 
 using namespace bt;
@@ -101,13 +98,6 @@ namespace kt
 
 		connect(&update_timer,SIGNAL(timeout()),this,SLOT(update()));
 		
-		Uint16 port = Settings::port();
-		if (port == 0)
-		{
-			port = 6881;
-			Settings::setPort(6881);
-		}
-		
 		// Make sure network interface is set properly before server is initialized
 		if (Settings::networkInterface() != 0)
 		{
@@ -120,30 +110,8 @@ namespace kt
 		}
 		
 		
-		Uint16 i = 0;
-		do
-		{
-			Globals::instance().initServer(port + i);
-			i++;
-		}
-		while (!Globals::instance().getServer().isOK() && i < 10);
-
-		if (Globals::instance().getServer().isOK())
-		{
-			if (port != port + i - 1)
-				gui->infoMsg(i18n("Specified port (%1) is unavailable or in"
-						" use by another application. KTorrent is now using port %2.",
-						 port,QString::number(port + i - 1)));
-
-			Out(SYS_GEN|LOG_NOTICE) << "Bound to port " << (port + i - 1) << endl;
-		}
-		else
-		{
-			gui->errorMsg(i18n("KTorrent is unable to accept connections because the ports %1 to %2 are "
-				   "already in use by another program.",port,QString::number(port + i - 1)));
-			Out(SYS_GEN|LOG_IMPORTANT) << "Cannot find free port" << endl;
-		}
-
+		startServers();
+		
 		magnet = new kt::MagnetModel(this);
 		pman = new kt::PluginManager(this,gui);
 		gman = new kt::GroupManager();
@@ -151,7 +119,7 @@ namespace kt
 		gman->loadGroups();
 		
 		connect(qman,SIGNAL(queueOrdered()),this,SLOT(startUpdateTimer()));
-		connect(qman,SIGNAL(pauseStateChanged(bool)),gui,SLOT(onPausedStateChanged(bool)));
+		connect(qman,SIGNAL(suspendStateChanged(bool)),gui,SLOT(onSuspendedStateChanged(bool)));
 		connect(magnet,SIGNAL(metadataFound(bt::MagnetLink,QByteArray,bool)),
 				this,SLOT(onMetadataDownloaded(bt::MagnetLink,QByteArray,bool)));
 		
@@ -167,9 +135,89 @@ namespace kt
 		delete pman;
 		delete gman;
 	}
+	
+	
+	void Core::startServers()
+	{
+		Uint16 port = Settings::port();
+		if (port == 0)
+		{
+			port = 6881;
+			Settings::setPort(6881);
+		}
+		
+		if (Settings::utpEnabled())
+		{
+			startUTPServer(port);
+			if (!Settings::onlyUseUtp())
+				startTCPServer(port);
+		}
+		else
+		{
+			startTCPServer(port);
+		}
+	}
+	
+	void Core::startTCPServer(bt::Uint16 port)
+	{
+		if (Globals::instance().initTCPServer(port))
+		{  
+			Out(SYS_GEN|LOG_NOTICE) << "Bound to TCP port " << port << endl;
+		}
+		else
+		{
+			gui->errorMsg(i18n("KTorrent is unable to accept connections because the TCP ports %1 is "
+							"already in use by another program.",port));
+			Out(SYS_GEN|LOG_IMPORTANT) << "Cannot find free TCP port" << endl;
+		}
+	}
+
+	void Core::startUTPServer(bt::Uint16 port)
+	{
+		if (Globals::instance().initUTPServer(port))
+		{
+			Out(SYS_GEN|LOG_NOTICE) << "Bound to UDP port " << port << endl;
+		}
+		else
+		{
+			gui->errorMsg(i18n("KTorrent is unable to accept connections because the UDP port %1 is "
+					"already in use by another program.",port));
+			Out(SYS_GEN|LOG_IMPORTANT) << "Cannot find free UDP port" << endl;
+		}
+	}
+
+
 
 	void Core::applySettings()
 	{
+		bt::Uint16 port = Settings::port();
+		bt::Uint16 current_port = ServerInterface::getPort();
+		
+		bool utp_enabled = Settings::utpEnabled();
+		bool tcp_enabled = utp_enabled && Settings::onlyUseUtp() ? false : true;
+		
+		bt::Globals & globals = bt::Globals::instance();
+		
+		if (globals.isTCPEnabled() && !tcp_enabled)
+			globals.shutdownTCPServer();
+		else if (!globals.isTCPEnabled() && tcp_enabled)
+			startTCPServer(port);
+		else if (tcp_enabled && port != current_port)
+			globals.getTCPServer().changePort(port);
+		
+		if (globals.isUTPEnabled() && !utp_enabled)
+			globals.shutdownUTPServer();
+		else if (!globals.isUTPEnabled() && utp_enabled)
+			startUTPServer(port);
+		else if (utp_enabled && port != current_port)
+			globals.getUTPServer().changePort(port);
+		
+		if (utp_enabled)
+			globals.getUTPServer().setTOS(Settings::dscp() << 2);
+		
+		ServerInterface::setPort(port);
+		ServerInterface::setUtpEnabled(utp_enabled,Settings::onlyUseUtp());
+		ServerInterface::setPrimaryTransportProtocol((bt::TransportProtocol)Settings::primaryTransportProtocol());
 		ApplySettings();
 		setMaxDownloads(Settings::maxDownloads());
 		setMaxSeeds(Settings::maxSeeds());
@@ -180,8 +228,6 @@ namespace kt
 			tmp = kt::DataDir();
 		
 		changeDataDir(tmp);
-		changePort(Settings::port());
-		
 		//update QM
 		getQueueManager()->orderQueue();
 		settingsChanged();
@@ -196,6 +242,11 @@ namespace kt
 	{
 		bool start_torrent = false;
 		bool skip_check = false;
+		
+		if (Settings::maxRatio() > 0)
+			tc->setMaxShareRatio(Settings::maxRatio());
+		if (Settings::maxSeedTime() > 0)
+			tc->setMaxSeedTime(Settings::maxSeedTime());
 
 		if (!silently)
 		{
@@ -272,14 +323,8 @@ namespace kt
 		}
 			
 		tc->setPreallocateDiskSpace(true);
-
-		if (Settings::maxRatio() > 0)
-			tc->setMaxShareRatio(Settings::maxRatio());
-		if (Settings::maxSeedTime() > 0)
-			tc->setMaxSeedTime(Settings::maxSeedTime());
-		
-		torrentAdded(tc);
 		qman->torrentAdded(tc,start_torrent);
+		
 		//now copy torrent file to user specified dir if needed
 		if(Settings::useTorrentCopyDir())
 		{
@@ -295,6 +340,8 @@ namespace kt
 			destination += tc->getStats().torrent_name + ".torrent";
 			KIO::file_copy(torFile,destination,-1, KIO::HideProgressInfo);
 		}
+		
+		torrentAdded(tc);
 		return true;
 	}
 	
@@ -402,10 +449,7 @@ namespace kt
 		else
 		{
 			// load in the file (target is always local)
-			QString dir = Settings::saveDir().toLocalFile();
-			if (!Settings::useSaveDir() ||  dir.isNull())
-				dir = QDir::homePath();
-			
+			QString dir = locationHint();
 			QString group;
 			QMap<KUrl,QString>::iterator i = add_to_groups.find(j->url());
 			if (i != add_to_groups.end())
@@ -430,10 +474,7 @@ namespace kt
 		else if (url.isLocalFile())
 		{
 			QString path = url.toLocalFile();
-			QString dir = Settings::saveDir().toLocalFile();
-			if (!Settings::useSaveDir()  || dir.isNull())
-				dir =  QDir::homePath();
-		
+			QString dir = locationHint();
 			if (dir != QString::null && loadFromFile(path,dir,group,false))
 				loadingFinished(url,true,false);
 			else
@@ -507,13 +548,7 @@ namespace kt
 		else if (url.isLocalFile())
 		{
 			QString path = url.toLocalFile(); 
-			QString dir = Settings::saveDir().toLocalFile();
-			if (!Settings::useSaveDir())
-			{
-				Out(SYS_GEN|LOG_NOTICE) << "Cannot load " << path << " silently, default save location not set !" << endl;
-				Out(SYS_GEN|LOG_NOTICE) << "Using home directory instead !" << endl;
-				dir = QDir::homePath();
-			}
+			QString dir = locationHint();
 		
 			if (dir != QString::null && loadFromFile(path,dir,group,true))
 				loadingFinished(url,true,false);
@@ -534,11 +569,7 @@ namespace kt
 	{
 		QString dir;
 		if (savedir.isEmpty() || !bt::Exists(savedir))
-		{
-			dir = Settings::saveDir().toLocalFile();
-			if (!Settings::useSaveDir()  || dir.isNull())
-				dir =  QDir::homePath();
-		}
+			dir = locationHint();
 		else
 			dir = savedir;
 		
@@ -552,15 +583,7 @@ namespace kt
 	{
 		QString dir;
 		if (savedir.isEmpty() || !bt::Exists(savedir))
-		{
-			dir = Settings::saveDir().toLocalFile();
-			if (!Settings::useSaveDir())
-			{
-				Out(SYS_GEN|LOG_NOTICE) << "Cannot load " << url.prettyUrl() << " silently, default save location not set !" << endl;
-				Out(SYS_GEN|LOG_NOTICE) << "Using home directory instead !" << endl;
-				dir = QDir::homePath();
-			}
-		}
+			dir = locationHint();
 		else
 			dir = savedir;
 		
@@ -572,9 +595,17 @@ namespace kt
 	
 	void Core::start(bt::TorrentInterface* tc)
 	{
-		TorrentStartResponse reason = qman->start(tc);
-		if (reason == NOT_ENOUGH_DISKSPACE || reason == QM_LIMITS_REACHED)
-			canNotStart(tc,reason);
+		if (tc->getStats().paused)
+		{
+			tc->unpause();
+		}
+		else
+		{
+			TorrentStartResponse reason = qman->start(tc);
+			if (reason == NOT_ENOUGH_DISKSPACE || reason == QM_LIMITS_REACHED)
+				canNotStart(tc,reason);
+		}
+		
 		startUpdateTimer(); // restart update timer
 	}
 	
@@ -583,6 +614,18 @@ namespace kt
 		if (todo.isEmpty())
 			return;
 		
+		// unpause paused torrents
+		for (QList<bt::TorrentInterface*>::iterator i = todo.begin();i != todo.end();)
+		{
+			if ((*i)->getStats().paused)
+			{
+				(*i)->unpause();
+				i = todo.erase(i);
+			}
+			else
+				i++;
+		}
+		
 		if (todo.count() == 1)
 		{
 			start(todo.front());
@@ -590,8 +633,9 @@ namespace kt
 		else
 		{
 			qman->start(todo);
-			startUpdateTimer(); // restart update timer
 		}
+		
+		startUpdateTimer(); // restart update timer
 	}
 
 	void Core::stop(bt::TorrentInterface* tc)
@@ -602,6 +646,19 @@ namespace kt
 	void Core::stop(QList<bt::TorrentInterface*> & todo)
 	{
 		qman->stop(todo);
+	}
+	
+	void Core::pause(TorrentInterface* tc)
+	{
+		tc->pause();
+	}
+
+	void Core::pause(QList<bt::TorrentInterface*>& todo)
+	{
+		foreach (bt::TorrentInterface* tc,todo)
+		{
+			tc->pause();
+		}
 	}
 
 	QString Core::findNewTorrentDir() const
@@ -680,6 +737,15 @@ namespace kt
 	{
 		try
 		{
+			if (tc->getJobQueue()->runningJobs())
+			{
+				// if there are running jobs, schedule delete when they finish
+				delayed_removal.insert(tc,data_to);
+				connect(tc,SIGNAL(runningJobsDone(bt::TorrentInterface*)),
+						this,SLOT(delayedRemove(bt::TorrentInterface*)));
+				return;
+			}
+			
 			const bt::TorrentStats & s = tc->getStats();
 			removed_bytes_up += s.session_bytes_uploaded;
 			removed_bytes_down += s.session_bytes_downloaded;
@@ -707,11 +773,72 @@ namespace kt
 			qman->torrentRemoved(tc);
 			gui->updateActions();
 			bt::Delete(dir,false);
+			delayed_removal.remove(tc);
 		}
 		catch (Error & e)
 		{
 			gui->errorMsg(e.toString());
 		}
+	}
+	
+	void Core::remove(QList<bt::TorrentInterface*> & todo, bool data_to)
+	{
+		QList<bt::TorrentInterface*>::iterator i = todo.begin();
+		while (i != todo.end())
+		{
+			bt::TorrentInterface* tc = *i;
+			if (tc->getJobQueue()->runningJobs())
+			{
+				// if there are running jobs, schedule delete when they finish
+				delayed_removal.insert(tc,data_to);
+				connect(tc,SIGNAL(runningJobsDone(bt::TorrentInterface*)),
+						this,SLOT(delayedRemove(bt::TorrentInterface*)));
+				i = todo.erase(i);
+			}
+			else
+				i++;
+		}
+		
+		stop(todo);
+		
+		foreach (bt::TorrentInterface* tc,todo)
+		{
+			const bt::TorrentStats & s = tc->getStats();
+			removed_bytes_up += s.session_bytes_uploaded;
+			removed_bytes_down += s.session_bytes_downloaded;
+			
+			QString dir = tc->getTorDir();
+			
+			try
+			{
+				if (data_to)
+					tc->deleteDataFiles();
+			}
+			catch (Error & e)
+			{
+				gui->errorMsg(e.toString());
+			}
+			
+			// cleanup potential data scans
+			QMap<bt::TorrentInterface*,ScanListener*>::iterator i = active_scans.find(tc);
+			if (i != active_scans.end())
+				closeScanListener(i.value());
+			
+			torrentRemoved(tc);
+			gman->torrentRemoved(tc);
+			bt::Delete(dir,false);
+		}
+		
+		qman->torrentsRemoved(todo);
+		gui->updateActions();
+	}
+	
+	void Core::delayedRemove(bt::TorrentInterface* tc)
+	{
+		if (!delayed_removal.contains(tc))
+			return;
+		
+		remove(tc,delayed_removal[tc]);
 	}
 
 	void Core::setMaxDownloads(int max)
@@ -741,15 +868,18 @@ namespace kt
 
 	void Core::onExit()
 	{
+		// stop timer to prevent updates during wait
+		update_timer.stop();
+		
+		net::SocketMonitor::instance().shutdown();
 		magnet->saveMagnets(kt::DataDir() + "magnets");
 		// make sure DHT is stopped
 		Globals::instance().getDHT().stop();
-		// stop timer to prevent updates during wait
-		update_timer.stop();
 		// stop all authentications going on
 		AuthenticationMonitor::instance().clear();
 		// shutdown the server
-		Globals::instance().shutdownServer();
+		Globals::instance().shutdownTCPServer();
+		Globals::instance().shutdownUTPServer();
 		
 		WaitJob* job = new WaitJob(5000);
 		qman->onExit(job);
@@ -786,7 +916,7 @@ namespace kt
 
 			Out(SYS_GEN|LOG_DEBUG) << "Switching to datadir " << nd << endl;
 			
-			qman->setPausedState(true);
+			qman->setSuspendedState(true);
 			
 			QList<bt::TorrentInterface*> succes;
 
@@ -801,7 +931,7 @@ namespace kt
 					// set back the old data_dir in Settings
 					Settings::setTempDir(data_dir);
 					Settings::self()->writeConfig();
-					qman->setPausedState(false);
+					qman->setSuspendedState(false);
 					update_timer.start(CORE_UPDATE_INTERVAL);
 					return false;
 				}
@@ -812,7 +942,7 @@ namespace kt
 				i++;
 			}
 			data_dir = nd;
-			qman->setPausedState(false);
+			qman->setSuspendedState(false);
 			update_timer.start(CORE_UPDATE_INTERVAL);
 			return true;
 		}
@@ -905,7 +1035,7 @@ namespace kt
 				magnet->updateMagnetDownloaders();
 				// check if the priority of stalled torrents must be decreased
 				if (Settings::decreasePriorityOfStalledTorrents())
-					qman->checkStalledTorrents(bt::GetCurrentTime(),Settings::stallTimer());
+					qman->checkStalledTorrents(bt::CurrentTime(),Settings::stallTimer());
 			}
 		}
 		catch (bt::Error & err)
@@ -913,32 +1043,14 @@ namespace kt
 			Out(SYS_GEN|LOG_IMPORTANT) << "Caught bt::Error: " << err.toString() << endl;
 		}
 	}
-
-	bt::TorrentInterface* Core::makeTorrent(const QString & file,const QStringList & trackers,const KUrl::List & webseeds,
-				int chunk_size,const QString & name,
-				const QString & comments,bool seed,
-				const QString & output_file,bool priv_tor,QProgressBar* prog, bool decentralized)
+	
+	bt::TorrentInterface* Core::createTorrent(bt::TorrentCreator* mktor,bool seed)
 	{
 		QString tdir;
 		try
 		{
-			if (chunk_size < 0)
-				chunk_size = 256;
-
-			bt::TorrentCreator mktor(file,trackers,webseeds,chunk_size,name,comments,priv_tor, decentralized);
-			prog->setMaximum(mktor.getNumChunks());
-			Uint32 ns = 0;
-			while (!mktor.calculateHash())
-			{
-				prog->setValue(ns);
-				ns++;
-				if (ns % 10 == 0)
-					KApplication::kApplication()->processEvents();
-			}
-
-			mktor.saveTorrent(output_file);
 			tdir = findNewTorrentDir();
-			bt::TorrentInterface* tc = mktor.makeTC(tdir);
+			bt::TorrentControl* tc = mktor->makeTC(tdir);
 			if (tc)
 			{
 				connectSignals(tc);
@@ -954,12 +1066,13 @@ namespace kt
 			// cleanup if necessary
 			if (bt::Exists(tdir))
 				bt::Delete(tdir,true);
-
+			
 			// Show error message
 			gui->errorMsg(i18n("Cannot create torrent: %1",e.toString()));
 		}
 		return 0;
 	}
+
 
 	CurrentStats Core::getStats()
 	{
@@ -987,9 +1100,24 @@ namespace kt
 
 	bool Core::changePort(Uint16 port)
 	{
-		bt::Server & srv = Globals::instance().getServer();
-		srv.changePort(port);
-		return srv.isOK();
+		bool ok = false;
+		if (Settings::utpEnabled())
+		{
+			utp::UTPServer & utp_srv = Globals::instance().getUTPServer();
+			ok = utp_srv.changePort(port);
+			if (!Settings::onlyUseUtp())
+			{
+				bt::Server & srv = Globals::instance().getTCPServer();
+				ok = ok && srv.changePort(port);
+			}
+		}
+		else
+		{
+			bt::Server & srv = Globals::instance().getTCPServer();
+			ok = srv.changePort(port);
+		}
+		
+		return ok;
 	}
 
 	void Core::slotStoppedByError(bt::TorrentInterface* tc, QString msg)
@@ -1022,16 +1150,16 @@ namespace kt
 		startUpdateTimer();
 	}
 
-	void Core::setPausedState(bool pause)
+	void Core::setSuspendedState(bool suspend)
 	{
-		qman->setPausedState(pause);
-		if (!pause)
+		qman->setSuspendedState(suspend);
+		if (!suspend)
 			startUpdateTimer();
 	}
 	
-	bool Core::getPausedState()
+	bool Core::getSuspendedState()
 	{
-		return qman->getPausedState();
+		return qman->getSuspendedState();
 	}
 
 	void Core::aboutToBeStarted(bt::TorrentInterface* tc,bool & ret)
@@ -1315,7 +1443,22 @@ namespace kt
 			loadSilently(tmp,url,group,QString());
 		else
 			load(tmp,url,group,QString());
+	}
+
+
+	QString Core::locationHint() const
+	{
+		QString dir;
+		if (Settings::useSaveDir())
+			dir = Settings::saveDir().toLocalFile();
+		else
+			dir = Settings::lastSaveDir();
 		
+		
+		if (dir.isEmpty() || !QDir(dir).exists())
+			dir = QDir::homePath();
+		
+		return dir;
 	}
 
 }

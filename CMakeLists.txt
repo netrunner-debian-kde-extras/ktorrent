@@ -3,6 +3,7 @@ find_package(KDE4 REQUIRED)
 find_package(KDE4Internal REQUIRED)
 find_package(GMP REQUIRED)
 find_package(QCA2 REQUIRED)
+find_package(Boost REQUIRED)
 
 # backward compatibility to <= KDE 4.1
 MACRO_ENSURE_VERSION( "4.1.83" ${KDE_VERSION} KDE_VERSION_OK)
@@ -43,6 +44,7 @@ include_directories( ${KDE4_INCLUDES}
    ${KTORRENT_SOURCE_DIR}/libbtcore
    ${KTORRENT_SOURCE_DIR}
    ${GMP_INCLUDE_DIR}
+   ${Boost_INCLUDE_DIR}
    )
 
 add_subdirectory(cmake)
@@ -56,7 +58,6 @@ add_subdirectory(ktupnptest)
 if( PLASMA_FOUND )
     add_subdirectory(plasma)
 endif(PLASMA_FOUND)
-add_subdirectory(ktutpd)
 add_subdirectory(ktmagnetdownloader)
 
 # --- show log ---

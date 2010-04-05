@@ -50,7 +50,8 @@ namespace mse
 	StreamSocket::StreamSocket(int ip_version) : sock(0),enc(0),monitored(false)
 	{
 		sock = new BufferedSocket(true,ip_version);
-		sock->setNonBlocking();
+		sock->socketDevice()->setBlocking(false);
+		sock->socketDevice()->setTOS(tos);
 		reinserted_data = 0;
 		reinserted_data_size = 0;
 		reinserted_data_read = 0;
@@ -60,11 +61,21 @@ namespace mse
 	StreamSocket::StreamSocket(int fd,int ip_version) : sock(0),enc(0),monitored(false)
 	{
 		sock = new BufferedSocket(fd,ip_version);
-		sock->setNonBlocking();
+		sock->socketDevice()->setBlocking(false);
+		sock->socketDevice()->setTOS(tos);
 		reinserted_data = 0;
 		reinserted_data_size = 0;
 		reinserted_data_read = 0;
-		sock->setTOS(tos);
+	}
+
+	StreamSocket::StreamSocket(net::SocketDevice* sd)  : sock(0),enc(0),monitored(false)
+	{
+		sock = new BufferedSocket(sd);
+		sd->setBlocking(false);
+		sd->setTOS(tos);
+		reinserted_data = 0;
+		reinserted_data_size = 0;
+		reinserted_data_read = 0;
 	}
 
 	StreamSocket::~StreamSocket()
@@ -109,9 +120,9 @@ namespace mse
 			// we need to make sure all data is sent because of the encryption
 			Uint32 ds = 0;
 			const Uint8* ed = enc->encrypt(data,len);
-			while (sock->ok() && ds < len)
+			while (sock->socketDevice()->ok() && ds < len)
 			{
-				Uint32 ret = sock->send(ed + ds,len - ds);
+				Uint32 ret = sock->socketDevice()->send(ed + ds,len - ds);
 				ds += ret;
 				if (ret == 0)
 				{
@@ -124,7 +135,7 @@ namespace mse
 		}
 		else
 		{
-			Uint32 ret = sock->send(data,len);
+			Uint32 ret = sock->socketDevice()->send(data,len);
 			if (ret != len)
 				Out(SYS_CON|LOG_DEBUG) << "ret != len" << endl;
 			return ret;
@@ -161,7 +172,7 @@ namespace mse
 		if (len == ret2)
 			return ret2;
 		
-		Uint32 ret = sock->recv(buf + ret2,len - ret2);
+		Uint32 ret = sock->socketDevice()->recv(buf + ret2,len - ret2);
 		if (ret + ret2 > 0 && enc)
 			enc->decrypt(buf,ret + ret2);
 		
@@ -170,7 +181,7 @@ namespace mse
 		
 	Uint32 StreamSocket::bytesAvailable() const
 	{
-		Uint32 ba = sock->bytesAvailable();
+		Uint32 ba = sock->socketDevice()->bytesAvailable();
 		if (reinserted_data_size - reinserted_data_read > 0)
 			return  ba + (reinserted_data_size - reinserted_data_read);
 		else
@@ -179,7 +190,7 @@ namespace mse
 	
 	void StreamSocket::close()
 	{
-		sock->close();
+		sock->socketDevice()->close();
 	}
 	
 	bool StreamSocket::connectTo(const QString & ip,Uint16 port)
@@ -194,10 +205,10 @@ namespace mse
 	bool StreamSocket::connectTo(const net::Address & addr)
 	{
 		// we don't wanna block the current thread so set non blocking
-		sock->setNonBlocking();
-		if (sock->connectTo(addr))
+		sock->socketDevice()->setBlocking(false);
+		sock->socketDevice()->setTOS(tos);
+		if (sock->socketDevice()->connectTo(addr))
 		{
-			sock->setTOS(tos);
 			return true;
 		}
 		else if (connecting())
@@ -223,22 +234,22 @@ namespace mse
 	
 	bool StreamSocket::ok() const
 	{
-		return sock->ok();
+		return sock->socketDevice()->ok();
 	}
 
 	QString StreamSocket::getRemoteIPAddress() const
 	{
-		return sock->getPeerName().ipAddress().toString();
+		return sock->socketDevice()->getPeerName().ipAddress().toString();
 	}
 	
 	bt::Uint16 StreamSocket::getRemotePort() const
 	{
-		return sock->getPeerName().port();
+		return sock->socketDevice()->getPeerName().port();
 	}
 	
 	net::Address StreamSocket::getRemoteAddress() const
 	{
-		return sock->getPeerName();
+		return sock->socketDevice()->getPeerName();
 	}
 	
 	void StreamSocket::setRC4Encryptor(RC4Encryptor* e)
@@ -268,7 +279,7 @@ namespace mse
 	
 	bool StreamSocket::connecting() const
 	{
-		return sock->state() == net::Socket::CONNECTING;
+		return sock->socketDevice()->state() == net::SocketDevice::CONNECTING;
 	}
 	
 	void StreamSocket::onDataReady(Uint8* buf,Uint32 size)
@@ -310,10 +321,7 @@ namespace mse
 	
 	bool StreamSocket::connectSuccesFull() const 
 	{
-		bool ret = sock->connectSuccesFull();
-		if (ret)
-			sock->setTOS(tos);
-		
+		bool ret = sock->socketDevice()->connectSuccesFull();
 		if (num_connecting > 0)
 			num_connecting--;
 		
@@ -328,12 +336,12 @@ namespace mse
 	
 	void StreamSocket::setRemoteAddress(const net::Address & addr)
 	{
-		sock->setRemoteAddress(addr);
+		sock->socketDevice()->setRemoteAddress(addr);
 	}
 	
 	void StreamSocket::updateSpeeds()
 	{
-		sock->updateSpeeds(bt::GetCurrentTime());
+		sock->updateSpeeds(bt::CurrentTime());
 	}
 }
 

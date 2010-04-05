@@ -38,6 +38,7 @@
 #define SYS_TRK 0x0040 // Tracker
 #define SYS_DHT 0x0080 // DHT
 #define SYS_DIO 0x0100 // Disk IO related stuff, saving and loading of chunks ...
+#define SYS_UTP 0x0200 // UTP
 
 //plugins
 #define SYS_IPF 0x1000  // IPFilter
@@ -196,13 +197,7 @@ namespace bt
 	};
 
 	BTCORE_EXPORT Log & endl(Log & lg);
-	
-	
 	BTCORE_EXPORT Log & Out(unsigned int arg = 0x00);
-	inline Log & GenOut(unsigned int arg) {return Out(SYS_GEN|arg);}
-	inline Log & DHTOut(unsigned int arg) {return Out(SYS_DHT|arg);}
-	inline Log & ConOut(unsigned int arg) {return Out(SYS_CON|arg);}
-	inline Log & TrkOut(unsigned int arg) {return Out(SYS_TRK|arg);}
 
 
 	/**

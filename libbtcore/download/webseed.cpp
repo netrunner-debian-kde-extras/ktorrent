@@ -48,6 +48,7 @@ namespace bt
 		current = 0;
 		status = i18n("Not connected");
 		up_gid = down_gid = 0;
+		cur_chunk = -1;
 	}
 
 
@@ -143,7 +144,7 @@ namespace bt
 		if (!enabled)
 			return;
 		
-		Out(SYS_CON|LOG_DEBUG) << "WebSeed: downloading " << first << "-" << last << " from " << url.prettyUrl() << endl;
+		//Out(SYS_CON|LOG_DEBUG) << "WebSeed: downloading " << first << "-" << last << " from " << url.prettyUrl() << endl;
 		// open connection and connect if needed
 		if (!conn)
 		{
@@ -163,6 +164,7 @@ namespace bt
 			return;
 		}
 		
+		cur_piece = PieceDataPtr(0);
 		first_chunk = first;
 		last_chunk = last;
 		cur_chunk = first;
@@ -211,7 +213,7 @@ namespace bt
 		if (path.endsWith('/') && !isUserCreated())
 			path += tor.getNameSuggestion();
 		
-		Out(SYS_GEN|LOG_DEBUG) << "WebSeed: continuing current chunk " << cur_chunk << " " << bytes_of_cur_chunk << endl;
+		//Out(SYS_GEN|LOG_DEBUG) << "WebSeed: continuing current chunk " << cur_chunk << " " << bytes_of_cur_chunk << endl;
 		first_chunk = cur_chunk;
 		if (tor.isMultiFile())
 		{
@@ -401,10 +403,10 @@ namespace bt
 			// ignore data if we already have it
 			if (c->getStatus() != Chunk::ON_DISK)
 			{
-				PieceData* p = c->getPiece(0,c->getSize(),false); 
-				if (p)
-					memcpy(p->data() + bytes_of_cur_chunk,tmp.data() + off,bl);
-				
+				if (!cur_piece || cur_piece->parentChunk() != c)
+					cur_piece = c->getPiece(0,c->getSize(),false);
+
+				memcpy(cur_piece->data() + bytes_of_cur_chunk,tmp.data() + off,bl);
 				downloaded += bl;
 			}
 			off += bl;
@@ -422,11 +424,11 @@ namespace bt
 				}
 				
 				chunkStopped();
+				cur_piece = PieceDataPtr(0);
 				if (cur_chunk <= last_chunk)
 				{
-					PieceData* p = cman.getChunk(cur_chunk)->getPiece(0,c->getSize(),false);
-					if (p)
-						p->ref(); // reference will be released when chunk is ready
+					c = cman.getChunk(cur_chunk);
+					cur_piece = c->getPiece(0,c->getSize(),false);
 					chunkStarted(cur_chunk);
 				}
 			}

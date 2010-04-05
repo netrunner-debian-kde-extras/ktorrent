@@ -111,6 +111,8 @@ namespace kt
 	
 	HttpServer::~HttpServer()
 	{
+		notifier->setEnabled(false);
+		delete notifier;
 		sock->close();
 		delete sock;
 		qDeleteAll(clients);
@@ -157,6 +159,17 @@ namespace kt
 
 	bool HttpServer::checkLogin(const QHttpRequestHeader & hdr,const QByteArray & data)
 	{
+		// Authentication is disabled
+		if (!WebInterfacePluginSettings::authentication())
+		{
+			session.logged_in = true;
+			session.sessionId = rand();
+			session.last_access = QTime::currentTime();
+			Out(SYS_WEB|LOG_NOTICE) << "Webgui login succesfull ! (auth disable)" << endl;
+			challenge = QString();
+			return true;
+		}
+
 		if (hdr.contentType() != "application/x-www-form-urlencoded")
 		{
 			Out(SYS_WEB|LOG_NOTICE) << "Webgui login failed ! 1" << endl;
@@ -292,7 +305,6 @@ namespace kt
 		if (!content_type.isEmpty())
 			hdr.setValue("Content-Type",content_type);
 		
-		hdr.setValue("Connection","keep-alive");
 		if (with_session_info && session.sessionId && session.logged_in)
 		{
 			hdr.setValue("Set-Cookie",QString("KT_SESSID=%1").arg(session.sessionId));
@@ -315,15 +327,17 @@ namespace kt
 	{
 		if (rootDir.isEmpty())
 		{
-			HttpResponseHeader rhdr(500);
+			HttpResponseHeader rhdr(500,hdr.majorVersion(),hdr.minorVersion());
 			setDefaultResponseHeaders(rhdr,"text/html",false);
 			hdlr->send500(rhdr,i18n("Cannot find web interface skins."));
 			return;
 		}
 		
 		QString file = hdr.path();
-		if (file == "/")
+		if (file == "/" && WebInterfacePluginSettings::authentication())
 			file = "/login.html";
+		else if (file == "/")
+			file = "/interface.html";
 			
 		KUrl url;
 		url.setEncodedPathAndQuery(file);
@@ -332,7 +346,7 @@ namespace kt
 		WebContentGenerator* gen = content_generators.find(url.path());
 		if (gen)
 		{
-			if (gen->getPermissions() == WebContentGenerator::LOGIN_REQUIRED && (!session.logged_in || !checkSession(hdr)))
+			if ((gen->getPermissions() == WebContentGenerator::LOGIN_REQUIRED && (!session.logged_in || !checkSession(hdr))) && WebInterfacePluginSettings::authentication())
 			{
 				// redirect to login page
 				redirectToLoginPage(hdlr);
@@ -358,15 +372,17 @@ namespace kt
 		// check if the file exists (if not send 404)
 		if (!bt::Exists(path))
 		{
-			HttpResponseHeader rhdr(404);
+			HttpResponseHeader rhdr(404,hdr.majorVersion(),hdr.minorVersion());
 			setDefaultResponseHeaders(rhdr,"text/html",false);
 			hdlr->send404(rhdr,path);
 			return;
 		}
 		
 		QString file = hdr.path();
-		if (file == "/")
+		if (file == "/" && WebInterfacePluginSettings::authentication())
 			file = "/login.html";
+		else if (file == "/")
+			file = "/interface.html";
 		
 		QFileInfo fi(path);
 		QString ext = fi.suffix();;
@@ -374,14 +390,14 @@ namespace kt
 		if (ext == "html")
 		{
 			// html pages require a login unless it is the login.html page
-			if (file != "/login.html" && (!session.logged_in || !checkSession(hdr)))
+			if ((file != "/login.html" && (!session.logged_in || !checkSession(hdr))) && WebInterfacePluginSettings::authentication())
 			{
 				// redirect to login page
 				redirectToLoginPage(hdlr);
 				return;
 			}
 			
-			HttpResponseHeader rhdr(200);
+			HttpResponseHeader rhdr(200,hdr.majorVersion(),hdr.minorVersion());
 			setDefaultResponseHeaders(rhdr,"text/html",true);
 			if (path.endsWith("login.html"))
 			{
@@ -393,7 +409,7 @@ namespace kt
 			
 			if (!hdlr->sendFile(rhdr,path))
 			{
-				HttpResponseHeader nhdr(404);
+				HttpResponseHeader nhdr(404,hdr.majorVersion(),hdr.minorVersion());
 				setDefaultResponseHeaders(nhdr,"text/html",false);
 				hdlr->send404(nhdr,path);
 			}
@@ -404,7 +420,7 @@ namespace kt
 		}
 		else
 		{
-			HttpResponseHeader rhdr(404);
+			HttpResponseHeader rhdr(404,hdr.majorVersion(),hdr.minorVersion());
 			setDefaultResponseHeaders(rhdr,"text/html",false);
 			hdlr->send404(rhdr,file);
 		}
@@ -420,7 +436,7 @@ namespace kt
 			QDateTime dt = parseDate(hdr.value("If-Modified-Since"));
 			if (dt.isValid() && dt < fi.lastModified())
 			{	
-				HttpResponseHeader rhdr(304);
+				HttpResponseHeader rhdr(304,hdr.majorVersion(),hdr.minorVersion());
 				setDefaultResponseHeaders(rhdr,"text/html",true);
 				rhdr.setValue("Cache-Control","max-age=0");
 				rhdr.setValue("Last-Modified",DateTimeToString(fi.lastModified(),false));
@@ -430,14 +446,14 @@ namespace kt
 			}
 		}
 			
-		HttpResponseHeader rhdr(200);
+		HttpResponseHeader rhdr(200,hdr.majorVersion(),hdr.minorVersion());
 		setDefaultResponseHeaders(rhdr,ExtensionToContentType(ext),true);
 		rhdr.setValue("Last-Modified",DateTimeToString(fi.lastModified(),false));
 		rhdr.setValue("Expires",DateTimeToString(QDateTime::currentDateTime().toUTC().addSecs(3600),false));
 		rhdr.setValue("Cache-Control","private");
 		if (!hdlr->sendFile(rhdr,path))
 		{
-			HttpResponseHeader nhdr(404);
+			HttpResponseHeader nhdr(404,hdr.majorVersion(),hdr.minorVersion());
 			setDefaultResponseHeaders(nhdr,"text/html",false);
 			hdlr->send404(nhdr,path);
 		}
@@ -451,7 +467,7 @@ namespace kt
 		WebContentGenerator* gen = content_generators.find(url.path());
 		if (gen)
 		{
-			if (gen->getPermissions() == WebContentGenerator::LOGIN_REQUIRED && (!session.logged_in || !checkSession(hdr)))
+			if ((gen->getPermissions() == WebContentGenerator::LOGIN_REQUIRED && (!session.logged_in || !checkSession(hdr))) && WebInterfacePluginSettings::authentication())
 			{
 				// redirect to login page
 				redirectToLoginPage(hdlr);
@@ -474,9 +490,9 @@ namespace kt
 		}
 	}
 	
-	void HttpServer::handleUnsupportedMethod(HttpClientHandler* hdlr)
+	void HttpServer::handleUnsupportedMethod(HttpClientHandler* hdlr,const QHttpRequestHeader & hdr)
 	{
-		HttpResponseHeader rhdr(500);
+		HttpResponseHeader rhdr(500,hdr.majorVersion(),hdr.minorVersion());
 		setDefaultResponseHeaders(rhdr,"text/html",false);
 		hdlr->send500(rhdr,i18n("Unsupported HTTP method"));
 	}

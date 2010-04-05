@@ -50,6 +50,8 @@ set(libbtcore_SRC
 	util/decompressfilejob.cpp
 	util/extractfilejob.cpp
 	util/logsystemmanager.cpp
+	util/pipe.cpp
+	util/circularbuffer.cpp
 	
 	bcodec/bdecoder.cpp  
 	bcodec/bencoder.cpp  
@@ -69,6 +71,8 @@ set(libbtcore_SRC
 	net/socks.cpp
 	net/wakeuppipe.cpp
 	net/reverseresolver.cpp
+	net/socketdevice.cpp
+	net/poll.cpp
 	
 	mse/bigint.cpp  
 	mse/functions.cpp  
@@ -94,6 +98,7 @@ set(libbtcore_SRC
 	peer/utmetadata.cpp
 	peer/accessmanager.cpp
 	peer/badpeerslist.cpp
+	peer/peerconnector.cpp
 
 	download/piece.cpp
 	download/request.cpp
@@ -120,6 +125,7 @@ set(libbtcore_SRC
 	interfaces/cachefactory.cpp
 	interfaces/webseedinterface.cpp
 	interfaces/trackerinterface.cpp
+	interfaces/serverinterface.cpp
 
 	torrent/globals.cpp
 	torrent/server.cpp
@@ -173,6 +179,7 @@ set(libbtcore_SRC
 	tracker/udptrackersocket.cpp
 	tracker/trackermanager.cpp
 	tracker/httpannouncejob.cpp
+	tracker/kioannouncejob.cpp
 	
 	datachecker/datachecker.cpp          
 	datachecker/datacheckerthread.cpp  
@@ -188,6 +195,17 @@ set(libbtcore_SRC
 	magnet/magnetdownloader.cpp
 	magnet/magnetlink.cpp
 	magnet/metadatadownload.cpp
+	
+	utp/utpserver.cpp
+	utp/utpserverthread.cpp
+	utp/connection.cpp
+	utp/localwindow.cpp
+	utp/remotewindow.cpp
+	utp/utpsocket.cpp
+	utp/timevalue.cpp
+	utp/utpprotocol.cpp
+	utp/pollpipe.cpp
+	utp/delaywindow.cpp
 	
 	btversion.cpp
 )
@@ -210,20 +228,6 @@ endif(WIN32)
 set_target_properties(btcore PROPERTIES VERSION 13.0.0 SOVERSION 13 )
 install(TARGETS btcore  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
-set(net_HDR  
-	./net/socks.h
-	./net/bufferedsocket.h
-	./net/downloadthread.h
-	./net/address.h
-	./net/socketgroup.h
-	./net/portlist.h
-	./net/networkthread.h
-	./net/socket.h
-	./net/speed.h
-	./net/uploadthread.h
-	./net/socketmonitor.h
-	./net/reverseresolver.h
-)
 
 set (mse_HDR 
 	./mse/encryptedserverauthenticate.h
@@ -251,6 +255,7 @@ set (interfaces_HDR
 	./interfaces/cachefactory.h
 	./interfaces/webseedinterface.h
 	./interfaces/trackerinterface.h
+	./interfaces/serverinterface.h
 )
 
 set (peer_HDR
@@ -270,30 +275,10 @@ set (peer_HDR
 	./peer/chunkcounter.h
 	./peer/serverauthenticate.h
 	./peer/accessmanager.h
+	./peer/peerconnector.h
 )
 	
-set (util_HDR
-	./util/autorotatelogjob.h
-	./util/fileops.h
-	./util/timer.h
-	./util/ptrmap.h
-	./util/log.h
-	./util/waitjob.h
-	./util/urlencoder.h
-	./util/array.h
-	./util/functions.h
-	./util/file.h
-	./util/constants.h
-	./util/bitset.h
-	./util/sha1hash.h
-	./util/sha1hashgen.h
-	./util/error.h
-	./util/win32.h
-	./util/logsystemmanager.h
-	./util/compressfilejob.h
-	./util/decompressfilejob.h
-	./util/extractfilejob.h
-)
+
 	
 set (download_HDR
 	./download/chunkdownload.h
@@ -331,23 +316,7 @@ set (diskio_HDR
 	./diskio/piecedata.h
 )
 	
-set (torrent_HDR
-	./torrent/torrent.h
-	./torrent/advancedchokealgorithm.h
-	./torrent/peersourcemanager.h
-	./torrent/choker.h
-	./torrent/server.h
-	./torrent/torrentcontrol.h
-	./torrent/uploader.h
-	./torrent/torrentcreator.h
-	./torrent/timeestimator.h
-	./torrent/torrentfile.h
-	./torrent/statsfile.h
-	./torrent/globals.h
-	./torrent/torrentstats.h
-	./torrent/job.h
-	./torrent/jobqueue.h
-)
+
 	
 set (tracker_HDR
 	./tracker/tracker.h
@@ -355,6 +324,8 @@ set (tracker_HDR
 	./tracker/udptrackersocket.h
 	./tracker/httptracker.h
 	./tracker/trackermanager.h
+	./tracker/httpannouncejob.h
+	./tracker/kioannouncejob.h
 )
 
 set (datachecker_HDR
@@ -394,13 +365,10 @@ set (migrate_HDR
 
 
 install(FILES ${tracker_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore/tracker COMPONENT Devel)
-install(FILES ${torrent_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore/torrent COMPONENT Devel)
 install(FILES ${diskio_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore/diskio COMPONENT Devel)
 install(FILES ${bcodec_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore/bcodec COMPONENT Devel)
-install(FILES ${net_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore/net COMPONENT Devel)
 install(FILES ${mse_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore/mse COMPONENT Devel)
 install(FILES ${interfaces_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore/interfaces COMPONENT Devel)
-install(FILES ${util_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore/util COMPONENT Devel)
 install(FILES ${peer_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore/peer COMPONENT Devel)
 install(FILES ${datachecker_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore/datachecker COMPONENT Devel)
 install(FILES ${dht_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore/dht COMPONENT Devel)
@@ -408,4 +376,8 @@ install(FILES ${migrate_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore/migrat
 install(FILES ${download_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore/download COMPONENT Devel)
 install(FILES ${btcore_HDR} DESTINATION ${INCLUDE_INSTALL_DIR}/libbtcore COMPONENT Devel)
 
+add_subdirectory(torrent)
+add_subdirectory(net)
 add_subdirectory(magnet)
+add_subdirectory(util)
+add_subdirectory(utp)

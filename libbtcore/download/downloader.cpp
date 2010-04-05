@@ -49,16 +49,12 @@ namespace bt
 
 	bool Downloader::use_webseeds = true;
 	
-	Downloader::Downloader(Torrent & tor,PeerManager & pman,ChunkManager & cman,ChunkSelectorFactoryInterface* fac) 
+	Downloader::Downloader(Torrent & tor,PeerManager & pman,ChunkManager & cman) 
 	: tor(tor),pman(pman),cman(cman),downloaded(0),tmon(0),chunk_selector(0),webseed_endgame_mode(false)
 	{
 		webseeds_on = use_webseeds;
 		pman.setPieceHandler(this);
-		
-		if (!fac) // check if a custom one was provided, if not create a default one
-			chunk_selector = new ChunkSelector(cman,*this,pman);
-		else
-			chunk_selector = fac->createChunkSelector(cman,*this,pman);
+		chunk_selector = new ChunkSelector(cman,*this,pman);
 		
 		Uint64 total = tor.getTotalSize();
 		downloaded = (total - cman.bytesLeft());
@@ -108,22 +104,24 @@ namespace bt
 		qDeleteAll(webseeds);
 	}
 	
+	void Downloader::setChunkSelector(ChunkSelectorInterface* csel)
+	{
+		if (chunk_selector)
+			delete chunk_selector;
+		
+		if (!csel) // check if a custom one was provided, if not create a default one
+			chunk_selector = new ChunkSelector(cman,*this,pman);
+		else
+			chunk_selector = csel;
+	}
+
+	
 	void Downloader::pieceReceived(const Piece & p)
 	{
 		if (cman.completed())
 			return;
 		
-		ChunkDownload* cd = 0;
-		
-		for (CurChunkItr j = current_chunks.begin();j != current_chunks.end();++j)
-		{
-			if (p.getIndex() != j->first)
-				continue;
-			
-			cd = j->second;
-			break;
-		}
-		
+		ChunkDownload* cd = current_chunks.find(p.getIndex());
 		if (!cd)
 		{
 			unnecessary_data += p.getLength();
@@ -507,6 +505,22 @@ namespace bt
 			ws->cancel();
 	}
 	
+	void Downloader::pause()
+	{
+		if (tmon)
+		{
+			for (CurChunkItr i = current_chunks.begin();i != current_chunks.end();++i)
+			{
+				ChunkDownload* cd = i->second;
+				tmon->downloadRemoved(cd);
+			}
+		}
+		
+		current_chunks.clear();
+		foreach (WebSeed* ws,webseeds)
+			ws->reset();
+	}
+	
 	Uint32 Downloader::downloadRate() const
 	{
 		// sum of the download rate of each peer
@@ -553,6 +567,16 @@ namespace bt
 		if (!fptr.open(file,"wb"))
 			return;
 
+		// See bug 219019, don't know why, but it is possible that we get 0 pointers in the map
+		// so get rid of them before we save
+		for (CurChunkItr i = current_chunks.begin();i != current_chunks.end();)
+		{
+			if (!i->second)
+				i = current_chunks.erase(i);
+			else
+				i++;
+		}
+		
 		// Save all the current downloads to a file
 		CurrentChunksHeader hdr;
 		hdr.magic = CURRENT_CHUNK_MAGIC;
@@ -560,13 +584,12 @@ namespace bt
 		hdr.minor = bt::MINOR;
 		hdr.num_chunks = current_chunks.count();
 		fptr.write(&hdr,sizeof(CurrentChunksHeader));
-
-//		Out(SYS_GEN|LOG_DEBUG) << "sizeof(CurrentChunksHeader)" << sizeof(CurrentChunksHeader) << endl;
+		
 		Out(SYS_GEN|LOG_DEBUG) << "Saving " << current_chunks.count() << " chunk downloads" << endl;
-		for (CurChunkItr i = current_chunks.begin();i != current_chunks.end();++i)
+		for (CurChunkItr i = current_chunks.begin();i != current_chunks.end();i++)
 		{
 			ChunkDownload* cd = i->second;
-			cd->save(fptr);
+			cd->save(fptr); 
 		}
 	}
 
@@ -605,37 +628,35 @@ namespace bt
 				return;
 			}
 			
-			if (!cman.getChunk(hdr.index) || current_chunks.contains(hdr.index))
+			Chunk* c = cman.getChunk(hdr.index);
+			if (!c || current_chunks.contains(hdr.index))
 			{
 				Out(SYS_GEN|LOG_DEBUG) << "Illegal chunk " << hdr.index << endl;
 				return;
 			}
-			Chunk* c = cman.getChunk(hdr.index);
-			if (!c->isExcluded())
-			{
-				ChunkDownload* cd = new ChunkDownload(c);
-				bool ret = false;
-				try
-				{
-					ret = cd->load(fptr,hdr);
-				}
-				catch (...)
-				{
-					ret = false;
-				}
-				
-				if (!ret || c->getStatus() == Chunk::ON_DISK)
-				{
-					delete cd;
-				}
-				else
-				{
-					current_chunks.insert(hdr.index,cd);
-					downloaded += cd->bytesDownloaded();
 			
-					if (tmon)
-						tmon->downloadStarted(cd);
-				}
+			ChunkDownload* cd = new ChunkDownload(c);
+			bool ret = false;
+			try
+			{
+				ret = cd->load(fptr,hdr);
+			}
+			catch (...)
+			{
+				ret = false;
+			}
+			
+			if (!ret || c->getStatus() == Chunk::ON_DISK || c->isExcluded())
+			{
+				delete cd;
+			}
+			else
+			{
+				current_chunks.insert(hdr.index,cd);
+				downloaded += cd->bytesDownloaded();
+		
+				if (tmon)
+					tmon->downloadStarted(cd);
 			}
 		}
 		
@@ -744,7 +765,7 @@ namespace bt
 	
 	void Downloader::onChunkReady(Chunk* c)
 	{
-		PieceData* piece = c->getPiece(0,c->getSize(),false);
+		PieceDataPtr piece = c->getPiece(0,c->getSize(),false);
 		
 		webseeds_chunks.erase(c->getIndex());
 		if (!piece)
@@ -759,7 +780,6 @@ namespace bt
 		
 
 		SHA1Hash h = SHA1Hash::generate(piece->data(),c->getSize());
-		piece->unref();
 		if (tor.verifyHash(h,c->getIndex()))
 		{
 			// hash ok so save it
@@ -871,6 +891,12 @@ namespace bt
 		return false;
 	}
 	
+	void Downloader::removeAllWebSeeds()
+	{
+		webseeds.clear();
+		webseeds_chunks.clear();
+	}
+
 	void Downloader::saveWebSeeds(const QString & file)
 	{
 		QFile fptr(file);

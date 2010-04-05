@@ -43,12 +43,12 @@
 #include <kstdaction.h>
 #include <kiconloader.h>
 #include <kglobal.h>
+#include <solid/networking.h>
 
 #include "scheduleeditor.h"
 #include "schedule.h"
 #include "bwschedulerplugin.h"
 #include "bwprefpage.h"
-
 
 #include <torrent/globals.h>
 #include <peer/peermanager.h>
@@ -71,6 +71,10 @@ namespace kt
 		screensaver = new org::freedesktop::ScreenSaver(interface, "/ScreenSaver",QDBusConnection::sessionBus(),this);
 		connect(screensaver,SIGNAL(ActiveChanged(bool)),this,SLOT(screensaverActivated(bool)));
 		screensaver_on = screensaver->GetActive();
+		
+		Solid::Networking::Notifier* notifier = Solid::Networking::notifier();
+		connect(notifier,SIGNAL(statusChanged(Solid::Networking::Status)),
+				this,SLOT(networkStatusChanged(Solid::Networking::Status)));
 	}
 
 
@@ -149,7 +153,7 @@ namespace kt
 		Out(SYS_SCD|LOG_NOTICE) << QString("Changing schedule to normal values : %1 down, %2 up")
 		.arg(dlim).arg(ulim) << endl;
 		// set normal limits
-		getCore()->setPausedState(false);
+		getCore()->setSuspendedState(false);
 		net::SocketMonitor::setDownloadCap(1024 * dlim);
 		net::SocketMonitor::setUploadCap(1024 * ulim);
 		if (m_editor)
@@ -171,12 +175,12 @@ namespace kt
 			return;
 		}
 		
-		if (item->paused)
+		if (item->suspended)
 		{
 			Out(SYS_SCD|LOG_NOTICE) << QString("Changing schedule to : PAUSED") << endl;
-			if (!getCore()->getPausedState())
+			if (!getCore()->getSuspendedState())
 			{
-				getCore()->setPausedState(true);
+				getCore()->setSuspendedState(true);
 				net::SocketMonitor::setDownloadCap(1024 * Settings::maxDownloadRate());
 				net::SocketMonitor::setUploadCap(1024 * Settings::maxUploadRate());
 				if (m_editor)
@@ -195,7 +199,7 @@ namespace kt
 			
 			Out(SYS_SCD|LOG_NOTICE) << QString("Changing schedule to : %1 down, %2 up")
 					.arg(dlim).arg(ulim) << endl;
-			getCore()->setPausedState(false);
+			getCore()->setSuspendedState(false);
 			
 			net::SocketMonitor::setDownloadCap(1024 * dlim);
 			net::SocketMonitor::setUploadCap(1024 * ulim);
@@ -258,6 +262,15 @@ namespace kt
 	{
 		screensaver_on = on;
 		timerTriggered();
+	}
+	
+	void BWSchedulerPlugin::networkStatusChanged(Solid::Networking::Status status)
+	{
+		if (status == Solid::Networking::Connected)
+		{
+			Out(SYS_SCD|LOG_NOTICE) << "Network is up, setting schedule" << endl;
+			timerTriggered();
+		}
 	}
 
 }
