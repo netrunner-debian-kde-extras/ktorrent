@@ -22,6 +22,7 @@
 
 #include <QWidget>
 #include <QTimer>
+#include <view/viewdelegate.h>
 #include "scanlistener.h"
 #include "ui_scanextender.h"
 
@@ -37,14 +38,12 @@ namespace kt
 	/**
 		Extender widget which displays the results of a data scan
 	*/
-	class ScanExtender : public QWidget,public Ui_ScanExtender
+	class ScanExtender : public Extender,public Ui_ScanExtender
 	{
 		Q_OBJECT
 	public:
 		ScanExtender(ScanListener* lst,bt::TorrentInterface* tc,QWidget* parent);
 		virtual ~ScanExtender();
-		
-		bt::TorrentInterface* torrent() {return tc;}
 
 	private slots:
 		void update();
@@ -52,10 +51,10 @@ namespace kt
 		void finished();
 		void restart();
 		void closeRequested();
+		void scanError(const QString & err);
 		
 	private:
 		QTimer timer;
-		bt::TorrentInterface* tc;
 		ScanListener* listener;
 	};
 }

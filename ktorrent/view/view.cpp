@@ -46,6 +46,7 @@
 #include "viewselectionmodel.h"
 #include "viewdelegate.h"
 #include "scanlistener.h"
+#include "propertiesextender.h"
 
 using namespace bt;
 
@@ -99,6 +100,7 @@ namespace kt
 		connect(selectionModel(),SIGNAL(selectionChanged(const QItemSelection &,const QItemSelection)),
 				this,SLOT(onSelectionChanged(const QItemSelection &,const QItemSelection)));
 		connect(model,SIGNAL(sorted()),selection_model,SLOT(sorted()));
+		connect(this,SIGNAL(doubleClicked(QModelIndex)),this,SLOT(onDoubleClicked(QModelIndex)));
 		
 		delegate = new ViewDelegate(core,model,this);
 		setItemDelegate(delegate);
@@ -344,7 +346,20 @@ namespace kt
 			tc->changeOutputDir(dir,bt::TorrentInterface::MOVE_FILES);
 		}
 	}
-	
+
+	void View::moveDataWhenCompleted()
+	{
+		QList<bt::TorrentInterface*> sel;
+		getSelection(sel);
+		if (sel.count() == 0)
+			return;
+
+		foreach(bt::TorrentInterface *tc,sel)
+		{
+			delegate->extend(tc,new PropertiesExtender(tc,0));
+		}
+	}
+
 	void View::removeFromGroup()
 	{
 		if (!group || group->isStandardGroup())
@@ -412,20 +427,23 @@ namespace kt
 
 	void View::dataScanStarted(ScanListener* listener)
 	{
-		if (delegate->extended(listener->torrent()))
-			return;
-		
-		QWidget* ext = listener->createExtender();
+		Extender* ext = listener->createExtender();
 		if (ext)
 		{
 			ext->hide();
 			delegate->extend(listener->torrent(),ext);
+			data_scan_extenders.insert(listener->torrent(),ext);
 		}
 	}
 	
 	void View::dataScanClosed(ScanListener* listener)
 	{
-		delegate->closeExtender(listener->torrent());
+		QMap<bt::TorrentInterface*,Extender*>::iterator itr = data_scan_extenders.find(listener->torrent());
+		if (itr != data_scan_extenders.end())
+		{
+			delegate->closeExtender(listener->torrent(),itr.value());
+			data_scan_extenders.erase(itr);
+		}
 	}
 
 
@@ -522,6 +540,20 @@ namespace kt
 		return ret;
 	}
 
+	void View::onDoubleClicked(const QModelIndex& index)
+	{
+		if (index.column() == 0) // double clicking on column 0 will change the name of a torrent
+			return;
+		
+		bt::TorrentInterface* tc = model->torrentFromIndex(index);
+		if (tc)
+		{
+			if (tc->getStats().multi_file_torrent)
+				new KRun(KUrl(tc->getStats().output_path), 0, 0, true, true);
+			else
+				new KRun(KUrl(tc->getDataDir()), 0, 0, true, true);
+		}
+	}
 	
 }
 
