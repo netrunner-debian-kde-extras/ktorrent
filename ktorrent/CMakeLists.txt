@@ -48,6 +48,7 @@ set(ktorrent_SRC
 	view/viewdelegate.cpp
 	view/viewselectionmodel.cpp
 	view/scanextender.cpp
+	view/propertiesextender.cpp
 )
 	
 
@@ -76,14 +77,16 @@ kde4_add_ui_files(ktorrent_SRC
 	pref/recommendedsettingsdlg.ui
 	
 	view/scanextender.ui
+	view/propertiesextender.ui
 )
 
 kde4_add_app_icon(ktorrent_SRC "${CMAKE_CURRENT_SOURCE_DIR}/icons/hi*-app-ktorrent.png")
 
-kde4_add_executable(ktorrent ${ktorrent_SRC})
+kde4_add_executable(ktorrent_app ${ktorrent_SRC})
+set_target_properties(ktorrent_app  PROPERTIES OUTPUT_NAME ktorrent)
 
-target_link_libraries(ktorrent btcore ktideal ktcore ${KDE4_SOLID_LIBS} ${KDE4_KIO_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_KNOTIFYCONFIG_LIBS})
-install(TARGETS ktorrent ${INSTALL_TARGETS_DEFAULT_ARGS})
+target_link_libraries(ktorrent_app ${LIBKTORRENT_LIBRARIES} ktideal ktcore ${KDE4_SOLID_LIBS} ${KDE4_KIO_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_KNOTIFYCONFIG_LIBS})
+install(TARGETS ktorrent_app ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES ktorrent.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
 install(FILES ktorrentplugin.desktop  DESTINATION  ${SERVICETYPES_INSTALL_DIR} )
 install(FILES magnet.protocol  DESTINATION  ${SERVICES_INSTALL_DIR} )

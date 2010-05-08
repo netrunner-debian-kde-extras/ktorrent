@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2005 by Joris Guisson                                   *
+ *   Copyright (C) 2010 by Joris Guisson                                   *
  *   joris.guisson@gmail.com                                               *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -15,23 +15,42 @@
  *   You should have received a copy of the GNU General Public License     *
  *   along with this program; if not, write to the                         *
  *   Free Software Foundation, Inc.,                                       *
- *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.             *
+ *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
-#ifndef KTVERSION_HH
-#define KTVERSION_HH
 
-#include <version.h>
-#include "util/constants.h"
+#ifndef KT_PROPERTIESEXTENDER_H
+#define KT_PROPERTIESEXTENDER_H
 
-namespace kt
+#include <QWidget>
+#include <view/viewdelegate.h>
+#include "ui_propertiesextender.h"
+
+
+namespace bt
 {
-	const bt::Uint32 MAJOR = 4;
-	const bt::Uint32 MINOR = 0;
-	const bt::Uint32 RELEASE = 1;
-	const bt::VersionType VERSION_TYPE = bt::RELEASE_CANDIDATE;
-	const char VERSION_STRING[] = "4.0rc1";
+	class TorrentInterface;
 }
 
-#define KT_VERSION_MACRO "4.0rc1"
+namespace kt 
+{
+	/**
+		Extender which shows properties about a torrent.
+	*/
+	class PropertiesExtender : public Extender,public Ui_PropertiesExtender
+	{
+		Q_OBJECT
+	public:
+		PropertiesExtender(bt::TorrentInterface* tc,QWidget* parent);
+		virtual ~PropertiesExtender();
+		
+	public slots:
+		void moveOnCompletionEnabled(bool on);
+		void buttonClicked(QAbstractButton*);
+		
+	private:
+		void apply();
+	};
 
-#endif
+}
+
+#endif // KT_PROPERTIESEXTENDER_H

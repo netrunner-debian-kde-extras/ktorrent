@@ -25,7 +25,7 @@ namespace kt
 {
 	
 	ScanExtender::ScanExtender(ScanListener* lst,bt::TorrentInterface* tc,QWidget* parent) 
-	: QWidget(parent),tc(tc),listener(lst)
+	: Extender(tc,parent),listener(lst)
 	{
 		setupUi(this);
 		connect(&timer,SIGNAL(timeout()),this,SLOT(update()));
@@ -41,6 +41,9 @@ namespace kt
 		progress_bar->setValue(0);
 		progress_bar->setMaximum(tc->getStats().total_chunks);
 		
+		error_msg->clear();
+		error_msg->hide();
+		
 		QFont font = chunks_failed->font();
 		font.setBold(true);
 		chunks_failed->setFont(font);
@@ -49,6 +52,7 @@ namespace kt
 		chunks_not_downloaded->setFont(font);
 		connect(listener,SIGNAL(scanFinished()),this,SLOT(finished()));
 		connect(listener,SIGNAL(restarted()),this,SLOT(restart()));
+		connect(listener,SIGNAL(scanError(QString)),this,SLOT(scanError(QString)));
 	}
 
 	ScanExtender::~ScanExtender()
@@ -70,7 +74,7 @@ namespace kt
 	{
 		timer.stop();
 		update();
-		progress_bar->setValue(listener->total_chunks);
+		progress_bar->setValue(progress_bar->maximum());
 		progress_bar->setEnabled(false);
 		cancel_button->setDisabled(true);
 		close_button->setEnabled(true);
@@ -89,9 +93,21 @@ namespace kt
 		progress_bar->setFormat(i18n("Checked %v of %m chunks"));
 		progress_bar->setValue(0);
 		progress_bar->setMaximum(tc->getStats().total_chunks);
+		error_msg->clear();
+		if (!error_msg->isHidden())
+		{
+			error_msg->hide();
+			emit resized(this);
+		}
 		timer.start(500);
 	}
 	
+	void ScanExtender::scanError(const QString& err)
+	{
+		error_msg->show();
+		error_msg->setText(i18n("<font color=\"red\">%1</font>").arg(err));
+		emit resized(this);
+	}
 	
 	void ScanExtender::closeRequested()
 	{

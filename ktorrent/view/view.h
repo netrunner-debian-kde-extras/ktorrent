@@ -31,6 +31,8 @@ class KMenu;
 
 namespace kt
 {
+
+	class Extender;
 	class Core;
 	class ViewModel;
 	class ViewSelectionModel;
@@ -129,13 +131,14 @@ namespace kt
 		void togglePEX();
 		void scrape();
 		void moveData();
+		void moveDataWhenCompleted();
 		void renameTorrent();
 		void showMenu(const QPoint & pos);
 		void showHeaderMenu(const QPoint& pos);
 		void onHeaderMenuItemTriggered(QAction* act);
 		void onCurrentItemChanged(const QModelIndex & current,const QModelIndex & previous);
 		void onSelectionChanged(const QItemSelection & selected,const QItemSelection & deselected);
-		
+		void onDoubleClicked(const QModelIndex & index);
 
 	signals:
 		void currentTorrentChanged(View* v,bt::TorrentInterface* tc);
@@ -155,6 +158,7 @@ namespace kt
 		ViewModel* model;
 		ViewSelectionModel* selection_model;
 		ViewDelegate* delegate;
+		QMap<bt::TorrentInterface*,Extender*> data_scan_extenders;
 	};
 }
 

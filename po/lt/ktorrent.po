@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-03-29 04:35+0200\n"
+"POT-Creation-Date: 2010-04-29 04:59+0200\n"
 "PO-Revision-Date: 2009-12-27 12:14+0300\n"
 "Last-Translator: Andrius Štikonas <stikonas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -289,8 +289,8 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KPushButton, m_remove_webseed)
 #. i18n: file: ktorrent/ipfilterwidget.ui:65
 #. i18n: ectx: property (text), widget (KPushButton, m_remove)
-#: plugins/mediaplayer/playlistwidget.cpp:107 rc.cpp:244 rc.cpp:2284
-#: rc.cpp:2311 rc.cpp:2320 rc.cpp:2584
+#: plugins/mediaplayer/playlistwidget.cpp:107 rc.cpp:244 rc.cpp:2350
+#: rc.cpp:2377 rc.cpp:2386 rc.cpp:2656
 msgid "Remove"
 msgstr "Pašalinti"
 
@@ -554,14 +554,14 @@ msgstr "Užduotys"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:179
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: plugins/stats/SpdTabPage.cc:63 plugins/stats/SpdTabPage.cc:64 rc.cpp:1657
+#: plugins/stats/SpdTabPage.cc:63 plugins/stats/SpdTabPage.cc:64 rc.cpp:1714
 #, fuzzy
 msgid "Current speed"
 msgstr "Torrent failas"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:184
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: plugins/stats/SpdTabPage.cc:66 plugins/stats/SpdTabPage.cc:67 rc.cpp:1660
+#: plugins/stats/SpdTabPage.cc:66 plugins/stats/SpdTabPage.cc:67 rc.cpp:1717
 msgid "Average speed"
 msgstr "Vidutinis greitis"
 
@@ -716,8 +716,7 @@ msgstr "Turimos dalys"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_5)
 #. i18n: file: plugins/stats/Settings.ui:234
 #. i18n: ectx: property (text), widget (QLabel, label_12)
-#: plugins/infowidget/peerviewmodel.cpp:311
-#: libbtcore/util/logsystemmanager.cpp:36 ktorrent/view/viewmanager.cpp:598
+#: plugins/infowidget/peerviewmodel.cpp:311 ktorrent/view/viewmanager.cpp:609
 #: rc.cpp:454 rc.cpp:541 rc.cpp:604
 msgid "DHT"
 msgstr "DHT"
@@ -945,9 +944,9 @@ msgstr ""
 #: ktorrent/dialogs/spinboxdelegate.cpp:41 rc.cpp:686 rc.cpp:692 rc.cpp:1018
 #: rc.cpp:1030 rc.cpp:1093 rc.cpp:1102 rc.cpp:1114 rc.cpp:1123 rc.cpp:1138
 #: rc.cpp:1144 rc.cpp:1186 rc.cpp:1195 rc.cpp:1207 rc.cpp:1216 rc.cpp:1231
-#: rc.cpp:1237 rc.cpp:1386 rc.cpp:1395 rc.cpp:1404 rc.cpp:1416 rc.cpp:1796
-#: rc.cpp:1805 rc.cpp:1883 rc.cpp:1892 rc.cpp:2186 rc.cpp:2195 rc.cpp:2204
-#: rc.cpp:2213 rc.cpp:2409 rc.cpp:2418
+#: rc.cpp:1237 rc.cpp:1443 rc.cpp:1452 rc.cpp:1461 rc.cpp:1473 rc.cpp:1853
+#: rc.cpp:1862 rc.cpp:1940 rc.cpp:1949 rc.cpp:2252 rc.cpp:2261 rc.cpp:2270
+#: rc.cpp:2279 rc.cpp:2481 rc.cpp:2490
 msgid "No limit"
 msgstr "Neribotas"
 
@@ -1029,7 +1028,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:160
 #. i18n: ectx: attribute (title), widget (QWidget, m_tracker_tab)
-#: plugins/infowidget/infowidgetplugin.cpp:266 rc.cpp:2278
+#: plugins/infowidget/infowidgetplugin.cpp:266 rc.cpp:2344
 msgid "Trackers"
 msgstr "Vedliai"
 
@@ -1093,7 +1092,7 @@ msgstr "Greitis"
 #: plugins/infowidget/webseedsmodel.cpp:127
 #: plugins/infowidget/trackermodel.cpp:148
 #: ktorrent/tools/queuemanagermodel.cpp:123 ktorrent/tools/magnetmodel.cpp:129
-#: ktorrent/view/viewmodel.cpp:436
+#: ktorrent/view/viewmodel.cpp:436 ktorrent/trayicon.cpp:149
 msgid "Status"
 msgstr "Būsena"
 
@@ -1118,7 +1117,7 @@ msgid "Cannot remove webseed %1, it is part of the torrent."
 msgstr ""
 "Nepavyko pašalinti žiniatinkliu platinamo failo %1, tai torrent failo dalis."
 
-#: plugins/infowidget/fileview.cpp:70 ktorrent/dialogs/fileselectdlg.cpp:87
+#: plugins/infowidget/fileview.cpp:70 ktorrent/dialogs/fileselectdlg.cpp:89
 msgid "Filter"
 msgstr "Filtras"
 
@@ -1141,7 +1140,7 @@ msgstr "Siųsti paskutinį"
 
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:53
 #. i18n: ectx: property (text), widget (KPushButton, m_dnd)
-#: plugins/infowidget/fileview.cpp:119 rc.cpp:2474
+#: plugins/infowidget/fileview.cpp:119 rc.cpp:2546
 msgid "Do Not Download"
 msgstr "Nesiųsti"
 
@@ -1187,7 +1186,7 @@ msgstr[3] ""
 "Prarasite visus duomenis, esančius šiuose failuose. Ar tikrai norite tęsti?"
 
 #: plugins/infowidget/fileview.cpp:320 plugins/infowidget/fileview.cpp:341
-#: ktorrent/view/view.cpp:338
+#: ktorrent/view/view.cpp:340
 msgid "Select a directory to move the data to."
 msgstr "Nurodykite aplanką, į kurį perkelti duomenis."
 
@@ -1349,7 +1348,9 @@ msgstr "Stabdyti scenarijų"
 msgid "Edit Script"
 msgstr "Keisti scenarijų"
 
-#: plugins/scripting/scriptingplugin.cpp:92
+#. i18n: file: ktorrent/view/propertiesextender.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, PropertiesExtender)
+#: plugins/scripting/scriptingplugin.cpp:92 rc.cpp:2212
 msgid "Properties"
 msgstr "Savybės"
 
@@ -1551,7 +1552,7 @@ msgstr "Namai"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: plugins/search/homepage.cpp:118 ktorrent/main.cpp:85 rc.cpp:1654
+#: plugins/search/homepage.cpp:118 ktorrent/main.cpp:85 rc.cpp:1711
 msgid "KTorrent"
 msgstr "KTorrent"
 
@@ -1566,8 +1567,7 @@ msgstr "Žiniatinklyje ieškoti torrentų"
 
 #: plugins/search/searchenginelist.cpp:192
 #: plugins/ipfilter/convertthread.cpp:67
-#: plugins/ipfilter/convertthread.cpp:167 libbtcore/diskio/cachefile.cpp:94
-#: libbtcore/util/fileops.cpp:325 libbtcore/util/fileops.cpp:367
+#: plugins/ipfilter/convertthread.cpp:167
 #: ktorrent/dialogs/importdialog.cpp:276
 #, kde-format
 msgid "Cannot open %1 : %2"
@@ -1603,7 +1603,7 @@ msgstr " Variklis:"
 
 #: plugins/search/htmlpart.cpp:94
 #, fuzzy
-msgid "Do you want to download this magnet link ?"
+msgid "Do you want to download this magnet link?"
 msgstr "Jūs norite atsisiųsti ar išsaugoti torrentą?"
 
 #: plugins/search/htmlpart.cpp:201
@@ -1758,9 +1758,6 @@ msgid "Edit an item"
 msgstr "Redaguoti pavadinimą"
 
 #: plugins/bwscheduler/schedule.cpp:124 plugins/bwscheduler/schedule.cpp:245
-#: libbtcore/torrent/torrentcreator.cpp:124
-#: libbtcore/torrent/torrentcreator.cpp:255
-#: libbtcore/torrent/torrentcreator.cpp:292
 #, kde-format
 msgid "Cannot open file %1: %2"
 msgstr "Nepavyko atverti failo %1: %2"
@@ -1776,7 +1773,7 @@ msgid "Suspended"
 msgstr "Greitis"
 
 #: plugins/bwscheduler/schedulegraphicsitem.cpp:83
-#: plugins/bwscheduler/schedulegraphicsitem.cpp:84 ktorrent/trayicon.cpp:310
+#: plugins/bwscheduler/schedulegraphicsitem.cpp:84 ktorrent/trayicon.cpp:352
 msgid "Unlimited"
 msgstr "Neribota"
 
@@ -1886,7 +1883,7 @@ msgstr "Failas egzistuoja"
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:34
 #: plugins/ipfilter/ipfilterplugin.cpp:60
-#: plugins/ipfilter/ipfilterplugin.cpp:73 ktorrent/gui.cpp:417
+#: plugins/ipfilter/ipfilterplugin.cpp:73 ktorrent/gui.cpp:419
 msgid "IP Filter"
 msgstr "IP filtras"
 
@@ -1921,6 +1918,27 @@ msgstr ""
 msgid "Never"
 msgstr "Niekada"
 
+#: plugins/magnetgenerator/magnetgeneratorplugin.cpp:49
+#, fuzzy
+#| msgid "Copy Torrent URL"
+msgid "Copy Magnet URI"
+msgstr "Kopijuoti torrento URL"
+
+#: plugins/magnetgenerator/magnetgeneratorplugin.cpp:143
+#: ktorrent/torrentactivity.cpp:78
+msgid "Magnet"
+msgstr ""
+
+#: plugins/magnetgenerator/magnetgeneratorplugin.cpp:143
+msgid "Magnet link copied to clipboard"
+msgstr ""
+
+#. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:32
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_x2)
+#: plugins/magnetgenerator/magnetgeneratorprefwidget.cpp:35 rc.cpp:1323
+msgid "Magnet Generator"
+msgstr ""
+
 #: ktupnptest/main.cpp:39
 msgid "KTUPnPTest"
 msgstr "KTUPnPTestas"
@@ -1949,485 +1967,6 @@ msgstr "(C) 2009 Joris Guisson"
 #: ktmagnetdownloader/magnetdownloader.cpp:45 ktorrent/main.cpp:140
 msgid "Document to open"
 msgstr "Atidaryti dokumentą"
-
-#: libbtcore/bcodec/bdecoder.cpp:62
-#, kde-format
-msgid "Illegal token: %1"
-msgstr "Neįmanomas paėmimas: %1"
-
-#: libbtcore/bcodec/bdecoder.cpp:125 libbtcore/bcodec/bdecoder.cpp:133
-msgid "Decode error"
-msgstr "Iškodavimo klaida"
-
-#: libbtcore/bcodec/bdecoder.cpp:193 libbtcore/bcodec/bdecoder.cpp:238
-msgid "Unexpected end of input"
-msgstr "Netikėta įvesties pabaiga"
-
-#: libbtcore/bcodec/bdecoder.cpp:213 libbtcore/bcodec/bdecoder.cpp:247
-#, kde-format
-msgid "Cannot convert %1 to an int"
-msgstr "Nepavyksta konvertuoti %1 į kint."
-
-#: libbtcore/bcodec/bdecoder.cpp:252
-msgid "Torrent is incomplete."
-msgstr "Torentas yra nepilnas."
-
-#: libbtcore/diskio/chunkmanager.cpp:207 libbtcore/diskio/chunkmanager.cpp:322
-#, kde-format
-msgid "Cannot open index file %1 : %2"
-msgstr "Nepavyksta atverti indekso failo %1: %2"
-
-#: libbtcore/diskio/cachefile.cpp:120 libbtcore/diskio/cachefile.cpp:246
-#: libbtcore/diskio/cachefile.cpp:432 libbtcore/diskio/cachefile.cpp:499
-#, kde-format
-msgid "Cannot open %1 for writing : readonly filesystem"
-msgstr ""
-"Nepavyko atverti %1 įrašymui: failų sistema prijungta skaitymo veiksena"
-
-#: libbtcore/diskio/cachefile.cpp:131
-#, fuzzy, kde-format
-msgid "Not enough free disk space for %1"
-msgstr "Nepakankama vietos diske %1"
-
-#: libbtcore/diskio/cachefile.cpp:256
-#, kde-format
-msgid "Cannot expand file %1 : %2"
-msgstr "Nepavyko išplėsti failo %1 : %2"
-
-#: libbtcore/diskio/cachefile.cpp:398
-#, kde-format
-msgid "Error : Reading past the end of the file %1"
-msgstr "Klaida: failas %1 buvo skaitomas už jo pabaigos"
-
-#: libbtcore/diskio/cachefile.cpp:403 libbtcore/diskio/cachefile.cpp:449
-#, kde-format
-msgid "Failed to seek file %1 : %2"
-msgstr "Nepavyko ieškoti faile %1 : %2"
-
-#: libbtcore/diskio/cachefile.cpp:411
-#, kde-format
-msgid "Error reading from %1"
-msgstr "Klaida skaitant iš %1"
-
-#: libbtcore/diskio/cachefile.cpp:453
-#, kde-format
-msgid "Failed to write to file %1 : %2"
-msgstr "Nepavyko įrašyti į: %1 : %2"
-
-#: libbtcore/diskio/cachefile.cpp:520
-#, kde-format
-msgid "Cannot preallocate diskspace : %1"
-msgstr "Nepavyksta išskirti vietos diske : %1"
-
-#: libbtcore/diskio/dndfile.cpp:89
-#, kde-format
-msgid "Cannot create file %1 : %2"
-msgstr "Nepavyksta sukurti failo %1: %2"
-
-#: libbtcore/diskio/dndfile.cpp:137
-#, kde-format
-msgid "Failed to write first chunk to DND file : %1"
-msgstr "Nepavyko įrašyti pirmosios dalies į DND failą: %1"
-
-#: libbtcore/diskio/dndfile.cpp:155
-#, kde-format
-msgid "Failed to write last chunk to DND file : %1"
-msgstr "Nepavyko įrašyti paskutiniosios dalies į DND failą: %1"
-
-#: libbtcore/diskio/singlefilecache.cpp:72
-#: libbtcore/diskio/multifilecache.cpp:107
-#, kde-format
-msgid "Failed to open %1 : %2"
-msgstr "Nepavyko atverti %1 : %2"
-
-#: libbtcore/diskio/singlefilecache.cpp:83
-#: libbtcore/diskio/multifilecache.cpp:134
-#: ktorrent/dialogs/importdialog.cpp:385 ktorrent/dialogs/importdialog.cpp:402
-#, kde-format
-msgid "Failed to create %1 : %2"
-msgstr "Nepavyko sukurti %1 : %2"
-
-#: libbtcore/diskio/multifilecache.cpp:725
-#: libbtcore/diskio/multifilecache.cpp:764
-#, kde-format
-msgid "Cannot open file %1 : %2"
-msgstr "Nepavyksta atverti failo %1: %2"
-
-#: libbtcore/interfaces/trackerinterface.cpp:58
-msgid "OK"
-msgstr "OK"
-
-#: libbtcore/interfaces/trackerinterface.cpp:59
-msgid "Announcing"
-msgstr "Kreipiamasi"
-
-#: libbtcore/interfaces/trackerinterface.cpp:60
-#: libbtcore/torrent/torrentstats.cpp:85
-#, kde-format
-msgid "Error: %1"
-msgstr "Klaida: %1"
-
-#: libbtcore/migrate/migrate.cpp:45
-#, kde-format
-msgid "The directory %1 does not exist"
-msgstr "Aplankas %1 neegzistuoja"
-
-#: libbtcore/peer/peerid.cpp:203
-msgid "Unknown client"
-msgstr "Nežinomas klientas"
-
-#: libbtcore/tracker/httpannouncejob.cpp:140
-msgid "Redirect without a redirect location"
-msgstr ""
-
-#: libbtcore/tracker/udptracker.cpp:371 libbtcore/tracker/udptracker.cpp:381
-#: libbtcore/tracker/httptracker.cpp:554
-#, kde-format
-msgid "Timeout contacting tracker %1"
-msgstr ""
-
-#: libbtcore/tracker/udptracker.cpp:408
-#, fuzzy, kde-format
-msgid "Unable to resolve hostname %1"
-msgstr " Nepavyksta sukurti %1 : %2"
-
-#: libbtcore/tracker/httptracker.cpp:280 libbtcore/tracker/httptracker.cpp:300
-#: libbtcore/tracker/httptracker.cpp:340 libbtcore/tracker/httptracker.cpp:459
-msgid "Invalid response from tracker"
-msgstr "Klaidingas atsakymas iš vedlio"
-
-#: libbtcore/tracker/httptracker.cpp:293
-msgid "Invalid data from tracker"
-msgstr "Klaidingi duomenys iš vedlio"
-
-#: libbtcore/tracker/httptracker.cpp:476
-msgid "Invalid tracker URL"
-msgstr "Klaidingas vedlio URL:"
-
-#: libbtcore/tracker/udptrackersocket.cpp:66
-#, kde-format
-msgid "Cannot bind to udp port %1 or the 10 following ports."
-msgstr "Nepavyksta pasirinkti udp prievado %1 ar 10 sekančių prievadų."
-
-#: libbtcore/torrent/torrentcontrol.cpp:534
-#, fuzzy, kde-format
-msgid ""
-"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
-"torrent is probably corrupt or is not a valid torrent file."
-msgstr ""
-"Atsisiunčiant torrent failą įvyko klaida. Torrentas tikriausiai sugadintas, "
-"arba nėra torrent failas"
-
-#: libbtcore/torrent/torrentcontrol.cpp:564
-#, fuzzy, kde-format
-msgid ""
-"An error occurred while loading the torrent:<br/><b>%1</b><br/>The torrent "
-"is probably corrupt or is not a valid torrent file."
-msgstr ""
-"Atsisiunčiant torrent failą įvyko klaida. Torrentas tikriausiai sugadintas, "
-"arba nėra torrent failas"
-
-#: libbtcore/torrent/torrentcontrol.cpp:575
-#, kde-format
-msgid "Unable to create %1 : %2"
-msgstr " Nepavyksta sukurti %1 : %2"
-
-#: libbtcore/torrent/torrentcontrol.cpp:590
-#, fuzzy, kde-format
-msgid ""
-"You are already downloading the torrent <b>%1</b>. The tracker lists from "
-"both torrents have been merged."
-msgstr ""
-"Jūs jau siunčiatės šį torentą %1, abiejų torentų vedlių sąrašas yra "
-"suliejamas."
-
-#: libbtcore/torrent/torrentcontrol.cpp:595
-#, fuzzy, kde-format
-msgid "You are already downloading the torrent <b>%1</b>."
-msgstr "Jūs jau siunčiatės torentą %1"
-
-#: libbtcore/torrent/torrentstats.cpp:71
-msgid "Not started"
-msgstr "Nepradėtas"
-
-#: libbtcore/torrent/torrentstats.cpp:73
-msgid "Download completed"
-msgstr "Atsisiuntimas baigtas"
-
-#: libbtcore/torrent/torrentstats.cpp:75
-msgid "Seeding completed"
-msgstr "Sėjimas baigtas"
-
-#: libbtcore/torrent/torrentstats.cpp:77
-msgctxt "Status of a torrent file"
-msgid "Seeding"
-msgstr "Sėjama"
-
-#: libbtcore/torrent/torrentstats.cpp:79 ktorrent/tools/magnetmodel.cpp:205
-msgid "Downloading"
-msgstr "Atsisiunčiama"
-
-#: libbtcore/torrent/torrentstats.cpp:81
-msgid "Stalled"
-msgstr "Užstrigo"
-
-#: libbtcore/torrent/torrentstats.cpp:83 ktorrent/tools/magnetmodel.cpp:207
-msgid "Stopped"
-msgstr "Sustabdyta"
-
-#: libbtcore/torrent/torrentstats.cpp:87
-msgid "Allocating diskspace"
-msgstr "Apskaičiuojama disko vieta"
-
-#: libbtcore/torrent/torrentstats.cpp:89
-msgid "Queued for seeding"
-msgstr ""
-
-#: libbtcore/torrent/torrentstats.cpp:89
-#, fuzzy
-msgid "Queued for downloading"
-msgstr "Dabar siunčiama:"
-
-#: libbtcore/torrent/torrentstats.cpp:91
-msgid "Checking data"
-msgstr "Tikrinami duomenys"
-
-#: libbtcore/torrent/torrentstats.cpp:93
-msgid "Stopped. No space left on device."
-msgstr "Sustojo. Neliko vietos įrenginyje."
-
-#: libbtcore/torrent/torrentstats.cpp:95
-msgid "Paused"
-msgstr "Pristabdyta"
-
-#: libbtcore/torrent/torrentcreator.cpp:361
-#, kde-format
-msgid "Cannot create index file: %1"
-msgstr "Nepavyko sukurti indeksavimo failo: %1"
-
-#: libbtcore/torrent/torrent.cpp:92 libbtcore/torrent/torrent.cpp:166
-#: libbtcore/torrent/torrent.cpp:194 libbtcore/torrent/torrent.cpp:201
-#: libbtcore/torrent/torrent.cpp:209 libbtcore/torrent/torrent.cpp:213
-#: libbtcore/torrent/torrent.cpp:234 libbtcore/torrent/torrent.cpp:305
-msgid "Corrupted torrent."
-msgstr "Sugadintas torrentas."
-
-#: libbtcore/torrent/torrent.cpp:157
-#, kde-format
-msgid " Unable to open torrent file %1 : %2"
-msgstr "Nepavyko atverti torent failo %1: %2"
-
-#: libbtcore/torrent/torrent.cpp:287
-msgid "Parse Error"
-msgstr "Parse Klaida"
-
-#: libbtcore/datachecker/singledatachecker.cpp:49
-#, kde-format
-msgid "Cannot open file : %1 : %2"
-msgstr "Nepavyko atverti failo: %1 : %2"
-
-#: libbtcore/download/httpconnection.cpp:37 libbtcore/download/webseed.cpp:49
-#: libbtcore/download/webseed.cpp:92
-msgid "Not connected"
-msgstr "Neprisijungta"
-
-#: libbtcore/download/httpconnection.cpp:103
-#, kde-format
-msgid "Resolving proxy %1:%2"
-msgstr "Nustatomas atstovaujančio serverio adresas %1:%2"
-
-#: libbtcore/download/httpconnection.cpp:112
-#, kde-format
-msgid "Resolving hostname %1"
-msgstr "Nustatomas mazgo pavadinimas %1"
-
-#: libbtcore/download/httpconnection.cpp:125
-#: libbtcore/download/webseed.cpp:319
-#, fuzzy
-msgid "Connection closed"
-msgstr ""
-"#-#-#-#-#  kio_sftp.po (kio_sftp)  #-#-#-#-#\n"
-"Prisijungimas baigtas\n"
-"#-#-#-#-#  kopete.po (kopete)  #-#-#-#-#\n"
-"Prisijungimas baigtas\n"
-"#-#-#-#-#  kget.po (kget)  #-#-#-#-#\n"
-"Ryšys nutrauktas"
-
-#: libbtcore/download/httpconnection.cpp:132
-#, kde-format
-msgid "Error: request failed: %1"
-msgstr "Klaida: užklausa nepavyko: %1"
-
-#: libbtcore/download/httpconnection.cpp:149
-#: libbtcore/download/httpconnection.cpp:213
-msgid "Connected"
-msgstr "Prisijungta"
-
-#: libbtcore/download/httpconnection.cpp:155
-msgid "Error: Failed to connect to webseed"
-msgstr "Klaida: nepavyko prisijungti prie žiniatinklyje platinamo failo"
-
-#: libbtcore/download/httpconnection.cpp:220
-msgid "Connecting"
-msgstr "Jungiamasi"
-
-#: libbtcore/download/httpconnection.cpp:231
-msgid "Failed to connect to webseed"
-msgstr "Nepavyko prisijungti prie žiniatinklyje platinamo failo"
-
-#: libbtcore/download/httpconnection.cpp:238
-msgid "Failed to resolve hostname of webseed"
-msgstr "Nepavyko nustatyti žiniatinklyje platinamo failo mazgo pavadinimo"
-
-#: libbtcore/download/httpconnection.cpp:318
-msgid "Error: failed to connect, server not responding"
-msgstr "Klaida: serveris neatsako, nepavyko prisijungti"
-
-#: libbtcore/download/httpconnection.cpp:327
-msgid "Error: request timed out"
-msgstr "Klaida: baigėsi užklausai skirtas laikas"
-
-#: libbtcore/download/httpconnection.cpp:391
-msgid "Redirected without a new location."
-msgstr ""
-
-#: libbtcore/download/chunkdownload.cpp:373
-#, kde-format
-msgid "1 peer"
-msgid_plural "%1 peers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-
-#: libbtcore/download/webseed.cpp:301 libbtcore/download/webseed.cpp:513
-#, fuzzy
-msgid "Not in use"
-msgstr "Įvertinkite"
-
-#: libbtcore/util/file.cpp:83
-#, kde-format
-msgid "Cannot write to %1 : %2"
-msgstr "Nepavyko įrašyti į %1 : %2"
-
-#: libbtcore/util/file.cpp:97
-#, kde-format
-msgid "Cannot read from %1"
-msgstr "Nepavyko nuskaityti iš %1"
-
-#: libbtcore/util/log.cpp:115
-#, kde-format
-msgid "Cannot open log file %1 : %2"
-msgstr "Nepavyksta atverti žurnalo failo %1: %2"
-
-#: libbtcore/util/fileops.cpp:92
-#, fuzzy, kde-format
-msgid "Cannot create directory %1"
-msgstr "nepavyksta sukurti aplanko %1: %2"
-
-#: libbtcore/util/fileops.cpp:133
-#, kde-format
-msgid "Cannot symlink %1 to %2: %3"
-msgstr "Nepavyksta surišti %1 prie %2: %3"
-
-#: libbtcore/util/fileops.cpp:150
-#, kde-format
-msgid "Cannot move %1 to %2: %3"
-msgstr "Nepavyksta perkelti %1 į %2: %3"
-
-#: libbtcore/util/fileops.cpp:166 libbtcore/util/fileops.cpp:182
-#, kde-format
-msgid "Cannot copy %1 to %2: %3"
-msgstr "Nepavyksta nukopijuoti %1 to %2: %3"
-
-#: libbtcore/util/fileops.cpp:247
-#, kde-format
-msgid "Cannot delete %1: %2"
-msgstr "Nepavyksta ištrinti %1: %2"
-
-#: libbtcore/util/fileops.cpp:264
-#, kde-format
-msgid "Cannot create %1: %2"
-msgstr "Nepavyksta sukurti %1: %2"
-
-#: libbtcore/util/fileops.cpp:282
-#, kde-format
-msgid "Cannot calculate the filesize of %1: %2"
-msgstr "Nepavyksta suskaičiuoti failo %1 dydžio: %2"
-
-#: libbtcore/util/fileops.cpp:298
-#, kde-format
-msgid "Cannot calculate the filesize : %1"
-msgstr "Nepavyksta suskaičiuoti failo dydžio: %1"
-
-#: libbtcore/util/fileops.cpp:346 libbtcore/util/fileops.cpp:352
-#: libbtcore/util/fileops.cpp:355 libbtcore/util/fileops.cpp:358
-#, kde-format
-msgid "Cannot expand file: %1"
-msgstr "Nepavyko išplėsti failo: %1"
-
-#: libbtcore/util/fileops.cpp:388
-#, kde-format
-msgid "Cannot seek in file : %1"
-msgstr "Nepavyko skaityti failo: %1"
-
-#: libbtcore/util/functions.cpp:263
-#, kde-format
-msgid "%1/s"
-msgstr "%1/s"
-
-#: libbtcore/util/functions.cpp:274
-#, kde-format
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "1 diena "
-msgstr[1] "%1 diena "
-msgstr[2] "%1 dienos "
-msgstr[3] "%1 dienų "
-
-#: libbtcore/util/logsystemmanager.cpp:33
-msgid "General"
-msgstr "Bendri"
-
-#. i18n: file: plugins/stats/Conns.ui:13
-#. i18n: ectx: property (windowTitle), widget (QWidget, ConnsWgt)
-#. i18n: file: plugins/stats/Conns.ui:19
-#. i18n: ectx: property (title), widget (QGroupBox, ConnsGbw)
-#. i18n: file: plugins/stats/DisplaySettings.ui:504
-#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
-#. i18n: file: plugins/stats/Settings.ui:140
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#. i18n: file: plugins/stats/Conns.ui:13
-#. i18n: ectx: property (windowTitle), widget (QWidget, ConnsWgt)
-#. i18n: file: plugins/stats/Conns.ui:19
-#. i18n: ectx: property (title), widget (QGroupBox, ConnsGbw)
-#. i18n: file: plugins/stats/DisplaySettings.ui:504
-#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
-#. i18n: file: plugins/stats/Settings.ui:140
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: libbtcore/util/logsystemmanager.cpp:34 rc.cpp:448 rc.cpp:451 rc.cpp:514
-#: rc.cpp:595
-#, fuzzy
-msgid "Connections"
-msgstr "Prisijungimai:"
-
-#. i18n: file: ktorrent/pref/btpref.ui:123
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: libbtcore/util/logsystemmanager.cpp:35 rc.cpp:1537
-#, fuzzy
-msgid "Tracker"
-msgstr "Vedliai"
-
-#: libbtcore/util/logsystemmanager.cpp:37
-#, fuzzy
-msgid "Disk Input/Output"
-msgstr "Disko I/O:"
-
-#: libbtcore/util/logsystemmanager.cpp:38
-#, fuzzy
-#| msgid "UDP"
-msgid "UTP"
-msgstr "UDP"
 
 #: libktupnp/upnprouter.cpp:139
 #, fuzzy, kde-format
@@ -2465,7 +2004,7 @@ msgstr "Proksi"
 
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:201
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: ktorrent/pref/networkpref.cpp:35 rc.cpp:1943
+#: ktorrent/pref/networkpref.cpp:35 rc.cpp:2000
 msgid "Network"
 msgstr "Tinklas"
 
@@ -2492,7 +2031,7 @@ msgstr " sugadintų dalių"
 # (pofilter) compendiumconflicts: checks for Gettext compendium conflicts (#-#-#-#-#)
 #. i18n: file: ktorrent/pref/networkpref.ui:170
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: ktorrent/pref/advancedpref.cpp:27 rc.cpp:1422
+#: ktorrent/pref/advancedpref.cpp:27 rc.cpp:1479
 msgid "Advanced"
 msgstr "Sudėtingesni"
 
@@ -2512,8 +2051,8 @@ msgstr "Programa"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: file: ktorrent/tools/queuemanagerwidget.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, QueueManagerWidget)
-#: ktorrent/pref/qmpref.cpp:25 ktorrent/torrentactivity.cpp:75 rc.cpp:1787
-#: rc.cpp:1962 rc.cpp:2080
+#: ktorrent/pref/qmpref.cpp:25 ktorrent/torrentactivity.cpp:75 rc.cpp:1844
+#: rc.cpp:2019 rc.cpp:2137
 msgid "Queue Manager"
 msgstr "Eilės valdyklė"
 
@@ -2591,7 +2130,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KPushButton, m_move_up)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:188
 #. i18n: ectx: property (text), widget (KPushButton, m_move_up)
-#: ktorrent/tools/queuemanagerwidget.cpp:73 rc.cpp:925 rc.cpp:2287
+#: ktorrent/tools/queuemanagerwidget.cpp:73 rc.cpp:925 rc.cpp:2353
 msgid "Move Up"
 msgstr "Aukštyn"
 
@@ -2607,7 +2146,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KPushButton, m_move_down)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:195
 #. i18n: ectx: property (text), widget (KPushButton, m_move_down)
-#: ktorrent/tools/queuemanagerwidget.cpp:76 rc.cpp:928 rc.cpp:2290
+#: ktorrent/tools/queuemanagerwidget.cpp:76 rc.cpp:928 rc.cpp:2356
 msgid "Move Down"
 msgstr "Žemyn"
 
@@ -2642,196 +2181,213 @@ msgstr "Pašalinti Torentą"
 msgid "Magnet Link"
 msgstr ""
 
-#: ktorrent/view/scanextender.cpp:40 ktorrent/view/scanextender.cpp:89
+#: ktorrent/tools/magnetmodel.cpp:205
+msgid "Downloading"
+msgstr "Atsisiunčiama"
+
+#: ktorrent/tools/magnetmodel.cpp:207
+msgid "Stopped"
+msgstr "Sustabdyta"
+
+#: ktorrent/view/scanextender.cpp:40 ktorrent/view/scanextender.cpp:93
 msgid "Checked %v of %m chunks"
 msgstr ""
 
-#: ktorrent/view/viewmanager.cpp:550
+#: ktorrent/view/scanextender.cpp:108
+#, kde-format
+msgid "<font color=\"red\">%1</font>"
+msgstr ""
+
+#: ktorrent/view/viewmanager.cpp:561
 #, fuzzy
 msgctxt "@action Start all selected torrents in the current tab"
 msgid "Start"
 msgstr "Pradėti"
 
-#: ktorrent/view/viewmanager.cpp:551
+#: ktorrent/view/viewmanager.cpp:562
 msgid "Start all selected torrents in the current tab"
 msgstr ""
 
-#: ktorrent/view/viewmanager.cpp:556
+#: ktorrent/view/viewmanager.cpp:567
 #, fuzzy
 msgctxt "@action Stop all selected torrents in the current tab"
 msgid "Stop"
 msgstr "Stabdyti"
 
-#: ktorrent/view/viewmanager.cpp:557
+#: ktorrent/view/viewmanager.cpp:568
 msgid "Stop all selected torrents in the current tab"
 msgstr ""
 
-#: ktorrent/view/viewmanager.cpp:562
+#: ktorrent/view/viewmanager.cpp:573
 #, fuzzy
 msgctxt "@action Pause all selected torrents in the current tab"
 msgid "Pause"
 msgstr "Pristabdyti"
 
-#: ktorrent/view/viewmanager.cpp:563
+#: ktorrent/view/viewmanager.cpp:574
 #, fuzzy
 msgid "Pause all selected torrents in the current tab"
 msgstr "Stabdyti visus torrentus dabartinėje kortelėje"
 
-#: ktorrent/view/viewmanager.cpp:567
+#: ktorrent/view/viewmanager.cpp:578
 #, fuzzy
 msgctxt "@action Remove all selected torrents in the current tab"
 msgid "Remove"
 msgstr "Pašalinti"
 
-#: ktorrent/view/viewmanager.cpp:568
+#: ktorrent/view/viewmanager.cpp:579
 msgid "Remove all selected torrents in the current tab"
 msgstr ""
 
-#: ktorrent/view/viewmanager.cpp:573
+#: ktorrent/view/viewmanager.cpp:584
 #, fuzzy
 msgctxt "@action Start all torrents in the current tab"
 msgid "Start All"
 msgstr "Pradėti viską"
 
-#: ktorrent/view/viewmanager.cpp:574
+#: ktorrent/view/viewmanager.cpp:585
 msgid "Start all torrents in the current tab"
 msgstr ""
 
-#: ktorrent/view/viewmanager.cpp:579
+#: ktorrent/view/viewmanager.cpp:590
 #, fuzzy
 msgctxt "@action Stop all torrents in the current tab"
 msgid "Stop All"
 msgstr "Stabdyti viską"
 
-#: ktorrent/view/viewmanager.cpp:580
+#: ktorrent/view/viewmanager.cpp:591
 msgid "Stop all torrents in the current tab"
 msgstr "Stabdyti visus torrentus dabartinėje kortelėje"
 
-#: ktorrent/view/viewmanager.cpp:585
+#: ktorrent/view/viewmanager.cpp:596
 msgid "Remove Torrent and Data"
 msgstr "Pašalinti torentą ir Duomenis"
 
-#: ktorrent/view/viewmanager.cpp:590
+#: ktorrent/view/viewmanager.cpp:601
 msgid "Rename Torrent"
 msgstr "Pervadinti torentą"
 
-#: ktorrent/view/viewmanager.cpp:594
+#: ktorrent/view/viewmanager.cpp:605
 msgid "Add Peers"
 msgstr ""
 
-#: ktorrent/view/viewmanager.cpp:604
+#: ktorrent/view/viewmanager.cpp:615
 msgid "Peer Exchange"
 msgstr "Pasikeitimas tarp Taškų"
 
-#: ktorrent/view/viewmanager.cpp:609
+#: ktorrent/view/viewmanager.cpp:620
 msgid "Manual Announce"
 msgstr "Rankinis Priskirimas"
 
-#: ktorrent/view/viewmanager.cpp:614
+#: ktorrent/view/viewmanager.cpp:625
 msgid "Scrape"
 msgstr ""
 
-#: ktorrent/view/viewmanager.cpp:618
+#: ktorrent/view/viewmanager.cpp:629
 msgid "Preview"
 msgstr "Peržiūra"
 
-#: ktorrent/view/viewmanager.cpp:622
+#: ktorrent/view/viewmanager.cpp:633
 msgid "Data Directory"
 msgstr "Duomenų aplankas"
 
-#: ktorrent/view/viewmanager.cpp:626
+#: ktorrent/view/viewmanager.cpp:637
 msgid "Temporary Directory"
 msgstr "Laikinas aplankas"
 
-#: ktorrent/view/viewmanager.cpp:630
+#: ktorrent/view/viewmanager.cpp:641
 msgid "Move Data"
 msgstr "Perkelti duomenis"
 
-#: ktorrent/view/viewmanager.cpp:635
+#: ktorrent/view/viewmanager.cpp:645
+msgid "Move Data When Completed"
+msgstr ""
+
+#: ktorrent/view/viewmanager.cpp:649
 msgid "Remove from Group"
 msgstr "Pašalinti iš grupės"
 
-#: ktorrent/view/viewmanager.cpp:639 ktorrent/groups/groupview.cpp:141
+#: ktorrent/view/viewmanager.cpp:653 ktorrent/groups/groupview.cpp:141
 msgid "New Group"
 msgstr "Nauja grupė"
 
-#: ktorrent/view/viewmanager.cpp:643
+#: ktorrent/view/viewmanager.cpp:657
 msgid "Check Data"
 msgstr "Patikrinti duomenis"
 
-#: ktorrent/view/viewmanager.cpp:644
+#: ktorrent/view/viewmanager.cpp:658
 #, fuzzy
 msgid "Check all the data of a torrent"
 msgstr "Skaitomi duomenys torento :"
 
 #. i18n: file: ktorrent/ktorrentui.rc:67
 #. i18n: ectx: Menu (OpenDirMenu)
-#: ktorrent/view/viewmanager.cpp:657 rc.cpp:2552
+#: ktorrent/view/viewmanager.cpp:671 rc.cpp:2624
 msgid "Open Directory"
 msgstr "Atverti aplanką"
 
-#. i18n: file: ktorrent/ktorrentui.rc:74
+#. i18n: file: ktorrent/ktorrentui.rc:75
 #. i18n: ectx: Menu (GroupsSubMenu)
-#: ktorrent/view/viewmanager.cpp:660 rc.cpp:2555
+#: ktorrent/view/viewmanager.cpp:674 rc.cpp:2627
 msgid "Add to Group"
 msgstr "Pridėti prie Grupės"
 
-#: ktorrent/view/viewmanager.cpp:663
+#: ktorrent/view/viewmanager.cpp:677
 msgid "Copy Torrent URL"
 msgstr "Kopijuoti torrento URL"
 
-#: ktorrent/view/viewmanager.cpp:667
+#: ktorrent/view/viewmanager.cpp:681
 msgid "Export Torrent"
 msgstr "Eksportuoti torrentą"
 
 #. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpeedLimitsDlg)
-#: ktorrent/view/viewmanager.cpp:671 ktorrent/dialogs/speedlimitsdlg.cpp:50
-#: rc.cpp:2394
+#: ktorrent/view/viewmanager.cpp:685 ktorrent/dialogs/speedlimitsdlg.cpp:50
+#: rc.cpp:2466
 msgid "Speed Limits"
 msgstr "Greičio apribojimai"
 
-#: ktorrent/view/viewmanager.cpp:672
+#: ktorrent/view/viewmanager.cpp:686
 msgid "Set the speed limits of individual torrents"
 msgstr ""
 
-#: ktorrent/view/viewmanager.cpp:761
+#: ktorrent/view/viewmanager.cpp:775
 msgid "Torrents (*.torrent)"
 msgstr "Torrentai (*.torrent)"
 
-#. i18n: file: ktorrent/ktorrentui.rc:86
+#. i18n: file: ktorrent/ktorrentui.rc:87
 #. i18n: ectx: Menu (ColumnsMenu)
-#: ktorrent/view/view.cpp:77 rc.cpp:2561
+#: ktorrent/view/view.cpp:78 rc.cpp:2633
 msgid "Columns"
 msgstr "Stulpeliai"
 
-#: ktorrent/view/view.cpp:216
+#: ktorrent/view/view.cpp:218
 #, kde-format
 msgid ""
 "The torrent <b>%1</b> has not finished downloading, do you want to delete "
 "the incomplete data, too?"
 msgstr ""
 
-#: ktorrent/view/view.cpp:221
+#: ktorrent/view/view.cpp:223
 msgid "Remove Download"
 msgstr "Pašalinti Atsisiuntimą"
 
-#: ktorrent/view/view.cpp:222
+#: ktorrent/view/view.cpp:224
 msgid "Delete Data"
 msgstr "Ištrinti duomenis"
 
-#: ktorrent/view/view.cpp:223
+#: ktorrent/view/view.cpp:225
 msgid "Keep Data"
 msgstr "Palikti duomenis"
 
-#: ktorrent/view/view.cpp:242
+#: ktorrent/view/view.cpp:244
 msgid ""
 "You will lose all the downloaded data. Are you sure you want to do this?"
 msgstr ""
 "Jūs prarasite visus atsiųstus duomenis. Ar esate tikras, kad norite tai "
 "padaryti?"
 
-#: ktorrent/view/view.cpp:243
+#: ktorrent/view/view.cpp:245
 msgid "Remove Torrent"
 msgstr "Pašalinti Torentą"
 
@@ -3015,7 +2571,7 @@ msgid "Create A Torrent"
 msgstr "Sukurti torentą"
 
 #: ktorrent/dialogs/torrentcreatordlg.cpp:117
-#: ktorrent/dialogs/fileselectdlg.cpp:358 ktorrent/dialogs/pastedialog.cpp:62
+#: ktorrent/dialogs/fileselectdlg.cpp:400 ktorrent/dialogs/pastedialog.cpp:62
 #: libktcore/groups/allgroup.cpp:26
 msgid "All Torrents"
 msgstr "Visi torentai"
@@ -3050,48 +2606,49 @@ msgstr "Torrent failai (*.torrent)"
 msgid "Choose a file to save the torrent"
 msgstr ""
 
-#: ktorrent/dialogs/fileselectdlg.cpp:75
+#: ktorrent/dialogs/fileselectdlg.cpp:77
 #, fuzzy
 msgid "Show a file tree"
 msgstr "Pasirinkite failą"
 
-#: ktorrent/dialogs/fileselectdlg.cpp:78
+#: ktorrent/dialogs/fileselectdlg.cpp:80
 #, fuzzy
 msgid "Show a file list"
 msgstr "Pasirinkite failą"
 
-#: ktorrent/dialogs/fileselectdlg.cpp:96
+#: ktorrent/dialogs/fileselectdlg.cpp:106
 #, kde-format
 msgid "Opening %1"
 msgstr "Atveriamas %1"
 
-#: ktorrent/dialogs/fileselectdlg.cpp:202
+#: ktorrent/dialogs/fileselectdlg.cpp:217
 msgid ""
 "Some files of this torrent have been found in the completed downloads "
 "directory. Do you want to import these files and use the completed downloads "
 "directory as the location?"
 msgstr ""
 
-#: ktorrent/dialogs/fileselectdlg.cpp:205
+#: ktorrent/dialogs/fileselectdlg.cpp:220
 msgid ""
 "All files of this torrent have been found in the completed downloads "
 "directory. Do you want to import these files and use the completed downloads "
 "directory as the location?"
 msgstr ""
 
-#: ktorrent/dialogs/fileselectdlg.cpp:209
+#: ktorrent/dialogs/fileselectdlg.cpp:224
 #, kde-format
 msgid ""
 "The file <b>%1</b> was found in the completed downloads directory. Do you "
 "want to import this file?"
 msgstr ""
 
-#: ktorrent/dialogs/fileselectdlg.cpp:226
+#: ktorrent/dialogs/fileselectdlg.cpp:239
+#: ktorrent/dialogs/fileselectdlg.cpp:256
 #, fuzzy, kde-format
 msgid "The directory %1 does not exist, do you want to create it?"
 msgstr "Aplankas %1 neegzistuoja"
 
-#: ktorrent/dialogs/fileselectdlg.cpp:259
+#: ktorrent/dialogs/fileselectdlg.cpp:290
 #, fuzzy
 msgid ""
 "You have deselected the following existing files. You will lose all data in "
@@ -3100,42 +2657,42 @@ msgstr ""
 "Atžymėjote šiuos failus. Prarasite visus duomenis šiose failuose. Ar tikrai "
 "norite juos pašalinti?"
 
-#: ktorrent/dialogs/fileselectdlg.cpp:263
+#: ktorrent/dialogs/fileselectdlg.cpp:294
 msgid "Yes, delete the files"
 msgstr "Taip, pašalinti failus"
 
-#: ktorrent/dialogs/fileselectdlg.cpp:264
+#: ktorrent/dialogs/fileselectdlg.cpp:295
 msgid "No, keep the files"
 msgstr "Ne, palikti failus"
 
-#: ktorrent/dialogs/fileselectdlg.cpp:415
+#: ktorrent/dialogs/fileselectdlg.cpp:457
 msgid "<b>Unable to determine free space</b>"
 msgstr ""
 
-#: ktorrent/dialogs/fileselectdlg.cpp:427
+#: ktorrent/dialogs/fileselectdlg.cpp:469
 #, kde-format
 msgctxt "We are %1 bytes short of what we need"
 msgid "%1 short"
 msgstr ""
 
-#: ktorrent/dialogs/fileselectdlg.cpp:448
+#: ktorrent/dialogs/fileselectdlg.cpp:490
 msgid "Existing files: <b>None</b>"
 msgstr ""
 
-#: ktorrent/dialogs/fileselectdlg.cpp:450
+#: ktorrent/dialogs/fileselectdlg.cpp:492
 msgid "Existing files: <b>All</b>"
 msgstr ""
 
-#: ktorrent/dialogs/fileselectdlg.cpp:452
+#: ktorrent/dialogs/fileselectdlg.cpp:494
 #, kde-format
 msgid "Existing files: <b>%1</b> of <b>%2</b>"
 msgstr ""
 
-#: ktorrent/dialogs/fileselectdlg.cpp:458
+#: ktorrent/dialogs/fileselectdlg.cpp:500
 msgid "Existing file: <b>No</b>"
 msgstr ""
 
-#: ktorrent/dialogs/fileselectdlg.cpp:460
+#: ktorrent/dialogs/fileselectdlg.cpp:502
 msgid "Existing file: <b>Yes</b>"
 msgstr ""
 
@@ -3209,8 +2766,8 @@ msgstr ""
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_rate)
 #: ktorrent/dialogs/spinboxdelegate.cpp:39 rc.cpp:1021 rc.cpp:1033 rc.cpp:1096
 #: rc.cpp:1105 rc.cpp:1117 rc.cpp:1126 rc.cpp:1189 rc.cpp:1198 rc.cpp:1210
-#: rc.cpp:1219 rc.cpp:1407 rc.cpp:1419 rc.cpp:1931 rc.cpp:2189 rc.cpp:2198
-#: rc.cpp:2412 rc.cpp:2421
+#: rc.cpp:1219 rc.cpp:1464 rc.cpp:1476 rc.cpp:1988 rc.cpp:2255 rc.cpp:2264
+#: rc.cpp:2484 rc.cpp:2493
 msgid " KiB/s"
 msgstr " KiB/s"
 
@@ -3289,9 +2846,14 @@ msgstr "Negaliu patikrinti duomenų : %1"
 msgid "Cannot load the torrent file : %1"
 msgstr "Negaliu įkelti torrent failo: %1"
 
+#: ktorrent/dialogs/importdialog.cpp:385 ktorrent/dialogs/importdialog.cpp:402
+#, kde-format
+msgid "Failed to create %1 : %2"
+msgstr "Nepavyko sukurti %1 : %2"
+
 #. i18n: file: ktorrent/dialogs/pastedlgbase.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, PasteDlgBase)
-#: ktorrent/dialogs/pastedialog.cpp:38 rc.cpp:2522
+#: ktorrent/dialogs/pastedialog.cpp:38 rc.cpp:2594
 msgid "Open an URL"
 msgstr "Atverti URL"
 
@@ -3347,8 +2909,10 @@ msgid "Bittorrent client for KDE"
 msgstr "KDE Bittorrent klientas"
 
 #: ktorrent/main.cpp:88
-msgid "(C) 2005 - 2008 Joris Guisson and Ivan Vasic"
-msgstr "(C) 2005 - 2008 Joris Guisson ir Ivan Vasic"
+#, fuzzy
+#| msgid "(C) 2005 - 2007 Joris Guisson and Ivan Vasic"
+msgid "(C) 2005 - 2010 Joris Guisson and Ivan Vasic"
+msgstr "(C) 2005 - 2007 Joris Guisson ir Ivan Vasic"
 
 #: ktorrent/main.cpp:92
 msgid "Joris Guisson"
@@ -3720,25 +3284,25 @@ msgstr "Pradėti viską"
 msgid "Start all torrents"
 msgstr "Paleisti visus torrentus"
 
-#: ktorrent/gui.cpp:400
+#: ktorrent/gui.cpp:401
 msgid "Stop All"
 msgstr "Stabdyti viską"
 
-#: ktorrent/gui.cpp:401
+#: ktorrent/gui.cpp:402
 msgid "Stop all torrents"
 msgstr "Stabdyti visus torrentus"
 
-#: ktorrent/gui.cpp:404
+#: ktorrent/gui.cpp:406
 msgid "Open URL"
 msgstr "Atverti URL"
 
-#: ktorrent/gui.cpp:405
+#: ktorrent/gui.cpp:407
 msgid "Open a URL which points to a torrent, magnet links are supported"
 msgstr ""
 
-#: ktorrent/gui.cpp:410
+#: ktorrent/gui.cpp:412
 #, fuzzy
-msgid "Suspend KTorrent"
+msgid "Suspend Torrents"
 msgstr "Neaktyvūs torentai"
 
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:99
@@ -3749,41 +3313,41 @@ msgstr "Neaktyvūs torentai"
 #. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:124
 #. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
-#: ktorrent/gui.cpp:412 rc.cpp:1087 rc.cpp:1180
+#: ktorrent/gui.cpp:414 rc.cpp:1087 rc.cpp:1180
 #, fuzzy
 msgid "Suspend all running torrents"
 msgstr "Stabdyti visus torrentus"
 
-#: ktorrent/gui.cpp:418
+#: ktorrent/gui.cpp:420
 #, fuzzy
 msgid "Show the list of blocked IP addresses"
 msgstr "Rodyti vedlių sąrašą"
 
-#: ktorrent/gui.cpp:425
+#: ktorrent/gui.cpp:427
 msgid "Import Torrent"
 msgstr "Importuoti torrentą"
 
-#: ktorrent/gui.cpp:426
+#: ktorrent/gui.cpp:428
 msgid "Import a torrent"
 msgstr "Importuoti torrentą"
 
-#: ktorrent/gui.cpp:432
+#: ktorrent/gui.cpp:434
 msgid "Import KDE3 Torrents"
 msgstr "Importuoti KDE3 torrentus"
 
-#: ktorrent/gui.cpp:433
+#: ktorrent/gui.cpp:435
 msgid "Import all torrents from the KDE3 version of KTorrent"
 msgstr ""
 
-#: ktorrent/gui.cpp:440
+#: ktorrent/gui.cpp:442
 msgid "Show/Hide KTorrent"
 msgstr "Rodyti/slėpti KTorrent"
 
-#: ktorrent/gui.cpp:445
+#: ktorrent/gui.cpp:447
 msgid "Group View Visible"
 msgstr ""
 
-#: ktorrent/gui.cpp:446
+#: ktorrent/gui.cpp:448
 msgid "Show or hide the group view"
 msgstr ""
 
@@ -3793,10 +3357,6 @@ msgstr "Torrentai"
 
 #: ktorrent/torrentactivity.cpp:75
 msgid "Widget to manage the torrent queue"
-msgstr ""
-
-#: ktorrent/torrentactivity.cpp:78
-msgid "Magnet"
 msgstr ""
 
 #: ktorrent/torrentactivity.cpp:79
@@ -3813,22 +3373,29 @@ msgstr "Klaidingas vedlio URL:"
 msgid "Duplicate IP address %1"
 msgstr "Klaidingas vedlio URL:"
 
-#: ktorrent/trayicon.cpp:81
+#: ktorrent/trayicon.cpp:107
 msgid "Set max upload speed"
 msgstr ""
 
-#: ktorrent/trayicon.cpp:83
+#: ktorrent/trayicon.cpp:109
 msgid "Set max download speed"
 msgstr ""
 
-#: ktorrent/trayicon.cpp:102
-#, kde-format
+#: ktorrent/trayicon.cpp:138
+#, fuzzy, kde-format
+#| msgid ""
+#| "<table cellpadding='2' cellspacing='2' align='center'><tr><td><b>Speed:</"
+#| "b></td><td></td></tr><tr><td>Download: <font color='#1c9a1c'>%1</font></"
+#| "td><td>Upload: <font color='#990000'>%2</font></td></"
+#| "tr><tr><td><b>Transfer:</b></td><td></td></tr><tr><td>Download: <font "
+#| "color='#1c9a1c'>%3</font></td><td>Upload: <font color='#990000'>%4</"
+#| "font></td></tr></table>"
 msgid ""
-"<table cellpadding='2' cellspacing='2' align='center'><tr><td><b>Speed:</b></"
-"td><td></td></tr><tr><td>Download: <font color='#1c9a1c'>%1</font></"
-"td><td>Upload: <font color='#990000'>%2</font></td></tr><tr><td><b>Transfer:"
-"</b></td><td></td></tr><tr><td>Download: <font color='#1c9a1c'>%3</font></"
-"td><td>Upload: <font color='#990000'>%4</font></td></tr></table>"
+"<table><tr><td>Download&nbsp;speed:</td><td><font color='#1c9a1c'>%1</font></"
+"td></tr><tr><td>Upload&nbsp;speed:</td><td><font color='#990000'>%2</font></"
+"td></tr><tr><td>Received:</td><td><font color='#1c9a1c'>%3</font></td></"
+"tr><tr><td>Transmitted:</td><td><font color='#990000'>%4</font></td></tr></"
+"table>"
 msgstr ""
 "<table cellpadding='2' cellspacing='2' align='center'><tr><td><b>Greitis:</"
 "b></td><td></td></tr><tr><td>Atsiuntimas: <font color='#1c9a1c'>%1</font></"
@@ -3837,12 +3404,12 @@ msgstr ""
 "color='#1c9a1c'>%3</font></td><td>Išsiuntimas: <font color='#990000'>%4</"
 "font></td></tr></table>"
 
-#: ktorrent/trayicon.cpp:144
+#: ktorrent/trayicon.cpp:183
 #, kde-format
 msgid "<b>%1</b> has completed downloading.<br>Average speed: %2 DL / %3 UL."
 msgstr "<b>%1</b> baigė atsisiuntimą.<br>Vidutinis greitis: %2 ATS / %3 IŠ."
 
-#: ktorrent/trayicon.cpp:162
+#: ktorrent/trayicon.cpp:201
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum share ratio of %2 and has been stopped."
@@ -3851,7 +3418,7 @@ msgstr ""
 "<b>%1</b> pasiekė maksimalų dalinimosi santykį %2 ir buvo sustabdytas."
 "<br>Išsiųsta %3 vidutiniškai %4 greičiu."
 
-#: ktorrent/trayicon.cpp:181
+#: ktorrent/trayicon.cpp:220
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum seed time of %2 hours and has been stopped."
@@ -3860,12 +3427,12 @@ msgstr ""
 "<b>%1</b> pasiekė savo maksimalų sėjimo laiką %2 valandų ir buvo sustabdytas."
 "<br>Išsiųsta %3 vidutiniu %4 greičiu."
 
-#: ktorrent/trayicon.cpp:196
+#: ktorrent/trayicon.cpp:235
 #, kde-format
 msgid "<b>%1</b> has been stopped with the following error: <br>%2"
 msgstr "<b>%1</b> buvo sustabdytas dėl šios klaidos: <br>%2"
 
-#: ktorrent/trayicon.cpp:207
+#: ktorrent/trayicon.cpp:246
 #, kde-format
 msgid ""
 "Corrupted data has been found in the torrent <b>%1</b><br>It would be a good "
@@ -3874,7 +3441,7 @@ msgstr ""
 "Klaidingi duomenys buvo rasti torente <b>%1</b><br>Būtų gera mintis atlikti "
 "šio torento duomenų vientisumo patikrinimą."
 
-#: ktorrent/trayicon.cpp:224
+#: ktorrent/trayicon.cpp:263
 #, fuzzy, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum share ratio of %2 and cannot be enqueued. "
@@ -3883,7 +3450,7 @@ msgstr ""
 "<b>%1</b> pasiekė maksimalų dalinimosi santykį %2 ir negali būti įtrauktas į "
 "eilę. Pašalinkite apribojimą patys jei norite tęsti sėjimą."
 
-#: ktorrent/trayicon.cpp:228
+#: ktorrent/trayicon.cpp:267
 #, fuzzy, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum seed time of %2 hours and cannot be "
@@ -3892,12 +3459,12 @@ msgstr ""
 "<b>%1</b> yra pasiekęs savo maksimalų sėjimo laiką %2 valandas ir negali "
 "būti sėjamas. Pašalinkite apribojimą rankiniu būdu jei norite tęsti sėjimą."
 
-#: ktorrent/trayicon.cpp:240
+#: ktorrent/trayicon.cpp:279
 #, kde-format
 msgid "Cannot start <b>%1</b> : <br>"
 msgstr "Negaliu pradėti <b>%1</b> : <br>"
 
-#: ktorrent/trayicon.cpp:247
+#: ktorrent/trayicon.cpp:286
 #, kde-format
 msgid "Cannot seed more than 1 torrent. <br>"
 msgid_plural "Cannot seed more than %1 torrents. <br>"
@@ -3906,7 +3473,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: ktorrent/trayicon.cpp:252
+#: ktorrent/trayicon.cpp:291
 #, kde-format
 msgid "Cannot download more than 1 torrent. <br>"
 msgid_plural "Cannot download more than %1 torrents. <br>"
@@ -3915,28 +3482,28 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: ktorrent/trayicon.cpp:255
+#: ktorrent/trayicon.cpp:294
 msgid "Go to Settings -> Configure KTorrent, if you want to change the limits."
 msgstr ""
 "Eikite į -> nustatymai -> Konfigūruoti KTorrent, jei norite pakeisti "
 "apribojimus."
 
-#: ktorrent/trayicon.cpp:259
+#: ktorrent/trayicon.cpp:298
 msgid "There is not enough diskspace available."
 msgstr "Nebėra diske vietos."
 
-#: ktorrent/trayicon.cpp:272
+#: ktorrent/trayicon.cpp:311
 #, kde-format
 msgid ""
 "Your disk is running out of space.<br /><b>%1</b> is being downloaded to '%"
 "2'."
 msgstr "Jūsų diskas baigia užsipildyti.<br /><b>%1</b> yra atsiųstas į '%2'."
 
-#: ktorrent/trayicon.cpp:275
+#: ktorrent/trayicon.cpp:314
 msgid "Torrent has been stopped.<br />"
 msgstr "Torentas buvo sustabdytas.<br />"
 
-#: ktorrent/trayicon.cpp:308
+#: ktorrent/trayicon.cpp:350
 #, fuzzy
 msgid "Speed limit in KiB/s"
 msgstr "Greičio apribojimas KB/s"
@@ -3959,54 +3526,54 @@ msgstr ""
 "KTorrent negali priimti prisijungimų nes prievadai nuo %1 iki %2 yra "
 "naudojami kitos programos."
 
-#: ktorrent/core.cpp:989
+#: ktorrent/core.cpp:992
 #, fuzzy
 msgid "KTorrent is running one or more torrents"
 msgstr "Torentas neturi priskyrimo ar mazgo lauko"
 
-#: ktorrent/core.cpp:1071
+#: ktorrent/core.cpp:1074
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Nepavyko sukurti torento: %1"
 
-#: ktorrent/core.cpp:1177
+#: ktorrent/core.cpp:1180
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
 "Do you want to recreate them, or do you want to not download them?"
 msgstr ""
 
-#: ktorrent/core.cpp:1186 ktorrent/core.cpp:1198 ktorrent/core.cpp:1211
+#: ktorrent/core.cpp:1189 ktorrent/core.cpp:1201 ktorrent/core.cpp:1214
 msgid "Data files are missing"
 msgstr "Trūksta duomenų failų"
 
-#: ktorrent/core.cpp:1197
+#: ktorrent/core.cpp:1200
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Nepavyko atžymėti trūkstamų failų: %1"
 
-#: ktorrent/core.cpp:1210
+#: ktorrent/core.cpp:1213
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Nepavyko iš naujo sukurti trūkstamų failų: %1"
 
-#: ktorrent/core.cpp:1222
+#: ktorrent/core.cpp:1225
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
 "Do you want to recreate it?"
 msgstr ""
 
-#: ktorrent/core.cpp:1229 ktorrent/core.cpp:1240
+#: ktorrent/core.cpp:1232 ktorrent/core.cpp:1243
 msgid "Data file is missing"
 msgstr "Trūksta duomenų failo"
 
-#: ktorrent/core.cpp:1239
+#: ktorrent/core.cpp:1242
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Nepavyko iš naujo sukurti duomenų failo: %1"
 
-#: ktorrent/core.cpp:1344
+#: ktorrent/core.cpp:1347
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -4019,16 +3586,16 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: ktorrent/core.cpp:1366
+#: ktorrent/core.cpp:1369
 msgid "No torrents from the KDE3 version were found."
 msgstr ""
 
-#: ktorrent/core.cpp:1385 ktorrent/core.cpp:1404
+#: ktorrent/core.cpp:1388 ktorrent/core.cpp:1407
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr ""
 
-#: ktorrent/core.cpp:1390 ktorrent/core.cpp:1409
+#: ktorrent/core.cpp:1393 ktorrent/core.cpp:1412
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -4036,7 +3603,7 @@ msgstr ""
 
 #. i18n: file: plasma/applet/appletconfig.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, AppletConfig)
-#: plasma/applet/applet.cpp:234 rc.cpp:2599
+#: plasma/applet/applet.cpp:234 rc.cpp:2671
 #, fuzzy
 msgid "Applet"
 msgstr "Pritaikyti"
@@ -4096,7 +3663,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/ktorrentui.rc:19
 #. i18n: ectx: Menu (Downloads)
-#: libktcore/groups/groupmanager.cpp:108 rc.cpp:2540
+#: libktcore/groups/groupmanager.cpp:108 rc.cpp:2612
 msgid "Downloads"
 msgstr "Atsiuntimai"
 
@@ -4198,22 +3765,7 @@ msgstr "Maksimalus dalinimosi laikas:"
 msgid "File"
 msgstr "Failas"
 
-#: libktcore/torrent/queuemanager.cpp:110
-#: libktcore/torrent/queuemanager.cpp:173
-msgid ""
-"You don't have enough disk space to download this torrent. Are you sure you "
-"want to continue?"
-msgstr ""
-"Nėra pakankamai vietos diske, kad atsisiųsti šį torentą. Ar tikrai norite "
-"tęsti?"
-
-#: libktcore/torrent/queuemanager.cpp:110
-#: libktcore/torrent/queuemanager.cpp:173
-#, kde-format
-msgid "Insufficient disk space for %1"
-msgstr "Nepakankama vietos diske %1"
-
-#: libktcore/torrent/queuemanager.cpp:129
+#: libktcore/torrent/queuemanager.cpp:121
 #, fuzzy, kde-format
 msgid ""
 "The torrent \"%1\" has reached its maximum share ratio and its maximum seed "
@@ -4222,7 +3774,7 @@ msgstr ""
 "Torentas \"%1\" pasiekė jo maksimalų dalinimosi santykį. Ignoruotu "
 "apribojimą ir vistiek pradėti sėti?"
 
-#: libktcore/torrent/queuemanager.cpp:131
+#: libktcore/torrent/queuemanager.cpp:123
 #, fuzzy, kde-format
 msgid ""
 "The torrent \"%1\" has reached its maximum share ratio. Ignore the limit and "
@@ -4231,7 +3783,7 @@ msgstr ""
 "Torentas \"%1\" pasiekė jo maksimalų dalinimosi santykį. Ignoruotu "
 "apribojimą ir vistiek pradėti sėti?"
 
-#: libktcore/torrent/queuemanager.cpp:133
+#: libktcore/torrent/queuemanager.cpp:125
 #, fuzzy, kde-format
 msgid ""
 "The torrent \"%1\" has reached its maximum seed time. Ignore the limit and "
@@ -4240,11 +3792,24 @@ msgstr ""
 "Torentas \"%1\" pasiekė jo maksimalų dalinimosi santykį. Ignoruotu "
 "apribojimą ir vistiek pradėti sėti?"
 
-#: libktcore/torrent/queuemanager.cpp:135
-msgid "Maximum share ratio limit reached."
-msgstr "Maksimali dalinimosi santykio riba pasiekta."
+#: libktcore/torrent/queuemanager.cpp:129
+msgid "Limits reached."
+msgstr ""
 
-#: libktcore/torrent/queuemanager.cpp:233
+#: libktcore/torrent/queuemanager.cpp:155
+msgid ""
+"You don't have enough disk space to download this torrent. Are you sure you "
+"want to continue?"
+msgstr ""
+"Nėra pakankamai vietos diske, kad atsisiųsti šį torentą. Ar tikrai norite "
+"tęsti?"
+
+#: libktcore/torrent/queuemanager.cpp:158
+#, kde-format
+msgid "Insufficient disk space for %1"
+msgstr "Nepakankama vietos diske %1"
+
+#: libktcore/torrent/queuemanager.cpp:248
 #, fuzzy
 msgid ""
 "Not enough disk space for the following torrents. Do you want to start them "
@@ -4253,7 +3818,7 @@ msgstr ""
 "Nėra pakankamai vietos diske, kad atsisiųsti šį torentą. Ar tikrai norite "
 "tęsti?"
 
-#: libktcore/torrent/queuemanager.cpp:272
+#: libktcore/torrent/queuemanager.cpp:287
 #, fuzzy
 msgid ""
 "The following torrents have reached their maximum seed time. Do you want to "
@@ -4262,7 +3827,7 @@ msgstr ""
 "Torentas \"%1\" pasiekė jo maksimalų dalinimosi santykį. Ignoruotu "
 "apribojimą ir vistiek pradėti sėti?"
 
-#: libktcore/torrent/queuemanager.cpp:301
+#: libktcore/torrent/queuemanager.cpp:316
 #, fuzzy
 msgid ""
 "The following torrents have reached their maximum share ratio. Do you want "
@@ -4271,17 +3836,17 @@ msgstr ""
 "Torentas \"%1\" pasiekė jo maksimalų dalinimosi santykį. Ignoruotu "
 "apribojimą ir vistiek pradėti sėti?"
 
-#: libktcore/torrent/queuemanager.cpp:728
+#: libktcore/torrent/queuemanager.cpp:742
 #, kde-format
 msgid "Error starting torrent %1 : %2"
 msgstr "Klaida paleidžiant torentą %1 : %2"
 
-#: libktcore/torrent/queuemanager.cpp:730
-#: libktcore/torrent/queuemanager.cpp:746
+#: libktcore/torrent/queuemanager.cpp:744
+#: libktcore/torrent/queuemanager.cpp:760
 msgid "Error"
 msgstr "Klaida"
 
-#: libktcore/torrent/queuemanager.cpp:744
+#: libktcore/torrent/queuemanager.cpp:758
 #, kde-format
 msgid "Error stopping torrent %1 : %2"
 msgstr "Klaida stabdant torentą %1 : %2"
@@ -4360,7 +3925,7 @@ msgstr "Pašalinti aplanką"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:46
 #. i18n: ectx: property (title), widget (QGroupBox, m_options)
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:156
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:173
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: file: plugins/scanfolder/scanfolderprefpage.ui:71
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
@@ -4370,9 +3935,9 @@ msgstr "Pašalinti aplanką"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:46
 #. i18n: ectx: property (title), widget (QGroupBox, m_options)
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:156
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:173
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:23 rc.cpp:179 rc.cpp:889 rc.cpp:2233 rc.cpp:2362
+#: rc.cpp:23 rc.cpp:179 rc.cpp:889 rc.cpp:2299 rc.cpp:2434
 msgid "Options"
 msgstr "Parinktys"
 
@@ -4390,7 +3955,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openSilently)
 #. i18n: file: ktorrent/dialogs/pastedlgbase.ui:55
 #. i18n: ectx: property (text), widget (QCheckBox, m_silently)
-#: rc.cpp:29 rc.cpp:2528
+#: rc.cpp:29 rc.cpp:2600
 msgid "Open silently"
 msgstr ""
 
@@ -4480,7 +4045,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_addToGroup)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:141
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:65 rc.cpp:2275
+#: rc.cpp:65 rc.cpp:2341
 #, fuzzy
 msgid "Add torrent to group:"
 msgstr "Pridėti prie Grupės"
@@ -4525,7 +4090,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, m_forward)
 #. i18n: file: ktupnptest/upnptestwidget.ui:125
 #. i18n: ectx: property (text), widget (QPushButton, m_forward)
-#: rc.cpp:86 rc.cpp:1344
+#: rc.cpp:86 rc.cpp:1401
 msgid "Forward"
 msgstr "Persiųsti"
 
@@ -4537,7 +4102,7 @@ msgstr "Persiųsti"
 #. i18n: ectx: property (text), widget (QPushButton, m_undo_forward)
 #. i18n: file: ktupnptest/upnptestwidget.ui:132
 #. i18n: ectx: property (text), widget (QPushButton, m_undo_forward)
-#: rc.cpp:89 rc.cpp:1347
+#: rc.cpp:89 rc.cpp:1404
 msgid "Undo Forward"
 msgstr "Atšaukti persiuntimą"
 
@@ -4779,7 +4344,7 @@ msgstr "Pridėti prie grupės:"
 #. i18n: ectx: property (text), widget (QCheckBox, m_use_custom_download_location)
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:25
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: rc.cpp:191 rc.cpp:2329
+#: rc.cpp:191 rc.cpp:2395
 msgid "Download to:"
 msgstr "Atsiųsti į:"
 
@@ -4817,7 +4382,7 @@ msgstr "Po atsiuntimo:"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: ktorrent/dialogs/pastedlgbase.ui:25
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:206 rc.cpp:2525
+#: rc.cpp:206 rc.cpp:2597
 msgid "URL:"
 msgstr "URL:"
 
@@ -4912,8 +4477,8 @@ msgstr "Aktyvūs torentai"
 #. i18n: ectx: property (text), widget (KPushButton, m_add)
 #. i18n: file: ktorrent/ipfilterwidget.ui:46
 #. i18n: ectx: property (text), widget (KPushButton, m_add)
-#: rc.cpp:241 rc.cpp:982 rc.cpp:2281 rc.cpp:2302 rc.cpp:2317 rc.cpp:2447
-#: rc.cpp:2581
+#: rc.cpp:241 rc.cpp:982 rc.cpp:2347 rc.cpp:2368 rc.cpp:2383 rc.cpp:2519
+#: rc.cpp:2653
 msgid "Add"
 msgstr "Pridėti"
 
@@ -5027,7 +4592,7 @@ msgstr "Reikalinga vieta diske:"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: ktorrent/pref/proxypref.ui:189
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:286 rc.cpp:796 rc.cpp:2060
+#: rc.cpp:286 rc.cpp:796 rc.cpp:2117
 msgid "Username:"
 msgstr "Naudotojo vardas:"
 
@@ -5049,7 +4614,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: file: ktorrent/pref/proxypref.ui:207
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:292 rc.cpp:799 rc.cpp:2070
+#: rc.cpp:292 rc.cpp:799 rc.cpp:2127
 msgid "Password:"
 msgstr "Slaptažodis:"
 
@@ -5100,8 +4665,8 @@ msgstr "Sėjikai"
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: file: ktorrent/dialogs/addpeersdlg.ui:59
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:301 rc.cpp:805 rc.cpp:1332 rc.cpp:1356 rc.cpp:1995 rc.cpp:2041
-#: rc.cpp:2299 rc.cpp:2444
+#: rc.cpp:301 rc.cpp:805 rc.cpp:1389 rc.cpp:1413 rc.cpp:2052 rc.cpp:2098
+#: rc.cpp:2365 rc.cpp:2516
 msgid "Port:"
 msgstr "Prievadas:"
 
@@ -5423,6 +4988,27 @@ msgstr ""
 msgid "Type of widget used for chart drawing"
 msgstr ""
 
+#. i18n: file: plugins/stats/Conns.ui:13
+#. i18n: ectx: property (windowTitle), widget (QWidget, ConnsWgt)
+#. i18n: file: plugins/stats/Conns.ui:19
+#. i18n: ectx: property (title), widget (QGroupBox, ConnsGbw)
+#. i18n: file: plugins/stats/DisplaySettings.ui:504
+#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#. i18n: file: plugins/stats/Settings.ui:140
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#. i18n: file: plugins/stats/Conns.ui:13
+#. i18n: ectx: property (windowTitle), widget (QWidget, ConnsWgt)
+#. i18n: file: plugins/stats/Conns.ui:19
+#. i18n: ectx: property (title), widget (QGroupBox, ConnsGbw)
+#. i18n: file: plugins/stats/DisplaySettings.ui:504
+#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#. i18n: file: plugins/stats/Settings.ui:140
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: rc.cpp:448 rc.cpp:451 rc.cpp:514 rc.cpp:595
+#, fuzzy
+msgid "Connections"
+msgstr "Prisijungimai:"
+
 #. i18n: file: plugins/stats/Spd.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpdWgt)
 #: rc.cpp:457
@@ -5705,7 +5291,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_17)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:359
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:664 rc.cpp:2323
+#: rc.cpp:664 rc.cpp:2389
 msgid "Comments:"
 msgstr "Komentarai:"
 
@@ -5753,7 +5339,7 @@ msgstr "Laiko limitas:"
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, time_limit)
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:126
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, m_max_seed_time)
-#: rc.cpp:695 rc.cpp:2207
+#: rc.cpp:695 rc.cpp:2273
 msgid " Hours"
 msgstr ""
 
@@ -5949,7 +5535,7 @@ msgstr "Dabar siunčiama:"
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
 #. i18n: file: ktorrent/view/scanextender.ui:162
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:778 rc.cpp:2134
+#: rc.cpp:778 rc.cpp:2191
 msgid "Downloaded:"
 msgstr "Atsiųsta:"
 
@@ -6392,7 +5978,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:93
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:1012 rc.cpp:1410 rc.cpp:1946 rc.cpp:2415
+#: rc.cpp:1012 rc.cpp:1467 rc.cpp:2003 rc.cpp:2487
 msgid "Maximum upload speed:"
 msgstr "Maksimalus išsiuntimo greitis:"
 
@@ -6418,7 +6004,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:70
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:1024 rc.cpp:1398 rc.cpp:1950 rc.cpp:2406
+#: rc.cpp:1024 rc.cpp:1455 rc.cpp:2007 rc.cpp:2478
 msgid "Maximum download speed:"
 msgstr "Maksimalus atsiuntimo greitis:"
 
@@ -6646,7 +6232,7 @@ msgstr "Didžiausias leidžiamas prisijungimų skaičius:"
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:235
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:1135 rc.cpp:1228 rc.cpp:1380 rc.cpp:1954
+#: rc.cpp:1135 rc.cpp:1228 rc.cpp:1437 rc.cpp:2011
 msgid "Maximum connections per torrent:"
 msgstr "Maksimalus prisijungimų skaičius vienam torentui:"
 
@@ -6666,7 +6252,7 @@ msgstr "Maksimalus prisijungimų skaičius vienam torentui:"
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:249
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:1141 rc.cpp:1234 rc.cpp:1389 rc.cpp:1958
+#: rc.cpp:1141 rc.cpp:1234 rc.cpp:1446 rc.cpp:2015
 msgid "Global connection limit:"
 msgstr "Didžiausias leidžiamas prisijungimų skaičius:"
 
@@ -6863,39 +6449,162 @@ msgstr ""
 msgid "C&ancel"
 msgstr "&Atšaukti"
 
+#. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:26
+#. i18n: ectx: property (windowTitle), widget (QWidget, MagnetGeneratorPrefWidget)
+#: rc.cpp:1320
+#, fuzzy
+#| msgid "Search Preferences"
+msgid "Magnet Generator Preferences"
+msgstr "Paieškos Pasirinkimai"
+
+#. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:40
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_torrenttracker)
+#. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:10
+#. i18n: ectx: label, entry (torrenttracker), group (general)
+#. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:40
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_torrenttracker)
+#. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:10
+#. i18n: ectx: label, entry (torrenttracker), group (general)
+#: rc.cpp:1326 rc.cpp:1359
+#, fuzzy
+#| msgid "Cannot load the torrent file : %1"
+msgid "Grabs a tracker from the torrent file"
+msgstr "Negaliu įkelti torrent failo: %1"
+
+#. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:43
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_torrenttracker)
+#: rc.cpp:1329
+#, fuzzy
+#| msgid "Cannot load the torrent file : %1"
+msgid "Add a tracker from the torrent file"
+msgstr "Negaliu įkelti torrent failo: %1"
+
+#. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:50
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_customtracker)
+#: rc.cpp:1332
+msgid "Define what tracker to add"
+msgstr ""
+
+#. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:53
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_customtracker)
+#: rc.cpp:1335
+#, fuzzy
+msgid "Add a custom tracker URL"
+msgstr "Įdėti koordinuojantį serverį"
+
+#. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:60
+#. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_tr)
+#: rc.cpp:1338
+msgid "The tracker URL that will be a part of the magnet link"
+msgstr ""
+
+#. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:67
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_dn)
+#: rc.cpp:1341
+msgid "Add the torrent name in the URI"
+msgstr ""
+
+#. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:70
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_dn)
+#: rc.cpp:1344
+#, fuzzy
+#| msgid "Add an item"
+msgid "Add name"
+msgstr "Pridėti objektą"
+
+#. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:77
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_onlypublic)
+#. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:30
+#. i18n: ectx: label, entry (onlypublic), group (general)
+#. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:77
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_onlypublic)
+#. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:30
+#. i18n: ectx: label, entry (onlypublic), group (general)
+#: rc.cpp:1347 rc.cpp:1374
+msgid "Only enable on public torrents"
+msgstr ""
+
+#. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:80
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_onlypublic)
+#: rc.cpp:1350
+msgid "Disable the menu item for private torrents"
+msgstr ""
+
+#. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:87
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_popup)
+#: rc.cpp:1353
+msgid "Give feedback in form of a popup"
+msgstr ""
+
+#. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:90
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_popup)
+#. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:26
+#. i18n: ectx: label, entry (popup), group (general)
+#. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:90
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_popup)
+#. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:26
+#. i18n: ectx: label, entry (popup), group (general)
+#: rc.cpp:1356 rc.cpp:1371
+#, fuzzy
+#| msgid "Show Video"
+msgid "Show popup"
+msgstr "Rodyti video"
+
+#. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:14
+#. i18n: ectx: label, entry (customtracker), group (general)
+#: rc.cpp:1362
+#, fuzzy
+msgid "Toggles if a custom tracker is used"
+msgstr "Vedliai"
+
+#. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:18
+#. i18n: ectx: label, entry (tr), group (general)
+#: rc.cpp:1365
+#, fuzzy
+#| msgid "Use default browser"
+msgid "The default tracker"
+msgstr "Naudoti numatytą naršyklę"
+
+#. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:22
+#. i18n: ectx: label, entry (dn), group (general)
+#: rc.cpp:1368
+#, fuzzy
+msgid "Show dn"
+msgstr "Išsiuntimo greitis"
+
 #. i18n: file: ktupnptest/upnptestwidget.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, UPnPTestWidget)
-#: rc.cpp:1320
+#: rc.cpp:1377
 msgid "UPnP Test Application"
 msgstr "UPnP testavimo programa"
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:24
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:1323
+#: rc.cpp:1380
 msgid "Router:"
 msgstr ""
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:40
 #. i18n: ectx: property (text), widget (QLabel, m_router)
-#: rc.cpp:1326
+#: rc.cpp:1383
 msgid "No routers found."
 msgstr ""
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:49
 #. i18n: ectx: property (text), widget (QPushButton, m_find_routers)
-#: rc.cpp:1329
+#: rc.cpp:1386
 msgid "Find Routers"
 msgstr ""
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:89
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1335
+#: rc.cpp:1392
 msgid "Protocol:"
 msgstr "Protokolas:"
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:97
 #. i18n: ectx: property (text), item, widget (QComboBox, m_protocol)
-#: rc.cpp:1338
+#: rc.cpp:1395
 msgid "UDP"
 msgstr "UDP"
 
@@ -6907,25 +6616,25 @@ msgstr "UDP"
 #. i18n: ectx: property (text), item, widget (QComboBox, m_protocol)
 #. i18n: file: ktorrent/pref/networkpref.ui:305
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_primaryTransportProtocol)
-#: rc.cpp:1341 rc.cpp:1473
+#: rc.cpp:1398 rc.cpp:1530
 msgid "TCP"
 msgstr "TCP"
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:139
 #. i18n: ectx: property (text), widget (QCheckBox, m_verbose)
-#: rc.cpp:1350
+#: rc.cpp:1407
 msgid "Verbose mode"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/networkpref.ui:17
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:1353
+#: rc.cpp:1410
 msgid "Ports && Limits"
 msgstr "Prievadai ir apribojimai"
 
 #. i18n: file: ktorrent/pref/networkpref.ui:36
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_port)
-#: rc.cpp:1359
+#: rc.cpp:1416
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -6950,13 +6659,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/networkpref.ui:52
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1368
+#: rc.cpp:1425
 msgid "UDP tracker port:"
 msgstr "UDP vedlio prievadas:"
 
 #. i18n: file: ktorrent/pref/networkpref.ui:65
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_udpTrackerPort)
-#: rc.cpp:1371
+#: rc.cpp:1428
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -6981,40 +6690,40 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/networkpref.ui:88
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxConnections)
-#: rc.cpp:1383
+#: rc.cpp:1440
 #, fuzzy
 msgid "The maximum number of connections allowed per torrent."
 msgstr "Maksimalus prisijungimų skaičius vienam torentui:"
 
 #. i18n: file: ktorrent/pref/networkpref.ui:108
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxTotalConnections)
-#: rc.cpp:1392
+#: rc.cpp:1449
 msgid "The global connection limit for all torrents combined."
 msgstr ""
 
 #. i18n: file: ktorrent/pref/networkpref.ui:128
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxDownloadRate)
-#: rc.cpp:1401
+#: rc.cpp:1458
 #, fuzzy
 msgid "The maximum download speed in KiB/s."
 msgstr "Maksimalus atsisiuntimų skaičius"
 
 #. i18n: file: ktorrent/pref/networkpref.ui:151
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxUploadRate)
-#: rc.cpp:1413
+#: rc.cpp:1470
 #, fuzzy
 msgid "The maximum upload speed in KiB/s"
 msgstr "Maksimalus atsisiuntimų skaičius"
 
 #. i18n: file: ktorrent/pref/networkpref.ui:178
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:1425
+#: rc.cpp:1482
 msgid "DSCP value for IP packets:"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/networkpref.ui:185
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_dscp)
-#: rc.cpp:1428
+#: rc.cpp:1485
 msgid ""
 "This value will be filled in the DSCP field of all the IP packets sent for "
 "the bittorrent protocol."
@@ -7022,14 +6731,14 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/networkpref.ui:195
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:1431
+#: rc.cpp:1488
 #, fuzzy
 msgid "Maximum number of connection setups:"
 msgstr "Maksimalus prisijungimų skaičius vienam torentui:"
 
 #. i18n: file: ktorrent/pref/networkpref.ui:208
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxConnectingSockets)
-#: rc.cpp:1434
+#: rc.cpp:1491
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -7052,13 +6761,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/networkpref.ui:228
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:1443
+#: rc.cpp:1500
 msgid "Network interface:"
 msgstr "Tinklo sąsaja:"
 
 #. i18n: file: ktorrent/pref/networkpref.ui:247
 #. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_networkInterface)
-#: rc.cpp:1446
+#: rc.cpp:1503
 #, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
@@ -7097,7 +6806,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/networkpref.ui:272
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_utpEnabled)
-#: rc.cpp:1455
+#: rc.cpp:1512
 msgid ""
 "The µTorrent transport protocol runs over UDP and is optimized to not "
 "interfere with other traffic, while still using up all unused bandwidth."
@@ -7105,13 +6814,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/networkpref.ui:275
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_utpEnabled)
-#: rc.cpp:1458
+#: rc.cpp:1515
 msgid "Use the µTorrent transport protocol (µTP)"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/networkpref.ui:282
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_onlyUseUtp)
-#: rc.cpp:1461
+#: rc.cpp:1518
 msgid ""
 "Don't use TCP for bittorrent connections, only use the µTP protocol. This "
 "can lead to slower speeds, seeing that not all bittorrent clients support "
@@ -7120,19 +6829,19 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/networkpref.ui:285
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_onlyUseUtp)
-#: rc.cpp:1464
+#: rc.cpp:1521
 msgid "Only use µTP"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/networkpref.ui:294
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:1467
+#: rc.cpp:1524
 msgid "Primary transport protocol:"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/networkpref.ui:301
 #. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_primaryTransportProtocol)
-#: rc.cpp:1470
+#: rc.cpp:1527
 msgid ""
 "The primary transport protocol to use, when attempting to setup a connection "
 "with a peer, this protocol is chosen first."
@@ -7140,13 +6849,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/networkpref.ui:310
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_primaryTransportProtocol)
-#: rc.cpp:1476
+#: rc.cpp:1533
 msgid "µTP"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/networkpref.ui:351
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_recommended_settings)
-#: rc.cpp:1479
+#: rc.cpp:1536
 msgid ""
 "Let KTorrent calculate the recommended settings based upon the bandwidth you "
 "have available."
@@ -7154,19 +6863,19 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/networkpref.ui:354
 #. i18n: ectx: property (text), widget (QPushButton, m_recommended_settings)
-#: rc.cpp:1482
+#: rc.cpp:1539
 msgid "Recommended Settings..."
 msgstr "Rekomenduojami nustatymai..."
 
 #. i18n: file: ktorrent/pref/btpref.ui:16
 #. i18n: ectx: property (title), widget (QGroupBox, dhtGroupBox)
-#: rc.cpp:1485
+#: rc.cpp:1542
 msgid "Features"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:22
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_dhtSupport)
-#: rc.cpp:1488
+#: rc.cpp:1545
 msgid ""
 "DHT is a trackerless protocol to find peers sharing the same torrents as you "
 "do."
@@ -7174,19 +6883,19 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:25
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_dhtSupport)
-#: rc.cpp:1491
+#: rc.cpp:1548
 msgid "Use DHT to get additional peers"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:34
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:1494
+#: rc.cpp:1551
 msgid "UDP port for DHT communications:"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:47
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_dhtPort)
-#: rc.cpp:1497
+#: rc.cpp:1554
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -7210,40 +6919,40 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:65
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_pexEnabled)
-#: rc.cpp:1506
+#: rc.cpp:1563
 msgid "Whether or not to use µTorrent compatible peer exchange."
 msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:68
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_pexEnabled)
-#: rc.cpp:1509
+#: rc.cpp:1566
 #, fuzzy
 msgid "Use peer exchange"
 msgstr "Pasikeitimas tarp Taškų"
 
 #. i18n: file: ktorrent/pref/btpref.ui:75
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_webseedsEnabled)
-#: rc.cpp:1512
+#: rc.cpp:1569
 msgid ""
 "Enable or disable the use of webseeds when they are present in a torrent."
 msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:78
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_webseedsEnabled)
-#: rc.cpp:1515
+#: rc.cpp:1572
 #, fuzzy
 msgid "Use webseeds"
 msgstr "Sėjikai"
 
 #. i18n: file: ktorrent/pref/btpref.ui:90
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: rc.cpp:1518
+#: rc.cpp:1575
 msgid "Encryption"
 msgstr "Šifravimas"
 
 #. i18n: file: ktorrent/pref/btpref.ui:100
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useEncryption)
-#: rc.cpp:1521
+#: rc.cpp:1578
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -7266,13 +6975,13 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useEncryption)
 #. i18n: file: libktcore/ktorrent.kcfg:144
 #. i18n: ectx: label, entry (useEncryption), group (downloads)
-#: rc.cpp:1528 rc.cpp:2689
+#: rc.cpp:1585 rc.cpp:2761
 msgid "Use protocol encryption"
 msgstr "Naudoti protokolo šifravimą"
 
 #. i18n: file: ktorrent/pref/btpref.ui:110
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_allowUnencryptedConnections)
-#: rc.cpp:1531
+#: rc.cpp:1588
 msgid ""
 "Not all clients support encryption, and some people have encryption "
 "disabled. If you want to connect to those peers, you need to have this "
@@ -7287,13 +6996,20 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_allowUnencryptedConnections)
 #. i18n: file: libktcore/ktorrent.kcfg:148
 #. i18n: ectx: label, entry (allowUnencryptedConnections), group (downloads)
-#: rc.cpp:1534 rc.cpp:2692
+#: rc.cpp:1591 rc.cpp:2764
 msgid "Allow unencrypted connections"
 msgstr "Leisti nešifruotus sujungimus"
 
+#. i18n: file: ktorrent/pref/btpref.ui:123
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:1594
+#, fuzzy
+msgid "Tracker"
+msgstr "Vedliai"
+
 #. i18n: file: ktorrent/pref/btpref.ui:129
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useCustomIP)
-#: rc.cpp:1540
+#: rc.cpp:1597
 msgid ""
 "Instead of allowing the tracker to determine your IP address, tell the "
 "tracker which IP address to use. Use this when you are behind a proxy."
@@ -7301,19 +7017,19 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:132
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useCustomIP)
-#: rc.cpp:1543
+#: rc.cpp:1600
 msgid "Send the tracker a custom IP address or hostname"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:141
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1546
+#: rc.cpp:1603
 msgid "Custom IP address or hostname:"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:148
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_customIP)
-#: rc.cpp:1549
+#: rc.cpp:1606
 msgid ""
 "Custom IP address or hostname to send to the tracker. Hostnames will be "
 "resolved at runtime and the resolved IP address will be sent to the tracker."
@@ -7321,13 +7037,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:162
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:1552
+#: rc.cpp:1609
 msgid "Data Checking"
 msgstr "Duomenų tikrinimas "
 
 #. i18n: file: ktorrent/pref/btpref.ui:176
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_doUploadDataCheck)
-#: rc.cpp:1555
+#: rc.cpp:1612
 msgid ""
 "During uploading when a chunk is loaded into memory automatically recheck "
 "this chunk, to see if it still is OK."
@@ -7335,13 +7051,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:179
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_doUploadDataCheck)
-#: rc.cpp:1558
+#: rc.cpp:1615
 msgid "Recheck chunks during uploading"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:186
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useMaxSizeForUploadDataCheck)
-#: rc.cpp:1561
+#: rc.cpp:1618
 msgid ""
 "Because rechecking big chunks can take a lot of time, the recheck can be "
 "disabled when the chunks are bigger then a certain size."
@@ -7349,13 +7065,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:189
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useMaxSizeForUploadDataCheck)
-#: rc.cpp:1564
+#: rc.cpp:1621
 msgid "Do not recheck when chunks are bigger than"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:196
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxSizeForUploadDataCheck)
-#: rc.cpp:1567
+#: rc.cpp:1624
 msgid "The maximum size a chunk can be for rechecking during uploading."
 msgstr ""
 
@@ -7371,45 +7087,45 @@ msgstr ""
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeAudio)
 #. i18n: file: ktorrent/pref/advancedpref.ui:241
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeVideo)
-#: rc.cpp:1570 rc.cpp:1678 rc.cpp:1690
+#: rc.cpp:1627 rc.cpp:1735 rc.cpp:1747
 msgid " KiB"
 msgstr " KiB"
 
 #. i18n: file: ktorrent/pref/btpref.ui:215
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_autoRecheck)
-#: rc.cpp:1573
+#: rc.cpp:1630
 msgid ""
 "Automatically do a full data check when we find to many corrupted chunks."
 msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:218
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_autoRecheck)
-#: rc.cpp:1576
+#: rc.cpp:1633
 msgid "Do a full data check after "
 msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:237
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_maxCorruptedBeforeRecheck)
-#: rc.cpp:1579
+#: rc.cpp:1636
 msgid "The number of corrupted chunks before a full data check is done"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:253
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_checkWhenFinished)
-#: rc.cpp:1582
+#: rc.cpp:1639
 msgid ""
 "When a torrent has finished downloading, do a full data check on the torrent."
 msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:256
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_checkWhenFinished)
-#: rc.cpp:1585
+#: rc.cpp:1642
 msgid "Check data when download is finished"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:17
 #. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_diskPrealloc)
-#: rc.cpp:1588
+#: rc.cpp:1645
 msgid ""
 "Whether or not diskspace should be reserved before starting to download a "
 "torrent."
@@ -7417,13 +7133,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:20
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_diskPrealloc)
-#: rc.cpp:1591
+#: rc.cpp:1648
 msgid "Reserve disk space before starting a torrent"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:32
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_fullDiskPrealloc)
-#: rc.cpp:1594
+#: rc.cpp:1651
 msgid ""
 "Instead of doing a quick reservation, do a full reservation. This is slower "
 "than the quick way, but avoids fragmentation on the disk."
@@ -7431,25 +7147,25 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:35
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_fullDiskPrealloc)
-#: rc.cpp:1597
+#: rc.cpp:1654
 msgid "Fully reserve disk space (avoids fragmentation)"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:45
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:1600
+#: rc.cpp:1657
 msgid "Performance"
 msgstr "Našumas"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:53
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:1603
+#: rc.cpp:1660
 msgid "GUI update interval:"
 msgstr "GNS atnaujinimo intervalas:"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:72
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_guiUpdateInterval)
-#: rc.cpp:1606
+#: rc.cpp:1663
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -7479,19 +7195,19 @@ msgstr ""
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_guiUpdateInterval)
 #. i18n: file: ktorrent/pref/advancedpref.ui:109
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_cpuUsage)
-#: rc.cpp:1615 rc.cpp:1632
+#: rc.cpp:1672 rc.cpp:1689
 msgid " ms"
 msgstr " ms"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:91
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:1618
+#: rc.cpp:1675
 msgid "Network sleep interval:"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:106
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_cpuUsage)
-#: rc.cpp:1621
+#: rc.cpp:1678
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -7530,19 +7246,19 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: file: ktorrent/pref/generalpref.ui:120
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:1635 rc.cpp:1760
+#: rc.cpp:1692 rc.cpp:1817
 msgid "Miscellaneous"
 msgstr "Įvairūs"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:153
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1638
+#: rc.cpp:1695
 msgid "Time estimation algorithm:"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:170
 #. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_eta)
-#: rc.cpp:1641
+#: rc.cpp:1698
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -7582,25 +7298,25 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:189
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: rc.cpp:1663
+#: rc.cpp:1720
 msgid "Window of X"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:194
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: rc.cpp:1666
+#: rc.cpp:1723
 msgid "Moving average"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:202
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1669
+#: rc.cpp:1726
 msgid "Preview size for audio files:"
 msgstr "Audio failų peržiūros dydis:"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:212
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_previewSizeAudio)
-#: rc.cpp:1672
+#: rc.cpp:1729
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -7615,13 +7331,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:228
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:1681
+#: rc.cpp:1738
 msgid "Preview size for video files:"
 msgstr "Video failų peržiūros dydis:"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:238
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_previewSizeVideo)
-#: rc.cpp:1684
+#: rc.cpp:1741
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -7636,7 +7352,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:273
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useQHttpAnnounce)
-#: rc.cpp:1693
+#: rc.cpp:1750
 msgid ""
 "Disables the use of KDE's KIO library for tracker announces.\n"
 "\n"
@@ -7646,14 +7362,14 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:276
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useQHttpAnnounce)
-#: rc.cpp:1698
+#: rc.cpp:1755
 #, fuzzy
 msgid "Do not use KIO for tracker announces"
 msgstr "Prisijungimai:"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:285
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_lookUpHostnameOfPeers)
-#: rc.cpp:1701
+#: rc.cpp:1758
 msgid ""
 "Resolve the hostname of each peer. This will result in the hostname of a "
 "peer being displayed instead of the IP address. \n"
@@ -7664,26 +7380,26 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:288
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_lookUpHostnameOfPeers)
-#: rc.cpp:1706
+#: rc.cpp:1763
 #, fuzzy
 msgid "Resolve hostnames of peers"
 msgstr "Nustatomas mazgo pavadinimas %1"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:17
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:1709
+#: rc.cpp:1766
 msgid "Folders"
 msgstr "Aplankai"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:23
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1712
+#: rc.cpp:1769
 msgid "Folder to store torrent information:"
 msgstr "Aplankas, torrentų informacijos saugojimui:"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:30
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_tempDir)
-#: rc.cpp:1715
+#: rc.cpp:1772
 msgid ""
 "Directory to store information about all torrents currently opened in "
 "KTorrent."
@@ -7697,7 +7413,7 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useSaveDir)
 #. i18n: file: ktorrent/pref/generalpref.ui:47
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_saveDir)
-#: rc.cpp:1718 rc.cpp:1724
+#: rc.cpp:1775 rc.cpp:1781
 msgid "Directory to use as a default save location for all data."
 msgstr ""
 
@@ -7709,7 +7425,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useSaveDir)
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:41
 #. i18n: ectx: property (text), widget (QCheckBox, m_default_location_enabled)
-#: rc.cpp:1721 rc.cpp:2163
+#: rc.cpp:1778 rc.cpp:2229
 msgid "Default save location:"
 msgstr "Numatyta išsaugojimo vieta:"
 
@@ -7721,13 +7437,13 @@ msgstr "Numatyta išsaugojimo vieta:"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useCompletedDir)
 #. i18n: file: ktorrent/pref/generalpref.ui:64
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_completedDir)
-#: rc.cpp:1727 rc.cpp:1733
+#: rc.cpp:1784 rc.cpp:1790
 msgid "Directory to move data to when a torrent has finished downloading."
 msgstr ""
 
 #. i18n: file: ktorrent/pref/generalpref.ui:57
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useCompletedDir)
-#: rc.cpp:1730
+#: rc.cpp:1787
 msgid "Move completed downloads to:"
 msgstr "Perkelti baigtus atsiuntimus į:"
 
@@ -7739,49 +7455,49 @@ msgstr "Perkelti baigtus atsiuntimus į:"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useTorrentCopyDir)
 #. i18n: file: ktorrent/pref/generalpref.ui:81
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_torrentCopyDir)
-#: rc.cpp:1736 rc.cpp:1742
+#: rc.cpp:1793 rc.cpp:1799
 msgid "Directory to copy all torrent files in, which are opened by KTorrent."
 msgstr ""
 
 #. i18n: file: ktorrent/pref/generalpref.ui:74
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useTorrentCopyDir)
-#: rc.cpp:1739
+#: rc.cpp:1796
 msgid "Copy torrent files to:"
 msgstr "Kopijuoti torrent failus į:"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:91
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:1745
+#: rc.cpp:1802
 msgid "System Tray Icon"
 msgstr "Sistemos dėklo ženkliukas"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:97
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showSystemTrayIcon)
-#: rc.cpp:1748
+#: rc.cpp:1805
 msgid "Whether or not to show an icon in the system tray."
 msgstr "Rodyti ar ne ženkliuką sistemos dėkle."
 
 #. i18n: file: ktorrent/pref/generalpref.ui:100
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showSystemTrayIcon)
-#: rc.cpp:1751
+#: rc.cpp:1808
 msgid "Show system tray icon"
 msgstr "Rodyti sistemos dėklo ženkliuką"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:107
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showPopups)
-#: rc.cpp:1754
+#: rc.cpp:1811
 msgid "Whether or not to show system tray popup messages."
 msgstr "Rodyti ar ne iššokančias žinutes sistemos dėkle."
 
 #. i18n: file: ktorrent/pref/generalpref.ui:110
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showPopups)
-#: rc.cpp:1757
+#: rc.cpp:1814
 msgid "Show system tray popup messages"
 msgstr "Rodyti iššokančias žinutes sistemos dėkle"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:129
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openMultipleTorrentsSilently)
-#: rc.cpp:1763
+#: rc.cpp:1820
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -7795,13 +7511,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/generalpref.ui:132
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openMultipleTorrentsSilently)
-#: rc.cpp:1769
+#: rc.cpp:1826
 msgid "Open multiple torrents silently"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/generalpref.ui:142
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_suppressSleep)
-#: rc.cpp:1772
+#: rc.cpp:1829
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -7815,13 +7531,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/generalpref.ui:145
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_suppressSleep)
-#: rc.cpp:1778
+#: rc.cpp:1835
 msgid "Suppress sleep when torrents are running"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:16
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_manuallyControlTorrents)
-#: rc.cpp:1781
+#: rc.cpp:1838
 msgid ""
 "When enabled, the queue manager will be totally disabled, allowing you to "
 "fully control all torrents manually."
@@ -7829,7 +7545,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:19
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_manuallyControlTorrents)
-#: rc.cpp:1784
+#: rc.cpp:1841
 msgid "Control torrents manually"
 msgstr ""
 
@@ -7841,13 +7557,13 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:288
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:1790 rc.cpp:1969
+#: rc.cpp:1847 rc.cpp:2026
 msgid "Maximum downloads:"
 msgstr "Maksimalus atsisiuntimų skaičius"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:41
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxDownloads)
-#: rc.cpp:1793
+#: rc.cpp:1850
 msgid ""
 "The maximum number of simultaneous downloads the queue manager will run."
 msgstr ""
@@ -7860,25 +7576,25 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:302
 #. i18n: ectx: property (text), widget (QLabel, label_17)
-#: rc.cpp:1799 rc.cpp:1973
+#: rc.cpp:1856 rc.cpp:2030
 msgid "Maximum seeds:"
 msgstr "Maksimalus sėklų skaičius:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:61
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxSeeds)
-#: rc.cpp:1802
+#: rc.cpp:1859
 msgid "The maximum number of simultaneous seeds the queue manager will run."
 msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:74
 #. i18n: ectx: property (text), widget (QLabel, label_12)
-#: rc.cpp:1808
+#: rc.cpp:1865
 msgid "When diskspace is running low:"
 msgstr "Kai lieka mažai vietos diske:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:81
 #. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_startDownloadsOnLowDiskSpace)
-#: rc.cpp:1811
+#: rc.cpp:1868
 msgid ""
 "What to do when the diskspace is running low and the queue manager wants to "
 "start a torrent."
@@ -7886,31 +7602,31 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:85
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startDownloadsOnLowDiskSpace)
-#: rc.cpp:1814
+#: rc.cpp:1871
 msgid "Don't start torrents"
 msgstr "Nepaleisti torrentų"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:90
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startDownloadsOnLowDiskSpace)
-#: rc.cpp:1817
+#: rc.cpp:1874
 msgid "Ask if torrents can be started"
 msgstr "Klausti, ar torentai gali būti paleisti"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:95
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startDownloadsOnLowDiskSpace)
-#: rc.cpp:1820
+#: rc.cpp:1877
 msgid "Start torrents"
 msgstr "Paleisti torrentus"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:103
 #. i18n: ectx: property (text), widget (QLabel, label_13)
-#: rc.cpp:1823
+#: rc.cpp:1880
 msgid "Stop torrents when free disk space is lower than:"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:110
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_minDiskSpace)
-#: rc.cpp:1826
+#: rc.cpp:1883
 msgid ""
 "When the free diskspace drops below this value, stop all torrents "
 "downloading."
@@ -7918,13 +7634,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:113
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minDiskSpace)
-#: rc.cpp:1829
+#: rc.cpp:1886
 msgid " MiB"
 msgstr " MiB"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:136
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_decreasePriorityOfStalledTorrents)
-#: rc.cpp:1832
+#: rc.cpp:1889
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -7946,20 +7662,20 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:139
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_decreasePriorityOfStalledTorrents)
-#: rc.cpp:1840
+#: rc.cpp:1897
 msgid "Decrease priority of torrents which are stalled for too long"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:148
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1843
+#: rc.cpp:1900
 #, fuzzy
 msgid "Stalled timer:"
 msgstr "Užstrigo"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:159
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_stallTimer)
-#: rc.cpp:1846
+#: rc.cpp:1903
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -7976,13 +7692,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:162
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_stallTimer)
-#: rc.cpp:1853
+#: rc.cpp:1910
 msgid " Minutes"
 msgstr " minutės"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:193
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:1856
+#: rc.cpp:1913
 #, fuzzy
 msgctxt "@title:group Options regarging Seeding"
 msgid "Seeding"
@@ -7990,7 +7706,7 @@ msgstr "Sėjama"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:199
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_keepSeeding)
-#: rc.cpp:1859
+#: rc.cpp:1916
 msgid ""
 "When a download is finished, continue seeding it. If this is disabled, the "
 "torrent will be stopped."
@@ -7998,7 +7714,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:202
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_keepSeeding)
-#: rc.cpp:1862
+#: rc.cpp:1919
 msgid "Keep seeding after download is finished"
 msgstr ""
 
@@ -8010,13 +7726,13 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:274
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:1865 rc.cpp:1965
+#: rc.cpp:1922 rc.cpp:2022
 msgid "Number of upload slots:"
 msgstr "Išsiuntimo lizdų skaičius:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:216
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_numUploadSlots)
-#: rc.cpp:1868
+#: rc.cpp:1925
 msgid ""
 "The number of upload slots, this determines the number of peers you can "
 "upload to simultaneously for one torrent."
@@ -8024,14 +7740,14 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:232
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:1871
+#: rc.cpp:1928
 #, fuzzy
 msgid "Default maximum share ratio:"
 msgstr "Maksimalus dalinimosi santykis:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:245
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_maxRatio)
-#: rc.cpp:1874
+#: rc.cpp:1931
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -8056,14 +7772,14 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:261
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:1886
+#: rc.cpp:1943
 #, fuzzy
 msgid "Default maximum seed time:"
 msgstr "Maksimalus dalinimosi laikas:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:268
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_maxSeedTime)
-#: rc.cpp:1889
+#: rc.cpp:1946
 msgid ""
 "The maximum seed time in hours. Once you reach this time, the torrent will "
 "be stopped. This is only applied to newly opened torrents, existing torrents "
@@ -8072,13 +7788,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, RecommendedSettingsDlg)
-#: rc.cpp:1895
+#: rc.cpp:1952
 msgid "Recommended Settings"
 msgstr "Rekomenduojami nustatymai"
 
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:26
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1898
+#: rc.cpp:1955
 msgid "Available upload bandwidth:"
 msgstr ""
 
@@ -8090,7 +7806,7 @@ msgstr ""
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, m_upload_bw)
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:59
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, m_download_bw)
-#: rc.cpp:1901 rc.cpp:1910
+#: rc.cpp:1958 rc.cpp:1967
 msgid " Kbps"
 msgstr " Kbps"
 
@@ -8102,75 +7818,75 @@ msgstr " Kbps"
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_bw)
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:62
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_download_bw)
-#: rc.cpp:1904 rc.cpp:1913
+#: rc.cpp:1961 rc.cpp:1970
 msgid " kb/s"
 msgstr " kb/s"
 
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:52
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1907
+#: rc.cpp:1964
 msgid "Available download bandwidth:"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:78
 #. i18n: ectx: property (text), widget (QLabel, m_upload_bw_display)
-#: rc.cpp:1916
+#: rc.cpp:1973
 msgid "(= 32 KiB/s)"
 msgstr "(= 32 KiB/s)"
 
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:85
 #. i18n: ectx: property (text), widget (QLabel, m_download_bw_display)
-#: rc.cpp:1919
+#: rc.cpp:1976
 msgid "(= 500 KiB/s)"
 msgstr "(= 500 KiB/s)"
 
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:96
 #. i18n: ectx: property (text), widget (KPushButton, m_calculate)
-#: rc.cpp:1922
+#: rc.cpp:1979
 msgid "Calculate"
 msgstr "Skaičiuoti"
 
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:120
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:1925
+#: rc.cpp:1982
 msgid "Preferences"
 msgstr "Nustatymai"
 
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:126
 #. i18n: ectx: property (text), widget (QCheckBox, m_chk_avg_speed_slot)
-#: rc.cpp:1928
+#: rc.cpp:1985
 #, fuzzy
 msgid "Average speed per slot:"
 msgstr "Maksimalus prisijungimų skaičius vienam torentui:"
 
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:149
 #. i18n: ectx: property (text), widget (QCheckBox, m_chk_sim_torrents)
-#: rc.cpp:1934
+#: rc.cpp:1991
 msgid "Number of torrents you usually download simultaneously:"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:169
 #. i18n: ectx: property (text), widget (QCheckBox, m_chk_slots)
-#: rc.cpp:1937
+#: rc.cpp:1994
 #, fuzzy
 msgid "Slots per torrent:"
 msgstr "Pradėti torentą"
 
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:192
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:1940
+#: rc.cpp:1997
 msgid "Recommended settings:"
 msgstr ""
 
 #. i18n: file: ktorrent/pref/proxypref.ui:16
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:1976
+#: rc.cpp:2033
 msgid "HTTP"
 msgstr "HTTP"
 
 #. i18n: file: ktorrent/pref/proxypref.ui:26
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useKDEProxySettings)
-#: rc.cpp:1979
+#: rc.cpp:2036
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -8187,45 +7903,45 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/proxypref.ui:29
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useKDEProxySettings)
-#: rc.cpp:1986
+#: rc.cpp:2043
 msgid "Use KDE proxy settings"
 msgstr "Naudoti KDE proksi nustatymus"
 
 #. i18n: file: ktorrent/pref/proxypref.ui:38
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:1989
+#: rc.cpp:2046
 msgid "Proxy:"
 msgstr "Proxy:"
 
 #. i18n: file: ktorrent/pref/proxypref.ui:45
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_httpProxy)
-#: rc.cpp:1992
+#: rc.cpp:2049
 msgid "IP address or hostname of the HTTP proxy to use. "
 msgstr ""
 
 #. i18n: file: ktorrent/pref/proxypref.ui:59
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_httpProxyPort)
-#: rc.cpp:1998
+#: rc.cpp:2055
 msgid "Port of the HTTP proxy."
 msgstr "HTTP proksi prievadas."
 
 #. i18n: file: ktorrent/pref/proxypref.ui:77
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useProxyForWebSeeds)
-#: rc.cpp:2001
+#: rc.cpp:2058
 #, fuzzy
 msgid "Whether or not to use the HTTP proxy for webseed connections."
 msgstr "Prisijungimai:"
 
 #. i18n: file: ktorrent/pref/proxypref.ui:80
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxyForWebSeeds)
-#: rc.cpp:2004
+#: rc.cpp:2061
 #, fuzzy
 msgid "Use proxy for webseed connections"
 msgstr "Prisijungimai:"
 
 #. i18n: file: ktorrent/pref/proxypref.ui:90
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useProxyForTracker)
-#: rc.cpp:2007
+#: rc.cpp:2064
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -8239,20 +7955,20 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/proxypref.ui:93
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxyForTracker)
-#: rc.cpp:2013
+#: rc.cpp:2070
 #, fuzzy
 msgid "Use proxy for tracker connections"
 msgstr "Prisijungimai:"
 
 #. i18n: file: ktorrent/pref/proxypref.ui:103
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:2016
+#: rc.cpp:2073
 msgid "SOCKS"
 msgstr "SOCKS"
 
 #. i18n: file: ktorrent/pref/proxypref.ui:115
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_socksEnabled)
-#: rc.cpp:2019
+#: rc.cpp:2076
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -8276,19 +7992,19 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/proxypref.ui:118
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_socksEnabled)
-#: rc.cpp:2028
+#: rc.cpp:2085
 msgid "Use a SOCKS proxy server:"
 msgstr "Naudoti SOCKS proksi serverį:"
 
 #. i18n: file: ktorrent/pref/proxypref.ui:127
 #. i18n: ectx: property (text), widget (QLabel, label_12)
-#: rc.cpp:2031
+#: rc.cpp:2088
 msgid "Server:"
 msgstr "Serveris:"
 
 #. i18n: file: ktorrent/pref/proxypref.ui:138
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_socksProxy)
-#: rc.cpp:2034
+#: rc.cpp:2091
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -8305,7 +8021,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/proxypref.ui:156
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_socksPort)
-#: rc.cpp:2044
+#: rc.cpp:2101
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -8321,13 +8037,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/proxypref.ui:163
 #. i18n: ectx: property (text), widget (QLabel, label_13)
-#: rc.cpp:2051
+#: rc.cpp:2108
 msgid "Version:"
 msgstr "Versija:"
 
 #. i18n: file: ktorrent/pref/proxypref.ui:175
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_socksUsePassword)
-#: rc.cpp:2054
+#: rc.cpp:2111
 msgid ""
 "If the SOCKS server requires authentication via a username and a password, "
 "enable this box."
@@ -8335,13 +8051,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/proxypref.ui:178
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_socksUsePassword)
-#: rc.cpp:2057
+#: rc.cpp:2114
 msgid "Username and password required"
 msgstr "Reikalingas naudotojo vardas ir slaptažodis"
 
 #. i18n: file: ktorrent/pref/proxypref.ui:200
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_socksUsername)
-#: rc.cpp:2063
+#: rc.cpp:2120
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -8358,7 +8074,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/proxypref.ui:218
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_socksPassword)
-#: rc.cpp:2073
+#: rc.cpp:2130
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -8383,9 +8099,9 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QToolButton, m_move_down)
 #. i18n: file: ktorrent/tools/queuemanagerwidget.ui:56
 #. i18n: ectx: property (text), widget (QToolButton, m_move_bottom)
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:42
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:59
 #. i18n: ectx: property (text), widget (QToolButton, m_tree)
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:49
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:66
 #. i18n: ectx: property (text), widget (QToolButton, m_list)
 #. i18n: file: ktorrent/tools/queuemanagerwidget.ui:25
 #. i18n: ectx: property (text), widget (QToolButton, m_show_search)
@@ -8397,24 +8113,24 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QToolButton, m_move_down)
 #. i18n: file: ktorrent/tools/queuemanagerwidget.ui:56
 #. i18n: ectx: property (text), widget (QToolButton, m_move_bottom)
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:42
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:59
 #. i18n: ectx: property (text), widget (QToolButton, m_tree)
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:49
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:66
 #. i18n: ectx: property (text), widget (QToolButton, m_list)
-#: rc.cpp:2083 rc.cpp:2086 rc.cpp:2089 rc.cpp:2092 rc.cpp:2095 rc.cpp:2332
-#: rc.cpp:2335
+#: rc.cpp:2140 rc.cpp:2143 rc.cpp:2146 rc.cpp:2149 rc.cpp:2152 rc.cpp:2404
+#: rc.cpp:2407
 msgid "..."
 msgstr "..."
 
 #. i18n: file: ktorrent/view/scanextender.ui:21
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:2098
+#: rc.cpp:2155
 msgid "Found:"
 msgstr "Rasta:"
 
 #. i18n: file: ktorrent/view/scanextender.ui:46
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_found)
-#: rc.cpp:2101
+#: rc.cpp:2158
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -8442,19 +8158,19 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, chunks_not_downloaded)
 #. i18n: file: ktorrent/view/scanextender.ui:187
 #. i18n: ectx: property (text), widget (QLabel, chunks_downloaded)
-#: rc.cpp:2107 rc.cpp:2119 rc.cpp:2131 rc.cpp:2143
+#: rc.cpp:2164 rc.cpp:2176 rc.cpp:2188 rc.cpp:2200
 msgid "0"
 msgstr "0"
 
 #. i18n: file: ktorrent/view/scanextender.ui:69
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:2110
+#: rc.cpp:2167
 msgid "Failed:"
 msgstr "Nepavyko:"
 
 #. i18n: file: ktorrent/view/scanextender.ui:88
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_failed)
-#: rc.cpp:2113
+#: rc.cpp:2170
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -8468,13 +8184,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/view/scanextender.ui:114
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2122
+#: rc.cpp:2179
 msgid "Not downloaded:"
 msgstr "Neatsiųsta:"
 
 #. i18n: file: ktorrent/view/scanextender.ui:136
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_not_downloaded)
-#: rc.cpp:2125
+#: rc.cpp:2182
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -8488,7 +8204,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/view/scanextender.ui:178
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_downloaded)
-#: rc.cpp:2137
+#: rc.cpp:2194
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -8508,7 +8224,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KPushButton, cancel_button)
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:92
 #. i18n: ectx: property (text), widget (KPushButton, m_cancel)
-#: rc.cpp:2146 rc.cpp:2492
+#: rc.cpp:2203 rc.cpp:2564
 msgid "Cancel"
 msgstr "Atsisakyti"
 
@@ -8528,9 +8244,31 @@ msgstr "Atsisakyti"
 #. i18n: ectx: property (text), widget (KPushButton, m_close_button)
 #. i18n: file: ktorrent/ipfilterwidget.ui:106
 #. i18n: ectx: property (text), widget (KPushButton, m_close)
-#: rc.cpp:2149 rc.cpp:2450 rc.cpp:2501 rc.cpp:2596
+#: rc.cpp:2206 rc.cpp:2522 rc.cpp:2573 rc.cpp:2668
 msgid "Close"
 msgstr "Užverti"
+
+#. i18n: file: ktorrent/view/scanextender.ui:242
+#. i18n: ectx: property (text), widget (QLabel, error_msg)
+#: rc.cpp:2209
+#, fuzzy
+#| msgid "Error"
+msgid "Errors:"
+msgstr "Klaida"
+
+#. i18n: file: ktorrent/view/propertiesextender.ui:22
+#. i18n: ectx: property (text), widget (QCheckBox, move_on_completion_enabled)
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:45
+#. i18n: ectx: property (text), widget (QCheckBox, m_moveCompleted)
+#. i18n: file: ktorrent/view/propertiesextender.ui:22
+#. i18n: ectx: property (text), widget (QCheckBox, move_on_completion_enabled)
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:45
+#. i18n: ectx: property (text), widget (QCheckBox, m_moveCompleted)
+#: rc.cpp:2215 rc.cpp:2401
+#, fuzzy
+#| msgid "Move completed downloads to:"
+msgid "Move when completed to:"
+msgstr "Perkelti baigtus atsiuntimus į:"
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, GroupPolicyDlg)
@@ -8540,13 +8278,13 @@ msgstr "Užverti"
 #. i18n: ectx: property (windowTitle), widget (QWidget, GroupPolicyDlg)
 #. i18n: file: ktorrent/dialogs/addpeersdlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QDialog, AddPeersDlg)
-#: rc.cpp:2152 rc.cpp:2424
+#: rc.cpp:2218 rc.cpp:2496
 msgid "Dialog"
 msgstr "Dialogas"
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:38
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_default_location_enabled)
-#: rc.cpp:2155
+#: rc.cpp:2221
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -8568,7 +8306,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:53
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, m_default_location)
-#: rc.cpp:2166
+#: rc.cpp:2232
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -8590,7 +8328,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:65
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox)
-#: rc.cpp:2174
+#: rc.cpp:2240
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -8604,40 +8342,40 @@ msgstr ""
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:68
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:2180
+#: rc.cpp:2246
 #, fuzzy
 msgid "Torrent Limits"
 msgstr "Torrent failai"
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:76
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2183
+#: rc.cpp:2249
 #, fuzzy
 msgid "Maximum download rate:"
 msgstr "Maksimalus atsisiuntimų skaičius"
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:96
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2192
+#: rc.cpp:2258
 #, fuzzy
 msgid "Maximum upload rate:"
 msgstr "Maksimalus išsiuntimo greitis:"
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:116
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2201
+#: rc.cpp:2267
 msgid "Maximum seed time:"
 msgstr "Maksimalus dalinimosi laikas:"
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:139
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:2210
+#: rc.cpp:2276
 msgid "Maximum share ratio:"
 msgstr "Maksimalus dalinimosi santykis:"
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:166
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_only_new)
-#: rc.cpp:2216
+#: rc.cpp:2282
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -8659,115 +8397,115 @@ msgstr ""
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:169
 #. i18n: ectx: property (text), widget (QCheckBox, m_only_new)
-#: rc.cpp:2224
+#: rc.cpp:2290
 msgid "Apply settings only for newly opened or created torrents"
 msgstr ""
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, TorrentCreatorDlg)
-#: rc.cpp:2227
+#: rc.cpp:2293
 msgid "Create a torrent"
 msgstr "Sukurti torentą"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:23
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2230
+#: rc.cpp:2296
 msgid "File or directory to create torrent from:"
 msgstr "Failas ar aplankas, iš kurio sukurti torrentą:"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:54
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2236
+#: rc.cpp:2302
 msgid "Size of each chunk:"
 msgstr "Dydis kiekvienos dalies:"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:65
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
-#: rc.cpp:2239
+#: rc.cpp:2305
 msgid "32 KiB"
 msgstr "32 KiB"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:70
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
-#: rc.cpp:2242
+#: rc.cpp:2308
 msgid "64 KiB"
 msgstr "64 KiB"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:75
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
-#: rc.cpp:2245
+#: rc.cpp:2311
 msgid "128 KiB"
 msgstr "128 KiB"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:80
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
-#: rc.cpp:2248
+#: rc.cpp:2314
 msgid "256 KiB"
 msgstr "256 KiB"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:85
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
-#: rc.cpp:2251
+#: rc.cpp:2317
 msgid "512 KiB"
 msgstr "512 KiB"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:90
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
-#: rc.cpp:2254
+#: rc.cpp:2320
 msgid "1 MiB"
 msgstr "1 MiB"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:95
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
-#: rc.cpp:2257
+#: rc.cpp:2323
 msgid "2 MiB"
 msgstr "2 MiB"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:100
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
-#: rc.cpp:2260
+#: rc.cpp:2326
 msgid "4 MiB"
 msgstr "4 MiB"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:105
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
-#: rc.cpp:2263
+#: rc.cpp:2329
 msgid "8 MiB"
 msgstr "8 MiB"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:115
 #. i18n: ectx: property (text), widget (QCheckBox, m_start_seeding)
-#: rc.cpp:2266
+#: rc.cpp:2332
 msgid "Start seeding"
 msgstr "Pradėti sėjimą"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:125
 #. i18n: ectx: property (text), widget (QCheckBox, m_private)
-#: rc.cpp:2269
+#: rc.cpp:2335
 msgid "Private torrent (DHT not allowed)"
 msgstr "Privatus torrentas (DHT neleidžiamas)"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:132
 #. i18n: ectx: property (text), widget (QCheckBox, m_dht)
-#: rc.cpp:2272
+#: rc.cpp:2338
 msgid "Decentralized (DHT only)"
 msgstr "Decentralizuota (tik DHT)"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:218
 #. i18n: ectx: attribute (title), widget (QWidget, m_dht_tab)
-#: rc.cpp:2293
+#: rc.cpp:2359
 msgid "DHT Nodes"
 msgstr "DHT mazgai"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:226
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2296
+#: rc.cpp:2362
 msgid "Node:"
 msgstr "Mazgas:"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:272
 #. i18n: ectx: property (text), widget (QTreeWidget, m_node_list)
-#: rc.cpp:2305
+#: rc.cpp:2371
 msgid "IP or Hostname"
 msgstr ""
 
@@ -8783,94 +8521,102 @@ msgstr ""
 #. i18n: ectx: label, entry (port), group (downloads)
 #. i18n: file: libktcore/ktorrent.kcfg:56
 #. i18n: ectx: label, entry (udpTrackerPort), group (downloads)
-#: rc.cpp:2308 rc.cpp:2629 rc.cpp:2632
+#: rc.cpp:2374 rc.cpp:2701 rc.cpp:2704
 msgid "Port"
 msgstr "Prievadas"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:310
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: rc.cpp:2314
+#: rc.cpp:2380
 #, fuzzy
 msgid "Web Seeds"
 msgstr "Sėjikai"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, FileSelectDlg)
-#: rc.cpp:2326
+#: rc.cpp:2392
 msgid "Select Which Files You Want to Download"
 msgstr "Pažymėkite kuriuos failus pageidaujate atsisiųsti"
 
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:59
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:42
+#. i18n: ectx: property (toolTip), widget (QCheckBox, m_moveCompleted)
+#: rc.cpp:2398
+msgid ""
+"Moves the files to the specified location when the torrent finishes "
+"downloading."
+msgstr ""
+
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:76
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2338
+#: rc.cpp:2410
 msgid "Text encoding:"
 msgstr "Teksto koduotė:"
 
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:86
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:103
 #. i18n: ectx: property (toolTip), widget (QTreeView, m_file_view)
-#: rc.cpp:2341
+#: rc.cpp:2413
 msgid ""
 "All files in the torrent, you can change them by double clicking on them."
 msgstr ""
 
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:95
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:112
 #. i18n: ectx: property (text), widget (KPushButton, m_select_all)
-#: rc.cpp:2344
+#: rc.cpp:2416
 msgid "Select &All"
 msgstr "Pažymėti &viską"
 
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:102
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:119
 #. i18n: ectx: property (text), widget (KPushButton, m_select_none)
-#: rc.cpp:2347
+#: rc.cpp:2419
 msgid "Select &None"
 msgstr "Nežymėti &Nieko"
 
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:109
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:126
 #. i18n: ectx: property (text), widget (KPushButton, m_invert_selection)
-#: rc.cpp:2350
+#: rc.cpp:2422
 msgid "Invert Selection"
 msgstr "Invertuoti pažymėjimą"
 
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:116
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:133
 #. i18n: ectx: property (text), widget (KPushButton, m_collapse_all)
-#: rc.cpp:2353
+#: rc.cpp:2425
 #, fuzzy
 msgid "Collapse All"
 msgstr "Stabdyti viską"
 
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:123
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:140
 #. i18n: ectx: property (text), widget (KPushButton, m_expand_all)
-#: rc.cpp:2356
+#: rc.cpp:2428
 msgid "Expand All"
 msgstr ""
 
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:147
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:164
 #. i18n: ectx: property (text), widget (QLabel, m_existing_found)
-#: rc.cpp:2359
+#: rc.cpp:2431
 msgid "No existing files are found"
 msgstr ""
 
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:170
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:187
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #. i18n: file: ktorrent/dialogs/pastedlgbase.ui:77
 #. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:170
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:187
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #. i18n: file: ktorrent/dialogs/pastedlgbase.ui:77
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2365 rc.cpp:2531
+#: rc.cpp:2437 rc.cpp:2603
 msgid "Group:"
 msgstr "Grupė:"
 
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:207
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:224
 #. i18n: ectx: property (text), widget (QCheckBox, m_chkStartTorrent)
-#: rc.cpp:2368
+#: rc.cpp:2440
 msgid "Start torrent"
 msgstr "Pradėti torentą"
 
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:222
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:239
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_skip_data_check)
-#: rc.cpp:2371
+#: rc.cpp:2443
 #, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
@@ -8906,74 +8652,74 @@ msgstr ""
 "weight:600;\">Dėmesio: </span>Palaikomi tik http protokolu platinami failai."
 "</p></body></html>"
 
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:225
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:242
 #. i18n: ectx: property (text), widget (QCheckBox, m_skip_data_check)
-#: rc.cpp:2379
+#: rc.cpp:2451
 msgid "Skip data check if existing files are found"
 msgstr ""
 
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:235
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:252
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
-#: rc.cpp:2382
+#: rc.cpp:2454
 #, fuzzy
 msgid "Disk Space"
 msgstr "Vieta diske"
 
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:243
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:260
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:2385
+#: rc.cpp:2457
 #, fuzzy
 msgid "Required:"
 msgstr "Reikalinga vieta diske:"
 
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:253
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:270
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:2388
+#: rc.cpp:2460
 #, fuzzy
 msgid "Available:"
 msgstr "Galima"
 
-#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:263
+#. i18n: file: ktorrent/dialogs/fileselectdlg.ui:280
 #. i18n: ectx: property (text), widget (QLabel, textLabel6)
-#: rc.cpp:2391
+#: rc.cpp:2463
 msgid "After download:"
 msgstr "Po atsiuntimo:"
 
 #. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:23
 #. i18n: ectx: property (text), widget (QLabel, m_main_caption)
-#: rc.cpp:2397
+#: rc.cpp:2469
 msgid "Speed limits for individual torrents (double click to edit):"
 msgstr ""
 
 #. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:35
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2400
+#: rc.cpp:2472
 msgid "Filter:"
 msgstr "Filtras:"
 
 #. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:64
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:2403
+#: rc.cpp:2475
 msgid "Global Limits"
 msgstr "Globalūs apribojimai"
 
 #. i18n: file: ktorrent/dialogs/addpeersdlg.ui:19
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2427
+#: rc.cpp:2499
 msgid ""
 "Enter the IP address or hostname and port number of the peer you wish to add:"
 msgstr ""
 
 #. i18n: file: ktorrent/dialogs/addpeersdlg.ui:33
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2430
+#: rc.cpp:2502
 #, fuzzy
 msgid "Peer:"
 msgstr "Taškas"
 
 #. i18n: file: ktorrent/dialogs/addpeersdlg.ui:45
 #. i18n: ectx: property (toolTip), widget (QLineEdit, m_ip)
-#: rc.cpp:2433
+#: rc.cpp:2505
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -9000,25 +8746,25 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLineEdit, m_ip)
 #. i18n: file: ktorrent/ipfilterwidget.ui:34
 #. i18n: ectx: property (text), widget (KLineEdit, m_ip_to_add)
-#: rc.cpp:2441 rc.cpp:2578
+#: rc.cpp:2513 rc.cpp:2650
 msgid "127.0.0.1"
 msgstr "127.0.0.1"
 
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:14
 #. i18n: ectx: property (windowTitle), widget (QDialog, MissingFilesDlg)
-#: rc.cpp:2453
+#: rc.cpp:2525
 msgid "Files are missing"
 msgstr "Trūksta failų"
 
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:20
 #. i18n: ectx: property (text), widget (QLabel, m_text)
-#: rc.cpp:2456
+#: rc.cpp:2528
 msgid "The following files are missing:"
 msgstr "Trūksta šių failų:"
 
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:37
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_recreate)
-#: rc.cpp:2459
+#: rc.cpp:2531
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -9032,13 +8778,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:40
 #. i18n: ectx: property (text), widget (KPushButton, m_recreate)
-#: rc.cpp:2465
+#: rc.cpp:2537
 msgid "Recreate"
 msgstr "Kurti dar kartą"
 
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:50
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_dnd)
-#: rc.cpp:2468
+#: rc.cpp:2540
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -9052,7 +8798,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:63
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_select_new)
-#: rc.cpp:2477
+#: rc.cpp:2549
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -9066,14 +8812,14 @@ msgstr ""
 
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:66
 #. i18n: ectx: property (text), widget (KPushButton, m_select_new)
-#: rc.cpp:2483
+#: rc.cpp:2555
 #, fuzzy
 msgid "Select New Location"
 msgstr "Nežymėti &Nieko"
 
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:89
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_cancel)
-#: rc.cpp:2486
+#: rc.cpp:2558
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -9087,110 +8833,110 @@ msgstr ""
 
 #. i18n: file: ktorrent/dialogs/torrentmigratordlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QDialog, TorrentMigratorDlg)
-#: rc.cpp:2495
+#: rc.cpp:2567
 msgid "Importing ..."
 msgstr "Importuojama..."
 
 #. i18n: file: ktorrent/dialogs/torrentmigratordlg.ui:22
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2498
+#: rc.cpp:2570
 msgid "Importing torrents from KDE3 version:"
 msgstr ""
 
 #. i18n: file: ktorrent/dialogs/importdialog.ui:13
 #. i18n: ectx: property (windowTitle), widget (QDialog, ImportDialog)
-#: rc.cpp:2504
+#: rc.cpp:2576
 msgid "Import an existing torrent"
 msgstr "Importuoti esamą torrentą"
 
 #. i18n: file: ktorrent/dialogs/importdialog.ui:29
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:2507
+#: rc.cpp:2579
 msgid "Torrent:"
 msgstr "Torrentas:"
 
 #. i18n: file: ktorrent/dialogs/importdialog.ui:45
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:2510
+#: rc.cpp:2582
 msgid "Data:"
 msgstr "Duomenys:"
 
 #. i18n: file: ktorrent/dialogs/importdialog.ui:69
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2513
+#: rc.cpp:2585
 msgid "Select the torrent file and the data which belongs with it."
 msgstr ""
 
 #. i18n: file: ktorrent/dialogs/importdialog.ui:108
 #. i18n: ectx: property (text), widget (KPushButton, m_import_btn)
-#: rc.cpp:2516
+#: rc.cpp:2588
 msgid "&Import"
 msgstr "&Importuoti"
 
 #. i18n: file: ktorrent/dialogs/importdialog.ui:115
 #. i18n: ectx: property (text), widget (KPushButton, m_cancel_btn)
-#: rc.cpp:2519
+#: rc.cpp:2591
 msgid "Ca&ncel"
 msgstr "At&šaukti"
 
 #. i18n: file: ktorrent/ktorrentui.rc:4
 #. i18n: ectx: Menu (file)
-#: rc.cpp:2534
+#: rc.cpp:2606
 msgid "&File"
 msgstr "&Failas"
 
 #. i18n: file: ktorrent/ktorrentui.rc:16
 #. i18n: ectx: Menu (view)
-#: rc.cpp:2537
+#: rc.cpp:2609
 msgid "&View"
 msgstr "&Rodymas"
 
 #. i18n: file: ktorrent/ktorrentui.rc:37
 #. i18n: ectx: Menu (GroupsMenu)
-#: rc.cpp:2543
+#: rc.cpp:2615
 #, fuzzy
 msgid "GroupsMenu"
 msgstr "Grupės"
 
 #. i18n: file: ktorrent/ktorrentui.rc:49
 #. i18n: ectx: Menu (ViewMenu)
-#: rc.cpp:2546
+#: rc.cpp:2618
 msgid "ViewMenu"
 msgstr ""
 
 #. i18n: file: ktorrent/ktorrentui.rc:57
 #. i18n: ectx: Menu (PeerSourcesMenu)
-#: rc.cpp:2549
+#: rc.cpp:2621
 msgid "Additional Peer Sources"
 msgstr "Papildomi Taškų šaltiniai"
 
-#. i18n: file: ktorrent/ktorrentui.rc:85
+#. i18n: file: ktorrent/ktorrentui.rc:86
 #. i18n: ectx: Menu (ColumnsMenu)
-#: rc.cpp:2558
+#: rc.cpp:2630
 msgid "Configure Columns"
 msgstr "Konfigūruoti stulpelius"
 
-#. i18n: file: ktorrent/ktorrentui.rc:93
+#. i18n: file: ktorrent/ktorrentui.rc:94
 #. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:2564
+#: rc.cpp:2636
 msgid "Download Toolbar"
 msgstr "Atsisiuntimų Įrankių juosta"
 
 #. i18n: file: ktorrent/ipfilterwidget.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, IPFilterWidget)
-#: rc.cpp:2567
+#: rc.cpp:2639
 msgid "KTorrent Blacklisted Peers"
 msgstr ""
 
 #. i18n: file: ktorrent/ipfilterwidget.ui:22
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2570
+#: rc.cpp:2642
 msgid "Add peer:"
 msgstr "Pridėti tašką:"
 
 #. i18n: file: ktorrent/ipfilterwidget.ui:31
 #. i18n: ectx: property (toolTip), widget (KLineEdit, m_ip_to_add)
-#: rc.cpp:2573
+#: rc.cpp:2645
 #, fuzzy
 msgid ""
 "IP addresses must be in the format 'XXX.XXX.XXX.XXX'.\n"
@@ -9203,212 +8949,212 @@ msgstr ""
 
 #. i18n: file: ktorrent/ipfilterwidget.ui:72
 #. i18n: ectx: property (text), widget (KPushButton, m_clear)
-#: rc.cpp:2587
+#: rc.cpp:2659
 msgid "Clear"
 msgstr "Valyti"
 
 #. i18n: file: ktorrent/ipfilterwidget.ui:92
 #. i18n: ectx: property (text), widget (KPushButton, m_open)
-#: rc.cpp:2590
+#: rc.cpp:2662
 msgid "Open..."
 msgstr "Atverti..."
 
 #. i18n: file: ktorrent/ipfilterwidget.ui:99
 #. i18n: ectx: property (text), widget (KPushButton, m_save_as)
-#: rc.cpp:2593
+#: rc.cpp:2665
 msgid "Save As..."
 msgstr "Įrašyti kaip..."
 
 #. i18n: file: plasma/applet/appletconfig.ui:21
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2602
+#: rc.cpp:2674
 #, fuzzy
 msgid "Torrent to display:"
 msgstr "Torrent failai"
 
 #. i18n: file: libktcore/ktorrent.kcfg:10
 #. i18n: ectx: label, entry (maxDownloads), group (downloads)
-#: rc.cpp:2605
+#: rc.cpp:2677
 #, fuzzy
 msgid "Maximum number of downloads (0 = no limit)"
 msgstr "Maksimalus prisijungimų skaičius vienam torentui:"
 
 #. i18n: file: libktcore/ktorrent.kcfg:15
 #. i18n: ectx: label, entry (maxSeeds), group (downloads)
-#: rc.cpp:2608
+#: rc.cpp:2680
 msgid "Maximum number of seeds (0 = no limit)"
 msgstr ""
 
 #. i18n: file: libktcore/ktorrent.kcfg:20
 #. i18n: ectx: label, entry (startDownloadsOnLowDiskSpace), group (downloads)
-#: rc.cpp:2611
+#: rc.cpp:2683
 msgid "Start downloads on low disk space?"
 msgstr ""
 
 #. i18n: file: libktcore/ktorrent.kcfg:25
 #. i18n: ectx: label, entry (maxConnections), group (downloads)
-#: rc.cpp:2614
+#: rc.cpp:2686
 #, fuzzy
 msgid "Maximum number of connections per torrent (0 = no limit)"
 msgstr "Maksimalus prisijungimų skaičius vienam torentui:"
 
 #. i18n: file: libktcore/ktorrent.kcfg:30
 #. i18n: ectx: label, entry (maxTotalConnections), group (downloads)
-#: rc.cpp:2617
+#: rc.cpp:2689
 #, fuzzy
 msgid "Maximum number of connections for all torrents (0 = no limit) "
 msgstr "Maksimalus prisijungimų skaičius vienam torentui:"
 
 #. i18n: file: libktcore/ktorrent.kcfg:35
 #. i18n: ectx: label, entry (maxUploadRate), group (downloads)
-#: rc.cpp:2620
+#: rc.cpp:2692
 #, fuzzy
 msgid "Maximum upload speed in KiB/sec (0 = no limit)"
 msgstr "Maksimalus atsisiuntimų skaičius"
 
 #. i18n: file: libktcore/ktorrent.kcfg:40
 #. i18n: ectx: label, entry (maxDownloadRate), group (downloads)
-#: rc.cpp:2623
+#: rc.cpp:2695
 #, fuzzy
 msgid "Maximum download speed in KiB/sec (0 = no limit)"
 msgstr "Maksimalus atsisiuntimų skaičius"
 
 #. i18n: file: libktcore/ktorrent.kcfg:45
 #. i18n: ectx: label, entry (maxRatio), group (downloads)
-#: rc.cpp:2626
+#: rc.cpp:2698
 #, fuzzy
 msgid "Maximum share ratio (0 = no limit)"
 msgstr "Maksimali dalinimosi santykio riba pasiekta."
 
 #. i18n: file: libktcore/ktorrent.kcfg:62
 #. i18n: ectx: label, entry (showSystemTrayIcon), group (downloads)
-#: rc.cpp:2635
+#: rc.cpp:2707
 #, fuzzy
 msgid "Show a system tray icon"
 msgstr "Rodyti sistemos dėklo ženkliuką"
 
 #. i18n: file: libktcore/ktorrent.kcfg:66
 #. i18n: ectx: label, entry (showSpeedBarInTrayIcon), group (downloads)
-#: rc.cpp:2638
+#: rc.cpp:2710
 #, fuzzy
 msgid "Show speed bar in tray icon"
 msgstr "Rodyti sistemos dėklo ženkliuką"
 
 #. i18n: file: libktcore/ktorrent.kcfg:70
 #. i18n: ectx: label, entry (downloadBandwidth), group (downloads)
-#: rc.cpp:2641
+#: rc.cpp:2713
 msgid "Download bandwidth (in kb/s):"
 msgstr ""
 
 #. i18n: file: libktcore/ktorrent.kcfg:76
 #. i18n: ectx: label, entry (uploadBandwidth), group (downloads)
-#: rc.cpp:2644
+#: rc.cpp:2716
 msgid "Upload bandwidth (in kb/s):"
 msgstr ""
 
 #. i18n: file: libktcore/ktorrent.kcfg:82
 #. i18n: ectx: label, entry (showPopups), group (downloads)
-#: rc.cpp:2647
+#: rc.cpp:2719
 msgid "Show popup messages when torrent is finished."
 msgstr ""
 
 #. i18n: file: libktcore/ktorrent.kcfg:86
 #. i18n: ectx: label, entry (keepSeeding), group (downloads)
-#: rc.cpp:2650
+#: rc.cpp:2722
 msgid "Keep seeding after download has finished"
 msgstr ""
 
 #. i18n: file: libktcore/ktorrent.kcfg:90
 #. i18n: ectx: label, entry (tempDir), group (downloads)
-#: rc.cpp:2653
+#: rc.cpp:2725
 #, fuzzy
 msgid "Folder to store temporary files"
 msgstr "Aplankas, torrentų informacijos saugojimui:"
 
 #. i18n: file: libktcore/ktorrent.kcfg:93
 #. i18n: ectx: label, entry (useSaveDir), group (downloads)
-#: rc.cpp:2656
+#: rc.cpp:2728
 msgid "Whether to automatically save downloads to saveDir"
 msgstr ""
 
 #. i18n: file: libktcore/ktorrent.kcfg:97
 #. i18n: ectx: label, entry (saveDir), group (downloads)
-#: rc.cpp:2659
+#: rc.cpp:2731
 #, fuzzy
 msgid "Folder to store downloaded files"
 msgstr "Aplankas, torrentų informacijos saugojimui:"
 
 #. i18n: file: libktcore/ktorrent.kcfg:100
 #. i18n: ectx: label, entry (useTorrentCopyDir), group (downloads)
-#: rc.cpp:2662
+#: rc.cpp:2734
 msgid "Whether to automatically copy .torrent files to torrentCopyDir"
 msgstr ""
 
 #. i18n: file: libktcore/ktorrent.kcfg:104
 #. i18n: ectx: label, entry (torrentCopyDir), group (downloads)
-#: rc.cpp:2665
+#: rc.cpp:2737
 #, fuzzy
 msgid "Folder to copy .torrent files to"
 msgstr "Kopijuoti torrent failus į:"
 
 #. i18n: file: libktcore/ktorrent.kcfg:107
 #. i18n: ectx: label, entry (useCustomIP), group (downloads)
-#: rc.cpp:2668
+#: rc.cpp:2740
 msgid "Whether to use a custom IP to pass to the tracker"
 msgstr ""
 
 #. i18n: file: libktcore/ktorrent.kcfg:111
 #. i18n: ectx: label, entry (lastSaveDir), group (downloads)
-#: rc.cpp:2671
+#: rc.cpp:2743
 msgid "Directory which was used as the last save directory"
 msgstr ""
 
 #. i18n: file: libktcore/ktorrent.kcfg:115
 #. i18n: ectx: label, entry (customIP), group (downloads)
-#: rc.cpp:2674
+#: rc.cpp:2746
 msgid "IP to pass to the tracker"
 msgstr ""
 
 #. i18n: file: libktcore/ktorrent.kcfg:119
 #. i18n: ectx: label, entry (guiUpdateInterval), group (downloads)
-#: rc.cpp:2677
+#: rc.cpp:2749
 msgid "GUI update interval"
 msgstr "GNS atnaujinimo intervalas"
 
 #. i18n: file: libktcore/ktorrent.kcfg:125
 #. i18n: ectx: label, entry (dhtSupport), group (downloads)
-#: rc.cpp:2680
+#: rc.cpp:2752
 msgid "Support for DHT"
 msgstr "DHT palaikymas"
 
 #. i18n: file: libktcore/ktorrent.kcfg:129
 #. i18n: ectx: label, entry (dhtPort), group (downloads)
-#: rc.cpp:2683
+#: rc.cpp:2755
 msgid "DHT port"
 msgstr "DHT prievadas"
 
 #. i18n: file: libktcore/ktorrent.kcfg:138
 #. i18n: ectx: label, entry (numUploadSlots), group (downloads)
-#: rc.cpp:2686
+#: rc.cpp:2758
 #, fuzzy
 msgid "Number of upload slots"
 msgstr "Išsiuntimo lizdų skaičius:"
 
 #. i18n: file: libktcore/ktorrent.kcfg:188
 #. i18n: ectx: label, entry (shownColumns), group (downloads)
-#: rc.cpp:2695
+#: rc.cpp:2767
 msgid "Columns shown in KTorrentView"
 msgstr ""
 
 #. i18n: file: libktcore/ktorrent.kcfg:233
 #. i18n: ectx: label, entry (eta), group (downloads)
-#: rc.cpp:2698
+#: rc.cpp:2770
 msgid "Algorithm to estimate the time when a torrent is finished"
 msgstr ""
 
 #. i18n: file: libktcore/ktorrent.kcfg:245
 #. i18n: ectx: label, entry (minDiskSpace), group (downloads)
-#: rc.cpp:2701
+#: rc.cpp:2773
 msgid ""
 "When there is no space left to complete download, and the available disk "
 "space is less than this value, the torrent will be stopped."
@@ -9416,22 +9162,309 @@ msgstr ""
 
 #. i18n: file: libktcore/ktorrent.kcfg:256
 #. i18n: ectx: label, entry (useCompletedDir), group (downloads)
-#: rc.cpp:2704
+#: rc.cpp:2776
 msgid "Whether to automatically move completed downloads to completedDir"
 msgstr ""
 
 #. i18n: file: libktcore/ktorrent.kcfg:260
 #. i18n: ectx: label, entry (completedDir), group (downloads)
-#: rc.cpp:2707
+#: rc.cpp:2779
 #, fuzzy
 msgid "Folder to move completed downloaded files to"
 msgstr "Perkelti baigtus atsiuntimus į:"
 
 #. i18n: file: libktcore/ktorrent.kcfg:263
 #. i18n: ectx: label, entry (maxSeedTime), group (downloads)
-#: rc.cpp:2710
+#: rc.cpp:2782
 msgid "Maximum seed time in hours (0 = no limit)"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Tracker:"
+#~ msgstr "Vedliai"
+
+#~ msgid "Maximum share ratio limit reached."
+#~ msgstr "Maksimali dalinimosi santykio riba pasiekta."
+
+#~ msgid "Illegal token: %1"
+#~ msgstr "Neįmanomas paėmimas: %1"
+
+#~ msgid "Decode error"
+#~ msgstr "Iškodavimo klaida"
+
+#~ msgid "Unexpected end of input"
+#~ msgstr "Netikėta įvesties pabaiga"
+
+#~ msgid "Cannot convert %1 to an int"
+#~ msgstr "Nepavyksta konvertuoti %1 į kint."
+
+#~ msgid "Torrent is incomplete."
+#~ msgstr "Torentas yra nepilnas."
+
+#~ msgid "Cannot open index file %1 : %2"
+#~ msgstr "Nepavyksta atverti indekso failo %1: %2"
+
+#~ msgid "Cannot open %1 for writing : readonly filesystem"
+#~ msgstr ""
+#~ "Nepavyko atverti %1 įrašymui: failų sistema prijungta skaitymo veiksena"
+
+#, fuzzy
+#~ msgid "Not enough free disk space for %1"
+#~ msgstr "Nepakankama vietos diske %1"
+
+#~ msgid "Cannot expand file %1 : %2"
+#~ msgstr "Nepavyko išplėsti failo %1 : %2"
+
+#~ msgid "Error : Reading past the end of the file %1"
+#~ msgstr "Klaida: failas %1 buvo skaitomas už jo pabaigos"
+
+#~ msgid "Failed to seek file %1 : %2"
+#~ msgstr "Nepavyko ieškoti faile %1 : %2"
+
+#~ msgid "Error reading from %1"
+#~ msgstr "Klaida skaitant iš %1"
+
+#~ msgid "Failed to write to file %1 : %2"
+#~ msgstr "Nepavyko įrašyti į: %1 : %2"
+
+#~ msgid "Cannot preallocate diskspace : %1"
+#~ msgstr "Nepavyksta išskirti vietos diske : %1"
+
+#~ msgid "Cannot create file %1 : %2"
+#~ msgstr "Nepavyksta sukurti failo %1: %2"
+
+#~ msgid "Failed to write first chunk to DND file : %1"
+#~ msgstr "Nepavyko įrašyti pirmosios dalies į DND failą: %1"
+
+#~ msgid "Failed to write last chunk to DND file : %1"
+#~ msgstr "Nepavyko įrašyti paskutiniosios dalies į DND failą: %1"
+
+#~ msgid "Failed to open %1 : %2"
+#~ msgstr "Nepavyko atverti %1 : %2"
+
+#~ msgid "Cannot open file %1 : %2"
+#~ msgstr "Nepavyksta atverti failo %1: %2"
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "Announcing"
+#~ msgstr "Kreipiamasi"
+
+#~ msgid "Error: %1"
+#~ msgstr "Klaida: %1"
+
+#~ msgid "The directory %1 does not exist"
+#~ msgstr "Aplankas %1 neegzistuoja"
+
+#~ msgid "Unknown client"
+#~ msgstr "Nežinomas klientas"
+
+#, fuzzy
+#~ msgid "Unable to resolve hostname %1"
+#~ msgstr " Nepavyksta sukurti %1 : %2"
+
+#~ msgid "Invalid response from tracker"
+#~ msgstr "Klaidingas atsakymas iš vedlio"
+
+#~ msgid "Invalid data from tracker"
+#~ msgstr "Klaidingi duomenys iš vedlio"
+
+#~ msgid "Invalid tracker URL"
+#~ msgstr "Klaidingas vedlio URL:"
+
+#~ msgid "Cannot bind to udp port %1 or the 10 following ports."
+#~ msgstr "Nepavyksta pasirinkti udp prievado %1 ar 10 sekančių prievadų."
+
+#, fuzzy
+#~ msgid ""
+#~ "An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/"
+#~ ">The torrent is probably corrupt or is not a valid torrent file."
+#~ msgstr ""
+#~ "Atsisiunčiant torrent failą įvyko klaida. Torrentas tikriausiai "
+#~ "sugadintas, arba nėra torrent failas"
+
+#, fuzzy
+#~ msgid ""
+#~ "An error occurred while loading the torrent:<br/><b>%1</b><br/>The "
+#~ "torrent is probably corrupt or is not a valid torrent file."
+#~ msgstr ""
+#~ "Atsisiunčiant torrent failą įvyko klaida. Torrentas tikriausiai "
+#~ "sugadintas, arba nėra torrent failas"
+
+#~ msgid "Unable to create %1 : %2"
+#~ msgstr " Nepavyksta sukurti %1 : %2"
+
+#, fuzzy
+#~ msgid ""
+#~ "You are already downloading the torrent <b>%1</b>. The tracker lists from "
+#~ "both torrents have been merged."
+#~ msgstr ""
+#~ "Jūs jau siunčiatės šį torentą %1, abiejų torentų vedlių sąrašas yra "
+#~ "suliejamas."
+
+#, fuzzy
+#~ msgid "You are already downloading the torrent <b>%1</b>."
+#~ msgstr "Jūs jau siunčiatės torentą %1"
+
+#~ msgid "Not started"
+#~ msgstr "Nepradėtas"
+
+#~ msgid "Download completed"
+#~ msgstr "Atsisiuntimas baigtas"
+
+#~ msgid "Seeding completed"
+#~ msgstr "Sėjimas baigtas"
+
+#~ msgctxt "Status of a torrent file"
+#~ msgid "Seeding"
+#~ msgstr "Sėjama"
+
+#~ msgid "Stalled"
+#~ msgstr "Užstrigo"
+
+#~ msgid "Allocating diskspace"
+#~ msgstr "Apskaičiuojama disko vieta"
+
+#, fuzzy
+#~ msgid "Queued for downloading"
+#~ msgstr "Dabar siunčiama:"
+
+#~ msgid "Checking data"
+#~ msgstr "Tikrinami duomenys"
+
+#~ msgid "Stopped. No space left on device."
+#~ msgstr "Sustojo. Neliko vietos įrenginyje."
+
+#~ msgid "Paused"
+#~ msgstr "Pristabdyta"
+
+#~ msgid "Cannot create index file: %1"
+#~ msgstr "Nepavyko sukurti indeksavimo failo: %1"
+
+#~ msgid "Corrupted torrent."
+#~ msgstr "Sugadintas torrentas."
+
+#~ msgid " Unable to open torrent file %1 : %2"
+#~ msgstr "Nepavyko atverti torent failo %1: %2"
+
+#~ msgid "Parse Error"
+#~ msgstr "Parse Klaida"
+
+#~ msgid "Cannot open file : %1 : %2"
+#~ msgstr "Nepavyko atverti failo: %1 : %2"
+
+#~ msgid "Not connected"
+#~ msgstr "Neprisijungta"
+
+#~ msgid "Resolving proxy %1:%2"
+#~ msgstr "Nustatomas atstovaujančio serverio adresas %1:%2"
+
+#~ msgid "Resolving hostname %1"
+#~ msgstr "Nustatomas mazgo pavadinimas %1"
+
+#, fuzzy
+#~ msgid "Connection closed"
+#~ msgstr ""
+#~ "#-#-#-#-#  kio_sftp.po (kio_sftp)  #-#-#-#-#\n"
+#~ "Prisijungimas baigtas\n"
+#~ "#-#-#-#-#  kopete.po (kopete)  #-#-#-#-#\n"
+#~ "Prisijungimas baigtas\n"
+#~ "#-#-#-#-#  kget.po (kget)  #-#-#-#-#\n"
+#~ "Ryšys nutrauktas"
+
+#~ msgid "Error: request failed: %1"
+#~ msgstr "Klaida: užklausa nepavyko: %1"
+
+#~ msgid "Connected"
+#~ msgstr "Prisijungta"
+
+#~ msgid "Error: Failed to connect to webseed"
+#~ msgstr "Klaida: nepavyko prisijungti prie žiniatinklyje platinamo failo"
+
+#~ msgid "Connecting"
+#~ msgstr "Jungiamasi"
+
+#~ msgid "Failed to connect to webseed"
+#~ msgstr "Nepavyko prisijungti prie žiniatinklyje platinamo failo"
+
+#~ msgid "Failed to resolve hostname of webseed"
+#~ msgstr "Nepavyko nustatyti žiniatinklyje platinamo failo mazgo pavadinimo"
+
+#~ msgid "Error: failed to connect, server not responding"
+#~ msgstr "Klaida: serveris neatsako, nepavyko prisijungti"
+
+#~ msgid "Error: request timed out"
+#~ msgstr "Klaida: baigėsi užklausai skirtas laikas"
+
+#, fuzzy
+#~ msgid "Not in use"
+#~ msgstr "Įvertinkite"
+
+#~ msgid "Cannot write to %1 : %2"
+#~ msgstr "Nepavyko įrašyti į %1 : %2"
+
+#~ msgid "Cannot read from %1"
+#~ msgstr "Nepavyko nuskaityti iš %1"
+
+#~ msgid "Cannot open log file %1 : %2"
+#~ msgstr "Nepavyksta atverti žurnalo failo %1: %2"
+
+#, fuzzy
+#~ msgid "Cannot create directory %1"
+#~ msgstr "nepavyksta sukurti aplanko %1: %2"
+
+#~ msgid "Cannot symlink %1 to %2: %3"
+#~ msgstr "Nepavyksta surišti %1 prie %2: %3"
+
+#~ msgid "Cannot move %1 to %2: %3"
+#~ msgstr "Nepavyksta perkelti %1 į %2: %3"
+
+#~ msgid "Cannot copy %1 to %2: %3"
+#~ msgstr "Nepavyksta nukopijuoti %1 to %2: %3"
+
+#~ msgid "Cannot delete %1: %2"
+#~ msgstr "Nepavyksta ištrinti %1: %2"
+
+#~ msgid "Cannot create %1: %2"
+#~ msgstr "Nepavyksta sukurti %1: %2"
+
+#~ msgid "Cannot calculate the filesize of %1: %2"
+#~ msgstr "Nepavyksta suskaičiuoti failo %1 dydžio: %2"
+
+#~ msgid "Cannot calculate the filesize : %1"
+#~ msgstr "Nepavyksta suskaičiuoti failo dydžio: %1"
+
+#~ msgid "Cannot expand file: %1"
+#~ msgstr "Nepavyko išplėsti failo: %1"
+
+#~ msgid "Cannot seek in file : %1"
+#~ msgstr "Nepavyko skaityti failo: %1"
+
+#~ msgid "%1/s"
+#~ msgstr "%1/s"
+
+#~ msgid "1 day "
+#~ msgid_plural "%1 days "
+#~ msgstr[0] "1 diena "
+#~ msgstr[1] "%1 diena "
+#~ msgstr[2] "%1 dienos "
+#~ msgstr[3] "%1 dienų "
+
+#~ msgid "General"
+#~ msgstr "Bendri"
+
+#, fuzzy
+#~ msgid "Disk Input/Output"
+#~ msgstr "Disko I/O:"
+
+#, fuzzy
+#~| msgid "UDP"
+#~ msgid "UTP"
+#~ msgstr "UDP"
+
+#~ msgid "(C) 2005 - 2008 Joris Guisson and Ivan Vasic"
+#~ msgstr "(C) 2005 - 2008 Joris Guisson ir Ivan Vasic"
 
 #~ msgid ""
 #~ "Specified port (%1) is unavailable or in use by another application. "
