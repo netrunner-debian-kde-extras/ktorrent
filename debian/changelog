@@ -8,6 +8,11 @@ ktorrent (4.0~rc1-0r1) UNRELEASED; urgency=low
   * Add patch general/drop_excess_dependencies.diff - drop excess build
     dependency requirements from CMakeLists.txt, adjust required versions of Qt
     and KDE.
+  * Changes for KTorrent split:
+    - build depend on libktorrent-dev (>= 1.0~rc1);
+    - remove libgmp3-dev, libqca2-dev from build depends;
+    - drop libbtcore from ktorrent.install file;
+    - replace libboost-serialization-dev with libboost-dev.
 
  -- Modestas Vainius <modax@debian.org>  Sat, 08 May 2010 18:23:59 +0300
 
