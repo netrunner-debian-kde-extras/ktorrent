@@ -5,6 +5,9 @@ ktorrent (4.0~rc1-0r1) UNRELEASED; urgency=low
    - Statistics are updated dynamically in the system tray (Closes: #526775);
    - Torrent state is updated even when it isn't started (Closes: #575878).
   * Fix spelling error in ktorrent-data description (Closes: #557893).
+  * Add patch general/drop_excess_dependencies.diff - drop excess build
+    dependency requirements from CMakeLists.txt, adjust required versions of Qt
+    and KDE.
 
  -- Modestas Vainius <modax@debian.org>  Sat, 08 May 2010 18:23:59 +0300
 
