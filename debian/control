@@ -15,7 +15,8 @@ Vcs-Browser: http://git.debian.org/?p=pkg-kde/kde-extras/ktorrent.git;a=summary
 
 Package: ktorrent
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, ktorrent-data (= ${source:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, ktorrent-data (= ${source:Version}),
+ libktorrent-l10n
 Suggests: plasma-widget-ktorrent (= ${binary:Version})
 Description: BitTorrent client based on the KDE platform
  This package contains KTorrent, a BitTorrent peer-to-peer network client, that
