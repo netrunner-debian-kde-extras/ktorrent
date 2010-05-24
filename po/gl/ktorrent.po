@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-04-29 04:59+0200\n"
+"POT-Creation-Date: 2010-05-09 01:27+0200\n"
 "PO-Revision-Date: 2009-10-20 19:07+0200\n"
 "Last-Translator: Xosé <xosecalvo@gmail.com>\n"
 "Language-Team: Galego <proxecto@trasno.net>\n"
@@ -266,26 +266,26 @@ msgstr "Ao chou"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:67
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
+#. i18n: file: ktorrent/ipfilterwidget.ui:65
+#. i18n: ectx: property (text), widget (KPushButton, m_remove)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:181
 #. i18n: ectx: property (text), widget (KPushButton, m_remove_tracker)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:287
 #. i18n: ectx: property (text), widget (KPushButton, m_remove_node)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:331
 #. i18n: ectx: property (text), widget (KPushButton, m_remove_webseed)
-#. i18n: file: ktorrent/ipfilterwidget.ui:65
-#. i18n: ectx: property (text), widget (KPushButton, m_remove)
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:67
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
+#. i18n: file: ktorrent/ipfilterwidget.ui:65
+#. i18n: ectx: property (text), widget (KPushButton, m_remove)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:181
 #. i18n: ectx: property (text), widget (KPushButton, m_remove_tracker)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:287
 #. i18n: ectx: property (text), widget (KPushButton, m_remove_node)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:331
 #. i18n: ectx: property (text), widget (KPushButton, m_remove_webseed)
-#. i18n: file: ktorrent/ipfilterwidget.ui:65
-#. i18n: ectx: property (text), widget (KPushButton, m_remove)
-#: plugins/mediaplayer/playlistwidget.cpp:107 rc.cpp:244 rc.cpp:2350
-#: rc.cpp:2377 rc.cpp:2386 rc.cpp:2656
+#: plugins/mediaplayer/playlistwidget.cpp:107 rc.cpp:244 rc.cpp:2310
+#: rc.cpp:2382 rc.cpp:2409 rc.cpp:2418
 msgid "Remove"
 msgstr "Eliminar"
 
@@ -534,13 +534,13 @@ msgstr "Tarefas"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:179
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: plugins/stats/SpdTabPage.cc:63 plugins/stats/SpdTabPage.cc:64 rc.cpp:1714
+#: plugins/stats/SpdTabPage.cc:63 plugins/stats/SpdTabPage.cc:64 rc.cpp:1611
 msgid "Current speed"
 msgstr "Velocidade actual"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:184
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: plugins/stats/SpdTabPage.cc:66 plugins/stats/SpdTabPage.cc:67 rc.cpp:1717
+#: plugins/stats/SpdTabPage.cc:66 plugins/stats/SpdTabPage.cc:67 rc.cpp:1614
 msgid "Average speed"
 msgstr "Velocidade media"
 
@@ -915,9 +915,9 @@ msgstr "Indica se estamos interesados en obter de este par"
 #: ktorrent/dialogs/spinboxdelegate.cpp:41 rc.cpp:686 rc.cpp:692 rc.cpp:1018
 #: rc.cpp:1030 rc.cpp:1093 rc.cpp:1102 rc.cpp:1114 rc.cpp:1123 rc.cpp:1138
 #: rc.cpp:1144 rc.cpp:1186 rc.cpp:1195 rc.cpp:1207 rc.cpp:1216 rc.cpp:1231
-#: rc.cpp:1237 rc.cpp:1443 rc.cpp:1452 rc.cpp:1461 rc.cpp:1473 rc.cpp:1853
-#: rc.cpp:1862 rc.cpp:1940 rc.cpp:1949 rc.cpp:2252 rc.cpp:2261 rc.cpp:2270
-#: rc.cpp:2279 rc.cpp:2481 rc.cpp:2490
+#: rc.cpp:1237 rc.cpp:1443 rc.cpp:1452 rc.cpp:1461 rc.cpp:1473 rc.cpp:1781
+#: rc.cpp:1790 rc.cpp:1868 rc.cpp:1877 rc.cpp:2252 rc.cpp:2261 rc.cpp:2270
+#: rc.cpp:2279 rc.cpp:2513 rc.cpp:2522
 msgid "No limit"
 msgstr "Sen límite"
 
@@ -1002,7 +1002,7 @@ msgstr "Mostra todo os anacos dun torrente que está a obter"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:160
 #. i18n: ectx: attribute (title), widget (QWidget, m_tracker_tab)
-#: plugins/infowidget/infowidgetplugin.cpp:266 rc.cpp:2344
+#: plugins/infowidget/infowidgetplugin.cpp:266 rc.cpp:2376
 msgid "Trackers"
 msgstr "Localizadores"
 
@@ -1110,7 +1110,7 @@ msgstr "Obter o último"
 
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:53
 #. i18n: ectx: property (text), widget (KPushButton, m_dnd)
-#: plugins/infowidget/fileview.cpp:119 rc.cpp:2546
+#: plugins/infowidget/fileview.cpp:119 rc.cpp:2578
 msgid "Do Not Download"
 msgstr "Non obter"
 
@@ -1525,7 +1525,7 @@ msgstr "Inicio"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: plugins/search/homepage.cpp:118 ktorrent/main.cpp:85 rc.cpp:1711
+#: plugins/search/homepage.cpp:118 ktorrent/main.cpp:85 rc.cpp:1608
 msgid "KTorrent"
 msgstr "KTorrent"
 
@@ -1938,26 +1938,6 @@ msgstr "Programa de proba do UPnP de KTorrent"
 msgid "(C) 2005 - 2007 Joris Guisson and Ivan Vasic"
 msgstr "(C) 2005 - 2007 Joris Guisson e Ivan Vasic"
 
-#: ktmagnetdownloader/magnetdownloader.cpp:37
-#, fuzzy
-#| msgid "Time Downloaded"
-msgid "KTMagnetDownloader"
-msgstr "Duración da recepción"
-
-#: ktmagnetdownloader/magnetdownloader.cpp:38
-msgid "KTorrent's magnet link downloader"
-msgstr ""
-
-#: ktmagnetdownloader/magnetdownloader.cpp:40
-#, fuzzy
-#| msgid "Joris Guisson"
-msgid "(C) 2009 Joris Guisson"
-msgstr "Joris Guisson"
-
-#: ktmagnetdownloader/magnetdownloader.cpp:45 ktorrent/main.cpp:140
-msgid "Document to open"
-msgstr "O documento a abrir"
-
 #: libktupnp/upnprouter.cpp:139
 #, kde-format
 msgid "Failed to download %1 : %2"
@@ -1989,6 +1969,110 @@ msgstr "A conexión pechouse inesperadamente."
 msgid "Timeout occurred"
 msgstr "Esgotouse o tempo límite"
 
+#: ktorrent/core.cpp:169
+#, fuzzy, kde-format
+#| msgid ""
+#| "KTorrent is unable to accept connections because the ports %1 to %2 are "
+#| "already in use by another program."
+msgid ""
+"KTorrent is unable to accept connections because the TCP ports %1 is already "
+"in use by another program."
+msgstr ""
+"KTorrent non é capaz de aceptar conexións porque os portos do %1 ao %2 xa "
+"están a seren usados por outro programa."
+
+#: ktorrent/core.cpp:183
+#, fuzzy, kde-format
+#| msgid ""
+#| "KTorrent is unable to accept connections because the ports %1 to %2 are "
+#| "already in use by another program."
+msgid ""
+"KTorrent is unable to accept connections because the UDP port %1 is already "
+"in use by another program."
+msgstr ""
+"KTorrent non é capaz de aceptar conexións porque os portos do %1 ao %2 xa "
+"están a seren usados por outro programa."
+
+#: ktorrent/core.cpp:993
+msgid "KTorrent is running one or more torrents"
+msgstr "Ktorrent está a xestionar un ou máis torrentes"
+
+#: ktorrent/core.cpp:1075
+#, kde-format
+msgid "Cannot create torrent: %1"
+msgstr "Non foi posíbel crear o torrente: %1"
+
+#: ktorrent/core.cpp:1181
+#, kde-format
+msgid ""
+"Several data files of the torrent \"%1\" are missing. \n"
+"Do you want to recreate them, or do you want to not download them?"
+msgstr ""
+"Faltan varios ficheiros de datos do torrente «%1».\n"
+"Desexa crealos de novo ou prefire non obtelos?"
+
+#: ktorrent/core.cpp:1190 ktorrent/core.cpp:1202 ktorrent/core.cpp:1215
+msgid "Data files are missing"
+msgstr "Faltan ficheiros de datos"
+
+#: ktorrent/core.cpp:1201
+#, kde-format
+msgid "Cannot deselect missing files: %1"
+msgstr "Non foi posíbel anular a escolla dos ficheiros ausentes : %1"
+
+#: ktorrent/core.cpp:1214
+#, kde-format
+msgid "Cannot recreate missing files: %1"
+msgstr "Non foi posíbel crear de novo os ficheiros ausentes: %1"
+
+#: ktorrent/core.cpp:1226
+#, kde-format
+msgid ""
+"The file where the data is saved of the torrent \"%1\" is missing. \n"
+"Do you want to recreate it?"
+msgstr ""
+"Falta o ficheiro onde están gardados os datos do torrente «%1». Desexa crealo "
+"de novo?"
+
+#: ktorrent/core.cpp:1233 ktorrent/core.cpp:1244
+msgid "Data file is missing"
+msgstr "Falta o ficheiro de datos"
+
+#: ktorrent/core.cpp:1243
+#, kde-format
+msgid "Cannot recreate data file: %1"
+msgstr "Non foi posíbel crear de novo o ficheiro de datos : %1"
+
+#: ktorrent/core.cpp:1348
+#, kde-format
+msgid ""
+"KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
+"to import it?"
+msgid_plural ""
+"KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
+"want to import them?"
+msgstr[0] ""
+"KTorrent achou un torrente da versión de KTorrent para KDE3; desexa "
+"importalo?"
+msgstr[1] ""
+"KTorrent achou %1 torrentes da versión de KTorrent para KDE3, desexa "
+"importalos?"
+
+#: ktorrent/core.cpp:1370
+msgid "No torrents from the KDE3 version were found."
+msgstr "Non se achou nengún torrente da versión de KDE3."
+
+#: ktorrent/core.cpp:1389 ktorrent/core.cpp:1408
+#, kde-format
+msgid "Invalid magnet bittorrent link: %1"
+msgstr ""
+
+#: ktorrent/core.cpp:1394 ktorrent/core.cpp:1413
+msgid ""
+"You are attempting to download a magnet link, and DHT is not enabled. For "
+"optimum results enable DHT."
+msgstr ""
+
 #: ktorrent/pref/proxypref.cpp:27
 msgid "Proxy"
 msgstr "Proxy"
@@ -2003,6 +2087,12 @@ msgstr "Rede"
 msgid "All interfaces"
 msgstr "Todas as interfaces"
 
+#. i18n: file: ktorrent/pref/networkpref.ui:170
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: ktorrent/pref/advancedpref.cpp:27 rc.cpp:1479
+msgid "Advanced"
+msgstr "Avanzado"
+
 #: ktorrent/pref/btpref.cpp:27
 msgid "BitTorrent"
 msgstr "BitTorrent"
@@ -2016,12 +2106,6 @@ msgstr[1] " anacos corruptos"
 #: ktorrent/pref/btpref.cpp:33
 msgid " corrupted chunks"
 msgstr " anacos corruptos"
-
-#. i18n: file: ktorrent/pref/networkpref.ui:170
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: ktorrent/pref/advancedpref.cpp:27 rc.cpp:1479
-msgid "Advanced"
-msgstr "Avanzado"
 
 #: ktorrent/pref/generalpref.cpp:27
 msgid "Application"
@@ -2039,7 +2123,7 @@ msgstr "Programa"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: file: ktorrent/tools/queuemanagerwidget.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, QueueManagerWidget)
-#: ktorrent/pref/qmpref.cpp:25 ktorrent/torrentactivity.cpp:75 rc.cpp:1844
+#: ktorrent/pref/qmpref.cpp:25 ktorrent/torrentactivity.cpp:75 rc.cpp:1772
 #: rc.cpp:2019 rc.cpp:2137
 msgid "Queue Manager"
 msgstr "Xestor da fila"
@@ -2122,7 +2206,7 @@ msgstr "Subir o torrente ao cume da lista"
 #. i18n: ectx: property (text), widget (KPushButton, m_move_up)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:188
 #. i18n: ectx: property (text), widget (KPushButton, m_move_up)
-#: ktorrent/tools/queuemanagerwidget.cpp:73 rc.cpp:925 rc.cpp:2353
+#: ktorrent/tools/queuemanagerwidget.cpp:73 rc.cpp:925 rc.cpp:2385
 msgid "Move Up"
 msgstr "Subir"
 
@@ -2138,7 +2222,7 @@ msgstr "Subir un torrente na lista"
 #. i18n: ectx: property (text), widget (KPushButton, m_move_down)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:195
 #. i18n: ectx: property (text), widget (KPushButton, m_move_down)
-#: ktorrent/tools/queuemanagerwidget.cpp:76 rc.cpp:928 rc.cpp:2356
+#: ktorrent/tools/queuemanagerwidget.cpp:76 rc.cpp:928 rc.cpp:2388
 msgid "Move Down"
 msgstr "Baixar"
 
@@ -2183,15 +2267,6 @@ msgstr "A obter"
 #: ktorrent/tools/magnetmodel.cpp:207
 msgid "Stopped"
 msgstr "Detido"
-
-#: ktorrent/view/scanextender.cpp:40 ktorrent/view/scanextender.cpp:93
-msgid "Checked %v of %m chunks"
-msgstr "Comprobáronse %v de %m anacos"
-
-#: ktorrent/view/scanextender.cpp:108
-#, kde-format
-msgid "<font color=\"red\">%1</font>"
-msgstr ""
 
 #: ktorrent/view/viewmanager.cpp:561
 #, fuzzy
@@ -2323,13 +2398,13 @@ msgstr "Comprobar todos os datos dun torrente"
 
 #. i18n: file: ktorrent/ktorrentui.rc:67
 #. i18n: ectx: Menu (OpenDirMenu)
-#: ktorrent/view/viewmanager.cpp:671 rc.cpp:2624
+#: ktorrent/view/viewmanager.cpp:671 rc.cpp:2656
 msgid "Open Directory"
 msgstr "Abrir un directorio"
 
 #. i18n: file: ktorrent/ktorrentui.rc:75
 #. i18n: ectx: Menu (GroupsSubMenu)
-#: ktorrent/view/viewmanager.cpp:674 rc.cpp:2627
+#: ktorrent/view/viewmanager.cpp:674 rc.cpp:2659
 msgid "Add to Group"
 msgstr "Engadir ao grupo"
 
@@ -2344,7 +2419,7 @@ msgstr "Exportar un torrente"
 #. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpeedLimitsDlg)
 #: ktorrent/view/viewmanager.cpp:685 ktorrent/dialogs/speedlimitsdlg.cpp:50
-#: rc.cpp:2466
+#: rc.cpp:2498
 msgid "Speed Limits"
 msgstr "Límites de velocidade"
 
@@ -2358,7 +2433,7 @@ msgstr "Torrentes (*.torrent)"
 
 #. i18n: file: ktorrent/ktorrentui.rc:87
 #. i18n: ectx: Menu (ColumnsMenu)
-#: ktorrent/view/view.cpp:78 rc.cpp:2633
+#: ktorrent/view/view.cpp:78 rc.cpp:2665
 msgid "Columns"
 msgstr "Columnas"
 
@@ -2391,6 +2466,15 @@ msgstr "Perderá todos os datos obtidos. Desexa realmente facer isto?"
 #: ktorrent/view/view.cpp:245
 msgid "Remove Torrent"
 msgstr "Eliminar o torrente"
+
+#: ktorrent/view/scanextender.cpp:40 ktorrent/view/scanextender.cpp:93
+msgid "Checked %v of %m chunks"
+msgstr "Comprobáronse %v de %m anacos"
+
+#: ktorrent/view/scanextender.cpp:108
+#, kde-format
+msgid "<font color=\"red\">%1</font>"
+msgstr ""
 
 #: ktorrent/view/viewmodel.cpp:438
 #: libktcore/torrent/torrentfiletreemodel.cpp:400
@@ -2551,364 +2635,15 @@ msgstr "Introduza o nome do grupo."
 msgid "The group %1 already exists."
 msgstr "Xa existe o grupo %1."
 
-#: ktorrent/dialogs/speedlimitsmodel.cpp:111
-msgid "Download Limit"
-msgstr "Límite de obtención"
-
-#: ktorrent/dialogs/speedlimitsmodel.cpp:112
-msgid "Upload Limit"
-msgstr "Límite de envío"
-
-#: ktorrent/dialogs/speedlimitsmodel.cpp:113
-msgid "Assured Download Speed"
-msgstr "Velocidade de recepción garantida"
-
-#: ktorrent/dialogs/speedlimitsmodel.cpp:114
-msgid "Assured Upload Speed"
-msgstr "Velocidade de envío garantida"
-
-#: ktorrent/dialogs/speedlimitsmodel.cpp:148
-#: ktorrent/dialogs/speedlimitsmodel.cpp:153
-#: ktorrent/dialogs/spinboxdelegate.cpp:43
-msgid "No assured speed"
-msgstr "Sen velocidade garantida"
-
-#: ktorrent/dialogs/torrentcreatordlg.cpp:43
-msgid "Create A Torrent"
-msgstr "Crear un torrente"
-
-#: ktorrent/dialogs/torrentcreatordlg.cpp:117
-#: ktorrent/dialogs/fileselectdlg.cpp:400 ktorrent/dialogs/pastedialog.cpp:62
-#: libktcore/groups/allgroup.cpp:26
-msgid "All Torrents"
-msgstr "Todos os torrentes"
-
-#: ktorrent/dialogs/torrentcreatordlg.cpp:250
+#: ktorrent/ipfilterlist.cpp:158
 #, kde-format
-msgid "Invalid url %1"
-msgstr "O URL %1 non é válido"
+msgid "Invalid IP address %1"
+msgstr "O enderezo IP %1 non é válido"
 
-#: ktorrent/dialogs/torrentcreatordlg.cpp:256
-msgid "Only HTTP is supported for webseeding."
-msgstr "Só se admite HTTP para a compartición web."
-
-#: ktorrent/dialogs/torrentcreatordlg.cpp:288
-msgid "You must select a file or a folder."
-msgstr "Debe escoller un ficheiro ou cartafol."
-
-#: ktorrent/dialogs/torrentcreatordlg.cpp:294
-msgid ""
-"You have not added a tracker, are you sure you want to create this torrent ?"
-msgstr "Non engadiu ningún localizador; desexa realmente crear este torrente?"
-
-#: ktorrent/dialogs/torrentcreatordlg.cpp:302
-msgid "You must add at least one node."
-msgstr "Debe engadir polo menos un nodo."
-
-#: ktorrent/dialogs/torrentcreatordlg.cpp:356
-msgid "Torrent Files (*.torrent)"
-msgstr "Ficheiros torrente (*.torrent)"
-
-#: ktorrent/dialogs/torrentcreatordlg.cpp:358
-msgid "Choose a file to save the torrent"
-msgstr "Escolla o ficheiro no que gardar o torrente"
-
-#: ktorrent/dialogs/fileselectdlg.cpp:77
-msgid "Show a file tree"
-msgstr "Mostrar unha árbore de ficheiros"
-
-#: ktorrent/dialogs/fileselectdlg.cpp:80
-msgid "Show a file list"
-msgstr "Mostrar unha listaxe de ficheiros"
-
-#: ktorrent/dialogs/fileselectdlg.cpp:106
+#: ktorrent/ipfilterlist.cpp:163
 #, kde-format
-msgid "Opening %1"
-msgstr "A abrir %1"
-
-#: ktorrent/dialogs/fileselectdlg.cpp:217
-#, fuzzy
-#| msgid ""
-#| "Some files of this torrent have been found in the completed downloads "
-#| "directory. Do you want to import these files and use the completed "
-#| "downloads directory as the location ?"
-msgid ""
-"Some files of this torrent have been found in the completed downloads "
-"directory. Do you want to import these files and use the completed downloads "
-"directory as the location?"
-msgstr ""
-"Atopáronse varios ficheiros deste torrente no directorio de descargas "
-"completadas. Quéreos empregar e  empregar o directorio de descargas "
-"completadas como localización?"
-
-#: ktorrent/dialogs/fileselectdlg.cpp:220
-#, fuzzy
-#| msgid ""
-#| "All files of this torrent have been found in the completed downloads "
-#| "directory. Do you want to import these files and use the completed "
-#| "downloads directory as the location ?"
-msgid ""
-"All files of this torrent have been found in the completed downloads "
-"directory. Do you want to import these files and use the completed downloads "
-"directory as the location?"
-msgstr ""
-"Atopáronse todos os ficheiros deste torrente no directorio de descargas "
-"completadas. Desexa importar estes ficheiros e empregar o directorio de "
-"descargas completadas como localización?"
-
-#: ktorrent/dialogs/fileselectdlg.cpp:224
-#, fuzzy, kde-format
-#| msgid ""
-#| "The file <b>%1</b> was found in the completed downloads directory. Do you "
-#| "want to import this file ?"
-msgid ""
-"The file <b>%1</b> was found in the completed downloads directory. Do you "
-"want to import this file?"
-msgstr ""
-"Atopouse o ficheiro <b>%1</b> no directorio de descargas completadas. Quere "
-"importar este ficheiro?"
-
-#: ktorrent/dialogs/fileselectdlg.cpp:239
-#: ktorrent/dialogs/fileselectdlg.cpp:256
-#, kde-format
-msgid "The directory %1 does not exist, do you want to create it?"
-msgstr "O directorio %1 non existe; desexa crealo?"
-
-#: ktorrent/dialogs/fileselectdlg.cpp:290
-msgid ""
-"You have deselected the following existing files. You will lose all data in "
-"these files, are you sure you want to do this?"
-msgstr ""
-"Anulou a escolla dos seguintes ficheiros existentes. Perderanse todos os "
-"dados destes ficheiros; desexa realmente facer isto?"
-
-#: ktorrent/dialogs/fileselectdlg.cpp:294
-msgid "Yes, delete the files"
-msgstr "Si, borrar os ficheiros"
-
-#: ktorrent/dialogs/fileselectdlg.cpp:295
-msgid "No, keep the files"
-msgstr "Non, manter os ficheiros"
-
-#: ktorrent/dialogs/fileselectdlg.cpp:457
-msgid "<b>Unable to determine free space</b>"
-msgstr ""
-
-#: ktorrent/dialogs/fileselectdlg.cpp:469
-#, kde-format
-msgctxt "We are %1 bytes short of what we need"
-msgid "%1 short"
-msgstr "Falta %1"
-
-#: ktorrent/dialogs/fileselectdlg.cpp:490
-msgid "Existing files: <b>None</b>"
-msgstr "Ficheiros existentes: <b>ningún</b>"
-
-#: ktorrent/dialogs/fileselectdlg.cpp:492
-msgid "Existing files: <b>All</b>"
-msgstr "Ficheiros existentes: <b>Todos</b>"
-
-#: ktorrent/dialogs/fileselectdlg.cpp:494
-#, kde-format
-msgid "Existing files: <b>%1</b> of <b>%2</b>"
-msgstr "Ficheiros existentes: <b>%1</b> de <b>%2</b>"
-
-#: ktorrent/dialogs/fileselectdlg.cpp:500
-msgid "Existing file: <b>No</b>"
-msgstr "Ficheiro existente: <b>Non</b>"
-
-#: ktorrent/dialogs/fileselectdlg.cpp:502
-msgid "Existing file: <b>Yes</b>"
-msgstr "Ficheiro existente: <b>Si</b>"
-
-#. i18n: file: plugins/bwscheduler/bwprefpage.ui:55
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverUploadLimit)
-#. i18n: file: plugins/bwscheduler/bwprefpage.ui:84
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverDownloadLimit)
-#. i18n: file: plugins/bwscheduler/edititemdlg.ui:118
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_download_limit)
-#. i18n: file: plugins/bwscheduler/edititemdlg.ui:138
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_limit)
-#. i18n: file: plugins/bwscheduler/edititemdlg.ui:169
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_download_limit)
-#. i18n: file: plugins/bwscheduler/edititemdlg.ui:189
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_upload_limit)
-#. i18n: file: plugins/bwscheduler/additemdlg.ui:143
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_download_limit)
-#. i18n: file: plugins/bwscheduler/additemdlg.ui:163
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_limit)
-#. i18n: file: plugins/bwscheduler/additemdlg.ui:194
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_download_limit)
-#. i18n: file: plugins/bwscheduler/additemdlg.ui:214
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_upload_limit)
-#. i18n: file: ktorrent/pref/networkpref.ui:134
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxDownloadRate)
-#. i18n: file: ktorrent/pref/networkpref.ui:157
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxUploadRate)
-#. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:133
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_avg_speed_slot)
-#. i18n: file: ktorrent/groups/grouppolicydlg.ui:86
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_max_download_rate)
-#. i18n: file: ktorrent/groups/grouppolicydlg.ui:106
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_max_upload_rate)
-#. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:83
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_download_rate)
-#. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:106
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_rate)
-#. i18n: file: plugins/bwscheduler/bwprefpage.ui:55
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverUploadLimit)
-#. i18n: file: plugins/bwscheduler/bwprefpage.ui:84
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverDownloadLimit)
-#. i18n: file: plugins/bwscheduler/edititemdlg.ui:118
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_download_limit)
-#. i18n: file: plugins/bwscheduler/edititemdlg.ui:138
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_limit)
-#. i18n: file: plugins/bwscheduler/edititemdlg.ui:169
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_download_limit)
-#. i18n: file: plugins/bwscheduler/edititemdlg.ui:189
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_upload_limit)
-#. i18n: file: plugins/bwscheduler/additemdlg.ui:143
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_download_limit)
-#. i18n: file: plugins/bwscheduler/additemdlg.ui:163
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_limit)
-#. i18n: file: plugins/bwscheduler/additemdlg.ui:194
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_download_limit)
-#. i18n: file: plugins/bwscheduler/additemdlg.ui:214
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_upload_limit)
-#. i18n: file: ktorrent/pref/networkpref.ui:134
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxDownloadRate)
-#. i18n: file: ktorrent/pref/networkpref.ui:157
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxUploadRate)
-#. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:133
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_avg_speed_slot)
-#. i18n: file: ktorrent/groups/grouppolicydlg.ui:86
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_max_download_rate)
-#. i18n: file: ktorrent/groups/grouppolicydlg.ui:106
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_max_upload_rate)
-#. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:83
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_download_rate)
-#. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:106
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_rate)
-#: ktorrent/dialogs/spinboxdelegate.cpp:39 rc.cpp:1021 rc.cpp:1033 rc.cpp:1096
-#: rc.cpp:1105 rc.cpp:1117 rc.cpp:1126 rc.cpp:1189 rc.cpp:1198 rc.cpp:1210
-#: rc.cpp:1219 rc.cpp:1464 rc.cpp:1476 rc.cpp:1988 rc.cpp:2255 rc.cpp:2264
-#: rc.cpp:2484 rc.cpp:2493
-msgid " KiB/s"
-msgstr " KiB/s"
-
-#: ktorrent/dialogs/missingfilesdlg.cpp:72
-#: ktorrent/dialogs/missingfilesdlg.cpp:105
-msgid "Select the directory where the data now is."
-msgstr "Escolla o directorio onde están os datos agora."
-
-#: ktorrent/dialogs/missingfilesdlg.cpp:83
-msgid ""
-"The data files are not present in the location you selected. Do you want to "
-"create all the files in the selected directory?"
-msgstr ""
-"Os ficheiros de dados non están presentes onde indicou. Desexa crear todos "
-"os ficheiros no cartafol escollido?"
-
-#: ktorrent/dialogs/missingfilesdlg.cpp:85
-msgid ""
-"Not all files were found in the new location; some are still missing. Do you "
-"want to create the missing files in the selected directory?"
-msgstr ""
-"Non se acharon todos os ficheiros no novo lugar; aínda faltan algúns. Desexa "
-"crear os ficheiros que faltan no cartafol escollido?"
-
-#: ktorrent/dialogs/missingfilesdlg.cpp:114
-msgid ""
-"The data file is not present in the location you selected. Do you want to "
-"create the file in the selected directory?"
-msgstr ""
-"O ficheiro de dados non está presente onde indicou. Desexa crear o ficheiro "
-"no cartafol escollido?"
-
-#: ktorrent/dialogs/torrentmigratordlg.cpp:97
-#, kde-format
-msgid "Importing 1 torrent ..."
-msgid_plural "Importing %1 torrents ..."
-msgstr[0] "A importar 1 torrente..."
-msgstr[1] "A importar %1 torrentes..."
-
-#: ktorrent/dialogs/torrentmigratordlg.cpp:105
-#, kde-format
-msgid "Importing <b>%1</b> ..."
-msgstr "A importar <b>%1</b> ..."
-
-#: ktorrent/dialogs/torrentmigratordlg.cpp:110
-msgid "Finished import."
-msgstr "Rematou a importación."
-
-#: ktorrent/dialogs/torrentmigratordlg.cpp:145
-#, kde-format
-msgid "Torrent <b>%1</b> already loaded."
-msgstr "O torrente <b>%1</b> xa está cargado."
-
-#: ktorrent/dialogs/torrentmigratordlg.cpp:152
-#, kde-format
-msgid "Failed to load <b>%1</b>"
-msgstr "Non se conseguiu cargar <b>%1</b>"
-
-#: ktorrent/dialogs/torrentmigratordlg.cpp:160
-#, kde-format
-msgid "Failed to import <b>%1</b> : %2"
-msgstr "Non se conseguiu importar <b>%1</b>: %2"
-
-#: ktorrent/dialogs/torrentmigratordlg.cpp:164
-#, kde-format
-msgid "Imported <b>%1</b>"
-msgstr "Importouse <b>%1</b>"
-
-#: ktorrent/dialogs/importdialog.cpp:52
-msgid "Torrent files"
-msgstr "Ficheiros torrente"
-
-#: ktorrent/dialogs/importdialog.cpp:122
-#, kde-format
-msgid "Cannot verify data : %1"
-msgstr "Non foi posíbel verificar os datos: %1"
-
-#: ktorrent/dialogs/importdialog.cpp:229 ktorrent/dialogs/importdialog.cpp:263
-#, kde-format
-msgid "Cannot load the torrent file : %1"
-msgstr "Non foi posíbel cargar o ficheiro torrent: %1"
-
-#: ktorrent/dialogs/importdialog.cpp:385 ktorrent/dialogs/importdialog.cpp:402
-#, kde-format
-msgid "Failed to create %1 : %2"
-msgstr "Non foi posíbel crear %1: %2"
-
-#. i18n: file: ktorrent/dialogs/pastedlgbase.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, PasteDlgBase)
-#: ktorrent/dialogs/pastedialog.cpp:38 rc.cpp:2594
-msgid "Open an URL"
-msgstr "Abrir un URL"
-
-#: ktorrent/dialogs/pastedialog.cpp:105 ktorrent/gui.cpp:315
-#, kde-format
-msgid "Invalid URL: %1"
-msgstr "O URL non é válido: %1"
-
-#: ktorrent/statusbar.cpp:39 ktorrent/statusbar.cpp:71
-#, kde-format
-msgid "Speed down: %1 / up: %2"
-msgstr "Velocidade de obtención: %1 / envío: %2"
-
-#: ktorrent/statusbar.cpp:40 ktorrent/statusbar.cpp:82
-#, kde-format
-msgid "Transferred down: %1 / up: %2"
-msgstr "Obtido: %1 / enviado: %2"
-
-#: ktorrent/statusbar.cpp:42 ktorrent/statusbar.cpp:97
-msgid "DHT: off"
-msgstr "DHT: apagado"
-
-#: ktorrent/statusbar.cpp:95
-#, kde-format
-msgid "DHT: %1 nodes, %2 tasks"
-msgstr "DHT: %1 nodos, %2 tarefas"
+msgid "Duplicate IP address %1"
+msgstr "O enderezo IP %1 está duplicado"
 
 #: ktorrent/ipfilterwidget.cpp:53
 msgid "IP Filter List"
@@ -2935,6 +2670,117 @@ msgstr "Escolla un ficheiro"
 #: ktorrent/ipfilterwidget.cpp:147
 msgid "Choose a filename to save under"
 msgstr "Escolla o ficheiro no que gardar"
+
+#: ktorrent/gui.cpp:228 ktorrent/gui.cpp:243
+msgid "Torrent Files"
+msgstr "Ficheiros torrent"
+
+#: ktorrent/gui.cpp:228 ktorrent/gui.cpp:243
+msgid "All Files"
+msgstr "Todos os ficheiros"
+
+#: ktorrent/gui.cpp:229 ktorrent/gui.cpp:244
+msgid "Open Location"
+msgstr "Abrir a localización"
+
+#: ktorrent/gui.cpp:315 ktorrent/dialogs/pastedialog.cpp:105
+#, kde-format
+msgid "Invalid URL: %1"
+msgstr "O URL non é válido: %1"
+
+#: ktorrent/gui.cpp:376
+msgid "Create a new torrent"
+msgstr "Crear un torrente novo"
+
+#: ktorrent/gui.cpp:378
+msgid "Open a torrent"
+msgstr "Abrir un torrente"
+
+#: ktorrent/gui.cpp:381
+msgid "Open Silently"
+msgstr "Abrir silandeiramente"
+
+#: ktorrent/gui.cpp:382
+msgid "Open a torrent without asking any questions"
+msgstr "Abrir un torrente sen preguntar nada"
+
+#: ktorrent/gui.cpp:396
+msgid "Start All"
+msgstr "Comezar todos"
+
+#: ktorrent/gui.cpp:397
+msgid "Start all torrents"
+msgstr "Iniciar todos os torrentes"
+
+#: ktorrent/gui.cpp:401
+msgid "Stop All"
+msgstr "Detelos todos"
+
+#: ktorrent/gui.cpp:402
+msgid "Stop all torrents"
+msgstr "Deter todos os torrentes"
+
+#: ktorrent/gui.cpp:406
+msgid "Open URL"
+msgstr "Abrir un URL"
+
+#: ktorrent/gui.cpp:407
+#, fuzzy
+#| msgid "Open a URL which points to a torrent"
+msgid "Open a URL which points to a torrent, magnet links are supported"
+msgstr "Abrir un URL que apunta a un torrente"
+
+#: ktorrent/gui.cpp:412
+#, fuzzy
+#| msgid "Pause KTorrent"
+msgid "Suspend Torrents"
+msgstr "Pausar KTorrent"
+
+#. i18n: file: plugins/bwscheduler/edititemdlg.ui:99
+#. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
+#. i18n: file: plugins/bwscheduler/additemdlg.ui:124
+#. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
+#. i18n: file: plugins/bwscheduler/edititemdlg.ui:99
+#. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
+#. i18n: file: plugins/bwscheduler/additemdlg.ui:124
+#. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
+#: ktorrent/gui.cpp:414 rc.cpp:1087 rc.cpp:1180
+#, fuzzy
+#| msgid "Pause all running torrents"
+msgid "Suspend all running torrents"
+msgstr "Pausa todos os torrentes en marcha"
+
+#: ktorrent/gui.cpp:420
+msgid "Show the list of blocked IP addresses"
+msgstr "Mostrar a lista de enderezos IP bloqueados"
+
+#: ktorrent/gui.cpp:427
+msgid "Import Torrent"
+msgstr "Importar un torrente"
+
+#: ktorrent/gui.cpp:428
+msgid "Import a torrent"
+msgstr "Importar un torrente"
+
+#: ktorrent/gui.cpp:434
+msgid "Import KDE3 Torrents"
+msgstr "Importar os torrentes de KDE3"
+
+#: ktorrent/gui.cpp:435
+msgid "Import all torrents from the KDE3 version of KTorrent"
+msgstr "Importar todos os torrentes da versión de KTorrent para KDE3"
+
+#: ktorrent/gui.cpp:442
+msgid "Show/Hide KTorrent"
+msgstr "Mostrar/Acochar KTorrent"
+
+#: ktorrent/gui.cpp:447
+msgid "Group View Visible"
+msgstr "Vista de grupo visíbel"
+
+#: ktorrent/gui.cpp:448
+msgid "Show or hide the group view"
+msgstr "Mostrar ou acochar a vista de grupo"
 
 #: ktorrent/main.cpp:86
 msgid "Bittorrent client for KDE"
@@ -3273,139 +3119,13 @@ msgstr ""
 msgid "Feature to disable authentication in the webinterface"
 msgstr ""
 
+#: ktorrent/main.cpp:140 ktmagnetdownloader/magnetdownloader.cpp:45
+msgid "Document to open"
+msgstr "O documento a abrir"
+
 #: ktorrent/main.cpp:141
 msgid "Silently open torrent given on URL"
 msgstr "Abrir o torrente dado silandeiramente no URL"
-
-#: ktorrent/gui.cpp:228 ktorrent/gui.cpp:243
-msgid "Torrent Files"
-msgstr "Ficheiros torrent"
-
-#: ktorrent/gui.cpp:228 ktorrent/gui.cpp:243
-msgid "All Files"
-msgstr "Todos os ficheiros"
-
-#: ktorrent/gui.cpp:229 ktorrent/gui.cpp:244
-msgid "Open Location"
-msgstr "Abrir a localización"
-
-#: ktorrent/gui.cpp:376
-msgid "Create a new torrent"
-msgstr "Crear un torrente novo"
-
-#: ktorrent/gui.cpp:378
-msgid "Open a torrent"
-msgstr "Abrir un torrente"
-
-#: ktorrent/gui.cpp:381
-msgid "Open Silently"
-msgstr "Abrir silandeiramente"
-
-#: ktorrent/gui.cpp:382
-msgid "Open a torrent without asking any questions"
-msgstr "Abrir un torrente sen preguntar nada"
-
-#: ktorrent/gui.cpp:396
-msgid "Start All"
-msgstr "Comezar todos"
-
-#: ktorrent/gui.cpp:397
-msgid "Start all torrents"
-msgstr "Iniciar todos os torrentes"
-
-#: ktorrent/gui.cpp:401
-msgid "Stop All"
-msgstr "Detelos todos"
-
-#: ktorrent/gui.cpp:402
-msgid "Stop all torrents"
-msgstr "Deter todos os torrentes"
-
-#: ktorrent/gui.cpp:406
-msgid "Open URL"
-msgstr "Abrir un URL"
-
-#: ktorrent/gui.cpp:407
-#, fuzzy
-#| msgid "Open a URL which points to a torrent"
-msgid "Open a URL which points to a torrent, magnet links are supported"
-msgstr "Abrir un URL que apunta a un torrente"
-
-#: ktorrent/gui.cpp:412
-#, fuzzy
-#| msgid "Pause KTorrent"
-msgid "Suspend Torrents"
-msgstr "Pausar KTorrent"
-
-#. i18n: file: plugins/bwscheduler/edititemdlg.ui:99
-#. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
-#. i18n: file: plugins/bwscheduler/additemdlg.ui:124
-#. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
-#. i18n: file: plugins/bwscheduler/edititemdlg.ui:99
-#. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
-#. i18n: file: plugins/bwscheduler/additemdlg.ui:124
-#. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
-#: ktorrent/gui.cpp:414 rc.cpp:1087 rc.cpp:1180
-#, fuzzy
-#| msgid "Pause all running torrents"
-msgid "Suspend all running torrents"
-msgstr "Pausa todos os torrentes en marcha"
-
-#: ktorrent/gui.cpp:420
-msgid "Show the list of blocked IP addresses"
-msgstr "Mostrar a lista de enderezos IP bloqueados"
-
-#: ktorrent/gui.cpp:427
-msgid "Import Torrent"
-msgstr "Importar un torrente"
-
-#: ktorrent/gui.cpp:428
-msgid "Import a torrent"
-msgstr "Importar un torrente"
-
-#: ktorrent/gui.cpp:434
-msgid "Import KDE3 Torrents"
-msgstr "Importar os torrentes de KDE3"
-
-#: ktorrent/gui.cpp:435
-msgid "Import all torrents from the KDE3 version of KTorrent"
-msgstr "Importar todos os torrentes da versión de KTorrent para KDE3"
-
-#: ktorrent/gui.cpp:442
-msgid "Show/Hide KTorrent"
-msgstr "Mostrar/Acochar KTorrent"
-
-#: ktorrent/gui.cpp:447
-msgid "Group View Visible"
-msgstr "Vista de grupo visíbel"
-
-#: ktorrent/gui.cpp:448
-msgid "Show or hide the group view"
-msgstr "Mostrar ou acochar a vista de grupo"
-
-#: ktorrent/torrentactivity.cpp:43
-msgid "Torrents"
-msgstr "Torrentes"
-
-#: ktorrent/torrentactivity.cpp:75
-msgid "Widget to manage the torrent queue"
-msgstr "Un widget para xestionar a lista de torrentes"
-
-#: ktorrent/torrentactivity.cpp:79
-#, fuzzy
-#| msgid "Displays all the chunks you are downloading, of a torrent"
-msgid "Displays the currently downloading magnet links"
-msgstr "Mostra todo os anacos dun torrente que está a obter"
-
-#: ktorrent/ipfilterlist.cpp:158
-#, kde-format
-msgid "Invalid IP address %1"
-msgstr "O enderezo IP %1 non é válido"
-
-#: ktorrent/ipfilterlist.cpp:163
-#, kde-format
-msgid "Duplicate IP address %1"
-msgstr "O enderezo IP %1 está duplicado"
 
 #: ktorrent/trayicon.cpp:107
 msgid "Set max upload speed"
@@ -3539,109 +3259,373 @@ msgstr "Detívose o torrente.<br />"
 msgid "Speed limit in KiB/s"
 msgstr "Límite de velocidade en KiB/s"
 
-#: ktorrent/core.cpp:169
+#: ktorrent/dialogs/speedlimitsmodel.cpp:111
+msgid "Download Limit"
+msgstr "Límite de obtención"
+
+#: ktorrent/dialogs/speedlimitsmodel.cpp:112
+msgid "Upload Limit"
+msgstr "Límite de envío"
+
+#: ktorrent/dialogs/speedlimitsmodel.cpp:113
+msgid "Assured Download Speed"
+msgstr "Velocidade de recepción garantida"
+
+#: ktorrent/dialogs/speedlimitsmodel.cpp:114
+msgid "Assured Upload Speed"
+msgstr "Velocidade de envío garantida"
+
+#: ktorrent/dialogs/speedlimitsmodel.cpp:148
+#: ktorrent/dialogs/speedlimitsmodel.cpp:153
+#: ktorrent/dialogs/spinboxdelegate.cpp:43
+msgid "No assured speed"
+msgstr "Sen velocidade garantida"
+
+#: ktorrent/dialogs/torrentcreatordlg.cpp:43
+msgid "Create A Torrent"
+msgstr "Crear un torrente"
+
+#: ktorrent/dialogs/torrentcreatordlg.cpp:117
+#: ktorrent/dialogs/fileselectdlg.cpp:400 ktorrent/dialogs/pastedialog.cpp:62
+#: libktcore/groups/allgroup.cpp:26
+msgid "All Torrents"
+msgstr "Todos os torrentes"
+
+#: ktorrent/dialogs/torrentcreatordlg.cpp:250
+#, kde-format
+msgid "Invalid url %1"
+msgstr "O URL %1 non é válido"
+
+#: ktorrent/dialogs/torrentcreatordlg.cpp:256
+msgid "Only HTTP is supported for webseeding."
+msgstr "Só se admite HTTP para a compartición web."
+
+#: ktorrent/dialogs/torrentcreatordlg.cpp:288
+msgid "You must select a file or a folder."
+msgstr "Debe escoller un ficheiro ou cartafol."
+
+#: ktorrent/dialogs/torrentcreatordlg.cpp:294
+msgid ""
+"You have not added a tracker, are you sure you want to create this torrent ?"
+msgstr "Non engadiu ningún localizador; desexa realmente crear este torrente?"
+
+#: ktorrent/dialogs/torrentcreatordlg.cpp:302
+msgid "You must add at least one node."
+msgstr "Debe engadir polo menos un nodo."
+
+#: ktorrent/dialogs/torrentcreatordlg.cpp:356
+msgid "Torrent Files (*.torrent)"
+msgstr "Ficheiros torrente (*.torrent)"
+
+#: ktorrent/dialogs/torrentcreatordlg.cpp:358
+msgid "Choose a file to save the torrent"
+msgstr "Escolla o ficheiro no que gardar o torrente"
+
+#: ktorrent/dialogs/fileselectdlg.cpp:77
+msgid "Show a file tree"
+msgstr "Mostrar unha árbore de ficheiros"
+
+#: ktorrent/dialogs/fileselectdlg.cpp:80
+msgid "Show a file list"
+msgstr "Mostrar unha listaxe de ficheiros"
+
+#: ktorrent/dialogs/fileselectdlg.cpp:106
+#, kde-format
+msgid "Opening %1"
+msgstr "A abrir %1"
+
+#: ktorrent/dialogs/fileselectdlg.cpp:217
+#, fuzzy
+#| msgid ""
+#| "Some files of this torrent have been found in the completed downloads "
+#| "directory. Do you want to import these files and use the completed "
+#| "downloads directory as the location ?"
+msgid ""
+"Some files of this torrent have been found in the completed downloads "
+"directory. Do you want to import these files and use the completed downloads "
+"directory as the location?"
+msgstr ""
+"Atopáronse varios ficheiros deste torrente no directorio de descargas "
+"completadas. Quéreos empregar e  empregar o directorio de descargas "
+"completadas como localización?"
+
+#: ktorrent/dialogs/fileselectdlg.cpp:220
+#, fuzzy
+#| msgid ""
+#| "All files of this torrent have been found in the completed downloads "
+#| "directory. Do you want to import these files and use the completed "
+#| "downloads directory as the location ?"
+msgid ""
+"All files of this torrent have been found in the completed downloads "
+"directory. Do you want to import these files and use the completed downloads "
+"directory as the location?"
+msgstr ""
+"Atopáronse todos os ficheiros deste torrente no directorio de descargas "
+"completadas. Desexa importar estes ficheiros e empregar o directorio de "
+"descargas completadas como localización?"
+
+#: ktorrent/dialogs/fileselectdlg.cpp:224
 #, fuzzy, kde-format
 #| msgid ""
-#| "KTorrent is unable to accept connections because the ports %1 to %2 are "
-#| "already in use by another program."
+#| "The file <b>%1</b> was found in the completed downloads directory. Do you "
+#| "want to import this file ?"
 msgid ""
-"KTorrent is unable to accept connections because the TCP ports %1 is already "
-"in use by another program."
+"The file <b>%1</b> was found in the completed downloads directory. Do you "
+"want to import this file?"
 msgstr ""
-"KTorrent non é capaz de aceptar conexións porque os portos do %1 ao %2 xa "
-"están a seren usados por outro programa."
+"Atopouse o ficheiro <b>%1</b> no directorio de descargas completadas. Quere "
+"importar este ficheiro?"
 
-#: ktorrent/core.cpp:183
-#, fuzzy, kde-format
-#| msgid ""
-#| "KTorrent is unable to accept connections because the ports %1 to %2 are "
-#| "already in use by another program."
+#: ktorrent/dialogs/fileselectdlg.cpp:239
+#: ktorrent/dialogs/fileselectdlg.cpp:256
+#, kde-format
+msgid "The directory %1 does not exist, do you want to create it?"
+msgstr "O directorio %1 non existe; desexa crealo?"
+
+#: ktorrent/dialogs/fileselectdlg.cpp:290
 msgid ""
-"KTorrent is unable to accept connections because the UDP port %1 is already "
-"in use by another program."
+"You have deselected the following existing files. You will lose all data in "
+"these files, are you sure you want to do this?"
 msgstr ""
-"KTorrent non é capaz de aceptar conexións porque os portos do %1 ao %2 xa "
-"están a seren usados por outro programa."
+"Anulou a escolla dos seguintes ficheiros existentes. Perderanse todos os "
+"dados destes ficheiros; desexa realmente facer isto?"
 
-#: ktorrent/core.cpp:992
-msgid "KTorrent is running one or more torrents"
-msgstr "Ktorrent está a xestionar un ou máis torrentes"
+#: ktorrent/dialogs/fileselectdlg.cpp:294
+msgid "Yes, delete the files"
+msgstr "Si, borrar os ficheiros"
 
-#: ktorrent/core.cpp:1074
-#, kde-format
-msgid "Cannot create torrent: %1"
-msgstr "Non foi posíbel crear o torrente: %1"
+#: ktorrent/dialogs/fileselectdlg.cpp:295
+msgid "No, keep the files"
+msgstr "Non, manter os ficheiros"
 
-#: ktorrent/core.cpp:1180
-#, kde-format
-msgid ""
-"Several data files of the torrent \"%1\" are missing. \n"
-"Do you want to recreate them, or do you want to not download them?"
-msgstr ""
-"Faltan varios ficheiros de datos do torrente «%1».\n"
-"Desexa crealos de novo ou prefire non obtelos?"
-
-#: ktorrent/core.cpp:1189 ktorrent/core.cpp:1201 ktorrent/core.cpp:1214
-msgid "Data files are missing"
-msgstr "Faltan ficheiros de datos"
-
-#: ktorrent/core.cpp:1200
-#, kde-format
-msgid "Cannot deselect missing files: %1"
-msgstr "Non foi posíbel anular a escolla dos ficheiros ausentes : %1"
-
-#: ktorrent/core.cpp:1213
-#, kde-format
-msgid "Cannot recreate missing files: %1"
-msgstr "Non foi posíbel crear de novo os ficheiros ausentes: %1"
-
-#: ktorrent/core.cpp:1225
-#, kde-format
-msgid ""
-"The file where the data is saved of the torrent \"%1\" is missing. \n"
-"Do you want to recreate it?"
-msgstr ""
-"Falta o ficheiro onde están gardados os datos do torrente «%1». Desexa crealo "
-"de novo?"
-
-#: ktorrent/core.cpp:1232 ktorrent/core.cpp:1243
-msgid "Data file is missing"
-msgstr "Falta o ficheiro de datos"
-
-#: ktorrent/core.cpp:1242
-#, kde-format
-msgid "Cannot recreate data file: %1"
-msgstr "Non foi posíbel crear de novo o ficheiro de datos : %1"
-
-#: ktorrent/core.cpp:1347
-#, kde-format
-msgid ""
-"KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
-"to import it?"
-msgid_plural ""
-"KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
-"want to import them?"
-msgstr[0] ""
-"KTorrent achou un torrente da versión de KTorrent para KDE3; desexa "
-"importalo?"
-msgstr[1] ""
-"KTorrent achou %1 torrentes da versión de KTorrent para KDE3, desexa "
-"importalos?"
-
-#: ktorrent/core.cpp:1369
-msgid "No torrents from the KDE3 version were found."
-msgstr "Non se achou nengún torrente da versión de KDE3."
-
-#: ktorrent/core.cpp:1388 ktorrent/core.cpp:1407
-#, kde-format
-msgid "Invalid magnet bittorrent link: %1"
+#: ktorrent/dialogs/fileselectdlg.cpp:457
+msgid "<b>Unable to determine free space</b>"
 msgstr ""
 
-#: ktorrent/core.cpp:1393 ktorrent/core.cpp:1412
+#: ktorrent/dialogs/fileselectdlg.cpp:469
+#, kde-format
+msgctxt "We are %1 bytes short of what we need"
+msgid "%1 short"
+msgstr "Falta %1"
+
+#: ktorrent/dialogs/fileselectdlg.cpp:490
+msgid "Existing files: <b>None</b>"
+msgstr "Ficheiros existentes: <b>ningún</b>"
+
+#: ktorrent/dialogs/fileselectdlg.cpp:492
+msgid "Existing files: <b>All</b>"
+msgstr "Ficheiros existentes: <b>Todos</b>"
+
+#: ktorrent/dialogs/fileselectdlg.cpp:494
+#, kde-format
+msgid "Existing files: <b>%1</b> of <b>%2</b>"
+msgstr "Ficheiros existentes: <b>%1</b> de <b>%2</b>"
+
+#: ktorrent/dialogs/fileselectdlg.cpp:500
+msgid "Existing file: <b>No</b>"
+msgstr "Ficheiro existente: <b>Non</b>"
+
+#: ktorrent/dialogs/fileselectdlg.cpp:502
+msgid "Existing file: <b>Yes</b>"
+msgstr "Ficheiro existente: <b>Si</b>"
+
+#. i18n: file: plugins/bwscheduler/bwprefpage.ui:55
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverUploadLimit)
+#. i18n: file: plugins/bwscheduler/bwprefpage.ui:84
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverDownloadLimit)
+#. i18n: file: plugins/bwscheduler/edititemdlg.ui:118
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_download_limit)
+#. i18n: file: plugins/bwscheduler/edititemdlg.ui:138
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_limit)
+#. i18n: file: plugins/bwscheduler/edititemdlg.ui:169
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_download_limit)
+#. i18n: file: plugins/bwscheduler/edititemdlg.ui:189
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_upload_limit)
+#. i18n: file: plugins/bwscheduler/additemdlg.ui:143
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_download_limit)
+#. i18n: file: plugins/bwscheduler/additemdlg.ui:163
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_limit)
+#. i18n: file: plugins/bwscheduler/additemdlg.ui:194
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_download_limit)
+#. i18n: file: plugins/bwscheduler/additemdlg.ui:214
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_upload_limit)
+#. i18n: file: ktorrent/pref/networkpref.ui:134
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxDownloadRate)
+#. i18n: file: ktorrent/pref/networkpref.ui:157
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxUploadRate)
+#. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:133
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_avg_speed_slot)
+#. i18n: file: ktorrent/groups/grouppolicydlg.ui:86
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_max_download_rate)
+#. i18n: file: ktorrent/groups/grouppolicydlg.ui:106
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_max_upload_rate)
+#. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:83
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_download_rate)
+#. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:106
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_rate)
+#. i18n: file: plugins/bwscheduler/bwprefpage.ui:55
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverUploadLimit)
+#. i18n: file: plugins/bwscheduler/bwprefpage.ui:84
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverDownloadLimit)
+#. i18n: file: plugins/bwscheduler/edititemdlg.ui:118
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_download_limit)
+#. i18n: file: plugins/bwscheduler/edititemdlg.ui:138
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_limit)
+#. i18n: file: plugins/bwscheduler/edititemdlg.ui:169
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_download_limit)
+#. i18n: file: plugins/bwscheduler/edititemdlg.ui:189
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_upload_limit)
+#. i18n: file: plugins/bwscheduler/additemdlg.ui:143
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_download_limit)
+#. i18n: file: plugins/bwscheduler/additemdlg.ui:163
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_limit)
+#. i18n: file: plugins/bwscheduler/additemdlg.ui:194
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_download_limit)
+#. i18n: file: plugins/bwscheduler/additemdlg.ui:214
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_upload_limit)
+#. i18n: file: ktorrent/pref/networkpref.ui:134
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxDownloadRate)
+#. i18n: file: ktorrent/pref/networkpref.ui:157
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxUploadRate)
+#. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:133
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_avg_speed_slot)
+#. i18n: file: ktorrent/groups/grouppolicydlg.ui:86
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_max_download_rate)
+#. i18n: file: ktorrent/groups/grouppolicydlg.ui:106
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_max_upload_rate)
+#. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:83
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_download_rate)
+#. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:106
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_rate)
+#: ktorrent/dialogs/spinboxdelegate.cpp:39 rc.cpp:1021 rc.cpp:1033 rc.cpp:1096
+#: rc.cpp:1105 rc.cpp:1117 rc.cpp:1126 rc.cpp:1189 rc.cpp:1198 rc.cpp:1210
+#: rc.cpp:1219 rc.cpp:1464 rc.cpp:1476 rc.cpp:1988 rc.cpp:2255 rc.cpp:2264
+#: rc.cpp:2516 rc.cpp:2525
+msgid " KiB/s"
+msgstr " KiB/s"
+
+#: ktorrent/dialogs/missingfilesdlg.cpp:72
+#: ktorrent/dialogs/missingfilesdlg.cpp:105
+msgid "Select the directory where the data now is."
+msgstr "Escolla o directorio onde están os datos agora."
+
+#: ktorrent/dialogs/missingfilesdlg.cpp:83
 msgid ""
-"You are attempting to download a magnet link, and DHT is not enabled. For "
-"optimum results enable DHT."
+"The data files are not present in the location you selected. Do you want to "
+"create all the files in the selected directory?"
 msgstr ""
+"Os ficheiros de dados non están presentes onde indicou. Desexa crear todos "
+"os ficheiros no cartafol escollido?"
+
+#: ktorrent/dialogs/missingfilesdlg.cpp:85
+msgid ""
+"Not all files were found in the new location; some are still missing. Do you "
+"want to create the missing files in the selected directory?"
+msgstr ""
+"Non se acharon todos os ficheiros no novo lugar; aínda faltan algúns. Desexa "
+"crear os ficheiros que faltan no cartafol escollido?"
+
+#: ktorrent/dialogs/missingfilesdlg.cpp:114
+msgid ""
+"The data file is not present in the location you selected. Do you want to "
+"create the file in the selected directory?"
+msgstr ""
+"O ficheiro de dados non está presente onde indicou. Desexa crear o ficheiro "
+"no cartafol escollido?"
+
+#: ktorrent/dialogs/torrentmigratordlg.cpp:97
+#, kde-format
+msgid "Importing 1 torrent ..."
+msgid_plural "Importing %1 torrents ..."
+msgstr[0] "A importar 1 torrente..."
+msgstr[1] "A importar %1 torrentes..."
+
+#: ktorrent/dialogs/torrentmigratordlg.cpp:105
+#, kde-format
+msgid "Importing <b>%1</b> ..."
+msgstr "A importar <b>%1</b> ..."
+
+#: ktorrent/dialogs/torrentmigratordlg.cpp:110
+msgid "Finished import."
+msgstr "Rematou a importación."
+
+#: ktorrent/dialogs/torrentmigratordlg.cpp:145
+#, kde-format
+msgid "Torrent <b>%1</b> already loaded."
+msgstr "O torrente <b>%1</b> xa está cargado."
+
+#: ktorrent/dialogs/torrentmigratordlg.cpp:152
+#, kde-format
+msgid "Failed to load <b>%1</b>"
+msgstr "Non se conseguiu cargar <b>%1</b>"
+
+#: ktorrent/dialogs/torrentmigratordlg.cpp:160
+#, kde-format
+msgid "Failed to import <b>%1</b> : %2"
+msgstr "Non se conseguiu importar <b>%1</b>: %2"
+
+#: ktorrent/dialogs/torrentmigratordlg.cpp:164
+#, kde-format
+msgid "Imported <b>%1</b>"
+msgstr "Importouse <b>%1</b>"
+
+#: ktorrent/dialogs/importdialog.cpp:52
+msgid "Torrent files"
+msgstr "Ficheiros torrente"
+
+#: ktorrent/dialogs/importdialog.cpp:122
+#, kde-format
+msgid "Cannot verify data : %1"
+msgstr "Non foi posíbel verificar os datos: %1"
+
+#: ktorrent/dialogs/importdialog.cpp:229 ktorrent/dialogs/importdialog.cpp:263
+#, kde-format
+msgid "Cannot load the torrent file : %1"
+msgstr "Non foi posíbel cargar o ficheiro torrent: %1"
+
+#: ktorrent/dialogs/importdialog.cpp:385 ktorrent/dialogs/importdialog.cpp:402
+#, kde-format
+msgid "Failed to create %1 : %2"
+msgstr "Non foi posíbel crear %1: %2"
+
+#. i18n: file: ktorrent/dialogs/pastedlgbase.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, PasteDlgBase)
+#: ktorrent/dialogs/pastedialog.cpp:38 rc.cpp:2626
+msgid "Open an URL"
+msgstr "Abrir un URL"
+
+#: ktorrent/torrentactivity.cpp:43
+msgid "Torrents"
+msgstr "Torrentes"
+
+#: ktorrent/torrentactivity.cpp:75
+msgid "Widget to manage the torrent queue"
+msgstr "Un widget para xestionar a lista de torrentes"
+
+#: ktorrent/torrentactivity.cpp:79
+#, fuzzy
+#| msgid "Displays all the chunks you are downloading, of a torrent"
+msgid "Displays the currently downloading magnet links"
+msgstr "Mostra todo os anacos dun torrente que está a obter"
+
+#: ktorrent/statusbar.cpp:39 ktorrent/statusbar.cpp:71
+#, kde-format
+msgid "Speed down: %1 / up: %2"
+msgstr "Velocidade de obtención: %1 / envío: %2"
+
+#: ktorrent/statusbar.cpp:40 ktorrent/statusbar.cpp:82
+#, kde-format
+msgid "Transferred down: %1 / up: %2"
+msgstr "Obtido: %1 / enviado: %2"
+
+#: ktorrent/statusbar.cpp:42 ktorrent/statusbar.cpp:97
+msgid "DHT: off"
+msgstr "DHT: apagado"
+
+#: ktorrent/statusbar.cpp:95
+#, kde-format
+msgid "DHT: %1 nodes, %2 tasks"
+msgstr "DHT: %1 nodos, %2 tarefas"
 
 #. i18n: file: plasma/applet/appletconfig.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, AppletConfig)
@@ -3706,7 +3690,7 @@ msgstr "Envíos detidos"
 
 #. i18n: file: ktorrent/ktorrentui.rc:19
 #. i18n: ectx: Menu (Downloads)
-#: libktcore/groups/groupmanager.cpp:108 rc.cpp:2612
+#: libktcore/groups/groupmanager.cpp:108 rc.cpp:2644
 msgid "Downloads"
 msgstr "Recepcións"
 
@@ -3899,6 +3883,22 @@ msgstr "Non é posíbel escribir para alén do final do buffer de nmap."
 msgid "Plugins"
 msgstr "Engadidos"
 
+#: ktmagnetdownloader/magnetdownloader.cpp:37
+#, fuzzy
+#| msgid "Time Downloaded"
+msgid "KTMagnetDownloader"
+msgstr "Duración da recepción"
+
+#: ktmagnetdownloader/magnetdownloader.cpp:38
+msgid "KTorrent's magnet link downloader"
+msgstr ""
+
+#: ktmagnetdownloader/magnetdownloader.cpp:40
+#, fuzzy
+#| msgid "Joris Guisson"
+msgid "(C) 2009 Joris Guisson"
+msgstr "Joris Guisson"
+
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
@@ -3969,7 +3969,7 @@ msgstr "Eliminar o cartafol"
 #. i18n: ectx: property (title), widget (QGroupBox, m_options)
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:173
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:23 rc.cpp:179 rc.cpp:889 rc.cpp:2299 rc.cpp:2434
+#: rc.cpp:23 rc.cpp:179 rc.cpp:889 rc.cpp:2331 rc.cpp:2466
 msgid "Options"
 msgstr "Opcións"
 
@@ -3987,7 +3987,7 @@ msgstr "Abrir os torrentes sen preguntar nada."
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openSilently)
 #. i18n: file: ktorrent/dialogs/pastedlgbase.ui:55
 #. i18n: ectx: property (text), widget (QCheckBox, m_silently)
-#: rc.cpp:29 rc.cpp:2600
+#: rc.cpp:29 rc.cpp:2632
 msgid "Open silently"
 msgstr "Abrir silandeiramente"
 
@@ -4113,7 +4113,7 @@ msgstr "Engade a un grupo os torrentes abertos con esta extensión."
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_addToGroup)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:141
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:65 rc.cpp:2341
+#: rc.cpp:65 rc.cpp:2373
 msgid "Add torrent to group:"
 msgstr "Engadir o torrente ao grupo:"
 
@@ -4452,7 +4452,7 @@ msgstr "Engadir ao grupo:"
 #. i18n: ectx: property (text), widget (QCheckBox, m_use_custom_download_location)
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:25
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: rc.cpp:191 rc.cpp:2395
+#: rc.cpp:191 rc.cpp:2427
 msgid "Download to:"
 msgstr "Recibir en:"
 
@@ -4488,7 +4488,7 @@ msgstr "filtrar na fonte:"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: ktorrent/dialogs/pastedlgbase.ui:25
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:206 rc.cpp:2597
+#: rc.cpp:206 rc.cpp:2629
 msgid "URL:"
 msgstr "URL:"
 
@@ -4556,6 +4556,8 @@ msgstr "Filtros activos:"
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
 #. i18n: file: plugins/search/searchpref.ui:139
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
+#. i18n: file: ktorrent/ipfilterwidget.ui:46
+#. i18n: ectx: property (text), widget (KPushButton, m_add)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:169
 #. i18n: ectx: property (text), widget (KPushButton, m_add_tracker)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:258
@@ -4563,13 +4565,13 @@ msgstr "Filtros activos:"
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:319
 #. i18n: ectx: property (text), widget (KPushButton, m_add_webseed)
 #. i18n: file: ktorrent/dialogs/addpeersdlg.ui:111
-#. i18n: ectx: property (text), widget (KPushButton, m_add)
-#. i18n: file: ktorrent/ipfilterwidget.ui:46
 #. i18n: ectx: property (text), widget (KPushButton, m_add)
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:60
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
 #. i18n: file: plugins/search/searchpref.ui:139
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
+#. i18n: file: ktorrent/ipfilterwidget.ui:46
+#. i18n: ectx: property (text), widget (KPushButton, m_add)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:169
 #. i18n: ectx: property (text), widget (KPushButton, m_add_tracker)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:258
@@ -4578,10 +4580,8 @@ msgstr "Filtros activos:"
 #. i18n: ectx: property (text), widget (KPushButton, m_add_webseed)
 #. i18n: file: ktorrent/dialogs/addpeersdlg.ui:111
 #. i18n: ectx: property (text), widget (KPushButton, m_add)
-#. i18n: file: ktorrent/ipfilterwidget.ui:46
-#. i18n: ectx: property (text), widget (KPushButton, m_add)
-#: rc.cpp:241 rc.cpp:982 rc.cpp:2347 rc.cpp:2368 rc.cpp:2383 rc.cpp:2519
-#: rc.cpp:2653
+#: rc.cpp:241 rc.cpp:982 rc.cpp:2307 rc.cpp:2379 rc.cpp:2400 rc.cpp:2415
+#: rc.cpp:2551
 msgid "Add"
 msgstr "Engadir"
 
@@ -4787,7 +4787,7 @@ msgstr "Servidor web"
 #. i18n: file: ktorrent/dialogs/addpeersdlg.ui:59
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: rc.cpp:301 rc.cpp:805 rc.cpp:1389 rc.cpp:1413 rc.cpp:2052 rc.cpp:2098
-#: rc.cpp:2365 rc.cpp:2516
+#: rc.cpp:2397 rc.cpp:2548
 msgid "Port:"
 msgstr "Porto:"
 
@@ -5403,7 +5403,7 @@ msgstr "Velocidade media de envío:"
 #. i18n: ectx: property (text), widget (QLabel, label_17)
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:359
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:664 rc.cpp:2389
+#: rc.cpp:664 rc.cpp:2421
 msgid "Comments:"
 msgstr "Comentarios:"
 
@@ -6128,7 +6128,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:93
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:1012 rc.cpp:1467 rc.cpp:2003 rc.cpp:2487
+#: rc.cpp:1012 rc.cpp:1467 rc.cpp:2003 rc.cpp:2519
 msgid "Maximum upload speed:"
 msgstr "Velocidade máxima de envío:"
 
@@ -6154,7 +6154,7 @@ msgstr "Límite global de envíos cando se active o salvapantallas."
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:70
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:1024 rc.cpp:1455 rc.cpp:2007 rc.cpp:2478
+#: rc.cpp:1024 rc.cpp:1455 rc.cpp:2007 rc.cpp:2510
 msgid "Maximum download speed:"
 msgstr "Velocidade máxima de recepción:"
 
@@ -7071,315 +7071,9 @@ msgstr ""
 msgid "Recommended Settings..."
 msgstr "Configuración recomendada"
 
-#. i18n: file: ktorrent/pref/btpref.ui:16
-#. i18n: ectx: property (title), widget (QGroupBox, dhtGroupBox)
-#: rc.cpp:1542
-msgid "Features"
-msgstr "Características"
-
-#. i18n: file: ktorrent/pref/btpref.ui:22
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_dhtSupport)
-#: rc.cpp:1545
-msgid ""
-"DHT is a trackerless protocol to find peers sharing the same torrents as you "
-"do."
-msgstr ""
-"DHT é un protocolo sen localizador para atopar pares que estean a compartir "
-"os mesmos torrentes que vostede."
-
-#. i18n: file: ktorrent/pref/btpref.ui:25
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_dhtSupport)
-#: rc.cpp:1548
-msgid "Use DHT to get additional peers"
-msgstr "Usar DHT para obter pares adicionais"
-
-#. i18n: file: ktorrent/pref/btpref.ui:34
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:1551
-msgid "UDP port for DHT communications:"
-msgstr "Porto UDP para as comunicacións DHT:"
-
-#. i18n: file: ktorrent/pref/btpref.ui:47
-#. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_dhtPort)
-#: rc.cpp:1554
-msgid ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;  font-size:9pt;\"><span "
-"style=\" font-size:8pt;\">UDP port to use for the DHT protocol.</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
-"p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px; \"><span style=\" font-"
-"weight:600;\">Attention:</span> If you are behind a router, this port needs "
-"to be forwarded to accept incoming DHT requests. The UPnP plugin can do this "
-"for you.</p></body></html>"
-msgstr ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;  font-size:9pt;\"><span "
-"style=\" font-size:8pt;\">O porto UDP a empregar co protocolo DHT.</span></"
-"p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
-"p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px; \"><span style=\" font-"
-"weight:600;\">Atención:</span> Se estiver detrás dun enrutador este porto "
-"debe ser reencamiñado para aceptar pedidos DHT entrantes. A extensión UPnP "
-"pode facer isto por si.</p></body></html>"
-
-#. i18n: file: ktorrent/pref/btpref.ui:65
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_pexEnabled)
-#: rc.cpp:1563
-msgid "Whether or not to use µTorrent compatible peer exchange."
-msgstr ""
-"Indica se empregar ou non o intercambio de pares compatíbel con µTorrent."
-
-#. i18n: file: ktorrent/pref/btpref.ui:68
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_pexEnabled)
-#: rc.cpp:1566
-msgid "Use peer exchange"
-msgstr "Empregar o intercambio de pares"
-
-#. i18n: file: ktorrent/pref/btpref.ui:75
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_webseedsEnabled)
-#: rc.cpp:1569
-msgid ""
-"Enable or disable the use of webseeds when they are present in a torrent."
-msgstr ""
-"Activar ou desactivar o uso de sementes web cando estean presentes nun "
-"torrente."
-
-#. i18n: file: ktorrent/pref/btpref.ui:78
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_webseedsEnabled)
-#: rc.cpp:1572
-msgid "Use webseeds"
-msgstr "Empregar sementes web"
-
-#. i18n: file: ktorrent/pref/btpref.ui:90
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: rc.cpp:1575
-msgid "Encryption"
-msgstr "Cifrado"
-
-#. i18n: file: ktorrent/pref/btpref.ui:100
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useEncryption)
-#: rc.cpp:1578
-msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Protocol encryption is "
-"useful when your ISP is slowing down bittorrent connections. </p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">The encryption will "
-"prevent your bittorrent traffic to be flagged as bittorrent traffic, and so "
-"the ISP will not slow it down.</p></body></html>"
-msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">A cifrado do protocolo é "
-"útil se o seu ISP enlentece as conexións bittorrent.</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"> A cifrado evita que o "
-"tránsito bittorrent sexa etiquetado como tal, polo que o ISP non o "
-"enlentecerá.</p></body></html>"
-
-#. i18n: file: ktorrent/pref/btpref.ui:103
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useEncryption)
-#. i18n: file: libktcore/ktorrent.kcfg:144
-#. i18n: ectx: label, entry (useEncryption), group (downloads)
-#. i18n: file: ktorrent/pref/btpref.ui:103
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useEncryption)
-#. i18n: file: libktcore/ktorrent.kcfg:144
-#. i18n: ectx: label, entry (useEncryption), group (downloads)
-#: rc.cpp:1585 rc.cpp:2761
-msgid "Use protocol encryption"
-msgstr "Usar a cifrado do protocolo"
-
-#. i18n: file: ktorrent/pref/btpref.ui:110
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_allowUnencryptedConnections)
-#: rc.cpp:1588
-msgid ""
-"Not all clients support encryption, and some people have encryption "
-"disabled. If you want to connect to those peers, you need to have this "
-"option enabled."
-msgstr ""
-"Non todos os clientes permiten a cifrado e algunhas persoas teñen o cifrado "
-"desactivado. Se quer conectar con eses pares debe sinalar esta opción."
-
-#. i18n: file: ktorrent/pref/btpref.ui:113
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_allowUnencryptedConnections)
-#. i18n: file: libktcore/ktorrent.kcfg:148
-#. i18n: ectx: label, entry (allowUnencryptedConnections), group (downloads)
-#. i18n: file: ktorrent/pref/btpref.ui:113
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_allowUnencryptedConnections)
-#. i18n: file: libktcore/ktorrent.kcfg:148
-#. i18n: ectx: label, entry (allowUnencryptedConnections), group (downloads)
-#: rc.cpp:1591 rc.cpp:2764
-msgid "Allow unencrypted connections"
-msgstr "Permitir conexións non cifradas"
-
-#. i18n: file: ktorrent/pref/btpref.ui:123
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:1594
-msgid "Tracker"
-msgstr "Localizador"
-
-#. i18n: file: ktorrent/pref/btpref.ui:129
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useCustomIP)
-#: rc.cpp:1597
-msgid ""
-"Instead of allowing the tracker to determine your IP address, tell the "
-"tracker which IP address to use. Use this when you are behind a proxy."
-msgstr ""
-"No canto de permitir que o localizador determine o seu enderezo IP, dicirlle "
-"enderezo a utilizar. Empregue isto se estiver detrás dun proxy."
-
-#. i18n: file: ktorrent/pref/btpref.ui:132
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useCustomIP)
-#: rc.cpp:1600
-msgid "Send the tracker a custom IP address or hostname"
-msgstr ""
-"Enviarlle ao localizador un enderezo IP ou nome de máquina personalizado"
-
-#. i18n: file: ktorrent/pref/btpref.ui:141
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1603
-msgid "Custom IP address or hostname:"
-msgstr "Enderezo IP ou nome de máquina personalizado:"
-
-#. i18n: file: ktorrent/pref/btpref.ui:148
-#. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_customIP)
-#: rc.cpp:1606
-msgid ""
-"Custom IP address or hostname to send to the tracker. Hostnames will be "
-"resolved at runtime and the resolved IP address will be sent to the tracker."
-msgstr ""
-"Un enderezo IP ou un nome de máquina personalizados para enviar ao "
-"localizador. Os nomes de máquina resólvense  durante a execución e o "
-"enderezo IP resolto envíaselle ao localizador."
-
-#. i18n: file: ktorrent/pref/btpref.ui:162
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:1609
-msgid "Data Checking"
-msgstr "Verificación dos datos"
-
-#. i18n: file: ktorrent/pref/btpref.ui:176
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_doUploadDataCheck)
-#: rc.cpp:1612
-msgid ""
-"During uploading when a chunk is loaded into memory automatically recheck "
-"this chunk, to see if it still is OK."
-msgstr ""
-"Durante o envío, cando un anaco se carga na memoria, compróbase "
-"automaticamente o anaco para ver se aínda é correcto."
-
-#. i18n: file: ktorrent/pref/btpref.ui:179
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_doUploadDataCheck)
-#: rc.cpp:1615
-msgid "Recheck chunks during uploading"
-msgstr "Comprobar os anacos durante o envío"
-
-#. i18n: file: ktorrent/pref/btpref.ui:186
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useMaxSizeForUploadDataCheck)
-#: rc.cpp:1618
-msgid ""
-"Because rechecking big chunks can take a lot of time, the recheck can be "
-"disabled when the chunks are bigger then a certain size."
-msgstr ""
-"Dado que comprobar de novo anacos grandes pode levar moito tempo, a "
-"comprobación pode ser desactivada para anacos maiores que un tamaño dado."
-
-#. i18n: file: ktorrent/pref/btpref.ui:189
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useMaxSizeForUploadDataCheck)
-#: rc.cpp:1621
-msgid "Do not recheck when chunks are bigger than"
-msgstr "Non comprobar de novo os anacos maiores que"
-
-#. i18n: file: ktorrent/pref/btpref.ui:196
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxSizeForUploadDataCheck)
-#: rc.cpp:1624
-msgid "The maximum size a chunk can be for rechecking during uploading."
-msgstr "O tamaño máximo do anaco para que sexa comprobado de novo ao envialo."
-
-#. i18n: file: ktorrent/pref/btpref.ui:199
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxSizeForUploadDataCheck)
-#. i18n: file: ktorrent/pref/advancedpref.ui:215
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeAudio)
-#. i18n: file: ktorrent/pref/advancedpref.ui:241
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeVideo)
-#. i18n: file: ktorrent/pref/btpref.ui:199
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxSizeForUploadDataCheck)
-#. i18n: file: ktorrent/pref/advancedpref.ui:215
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeAudio)
-#. i18n: file: ktorrent/pref/advancedpref.ui:241
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeVideo)
-#: rc.cpp:1627 rc.cpp:1735 rc.cpp:1747
-msgid " KiB"
-msgstr " KiB"
-
-#. i18n: file: ktorrent/pref/btpref.ui:215
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_autoRecheck)
-#: rc.cpp:1630
-msgid ""
-"Automatically do a full data check when we find to many corrupted chunks."
-msgstr ""
-"Facer automaticamente unha comprobación completa dos datos cando se atopen "
-"anacos corruptos de máis."
-
-#. i18n: file: ktorrent/pref/btpref.ui:218
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_autoRecheck)
-#: rc.cpp:1633
-msgid "Do a full data check after "
-msgstr "Facer unha comprobación completa dos datos tras"
-
-#. i18n: file: ktorrent/pref/btpref.ui:237
-#. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_maxCorruptedBeforeRecheck)
-#: rc.cpp:1636
-msgid "The number of corrupted chunks before a full data check is done"
-msgstr ""
-"O número de anacos corruptos antes de que se faga unha comprobación completa "
-"dos datos"
-
-#. i18n: file: ktorrent/pref/btpref.ui:253
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_checkWhenFinished)
-#: rc.cpp:1639
-msgid ""
-"When a torrent has finished downloading, do a full data check on the torrent."
-msgstr ""
-"Cando se remate a obtención dun torrente, facer unha comprobación completa "
-"dos datos no torrente."
-
-#. i18n: file: ktorrent/pref/btpref.ui:256
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_checkWhenFinished)
-#: rc.cpp:1642
-msgid "Check data when download is finished"
-msgstr "Verificar os datos tras rematar a recepción"
-
 #. i18n: file: ktorrent/pref/advancedpref.ui:17
 #. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_diskPrealloc)
-#: rc.cpp:1645
+#: rc.cpp:1542
 msgid ""
 "Whether or not diskspace should be reserved before starting to download a "
 "torrent."
@@ -7387,13 +7081,13 @@ msgstr "Indica se debe reservarse espazo no disco antes de obter un torrente."
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:20
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_diskPrealloc)
-#: rc.cpp:1648
+#: rc.cpp:1545
 msgid "Reserve disk space before starting a torrent"
 msgstr "Reservar espazo no disco antes de comezar un torrente"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:32
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_fullDiskPrealloc)
-#: rc.cpp:1651
+#: rc.cpp:1548
 msgid ""
 "Instead of doing a quick reservation, do a full reservation. This is slower "
 "than the quick way, but avoids fragmentation on the disk."
@@ -7403,25 +7097,25 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:35
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_fullDiskPrealloc)
-#: rc.cpp:1654
+#: rc.cpp:1551
 msgid "Fully reserve disk space (avoids fragmentation)"
 msgstr "Reservar todo o espazo preciso no disco (evita a fragmentación)"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:45
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:1657
+#: rc.cpp:1554
 msgid "Performance"
 msgstr "Desempeño"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:53
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:1660
+#: rc.cpp:1557
 msgid "GUI update interval:"
 msgstr "Intervalo de actualización da interface:"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:72
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_guiUpdateInterval)
-#: rc.cpp:1663
+#: rc.cpp:1560
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -7469,19 +7163,19 @@ msgstr ""
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_guiUpdateInterval)
 #. i18n: file: ktorrent/pref/advancedpref.ui:109
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_cpuUsage)
-#: rc.cpp:1672 rc.cpp:1689
+#: rc.cpp:1569 rc.cpp:1586
 msgid " ms"
 msgstr " ms"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:91
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:1675
+#: rc.cpp:1572
 msgid "Network sleep interval:"
 msgstr "Intervalo de rede durminte:"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:106
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_cpuUsage)
-#: rc.cpp:1678
+#: rc.cpp:1575
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -7547,19 +7241,19 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: file: ktorrent/pref/generalpref.ui:120
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:1692 rc.cpp:1817
+#: rc.cpp:1589 rc.cpp:1931
 msgid "Miscellaneous"
 msgstr "Diversos"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:153
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1695
+#: rc.cpp:1592
 msgid "Time estimation algorithm:"
 msgstr "Algarismo de estimación do tempo:"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:170
 #. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_eta)
-#: rc.cpp:1698
+#: rc.cpp:1595
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -7633,25 +7327,25 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:189
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: rc.cpp:1720
+#: rc.cpp:1617
 msgid "Window of X"
 msgstr "Xanela de X"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:194
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: rc.cpp:1723
+#: rc.cpp:1620
 msgid "Moving average"
 msgstr "Media móbil"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:202
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1726
+#: rc.cpp:1623
 msgid "Preview size for audio files:"
 msgstr "Tamaño da vista previa dos ficheiros de son:"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:212
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_previewSizeAudio)
-#: rc.cpp:1729
+#: rc.cpp:1626
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -7673,15 +7367,31 @@ msgstr ""
 "comezo e fin dun ficheiro de son, á que se lle dará prioridade para dispor "
 "dunha vista previa.</p></body></html>"
 
+#. i18n: file: ktorrent/pref/advancedpref.ui:215
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeAudio)
+#. i18n: file: ktorrent/pref/advancedpref.ui:241
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeVideo)
+#. i18n: file: ktorrent/pref/btpref.ui:199
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxSizeForUploadDataCheck)
+#. i18n: file: ktorrent/pref/advancedpref.ui:215
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeAudio)
+#. i18n: file: ktorrent/pref/advancedpref.ui:241
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeVideo)
+#. i18n: file: ktorrent/pref/btpref.ui:199
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxSizeForUploadDataCheck)
+#: rc.cpp:1632 rc.cpp:1644 rc.cpp:1748
+msgid " KiB"
+msgstr " KiB"
+
 #. i18n: file: ktorrent/pref/advancedpref.ui:228
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:1738
+#: rc.cpp:1635
 msgid "Preview size for video files:"
 msgstr "Tamaño da vista previa dos ficheiros de vídeo:"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:238
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_previewSizeVideo)
-#: rc.cpp:1741
+#: rc.cpp:1638
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -7705,7 +7415,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:273
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useQHttpAnnounce)
-#: rc.cpp:1750
+#: rc.cpp:1647
 msgid ""
 "Disables the use of KDE's KIO library for tracker announces.\n"
 "\n"
@@ -7719,13 +7429,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:276
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useQHttpAnnounce)
-#: rc.cpp:1755
+#: rc.cpp:1652
 msgid "Do not use KIO for tracker announces"
 msgstr "Non empregar KIO para os anuncios de localizador"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:285
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_lookUpHostnameOfPeers)
-#: rc.cpp:1758
+#: rc.cpp:1655
 msgid ""
 "Resolve the hostname of each peer. This will result in the hostname of a "
 "peer being displayed instead of the IP address. \n"
@@ -7740,183 +7450,303 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:288
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_lookUpHostnameOfPeers)
-#: rc.cpp:1763
+#: rc.cpp:1660
 msgid "Resolve hostnames of peers"
 msgstr "Resolver os nomes das máquinas dos pares"
 
-#. i18n: file: ktorrent/pref/generalpref.ui:17
+#. i18n: file: ktorrent/pref/btpref.ui:16
+#. i18n: ectx: property (title), widget (QGroupBox, dhtGroupBox)
+#: rc.cpp:1663
+msgid "Features"
+msgstr "Características"
+
+#. i18n: file: ktorrent/pref/btpref.ui:22
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_dhtSupport)
+#: rc.cpp:1666
+msgid ""
+"DHT is a trackerless protocol to find peers sharing the same torrents as you "
+"do."
+msgstr ""
+"DHT é un protocolo sen localizador para atopar pares que estean a compartir "
+"os mesmos torrentes que vostede."
+
+#. i18n: file: ktorrent/pref/btpref.ui:25
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_dhtSupport)
+#: rc.cpp:1669
+msgid "Use DHT to get additional peers"
+msgstr "Usar DHT para obter pares adicionais"
+
+#. i18n: file: ktorrent/pref/btpref.ui:34
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:1672
+msgid "UDP port for DHT communications:"
+msgstr "Porto UDP para as comunicacións DHT:"
+
+#. i18n: file: ktorrent/pref/btpref.ui:47
+#. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_dhtPort)
+#: rc.cpp:1675
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;  font-size:9pt;\"><span "
+"style=\" font-size:8pt;\">UDP port to use for the DHT protocol.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; \"><span style=\" font-"
+"weight:600;\">Attention:</span> If you are behind a router, this port needs "
+"to be forwarded to accept incoming DHT requests. The UPnP plugin can do this "
+"for you.</p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;  font-size:9pt;\"><span "
+"style=\" font-size:8pt;\">O porto UDP a empregar co protocolo DHT.</span></"
+"p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; \"><span style=\" font-"
+"weight:600;\">Atención:</span> Se estiver detrás dun enrutador este porto "
+"debe ser reencamiñado para aceptar pedidos DHT entrantes. A extensión UPnP "
+"pode facer isto por si.</p></body></html>"
+
+#. i18n: file: ktorrent/pref/btpref.ui:65
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_pexEnabled)
+#: rc.cpp:1684
+msgid "Whether or not to use µTorrent compatible peer exchange."
+msgstr ""
+"Indica se empregar ou non o intercambio de pares compatíbel con µTorrent."
+
+#. i18n: file: ktorrent/pref/btpref.ui:68
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_pexEnabled)
+#: rc.cpp:1687
+msgid "Use peer exchange"
+msgstr "Empregar o intercambio de pares"
+
+#. i18n: file: ktorrent/pref/btpref.ui:75
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_webseedsEnabled)
+#: rc.cpp:1690
+msgid ""
+"Enable or disable the use of webseeds when they are present in a torrent."
+msgstr ""
+"Activar ou desactivar o uso de sementes web cando estean presentes nun "
+"torrente."
+
+#. i18n: file: ktorrent/pref/btpref.ui:78
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_webseedsEnabled)
+#: rc.cpp:1693
+msgid "Use webseeds"
+msgstr "Empregar sementes web"
+
+#. i18n: file: ktorrent/pref/btpref.ui:90
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: rc.cpp:1696
+msgid "Encryption"
+msgstr "Cifrado"
+
+#. i18n: file: ktorrent/pref/btpref.ui:100
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useEncryption)
+#: rc.cpp:1699
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Protocol encryption is "
+"useful when your ISP is slowing down bittorrent connections. </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">The encryption will "
+"prevent your bittorrent traffic to be flagged as bittorrent traffic, and so "
+"the ISP will not slow it down.</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">A cifrado do protocolo é "
+"útil se o seu ISP enlentece as conexións bittorrent.</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"> A cifrado evita que o "
+"tránsito bittorrent sexa etiquetado como tal, polo que o ISP non o "
+"enlentecerá.</p></body></html>"
+
+#. i18n: file: ktorrent/pref/btpref.ui:103
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useEncryption)
+#. i18n: file: libktcore/ktorrent.kcfg:144
+#. i18n: ectx: label, entry (useEncryption), group (downloads)
+#. i18n: file: ktorrent/pref/btpref.ui:103
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useEncryption)
+#. i18n: file: libktcore/ktorrent.kcfg:144
+#. i18n: ectx: label, entry (useEncryption), group (downloads)
+#: rc.cpp:1706 rc.cpp:2761
+msgid "Use protocol encryption"
+msgstr "Usar a cifrado do protocolo"
+
+#. i18n: file: ktorrent/pref/btpref.ui:110
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_allowUnencryptedConnections)
+#: rc.cpp:1709
+msgid ""
+"Not all clients support encryption, and some people have encryption "
+"disabled. If you want to connect to those peers, you need to have this "
+"option enabled."
+msgstr ""
+"Non todos os clientes permiten a cifrado e algunhas persoas teñen o cifrado "
+"desactivado. Se quer conectar con eses pares debe sinalar esta opción."
+
+#. i18n: file: ktorrent/pref/btpref.ui:113
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_allowUnencryptedConnections)
+#. i18n: file: libktcore/ktorrent.kcfg:148
+#. i18n: ectx: label, entry (allowUnencryptedConnections), group (downloads)
+#. i18n: file: ktorrent/pref/btpref.ui:113
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_allowUnencryptedConnections)
+#. i18n: file: libktcore/ktorrent.kcfg:148
+#. i18n: ectx: label, entry (allowUnencryptedConnections), group (downloads)
+#: rc.cpp:1712 rc.cpp:2764
+msgid "Allow unencrypted connections"
+msgstr "Permitir conexións non cifradas"
+
+#. i18n: file: ktorrent/pref/btpref.ui:123
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:1766
-msgid "Folders"
-msgstr "Cartafoles"
+#: rc.cpp:1715
+msgid "Tracker"
+msgstr "Localizador"
 
-#. i18n: file: ktorrent/pref/generalpref.ui:23
+#. i18n: file: ktorrent/pref/btpref.ui:129
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useCustomIP)
+#: rc.cpp:1718
+msgid ""
+"Instead of allowing the tracker to determine your IP address, tell the "
+"tracker which IP address to use. Use this when you are behind a proxy."
+msgstr ""
+"No canto de permitir que o localizador determine o seu enderezo IP, dicirlle "
+"enderezo a utilizar. Empregue isto se estiver detrás dun proxy."
+
+#. i18n: file: ktorrent/pref/btpref.ui:132
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useCustomIP)
+#: rc.cpp:1721
+msgid "Send the tracker a custom IP address or hostname"
+msgstr ""
+"Enviarlle ao localizador un enderezo IP ou nome de máquina personalizado"
+
+#. i18n: file: ktorrent/pref/btpref.ui:141
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1769
-msgid "Folder to store torrent information:"
-msgstr "Cartafol no que gardar a información do torrente:"
+#: rc.cpp:1724
+msgid "Custom IP address or hostname:"
+msgstr "Enderezo IP ou nome de máquina personalizado:"
 
-#. i18n: file: ktorrent/pref/generalpref.ui:30
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_tempDir)
-#: rc.cpp:1772
+#. i18n: file: ktorrent/pref/btpref.ui:148
+#. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_customIP)
+#: rc.cpp:1727
 msgid ""
-"Directory to store information about all torrents currently opened in "
-"KTorrent."
+"Custom IP address or hostname to send to the tracker. Hostnames will be "
+"resolved at runtime and the resolved IP address will be sent to the tracker."
 msgstr ""
-"O cartafol no que gardar información acerca de todos os torrentes que estean "
-"abertos en KTorrent."
+"Un enderezo IP ou un nome de máquina personalizados para enviar ao "
+"localizador. Os nomes de máquina resólvense  durante a execución e o "
+"enderezo IP resolto envíaselle ao localizador."
 
-#. i18n: file: ktorrent/pref/generalpref.ui:37
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useSaveDir)
-#. i18n: file: ktorrent/pref/generalpref.ui:47
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_saveDir)
-#. i18n: file: ktorrent/pref/generalpref.ui:37
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useSaveDir)
-#. i18n: file: ktorrent/pref/generalpref.ui:47
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_saveDir)
-#: rc.cpp:1775 rc.cpp:1781
-msgid "Directory to use as a default save location for all data."
-msgstr "O cartafol a usar como lugar predeterminado para gardar os datos."
-
-#. i18n: file: ktorrent/pref/generalpref.ui:40
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useSaveDir)
-#. i18n: file: ktorrent/groups/grouppolicydlg.ui:41
-#. i18n: ectx: property (text), widget (QCheckBox, m_default_location_enabled)
-#. i18n: file: ktorrent/pref/generalpref.ui:40
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useSaveDir)
-#. i18n: file: ktorrent/groups/grouppolicydlg.ui:41
-#. i18n: ectx: property (text), widget (QCheckBox, m_default_location_enabled)
-#: rc.cpp:1778 rc.cpp:2229
-msgid "Default save location:"
-msgstr "Lugar predeterminado no que gardar:"
-
-#. i18n: file: ktorrent/pref/generalpref.ui:54
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useCompletedDir)
-#. i18n: file: ktorrent/pref/generalpref.ui:64
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_completedDir)
-#. i18n: file: ktorrent/pref/generalpref.ui:54
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useCompletedDir)
-#. i18n: file: ktorrent/pref/generalpref.ui:64
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_completedDir)
-#: rc.cpp:1784 rc.cpp:1790
-msgid "Directory to move data to when a torrent has finished downloading."
-msgstr "O cartafol ao que mover os datos cando se remate unha obtención."
-
-#. i18n: file: ktorrent/pref/generalpref.ui:57
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useCompletedDir)
-#: rc.cpp:1787
-msgid "Move completed downloads to:"
-msgstr "Mover as recepcións completadas a:"
-
-#. i18n: file: ktorrent/pref/generalpref.ui:71
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useTorrentCopyDir)
-#. i18n: file: ktorrent/pref/generalpref.ui:81
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_torrentCopyDir)
-#. i18n: file: ktorrent/pref/generalpref.ui:71
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useTorrentCopyDir)
-#. i18n: file: ktorrent/pref/generalpref.ui:81
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_torrentCopyDir)
-#: rc.cpp:1793 rc.cpp:1799
-msgid "Directory to copy all torrent files in, which are opened by KTorrent."
-msgstr ""
-"O cartafol ao que copiar os ficheiros torrent, que se abrirán con KTorrent."
-
-#. i18n: file: ktorrent/pref/generalpref.ui:74
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useTorrentCopyDir)
-#: rc.cpp:1796
-msgid "Copy torrent files to:"
-msgstr "Copiar os ficheiros de torrente en:"
-
-#. i18n: file: ktorrent/pref/generalpref.ui:91
+#. i18n: file: ktorrent/pref/btpref.ui:162
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:1802
-msgid "System Tray Icon"
-msgstr "Icona da bandexa do sistema"
+#: rc.cpp:1730
+msgid "Data Checking"
+msgstr "Verificación dos datos"
 
-#. i18n: file: ktorrent/pref/generalpref.ui:97
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showSystemTrayIcon)
-#: rc.cpp:1805
-msgid "Whether or not to show an icon in the system tray."
-msgstr "Indica se mostrar ou non unha icona na bandexa do sistema."
-
-#. i18n: file: ktorrent/pref/generalpref.ui:100
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_showSystemTrayIcon)
-#: rc.cpp:1808
-msgid "Show system tray icon"
-msgstr "Mostrar a icona na bandexa do sistema"
-
-#. i18n: file: ktorrent/pref/generalpref.ui:107
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showPopups)
-#: rc.cpp:1811
-msgid "Whether or not to show system tray popup messages."
-msgstr "Indica se mostrar notificacións na bandexa do sistema."
-
-#. i18n: file: ktorrent/pref/generalpref.ui:110
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_showPopups)
-#: rc.cpp:1814
-msgid "Show system tray popup messages"
-msgstr "Mostrar notificacións na bandexa do sistema"
-
-#. i18n: file: ktorrent/pref/generalpref.ui:129
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openMultipleTorrentsSilently)
-#: rc.cpp:1820
+#. i18n: file: ktorrent/pref/btpref.ui:176
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_doUploadDataCheck)
+#: rc.cpp:1733
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-"size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">When you select multiple "
-"torrents to be opened at the same time, open them silently.</p></body></html>"
+"During uploading when a chunk is loaded into memory automatically recheck "
+"this chunk, to see if it still is OK."
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-"size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Cando escolla abrir varios "
-"torrentes á vez, abrilos silandeiramente.</p></body></html>"
+"Durante o envío, cando un anaco se carga na memoria, compróbase "
+"automaticamente o anaco para ver se aínda é correcto."
 
-#. i18n: file: ktorrent/pref/generalpref.ui:132
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_openMultipleTorrentsSilently)
-#: rc.cpp:1826
-msgid "Open multiple torrents silently"
-msgstr "Abrir grupos de torrentes silandeiramente"
+#. i18n: file: ktorrent/pref/btpref.ui:179
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_doUploadDataCheck)
+#: rc.cpp:1736
+msgid "Recheck chunks during uploading"
+msgstr "Comprobar os anacos durante o envío"
 
-#. i18n: file: ktorrent/pref/generalpref.ui:142
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_suppressSleep)
-#: rc.cpp:1829
+#. i18n: file: ktorrent/pref/btpref.ui:186
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useMaxSizeForUploadDataCheck)
+#: rc.cpp:1739
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-"size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Prevent computer from "
-"going into a sleep state when torrents are running.</p></body></html>"
+"Because rechecking big chunks can take a lot of time, the recheck can be "
+"disabled when the chunks are bigger then a certain size."
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-"size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Evitar que o ordenador "
-"entre nun estado de repouso cando se estean a transferir torrentes.</p></"
-"body></html>"
+"Dado que comprobar de novo anacos grandes pode levar moito tempo, a "
+"comprobación pode ser desactivada para anacos maiores que un tamaño dado."
 
-#. i18n: file: ktorrent/pref/generalpref.ui:145
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_suppressSleep)
-#: rc.cpp:1835
-msgid "Suppress sleep when torrents are running"
-msgstr "Evitar repousar o ordenador cando se estean a transferir torrentes"
+#. i18n: file: ktorrent/pref/btpref.ui:189
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useMaxSizeForUploadDataCheck)
+#: rc.cpp:1742
+msgid "Do not recheck when chunks are bigger than"
+msgstr "Non comprobar de novo os anacos maiores que"
+
+#. i18n: file: ktorrent/pref/btpref.ui:196
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxSizeForUploadDataCheck)
+#: rc.cpp:1745
+msgid "The maximum size a chunk can be for rechecking during uploading."
+msgstr "O tamaño máximo do anaco para que sexa comprobado de novo ao envialo."
+
+#. i18n: file: ktorrent/pref/btpref.ui:215
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_autoRecheck)
+#: rc.cpp:1751
+msgid ""
+"Automatically do a full data check when we find to many corrupted chunks."
+msgstr ""
+"Facer automaticamente unha comprobación completa dos datos cando se atopen "
+"anacos corruptos de máis."
+
+#. i18n: file: ktorrent/pref/btpref.ui:218
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_autoRecheck)
+#: rc.cpp:1754
+msgid "Do a full data check after "
+msgstr "Facer unha comprobación completa dos datos tras"
+
+#. i18n: file: ktorrent/pref/btpref.ui:237
+#. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_maxCorruptedBeforeRecheck)
+#: rc.cpp:1757
+msgid "The number of corrupted chunks before a full data check is done"
+msgstr ""
+"O número de anacos corruptos antes de que se faga unha comprobación completa "
+"dos datos"
+
+#. i18n: file: ktorrent/pref/btpref.ui:253
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_checkWhenFinished)
+#: rc.cpp:1760
+msgid ""
+"When a torrent has finished downloading, do a full data check on the torrent."
+msgstr ""
+"Cando se remate a obtención dun torrente, facer unha comprobación completa "
+"dos datos no torrente."
+
+#. i18n: file: ktorrent/pref/btpref.ui:256
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_checkWhenFinished)
+#: rc.cpp:1763
+msgid "Check data when download is finished"
+msgstr "Verificar os datos tras rematar a recepción"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:16
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_manuallyControlTorrents)
-#: rc.cpp:1838
+#: rc.cpp:1766
 msgid ""
 "When enabled, the queue manager will be totally disabled, allowing you to "
 "fully control all torrents manually."
@@ -7926,7 +7756,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:19
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_manuallyControlTorrents)
-#: rc.cpp:1841
+#: rc.cpp:1769
 msgid "Control torrents manually"
 msgstr "Controlar os torrentes manualmente"
 
@@ -7938,13 +7768,13 @@ msgstr "Controlar os torrentes manualmente"
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:288
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:1847 rc.cpp:2026
+#: rc.cpp:1775 rc.cpp:2026
 msgid "Maximum downloads:"
 msgstr "Máximo de recepcións:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:41
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxDownloads)
-#: rc.cpp:1850
+#: rc.cpp:1778
 msgid ""
 "The maximum number of simultaneous downloads the queue manager will run."
 msgstr "O máximo de obtencións simultáneas que realiza o xestor da fila."
@@ -7957,25 +7787,25 @@ msgstr "O máximo de obtencións simultáneas que realiza o xestor da fila."
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:302
 #. i18n: ectx: property (text), widget (QLabel, label_17)
-#: rc.cpp:1856 rc.cpp:2030
+#: rc.cpp:1784 rc.cpp:2030
 msgid "Maximum seeds:"
 msgstr "Máximo de fontes:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:61
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxSeeds)
-#: rc.cpp:1859
+#: rc.cpp:1787
 msgid "The maximum number of simultaneous seeds the queue manager will run."
 msgstr "O máximo de comparticións simultáneas que executa o xestor da fila."
 
 #. i18n: file: ktorrent/pref/qmpref.ui:74
 #. i18n: ectx: property (text), widget (QLabel, label_12)
-#: rc.cpp:1865
+#: rc.cpp:1793
 msgid "When diskspace is running low:"
 msgstr "Cando o espazo no disco vaia esgotándose:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:81
 #. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_startDownloadsOnLowDiskSpace)
-#: rc.cpp:1868
+#: rc.cpp:1796
 msgid ""
 "What to do when the diskspace is running low and the queue manager wants to "
 "start a torrent."
@@ -7985,31 +7815,31 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:85
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startDownloadsOnLowDiskSpace)
-#: rc.cpp:1871
+#: rc.cpp:1799
 msgid "Don't start torrents"
 msgstr "Non iniciar torrentes"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:90
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startDownloadsOnLowDiskSpace)
-#: rc.cpp:1874
+#: rc.cpp:1802
 msgid "Ask if torrents can be started"
 msgstr "Preguntar se poden iniciarse torrentes"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:95
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startDownloadsOnLowDiskSpace)
-#: rc.cpp:1877
+#: rc.cpp:1805
 msgid "Start torrents"
 msgstr "Iniciar torrentes"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:103
 #. i18n: ectx: property (text), widget (QLabel, label_13)
-#: rc.cpp:1880
+#: rc.cpp:1808
 msgid "Stop torrents when free disk space is lower than:"
 msgstr "Deter os torrentes cando o espazo libre no disco sexa menor que:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:110
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_minDiskSpace)
-#: rc.cpp:1883
+#: rc.cpp:1811
 msgid ""
 "When the free diskspace drops below this value, stop all torrents "
 "downloading."
@@ -8019,13 +7849,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:113
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minDiskSpace)
-#: rc.cpp:1886
+#: rc.cpp:1814
 msgid " MiB"
 msgstr " MiB"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:136
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_decreasePriorityOfStalledTorrents)
-#: rc.cpp:1889
+#: rc.cpp:1817
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -8063,19 +7893,19 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:139
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_decreasePriorityOfStalledTorrents)
-#: rc.cpp:1897
+#: rc.cpp:1825
 msgid "Decrease priority of torrents which are stalled for too long"
 msgstr "Diminuír a prioridade dos torrentes que leven detidos demasiado tempo"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:148
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1900
+#: rc.cpp:1828
 msgid "Stalled timer:"
 msgstr "Tempo detidos:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:159
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_stallTimer)
-#: rc.cpp:1903
+#: rc.cpp:1831
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -8103,20 +7933,20 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:162
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_stallTimer)
-#: rc.cpp:1910
+#: rc.cpp:1838
 msgid " Minutes"
 msgstr " minutos"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:193
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:1913
+#: rc.cpp:1841
 msgctxt "@title:group Options regarging Seeding"
 msgid "Seeding"
 msgstr "A espallar"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:199
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_keepSeeding)
-#: rc.cpp:1916
+#: rc.cpp:1844
 msgid ""
 "When a download is finished, continue seeding it. If this is disabled, the "
 "torrent will be stopped."
@@ -8126,7 +7956,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:202
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_keepSeeding)
-#: rc.cpp:1919
+#: rc.cpp:1847
 msgid "Keep seeding after download is finished"
 msgstr "Seguir espallando tras rematar a recepción"
 
@@ -8138,13 +7968,13 @@ msgstr "Seguir espallando tras rematar a recepción"
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:274
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:1922 rc.cpp:2022
+#: rc.cpp:1850 rc.cpp:2022
 msgid "Number of upload slots:"
 msgstr "Número de envíos concomitantes:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:216
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_numUploadSlots)
-#: rc.cpp:1925
+#: rc.cpp:1853
 msgid ""
 "The number of upload slots, this determines the number of peers you can "
 "upload to simultaneously for one torrent."
@@ -8154,13 +7984,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:232
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:1928
+#: rc.cpp:1856
 msgid "Default maximum share ratio:"
 msgstr "Taxa máxima de compartición:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:245
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_maxRatio)
-#: rc.cpp:1931
+#: rc.cpp:1859
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -8200,13 +8030,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:261
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:1943
+#: rc.cpp:1871
 msgid "Default maximum seed time:"
 msgstr "Prazo máximo de espallamento:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:268
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_maxSeedTime)
-#: rc.cpp:1946
+#: rc.cpp:1874
 msgid ""
 "The maximum seed time in hours. Once you reach this time, the torrent will "
 "be stopped. This is only applied to newly opened torrents, existing torrents "
@@ -8215,6 +8045,176 @@ msgstr ""
 "O tempo máximo para esàññar en horas. Cando se acade este tempo, o torrente "
 "detense. Isto só se aplica aos torrentes que se abran a partir de agora, os "
 "xa existentes non se verán afectados se modifica isto."
+
+#. i18n: file: ktorrent/pref/generalpref.ui:17
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:1880
+msgid "Folders"
+msgstr "Cartafoles"
+
+#. i18n: file: ktorrent/pref/generalpref.ui:23
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:1883
+msgid "Folder to store torrent information:"
+msgstr "Cartafol no que gardar a información do torrente:"
+
+#. i18n: file: ktorrent/pref/generalpref.ui:30
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_tempDir)
+#: rc.cpp:1886
+msgid ""
+"Directory to store information about all torrents currently opened in "
+"KTorrent."
+msgstr ""
+"O cartafol no que gardar información acerca de todos os torrentes que estean "
+"abertos en KTorrent."
+
+#. i18n: file: ktorrent/pref/generalpref.ui:37
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useSaveDir)
+#. i18n: file: ktorrent/pref/generalpref.ui:47
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_saveDir)
+#. i18n: file: ktorrent/pref/generalpref.ui:37
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useSaveDir)
+#. i18n: file: ktorrent/pref/generalpref.ui:47
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_saveDir)
+#: rc.cpp:1889 rc.cpp:1895
+msgid "Directory to use as a default save location for all data."
+msgstr "O cartafol a usar como lugar predeterminado para gardar os datos."
+
+#. i18n: file: ktorrent/pref/generalpref.ui:40
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useSaveDir)
+#. i18n: file: ktorrent/groups/grouppolicydlg.ui:41
+#. i18n: ectx: property (text), widget (QCheckBox, m_default_location_enabled)
+#. i18n: file: ktorrent/pref/generalpref.ui:40
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useSaveDir)
+#. i18n: file: ktorrent/groups/grouppolicydlg.ui:41
+#. i18n: ectx: property (text), widget (QCheckBox, m_default_location_enabled)
+#: rc.cpp:1892 rc.cpp:2229
+msgid "Default save location:"
+msgstr "Lugar predeterminado no que gardar:"
+
+#. i18n: file: ktorrent/pref/generalpref.ui:54
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useCompletedDir)
+#. i18n: file: ktorrent/pref/generalpref.ui:64
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_completedDir)
+#. i18n: file: ktorrent/pref/generalpref.ui:54
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useCompletedDir)
+#. i18n: file: ktorrent/pref/generalpref.ui:64
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_completedDir)
+#: rc.cpp:1898 rc.cpp:1904
+msgid "Directory to move data to when a torrent has finished downloading."
+msgstr "O cartafol ao que mover os datos cando se remate unha obtención."
+
+#. i18n: file: ktorrent/pref/generalpref.ui:57
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useCompletedDir)
+#: rc.cpp:1901
+msgid "Move completed downloads to:"
+msgstr "Mover as recepcións completadas a:"
+
+#. i18n: file: ktorrent/pref/generalpref.ui:71
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useTorrentCopyDir)
+#. i18n: file: ktorrent/pref/generalpref.ui:81
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_torrentCopyDir)
+#. i18n: file: ktorrent/pref/generalpref.ui:71
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useTorrentCopyDir)
+#. i18n: file: ktorrent/pref/generalpref.ui:81
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_torrentCopyDir)
+#: rc.cpp:1907 rc.cpp:1913
+msgid "Directory to copy all torrent files in, which are opened by KTorrent."
+msgstr ""
+"O cartafol ao que copiar os ficheiros torrent, que se abrirán con KTorrent."
+
+#. i18n: file: ktorrent/pref/generalpref.ui:74
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useTorrentCopyDir)
+#: rc.cpp:1910
+msgid "Copy torrent files to:"
+msgstr "Copiar os ficheiros de torrente en:"
+
+#. i18n: file: ktorrent/pref/generalpref.ui:91
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:1916
+msgid "System Tray Icon"
+msgstr "Icona da bandexa do sistema"
+
+#. i18n: file: ktorrent/pref/generalpref.ui:97
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showSystemTrayIcon)
+#: rc.cpp:1919
+msgid "Whether or not to show an icon in the system tray."
+msgstr "Indica se mostrar ou non unha icona na bandexa do sistema."
+
+#. i18n: file: ktorrent/pref/generalpref.ui:100
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_showSystemTrayIcon)
+#: rc.cpp:1922
+msgid "Show system tray icon"
+msgstr "Mostrar a icona na bandexa do sistema"
+
+#. i18n: file: ktorrent/pref/generalpref.ui:107
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showPopups)
+#: rc.cpp:1925
+msgid "Whether or not to show system tray popup messages."
+msgstr "Indica se mostrar notificacións na bandexa do sistema."
+
+#. i18n: file: ktorrent/pref/generalpref.ui:110
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_showPopups)
+#: rc.cpp:1928
+msgid "Show system tray popup messages"
+msgstr "Mostrar notificacións na bandexa do sistema"
+
+#. i18n: file: ktorrent/pref/generalpref.ui:129
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openMultipleTorrentsSilently)
+#: rc.cpp:1934
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
+"size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">When you select multiple "
+"torrents to be opened at the same time, open them silently.</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
+"size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Cando escolla abrir varios "
+"torrentes á vez, abrilos silandeiramente.</p></body></html>"
+
+#. i18n: file: ktorrent/pref/generalpref.ui:132
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_openMultipleTorrentsSilently)
+#: rc.cpp:1940
+msgid "Open multiple torrents silently"
+msgstr "Abrir grupos de torrentes silandeiramente"
+
+#. i18n: file: ktorrent/pref/generalpref.ui:142
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_suppressSleep)
+#: rc.cpp:1943
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
+"size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Prevent computer from "
+"going into a sleep state when torrents are running.</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
+"size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Evitar que o ordenador "
+"entre nun estado de repouso cando se estean a transferir torrentes.</p></"
+"body></html>"
+
+#. i18n: file: ktorrent/pref/generalpref.ui:145
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_suppressSleep)
+#: rc.cpp:1949
+msgid "Suppress sleep when torrents are running"
+msgstr "Evitar repousar o ordenador cando se estean a transferir torrentes"
 
 #. i18n: file: ktorrent/pref/recommendedsettingsdlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, RecommendedSettingsDlg)
@@ -8626,8 +8626,8 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QToolButton, m_tree)
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:66
 #. i18n: ectx: property (text), widget (QToolButton, m_list)
-#: rc.cpp:2140 rc.cpp:2143 rc.cpp:2146 rc.cpp:2149 rc.cpp:2152 rc.cpp:2404
-#: rc.cpp:2407
+#: rc.cpp:2140 rc.cpp:2143 rc.cpp:2146 rc.cpp:2149 rc.cpp:2152 rc.cpp:2436
+#: rc.cpp:2439
 msgid "..."
 msgstr "..."
 
@@ -8765,27 +8765,27 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KPushButton, cancel_button)
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:92
 #. i18n: ectx: property (text), widget (KPushButton, m_cancel)
-#: rc.cpp:2203 rc.cpp:2564
+#: rc.cpp:2203 rc.cpp:2596
 msgid "Cancel"
 msgstr "Cancelar"
 
 #. i18n: file: ktorrent/view/scanextender.ui:233
 #. i18n: ectx: property (text), widget (KPushButton, close_button)
+#. i18n: file: ktorrent/ipfilterwidget.ui:106
+#. i18n: ectx: property (text), widget (KPushButton, m_close)
 #. i18n: file: ktorrent/dialogs/addpeersdlg.ui:118
 #. i18n: ectx: property (text), widget (KPushButton, m_close)
 #. i18n: file: ktorrent/dialogs/torrentmigratordlg.ui:61
 #. i18n: ectx: property (text), widget (KPushButton, m_close_button)
-#. i18n: file: ktorrent/ipfilterwidget.ui:106
-#. i18n: ectx: property (text), widget (KPushButton, m_close)
 #. i18n: file: ktorrent/view/scanextender.ui:233
 #. i18n: ectx: property (text), widget (KPushButton, close_button)
+#. i18n: file: ktorrent/ipfilterwidget.ui:106
+#. i18n: ectx: property (text), widget (KPushButton, m_close)
 #. i18n: file: ktorrent/dialogs/addpeersdlg.ui:118
 #. i18n: ectx: property (text), widget (KPushButton, m_close)
 #. i18n: file: ktorrent/dialogs/torrentmigratordlg.ui:61
 #. i18n: ectx: property (text), widget (KPushButton, m_close_button)
-#. i18n: file: ktorrent/ipfilterwidget.ui:106
-#. i18n: ectx: property (text), widget (KPushButton, m_close)
-#: rc.cpp:2206 rc.cpp:2522 rc.cpp:2573 rc.cpp:2668
+#: rc.cpp:2206 rc.cpp:2322 rc.cpp:2554 rc.cpp:2605
 msgid "Close"
 msgstr "Pechar"
 
@@ -8805,7 +8805,7 @@ msgstr "Erro: "
 #. i18n: ectx: property (text), widget (QCheckBox, move_on_completion_enabled)
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:45
 #. i18n: ectx: property (text), widget (QCheckBox, m_moveCompleted)
-#: rc.cpp:2215 rc.cpp:2401
+#: rc.cpp:2215 rc.cpp:2433
 #, fuzzy
 #| msgid "Move completed downloads to:"
 msgid "Move when completed to:"
@@ -8819,7 +8819,7 @@ msgstr "Mover as recepcións completadas a:"
 #. i18n: ectx: property (windowTitle), widget (QWidget, GroupPolicyDlg)
 #. i18n: file: ktorrent/dialogs/addpeersdlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QDialog, AddPeersDlg)
-#: rc.cpp:2218 rc.cpp:2496
+#: rc.cpp:2218 rc.cpp:2528
 msgid "Dialog"
 msgstr "Diálogo"
 
@@ -8995,111 +8995,170 @@ msgstr ""
 msgid "Apply settings only for newly opened or created torrents"
 msgstr "Aplicar a configuración só aos novos torrentes abertos ou creados "
 
+#. i18n: file: ktorrent/ipfilterwidget.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, IPFilterWidget)
+#: rc.cpp:2293
+msgid "KTorrent Blacklisted Peers"
+msgstr "Pares na lista negra de KTorrent"
+
+#. i18n: file: ktorrent/ipfilterwidget.ui:22
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:2296
+msgid "Add peer:"
+msgstr "Engadir un par:"
+
+#. i18n: file: ktorrent/ipfilterwidget.ui:31
+#. i18n: ectx: property (toolTip), widget (KLineEdit, m_ip_to_add)
+#: rc.cpp:2299
+#, fuzzy
+#| msgid ""
+#| "Invalid IP address %1. You must enter an IP address in the format 'XXX."
+#| "XXX.XXX.XXX'. You can also use wildcards for ranges like '127.0.0.*'."
+msgid ""
+"IP addresses must be in the format 'XXX.XXX.XXX.XXX'.\n"
+"                                        \n"
+"You can also use wildcards like '127.0.0.*' or specify ranges like "
+"'200.10.10.0-200.10.10.40'."
+msgstr ""
+"O enderezo IP %1 non é válido. Debe indicar un IP no formato «XXX.XXX.XXX."
+"XXX». Tamén pode usar caracteres de substitución para rangos, como «127.0.0."
+"*»."
+
+#. i18n: file: ktorrent/ipfilterwidget.ui:34
+#. i18n: ectx: property (text), widget (KLineEdit, m_ip_to_add)
+#. i18n: file: ktorrent/dialogs/addpeersdlg.ui:48
+#. i18n: ectx: property (text), widget (QLineEdit, m_ip)
+#. i18n: file: ktorrent/ipfilterwidget.ui:34
+#. i18n: ectx: property (text), widget (KLineEdit, m_ip_to_add)
+#. i18n: file: ktorrent/dialogs/addpeersdlg.ui:48
+#. i18n: ectx: property (text), widget (QLineEdit, m_ip)
+#: rc.cpp:2304 rc.cpp:2545
+msgid "127.0.0.1"
+msgstr "127.0.0.1"
+
+#. i18n: file: ktorrent/ipfilterwidget.ui:72
+#. i18n: ectx: property (text), widget (KPushButton, m_clear)
+#: rc.cpp:2313
+msgid "Clear"
+msgstr "Limpar"
+
+#. i18n: file: ktorrent/ipfilterwidget.ui:92
+#. i18n: ectx: property (text), widget (KPushButton, m_open)
+#: rc.cpp:2316
+msgid "Open..."
+msgstr "Abrir..."
+
+#. i18n: file: ktorrent/ipfilterwidget.ui:99
+#. i18n: ectx: property (text), widget (KPushButton, m_save_as)
+#: rc.cpp:2319
+msgid "Save As..."
+msgstr "Gardar como..."
+
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, TorrentCreatorDlg)
-#: rc.cpp:2293
+#: rc.cpp:2325
 msgid "Create a torrent"
 msgstr "Crear un torrente"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:23
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2296
+#: rc.cpp:2328
 msgid "File or directory to create torrent from:"
 msgstr "Ficheiro ou cartafol do que crear o torrente:"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:54
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2302
+#: rc.cpp:2334
 msgid "Size of each chunk:"
 msgstr "Tamaño de cada anaco:"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:65
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
-#: rc.cpp:2305
+#: rc.cpp:2337
 msgid "32 KiB"
 msgstr "32 KiB"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:70
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
-#: rc.cpp:2308
+#: rc.cpp:2340
 msgid "64 KiB"
 msgstr "64 KiB"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:75
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
-#: rc.cpp:2311
+#: rc.cpp:2343
 msgid "128 KiB"
 msgstr "128 KiB"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:80
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
-#: rc.cpp:2314
+#: rc.cpp:2346
 msgid "256 KiB"
 msgstr "256 KiB"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:85
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
-#: rc.cpp:2317
+#: rc.cpp:2349
 msgid "512 KiB"
 msgstr "512 KiB"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:90
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
-#: rc.cpp:2320
+#: rc.cpp:2352
 msgid "1 MiB"
 msgstr "1 MiB"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:95
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
-#: rc.cpp:2323
+#: rc.cpp:2355
 msgid "2 MiB"
 msgstr "2 MiB"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:100
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
-#: rc.cpp:2326
+#: rc.cpp:2358
 msgid "4 MiB"
 msgstr "4 MiB"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:105
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
-#: rc.cpp:2329
+#: rc.cpp:2361
 msgid "8 MiB"
 msgstr "8 MiB"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:115
 #. i18n: ectx: property (text), widget (QCheckBox, m_start_seeding)
-#: rc.cpp:2332
+#: rc.cpp:2364
 msgid "Start seeding"
 msgstr "Comezar a espallar"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:125
 #. i18n: ectx: property (text), widget (QCheckBox, m_private)
-#: rc.cpp:2335
+#: rc.cpp:2367
 msgid "Private torrent (DHT not allowed)"
 msgstr "Torrente privado (non se permite DHT)"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:132
 #. i18n: ectx: property (text), widget (QCheckBox, m_dht)
-#: rc.cpp:2338
+#: rc.cpp:2370
 msgid "Decentralized (DHT only)"
 msgstr "Descentralizado (só DHT)"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:218
 #. i18n: ectx: attribute (title), widget (QWidget, m_dht_tab)
-#: rc.cpp:2359
+#: rc.cpp:2391
 msgid "DHT Nodes"
 msgstr "Nodos DHT"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:226
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2362
+#: rc.cpp:2394
 msgid "Node:"
 msgstr "Nodo:"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:272
 #. i18n: ectx: property (text), widget (QTreeWidget, m_node_list)
-#: rc.cpp:2371
+#: rc.cpp:2403
 msgid "IP or Hostname"
 msgstr "IP ou nome da máquina"
 
@@ -9115,25 +9174,25 @@ msgstr "IP ou nome da máquina"
 #. i18n: ectx: label, entry (port), group (downloads)
 #. i18n: file: libktcore/ktorrent.kcfg:56
 #. i18n: ectx: label, entry (udpTrackerPort), group (downloads)
-#: rc.cpp:2374 rc.cpp:2701 rc.cpp:2704
+#: rc.cpp:2406 rc.cpp:2701 rc.cpp:2704
 msgid "Port"
 msgstr "Porto"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:310
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: rc.cpp:2380
+#: rc.cpp:2412
 msgid "Web Seeds"
 msgstr "Comparticións web"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, FileSelectDlg)
-#: rc.cpp:2392
+#: rc.cpp:2424
 msgid "Select Which Files You Want to Download"
 msgstr "Escolla os ficheiros que desexe obter"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:42
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_moveCompleted)
-#: rc.cpp:2398
+#: rc.cpp:2430
 #, fuzzy
 #| msgid "Directory to move data to when a torrent has finished downloading."
 msgid ""
@@ -9143,50 +9202,50 @@ msgstr "O cartafol ao que mover os datos cando se remate unha obtención."
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:76
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2410
+#: rc.cpp:2442
 msgid "Text encoding:"
 msgstr "Codificación do texto:"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:103
 #. i18n: ectx: property (toolTip), widget (QTreeView, m_file_view)
-#: rc.cpp:2413
+#: rc.cpp:2445
 msgid ""
 "All files in the torrent, you can change them by double clicking on them."
 msgstr "Todos os ficheiros no torrente; pódeos modificar preméndoos."
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:112
 #. i18n: ectx: property (text), widget (KPushButton, m_select_all)
-#: rc.cpp:2416
+#: rc.cpp:2448
 msgid "Select &All"
 msgstr "Escoll&er todo"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:119
 #. i18n: ectx: property (text), widget (KPushButton, m_select_none)
-#: rc.cpp:2419
+#: rc.cpp:2451
 msgid "Select &None"
 msgstr "Escoller &nada"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:126
 #. i18n: ectx: property (text), widget (KPushButton, m_invert_selection)
-#: rc.cpp:2422
+#: rc.cpp:2454
 msgid "Invert Selection"
 msgstr "Inverter a selección"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:133
 #. i18n: ectx: property (text), widget (KPushButton, m_collapse_all)
-#: rc.cpp:2425
+#: rc.cpp:2457
 msgid "Collapse All"
 msgstr "Recoller todo"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:140
 #. i18n: ectx: property (text), widget (KPushButton, m_expand_all)
-#: rc.cpp:2428
+#: rc.cpp:2460
 msgid "Expand All"
 msgstr "Expandir todo"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:164
 #. i18n: ectx: property (text), widget (QLabel, m_existing_found)
-#: rc.cpp:2431
+#: rc.cpp:2463
 msgid "No existing files are found"
 msgstr "Non se atoparon ficheiros existentes"
 
@@ -9198,19 +9257,19 @@ msgstr "Non se atoparon ficheiros existentes"
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #. i18n: file: ktorrent/dialogs/pastedlgbase.ui:77
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2437 rc.cpp:2603
+#: rc.cpp:2469 rc.cpp:2635
 msgid "Group:"
 msgstr "Grupo:"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:224
 #. i18n: ectx: property (text), widget (QCheckBox, m_chkStartTorrent)
-#: rc.cpp:2440
+#: rc.cpp:2472
 msgid "Start torrent"
 msgstr "Comezar o torrente"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:239
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_skip_data_check)
-#: rc.cpp:2443
+#: rc.cpp:2475
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -9248,37 +9307,37 @@ msgstr ""
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:242
 #. i18n: ectx: property (text), widget (QCheckBox, m_skip_data_check)
-#: rc.cpp:2451
+#: rc.cpp:2483
 msgid "Skip data check if existing files are found"
 msgstr "Saltar a comprobacións dos datos de atopar ficheiros que existan"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:252
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
-#: rc.cpp:2454
+#: rc.cpp:2486
 msgid "Disk Space"
 msgstr "Espazo no disco"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:260
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:2457
+#: rc.cpp:2489
 msgid "Required:"
 msgstr "Requirido:"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:270
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:2460
+#: rc.cpp:2492
 msgid "Available:"
 msgstr "Dispoñíbel:"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:280
 #. i18n: ectx: property (text), widget (QLabel, textLabel6)
-#: rc.cpp:2463
+#: rc.cpp:2495
 msgid "After download:"
 msgstr "Tras a recepción:"
 
 #. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:23
 #. i18n: ectx: property (text), widget (QLabel, m_main_caption)
-#: rc.cpp:2469
+#: rc.cpp:2501
 msgid "Speed limits for individual torrents (double click to edit):"
 msgstr ""
 "Límites de velocidade para torrentes individuais (faga duplo-clic para "
@@ -9286,19 +9345,19 @@ msgstr ""
 
 #. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:35
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2472
+#: rc.cpp:2504
 msgid "Filter:"
 msgstr "Filtro:"
 
 #. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:64
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:2475
+#: rc.cpp:2507
 msgid "Global Limits"
 msgstr "Límites globais"
 
 #. i18n: file: ktorrent/dialogs/addpeersdlg.ui:19
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2499
+#: rc.cpp:2531
 msgid ""
 "Enter the IP address or hostname and port number of the peer you wish to add:"
 msgstr ""
@@ -9307,13 +9366,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/dialogs/addpeersdlg.ui:33
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2502
+#: rc.cpp:2534
 msgid "Peer:"
 msgstr "Par:"
 
 #. i18n: file: ktorrent/dialogs/addpeersdlg.ui:45
 #. i18n: ectx: property (toolTip), widget (QLineEdit, m_ip)
-#: rc.cpp:2505
+#: rc.cpp:2537
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -9347,33 +9406,21 @@ msgstr ""
 "weight:600;\">Nota:</span> Acéptanse tanto enderezos do IPv4 como do IPv6</"
 "p></body></html>"
 
-#. i18n: file: ktorrent/dialogs/addpeersdlg.ui:48
-#. i18n: ectx: property (text), widget (QLineEdit, m_ip)
-#. i18n: file: ktorrent/ipfilterwidget.ui:34
-#. i18n: ectx: property (text), widget (KLineEdit, m_ip_to_add)
-#. i18n: file: ktorrent/dialogs/addpeersdlg.ui:48
-#. i18n: ectx: property (text), widget (QLineEdit, m_ip)
-#. i18n: file: ktorrent/ipfilterwidget.ui:34
-#. i18n: ectx: property (text), widget (KLineEdit, m_ip_to_add)
-#: rc.cpp:2513 rc.cpp:2650
-msgid "127.0.0.1"
-msgstr "127.0.0.1"
-
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:14
 #. i18n: ectx: property (windowTitle), widget (QDialog, MissingFilesDlg)
-#: rc.cpp:2525
+#: rc.cpp:2557
 msgid "Files are missing"
 msgstr "Faltan ficheiros"
 
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:20
 #. i18n: ectx: property (text), widget (QLabel, m_text)
-#: rc.cpp:2528
+#: rc.cpp:2560
 msgid "The following files are missing:"
 msgstr "Faltan os ficheiros seguintes:"
 
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:37
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_recreate)
-#: rc.cpp:2531
+#: rc.cpp:2563
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -9395,13 +9442,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:40
 #. i18n: ectx: property (text), widget (KPushButton, m_recreate)
-#: rc.cpp:2537
+#: rc.cpp:2569
 msgid "Recreate"
 msgstr "Crear de novo"
 
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:50
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_dnd)
-#: rc.cpp:2540
+#: rc.cpp:2572
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -9423,7 +9470,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:63
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_select_new)
-#: rc.cpp:2549
+#: rc.cpp:2581
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -9445,13 +9492,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:66
 #. i18n: ectx: property (text), widget (KPushButton, m_select_new)
-#: rc.cpp:2555
+#: rc.cpp:2587
 msgid "Select New Location"
 msgstr "Escoller o novo lugar"
 
 #. i18n: file: ktorrent/dialogs/missingfilesdlg.ui:89
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_cancel)
-#: rc.cpp:2558
+#: rc.cpp:2590
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -9473,140 +9520,93 @@ msgstr ""
 
 #. i18n: file: ktorrent/dialogs/torrentmigratordlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QDialog, TorrentMigratorDlg)
-#: rc.cpp:2567
+#: rc.cpp:2599
 msgid "Importing ..."
 msgstr "A importar..."
 
 #. i18n: file: ktorrent/dialogs/torrentmigratordlg.ui:22
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2570
+#: rc.cpp:2602
 msgid "Importing torrents from KDE3 version:"
 msgstr "A importar os torrentes da versión para KDE3:"
 
 #. i18n: file: ktorrent/dialogs/importdialog.ui:13
 #. i18n: ectx: property (windowTitle), widget (QDialog, ImportDialog)
-#: rc.cpp:2576
+#: rc.cpp:2608
 msgid "Import an existing torrent"
 msgstr "Importar un torrente xa existente"
 
 #. i18n: file: ktorrent/dialogs/importdialog.ui:29
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:2579
+#: rc.cpp:2611
 msgid "Torrent:"
 msgstr "Torrente:"
 
 #. i18n: file: ktorrent/dialogs/importdialog.ui:45
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:2582
+#: rc.cpp:2614
 msgid "Data:"
 msgstr "Datos:"
 
 #. i18n: file: ktorrent/dialogs/importdialog.ui:69
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2585
+#: rc.cpp:2617
 msgid "Select the torrent file and the data which belongs with it."
 msgstr "Escolla o ficheiro torrent e os datos que lle pertencen."
 
 #. i18n: file: ktorrent/dialogs/importdialog.ui:108
 #. i18n: ectx: property (text), widget (KPushButton, m_import_btn)
-#: rc.cpp:2588
+#: rc.cpp:2620
 msgid "&Import"
 msgstr "&Importar"
 
 #. i18n: file: ktorrent/dialogs/importdialog.ui:115
 #. i18n: ectx: property (text), widget (KPushButton, m_cancel_btn)
-#: rc.cpp:2591
+#: rc.cpp:2623
 msgid "Ca&ncel"
 msgstr "&Cancelar"
 
 #. i18n: file: ktorrent/ktorrentui.rc:4
 #. i18n: ectx: Menu (file)
-#: rc.cpp:2606
+#: rc.cpp:2638
 msgid "&File"
 msgstr "&Ficheiro"
 
 #. i18n: file: ktorrent/ktorrentui.rc:16
 #. i18n: ectx: Menu (view)
-#: rc.cpp:2609
+#: rc.cpp:2641
 msgid "&View"
 msgstr "&Vista"
 
 #. i18n: file: ktorrent/ktorrentui.rc:37
 #. i18n: ectx: Menu (GroupsMenu)
-#: rc.cpp:2615
+#: rc.cpp:2647
 msgid "GroupsMenu"
 msgstr "Menú de grupos"
 
 #. i18n: file: ktorrent/ktorrentui.rc:49
 #. i18n: ectx: Menu (ViewMenu)
-#: rc.cpp:2618
+#: rc.cpp:2650
 msgid "ViewMenu"
 msgstr "Menú de vista"
 
 #. i18n: file: ktorrent/ktorrentui.rc:57
 #. i18n: ectx: Menu (PeerSourcesMenu)
-#: rc.cpp:2621
+#: rc.cpp:2653
 msgid "Additional Peer Sources"
 msgstr "Fontes adicionais de pares"
 
 #. i18n: file: ktorrent/ktorrentui.rc:86
 #. i18n: ectx: Menu (ColumnsMenu)
-#: rc.cpp:2630
+#: rc.cpp:2662
 msgid "Configure Columns"
 msgstr "Configurar as columnas"
 
 #. i18n: file: ktorrent/ktorrentui.rc:94
 #. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:2636
+#: rc.cpp:2668
 msgid "Download Toolbar"
 msgstr "Barra de transferencias"
-
-#. i18n: file: ktorrent/ipfilterwidget.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, IPFilterWidget)
-#: rc.cpp:2639
-msgid "KTorrent Blacklisted Peers"
-msgstr "Pares na lista negra de KTorrent"
-
-#. i18n: file: ktorrent/ipfilterwidget.ui:22
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2642
-msgid "Add peer:"
-msgstr "Engadir un par:"
-
-#. i18n: file: ktorrent/ipfilterwidget.ui:31
-#. i18n: ectx: property (toolTip), widget (KLineEdit, m_ip_to_add)
-#: rc.cpp:2645
-#, fuzzy
-#| msgid ""
-#| "Invalid IP address %1. You must enter an IP address in the format 'XXX."
-#| "XXX.XXX.XXX'. You can also use wildcards for ranges like '127.0.0.*'."
-msgid ""
-"IP addresses must be in the format 'XXX.XXX.XXX.XXX'.\n"
-"                                        \n"
-"You can also use wildcards like '127.0.0.*' or specify ranges like "
-"'200.10.10.0-200.10.10.40'."
-msgstr ""
-"O enderezo IP %1 non é válido. Debe indicar un IP no formato «XXX.XXX.XXX."
-"XXX». Tamén pode usar caracteres de substitución para rangos, como «127.0.0."
-"*»."
-
-#. i18n: file: ktorrent/ipfilterwidget.ui:72
-#. i18n: ectx: property (text), widget (KPushButton, m_clear)
-#: rc.cpp:2659
-msgid "Clear"
-msgstr "Limpar"
-
-#. i18n: file: ktorrent/ipfilterwidget.ui:92
-#. i18n: ectx: property (text), widget (KPushButton, m_open)
-#: rc.cpp:2662
-msgid "Open..."
-msgstr "Abrir..."
-
-#. i18n: file: ktorrent/ipfilterwidget.ui:99
-#. i18n: ectx: property (text), widget (KPushButton, m_save_as)
-#: rc.cpp:2665
-msgid "Save As..."
-msgstr "Gardar como..."
 
 #. i18n: file: plasma/applet/appletconfig.ui:21
 #. i18n: ectx: property (text), widget (QLabel, label)
