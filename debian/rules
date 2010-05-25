@@ -2,11 +2,6 @@
 
 #DEB_KDE_LINK_WITH_AS_NEEDED := yes
 
-ifneq (,$(shell which tg))
-QUILT_PATCH_DIR := debian/patches
-include /usr/share/topgit/tg2quilt.mk
-endif
-
 override_dh_auto_configure:
 	dh_auto_configure -Skde -- -DCMAKE_USE_RELATIVE_PATHS=ON \
 	                           -DWITH_SYSTEM_GEOIP:BOOL=ON
