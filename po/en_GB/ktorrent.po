@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-05-09 01:27+0200\n"
-"PO-Revision-Date: 2010-03-28 14:38+0100\n"
+"POT-Creation-Date: 2010-06-07 01:29+0200\n"
+"PO-Revision-Date: 2010-06-04 20:33+0100\n"
 "Last-Translator: Andrew Coles <andrew_coles@yahoo.co.uk>\n"
 "Language-Team: British English <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -1506,7 +1506,7 @@ msgstr "Home"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: plugins/search/homepage.cpp:118 ktorrent/main.cpp:85 rc.cpp:1608
+#: plugins/search/homepage.cpp:118 ktorrent/main.cpp:88 rc.cpp:1608
 msgid "KTorrent"
 msgstr "KTorrent"
 
@@ -1554,10 +1554,8 @@ msgid " Engine: "
 msgstr " Engine: "
 
 #: plugins/search/htmlpart.cpp:94
-#, fuzzy
-#| msgid "Do you want to download or save the torrent?"
 msgid "Do you want to download this magnet link?"
-msgstr "Do you want to download this magnet link ?"
+msgstr "Do you want to download this magnet link?"
 
 #: plugins/search/htmlpart.cpp:201
 msgid "Do you want to download or save the torrent?"
@@ -1833,7 +1831,7 @@ msgstr "File Exists"
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:34
 #: plugins/ipfilter/ipfilterplugin.cpp:60
-#: plugins/ipfilter/ipfilterplugin.cpp:73 ktorrent/gui.cpp:419
+#: plugins/ipfilter/ipfilterplugin.cpp:73 ktorrent/gui.cpp:421
 msgid "IP Filter"
 msgstr "IP Filter"
 
@@ -1868,10 +1866,8 @@ msgid "Never"
 msgstr "Never"
 
 #: plugins/magnetgenerator/magnetgeneratorplugin.cpp:49
-#, fuzzy
-#| msgid "Stop Magnet"
 msgid "Copy Magnet URI"
-msgstr "Stop Magnet"
+msgstr "Copy Magnet URI"
 
 #: plugins/magnetgenerator/magnetgeneratorplugin.cpp:143
 #: ktorrent/torrentactivity.cpp:78
@@ -1880,13 +1876,13 @@ msgstr "Magnet"
 
 #: plugins/magnetgenerator/magnetgeneratorplugin.cpp:143
 msgid "Magnet link copied to clipboard"
-msgstr ""
+msgstr "Magnet link copied to clipboard"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:32
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_x2)
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.cpp:35 rc.cpp:1323
 msgid "Magnet Generator"
-msgstr ""
+msgstr "Magnet Generator"
 
 #: ktupnptest/main.cpp:39
 msgid "KTUPnPTest"
@@ -1930,10 +1926,7 @@ msgid "Timeout occurred"
 msgstr "Timeout occurred"
 
 #: ktorrent/core.cpp:169
-#, fuzzy, kde-format
-#| msgid ""
-#| "KTorrent is unable to accept connections because the ports %1 to %2 are "
-#| "already in use by another program."
+#, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the TCP ports %1 is already "
 "in use by another program."
@@ -2312,7 +2305,7 @@ msgstr "Move Data"
 
 #: ktorrent/view/viewmanager.cpp:645
 msgid "Move Data When Completed"
-msgstr ""
+msgstr "Move Data When Completed"
 
 #: ktorrent/view/viewmanager.cpp:649
 msgid "Remove from Group"
@@ -2409,7 +2402,7 @@ msgstr "Checked %v of %m chunks"
 #: ktorrent/view/scanextender.cpp:108
 #, kde-format
 msgid "<font color=\"red\">%1</font>"
-msgstr ""
+msgstr "<font color=\"red\">%1</font>"
 
 #: ktorrent/view/viewmodel.cpp:438
 #: libktcore/torrent/torrentfiletreemodel.cpp:400
@@ -2599,68 +2592,66 @@ msgstr "Choose a file"
 msgid "Choose a filename to save under"
 msgstr "Choose a filename to save under"
 
-#: ktorrent/gui.cpp:228 ktorrent/gui.cpp:243
+#: ktorrent/gui.cpp:230 ktorrent/gui.cpp:245
 msgid "Torrent Files"
 msgstr "Torrent Files"
 
-#: ktorrent/gui.cpp:228 ktorrent/gui.cpp:243
+#: ktorrent/gui.cpp:230 ktorrent/gui.cpp:245
 msgid "All Files"
 msgstr "All Files"
 
-#: ktorrent/gui.cpp:229 ktorrent/gui.cpp:244
+#: ktorrent/gui.cpp:231 ktorrent/gui.cpp:246
 msgid "Open Location"
 msgstr "Open Location"
 
-#: ktorrent/gui.cpp:315 ktorrent/dialogs/pastedialog.cpp:105
+#: ktorrent/gui.cpp:317 ktorrent/dialogs/pastedialog.cpp:105
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "Invalid URL: %1"
 
-#: ktorrent/gui.cpp:376
+#: ktorrent/gui.cpp:378
 msgid "Create a new torrent"
 msgstr "Create a new torrent"
 
-#: ktorrent/gui.cpp:378
+#: ktorrent/gui.cpp:380
 msgid "Open a torrent"
 msgstr "Open a torrent"
 
-#: ktorrent/gui.cpp:381
+#: ktorrent/gui.cpp:383
 msgid "Open Silently"
 msgstr "Open Silently"
 
-#: ktorrent/gui.cpp:382
+#: ktorrent/gui.cpp:384
 msgid "Open a torrent without asking any questions"
 msgstr "Open a torrent without asking any questions"
 
-#: ktorrent/gui.cpp:396
+#: ktorrent/gui.cpp:398
 msgid "Start All"
 msgstr "Start All"
 
-#: ktorrent/gui.cpp:397
+#: ktorrent/gui.cpp:399
 msgid "Start all torrents"
 msgstr "Start all torrents"
 
-#: ktorrent/gui.cpp:401
+#: ktorrent/gui.cpp:403
 msgid "Stop All"
 msgstr "Stop All"
 
-#: ktorrent/gui.cpp:402
+#: ktorrent/gui.cpp:404
 msgid "Stop all torrents"
 msgstr "Stop all torrents"
 
-#: ktorrent/gui.cpp:406
+#: ktorrent/gui.cpp:408
 msgid "Open URL"
 msgstr "Open URL"
 
-#: ktorrent/gui.cpp:407
+#: ktorrent/gui.cpp:409
 msgid "Open a URL which points to a torrent, magnet links are supported"
 msgstr "Open a URL which points to a torrent, magnet links are supported"
 
-#: ktorrent/gui.cpp:412
-#, fuzzy
-#| msgid "Suspend KTorrent"
+#: ktorrent/gui.cpp:414
 msgid "Suspend Torrents"
-msgstr "Suspend KTorrent"
+msgstr "Suspend Torrents"
 
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:99
 #. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
@@ -2670,133 +2661,131 @@ msgstr "Suspend KTorrent"
 #. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:124
 #. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
-#: ktorrent/gui.cpp:414 rc.cpp:1087 rc.cpp:1180
+#: ktorrent/gui.cpp:416 rc.cpp:1087 rc.cpp:1180
 msgid "Suspend all running torrents"
 msgstr "Suspend all running torrents"
 
-#: ktorrent/gui.cpp:420
+#: ktorrent/gui.cpp:422
 msgid "Show the list of blocked IP addresses"
 msgstr "Show the list of blocked IP addresses"
 
-#: ktorrent/gui.cpp:427
+#: ktorrent/gui.cpp:429
 msgid "Import Torrent"
 msgstr "Import Torrent"
 
-#: ktorrent/gui.cpp:428
+#: ktorrent/gui.cpp:430
 msgid "Import a torrent"
 msgstr "Import a torrent"
 
-#: ktorrent/gui.cpp:434
+#: ktorrent/gui.cpp:436
 msgid "Import KDE3 Torrents"
 msgstr "Import KDE3 Torrents"
 
-#: ktorrent/gui.cpp:435
+#: ktorrent/gui.cpp:437
 msgid "Import all torrents from the KDE3 version of KTorrent"
 msgstr "Import all torrents from the KDE3 version of KTorrent"
 
-#: ktorrent/gui.cpp:442
+#: ktorrent/gui.cpp:444
 msgid "Show/Hide KTorrent"
 msgstr "Show/Hide KTorrent"
 
-#: ktorrent/gui.cpp:447
+#: ktorrent/gui.cpp:449
 msgid "Group View Visible"
 msgstr "Group View Visible"
 
-#: ktorrent/gui.cpp:448
+#: ktorrent/gui.cpp:450
 msgid "Show or hide the group view"
 msgstr "Show or hide the group view"
 
-#: ktorrent/main.cpp:86
+#: ktorrent/main.cpp:89
 msgid "Bittorrent client for KDE"
 msgstr "Bittorrent client for KDE"
 
-#: ktorrent/main.cpp:88
-#, fuzzy
-#| msgid "(C) 2005 - 2007 Joris Guisson and Ivan Vasic"
+#: ktorrent/main.cpp:91
 msgid "(C) 2005 - 2010 Joris Guisson and Ivan Vasic"
-msgstr "(C) 2005 - 2007 Joris Guisson and Ivan Vasic"
+msgstr "(C) 2005 - 2010 Joris Guisson and Ivan Vasic"
 
-#: ktorrent/main.cpp:92
+#: ktorrent/main.cpp:95
 msgid "Joris Guisson"
 msgstr "Joris Guisson"
 
-#: ktorrent/main.cpp:93
+#: ktorrent/main.cpp:96
 msgid "Ivan Vasic"
 msgstr "Ivan Vasic"
 
-#: ktorrent/main.cpp:94
+#: ktorrent/main.cpp:97
 msgid "Alan Jones"
 msgstr "Alan Jones"
 
-#: ktorrent/main.cpp:94
+#: ktorrent/main.cpp:97
 msgid "BitFinder Plugin"
 msgstr "BitFinder Plugin"
 
-#: ktorrent/main.cpp:95
+#: ktorrent/main.cpp:98
 msgid "Diego R. Brogna"
 msgstr "Diego R. Brogna"
 
-#: ktorrent/main.cpp:95
+#: ktorrent/main.cpp:98
 msgid "Webinterface Plugin"
 msgstr "Webinterface Plugin"
 
-#: ktorrent/main.cpp:96
+#: ktorrent/main.cpp:99
 msgid "Krzysztof Kundzicz"
 msgstr "Krzysztof Kundzicz"
 
-#: ktorrent/main.cpp:96
+#: ktorrent/main.cpp:99
 msgid "Statistics Plugin"
 msgstr "Statistics Plugin"
 
-#: ktorrent/main.cpp:98
+#: ktorrent/main.cpp:101
 msgid "Mladen Babic"
 msgstr "Mladen Babic"
 
-#: ktorrent/main.cpp:98
+#: ktorrent/main.cpp:101
 msgid "Application icon and a couple of others"
 msgstr "Application icon and a couple of others"
 
-#: ktorrent/main.cpp:99
+#: ktorrent/main.cpp:102
 msgid "Adam Treat"
 msgstr "Adam Treat"
 
-#: ktorrent/main.cpp:100
+#: ktorrent/main.cpp:103
 msgid "Danny Allen"
 msgstr "Danny Allen"
 
-#: ktorrent/main.cpp:100
+#: ktorrent/main.cpp:103
 msgid "1.0 application icon"
 msgstr "1.0 application icon"
 
-#: ktorrent/main.cpp:101
+#: ktorrent/main.cpp:104
 msgid "Vincent Wagelaar"
 msgstr "Vincent Wagelaar"
 
-#: ktorrent/main.cpp:102
+#: ktorrent/main.cpp:105
 msgid "Knut Morten Johansson"
 msgstr "Knut Morten Johansson"
 
-#: ktorrent/main.cpp:103
+#: ktorrent/main.cpp:106
 msgid "Felix Berger"
 msgstr "Felix Berger"
 
-#: ktorrent/main.cpp:103
+#: ktorrent/main.cpp:106
 msgid "ChunkBar's tooltip and IWFileTreeItem sorting"
 msgstr "ChunkBar's tooltip and IWFileTreeItem sorting"
 
-#: ktorrent/main.cpp:104
+#: ktorrent/main.cpp:107
 msgid "Andreas Kling"
 msgstr "Andreas Kling"
 
-#: ktorrent/main.cpp:105
+#: ktorrent/main.cpp:108
 msgid "Felipe Sateler"
 msgstr "Felipe Sateler"
 
-#: ktorrent/main.cpp:106
+#: ktorrent/main.cpp:109
 msgid "Maxmind"
 msgstr "Maxmind"
 
-#: ktorrent/main.cpp:106
+#: ktorrent/main.cpp:109
 msgid ""
 "Country locator for InfoWidget plugin. Flags are taken from http://flags."
 "blogpotato.de/ so thanks to them too."
@@ -2804,247 +2793,247 @@ msgstr ""
 "Country locator for InfoWidget plugin. Flags are taken from http://flags."
 "blogpotato.de/ so thanks to them too."
 
-#: ktorrent/main.cpp:107
+#: ktorrent/main.cpp:110
 msgid "Adam Forsyth"
 msgstr "Adam Forsyth"
 
-#: ktorrent/main.cpp:107
+#: ktorrent/main.cpp:110
 msgid "File prioritization and some other patches"
 msgstr "File prioritisation and some other patches"
 
-#: ktorrent/main.cpp:108
+#: ktorrent/main.cpp:111
 msgid "Thomas Bernard"
 msgstr "Thomas Bernard"
 
-#: ktorrent/main.cpp:108
+#: ktorrent/main.cpp:111
 msgid "Miniupnp was used as an example for our own UPnP implementation"
 msgstr "Miniupnp was used as an example for our own UPnP implementation"
 
-#: ktorrent/main.cpp:109
+#: ktorrent/main.cpp:112
 msgid "Diego Rosario Brogna"
 msgstr "Diego Rosario Brogna"
 
-#: ktorrent/main.cpp:109
+#: ktorrent/main.cpp:112
 msgid "Global max share ratio patch"
 msgstr "Global max share ratio patch"
 
-#: ktorrent/main.cpp:110
+#: ktorrent/main.cpp:113
 msgid "Lesly Weyts"
 msgstr "Lesly Weyts"
 
-#: ktorrent/main.cpp:110 ktorrent/main.cpp:111
+#: ktorrent/main.cpp:113 ktorrent/main.cpp:114
 msgid "Zeroconf enhancements"
 msgstr "Zeroconf enhancements"
 
-#: ktorrent/main.cpp:111
+#: ktorrent/main.cpp:114
 msgid "Kevin Andre"
 msgstr "Kevin Andre"
 
-#: ktorrent/main.cpp:112
+#: ktorrent/main.cpp:115
 msgid "Dagur Valberg Johannsson"
 msgstr "Dagur Valberg Johannsson"
 
-#: ktorrent/main.cpp:112
+#: ktorrent/main.cpp:115
 msgid "Coldmilk webgui"
 msgstr "Coldmilk webgui"
 
-#: ktorrent/main.cpp:113
+#: ktorrent/main.cpp:116
 msgid "Alexander Dymo"
 msgstr "Alexander Dymo"
 
-#: ktorrent/main.cpp:113
+#: ktorrent/main.cpp:116
 msgid "IDEAl code from KDevelop"
 msgstr "IDEAl code from KDevelop"
 
-#: ktorrent/main.cpp:114
+#: ktorrent/main.cpp:117
 msgid "Scott Wolchok"
 msgstr "Scott Wolchok"
 
-#: ktorrent/main.cpp:114
+#: ktorrent/main.cpp:117
 msgid "Conversion speed improvement in ipfilter plugin"
 msgstr "Conversion speed improvement in ipfilter plugin"
 
-#: ktorrent/main.cpp:115
+#: ktorrent/main.cpp:118
 msgid "Bryan Burns of Juniper Networks"
 msgstr "Bryan Burns of Juniper Networks"
 
-#: ktorrent/main.cpp:115
+#: ktorrent/main.cpp:118
 msgid "Discovered 2 security vulnerabilities (both are fixed)"
 msgstr "Discovered 2 security vulnerabilities (both are fixed)"
 
-#: ktorrent/main.cpp:116
+#: ktorrent/main.cpp:119
 msgid "Goten Xiao"
 msgstr "Goten Xiao"
 
-#: ktorrent/main.cpp:116
+#: ktorrent/main.cpp:119
 msgid "Patch to load silently with a save location"
 msgstr "Patch to load silently with a save location"
 
-#: ktorrent/main.cpp:117
+#: ktorrent/main.cpp:120
 msgid "Rapsys"
 msgstr "Rapsys"
 
-#: ktorrent/main.cpp:117
+#: ktorrent/main.cpp:120
 msgid "Fixes in PHP code of webinterface"
 msgstr "Fixes in PHP code of webinterface"
 
-#: ktorrent/main.cpp:118
+#: ktorrent/main.cpp:121
 msgid "Athantor"
 msgstr "Athantor"
 
-#: ktorrent/main.cpp:118
+#: ktorrent/main.cpp:121
 msgid "XFS specific disk preallocation"
 msgstr "XFS specific disk preallocation"
 
-#: ktorrent/main.cpp:119
+#: ktorrent/main.cpp:122
 msgid "twisted_fall"
 msgstr "twisted_fall"
 
-#: ktorrent/main.cpp:119
+#: ktorrent/main.cpp:122
 msgid "Patch to not show very low speeds"
 msgstr "Patch to not show very low speeds"
 
-#: ktorrent/main.cpp:120
+#: ktorrent/main.cpp:123
 msgid "Lucke"
 msgstr "Lucke"
 
-#: ktorrent/main.cpp:120
+#: ktorrent/main.cpp:123
 msgid "Patch to show potentially firewalled status"
 msgstr "Patch to show potentially firewalled status"
 
-#: ktorrent/main.cpp:121
+#: ktorrent/main.cpp:124
 msgid "Modestas Vainius"
 msgstr "Modestas Vainius"
 
-#: ktorrent/main.cpp:121
+#: ktorrent/main.cpp:124
 msgid "Several patches"
 msgstr "Several patches"
 
-#: ktorrent/main.cpp:122
+#: ktorrent/main.cpp:125
 msgid "Stefan Monov"
 msgstr "Stefan Monov"
 
-#: ktorrent/main.cpp:122
+#: ktorrent/main.cpp:125
 msgid "Patch to hide menu bar"
 msgstr "Patch to hide menu bar"
 
-#: ktorrent/main.cpp:123
+#: ktorrent/main.cpp:126
 msgid "The_Kernel"
 msgstr "The_Kernel"
 
-#: ktorrent/main.cpp:123
+#: ktorrent/main.cpp:126
 msgid "Patch to change file priorities in the webgui"
 msgstr "Patch to change file priorities in the webgui"
 
-#: ktorrent/main.cpp:124
+#: ktorrent/main.cpp:127
 msgid "Rafał Miłecki"
 msgstr "Rafał Miłecki"
 
-#: ktorrent/main.cpp:124
+#: ktorrent/main.cpp:127
 msgid "Several webgui patches"
 msgstr "Several webgui patches"
 
-#: ktorrent/main.cpp:125
+#: ktorrent/main.cpp:128
 msgid "Ozzi"
 msgstr "Ozzi"
 
-#: ktorrent/main.cpp:125
+#: ktorrent/main.cpp:128
 msgid "Fixes for several warnings"
 msgstr "Fixes for several warnings"
 
-#: ktorrent/main.cpp:126
+#: ktorrent/main.cpp:129
 msgid "Markus Brueffer"
 msgstr "Markus Brueffer"
 
-#: ktorrent/main.cpp:126
+#: ktorrent/main.cpp:129
 msgid "Patch to fix free diskspace calculation on FreeBSD"
 msgstr "Patch to fix free diskspace calculation on FreeBSD"
 
-#: ktorrent/main.cpp:127
+#: ktorrent/main.cpp:130
 msgid "Lukas Appelhans"
 msgstr "Lukas Appelhans"
 
-#: ktorrent/main.cpp:127
+#: ktorrent/main.cpp:130
 msgid "Patch to fix a crash in ChunkDownloadView"
 msgstr "Patch to fix a ChunkDownloadView crash"
 
-#: ktorrent/main.cpp:128
+#: ktorrent/main.cpp:131
 msgid "Rickard Närström"
 msgstr "Rickard Närström"
 
-#: ktorrent/main.cpp:128
+#: ktorrent/main.cpp:131
 msgid "A couple of bugfixes"
 msgstr "A couple of bug fixes"
 
-#: ktorrent/main.cpp:129
+#: ktorrent/main.cpp:132
 msgid "caruccio"
 msgstr "caruccio"
 
-#: ktorrent/main.cpp:129
+#: ktorrent/main.cpp:132
 msgid "Patch to load torrents silently from the command line"
 msgstr "Patch to load torrents silently from the command line"
 
-#: ktorrent/main.cpp:130
+#: ktorrent/main.cpp:133
 msgid "Lee Olson"
 msgstr "Lee Olson"
 
-#: ktorrent/main.cpp:130
+#: ktorrent/main.cpp:133
 msgid "New set of icons"
 msgstr "New set of icons"
 
-#: ktorrent/main.cpp:131
+#: ktorrent/main.cpp:134
 msgid "Aaron J. Seigo"
 msgstr "Aaron J. Seigo"
 
-#: ktorrent/main.cpp:131
+#: ktorrent/main.cpp:134
 msgid "Drag and drop support for plasma applet"
 msgstr "Drag and drop support for Plasma applet"
 
-#: ktorrent/main.cpp:132
+#: ktorrent/main.cpp:135
 msgid "Ian Higginson"
 msgstr "Ian Higginson"
 
-#: ktorrent/main.cpp:132
+#: ktorrent/main.cpp:135
 msgid "Patch to cleanup the plugin list"
 msgstr "Patch to cleanup the plugin list"
 
-#: ktorrent/main.cpp:133
+#: ktorrent/main.cpp:136
 msgid "Amichai Rothman"
 msgstr "Amichai Rothman"
 
-#: ktorrent/main.cpp:133
+#: ktorrent/main.cpp:136
 msgid "Patch to make the plasma applet a popup applet"
 msgstr "Patch to make the plasma applet a popup applet"
 
-#: ktorrent/main.cpp:134
+#: ktorrent/main.cpp:137
 msgid "Leo Trubach"
 msgstr "Leo Trubach"
 
-#: ktorrent/main.cpp:134
+#: ktorrent/main.cpp:137
 msgid "Patch to add support for IP ranges in IP filter dialog"
 msgstr "Patch to add support for IP ranges in IP filter dialogue"
 
-#: ktorrent/main.cpp:135
+#: ktorrent/main.cpp:138
 msgid "Andrei Barbu"
 msgstr "Andrei Barbu"
 
-#: ktorrent/main.cpp:135
+#: ktorrent/main.cpp:138
 msgid "Feature which adds the date a torrent was added"
 msgstr "Feature which adds the date a torrent was added"
 
-#: ktorrent/main.cpp:137
+#: ktorrent/main.cpp:140
 msgid "Jonas Lundqvist"
 msgstr "Jonas Lundqvist"
 
-#: ktorrent/main.cpp:137
+#: ktorrent/main.cpp:140
 msgid "Feature to disable authentication in the webinterface"
-msgstr ""
+msgstr "Feature to disable authentication in the web interface"
 
-#: ktorrent/main.cpp:140 ktmagnetdownloader/magnetdownloader.cpp:45
+#: ktorrent/main.cpp:143 ktmagnetdownloader/magnetdownloader.cpp:45
 msgid "Document to open"
 msgstr "Document to open"
 
-#: ktorrent/main.cpp:141
+#: ktorrent/main.cpp:144
 msgid "Silently open torrent given on URL"
 msgstr "Silently open torrent given on URL"
 
@@ -3057,14 +3046,7 @@ msgid "Set max download speed"
 msgstr "Set max download speed"
 
 #: ktorrent/trayicon.cpp:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "<table cellpadding='2' cellspacing='2' align='center'><tr><td><b>Speed:</"
-#| "b></td><td></td></tr><tr><td>Download: <font color='#1c9a1c'>%1</font></"
-#| "td><td>Upload: <font color='#990000'>%2</font></td></"
-#| "tr><tr><td><b>Transfer:</b></td><td></td></tr><tr><td>Download: <font "
-#| "color='#1c9a1c'>%3</font></td><td>Upload: <font color='#990000'>%4</"
-#| "font></td></tr></table>"
+#, kde-format
 msgid ""
 "<table><tr><td>Download&nbsp;speed:</td><td><font color='#1c9a1c'>%1</font></"
 "td></tr><tr><td>Upload&nbsp;speed:</td><td><font color='#990000'>%2</font></"
@@ -3072,11 +3054,11 @@ msgid ""
 "tr><tr><td>Transmitted:</td><td><font color='#990000'>%4</font></td></tr></"
 "table>"
 msgstr ""
-"<table cellpadding='2' cellspacing='2' align='center'><tr><td><b>Speed:</b></"
-"td><td></td></tr><tr><td>Download: <font color='#1c9a1c'>%1</font></"
-"td><td>Upload: <font color='#990000'>%2</font></td></tr><tr><td><b>Transfer:"
-"</b></td><td></td></tr><tr><td>Download: <font color='#1c9a1c'>%3</font></"
-"td><td>Upload: <font color='#990000'>%4</font></td></tr></table>"
+"<table><tr><td>Download&nbsp;speed:</td><td><font color='#1c9a1c'>%1</font></"
+"td></tr><tr><td>Upload&nbsp;speed:</td><td><font color='#990000'>%2</font></"
+"td></tr><tr><td>Received:</td><td><font color='#1c9a1c'>%3</font></td></"
+"tr><tr><td>Transmitted:</td><td><font color='#990000'>%4</font></td></tr></"
+"table>"
 
 #: ktorrent/trayicon.cpp:183
 #, kde-format
@@ -3715,7 +3697,7 @@ msgstr ""
 
 #: libktcore/torrent/queuemanager.cpp:129
 msgid "Limits reached."
-msgstr ""
+msgstr "Limits reached."
 
 #: libktcore/torrent/queuemanager.cpp:155
 msgid ""
@@ -4532,25 +4514,6 @@ msgstr "Which interface to use."
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:95
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_authentication)
 #: rc.cpp:274
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Scan the folder "
-#| "recursively for torrents.</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Note: "
-#| "<span style=\" font-weight:400;\">This will not be done for any folder "
-#| "named loaded.</span></p></body></html>"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -4586,9 +4549,9 @@ msgstr ""
 "p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Attention: </span>You should not disable this when the "
-"webinterface is accessible from the internet. It will allow anybody access "
-"to it.</p></body></html>"
+"weight:600;\">Attention: </span>You should not disable this when the web "
+"interface is accessible from the Internet: it will allow anybody access to "
+"it.</p></body></html>"
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:98
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_authentication)
@@ -6469,10 +6432,8 @@ msgstr "C&ancel"
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:26
 #. i18n: ectx: property (windowTitle), widget (QWidget, MagnetGeneratorPrefWidget)
 #: rc.cpp:1320
-#, fuzzy
-#| msgid "Search Preferences"
 msgid "Magnet Generator Preferences"
-msgstr "Search Preferences"
+msgstr "Magnet Generator Preferences"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:40
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_torrenttracker)
@@ -6483,54 +6444,44 @@ msgstr "Search Preferences"
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:10
 #. i18n: ectx: label, entry (torrenttracker), group (general)
 #: rc.cpp:1326 rc.cpp:1359
-#, fuzzy
-#| msgid "Cannot add a tracker to a private torrent."
 msgid "Grabs a tracker from the torrent file"
-msgstr "Cannot add a tracker to a private torrent."
+msgstr "Grabs a tracker from the torrent file"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:43
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_torrenttracker)
 #: rc.cpp:1329
-#, fuzzy
-#| msgid "Cannot add a tracker to a private torrent."
 msgid "Add a tracker from the torrent file"
-msgstr "Cannot add a tracker to a private torrent."
+msgstr "Add a tracker from the torrent file"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:50
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_customtracker)
 #: rc.cpp:1332
 msgid "Define what tracker to add"
-msgstr ""
+msgstr "Define what tracker to add"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:53
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_customtracker)
 #: rc.cpp:1335
-#, fuzzy
-#| msgid "Add Trackers"
 msgid "Add a custom tracker URL"
-msgstr "Add Trackers"
+msgstr "Add a custom tracker URL"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:60
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_tr)
 #: rc.cpp:1338
 msgid "The tracker URL that will be a part of the magnet link"
-msgstr ""
+msgstr "The tracker URL that will be a part of the magnet link"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:67
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_dn)
 #: rc.cpp:1341
-#, fuzzy
-#| msgid "Move a torrent down in the queue"
 msgid "Add the torrent name in the URI"
-msgstr "Move a torrent down in the queue"
+msgstr "Add the torrent name in the URI"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:70
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_dn)
 #: rc.cpp:1344
-#, fuzzy
-#| msgid "Add an item"
 msgid "Add name"
-msgstr "Add an item"
+msgstr "Add name"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:77
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_onlypublic)
@@ -6542,21 +6493,19 @@ msgstr "Add an item"
 #. i18n: ectx: label, entry (onlypublic), group (general)
 #: rc.cpp:1347 rc.cpp:1374
 msgid "Only enable on public torrents"
-msgstr ""
+msgstr "Only enable on public torrents"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:80
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_onlypublic)
 #: rc.cpp:1350
-#, fuzzy
-#| msgid "Displays all the webseeds of a torrent"
 msgid "Disable the menu item for private torrents"
-msgstr "Displays all the webseeds of a torrent"
+msgstr "Disable the menu item for private torrents"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:87
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_popup)
 #: rc.cpp:1353
 msgid "Give feedback in form of a popup"
-msgstr ""
+msgstr "Give feedback in form of a popup"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:90
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_popup)
@@ -6567,34 +6516,26 @@ msgstr ""
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:26
 #. i18n: ectx: label, entry (popup), group (general)
 #: rc.cpp:1356 rc.cpp:1371
-#, fuzzy
-#| msgid "Show Video"
 msgid "Show popup"
-msgstr "Show Video"
+msgstr "Show popup"
 
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:14
 #. i18n: ectx: label, entry (customtracker), group (general)
 #: rc.cpp:1362
-#, fuzzy
-#| msgid "Tracker"
 msgid "Toggles if a custom tracker is used"
-msgstr "Tracker"
+msgstr "Toggles if a custom tracker is used"
 
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:18
 #. i18n: ectx: label, entry (tr), group (general)
 #: rc.cpp:1365
-#, fuzzy
-#| msgid "Use default browser"
 msgid "The default tracker"
-msgstr "Use default browser"
+msgstr "The default tracker"
 
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:22
 #. i18n: ectx: label, entry (dn), group (general)
 #: rc.cpp:1368
-#, fuzzy
-#| msgid "Show Feed"
 msgid "Show dn"
-msgstr "Show Feed"
+msgstr "Show dn"
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, UPnPTestWidget)
@@ -6901,15 +6842,13 @@ msgstr "Use the µTorrent transport protocol (µTP)"
 #. i18n: file: ktorrent/pref/networkpref.ui:282
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_onlyUseUtp)
 #: rc.cpp:1518
-#, fuzzy
 msgid ""
 "Don't use TCP for bittorrent connections, only use the µTP protocol. This "
 "can lead to slower speeds, seeing that not all bittorrent clients support "
 "µTP."
 msgstr ""
-"Don't use TCP for bittorrent connections, only use the µTP protocol. This "
-"can lead to slower speeds, seeing that not all bittorrent clients support "
-"µTP."
+"Do not use TCP for bittorrent connections, only use the µTP protocol. This "
+"can lead to slower speeds, as that not all bittorrent clients support µTP."
 
 #. i18n: file: ktorrent/pref/networkpref.ui:285
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_onlyUseUtp)
@@ -8672,10 +8611,8 @@ msgstr "Close"
 #. i18n: file: ktorrent/view/scanextender.ui:242
 #. i18n: ectx: property (text), widget (QLabel, error_msg)
 #: rc.cpp:2209
-#, fuzzy
-#| msgid "Error: "
 msgid "Errors:"
-msgstr "Error: "
+msgstr "Errors:"
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:22
 #. i18n: ectx: property (text), widget (QCheckBox, move_on_completion_enabled)
@@ -8686,10 +8623,8 @@ msgstr "Error: "
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:45
 #. i18n: ectx: property (text), widget (QCheckBox, m_moveCompleted)
 #: rc.cpp:2215 rc.cpp:2433
-#, fuzzy
-#| msgid "Move completed downloads to:"
 msgid "Move when completed to:"
-msgstr "Move completed downloads to:"
+msgstr "Move when completed to:"
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, GroupPolicyDlg)
@@ -9070,12 +9005,12 @@ msgstr "Select Which Files You Want to Download"
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:42
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_moveCompleted)
 #: rc.cpp:2430
-#, fuzzy
-#| msgid "Directory to move data to when a torrent has finished downloading."
 msgid ""
 "Moves the files to the specified location when the torrent finishes "
 "downloading."
-msgstr "Directory to move data to when a torrent has finished downloading."
+msgstr ""
+"Moves the files to the specified location when the torrent finishes "
+"downloading."
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:76
 #. i18n: ectx: property (text), widget (QLabel, label)

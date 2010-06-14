@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2010-05-09 01:27+0200\n"
-"PO-Revision-Date: 2010-04-27 09:18+0200\n"
-"Last-Translator: Dalibor Djuric <daliborddjuric@gmail.com>\n"
+"PO-Revision-Date: 2010-05-24 18:10+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -1618,10 +1618,8 @@ msgid " Engine: "
 msgstr " Претраживач: "
 
 #: plugins/search/htmlpart.cpp:94
-#, fuzzy
-#| msgid "Do you want to download this magnet link ?"
 msgid "Do you want to download this magnet link?"
-msgstr "Желите ли да преузмете ову магнетске везу?"
+msgstr "Желите ли да преузмете ову магнетску везу?"
 
 #: plugins/search/htmlpart.cpp:201
 msgid "Do you want to download or save the torrent?"
@@ -1941,10 +1939,8 @@ msgid "Never"
 msgstr "никад"
 
 #: plugins/magnetgenerator/magnetgeneratorplugin.cpp:49
-#, fuzzy
-#| msgid "Stop Magnet"
 msgid "Copy Magnet URI"
-msgstr "Заустави магнет"
+msgstr "Копирај магнетски УРИ"
 
 #: plugins/magnetgenerator/magnetgeneratorplugin.cpp:143
 #: ktorrent/torrentactivity.cpp:78
@@ -1953,13 +1949,13 @@ msgstr "Магнет"
 
 #: plugins/magnetgenerator/magnetgeneratorplugin.cpp:143
 msgid "Magnet link copied to clipboard"
-msgstr ""
+msgstr "Магнетска веза копирана у клипборд"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:32
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_x2)
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.cpp:35 rc.cpp:1323
 msgid "Magnet Generator"
-msgstr ""
+msgstr "Генератор магнета"
 
 #: ktupnptest/main.cpp:39
 msgid "KTUPnPTest"
@@ -2485,7 +2481,7 @@ msgstr "Проверено %v од %m парчића"
 #: ktorrent/view/scanextender.cpp:108
 #, kde-format
 msgid "<font color=\"red\">%1</font>"
-msgstr ""
+msgstr "<font color=\"red\">%1</font>"
 
 # >> @title:column
 #: ktorrent/view/viewmodel.cpp:438
@@ -4551,25 +4547,6 @@ msgstr "Које сучеље се користи."
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:95
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_authentication)
 #: rc.cpp:274
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Scan the folder "
-#| "recursively for torrents.</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Note: "
-#| "<span style=\" font-weight:400;\">This will not be done for any folder "
-#| "named loaded.</span></p></body></html>"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -4590,16 +4567,16 @@ msgid ""
 "webinterface is accessible from the internet. It will allow anybody access "
 "to it.</p></body></html>"
 msgstr ""
-"<html><p>Потражи торенте рекурзивно у фасцикли.</p><p><b>Напомена</b>: Ово "
-"се неће радити за било коју фасциклу по имену „учитана“.</p></html>"
+"<html><p>Ако је укључено <interface>Неопходно пријављивање</interface>, "
+"морате задати корисничко име и лозинку.</p><p><b>Пажња</b>: Ово не треба да "
+"искључујете када је веб сучеље доступно преко Интернета, јер бисте онда "
+"свима дозволили приступ.</p></html>"
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:98
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_authentication)
 #: rc.cpp:283
-#, fuzzy
-#| msgid "Required:"
 msgid "Login required"
-msgstr "Потребно:"
+msgstr "Неопходно пријављивање"
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:105
 #. i18n: ectx: property (text), widget (QLabel, textLabel5)
@@ -6410,10 +6387,8 @@ msgstr "&Откажи"
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:26
 #. i18n: ectx: property (windowTitle), widget (QWidget, MagnetGeneratorPrefWidget)
 #: rc.cpp:1320
-#, fuzzy
-#| msgid "Search Preferences"
 msgid "Magnet Generator Preferences"
-msgstr "Поставке претраге"
+msgstr "Поставке генератора магнета"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:40
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_torrenttracker)
@@ -6430,46 +6405,38 @@ msgstr "Узима пратиоце из торент фајла"
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:43
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_torrenttracker)
 #: rc.cpp:1329
-#, fuzzy
-#| msgid "Cannot load the torrent file : %1"
 msgid "Add a tracker from the torrent file"
-msgstr "Не могу да учитам торент: %1"
+msgstr "Додај пратилац из торент фајла"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:50
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_customtracker)
 #: rc.cpp:1332
 msgid "Define what tracker to add"
-msgstr ""
+msgstr "Дефинишите пратилац који се додаје"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:53
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_customtracker)
 #: rc.cpp:1335
-#, fuzzy
-#| msgid "Invalid tracker URL"
 msgid "Add a custom tracker URL"
-msgstr "Неисправан УРЛ пратиоца"
+msgstr "Додај посебан УРЛ пратиоца"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:60
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_tr)
 #: rc.cpp:1338
 msgid "The tracker URL that will be a part of the magnet link"
-msgstr ""
+msgstr "УРЛ пратиоца који ће бити део магнетске везе"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:67
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_dn)
 #: rc.cpp:1341
-#, fuzzy
-#| msgid "Move a torrent down in the queue"
 msgid "Add the torrent name in the URI"
-msgstr "Помера торент надоле у редоследу"
+msgstr "Додај име торента у УРИ"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:70
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_dn)
 #: rc.cpp:1344
-#, fuzzy
-#| msgid "Add an item"
 msgid "Add name"
-msgstr "Додај ставку"
+msgstr "Додај име"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:77
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_onlypublic)
@@ -6481,21 +6448,20 @@ msgstr "Додај ставку"
 #. i18n: ectx: label, entry (onlypublic), group (general)
 #: rc.cpp:1347 rc.cpp:1374
 msgid "Only enable on public torrents"
-msgstr ""
+msgstr "Укључи само за јавне торенте"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:80
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_onlypublic)
 #: rc.cpp:1350
-#, fuzzy
-#| msgid "Displays all the webseeds of a torrent"
 msgid "Disable the menu item for private torrents"
-msgstr "Сва веб сејања торента"
+msgstr "Искључи ставку менија за приватне торенте"
 
+# skip-rule: form
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:87
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_popup)
 #: rc.cpp:1353
 msgid "Give feedback in form of a popup"
-msgstr ""
+msgstr "Пружи одзив у облику искакача"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:90
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_popup)
@@ -6506,32 +6472,27 @@ msgstr ""
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:26
 #. i18n: ectx: label, entry (popup), group (general)
 #: rc.cpp:1356 rc.cpp:1371
-#, fuzzy
-#| msgid "Show Video"
 msgid "Show popup"
-msgstr "Прикажи видео"
+msgstr "Прикажи искакач"
 
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:14
 #. i18n: ectx: label, entry (customtracker), group (general)
 #: rc.cpp:1362
 msgid "Toggles if a custom tracker is used"
-msgstr ""
+msgstr "Да ли се користи посебан пратилац"
 
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:18
 #. i18n: ectx: label, entry (tr), group (general)
 #: rc.cpp:1365
-#, fuzzy
-#| msgid "Use default browser"
 msgid "The default tracker"
-msgstr "Подразумевани прегледач"
+msgstr "Подразумевани пратилац"
 
+# >> dn= is a keyword inside magnet link
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:22
 #. i18n: ectx: label, entry (dn), group (general)
 #: rc.cpp:1368
-#, fuzzy
-#| msgid "Show Feed"
 msgid "Show dn"
-msgstr "Прикажи довод"
+msgstr "Прикажи dn"
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, UPnPTestWidget)
@@ -8287,10 +8248,8 @@ msgstr "Затвори"
 #. i18n: file: ktorrent/view/scanextender.ui:242
 #. i18n: ectx: property (text), widget (QLabel, error_msg)
 #: rc.cpp:2209
-#, fuzzy
-#| msgid "Error"
 msgid "Errors:"
-msgstr "Грешка"
+msgstr "Грешке:"
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:22
 #. i18n: ectx: property (text), widget (QCheckBox, move_on_completion_enabled)
