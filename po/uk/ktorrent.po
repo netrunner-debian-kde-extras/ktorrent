@@ -9,16 +9,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-05-09 01:27+0200\n"
-"PO-Revision-Date: 2010-04-29 18:35+0300\n"
+"POT-Creation-Date: 2010-06-07 01:29+0200\n"
+"PO-Revision-Date: 2010-06-11 17:09+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n%"
+"10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 1.1\n"
 
 #: plugins/scanfolder/scanfolderplugin.cpp:62
 #: plugins/scanfolder/scanfolderplugin.cpp:71
@@ -81,6 +81,9 @@ msgstr[1] ""
 msgstr[2] ""
 "%2\n"
 "%1 активних фільтрів"
+msgstr[3] ""
+"%2\n"
+"%1 активний фільтр"
 
 #: plugins/syndication/feedlist.cpp:177 plugins/scripting/scriptmodel.cpp:178
 #, kde-format
@@ -1150,6 +1153,9 @@ msgstr[1] ""
 msgstr[2] ""
 "Якщо ви це зробите, буде втрачено всі дані з цих файлів, ви впевнені у своїх "
 "діях?"
+msgstr[3] ""
+"Якщо ви це зробите, буде втрачено всі дані з цього файла, ви впевнені у "
+"своїх діях?"
 
 #: plugins/infowidget/fileview.cpp:320 plugins/infowidget/fileview.cpp:341
 #: ktorrent/view/view.cpp:340
@@ -1517,7 +1523,7 @@ msgstr "Домівка"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: plugins/search/homepage.cpp:118 ktorrent/main.cpp:85 rc.cpp:1608
+#: plugins/search/homepage.cpp:118 ktorrent/main.cpp:88 rc.cpp:1608
 msgid "KTorrent"
 msgstr "KTorrent"
 
@@ -1841,7 +1847,7 @@ msgstr "Файл існує"
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:34
 #: plugins/ipfilter/ipfilterplugin.cpp:60
-#: plugins/ipfilter/ipfilterplugin.cpp:73 ktorrent/gui.cpp:419
+#: plugins/ipfilter/ipfilterplugin.cpp:73 ktorrent/gui.cpp:421
 msgid "IP Filter"
 msgstr "Фільтр IP"
 
@@ -2020,6 +2026,9 @@ msgstr[1] ""
 msgstr[2] ""
 "Програмою KTorrent знайдено %1 торентів з KTorrent версії KDE3; хочете їх "
 "імпортувати?"
+msgstr[3] ""
+"Програмою KTorrent знайдено %1 торент з KTorrent версії KDE3; хочете їх "
+"імпортувати?"
 
 #: ktorrent/core.cpp:1370
 msgid "No torrents from the KDE3 version were found."
@@ -2068,6 +2077,7 @@ msgid_plural " corrupted chunks"
 msgstr[0] " пошкоджений шматок"
 msgstr[1] " пошкоджених шматки"
 msgstr[2] " пошкоджених шматків"
+msgstr[3] " пошкоджений шматок"
 
 #: ktorrent/pref/btpref.cpp:33
 msgid " corrupted chunks"
@@ -2606,65 +2616,65 @@ msgstr "Виберіть файл"
 msgid "Choose a filename to save under"
 msgstr "Виберіть назву файла для збереження"
 
-#: ktorrent/gui.cpp:228 ktorrent/gui.cpp:243
+#: ktorrent/gui.cpp:230 ktorrent/gui.cpp:245
 msgid "Torrent Files"
 msgstr "Файли торентів"
 
-#: ktorrent/gui.cpp:228 ktorrent/gui.cpp:243
+#: ktorrent/gui.cpp:230 ktorrent/gui.cpp:245
 msgid "All Files"
 msgstr "Всі файли"
 
-#: ktorrent/gui.cpp:229 ktorrent/gui.cpp:244
+#: ktorrent/gui.cpp:231 ktorrent/gui.cpp:246
 msgid "Open Location"
 msgstr "Відкрити адресу"
 
-#: ktorrent/gui.cpp:315 ktorrent/dialogs/pastedialog.cpp:105
+#: ktorrent/gui.cpp:317 ktorrent/dialogs/pastedialog.cpp:105
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "Некоректна адреса URL: %1"
 
-#: ktorrent/gui.cpp:376
+#: ktorrent/gui.cpp:378
 msgid "Create a new torrent"
 msgstr "Створити новий торент"
 
-#: ktorrent/gui.cpp:378
+#: ktorrent/gui.cpp:380
 msgid "Open a torrent"
 msgstr "Відкрити торент"
 
-#: ktorrent/gui.cpp:381
+#: ktorrent/gui.cpp:383
 msgid "Open Silently"
 msgstr "Відкрити тихо"
 
-#: ktorrent/gui.cpp:382
+#: ktorrent/gui.cpp:384
 msgid "Open a torrent without asking any questions"
 msgstr "Відкрити торент, ні про що не запитуючи"
 
-#: ktorrent/gui.cpp:396
+#: ktorrent/gui.cpp:398
 msgid "Start All"
 msgstr "Запустити всі"
 
-#: ktorrent/gui.cpp:397
+#: ktorrent/gui.cpp:399
 msgid "Start all torrents"
 msgstr "Запустити всі торенти"
 
-#: ktorrent/gui.cpp:401
+#: ktorrent/gui.cpp:403
 msgid "Stop All"
 msgstr "Зупинити всі"
 
-#: ktorrent/gui.cpp:402
+#: ktorrent/gui.cpp:404
 msgid "Stop all torrents"
 msgstr "Зупинити всі торенти"
 
-#: ktorrent/gui.cpp:406
+#: ktorrent/gui.cpp:408
 msgid "Open URL"
 msgstr "Відкрити адресу URL"
 
-#: ktorrent/gui.cpp:407
+#: ktorrent/gui.cpp:409
 msgid "Open a URL which points to a torrent, magnet links are supported"
 msgstr ""
 "Відкрити адресу URL, яка вказує на торент, підтримуються маґнет-посилання"
 
-#: ktorrent/gui.cpp:412
+#: ktorrent/gui.cpp:414
 msgid "Suspend Torrents"
 msgstr "Приспати торенти"
 
@@ -2676,131 +2686,131 @@ msgstr "Приспати торенти"
 #. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:124
 #. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
-#: ktorrent/gui.cpp:414 rc.cpp:1087 rc.cpp:1180
+#: ktorrent/gui.cpp:416 rc.cpp:1087 rc.cpp:1180
 msgid "Suspend all running torrents"
 msgstr "Приспати всі торенти, що обробляються"
 
-#: ktorrent/gui.cpp:420
+#: ktorrent/gui.cpp:422
 msgid "Show the list of blocked IP addresses"
 msgstr "Показати список заблокованих адрес IP"
 
-#: ktorrent/gui.cpp:427
+#: ktorrent/gui.cpp:429
 msgid "Import Torrent"
 msgstr "Імпортувати торент"
 
-#: ktorrent/gui.cpp:428
+#: ktorrent/gui.cpp:430
 msgid "Import a torrent"
 msgstr "Імпортувати торент"
 
-#: ktorrent/gui.cpp:434
+#: ktorrent/gui.cpp:436
 msgid "Import KDE3 Torrents"
 msgstr "Імпортувати торенти KDE3"
 
-#: ktorrent/gui.cpp:435
+#: ktorrent/gui.cpp:437
 msgid "Import all torrents from the KDE3 version of KTorrent"
 msgstr "Імпортувати всі торенти з версії KDE3 KTorrent"
 
-#: ktorrent/gui.cpp:442
+#: ktorrent/gui.cpp:444
 msgid "Show/Hide KTorrent"
 msgstr "Показати / сховати KTorrent"
 
-#: ktorrent/gui.cpp:447
+#: ktorrent/gui.cpp:449
 msgid "Group View Visible"
 msgstr "Видимість перегляду груп"
 
-#: ktorrent/gui.cpp:448
+#: ktorrent/gui.cpp:450
 msgid "Show or hide the group view"
 msgstr "Показати або сховати перегляд груп"
 
-#: ktorrent/main.cpp:86
+#: ktorrent/main.cpp:89
 msgid "Bittorrent client for KDE"
 msgstr "Клієнт Bittorrent для KDE"
 
-#: ktorrent/main.cpp:88
+#: ktorrent/main.cpp:91
 msgid "(C) 2005 - 2010 Joris Guisson and Ivan Vasic"
 msgstr "© Joris Guisson і Ivan Vasic, 2005–2010"
 
-#: ktorrent/main.cpp:92
+#: ktorrent/main.cpp:95
 msgid "Joris Guisson"
 msgstr "Joris Guisson"
 
-#: ktorrent/main.cpp:93
+#: ktorrent/main.cpp:96
 msgid "Ivan Vasic"
 msgstr "Ivan Vasic"
 
-#: ktorrent/main.cpp:94
+#: ktorrent/main.cpp:97
 msgid "Alan Jones"
 msgstr "Alan Jones"
 
-#: ktorrent/main.cpp:94
+#: ktorrent/main.cpp:97
 msgid "BitFinder Plugin"
 msgstr "Додаток BitFinder"
 
-#: ktorrent/main.cpp:95
+#: ktorrent/main.cpp:98
 msgid "Diego R. Brogna"
 msgstr "Diego R. Brogna"
 
-#: ktorrent/main.cpp:95
+#: ktorrent/main.cpp:98
 msgid "Webinterface Plugin"
 msgstr "Додаток веб-інтерфейсу"
 
-#: ktorrent/main.cpp:96
+#: ktorrent/main.cpp:99
 msgid "Krzysztof Kundzicz"
 msgstr "Krzysztof Kundzicz"
 
-#: ktorrent/main.cpp:96
+#: ktorrent/main.cpp:99
 msgid "Statistics Plugin"
 msgstr "Додаток статистики"
 
-#: ktorrent/main.cpp:98
+#: ktorrent/main.cpp:101
 msgid "Mladen Babic"
 msgstr "Mladen Babic"
 
-#: ktorrent/main.cpp:98
+#: ktorrent/main.cpp:101
 msgid "Application icon and a couple of others"
 msgstr "Піктограма програми і декілька інших"
 
-#: ktorrent/main.cpp:99
+#: ktorrent/main.cpp:102
 msgid "Adam Treat"
 msgstr "Adam Treat"
 
-#: ktorrent/main.cpp:100
+#: ktorrent/main.cpp:103
 msgid "Danny Allen"
 msgstr "Danny Allen"
 
-#: ktorrent/main.cpp:100
+#: ktorrent/main.cpp:103
 msgid "1.0 application icon"
 msgstr "1.0 піктограма програми"
 
-#: ktorrent/main.cpp:101
+#: ktorrent/main.cpp:104
 msgid "Vincent Wagelaar"
 msgstr "Vincent Wagelaar"
 
-#: ktorrent/main.cpp:102
+#: ktorrent/main.cpp:105
 msgid "Knut Morten Johansson"
 msgstr "Knut Morten Johansson"
 
-#: ktorrent/main.cpp:103
+#: ktorrent/main.cpp:106
 msgid "Felix Berger"
 msgstr "Felix Berger"
 
-#: ktorrent/main.cpp:103
+#: ktorrent/main.cpp:106
 msgid "ChunkBar's tooltip and IWFileTreeItem sorting"
 msgstr "Підказка ChunkBar і впорядкування IWFileTreeItem"
 
-#: ktorrent/main.cpp:104
+#: ktorrent/main.cpp:107
 msgid "Andreas Kling"
 msgstr "Andreas Kling"
 
-#: ktorrent/main.cpp:105
+#: ktorrent/main.cpp:108
 msgid "Felipe Sateler"
 msgstr "Felipe Sateler"
 
-#: ktorrent/main.cpp:106
+#: ktorrent/main.cpp:109
 msgid "Maxmind"
 msgstr "Maxmind"
 
-#: ktorrent/main.cpp:106
+#: ktorrent/main.cpp:109
 msgid ""
 "Country locator for InfoWidget plugin. Flags are taken from http://flags."
 "blogpotato.de/ so thanks to them too."
@@ -2808,250 +2818,250 @@ msgstr ""
 "Знаходження країн для додатка InfoWidget. Прапори взято з http://flags."
 "blogpotato.de/, за що їм також дякуємо."
 
-#: ktorrent/main.cpp:107
+#: ktorrent/main.cpp:110
 msgid "Adam Forsyth"
 msgstr "Adam Forsyth"
 
-#: ktorrent/main.cpp:107
+#: ktorrent/main.cpp:110
 msgid "File prioritization and some other patches"
 msgstr "Пріоритет файлів та декілька інших латок"
 
-#: ktorrent/main.cpp:108
+#: ktorrent/main.cpp:111
 msgid "Thomas Bernard"
 msgstr "Thomas Bernard"
 
-#: ktorrent/main.cpp:108
+#: ktorrent/main.cpp:111
 msgid "Miniupnp was used as an example for our own UPnP implementation"
 msgstr ""
 "Miniupnp використовувався як приклад для нашого власного впровадження UPnP"
 
-#: ktorrent/main.cpp:109
+#: ktorrent/main.cpp:112
 msgid "Diego Rosario Brogna"
 msgstr "Diego Rosario Brogna"
 
-#: ktorrent/main.cpp:109
+#: ktorrent/main.cpp:112
 msgid "Global max share ratio patch"
 msgstr "Глобальна латка коефіцієнта вивантаження / звантаження"
 
-#: ktorrent/main.cpp:110
+#: ktorrent/main.cpp:113
 msgid "Lesly Weyts"
 msgstr "Lesly Weyts"
 
-#: ktorrent/main.cpp:110 ktorrent/main.cpp:111
+#: ktorrent/main.cpp:113 ktorrent/main.cpp:114
 msgid "Zeroconf enhancements"
 msgstr "Вдосконалення Zeroconf"
 
-#: ktorrent/main.cpp:111
+#: ktorrent/main.cpp:114
 msgid "Kevin Andre"
 msgstr "Kevin Andre"
 
-#: ktorrent/main.cpp:112
+#: ktorrent/main.cpp:115
 msgid "Dagur Valberg Johannsson"
 msgstr "Dagur Valberg Johannsson"
 
-#: ktorrent/main.cpp:112
+#: ktorrent/main.cpp:115
 msgid "Coldmilk webgui"
 msgstr "Веб-інтерфейс Coldmilk"
 
-#: ktorrent/main.cpp:113
+#: ktorrent/main.cpp:116
 msgid "Alexander Dymo"
 msgstr "Alexander Dymo"
 
-#: ktorrent/main.cpp:113
+#: ktorrent/main.cpp:116
 msgid "IDEAl code from KDevelop"
 msgstr "Код IDEAl з KDevelop"
 
-#: ktorrent/main.cpp:114
+#: ktorrent/main.cpp:117
 msgid "Scott Wolchok"
 msgstr "Scott Wolchok"
 
-#: ktorrent/main.cpp:114
+#: ktorrent/main.cpp:117
 msgid "Conversion speed improvement in ipfilter plugin"
 msgstr "Покращення швидкості перетворення у додатку ipfilter"
 
-#: ktorrent/main.cpp:115
+#: ktorrent/main.cpp:118
 msgid "Bryan Burns of Juniper Networks"
 msgstr "Bryan Burns з Juniper Networks"
 
-#: ktorrent/main.cpp:115
+#: ktorrent/main.cpp:118
 msgid "Discovered 2 security vulnerabilities (both are fixed)"
 msgstr "Виявив дві вразливості безпеки (обидві полагоджено)"
 
-#: ktorrent/main.cpp:116
+#: ktorrent/main.cpp:119
 msgid "Goten Xiao"
 msgstr "Goten Xiao"
 
-#: ktorrent/main.cpp:116
+#: ktorrent/main.cpp:119
 msgid "Patch to load silently with a save location"
 msgstr "Латка для тихого завантаження з адресою збереження"
 
-#: ktorrent/main.cpp:117
+#: ktorrent/main.cpp:120
 msgid "Rapsys"
 msgstr "Rapsys"
 
-#: ktorrent/main.cpp:117
+#: ktorrent/main.cpp:120
 msgid "Fixes in PHP code of webinterface"
 msgstr "Виправлення в коді PHP веб-інтерфейсу"
 
-#: ktorrent/main.cpp:118
+#: ktorrent/main.cpp:121
 msgid "Athantor"
 msgstr "Athantor"
 
-#: ktorrent/main.cpp:118
+#: ktorrent/main.cpp:121
 msgid "XFS specific disk preallocation"
 msgstr "Виділення диска на XFS"
 
-#: ktorrent/main.cpp:119
+#: ktorrent/main.cpp:122
 msgid "twisted_fall"
 msgstr "twisted_fall"
 
-#: ktorrent/main.cpp:119
+#: ktorrent/main.cpp:122
 msgid "Patch to not show very low speeds"
 msgstr "Латка - не показувати дуже малі швидкості"
 
-#: ktorrent/main.cpp:120
+#: ktorrent/main.cpp:123
 msgid "Lucke"
 msgstr "Lucke"
 
-#: ktorrent/main.cpp:120
+#: ktorrent/main.cpp:123
 msgid "Patch to show potentially firewalled status"
 msgstr "Латка для показу стану за брандмауером"
 
-#: ktorrent/main.cpp:121
+#: ktorrent/main.cpp:124
 msgid "Modestas Vainius"
 msgstr "Modestas Vainius"
 
-#: ktorrent/main.cpp:121
+#: ktorrent/main.cpp:124
 msgid "Several patches"
 msgstr "Декілька латок"
 
-#: ktorrent/main.cpp:122
+#: ktorrent/main.cpp:125
 msgid "Stefan Monov"
 msgstr "Stefan Monov"
 
-#: ktorrent/main.cpp:122
+#: ktorrent/main.cpp:125
 msgid "Patch to hide menu bar"
 msgstr "Латка для ховання панелі меню"
 
-#: ktorrent/main.cpp:123
+#: ktorrent/main.cpp:126
 msgid "The_Kernel"
 msgstr "The_Kernel"
 
-#: ktorrent/main.cpp:123
+#: ktorrent/main.cpp:126
 msgid "Patch to change file priorities in the webgui"
 msgstr "Латка для зміни пріоритету файлів у веб-інтерфейсі"
 
-#: ktorrent/main.cpp:124
+#: ktorrent/main.cpp:127
 msgid "Rafał Miłecki"
 msgstr "Rafał Miłecki"
 
-#: ktorrent/main.cpp:124
+#: ktorrent/main.cpp:127
 msgid "Several webgui patches"
 msgstr "Декілька латок до веб-інтерфейсу"
 
-#: ktorrent/main.cpp:125
+#: ktorrent/main.cpp:128
 msgid "Ozzi"
 msgstr "Ozzi"
 
-#: ktorrent/main.cpp:125
+#: ktorrent/main.cpp:128
 msgid "Fixes for several warnings"
 msgstr "Виправлення для декількох попереджень"
 
-#: ktorrent/main.cpp:126
+#: ktorrent/main.cpp:129
 msgid "Markus Brueffer"
 msgstr "Markus Brueffer"
 
-#: ktorrent/main.cpp:126
+#: ktorrent/main.cpp:129
 msgid "Patch to fix free diskspace calculation on FreeBSD"
 msgstr "Латка для виправлення підрахунку простору на диску в FreeBSD"
 
-#: ktorrent/main.cpp:127
+#: ktorrent/main.cpp:130
 msgid "Lukas Appelhans"
 msgstr "Lukas Appelhans"
 
-#: ktorrent/main.cpp:127
+#: ktorrent/main.cpp:130
 msgid "Patch to fix a crash in ChunkDownloadView"
 msgstr "Латка для виправлення краху в ChunkDownloadView"
 
-#: ktorrent/main.cpp:128
+#: ktorrent/main.cpp:131
 msgid "Rickard Närström"
 msgstr "Rickard Närström"
 
-#: ktorrent/main.cpp:128
+#: ktorrent/main.cpp:131
 msgid "A couple of bugfixes"
 msgstr "Пару виправлень помилок"
 
-#: ktorrent/main.cpp:129
+#: ktorrent/main.cpp:132
 msgid "caruccio"
 msgstr "caruccio"
 
-#: ktorrent/main.cpp:129
+#: ktorrent/main.cpp:132
 msgid "Patch to load torrents silently from the command line"
 msgstr "Латка для тихого завантаження торентів з командного рядка"
 
-#: ktorrent/main.cpp:130
+#: ktorrent/main.cpp:133
 msgid "Lee Olson"
 msgstr "Lee Olson"
 
-#: ktorrent/main.cpp:130
+#: ktorrent/main.cpp:133
 msgid "New set of icons"
 msgstr "Новий набір піктограм"
 
-#: ktorrent/main.cpp:131
+#: ktorrent/main.cpp:134
 msgid "Aaron J. Seigo"
 msgstr "Aaron J. Seigo"
 
-#: ktorrent/main.cpp:131
+#: ktorrent/main.cpp:134
 msgid "Drag and drop support for plasma applet"
 msgstr "Підтримка перетягування і скидання у аплеті Плазми"
 
-#: ktorrent/main.cpp:132
+#: ktorrent/main.cpp:135
 msgid "Ian Higginson"
 msgstr "Ian Higginson"
 
-#: ktorrent/main.cpp:132
+#: ktorrent/main.cpp:135
 msgid "Patch to cleanup the plugin list"
 msgstr "Латка для спорожнення списку додатків"
 
-#: ktorrent/main.cpp:133
+#: ktorrent/main.cpp:136
 msgid "Amichai Rothman"
 msgstr "Amichai Rothman"
 
-#: ktorrent/main.cpp:133
+#: ktorrent/main.cpp:136
 msgid "Patch to make the plasma applet a popup applet"
 msgstr "Латка для перетворення аплету Плазми на контекстний"
 
-#: ktorrent/main.cpp:134
+#: ktorrent/main.cpp:137
 msgid "Leo Trubach"
 msgstr "Leo Trubach"
 
-#: ktorrent/main.cpp:134
+#: ktorrent/main.cpp:137
 msgid "Patch to add support for IP ranges in IP filter dialog"
 msgstr ""
 "Латка, за допомогою якої до діалогового вікна фільтрування за IP було додано "
 "підтримку діапазонів IP"
 
-#: ktorrent/main.cpp:135
+#: ktorrent/main.cpp:138
 msgid "Andrei Barbu"
 msgstr "Andrei Barbu"
 
-#: ktorrent/main.cpp:135
+#: ktorrent/main.cpp:138
 msgid "Feature which adds the date a torrent was added"
 msgstr "Можливість показу дати додавання торента"
 
-#: ktorrent/main.cpp:137
+#: ktorrent/main.cpp:140
 msgid "Jonas Lundqvist"
 msgstr "Jonas Lundqvist"
 
-#: ktorrent/main.cpp:137
+#: ktorrent/main.cpp:140
 msgid "Feature to disable authentication in the webinterface"
 msgstr "Можливість вимикати розпізнавання у веб-інтерфейсі"
 
-#: ktorrent/main.cpp:140 ktmagnetdownloader/magnetdownloader.cpp:45
+#: ktorrent/main.cpp:143 ktmagnetdownloader/magnetdownloader.cpp:45
 msgid "Document to open"
 msgstr "Відкрити документ"
 
-#: ktorrent/main.cpp:141
+#: ktorrent/main.cpp:144
 msgid "Silently open torrent given on URL"
 msgstr " Тихо відкрити торент, вказаний в URL"
 
@@ -3149,6 +3159,7 @@ msgid_plural "Cannot seed more than %1 torrents. <br>"
 msgstr[0] "Неможливо поширювати більше за %1 торент. <br>"
 msgstr[1] "Неможливо поширювати більше за %1 торенти. <br>"
 msgstr[2] "Неможливо поширювати більше за %1 торентів. <br>"
+msgstr[3] "Неможливо поширювати більше за %1 торент. <br>"
 
 #: ktorrent/trayicon.cpp:291
 #, kde-format
@@ -3157,6 +3168,7 @@ msgid_plural "Cannot download more than %1 torrents. <br>"
 msgstr[0] "Неможливо звантажувати більше, ніж %1 торент. <br>"
 msgstr[1] "Неможливо звантажувати більше, ніж %1 торенти. <br>"
 msgstr[2] "Неможливо звантажувати більше, ніж %1 торентів. <br>"
+msgstr[3] "Неможливо звантажувати більше, ніж %1 торент. <br>"
 
 #: ktorrent/trayicon.cpp:294
 msgid "Go to Settings -> Configure KTorrent, if you want to change the limits."
@@ -3452,6 +3464,7 @@ msgid_plural "Importing %1 torrents ..."
 msgstr[0] "Імпортування %1 торента..."
 msgstr[1] "Імпортування %1 торентів..."
 msgstr[2] "Імпортування %1 торентів..."
+msgstr[3] "Імпортування %1 торента..."
 
 #: ktorrent/dialogs/torrentmigratordlg.cpp:105
 #, kde-format
@@ -9951,6 +9964,7 @@ msgstr "Максимальний час поширення у годинах (0 
 #~ msgstr[0] "%1 вузол"
 #~ msgstr[1] "%1 вузли"
 #~ msgstr[2] "%1 вузлів"
+#~ msgstr[3] "%1 вузол"
 
 #~ msgid "Not in use"
 #~ msgstr "Не використовується"
@@ -10002,6 +10016,7 @@ msgstr "Максимальний час поширення у годинах (0 
 #~ msgstr[0] "%1 день"
 #~ msgstr[1] "%1 дні"
 #~ msgstr[2] "%1 днів"
+#~ msgstr[3] "%1 день"
 
 #~ msgid "General"
 #~ msgstr "Загальні"

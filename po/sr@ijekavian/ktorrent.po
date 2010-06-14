@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2010-05-09 01:27+0200\n"
-"PO-Revision-Date: 2010-05-01 00:38+0200\n"
-"Last-Translator: Dalibor Djuric <daliborddjuric@gmail.com>\n"
+"PO-Revision-Date: 2010-05-24 18:10+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
 "MIME-Version: 1.0\n"
@@ -25,11 +25,9 @@ msgstr ""
 #: plugins/scanfolder/scanfolderplugin.cpp:62
 #: plugins/scanfolder/scanfolderplugin.cpp:71
 #: plugins/scanfolder/scanfolderprefpage.cpp:37
-#, fuzzy
-#| msgid "Scan Folder"
 msgctxt "plugin name"
 msgid "Scan Folder"
-msgstr "Претражи фасциклу"
+msgstr "Претрага фасцикле"
 
 #: plugins/scanfolder/scanfolder.cpp:72 plugins/scanfolder/scanfolder.cpp:73
 #: plugins/scanfolder/scanfolder.cpp:91 plugins/scanfolder/scanfolder.cpp:180
@@ -408,8 +406,6 @@ msgid "KTorrent is playing a video."
 msgstr "К‑торент пушта видео."
 
 #: plugins/webinterface/httpserver.cpp:332
-#, fuzzy
-#| msgid "Cannot find webinterface skins!"
 msgid "Cannot find web interface skins."
 msgstr "Не могу да нађем маске веб сучеља."
 
@@ -975,8 +971,6 @@ msgid "Info Widget"
 msgstr "Инфо виџет"
 
 #: plugins/infowidget/infowidgetplugin.cpp:83
-#, fuzzy
-#| msgid "Status"
 msgctxt "@title:tab"
 msgid "Status"
 msgstr "Стање"
@@ -985,13 +979,10 @@ msgstr "Стање"
 msgid "Displays status information about a torrent"
 msgstr "Подаци о стању торента"
 
-# >> @title:column
 #: plugins/infowidget/infowidgetplugin.cpp:85
-#, fuzzy
-#| msgid "Files"
 msgctxt "@title:tab"
 msgid "Files"
-msgstr "фајлови"
+msgstr "Фајлови"
 
 #: plugins/infowidget/infowidgetplugin.cpp:86
 msgid "Shows all the files in a torrent"
@@ -1240,11 +1231,9 @@ msgstr "приоритет"
 
 #: plugins/infowidget/iwfiletreemodel.cpp:90
 #: plugins/infowidget/iwfilelistmodel.cpp:78
-#, fuzzy
-#| msgid "Preview"
 msgctxt "@title:column"
 msgid "Preview"
-msgstr "Преглед"
+msgstr "преглед"
 
 #: plugins/infowidget/iwfiletreemodel.cpp:92
 #: plugins/infowidget/iwfilelistmodel.cpp:80
@@ -1307,23 +1296,20 @@ msgctxt "Preview available"
 msgid "Available"
 msgstr "доступан"
 
+# >! @title:window (in trackerview.cpp)
 #. i18n: file: plugins/infowidget/trackerview.ui:22
 #. i18n: ectx: property (text), widget (KPushButton, m_add_tracker)
 #: plugins/infowidget/trackerview.cpp:87 rc.cpp:637
-#, fuzzy
-#| msgid "Add Tracker"
 msgid "Add Trackers"
-msgstr "Додај пратилац"
+msgstr "Додај пратиоце"
 
 #: plugins/infowidget/trackerview.cpp:88
-#, fuzzy
-#| msgid "Enter the URL of the tracker:"
 msgid "Enter the URL's of the trackers, one per line:"
-msgstr "Унесите УРЛ пратиоца:"
+msgstr "Унесите УРЛ‑ова пратилаца, један по реду:"
 
 #: plugins/infowidget/trackerview.cpp:112
 msgid "Several URL's could not be added because they are malformed:"
-msgstr ""
+msgstr "Неколико УРЛ‑ови не може да се дода зато што су неправилни:"
 
 #: plugins/infowidget/trackerview.cpp:122
 #, kde-format
@@ -1518,10 +1504,8 @@ msgid "Open in New Tab"
 msgstr "Отвори у новом језичку"
 
 #: plugins/search/searchwidget.cpp:99
-#, fuzzy
-#| msgid "Copy Torrent URL"
 msgid "Copy URL"
-msgstr "Копирај УРЛ торента"
+msgstr "Копирај УРЛ"
 
 #: plugins/search/searchwidget.cpp:206
 #, kde-format
@@ -1538,11 +1522,9 @@ msgstr "Тражење завршено"
 
 #: plugins/search/searchprefpage.cpp:58 plugins/search/searchactivity.cpp:43
 #: plugins/search/searchplugin.cpp:67 plugins/search/searchplugin.cpp:90
-#, fuzzy
-#| msgid "Search"
 msgctxt "plugin name"
 msgid "Search"
-msgstr "Тражи"
+msgstr "Претрага"
 
 #: plugins/search/searchprefpage.cpp:104 plugins/search/searchprefpage.cpp:145
 msgid "Add a Search Engine"
@@ -1636,10 +1618,8 @@ msgid " Engine: "
 msgstr " Претраживач: "
 
 #: plugins/search/htmlpart.cpp:94
-#, fuzzy
-#| msgid "Do you want to download or save the torrent?"
 msgid "Do you want to download this magnet link?"
-msgstr "Желите ли да преузмете или сачувате торент?"
+msgstr "Желите ли да преузмете ову магнетску везу?"
 
 #: plugins/search/htmlpart.cpp:201
 msgid "Do you want to download or save the torrent?"
@@ -1732,18 +1712,14 @@ msgstr "Уреди ставку"
 msgid "Clear Schedule"
 msgstr "Очисти распоред"
 
-# skip-rule: line
 #: plugins/bwscheduler/scheduleeditor.cpp:58
-#, fuzzy
-#| msgid "Schedule line color:"
 msgid "Scheduler Active"
-msgstr "Боја линије распореда:"
+msgstr "Распоређивач активан"
 
+# >> @info:tooltip
 #: plugins/bwscheduler/scheduleeditor.cpp:59
-#, fuzzy
-#| msgid "Add a new item to the schedule"
 msgid "Activate or deactivate the scheduler"
-msgstr "Додај нову ставку у распоред"
+msgstr "Активирајте или деактивирајте распоређивач."
 
 #: plugins/bwscheduler/scheduleeditor.cpp:106
 #: plugins/bwscheduler/scheduleeditor.cpp:122
@@ -1757,26 +1733,21 @@ msgstr ""
 "Ова ставка је у сукобу са другом ставком распореда, те се не може измијенити."
 
 #: plugins/bwscheduler/weekscene.cpp:73
-#, fuzzy
-#| msgid "Current schedule: paused"
 msgid "Current schedule: suspended"
-msgstr "Тренутни распоред: паузиран"
+msgstr "Тренутни распоред: суспендован"
 
 #: plugins/bwscheduler/weekscene.cpp:75
-#, fuzzy, kde-format
-#| msgid "Current schedule: %1 KiB/s download, %2 KiB/s upload"
+#, kde-format
 msgid "Current schedule: %1/s download, %2/s upload"
 msgstr "Тренутни распоред: %1/s преузимање, %2/s слање"
 
 #: plugins/bwscheduler/weekscene.cpp:78
-#, fuzzy, kde-format
-#| msgid "Current schedule: unlimited download, %1 KiB/s upload"
+#, kde-format
 msgid "Current schedule: unlimited download, %1/s upload"
 msgstr "Тренутни распоред: неограничено преузимање, %1/s слање"
 
 #: plugins/bwscheduler/weekscene.cpp:80
-#, fuzzy, kde-format
-#| msgid "Current schedule: %1 KiB/s download, unlimited upload"
+#, kde-format
 msgid "Current schedule: %1/s download, unlimited upload"
 msgstr "Тренутни распоред: %1/s преузимање, неограничено слање"
 
@@ -1785,10 +1756,8 @@ msgid "Current schedule: unlimited upload and download"
 msgstr "Тренутни распоред: неограничено и слање и преузимање"
 
 #: plugins/bwscheduler/weekscene.cpp:85
-#, fuzzy
-#| msgid "KTorrent scheduler files"
 msgid " (scheduler disabled)"
-msgstr "Фајлови К‑торентовог распоређивача"
+msgstr " (распоређивач искључен)"
 
 #: plugins/bwscheduler/weekscene.cpp:106
 msgid "Current schedule:"
@@ -1811,10 +1780,8 @@ msgid "The file %1 is corrupted or not a proper KTorrent schedule file."
 msgstr "Фајл %1 је оштећен или није К‑торентов фајл распореда."
 
 #: plugins/bwscheduler/schedulegraphicsitem.cpp:78
-#, fuzzy
-#| msgid "Suspend Output"
 msgid "Suspended"
-msgstr "Онемогући излаз"
+msgstr "Суспендован"
 
 #: plugins/bwscheduler/schedulegraphicsitem.cpp:83
 #: plugins/bwscheduler/schedulegraphicsitem.cpp:84 ktorrent/trayicon.cpp:352
@@ -1830,13 +1797,10 @@ msgstr ""
 "%1 преузимање\n"
 "%2 слање"
 
-# >! @title:window (in shutdowndlg.cpp)
 #: plugins/shutdown/shutdowndlg.cpp:29
-#, fuzzy
-#| msgid "Configure Shutdown"
 msgctxt "@title:window"
 msgid "Configure Shutdown"
-msgstr "Подеси гашење"
+msgstr "Подешавање гашења"
 
 #. i18n: file: plugins/shutdown/ktshutdownpluginui.rc:5
 #. i18n: ectx: Menu (shutdown)
@@ -1975,25 +1939,23 @@ msgid "Never"
 msgstr "никад"
 
 #: plugins/magnetgenerator/magnetgeneratorplugin.cpp:49
-#, fuzzy
-#| msgid "Copy Torrent URL"
 msgid "Copy Magnet URI"
-msgstr "Копирај УРЛ торента"
+msgstr "Копирај магнетски УРИ"
 
 #: plugins/magnetgenerator/magnetgeneratorplugin.cpp:143
 #: ktorrent/torrentactivity.cpp:78
 msgid "Magnet"
-msgstr ""
+msgstr "Магнет"
 
 #: plugins/magnetgenerator/magnetgeneratorplugin.cpp:143
 msgid "Magnet link copied to clipboard"
-msgstr ""
+msgstr "Магнетска веза копирана у клипборд"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:32
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_x2)
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.cpp:35 rc.cpp:1323
 msgid "Magnet Generator"
-msgstr ""
+msgstr "Генератор магнета"
 
 #: ktupnptest/main.cpp:39
 msgid "KTUPnPTest"
@@ -2037,28 +1999,20 @@ msgid "Timeout occurred"
 msgstr "Истекло вријеме"
 
 #: ktorrent/core.cpp:169
-#, fuzzy, kde-format
-#| msgid ""
-#| "KTorrent is unable to accept connections because the ports %1 to %2 are "
-#| "already in use by another program."
+#, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the TCP ports %1 is already "
 "in use by another program."
 msgstr ""
-"К‑торент не може да прихвата везе јер портове %1 до %2 већ користи други "
-"програм."
+"К‑торент не може да прихвата везе јер ТЦП порт %1 већ користи други програм."
 
 #: ktorrent/core.cpp:183
-#, fuzzy, kde-format
-#| msgid ""
-#| "KTorrent is unable to accept connections because the ports %1 to %2 are "
-#| "already in use by another program."
+#, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the UDP port %1 is already "
 "in use by another program."
 msgstr ""
-"К‑торент не може да прихвата везе јер портове %1 до %2 већ користи други "
-"програм."
+"К‑торент не може да прихвата везе јер УДП порт %1 већ користи други програм."
 
 #: ktorrent/core.cpp:993
 msgid "KTorrent is running one or more torrents"
@@ -2134,13 +2088,15 @@ msgstr "Нема торената из КДЕ‑3 верзије."
 #: ktorrent/core.cpp:1389 ktorrent/core.cpp:1408
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
-msgstr ""
+msgstr "Неисправна магнетска битторент веза: %1"
 
 #: ktorrent/core.cpp:1394 ktorrent/core.cpp:1413
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
 msgstr ""
+"Покушавате да преузмете магнетску везу а ДХТ није укључен. За оптималне "
+"резултате укључите ДХТ."
 
 #: ktorrent/pref/proxypref.cpp:27
 msgid "Proxy"
@@ -2254,22 +2210,16 @@ msgstr ""
 "Редослијед мијењајте превлачењем или дугмадима горе‑доље десно."
 
 #: ktorrent/tools/queuemanagerwidget.cpp:65
-#, fuzzy
-#| msgid "Search"
 msgid "Show Search"
-msgstr "Тражи"
+msgstr "Прикажи тражења"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:66
-#, fuzzy
-#| msgid "Show or hide the group view"
 msgid "Show or hide the search bar"
-msgstr "Приказује или скрива групни приказ"
+msgstr "Приказује или скрива траку претраге"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:70
-#, fuzzy
-#| msgid "Move Up"
 msgid "Move Top"
-msgstr "Помјери нагоре"
+msgstr "Помјери на врх"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:71
 msgid "Move a torrent to the top of the queue"
@@ -2307,36 +2257,29 @@ msgstr "Помјери надоље"
 msgid "Move a torrent down in the queue"
 msgstr "Помијера торент надоле у редослиједу"
 
-# >> @option:radio
 #: ktorrent/tools/queuemanagerwidget.cpp:79
-#, fuzzy
-#| msgid "Bottom"
 msgid "Move Bottom"
-msgstr "Дно"
+msgstr "Помјери на дно"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:80
 msgid "Move a torrent to the bottom of the queue"
 msgstr "Помијера торент на дно редослиједа"
 
 #: ktorrent/tools/magnetview.cpp:42
-#, fuzzy
-#| msgid "Start torrent"
 msgid "Start Magnet"
-msgstr "Покрени торент"
+msgstr "Покрени магнет"
 
 #: ktorrent/tools/magnetview.cpp:43
 msgid "Stop Magnet"
-msgstr ""
+msgstr "Заустави магнет"
 
 #: ktorrent/tools/magnetview.cpp:45
-#, fuzzy
-#| msgid "Remove Feed"
 msgid "Remove Magnet"
-msgstr "Уклони довод"
+msgstr "Уклони магнет"
 
 #: ktorrent/tools/magnetmodel.cpp:128
 msgid "Magnet Link"
-msgstr ""
+msgstr "Магнетска веза"
 
 #: ktorrent/tools/magnetmodel.cpp:205
 msgid "Downloading"
@@ -2347,8 +2290,6 @@ msgid "Stopped"
 msgstr "Заустављен"
 
 #: ktorrent/view/viewmanager.cpp:561
-#, fuzzy
-#| msgid "Start"
 msgctxt "@action Start all selected torrents in the current tab"
 msgid "Start"
 msgstr "Покрени"
@@ -2358,8 +2299,6 @@ msgid "Start all selected torrents in the current tab"
 msgstr "Покреће све изабране торенте у текућем језичку"
 
 #: ktorrent/view/viewmanager.cpp:567
-#, fuzzy
-#| msgid "Stop"
 msgctxt "@action Stop all selected torrents in the current tab"
 msgid "Stop"
 msgstr "Заустави"
@@ -2369,21 +2308,15 @@ msgid "Stop all selected torrents in the current tab"
 msgstr "Зауставља све изабране торенте у текућем језичку"
 
 #: ktorrent/view/viewmanager.cpp:573
-#, fuzzy
-#| msgid "Pause"
 msgctxt "@action Pause all selected torrents in the current tab"
 msgid "Pause"
 msgstr "Паузирај"
 
 #: ktorrent/view/viewmanager.cpp:574
-#, fuzzy
-#| msgid "Start all selected torrents in the current tab"
 msgid "Pause all selected torrents in the current tab"
-msgstr "Покреће све изабране торенте у текућем језичку"
+msgstr "Паузира све изабране торенте у текућем језичку"
 
 #: ktorrent/view/viewmanager.cpp:578
-#, fuzzy
-#| msgid "Remove"
 msgctxt "@action Remove all selected torrents in the current tab"
 msgid "Remove"
 msgstr "Уклони"
@@ -2393,8 +2326,6 @@ msgid "Remove all selected torrents in the current tab"
 msgstr "Уклања све изабране торенте у текућем језичку"
 
 #: ktorrent/view/viewmanager.cpp:584
-#, fuzzy
-#| msgid "Start All"
 msgctxt "@action Start all torrents in the current tab"
 msgid "Start All"
 msgstr "Покрени све"
@@ -2404,8 +2335,6 @@ msgid "Start all torrents in the current tab"
 msgstr "Покреће све торенте у текућем језичку"
 
 #: ktorrent/view/viewmanager.cpp:590
-#, fuzzy
-#| msgid "Stop All"
 msgctxt "@action Stop all torrents in the current tab"
 msgid "Stop All"
 msgstr "Заустави све"
@@ -2456,7 +2385,7 @@ msgstr "Премјести податке"
 
 #: ktorrent/view/viewmanager.cpp:645
 msgid "Move Data When Completed"
-msgstr ""
+msgstr "Премјести податке када се заврши"
 
 #: ktorrent/view/viewmanager.cpp:649
 msgid "Remove from Group"
@@ -2552,7 +2481,7 @@ msgstr "Провјерено %v од %m парчића"
 #: ktorrent/view/scanextender.cpp:108
 #, kde-format
 msgid "<font color=\"red\">%1</font>"
-msgstr ""
+msgstr "<font color=\"red\">%1</font>"
 
 # >> @title:column
 #: ktorrent/view/viewmodel.cpp:438
@@ -2592,9 +2521,10 @@ msgstr "вријеме сијања"
 msgid "Location"
 msgstr "локација"
 
+# >> @title:column
 #: ktorrent/view/viewmodel.cpp:451
 msgid "Added"
-msgstr ""
+msgstr "додато"
 
 #: ktorrent/view/viewmodel.cpp:459
 msgid "How much data we have downloaded of the torrent"
@@ -2661,18 +2591,13 @@ msgstr "Колико дуго се торент већ сије"
 msgid "The location of the torrent's data on disk"
 msgstr "Локација података торента на диску"
 
-# >> @item:inlistbox
 #: ktorrent/view/viewmodel.cpp:473
-#, fuzzy
-#| msgid "When all torrents finish seeding"
 msgid "When this torrent was added"
-msgstr "по завршеном сијању свих торената"
+msgstr "Када је додат овај торент"
 
 #: ktorrent/view/viewmodel.cpp:519
-#, fuzzy
-#| msgid "Timeout contacting tracker %1"
 msgid "Unable to contact a tracker."
-msgstr "Истекло вријеме за контактирање пратиоца %1"
+msgstr "Не могу да контактирам пратилац."
 
 #: ktorrent/view/viewmodel.cpp:525
 #, kde-format
@@ -2728,17 +2653,16 @@ msgid "IP Filter List"
 msgstr "Списак ИП филтера"
 
 #: ktorrent/ipfilterwidget.cpp:103
-#, fuzzy, kde-format
-#| msgid ""
-#| "Invalid IP address %1. You must enter an IP address in the format 'XXX."
-#| "XXX.XXX.XXX'. You can also use wildcards for ranges like '127.0.0.*'."
+#, kde-format
 msgid ""
 "Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
 "XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
 "ranges like '200.10.10.0-200.10.10.40'."
 msgstr ""
-"Неисправна ИП адреса %1. Морате унети ИП адресу у облику „XXX.XXX.XXX.XXX“. "
-"Такође можете користити џокере за опсеге, нпр. „127.0.0.*“."
+"<html><p>Лоша ИП адреса <b>%1</b>. ИП адресе морају бити облика <icode>XXX."
+"XXX.XXX.XXX</icode>.</p><p>Такође можете користити џокере, нпр. "
+"<icode>127.0.0.*</icode>, и задавати опсеге, нпр. "
+"<icode>200.10.10.0-200.10.10.40</icode>.</p></html>"
 
 #: ktorrent/ipfilterwidget.cpp:135
 msgid "Choose a file"
@@ -2802,16 +2726,12 @@ msgid "Open URL"
 msgstr "Отвори УРЛ"
 
 #: ktorrent/gui.cpp:407
-#, fuzzy
-#| msgid "Open a URL which points to a torrent"
 msgid "Open a URL which points to a torrent, magnet links are supported"
-msgstr "Отвара УРЛ који показује на торент"
+msgstr "Отвара УРЛ који показује на торент, магнетске везе су подржане"
 
 #: ktorrent/gui.cpp:412
-#, fuzzy
-#| msgid "Ungrouped Torrents"
 msgid "Suspend Torrents"
-msgstr "Негруписани торенти"
+msgstr "Суспендуј торенте"
 
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:99
 #. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
@@ -2822,10 +2742,8 @@ msgstr "Негруписани торенти"
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:124
 #. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
 #: ktorrent/gui.cpp:414 rc.cpp:1087 rc.cpp:1180
-#, fuzzy
-#| msgid "Pause all running torrents"
 msgid "Suspend all running torrents"
-msgstr "Паузирај све покренуте торенте"
+msgstr "Суспендуј све покренуте торенте"
 
 #: ktorrent/gui.cpp:420
 msgid "Show the list of blocked IP addresses"
@@ -2864,10 +2782,8 @@ msgid "Bittorrent client for KDE"
 msgstr "Битторент клијент за КДЕ"
 
 #: ktorrent/main.cpp:88
-#, fuzzy
-#| msgid "(C) 2005 - 2007 Joris Guisson and Ivan Vasic"
 msgid "(C) 2005 - 2010 Joris Guisson and Ivan Vasic"
-msgstr "© 2005–2007, Јорис Гисон и Иван Васић"
+msgstr "© 2005–2010, Јорис Гисон и Иван Васић"
 
 #: ktorrent/main.cpp:92
 msgid "Joris Guisson"
@@ -3173,27 +3089,27 @@ msgstr "Закрпа за претварање плазма аплета у ис
 
 #: ktorrent/main.cpp:134
 msgid "Leo Trubach"
-msgstr ""
+msgstr "Лав Трубач"
 
 #: ktorrent/main.cpp:134
 msgid "Patch to add support for IP ranges in IP filter dialog"
-msgstr ""
+msgstr "Закрпа за подршку ИП опсега у дијалогу филтрирања ИП‑ова"
 
 #: ktorrent/main.cpp:135
 msgid "Andrei Barbu"
-msgstr ""
+msgstr "Андреј Барбу"
 
 #: ktorrent/main.cpp:135
 msgid "Feature which adds the date a torrent was added"
-msgstr ""
+msgstr "Могућност која додаје датум када је торент додат"
 
 #: ktorrent/main.cpp:137
 msgid "Jonas Lundqvist"
-msgstr ""
+msgstr "Јонас Лундквист"
 
 #: ktorrent/main.cpp:137
 msgid "Feature to disable authentication in the webinterface"
-msgstr ""
+msgstr "Могућност искључења аутентификације у веб сучељу"
 
 #: ktorrent/main.cpp:140 ktmagnetdownloader/magnetdownloader.cpp:45
 msgid "Document to open"
@@ -3212,14 +3128,7 @@ msgid "Set max download speed"
 msgstr "Постави највећу брзину преузимања"
 
 #: ktorrent/trayicon.cpp:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "<table cellpadding='2' cellspacing='2' align='center'><tr><td><b>Speed:</"
-#| "b></td><td></td></tr><tr><td>Download: <font color='#1c9a1c'>%1</font></"
-#| "td><td>Upload: <font color='#990000'>%2</font></td></"
-#| "tr><tr><td><b>Transfer:</b></td><td></td></tr><tr><td>Download: <font "
-#| "color='#1c9a1c'>%3</font></td><td>Upload: <font color='#990000'>%4</"
-#| "font></td></tr></table>"
+#, kde-format
 msgid ""
 "<table><tr><td>Download&nbsp;speed:</td><td><font color='#1c9a1c'>%1</font></"
 "td></tr><tr><td>Upload&nbsp;speed:</td><td><font color='#990000'>%2</font></"
@@ -3227,11 +3136,11 @@ msgid ""
 "tr><tr><td>Transmitted:</td><td><font color='#990000'>%4</font></td></tr></"
 "table>"
 msgstr ""
-"<table cellpadding='2' cellspacing='2' align='center'><tr><td><b>Брзина:</"
-"b></td><td></td></tr><tr><td>преузимање: <font color='#1c9a1c'>%1</font></"
-"td><td>слање: <font color='#990000'>%2</font></td></tr><tr><td><b>Пренос:</"
-"b></td><td></td></tr><tr><td>преузимање: <font color='#1c9a1c'>%3</font></"
-"td><td>слање: <font color='#990000'>%4</font></td></tr></table>"
+"<table><tr><td>Преузимање:</td><td><font color='#1c9a1c'>%1</font></td></"
+"tr><tr><td>Слање:</td><td><font color='#990000'>%2</font></td></"
+"tr><tr><td>Примљено:</td><td><font color='#1c9a1c'>%3</font></td></"
+"tr><tr><td>Одаслато:</td><td><font color='#990000'>%4</font></td></tr></"
+"table>"
 
 #: ktorrent/trayicon.cpp:183
 #, kde-format
@@ -3420,11 +3329,6 @@ msgid "Opening %1"
 msgstr "Отварам %1"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:217
-#, fuzzy
-#| msgid ""
-#| "Some files of this torrent have been found in the completed downloads "
-#| "directory. Do you want to import these files and use the completed "
-#| "downloads directory as the location ?"
 msgid ""
 "Some files of this torrent have been found in the completed downloads "
 "directory. Do you want to import these files and use the completed downloads "
@@ -3434,11 +3338,6 @@ msgstr ""
 "ли да их увезете и употријебите фасциклу завршених преузимања као локацију?"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:220
-#, fuzzy
-#| msgid ""
-#| "All files of this torrent have been found in the completed downloads "
-#| "directory. Do you want to import these files and use the completed "
-#| "downloads directory as the location ?"
 msgid ""
 "All files of this torrent have been found in the completed downloads "
 "directory. Do you want to import these files and use the completed downloads "
@@ -3448,10 +3347,7 @@ msgstr ""
 "ли да их увезете и употријебите фасциклу завршених преузимања као локацију?"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:224
-#, fuzzy, kde-format
-#| msgid ""
-#| "The file <b>%1</b> was found in the completed downloads directory. Do you "
-#| "want to import this file ?"
+#, kde-format
 msgid ""
 "The file <b>%1</b> was found in the completed downloads directory. Do you "
 "want to import this file?"
@@ -3483,7 +3379,7 @@ msgstr "Не, задржи фајлове"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:457
 msgid "<b>Unable to determine free space</b>"
-msgstr ""
+msgstr "<b>Не могу да одредим слободан простор</b>"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:469
 #, kde-format
@@ -3688,10 +3584,8 @@ msgid "Widget to manage the torrent queue"
 msgstr "Виџет за управљање редослиједом торената"
 
 #: ktorrent/torrentactivity.cpp:79
-#, fuzzy
-#| msgid "Displays all the chunks you are downloading, of a torrent"
 msgid "Displays the currently downloading magnet links"
-msgstr "Сви парчићи торента које преузимате"
+msgstr "Приказује све магнетске везе које преузимате"
 
 #: ktorrent/statusbar.cpp:39 ktorrent/statusbar.cpp:71
 #, kde-format
@@ -3911,7 +3805,7 @@ msgstr ""
 
 #: libktcore/torrent/queuemanager.cpp:129
 msgid "Limits reached."
-msgstr ""
+msgstr "Ограничења достигнута."
 
 #: libktcore/torrent/queuemanager.cpp:155
 msgid ""
@@ -3984,22 +3878,17 @@ msgstr "Не могу да пишем након краја mmap бафера."
 msgid "Plugins"
 msgstr "Прикључци"
 
-# >> @title:column
 #: ktmagnetdownloader/magnetdownloader.cpp:37
-#, fuzzy
-#| msgid "Time Downloaded"
 msgid "KTMagnetDownloader"
-msgstr "вријеме преузимања"
+msgstr "КТ‑магнет-преузимач"
 
 #: ktmagnetdownloader/magnetdownloader.cpp:38
 msgid "KTorrent's magnet link downloader"
-msgstr ""
+msgstr "К‑торентов преузимач магнетских веза"
 
 #: ktmagnetdownloader/magnetdownloader.cpp:40
-#, fuzzy
-#| msgid "Joris Guisson"
 msgid "(C) 2009 Joris Guisson"
-msgstr "Јорис Гисон"
+msgstr "© 2009, Јорис Гисон"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -4658,25 +4547,6 @@ msgstr "Које сучеље се користи."
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:95
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_authentication)
 #: rc.cpp:274
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Scan the folder "
-#| "recursively for torrents.</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Note: "
-#| "<span style=\" font-weight:400;\">This will not be done for any folder "
-#| "named loaded.</span></p></body></html>"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -4697,16 +4567,16 @@ msgid ""
 "webinterface is accessible from the internet. It will allow anybody access "
 "to it.</p></body></html>"
 msgstr ""
-"<html><p>Потражи торенте рекурзивно у фасцикли.</p><p><b>Напомена</b>: Ово "
-"се неће радити за било коју фасциклу по имену „учитана“.</p></html>"
+"<html><p>Ако је укључено <interface>Неопходно пријављивање</interface>, "
+"морате задати корисничко име и лозинку.</p><p><b>Пажња</b>: Ово не треба да "
+"искључујете када је веб сучеље доступно преко Интернета, јер бисте онда "
+"свима дозволили приступ.</p></html>"
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:98
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_authentication)
 #: rc.cpp:283
-#, fuzzy
-#| msgid "Required:"
 msgid "Login required"
-msgstr "Потребно:"
+msgstr "Неопходно пријављивање"
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:105
 #. i18n: ectx: property (text), widget (QLabel, textLabel5)
@@ -4901,8 +4771,6 @@ msgstr "Ажурирај графике на дати број ажурирањ�
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:15
 #. i18n: ectx: label, entry (DataGatherIval), group (general)
 #: rc.cpp:349
-#, fuzzy
-#| msgid "Interval in miliseconds between data gathering"
 msgid "Interval in milliseconds between data gathering"
 msgstr "Период у милисекундама између сакупљања података"
 
@@ -5134,8 +5002,6 @@ msgstr "Везе"
 #. i18n: file: plugins/stats/Spd.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpdWgt)
 #: rc.cpp:457
-#, fuzzy
-#| msgid "Speed"
 msgctxt "@title:window"
 msgid "Speed"
 msgstr "Брзина"
@@ -6140,18 +6006,14 @@ msgstr "Боја обичне ставке у распореду."
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:162
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: rc.cpp:1057
-#, fuzzy
-#| msgid "Paused schedule item color:"
 msgid "Suspended schedule item color:"
-msgstr "Боја паузиране ставке у распореду:"
+msgstr "Боја суспендоване ставке у распореду:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:169
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_suspendedColor)
 #: rc.cpp:1060
-#, fuzzy
-#| msgid "Color of each paused item on the schedule."
 msgid "Color of each suspended item on the schedule."
-msgstr "Боја паузиране ставке у распореду."
+msgstr "Боја сваке суспендоване ставке у распореду."
 
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:23
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
@@ -6526,10 +6388,8 @@ msgstr "&Откажи"
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:26
 #. i18n: ectx: property (windowTitle), widget (QWidget, MagnetGeneratorPrefWidget)
 #: rc.cpp:1320
-#, fuzzy
-#| msgid "Search Preferences"
 msgid "Magnet Generator Preferences"
-msgstr "Поставке претраге"
+msgstr "Поставке генератора магнета"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:40
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_torrenttracker)
@@ -6540,54 +6400,44 @@ msgstr "Поставке претраге"
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:10
 #. i18n: ectx: label, entry (torrenttracker), group (general)
 #: rc.cpp:1326 rc.cpp:1359
-#, fuzzy
-#| msgid "Cannot load the torrent file : %1"
 msgid "Grabs a tracker from the torrent file"
-msgstr "Не могу да учитам торент: %1"
+msgstr "Узима пратиоце из торент фајла"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:43
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_torrenttracker)
 #: rc.cpp:1329
-#, fuzzy
-#| msgid "Cannot load the torrent file : %1"
 msgid "Add a tracker from the torrent file"
-msgstr "Не могу да учитам торент: %1"
+msgstr "Додај пратилац из торент фајла"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:50
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_customtracker)
 #: rc.cpp:1332
 msgid "Define what tracker to add"
-msgstr ""
+msgstr "Дефинишите пратилац који се додаје"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:53
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_customtracker)
 #: rc.cpp:1335
-#, fuzzy
-#| msgid "Invalid tracker URL"
 msgid "Add a custom tracker URL"
-msgstr "Неисправан УРЛ пратиоца"
+msgstr "Додај посебан УРЛ пратиоца"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:60
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_tr)
 #: rc.cpp:1338
 msgid "The tracker URL that will be a part of the magnet link"
-msgstr ""
+msgstr "УРЛ пратиоца који ће бити део магнетске везе"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:67
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_dn)
 #: rc.cpp:1341
-#, fuzzy
-#| msgid "Move a torrent down in the queue"
 msgid "Add the torrent name in the URI"
-msgstr "Помијера торент надоле у редослиједу"
+msgstr "Додај име торента у УРИ"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:70
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_dn)
 #: rc.cpp:1344
-#, fuzzy
-#| msgid "Add Tracker"
 msgid "Add name"
-msgstr "Додај пратилац"
+msgstr "Додај име"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:77
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_onlypublic)
@@ -6599,21 +6449,20 @@ msgstr "Додај пратилац"
 #. i18n: ectx: label, entry (onlypublic), group (general)
 #: rc.cpp:1347 rc.cpp:1374
 msgid "Only enable on public torrents"
-msgstr ""
+msgstr "Укључи само за јавне торенте"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:80
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_onlypublic)
 #: rc.cpp:1350
-#, fuzzy
-#| msgid "Displays all the webseeds of a torrent"
 msgid "Disable the menu item for private torrents"
-msgstr "Сва веб сијања торента"
+msgstr "Искључи ставку менија за приватне торенте"
 
+# skip-rule: form
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:87
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_popup)
 #: rc.cpp:1353
 msgid "Give feedback in form of a popup"
-msgstr ""
+msgstr "Пружи одзив у облику искакача"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:90
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_popup)
@@ -6624,32 +6473,27 @@ msgstr ""
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:26
 #. i18n: ectx: label, entry (popup), group (general)
 #: rc.cpp:1356 rc.cpp:1371
-#, fuzzy
-#| msgid "Show Video"
 msgid "Show popup"
-msgstr "Прикажи видео"
+msgstr "Прикажи искакач"
 
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:14
 #. i18n: ectx: label, entry (customtracker), group (general)
 #: rc.cpp:1362
 msgid "Toggles if a custom tracker is used"
-msgstr ""
+msgstr "Да ли се користи посебан пратилац"
 
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:18
 #. i18n: ectx: label, entry (tr), group (general)
 #: rc.cpp:1365
-#, fuzzy
-#| msgid "Use default browser"
 msgid "The default tracker"
-msgstr "Подразумијевани прегледач"
+msgstr "Подразумијевани пратилац"
 
+# >> dn= is a keyword inside magnet link
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:22
 #. i18n: ectx: label, entry (dn), group (general)
 #: rc.cpp:1368
-#, fuzzy
-#| msgid "Show Feed"
 msgid "Show dn"
-msgstr "Прикажи довод"
+msgstr "Прикажи dn"
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, UPnPTestWidget)
@@ -6884,12 +6728,14 @@ msgid ""
 "The µTorrent transport protocol runs over UDP and is optimized to not "
 "interfere with other traffic, while still using up all unused bandwidth."
 msgstr ""
+"Преносни протокол Микроторента ради преко УДП‑а и оптимизован је да не омета "
+"остали саобраћај, притом користећи сав преостали проток."
 
 #. i18n: file: ktorrent/pref/networkpref.ui:275
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_utpEnabled)
 #: rc.cpp:1515
 msgid "Use the µTorrent transport protocol (µTP)"
-msgstr ""
+msgstr "Користи преносни протокол Микроторента (µТП)"
 
 #. i18n: file: ktorrent/pref/networkpref.ui:282
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_onlyUseUtp)
@@ -6899,18 +6745,20 @@ msgid ""
 "can lead to slower speeds, seeing that not all bittorrent clients support "
 "µTP."
 msgstr ""
+"Не користи ТЦП за битторент везе већ само µТП. Ово може довести до нижих "
+"брзина зато што µТП не подржавају сви битторент клијенти."
 
 #. i18n: file: ktorrent/pref/networkpref.ui:285
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_onlyUseUtp)
 #: rc.cpp:1521
 msgid "Only use µTP"
-msgstr ""
+msgstr "Користи само µТП"
 
 #. i18n: file: ktorrent/pref/networkpref.ui:294
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: rc.cpp:1524
 msgid "Primary transport protocol:"
-msgstr ""
+msgstr "Главни преносни протокол:"
 
 #. i18n: file: ktorrent/pref/networkpref.ui:301
 #. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_primaryTransportProtocol)
@@ -6919,12 +6767,14 @@ msgid ""
 "The primary transport protocol to use, when attempting to setup a connection "
 "with a peer, this protocol is chosen first."
 msgstr ""
+"Главни преносни протокол који се користи при покушају успостављања везе са "
+"вршњаком. Овај протокол се бира први."
 
 #. i18n: file: ktorrent/pref/networkpref.ui:310
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_primaryTransportProtocol)
 #: rc.cpp:1533
 msgid "µTP"
-msgstr ""
+msgstr "µТП"
 
 #. i18n: file: ktorrent/pref/networkpref.ui:351
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_recommended_settings)
@@ -6939,10 +6789,8 @@ msgstr ""
 #. i18n: file: ktorrent/pref/networkpref.ui:354
 #. i18n: ectx: property (text), widget (QPushButton, m_recommended_settings)
 #: rc.cpp:1539
-#, fuzzy
-#| msgid "Recommended Settings"
 msgid "Recommended Settings..."
-msgstr "Препоручене поставке"
+msgstr "Препоручене поставке..."
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:17
 #. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_diskPrealloc)
@@ -8401,10 +8249,8 @@ msgstr "Затвори"
 #. i18n: file: ktorrent/view/scanextender.ui:242
 #. i18n: ectx: property (text), widget (QLabel, error_msg)
 #: rc.cpp:2209
-#, fuzzy
-#| msgid "Error"
 msgid "Errors:"
-msgstr "Грешка"
+msgstr "Грешке:"
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:22
 #. i18n: ectx: property (text), widget (QCheckBox, move_on_completion_enabled)
@@ -8415,10 +8261,8 @@ msgstr "Грешка"
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:45
 #. i18n: ectx: property (text), widget (QCheckBox, m_moveCompleted)
 #: rc.cpp:2215 rc.cpp:2433
-#, fuzzy
-#| msgid "Move completed downloads to:"
 msgid "Move when completed to:"
-msgstr "Премјести завршена преузимања у:"
+msgstr "Премјести када се заврши у:"
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, GroupPolicyDlg)
@@ -8576,18 +8420,15 @@ msgstr "Додај вршњака:"
 #. i18n: file: ktorrent/ipfilterwidget.ui:31
 #. i18n: ectx: property (toolTip), widget (KLineEdit, m_ip_to_add)
 #: rc.cpp:2299
-#, fuzzy
-#| msgid ""
-#| "Invalid IP address %1. You must enter an IP address in the format 'XXX."
-#| "XXX.XXX.XXX'. You can also use wildcards for ranges like '127.0.0.*'."
 msgid ""
 "IP addresses must be in the format 'XXX.XXX.XXX.XXX'.\n"
 "                                        \n"
 "You can also use wildcards like '127.0.0.*' or specify ranges like "
 "'200.10.10.0-200.10.10.40'."
 msgstr ""
-"Неисправна ИП адреса %1. Морате унети ИП адресу у облику „XXX.XXX.XXX.XXX“. "
-"Такође можете користити џокере за опсеге, нпр. „127.0.0.*“."
+"<p>ИП адресе морају бити облика <icode>XXX.XXX.XXX.XXX</icode>.</p><p>Такође "
+"можете користити џокере, нпр. <icode>127.0.0.*</icode>, и задавати опсеге, "
+"нпр. <icode>200.10.10.0-200.10.10.40</icode>.</p>"
 
 #. i18n: file: ktorrent/ipfilterwidget.ui:34
 #. i18n: ectx: property (text), widget (KLineEdit, m_ip_to_add)
@@ -8758,12 +8599,11 @@ msgstr "Избор фајлова за преузимање"
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:42
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_moveCompleted)
 #: rc.cpp:2430
-#, fuzzy
-#| msgid "Directory to move data to when a torrent has finished downloading."
 msgid ""
 "Moves the files to the specified location when the torrent finishes "
 "downloading."
-msgstr "Фасцикла гдје ће се премјестити подаци након завршеног преузимања."
+msgstr ""
+"Премијешта фајлове на наведену локацију по завршетку преузимања торента."
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:76
 #. i18n: ectx: property (text), widget (QLabel, label)
