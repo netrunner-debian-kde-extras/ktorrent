@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-05-09 01:27+0200\n"
+"POT-Creation-Date: 2010-07-06 01:30+0200\n"
 "PO-Revision-Date: 2010-05-24 18:10+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
-"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n%"
+"10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Associated-UI-Catalogs: kdelibs4\n"
@@ -53,8 +53,8 @@ msgstr "ВАН веза"
 #: plugins/upnp/routermodel.cpp:114
 #, kde-format
 msgid ""
-"Model Name: <b>%1</b><br/>Manufacturer: <b>%2</b><br/>Model Description: <b>"
-"%3</b><br/>"
+"Model Name: <b>%1</b><br/>Manufacturer: <b>%2</b><br/>Model Description: <b>%"
+"3</b><br/>"
 msgstr ""
 "Назив модела: <b>%1</b><br/>Произвођач: <b>%2</b><br/>Опис модела: <b>%3</"
 "b><br/>"
@@ -405,11 +405,11 @@ msgstr "Преко целог екрана"
 msgid "KTorrent is playing a video."
 msgstr "К‑торент пушта видео."
 
-#: plugins/webinterface/httpserver.cpp:332
+#: plugins/webinterface/httpserver.cpp:335
 msgid "Cannot find web interface skins."
 msgstr "Не могу да нађем маске веб сучеља."
 
-#: plugins/webinterface/httpserver.cpp:497
+#: plugins/webinterface/httpserver.cpp:500
 msgid "Unsupported HTTP method"
 msgstr "Неподржан ХТТП метод"
 
@@ -1318,13 +1318,13 @@ msgstr "Већ постоји пратилац по имену <b>%1</b>."
 
 #: plugins/infowidget/availabilitychunkbar.cpp:33
 msgid ""
-"<img src=\"available_color\">&nbsp; - Available Chunks<br><img src="
-"\"unavailable_color\">&nbsp; - Unavailable Chunks<br><img src="
-"\"excluded_color\">&nbsp; - Excluded Chunks"
+"<img src=\"available_color\">&nbsp; - Available Chunks<br><img "
+"src=\"unavailable_color\">&nbsp; - Unavailable Chunks<br><img "
+"src=\"excluded_color\">&nbsp; - Excluded Chunks"
 msgstr ""
-"<img src=\"available_color\" /> — доступни парчићи<br/><img src="
-"\"unavailable_color\" /> — недоступни парчићи<br/><img src=\"excluded_color"
-"\" /> — изузети парчићи"
+"<img src=\"available_color\" /> — доступни парчићи<br/><img "
+"src=\"unavailable_color\" /> — недоступни парчићи<br/><img "
+"src=\"excluded_color\" /> — изузети парчићи"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:95
 msgctxt "Download Normal (not as first or last)"
@@ -1434,28 +1434,23 @@ msgstr "систем"
 msgid "Log Level"
 msgstr "ниво биљежења"
 
-#: plugins/logviewer/logflags.cpp:201
-#: plugins/logviewer/logflagsdelegate.cpp:46
+#: plugins/logviewer/logflags.cpp:201 plugins/logviewer/logflagsdelegate.cpp:46
 msgid "Debug"
 msgstr "исправљање"
 
-#: plugins/logviewer/logflags.cpp:202
-#: plugins/logviewer/logflagsdelegate.cpp:45
+#: plugins/logviewer/logflags.cpp:202 plugins/logviewer/logflagsdelegate.cpp:45
 msgid "Notice"
 msgstr "напомена"
 
-#: plugins/logviewer/logflags.cpp:203
-#: plugins/logviewer/logflagsdelegate.cpp:44
+#: plugins/logviewer/logflags.cpp:203 plugins/logviewer/logflagsdelegate.cpp:44
 msgid "Important"
 msgstr "важно"
 
-#: plugins/logviewer/logflags.cpp:204
-#: plugins/logviewer/logflagsdelegate.cpp:43
+#: plugins/logviewer/logflags.cpp:204 plugins/logviewer/logflagsdelegate.cpp:43
 msgid "All"
 msgstr "све"
 
-#: plugins/logviewer/logflags.cpp:205
-#: plugins/logviewer/logflagsdelegate.cpp:47
+#: plugins/logviewer/logflags.cpp:205 plugins/logviewer/logflagsdelegate.cpp:47
 msgid "None"
 msgstr "ништа"
 
@@ -1558,8 +1553,7 @@ msgid "Search for %1"
 msgstr "Тражи %1"
 
 #: plugins/search/searchplugin.cpp:147 plugins/search/homepage.cpp:121
-#: plugins/search/searchtoolbar.cpp:72
-#: ktorrent/tools/queuemanagerwidget.cpp:56
+#: plugins/search/searchtoolbar.cpp:72 ktorrent/tools/queuemanagerwidget.cpp:56
 msgid "Search"
 msgstr "Тражи"
 
@@ -1570,7 +1564,7 @@ msgstr "Почетак"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: plugins/search/homepage.cpp:118 ktorrent/main.cpp:85 rc.cpp:1608
+#: plugins/search/homepage.cpp:118 ktorrent/main.cpp:88 rc.cpp:1608
 msgid "KTorrent"
 msgstr "К‑торент"
 
@@ -1585,8 +1579,7 @@ msgstr "Тражење торената на Вебу."
 
 #: plugins/search/searchenginelist.cpp:192
 #: plugins/ipfilter/convertthread.cpp:67
-#: plugins/ipfilter/convertthread.cpp:167
-#: ktorrent/dialogs/importdialog.cpp:276
+#: plugins/ipfilter/convertthread.cpp:167 ktorrent/dialogs/importdialog.cpp:276
 #, kde-format
 msgid "Cannot open %1 : %2"
 msgstr "Не могу да отворим %1: %2"
@@ -1904,7 +1897,7 @@ msgstr "Фајл постоји"
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:34
 #: plugins/ipfilter/ipfilterplugin.cpp:60
-#: plugins/ipfilter/ipfilterplugin.cpp:73 ktorrent/gui.cpp:419
+#: plugins/ipfilter/ipfilterplugin.cpp:73 ktorrent/gui.cpp:421
 msgid "IP Filter"
 msgstr "ИП филтер"
 
@@ -1998,7 +1991,7 @@ msgstr "Веза је неочекивано затворена."
 msgid "Timeout occurred"
 msgstr "Истекло вријеме"
 
-#: ktorrent/core.cpp:169
+#: ktorrent/core.cpp:170
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the TCP ports %1 is already "
@@ -2006,7 +1999,7 @@ msgid ""
 msgstr ""
 "К‑торент не може да прихвата везе јер ТЦП порт %1 већ користи други програм."
 
-#: ktorrent/core.cpp:183
+#: ktorrent/core.cpp:184
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the UDP port %1 is already "
@@ -2014,16 +2007,16 @@ msgid ""
 msgstr ""
 "К‑торент не може да прихвата везе јер УДП порт %1 већ користи други програм."
 
-#: ktorrent/core.cpp:993
+#: ktorrent/core.cpp:996
 msgid "KTorrent is running one or more torrents"
 msgstr "К‑торент ради са једним или више торената"
 
-#: ktorrent/core.cpp:1075
+#: ktorrent/core.cpp:1078
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Не могу да направим торент: %1"
 
-#: ktorrent/core.cpp:1181
+#: ktorrent/core.cpp:1184
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -2032,21 +2025,21 @@ msgstr ""
 "Недостаје неколико фајлова торента „%1“. \n"
 "Желите ли да их поново направите или да их не преузимате?"
 
-#: ktorrent/core.cpp:1190 ktorrent/core.cpp:1202 ktorrent/core.cpp:1215
+#: ktorrent/core.cpp:1193 ktorrent/core.cpp:1205 ktorrent/core.cpp:1218
 msgid "Data files are missing"
 msgstr "Недостају фајлови са подацима"
 
-#: ktorrent/core.cpp:1201
+#: ktorrent/core.cpp:1204
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Не могу да искључим из избора недостајуће фајлове: %1"
 
-#: ktorrent/core.cpp:1214
+#: ktorrent/core.cpp:1217
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Не могу да направим недостајуће фајлове: %1"
 
-#: ktorrent/core.cpp:1226
+#: ktorrent/core.cpp:1229
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -2055,16 +2048,16 @@ msgstr ""
 "Недостаје фајл у који се уписују подаци торента „%1“. \n"
 "Желите ли да га поново направите?"
 
-#: ktorrent/core.cpp:1233 ktorrent/core.cpp:1244
+#: ktorrent/core.cpp:1236 ktorrent/core.cpp:1247
 msgid "Data file is missing"
 msgstr "Недостаје фајл са подацима"
 
-#: ktorrent/core.cpp:1243
+#: ktorrent/core.cpp:1246
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Не могу да направим фајл са подацима: %1"
 
-#: ktorrent/core.cpp:1348
+#: ktorrent/core.cpp:1351
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -2081,16 +2074,16 @@ msgstr[2] ""
 msgstr[3] ""
 "Нађен је торент из КДЕ‑3 верзије К‑торента. Желите ли да га увезете?"
 
-#: ktorrent/core.cpp:1370
+#: ktorrent/core.cpp:1373
 msgid "No torrents from the KDE3 version were found."
 msgstr "Нема торената из КДЕ‑3 верзије."
 
-#: ktorrent/core.cpp:1389 ktorrent/core.cpp:1408
+#: ktorrent/core.cpp:1392 ktorrent/core.cpp:1411
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr "Неисправна магнетска битторент веза: %1"
 
-#: ktorrent/core.cpp:1394 ktorrent/core.cpp:1413
+#: ktorrent/core.cpp:1397 ktorrent/core.cpp:1416
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -2660,9 +2653,9 @@ msgid ""
 "ranges like '200.10.10.0-200.10.10.40'."
 msgstr ""
 "<html><p>Лоша ИП адреса <b>%1</b>. ИП адресе морају бити облика <icode>XXX."
-"XXX.XXX.XXX</icode>.</p><p>Такође можете користити џокере, нпр. "
-"<icode>127.0.0.*</icode>, и задавати опсеге, нпр. "
-"<icode>200.10.10.0-200.10.10.40</icode>.</p></html>"
+"XXX.XXX.XXX</icode>.</p><p>Такође можете користити џокере, нпр. <icode>127.0."
+"0.*</icode>, и задавати опсеге, нпр. <icode>200.10.10.0-200.10.10.40</icode>."
+"</p></html>"
 
 #: ktorrent/ipfilterwidget.cpp:135
 msgid "Choose a file"
@@ -2672,64 +2665,64 @@ msgstr "Изаберите фајл"
 msgid "Choose a filename to save under"
 msgstr "Изаберите име фајла за уписивање"
 
-#: ktorrent/gui.cpp:228 ktorrent/gui.cpp:243
+#: ktorrent/gui.cpp:230 ktorrent/gui.cpp:245
 msgid "Torrent Files"
 msgstr "торент фајлови"
 
-#: ktorrent/gui.cpp:228 ktorrent/gui.cpp:243
+#: ktorrent/gui.cpp:230 ktorrent/gui.cpp:245
 msgid "All Files"
 msgstr "сви фајлови"
 
-#: ktorrent/gui.cpp:229 ktorrent/gui.cpp:244
+#: ktorrent/gui.cpp:231 ktorrent/gui.cpp:246
 msgid "Open Location"
 msgstr "Отвори локацију"
 
-#: ktorrent/gui.cpp:315 ktorrent/dialogs/pastedialog.cpp:105
+#: ktorrent/gui.cpp:317 ktorrent/dialogs/pastedialog.cpp:105
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "Неисправан УРЛ: %1"
 
-#: ktorrent/gui.cpp:376
+#: ktorrent/gui.cpp:378
 msgid "Create a new torrent"
 msgstr "Направи нови торент"
 
-#: ktorrent/gui.cpp:378
+#: ktorrent/gui.cpp:380
 msgid "Open a torrent"
 msgstr "Отвори торент"
 
-#: ktorrent/gui.cpp:381
+#: ktorrent/gui.cpp:383
 msgid "Open Silently"
 msgstr "Отвори тихо"
 
-#: ktorrent/gui.cpp:382
+#: ktorrent/gui.cpp:384
 msgid "Open a torrent without asking any questions"
 msgstr "Отвори торент без икаквих питања"
 
-#: ktorrent/gui.cpp:396
+#: ktorrent/gui.cpp:398
 msgid "Start All"
 msgstr "Покрени све"
 
-#: ktorrent/gui.cpp:397
+#: ktorrent/gui.cpp:399
 msgid "Start all torrents"
 msgstr "Покрени све торенте"
 
-#: ktorrent/gui.cpp:401
+#: ktorrent/gui.cpp:403
 msgid "Stop All"
 msgstr "Заустави све"
 
-#: ktorrent/gui.cpp:402
+#: ktorrent/gui.cpp:404
 msgid "Stop all torrents"
 msgstr "Заустави све торенте"
 
-#: ktorrent/gui.cpp:406
+#: ktorrent/gui.cpp:408
 msgid "Open URL"
 msgstr "Отвори УРЛ"
 
-#: ktorrent/gui.cpp:407
+#: ktorrent/gui.cpp:409
 msgid "Open a URL which points to a torrent, magnet links are supported"
 msgstr "Отвара УРЛ који показује на торент, магнетске везе су подржане"
 
-#: ktorrent/gui.cpp:412
+#: ktorrent/gui.cpp:414
 msgid "Suspend Torrents"
 msgstr "Суспендуј торенте"
 
@@ -2741,131 +2734,131 @@ msgstr "Суспендуј торенте"
 #. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:124
 #. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
-#: ktorrent/gui.cpp:414 rc.cpp:1087 rc.cpp:1180
+#: ktorrent/gui.cpp:416 rc.cpp:1087 rc.cpp:1180
 msgid "Suspend all running torrents"
 msgstr "Суспендуј све покренуте торенте"
 
-#: ktorrent/gui.cpp:420
+#: ktorrent/gui.cpp:422
 msgid "Show the list of blocked IP addresses"
 msgstr "Прикажи списак блокираних ИП адреса"
 
-#: ktorrent/gui.cpp:427
+#: ktorrent/gui.cpp:429
 msgid "Import Torrent"
 msgstr "Увези торент"
 
-#: ktorrent/gui.cpp:428
+#: ktorrent/gui.cpp:430
 msgid "Import a torrent"
 msgstr "Увези торент"
 
-#: ktorrent/gui.cpp:434
+#: ktorrent/gui.cpp:436
 msgid "Import KDE3 Torrents"
 msgstr "Увези КДЕ‑3 торенте"
 
-#: ktorrent/gui.cpp:435
+#: ktorrent/gui.cpp:437
 msgid "Import all torrents from the KDE3 version of KTorrent"
 msgstr "Увози све торенте из КДЕ‑3 верзије К‑торента"
 
-#: ktorrent/gui.cpp:442
+#: ktorrent/gui.cpp:444
 msgid "Show/Hide KTorrent"
 msgstr "Прикажи/сакриј К‑торент"
 
-#: ktorrent/gui.cpp:447
+#: ktorrent/gui.cpp:449
 msgid "Group View Visible"
 msgstr "Групни приказ видљив"
 
-#: ktorrent/gui.cpp:448
+#: ktorrent/gui.cpp:450
 msgid "Show or hide the group view"
 msgstr "Приказује или скрива групни приказ"
 
-#: ktorrent/main.cpp:86
+#: ktorrent/main.cpp:89
 msgid "Bittorrent client for KDE"
 msgstr "Битторент клијент за КДЕ"
 
-#: ktorrent/main.cpp:88
+#: ktorrent/main.cpp:91
 msgid "(C) 2005 - 2010 Joris Guisson and Ivan Vasic"
 msgstr "© 2005–2010, Јорис Гисон и Иван Васић"
 
-#: ktorrent/main.cpp:92
+#: ktorrent/main.cpp:95
 msgid "Joris Guisson"
 msgstr "Јорис Гисон"
 
-#: ktorrent/main.cpp:93
+#: ktorrent/main.cpp:96
 msgid "Ivan Vasic"
 msgstr "Иван Васић"
 
-#: ktorrent/main.cpp:94
+#: ktorrent/main.cpp:97
 msgid "Alan Jones"
 msgstr "Алан Џоунс"
 
-#: ktorrent/main.cpp:94
+#: ktorrent/main.cpp:97
 msgid "BitFinder Plugin"
 msgstr "Прикључак налазача битоваа"
 
-#: ktorrent/main.cpp:95
+#: ktorrent/main.cpp:98
 msgid "Diego R. Brogna"
 msgstr "Дијего Росарио Броња"
 
-#: ktorrent/main.cpp:95
+#: ktorrent/main.cpp:98
 msgid "Webinterface Plugin"
 msgstr "Прикључак веб сучеља"
 
-#: ktorrent/main.cpp:96
+#: ktorrent/main.cpp:99
 msgid "Krzysztof Kundzicz"
 msgstr "Кшиштоф Кунџич"
 
-#: ktorrent/main.cpp:96
+#: ktorrent/main.cpp:99
 msgid "Statistics Plugin"
 msgstr "Прикључак статистике"
 
-#: ktorrent/main.cpp:98
+#: ktorrent/main.cpp:101
 msgid "Mladen Babic"
 msgstr "Младен Бабић"
 
-#: ktorrent/main.cpp:98
+#: ktorrent/main.cpp:101
 msgid "Application icon and a couple of others"
 msgstr "Икона програма и још понека"
 
-#: ktorrent/main.cpp:99
+#: ktorrent/main.cpp:102
 msgid "Adam Treat"
 msgstr "Адам Трит"
 
-#: ktorrent/main.cpp:100
+#: ktorrent/main.cpp:103
 msgid "Danny Allen"
 msgstr "Дени Ален"
 
-#: ktorrent/main.cpp:100
+#: ktorrent/main.cpp:103
 msgid "1.0 application icon"
 msgstr "1.0 икона програма"
 
-#: ktorrent/main.cpp:101
+#: ktorrent/main.cpp:104
 msgid "Vincent Wagelaar"
 msgstr "Винсент Вагелар"
 
-#: ktorrent/main.cpp:102
+#: ktorrent/main.cpp:105
 msgid "Knut Morten Johansson"
 msgstr "Кнут Мортен Јохансон"
 
-#: ktorrent/main.cpp:103
+#: ktorrent/main.cpp:106
 msgid "Felix Berger"
 msgstr "Феликс Бергер"
 
-#: ktorrent/main.cpp:103
+#: ktorrent/main.cpp:106
 msgid "ChunkBar's tooltip and IWFileTreeItem sorting"
 msgstr "Облачић траке парчића и разврставање IWFileTreeItem"
 
-#: ktorrent/main.cpp:104
+#: ktorrent/main.cpp:107
 msgid "Andreas Kling"
 msgstr "Андреас Клинг"
 
-#: ktorrent/main.cpp:105
+#: ktorrent/main.cpp:108
 msgid "Felipe Sateler"
 msgstr "Фелипе Сателер"
 
-#: ktorrent/main.cpp:106
+#: ktorrent/main.cpp:109
 msgid "Maxmind"
 msgstr "Maxmind"
 
-#: ktorrent/main.cpp:106
+#: ktorrent/main.cpp:109
 msgid ""
 "Country locator for InfoWidget plugin. Flags are taken from http://flags."
 "blogpotato.de/ so thanks to them too."
@@ -2873,249 +2866,249 @@ msgstr ""
 "Локатор државе за прикључак података. Заставе су узете са http://flags."
 "blogpotato.de/ па се и њима захваљујемо."
 
-#: ktorrent/main.cpp:107
+#: ktorrent/main.cpp:110
 msgid "Adam Forsyth"
 msgstr "Адам Форсајт"
 
-#: ktorrent/main.cpp:107
+#: ktorrent/main.cpp:110
 msgid "File prioritization and some other patches"
 msgstr "Приоритети фајлова и још неке закрпе"
 
-#: ktorrent/main.cpp:108
+#: ktorrent/main.cpp:111
 msgid "Thomas Bernard"
 msgstr "Томас Бернар"
 
-#: ktorrent/main.cpp:108
+#: ktorrent/main.cpp:111
 msgid "Miniupnp was used as an example for our own UPnP implementation"
 msgstr "МиниУПнП је коришћен као примјер за нашу примјену УПнП‑а"
 
-#: ktorrent/main.cpp:109
+#: ktorrent/main.cpp:112
 msgid "Diego Rosario Brogna"
 msgstr "Дијего Росарио Броња"
 
-#: ktorrent/main.cpp:109
+#: ktorrent/main.cpp:112
 msgid "Global max share ratio patch"
 msgstr "Закрпа за глобални највећи однос дијељења"
 
-#: ktorrent/main.cpp:110
+#: ktorrent/main.cpp:113
 msgid "Lesly Weyts"
 msgstr "Лесли Вејтс"
 
-#: ktorrent/main.cpp:110 ktorrent/main.cpp:111
+#: ktorrent/main.cpp:113 ktorrent/main.cpp:114
 msgid "Zeroconf enhancements"
 msgstr "Побољшања за зироконф"
 
-#: ktorrent/main.cpp:111
+#: ktorrent/main.cpp:114
 msgid "Kevin Andre"
 msgstr "Кевин Андре"
 
-#: ktorrent/main.cpp:112
+#: ktorrent/main.cpp:115
 msgid "Dagur Valberg Johannsson"
 msgstr "Дагур Валберг Јохансон"
 
-#: ktorrent/main.cpp:112
+#: ktorrent/main.cpp:115
 msgid "Coldmilk webgui"
 msgstr "Веб сучеље „Ладно млеко“"
 
-#: ktorrent/main.cpp:113
+#: ktorrent/main.cpp:116
 msgid "Alexander Dymo"
 msgstr "Александар Димо"
 
-#: ktorrent/main.cpp:113
+#: ktorrent/main.cpp:116
 msgid "IDEAl code from KDevelop"
 msgstr "ИДЕАл кôд из К‑девелопа"
 
-#: ktorrent/main.cpp:114
+#: ktorrent/main.cpp:117
 msgid "Scott Wolchok"
 msgstr "Скот Волчок"
 
-#: ktorrent/main.cpp:114
+#: ktorrent/main.cpp:117
 msgid "Conversion speed improvement in ipfilter plugin"
 msgstr "Побољшање брзине претварања у прикључку ИП филтера"
 
-#: ktorrent/main.cpp:115
+#: ktorrent/main.cpp:118
 msgid "Bryan Burns of Juniper Networks"
 msgstr "Брајан Бернс из Џунипер нетворкса"
 
-#: ktorrent/main.cpp:115
+#: ktorrent/main.cpp:118
 msgid "Discovered 2 security vulnerabilities (both are fixed)"
 msgstr "Открио два безбједносна пропуста (оба су отклоњена)"
 
-#: ktorrent/main.cpp:116
+#: ktorrent/main.cpp:119
 msgid "Goten Xiao"
 msgstr "Готен Сјао"
 
-#: ktorrent/main.cpp:116
+#: ktorrent/main.cpp:119
 msgid "Patch to load silently with a save location"
 msgstr "Закрпа за тихо учитавање са сачуване локације"
 
-#: ktorrent/main.cpp:117
+#: ktorrent/main.cpp:120
 msgid "Rapsys"
 msgstr "Rapsys"
 
-#: ktorrent/main.cpp:117
+#: ktorrent/main.cpp:120
 msgid "Fixes in PHP code of webinterface"
 msgstr "Исправке у ПХП коду веб сучеља"
 
-#: ktorrent/main.cpp:118
+#: ktorrent/main.cpp:121
 msgid "Athantor"
 msgstr "Athantor"
 
-#: ktorrent/main.cpp:118
+#: ktorrent/main.cpp:121
 msgid "XFS specific disk preallocation"
 msgstr "Резервисање простора на диску за ИксФС"
 
 # literal-segment: twisted_fall
-#: ktorrent/main.cpp:119
+#: ktorrent/main.cpp:122
 msgid "twisted_fall"
 msgstr "twisted_fall"
 
-#: ktorrent/main.cpp:119
+#: ktorrent/main.cpp:122
 msgid "Patch to not show very low speeds"
 msgstr "Закрпа за неприказивање веома малих брзина"
 
-#: ktorrent/main.cpp:120
+#: ktorrent/main.cpp:123
 msgid "Lucke"
 msgstr "Lucke"
 
-#: ktorrent/main.cpp:120
+#: ktorrent/main.cpp:123
 msgid "Patch to show potentially firewalled status"
 msgstr "Закрпа за приказивање могућег стања иза заштитног зида"
 
-#: ktorrent/main.cpp:121
+#: ktorrent/main.cpp:124
 msgid "Modestas Vainius"
 msgstr "Модестас Вајнијус"
 
-#: ktorrent/main.cpp:121
+#: ktorrent/main.cpp:124
 msgid "Several patches"
 msgstr "Неколико закрпа"
 
-#: ktorrent/main.cpp:122
+#: ktorrent/main.cpp:125
 msgid "Stefan Monov"
 msgstr "Стефан Монов"
 
-#: ktorrent/main.cpp:122
+#: ktorrent/main.cpp:125
 msgid "Patch to hide menu bar"
 msgstr "Закрпа за скривање траке менија"
 
 # literal-segment: The_Kernel
-#: ktorrent/main.cpp:123
+#: ktorrent/main.cpp:126
 msgid "The_Kernel"
 msgstr "The_Kernel"
 
-#: ktorrent/main.cpp:123
+#: ktorrent/main.cpp:126
 msgid "Patch to change file priorities in the webgui"
 msgstr "Закрпа за мијењање приоритета фајла у веб сучељу"
 
-#: ktorrent/main.cpp:124
+#: ktorrent/main.cpp:127
 msgid "Rafał Miłecki"
 msgstr "Рафал Милецки"
 
-#: ktorrent/main.cpp:124
+#: ktorrent/main.cpp:127
 msgid "Several webgui patches"
 msgstr "Неколико закрпа веб сучеља"
 
-#: ktorrent/main.cpp:125
+#: ktorrent/main.cpp:128
 msgid "Ozzi"
 msgstr "Ozzi"
 
-#: ktorrent/main.cpp:125
+#: ktorrent/main.cpp:128
 msgid "Fixes for several warnings"
 msgstr "Исправке за нека упозорења"
 
-#: ktorrent/main.cpp:126
+#: ktorrent/main.cpp:129
 msgid "Markus Brueffer"
 msgstr "Маркус Брифер"
 
-#: ktorrent/main.cpp:126
+#: ktorrent/main.cpp:129
 msgid "Patch to fix free diskspace calculation on FreeBSD"
 msgstr "Закрпа за прорачун слободног простора под ФриБСД‑ом"
 
-#: ktorrent/main.cpp:127
+#: ktorrent/main.cpp:130
 msgid "Lukas Appelhans"
 msgstr "Лукас Апелханс"
 
-#: ktorrent/main.cpp:127
+#: ktorrent/main.cpp:130
 msgid "Patch to fix a crash in ChunkDownloadView"
 msgstr "Закрпа против рушења у приказу преузетих парчића"
 
-#: ktorrent/main.cpp:128
+#: ktorrent/main.cpp:131
 msgid "Rickard Närström"
 msgstr "Рикард Нерстрем"
 
-#: ktorrent/main.cpp:128
+#: ktorrent/main.cpp:131
 msgid "A couple of bugfixes"
 msgstr "Неколико исправки"
 
-#: ktorrent/main.cpp:129
+#: ktorrent/main.cpp:132
 msgid "caruccio"
 msgstr "caruccio"
 
-#: ktorrent/main.cpp:129
+#: ktorrent/main.cpp:132
 msgid "Patch to load torrents silently from the command line"
 msgstr "Закрпа за тихо учитавање торената из командне линије"
 
-#: ktorrent/main.cpp:130
+#: ktorrent/main.cpp:133
 msgid "Lee Olson"
 msgstr "Ли Олсон"
 
-#: ktorrent/main.cpp:130
+#: ktorrent/main.cpp:133
 msgid "New set of icons"
 msgstr "Нови скуп икона"
 
-#: ktorrent/main.cpp:131
+#: ktorrent/main.cpp:134
 msgid "Aaron J. Seigo"
 msgstr "Арон Џ. Сајго"
 
-#: ktorrent/main.cpp:131
+#: ktorrent/main.cpp:134
 msgid "Drag and drop support for plasma applet"
 msgstr "Подршка за превлачење за плазма аплет"
 
-#: ktorrent/main.cpp:132
+#: ktorrent/main.cpp:135
 msgid "Ian Higginson"
 msgstr "Ијан Хигинсон"
 
-#: ktorrent/main.cpp:132
+#: ktorrent/main.cpp:135
 msgid "Patch to cleanup the plugin list"
 msgstr "Закрпа за чишћење списка прикључака"
 
-#: ktorrent/main.cpp:133
+#: ktorrent/main.cpp:136
 msgid "Amichai Rothman"
 msgstr "Амикај Ротман"
 
-#: ktorrent/main.cpp:133
+#: ktorrent/main.cpp:136
 msgid "Patch to make the plasma applet a popup applet"
 msgstr "Закрпа за претварање плазма аплета у искачући"
 
-#: ktorrent/main.cpp:134
+#: ktorrent/main.cpp:137
 msgid "Leo Trubach"
 msgstr "Лав Трубач"
 
-#: ktorrent/main.cpp:134
+#: ktorrent/main.cpp:137
 msgid "Patch to add support for IP ranges in IP filter dialog"
 msgstr "Закрпа за подршку ИП опсега у дијалогу филтрирања ИП‑ова"
 
-#: ktorrent/main.cpp:135
+#: ktorrent/main.cpp:138
 msgid "Andrei Barbu"
 msgstr "Андреј Барбу"
 
-#: ktorrent/main.cpp:135
+#: ktorrent/main.cpp:138
 msgid "Feature which adds the date a torrent was added"
 msgstr "Могућност која додаје датум када је торент додат"
 
-#: ktorrent/main.cpp:137
+#: ktorrent/main.cpp:140
 msgid "Jonas Lundqvist"
 msgstr "Јонас Лундквист"
 
-#: ktorrent/main.cpp:137
+#: ktorrent/main.cpp:140
 msgid "Feature to disable authentication in the webinterface"
 msgstr "Могућност искључења аутентификације у веб сучељу"
 
-#: ktorrent/main.cpp:140 ktmagnetdownloader/magnetdownloader.cpp:45
+#: ktorrent/main.cpp:143 ktmagnetdownloader/magnetdownloader.cpp:45
 msgid "Document to open"
 msgstr "Документ за отварање"
 
-#: ktorrent/main.cpp:141
+#: ktorrent/main.cpp:144
 msgid "Silently open torrent given on URL"
 msgstr "Тихо отвори торент дат у УРЛ‑у"
 
@@ -3234,8 +3227,8 @@ msgstr "Нема довољно слободног простора."
 #: ktorrent/trayicon.cpp:311
 #, kde-format
 msgid ""
-"Your disk is running out of space.<br /><b>%1</b> is being downloaded to "
-"'%2'."
+"Your disk is running out of space.<br /><b>%1</b> is being downloaded to '%"
+"2'."
 msgstr "Понестаје простора на диску.<br /><b>%1</b> се преузима у „%2“."
 
 #: ktorrent/trayicon.cpp:314
@@ -3606,8 +3599,9 @@ msgstr "ДХТ: искључен"
 #, kde-format
 msgid "DHT: %1 nodes, %2 tasks"
 msgstr ""
-"ДХТ: веза %1, послова %2|/|ДХТ: %1 $[множ ^1 веза веза веза], %2 $[множ ^2 "
-"посао посла послова]"
+"ДХТ: веза %1, послова %2"
+"|/|"
+"ДХТ: %1 $[множ ^1 веза веза веза], %2 $[множ ^2 посао посла послова]"
 
 #. i18n: file: plasma/applet/appletconfig.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, AppletConfig)
@@ -3619,25 +3613,25 @@ msgstr "Аплет"
 #: plasma/applet/applet.cpp:298 plasma/applet/applet.cpp:363
 #, kde-format
 msgid ""
-"<table>\t\t\t\t<tr><td>Download Speed:</td><td>%5 </td><td>Seeders: </td><td>"
-"%1 (%2)</td></tr>\t\t\t\t<tr><td>Upload Speed:</td><td>%6 </td><td>Leechers: "
-"</td><td>%3 (%4)</td></tr>"
+"<table>\t\t\t\t<tr><td>Download Speed:</td><td>%5 </td><td>Seeders: </"
+"td><td>%1 (%2)</td></tr>\t\t\t\t<tr><td>Upload Speed:</td><td>%6 </"
+"td><td>Leechers: </td><td>%3 (%4)</td></tr>"
 msgstr ""
-"<table>\t\t\t\t<tr><td>Преузимање:</td><td>%5 </td><td>Сијача: </td><td>%1 "
-"(%2)</td></tr>\t\t\t\t<tr><td>Брзина слања:</td><td>%6 </td><td>Пијавица: </"
+"<table>\t\t\t\t<tr><td>Преузимање:</td><td>%5 </td><td>Сијача: </td><td>%1 (%"
+"2)</td></tr>\t\t\t\t<tr><td>Брзина слања:</td><td>%6 </td><td>Пијавица: </"
 "td><td>%3 (%4)</td></tr>"
 
 # skip-rule: x-markup-k
 #: plasma/applet/applet.cpp:303 plasma/applet/applet.cpp:368
 #, kde-format
 msgid ""
-"<tr><td>Downloaded:</td><td>%1 </td><td>Size: </td><td>%2</td></tr>\t\t\t"
-"\t<tr><td>Uploaded:</td><td>%3 </td><td>Complete: </td><td>%4 %</td></tr>\t\t"
-"\t\t</table>"
+"<tr><td>Downloaded:</td><td>%1 </td><td>Size: </td><td>%2</td></"
+"tr>\t\t\t\t<tr><td>Uploaded:</td><td>%3 </td><td>Complete: </td><td>%4 %</"
+"td></tr>\t\t\t\t</table>"
 msgstr ""
-"<tr><td>Преузето:</td><td>%1 </td><td>Величина:</td><td>%2</td></tr>\t\t\t"
-"\t<tr><td>Послато:</td><td>%3 </td><td>Довршено:</td><td>%4 %</td></tr>\t\t\t"
-"\t</table>"
+"<tr><td>Преузето:</td><td>%1 </td><td>Величина:</td><td>%2</td></"
+"tr>\t\t\t\t<tr><td>Послато:</td><td>%3 </td><td>Довршено:</td><td>%4 %</td></"
+"tr>\t\t\t\t</table>"
 
 #: plasma/applet/applet.cpp:309
 #, kde-format
@@ -3861,13 +3855,13 @@ msgstr "Грешка при заустављању торента %1: %2"
 
 #: libktcore/torrent/chunkbar.cpp:93
 msgid ""
-"<img src=\"available_color\">&nbsp; - Downloaded Chunks<br><img src="
-"\"unavailable_color\">&nbsp; - Chunks to Download<br><img src="
-"\"excluded_color\">&nbsp; - Excluded Chunks"
+"<img src=\"available_color\">&nbsp; - Downloaded Chunks<br><img "
+"src=\"unavailable_color\">&nbsp; - Chunks to Download<br><img "
+"src=\"excluded_color\">&nbsp; - Excluded Chunks"
 msgstr ""
-"<img src=\"available_color\" /> — преузети парчићи<br/><img src="
-"\"unavailable_color\" /> — парчићи за преузимање<br/><img src="
-"\"excluded_color\" /> — изузети парчићи"
+"<img src=\"available_color\" /> — преузети парчићи<br/><img "
+"src=\"unavailable_color\" /> — парчићи за преузимање<br/><img "
+"src=\"excluded_color\" /> — изузети парчићи"
 
 #: libktcore/util/mmapfile.cpp:164
 msgid "Cannot write beyond end of the mmap buffer."
@@ -3984,8 +3978,8 @@ msgstr "Отвори тихо"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -4015,8 +4009,8 @@ msgstr "Претражи потфасцикле"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -4027,9 +4021,9 @@ msgid ""
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
 "p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Warning:"
-"<span style=\" font-weight:400;\"> you will permanently lose this file.</"
-"span></p></body></html>"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;"
+"\">Warning:<span style=\" font-weight:400;\"> you will permanently lose this "
+"file.</span></p></body></html>"
 msgstr ""
 "<html><p>Када је торент пронађен и учитан, обриши га.</p><p><b>Упозорење:</"
 "b> заувек ћете изгубити тај фајл.</p></html>"
@@ -4166,8 +4160,8 @@ msgstr "Поклапање ниски"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -4181,13 +4175,13 @@ msgid ""
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
 "p>\n"
 "<table border=\"0\" style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px;\" align=\"center\" cellspacing=\"1\" cellpadding="
-"\"2\">\n"
+"left:0px; margin-right:0px;\" align=\"center\" cellspacing=\"1\" "
+"cellpadding=\"2\">\n"
 "<tr>\n"
 "<td style=\" vertical-align:top;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span style="
-"\" font-weight:600;\">c</span></p></td>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span "
+"style=\" font-weight:600;\">c</span></p></td>\n"
 "<td style=\" vertical-align:top;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Any character represents "
@@ -4197,8 +4191,8 @@ msgid ""
 "<tr>\n"
 "<td style=\" vertical-align:top;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span style="
-"\" font-weight:600;\">?</span></p></td>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span "
+"style=\" font-weight:600;\">?</span></p></td>\n"
 "<td style=\" vertical-align:top;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Matches any "
@@ -4206,8 +4200,8 @@ msgid ""
 "<tr>\n"
 "<td style=\" vertical-align:top;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span style="
-"\" font-weight:600;\">*</span></p></td>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span "
+"style=\" font-weight:600;\">*</span></p></td>\n"
 "<td style=\" vertical-align:top;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Matches "
@@ -4215,8 +4209,8 @@ msgid ""
 "<tr>\n"
 "<td style=\" vertical-align:top;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span style="
-"\" font-weight:600;\">[...]</span></p></td>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span "
+"style=\" font-weight:600;\">[...]</span></p></td>\n"
 "<td style=\" vertical-align:top;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Sets of "
@@ -4550,8 +4544,8 @@ msgstr "Које сучеље се користи."
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -4680,8 +4674,8 @@ msgstr "Порт на коме веб сучеље ослушкује."
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -5324,8 +5318,8 @@ msgstr " сати"
 #. i18n: ectx: property (toolTip), widget (KLineEdit, m_webseed)
 #: rc.cpp:698
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
@@ -5413,8 +5407,8 @@ msgstr "Списак пратилаца"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showWebSeedsTab)
 #: rc.cpp:739
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
@@ -5446,8 +5440,8 @@ msgstr "Први приоритет:"
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_firstColor)
 #: rc.cpp:754
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
@@ -5466,8 +5460,8 @@ msgstr "Посљедњи приоритет:"
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_lastColor)
 #: rc.cpp:763
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
@@ -5656,8 +5650,8 @@ msgstr "Богати текст у дневнику"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
@@ -6561,8 +6555,8 @@ msgstr "Портови и ограничења"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -6595,8 +6589,8 @@ msgstr "УДП порт пратиоца:"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -6669,8 +6663,8 @@ msgstr "Највећи број успостављених веза:"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -6701,8 +6695,8 @@ msgstr "Мрежно сучеље:"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -6840,14 +6834,14 @@ msgstr "Период ажурирања сучеља:"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span style="
-"\" font-size:8pt;\">The interval in milliseconds between GUI updates.</"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
+"style=\" font-size:8pt;\">The interval in milliseconds between GUI updates.</"
 "span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
@@ -6885,16 +6879,16 @@ msgstr "Период успављивања мреже:"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span style="
-"\" font-size:8pt;\">Amount of time the network threads will sleep when they "
-"are speed limited. This has absolutely no effect when there are no speed "
-"limits.</span></p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
+"style=\" font-size:8pt;\">Amount of time the network threads will sleep when "
+"they are speed limited. This has absolutely no effect when there are no "
+"speed limits.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
 "p>\n"
@@ -6943,8 +6937,8 @@ msgstr "Алгоритам процјене времена:"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -7007,8 +7001,8 @@ msgstr "Величина прегледа аудио фајлова:"
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_previewSizeAudio)
 #: rc.cpp:1626
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -7046,8 +7040,8 @@ msgstr "Величина прегледа видео фајлова:"
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_previewSizeVideo)
 #: rc.cpp:1638
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -7132,8 +7126,8 @@ msgstr "УДП порт за ДХТ комуникацију:"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -7189,8 +7183,8 @@ msgstr "Шифровање"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useEncryption)
 #: rc.cpp:1699
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
@@ -7471,11 +7465,11 @@ msgstr " MiB"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_decreasePriorityOfStalledTorrents)
 #: rc.cpp:1817
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-size:8pt; font-weight:400; font-style:"
-"normal;\">\n"
+"</style></head><body style=\" font-size:8pt; font-weight:400; font-"
+"style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">With this enabled, the "
 "queue manager will decrease the priority of a torrent which has been stalled "
@@ -7510,8 +7504,8 @@ msgstr "Вријеме застоја:"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -7586,14 +7580,14 @@ msgstr "Подразумијевани највећи однос дијељењ�
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span style="
-"\" font-size:8pt;\">The maximum share ratio, if this value is reached "
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
+"style=\" font-size:8pt;\">The maximum share ratio, if this value is reached "
 "seeding will be stopped. This is only applied to newly opened torrents, "
 "existing torrents will not be affected by changing this.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
@@ -7743,8 +7737,8 @@ msgstr "Искачуће поруке у системској касети"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openMultipleTorrentsSilently)
 #: rc.cpp:1934
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
@@ -7765,8 +7759,8 @@ msgstr "Отварај вишеструке торенте тихо"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_suppressSleep)
 #: rc.cpp:1943
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
@@ -7884,15 +7878,15 @@ msgstr "ХТТП"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span style="
-"\" font-size:8pt;\">Use the HTTP proxy settings configured in the settings "
-"of KDE.</span></p></body></html>"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
+"style=\" font-size:8pt;\">Use the HTTP proxy settings configured in the "
+"settings of KDE.</span></p></body></html>"
 msgstr ""
 "<html><p>Користи поставке ХТТП проксија подешене у поставкама КДЕ‑а.</p></"
 "html>"
@@ -7937,8 +7931,8 @@ msgstr "Користи прокси за везе веб сијања"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useProxyForTracker)
 #: rc.cpp:2064
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -7965,15 +7959,15 @@ msgstr "СОКС"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span style="
-"\" font-size:8pt;\">Use a SOCKS proxy server for bittorrent connections.</"
-"span></p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
+"style=\" font-size:8pt;\">Use a SOCKS proxy server for bittorrent "
+"connections.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
 "p>\n"
@@ -8003,15 +7997,15 @@ msgstr "Сервер:"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span style="
-"\" font-size:8pt;\">IP address or hostname of the SOCKS server</span></p></"
-"body></html>"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
+"style=\" font-size:8pt;\">IP address or hostname of the SOCKS server</span></"
+"p></body></html>"
 msgstr "<html><p>ИП адреса или име домаћина СОКС сервера</p></html>"
 
 #. i18n: file: ktorrent/pref/proxypref.ui:156
@@ -8020,14 +8014,15 @@ msgstr "<html><p>ИП адреса или име домаћина СОКС се�
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span style="
-"\" font-size:8pt;\">Port used by the SOCKS server</span></p></body></html>"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
+"style=\" font-size:8pt;\">Port used by the SOCKS server</span></p></body></"
+"html>"
 msgstr "<html><p>Порт који користи СОКС сервер.</p></html>"
 
 #. i18n: file: ktorrent/pref/proxypref.ui:163
@@ -8058,8 +8053,8 @@ msgstr "Неопходни су корисничко име и лозинка"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -8075,8 +8070,8 @@ msgstr "<html><p>Корисничко име за СОКС прокси серв
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -8129,8 +8124,8 @@ msgstr "Нађено:"
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_found)
 #: rc.cpp:2158
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
@@ -8170,8 +8165,8 @@ msgstr "Неуспјело:"
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_failed)
 #: rc.cpp:2170
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
@@ -8190,8 +8185,8 @@ msgstr "Непреузето:"
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_not_downloaded)
 #: rc.cpp:2182
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
@@ -8204,8 +8199,8 @@ msgstr "<html><p>Број парчића који нису преузети.</p>
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_downloaded)
 #: rc.cpp:2194
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
@@ -8280,8 +8275,8 @@ msgstr "Дијалог"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_default_location_enabled)
 #: rc.cpp:2221
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
@@ -8306,8 +8301,8 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, m_default_location)
 #: rc.cpp:2232
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
@@ -8332,8 +8327,8 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox)
 #: rc.cpp:2240
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
@@ -8377,8 +8372,8 @@ msgstr "Највећи однос дијељења:"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_only_new)
 #: rc.cpp:2282
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
@@ -8423,8 +8418,8 @@ msgstr "Додај вршњака:"
 msgid ""
 "IP addresses must be in the format 'XXX.XXX.XXX.XXX'.\n"
 "                                        \n"
-"You can also use wildcards like '127.0.0.*' or specify ranges like "
-"'200.10.10.0-200.10.10.40'."
+"You can also use wildcards like '127.0.0.*' or specify ranges like '200.10."
+"10.0-200.10.10.40'."
 msgstr ""
 "<p>ИП адресе морају бити облика <icode>XXX.XXX.XXX.XXX</icode>.</p><p>Такође "
 "можете користити џокере, нпр. <icode>127.0.0.*</icode>, и задавати опсеге, "
@@ -8676,8 +8671,8 @@ msgstr "Покрени торент"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_skip_data_check)
 #: rc.cpp:2475
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
 "size:8pt; font-weight:400; font-style:normal;\">\n"
@@ -8765,8 +8760,8 @@ msgstr "Вршњак:"
 #. i18n: ectx: property (toolTip), widget (QLineEdit, m_ip)
 #: rc.cpp:2537
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -8801,8 +8796,8 @@ msgstr "Сљедећи фајлови недостају:"
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_recreate)
 #: rc.cpp:2563
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:10pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -8821,8 +8816,8 @@ msgstr "Направи"
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_dnd)
 #: rc.cpp:2572
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:10pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -8835,8 +8830,8 @@ msgstr "<html><p>Не преузимај недостајуће фајлове.<
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_select_new)
 #: rc.cpp:2581
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:10pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -8857,8 +8852,8 @@ msgstr "Изабери нову локацију"
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_cancel)
 #: rc.cpp:2590
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'OpenSymbol'; font-size:10pt; font-"
 "weight:400; font-style:normal;\">\n"

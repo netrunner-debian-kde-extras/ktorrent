@@ -8,19 +8,18 @@
 # serdar soytetir <tulliana@gmail.com>, 2007.
 # Akın Ömeroğlu <akin@omeroglu.net>, 2007.
 # Serhat Demirkol <serhat_demirkol@yahoo.com>, 2009.
-# Onur Küçük <onur@pardus.org.tr>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-06-07 01:29+0200\n"
-"PO-Revision-Date: 2010-04-19 21:26+0300\n"
-"Last-Translator: Onur Küçük <onur@pardus.org.tr>\n"
-"Language-Team: Turkish <turkce@pardus.org.tr>\n"
+"POT-Creation-Date: 2010-07-06 01:30+0200\n"
+"PO-Revision-Date: 2009-11-16 01:37+0200\n"
+"Last-Translator: Serdar Soytetir <tulliana@gmail.com>\n"
+"Language-Team: Turkish <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 0.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: plugins/scanfolder/scanfolderplugin.cpp:62
@@ -144,11 +143,11 @@ msgstr "Filtre Ekle/Kaldır"
 
 #: plugins/syndication/syndicationplugin.cpp:98
 msgid "Rename"
-msgstr "Yeniden İsimlendir"
+msgstr "Yeniden adlandır"
 
 #: plugins/syndication/syndicationplugin.cpp:101
 msgid "Add Filter"
-msgstr "Filitre Ekle"
+msgstr "Filtre Ekle"
 
 #: plugins/syndication/syndicationplugin.cpp:104
 msgid "Remove Filter"
@@ -384,13 +383,11 @@ msgstr "Tam Ekranı Aç/Kapat"
 msgid "KTorrent is playing a video."
 msgstr "KTorrent bir video oynatıyor."
 
-#: plugins/webinterface/httpserver.cpp:332
-#, fuzzy
-#| msgid "Cannot find webinterface skins!"
+#: plugins/webinterface/httpserver.cpp:335
 msgid "Cannot find web interface skins."
-msgstr "Web arayüzü dış görünümleri bulunamadı!"
+msgstr "Web arayüzü temaları bulunamadı."
 
-#: plugins/webinterface/httpserver.cpp:497
+#: plugins/webinterface/httpserver.cpp:500
 msgid "Unsupported HTTP method"
 msgstr "Desteklenmeyen HTTP yöntemi"
 
@@ -404,7 +401,7 @@ msgstr "Web Arayüzü"
 
 #: plugins/webinterface/torrentposthandler.cpp:52
 msgid "HTTP Get not supported when uploading a torrent"
-msgstr "Torrent gönderilirken HTTP Get desteklenmiyor"
+msgstr ""
 
 #: plugins/webinterface/torrentposthandler.cpp:65
 msgid "Invalid data received"
@@ -744,8 +741,6 @@ msgid ""
 "Whether or not the peer has choked us - when we are choked the peer will not "
 "send us any data"
 msgstr ""
-"Diğer ucun bağlantıyı kesip kesmediği - bağlantı kesilirse uç tarafından "
-"veri aktarımı durur"
 
 #: plugins/infowidget/peerviewmodel.cpp:332
 msgid "Snubbed means the peer has not sent us any data in the last 2 minutes"
@@ -1258,16 +1253,12 @@ msgstr "Erişilebilir"
 #. i18n: file: plugins/infowidget/trackerview.ui:22
 #. i18n: ectx: property (text), widget (KPushButton, m_add_tracker)
 #: plugins/infowidget/trackerview.cpp:87 rc.cpp:637
-#, fuzzy
-#| msgid "Add Tracker"
 msgid "Add Trackers"
 msgstr "İzleyici Ekle"
 
 #: plugins/infowidget/trackerview.cpp:88
-#, fuzzy
-#| msgid "Enter the URL of the tracker:"
 msgid "Enter the URL's of the trackers, one per line:"
-msgstr "İzleyicinin IP adresi:"
+msgstr "İzleyicilerin adresleri, her satıra bir tane:"
 
 #: plugins/infowidget/trackerview.cpp:112
 msgid "Several URL's could not be added because they are malformed:"
@@ -1379,7 +1370,6 @@ msgid ""
 "Failed to load script from archive. There is something wrong with the "
 "desktop file."
 msgstr ""
-"Arşivden betik yüklenirken hata oluştu. Desktop dosyasında bir sorun var."
 
 #: plugins/scripting/scriptmodel.cpp:154
 msgid "No script found in archive."
@@ -1432,11 +1422,11 @@ msgstr "Çıktıyı Askıya Al"
 
 #: plugins/logviewer/logviewer.cpp:131
 msgid "<font color=\"#FF0000\">Logging output suspended</font>"
-msgstr "<font color=\"#FF0000\">Çıktının kaydedilmesi duraklatıldı</font>"
+msgstr ""
 
 #: plugins/logviewer/logviewer.cpp:133
 msgid "<font color=\"#00FF00\">Logging output resumed</font>"
-msgstr "<font color=\"#00FF00\">Çıktı kaydedilmesine devam ediliyor</font>"
+msgstr ""
 
 #: plugins/logviewer/logprefpage.cpp:30
 msgid "Log Viewer"
@@ -1674,16 +1664,12 @@ msgid "Clear Schedule"
 msgstr "Zamanlamayı Temizle"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:58
-#, fuzzy
-#| msgid "Schedule line color:"
 msgid "Scheduler Active"
-msgstr "Zamanlayıcı satır rengi:"
+msgstr "Zamanlayıcı Etkin"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:59
-#, fuzzy
-#| msgid "Add a new item to the schedule"
 msgid "Activate or deactivate the scheduler"
-msgstr "Zamanlayıcıya yeni bir öge ekle"
+msgstr "Zamanlayıcıyı etkinleştir veya pasifleştir"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:106
 #: plugins/bwscheduler/scheduleeditor.cpp:122
@@ -1702,32 +1688,27 @@ msgid "Current schedule: suspended"
 msgstr "Şimdiki durum: durduruldu"
 
 #: plugins/bwscheduler/weekscene.cpp:75
-#, fuzzy, kde-format
-#| msgid "Current schedule: %1 KiB/s download, %2 KiB/s upload"
+#, kde-format
 msgid "Current schedule: %1/s download, %2/s upload"
-msgstr "Şimdiki durum: %1 KB/s indirme, %2 KB/s gönderme"
+msgstr ""
 
 #: plugins/bwscheduler/weekscene.cpp:78
-#, fuzzy, kde-format
-#| msgid "Current schedule: unlimited download, %1 KiB/s upload"
+#, kde-format
 msgid "Current schedule: unlimited download, %1/s upload"
-msgstr "Şimdiki durum: Sınırsız indirme, %1 KB/s gönderme"
+msgstr ""
 
 #: plugins/bwscheduler/weekscene.cpp:80
-#, fuzzy, kde-format
-#| msgid "Current schedule: %1 KiB/s download, unlimited upload"
+#, kde-format
 msgid "Current schedule: %1/s download, unlimited upload"
-msgstr "Şimdiki durum: %1 KB/s indirme, sınırsız gönderme"
+msgstr ""
 
 #: plugins/bwscheduler/weekscene.cpp:82
 msgid "Current schedule: unlimited upload and download"
 msgstr "Şimdiki durum: Sınırsız indirme, sınırsız gönderme"
 
 #: plugins/bwscheduler/weekscene.cpp:85
-#, fuzzy
-#| msgid "KTorrent scheduler files"
 msgid " (scheduler disabled)"
-msgstr "Torrent zamanlama dosyaları"
+msgstr " (zamanlayıcı pasifleştirildi)"
 
 #: plugins/bwscheduler/weekscene.cpp:106
 msgid "Current schedule:"
@@ -1805,7 +1786,7 @@ msgstr "Tüm torrentlerin indirilmesi tamamlandığında"
 
 #: plugins/shutdown/shutdowndlg.cpp:45
 msgid "When all torrents finish seeding"
-msgstr "Tüm torrent bağlantıları yayınlamayı bitirince"
+msgstr ""
 
 #: plugins/shutdown/shutdowndlg.cpp:46
 msgid "When the events below happen"
@@ -1967,7 +1948,7 @@ msgstr "Bağlantı beklenmedik bir biçimde kapatıldı."
 msgid "Timeout occurred"
 msgstr "Zamanaşımı oluştu"
 
-#: ktorrent/core.cpp:169
+#: ktorrent/core.cpp:170
 #, fuzzy, kde-format
 #| msgid ""
 #| "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -1979,7 +1960,7 @@ msgstr ""
 "KTorrent bağlantı kabul edemiyor çünkü %1'den %2'ye kadar olan kapılar başka "
 "bir uygulama tarafından kullanılmakta."
 
-#: ktorrent/core.cpp:183
+#: ktorrent/core.cpp:184
 #, fuzzy, kde-format
 #| msgid ""
 #| "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -1991,16 +1972,16 @@ msgstr ""
 "KTorrent bağlantı kabul edemiyor çünkü %1'den %2'ye kadar olan kapılar başka "
 "bir uygulama tarafından kullanılmakta."
 
-#: ktorrent/core.cpp:993
+#: ktorrent/core.cpp:996
 msgid "KTorrent is running one or more torrents"
 msgstr "KTorrent bir veya daha fazla torrenti çalıştırıyor"
 
-#: ktorrent/core.cpp:1075
+#: ktorrent/core.cpp:1078
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Torrent oluşturulamıyor: %1"
 
-#: ktorrent/core.cpp:1181
+#: ktorrent/core.cpp:1184
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -2009,21 +1990,21 @@ msgstr ""
 "\"%1\" torrenti için bazı veri dosyaları bulunamıyor. Bu dosyaları yeniden "
 "yapılandırmak ister misiniz? Yoksa bunlar yeniden indirilsin mi?"
 
-#: ktorrent/core.cpp:1190 ktorrent/core.cpp:1202 ktorrent/core.cpp:1215
+#: ktorrent/core.cpp:1193 ktorrent/core.cpp:1205 ktorrent/core.cpp:1218
 msgid "Data files are missing"
 msgstr "Veri dosyaları eksik"
 
-#: ktorrent/core.cpp:1201
+#: ktorrent/core.cpp:1204
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Eksik dosyalar seçimden çıkartılamıyor: %1"
 
-#: ktorrent/core.cpp:1214
+#: ktorrent/core.cpp:1217
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Eksik dosyalar yeniden oluşturulamıyor: %1"
 
-#: ktorrent/core.cpp:1226
+#: ktorrent/core.cpp:1229
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -2032,16 +2013,16 @@ msgstr ""
 "Verilerin kaydedildiği \"%1\" torrent dosyası yok. \n"
 "Tekrar oluşturmak ister misiniz?"
 
-#: ktorrent/core.cpp:1233 ktorrent/core.cpp:1244
+#: ktorrent/core.cpp:1236 ktorrent/core.cpp:1247
 msgid "Data file is missing"
 msgstr "Veri dosyası yok"
 
-#: ktorrent/core.cpp:1243
+#: ktorrent/core.cpp:1246
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Veri dosyası yeniden oluşturulamıyor: %1"
 
-#: ktorrent/core.cpp:1348
+#: ktorrent/core.cpp:1351
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -2053,16 +2034,16 @@ msgstr[0] ""
 "KTorrent, KDE3 sürümünden %1 torrent buldu, bu torrentleri içeri aktarmak "
 "ister misiniz?"
 
-#: ktorrent/core.cpp:1370
+#: ktorrent/core.cpp:1373
 msgid "No torrents from the KDE3 version were found."
 msgstr "KDE3 sürümünden torrent bulunmadı."
 
-#: ktorrent/core.cpp:1389 ktorrent/core.cpp:1408
+#: ktorrent/core.cpp:1392 ktorrent/core.cpp:1411
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr ""
 
-#: ktorrent/core.cpp:1394 ktorrent/core.cpp:1413
+#: ktorrent/core.cpp:1397 ktorrent/core.cpp:1416
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -2150,11 +2131,11 @@ msgstr "Çalışıyor"
 
 #: ktorrent/tools/queuemanagermodel.cpp:160
 msgid "Queued"
-msgstr "Sıraya Eklendi"
+msgstr "Kuyruğa eklendi"
 
 #: ktorrent/tools/queuemanagermodel.cpp:162
 msgid "Not queued"
-msgstr "Sıraya eklenmemiş"
+msgstr "Kuyruğa eklenmemiş"
 
 #: ktorrent/tools/queuemanagermodel.cpp:171
 #, kde-format
@@ -2167,8 +2148,9 @@ msgid ""
 "Use drag and drop or the move up and down buttons on the right to change the "
 "order."
 msgstr ""
-"Bir torrentin sıradaki yeri: Yeri değiştirmek için torrenti sürükleyip "
-"bırakın veya sağdaki yukarı-aşağı düğmelerini kullanın."
+"Bir torrentin kuyruktaki sırası.\n"
+"Sırayı değiştirmek için torrenti sürükleyip bırakın veya sağdaki yukarı-"
+"aşağı düğmelerini kullanın."
 
 #: ktorrent/tools/queuemanagerwidget.cpp:65
 #, fuzzy
@@ -2190,7 +2172,7 @@ msgstr "Yukarı Taşı"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:71
 msgid "Move a torrent to the top of the queue"
-msgstr "Bir torrenti sıranın en üstüne taşı"
+msgstr "Bir torrenti kuyruğun en üstüne taşı"
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:50
 #. i18n: ectx: property (text), widget (KPushButton, m_move_up)
@@ -2232,7 +2214,7 @@ msgstr "Alt"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:80
 msgid "Move a torrent to the bottom of the queue"
-msgstr "Bir torrenti sıranın en altına taşı"
+msgstr "Bir torrenti kuyruğun en altına taşı"
 
 #: ktorrent/tools/magnetview.cpp:42
 #, fuzzy
@@ -2246,9 +2228,9 @@ msgstr ""
 
 #: ktorrent/tools/magnetview.cpp:45
 #, fuzzy
-#| msgid "Remove Feed"
+#| msgid "Remove Torrent"
 msgid "Remove Magnet"
-msgstr "Kaynağı Kaldır"
+msgstr "Torrenti Kaldır"
 
 #: ktorrent/tools/magnetmodel.cpp:128
 msgid "Magnet Link"
@@ -2371,8 +2353,10 @@ msgid "Move Data"
 msgstr "Verileri Taşı"
 
 #: ktorrent/view/viewmanager.cpp:645
+#, fuzzy
+#| msgid "Move completed downloads to:"
 msgid "Move Data When Completed"
-msgstr ""
+msgstr "Tamamlanmış indirmeleri buraya taşı:"
 
 #: ktorrent/view/viewmanager.cpp:649
 msgid "Remove from Group"
@@ -2578,15 +2562,13 @@ msgstr "Torrent verisinin disk üzerindeki konumu"
 
 #: ktorrent/view/viewmodel.cpp:473
 #, fuzzy
-#| msgid "When all torrents finish seeding"
+#| msgid "No torrents loaded."
 msgid "When this torrent was added"
-msgstr "Tüm torrent bağlantıları yayınlamayı bitirince"
+msgstr "Hiç torrent yüklenmedi."
 
 #: ktorrent/view/viewmodel.cpp:519
-#, fuzzy
-#| msgid "Timeout contacting tracker %1"
 msgid "Unable to contact a tracker."
-msgstr "İzleyici %1 bağlantısında zaman aşımı"
+msgstr ""
 
 #: ktorrent/view/viewmodel.cpp:525
 #, kde-format
@@ -2723,9 +2705,9 @@ msgstr "Bir torrenti işaret eden bir adres aç"
 
 #: ktorrent/gui.cpp:414
 #, fuzzy
-#| msgid "Ungrouped Torrents"
+#| msgid "Pause KTorrent"
 msgid "Suspend Torrents"
-msgstr "Gruplandırılmamış Torrentler"
+msgstr "KTorrent'i Duraklat"
 
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:99
 #. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
@@ -2763,7 +2745,7 @@ msgstr "KTorrent'in KDE3 sürümünden tüm torrentleri içe aktar"
 
 #: ktorrent/gui.cpp:444
 msgid "Show/Hide KTorrent"
-msgstr "KTorrent Uygulamasını Göster/Gizle"
+msgstr "KTorrent'i Göster/Gizle"
 
 #: ktorrent/gui.cpp:449
 msgid "Group View Visible"
@@ -3096,8 +3078,10 @@ msgid "Andrei Barbu"
 msgstr ""
 
 #: ktorrent/main.cpp:138
+#, fuzzy
+#| msgid "No torrents loaded."
 msgid "Feature which adds the date a torrent was added"
-msgstr ""
+msgstr "Hiç torrent yüklenmedi."
 
 #: ktorrent/main.cpp:140
 msgid "Jonas Lundqvist"
@@ -3222,12 +3206,12 @@ msgstr[0] "%1 torrentten fazlası indirilemez. <br>"
 #: ktorrent/trayicon.cpp:294
 msgid "Go to Settings -> Configure KTorrent, if you want to change the limits."
 msgstr ""
-"Sınırları değiştirmek istiyorsanız Ayarlar -> KTorrent'i Yapılandır yolunu "
-"takip edin."
+"Limitleri değiştirmek istiyorsanız Ayarlar -> KTorrent'i Yapılandır "
+"seçeneğini seçin."
 
 #: ktorrent/trayicon.cpp:298
 msgid "There is not enough diskspace available."
-msgstr "Yeterince kulanılabilir disk alanı yok."
+msgstr "Yeterince boş disk alanı yok."
 
 #: ktorrent/trayicon.cpp:311
 #, kde-format
@@ -3320,11 +3304,6 @@ msgid "Opening %1"
 msgstr "%1 açılıyor"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:217
-#, fuzzy
-#| msgid ""
-#| "Some files of this torrent have been found in the completed downloads "
-#| "directory. Do you want to import these files and use the completed "
-#| "downloads directory as the location ?"
 msgid ""
 "Some files of this torrent have been found in the completed downloads "
 "directory. Do you want to import these files and use the completed downloads "
@@ -3335,11 +3314,6 @@ msgstr ""
 "ister misiniz?"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:220
-#, fuzzy
-#| msgid ""
-#| "All files of this torrent have been found in the completed downloads "
-#| "directory. Do you want to import these files and use the completed "
-#| "downloads directory as the location ?"
 msgid ""
 "All files of this torrent have been found in the completed downloads "
 "directory. Do you want to import these files and use the completed downloads "
@@ -3350,10 +3324,7 @@ msgstr ""
 "ister misiniz?"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:224
-#, fuzzy, kde-format
-#| msgid ""
-#| "The file <b>%1</b> was found in the completed downloads directory. Do you "
-#| "want to import this file ?"
+#, kde-format
 msgid ""
 "The file <b>%1</b> was found in the completed downloads directory. Do you "
 "want to import this file?"
@@ -3584,7 +3555,7 @@ msgstr "Torrentler"
 
 #: ktorrent/torrentactivity.cpp:75
 msgid "Widget to manage the torrent queue"
-msgstr "Torrent sırasını yönetmek için bir parçacık"
+msgstr "Torrent kuyruğunu yönetmek için bir parçacık"
 
 #: ktorrent/torrentactivity.cpp:79
 #, fuzzy
@@ -4486,7 +4457,7 @@ msgstr "Tazeleme sıklığı:"
 #. i18n: ectx: property (toolTip), widget (QSpinBox, m_refresh_rate)
 #: rc.cpp:217
 msgid "Time between automatic refreshes of the feed."
-msgstr "Besleme otomatik güncellemeleri arası zaman."
+msgstr ""
 
 #. i18n: file: plugins/syndication/feedwidget.ui:91
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_refresh_rate)
@@ -4889,16 +4860,14 @@ msgstr "Grafikleri şu sıklıkla güncelle"
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:15
 #. i18n: ectx: label, entry (DataGatherIval), group (general)
 #: rc.cpp:349
-#, fuzzy
-#| msgid "Interval in miliseconds between data gathering"
 msgid "Interval in milliseconds between data gathering"
-msgstr "Veri toplamaları arası süre, milisaniye olarak"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:20
 #. i18n: ectx: label, entry (MaxMode), group (general)
 #: rc.cpp:352
 msgid "Method of determining maximum value of the scale"
-msgstr "Ölçeğin en yüksek değerinin belirlenmesi yöntemi"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:25
 #. i18n: ectx: label, entry (ShowSeedsInSwarms), group (general)
@@ -4916,31 +4885,31 @@ msgstr "Sömürgenlerin kümeli gösterilip gösterilmeyeceği"
 #. i18n: ectx: label, entry (DlSpdSamples), group (general)
 #: rc.cpp:361
 msgid "Samples to show on download chart"
-msgstr "İndirme grafiğinde gösterilecek örnekler"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:40
 #. i18n: ectx: label, entry (PeersSpdSamples), group (general)
 #: rc.cpp:364
 msgid "Samples to show on peers chart"
-msgstr "Uç grafiğinde gösterilecek örnekler"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:45
 #. i18n: ectx: label, entry (UlSpdSamples), group (general)
 #: rc.cpp:367
 msgid "Samples to show on upload chart"
-msgstr "Gönderme grafiğinde gösterilecek örnekler"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:50
 #. i18n: ectx: label, entry (ConnsSamples), group (general)
 #: rc.cpp:370
 msgid "Samples to show on connections chart"
-msgstr "bağlantı grafiğinde gösterilecek örnekler"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:55
 #. i18n: ectx: label, entry (DhtSpdSamples), group (general)
 #: rc.cpp:373
 msgid "Samples to show on DHT chart"
-msgstr "DHT grafiğinde gösterilecek örnekler"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:60
 #. i18n: ectx: label, entry (DlSpdColor), group (general)
@@ -4952,43 +4921,43 @@ msgstr "İndirme grafiğindeki hızın rengi."
 #. i18n: ectx: label, entry (DlAvgColor), group (general)
 #: rc.cpp:379
 msgid "Color of the average on dl chart"
-msgstr "İndirme grafiği ortalama değerinin rengi"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:70
 #. i18n: ectx: label, entry (DlLimitColor), group (general)
 #: rc.cpp:382
 msgid "Color of the limit on dl chart"
-msgstr "İndirme grafiği limit değerinin rengi"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:75
 #. i18n: ectx: label, entry (PrAvgFromLColor), group (general)
 #: rc.cpp:385
 msgid "Color of the avg from leecher on peers chart"
-msgstr "Uçlar grafiğinde sömürgenlerden ortalama değerinin rengi"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:80
 #. i18n: ectx: label, entry (PrAvgToLColor), group (general)
 #: rc.cpp:388
 msgid "Color of the avg to leecher on peers chart"
-msgstr "Uçlar grafiğinde ortalamadan sömürgenlere değerinin rengi"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:85
 #. i18n: ectx: label, entry (PrAvgFromSColor), group (general)
 #: rc.cpp:391
 msgid "Color of the avg from seeds on peers chart"
-msgstr "Uçlar grafiğinde dağıtıcılardan ortalama değerine renk"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:90
 #. i18n: ectx: label, entry (PrFromLColor), group (general)
 #: rc.cpp:394
 msgid "Color of the leechers on peers chart"
-msgstr "Uçlar grafiğinde sömürgenler değerinin rengi"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:95
 #. i18n: ectx: label, entry (PrFromSColor), group (general)
 #: rc.cpp:397
 msgid "Color of the seeds on peers chart"
-msgstr "Uçlar grafiğinde dağıtıcıların rengi"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:100
 #. i18n: ectx: label, entry (UlSpdColor), group (general)
@@ -5000,51 +4969,49 @@ msgstr "Gönderme grafiğindeki hızın rengi."
 #. i18n: ectx: label, entry (UlAvgColor), group (general)
 #: rc.cpp:403
 msgid "Color of the avg on upload chart"
-msgstr "Gönderme grafiğinde ortalama değerin rengi"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:110
 #. i18n: ectx: label, entry (UlLimitColor), group (general)
 #: rc.cpp:406
 msgid "Color of the limit on upload chart"
-msgstr "Gönderme grafiğinde limit değerin rengi"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:115
 #. i18n: ectx: label, entry (CnLConnColor), group (general)
 #: rc.cpp:409
 msgid "Color of the connected leechers on connections chart"
-msgstr "Bağlantılar grafiğinde bağlı sömürgenlerin rengi"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:120
 #. i18n: ectx: label, entry (CnLSwarmsColor), group (general)
 #: rc.cpp:412
 msgid "Color of the leechers in swarms on connections chart"
-msgstr "Bağlantılar grafiğinde sömürgenler kümesinin rengi"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:125
 #. i18n: ectx: label, entry (CnSConnColor), group (general)
 #: rc.cpp:415
 msgid "Color of the connected seeds on connections chart"
-msgstr "Bağlantılar grafiğinde bağlı dağıtıcıların rengi"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:130
 #. i18n: ectx: label, entry (CnSSwarmsColor), group (general)
 #: rc.cpp:418
 msgid "Color of the seeds in swarms on connections chart"
-msgstr "Bağlantılar grafiğinde dağıtıcılar kümesinin rengi"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:135
 #. i18n: ectx: label, entry (CnAvgLConnPerTorrColor), group (general)
 #: rc.cpp:421
 msgid "Color of the avg connected leecher per torrent on connections chart"
 msgstr ""
-"Bağlantılar grafiğinde torrent başına ortalama bağlanılmış sömürgen rengi"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:140
 #. i18n: ectx: label, entry (CnAvgSConnPerTorrColor), group (general)
 #: rc.cpp:424
 msgid "Color of the avg connected seeds per torrent on connections chart"
 msgstr ""
-"Bağlantılar grafiğinde torrent başına ortalama bağlanılmış dağıtıcı rengi"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:145
 #. i18n: ectx: label, entry (CnAvgLConnPerRunTorrColor), group (general)
@@ -5052,8 +5019,6 @@ msgstr ""
 msgid ""
 "Color of the avg connected leechers per running torrent on connections chart"
 msgstr ""
-"Bağlantılar grafiğinde çalışan torrent başına ortalama bağlanılmış sömürgen "
-"rengi"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:150
 #. i18n: ectx: label, entry (CnAvgSConnPerRunTorrColor), group (general)
@@ -5061,8 +5026,6 @@ msgstr ""
 msgid ""
 "Color of the avg connected seeds per running torrent on connections chart"
 msgstr ""
-"Bağlantılar grafiğinde çalışan torrent başına ortalama bağlanılmış dağıtıcı "
-"rengi"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:155
 #. i18n: ectx: label, entry (DhtNodesColor), group (general)
@@ -5074,7 +5037,7 @@ msgstr "DHT grafiklerindeki düğümlerin rengi"
 #. i18n: ectx: label, entry (DhtTasksColor), group (general)
 #: rc.cpp:436
 msgid "Color of the tasks on DHT chart"
-msgstr "DHT grafiğinde süreçlerin rengi"
+msgstr ""
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:165
 #. i18n: ectx: label, entry (AntiAliasing), group (general)
@@ -5747,7 +5710,7 @@ msgstr "Bir torrentin indirilmesi tamamlandığı zaman"
 #. i18n: ectx: property (text), widget (QCheckBox, finish_seeding)
 #: rc.cpp:832
 msgid "The torrent finishes seeding"
-msgstr "Bir torrentin dağıtılması tamamlandığı zaman"
+msgstr ""
 
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:19
 #. i18n: ectx: property (text), widget (QCheckBox, auto_resume)
@@ -5895,13 +5858,13 @@ msgstr "Günlük kaydı gerecinin konumu:"
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
 #: rc.cpp:901
 msgid "Separate activity"
-msgstr "Etkinliği böl"
+msgstr ""
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:76
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
 #: rc.cpp:904
 msgid "Dockable widget"
-msgstr "Eklenilebilir arayüz bileşeni"
+msgstr ""
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:81
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
@@ -6083,14 +6046,12 @@ msgid ""
 "Use these global limits when the screensaver is activated, instead of the "
 "ones configured in the network settings."
 msgstr ""
-"Ekran koruyucu devreye girdiğinde, ağ ayarlarında yapılan ayarlar yerine bu "
-"ayarları kullan."
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:25
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_screensaverLimits)
 #: rc.cpp:1009
 msgid "Use different speed limits when the screensaver is activated"
-msgstr "Ekran koruyucu devreye girdiğinde farklı hız limitleri kullan"
+msgstr ""
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:36
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -6116,7 +6077,7 @@ msgstr "En yüksek gönderme hızı:"
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_screensaverUploadLimit)
 #: rc.cpp:1015
 msgid "Global upload limit when the screensaver is activated."
-msgstr "Ekran koruyucu devrede iken genel gönderme limiti"
+msgstr ""
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:65
 #. i18n: ectx: property (text), widget (QLabel, label_6)
@@ -6142,7 +6103,7 @@ msgstr "En fazla indirme hızı:"
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_screensaverDownloadLimit)
 #: rc.cpp:1027
 msgid "Global download limit when the screensaver is activated."
-msgstr "Ekran koruyucu devrede iken genel indirme limiti."
+msgstr ""
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:120
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -6539,6 +6500,8 @@ msgstr "Gün olarak güncelleme aralığı:"
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:143
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_autoUpdateInterval)
 #: rc.cpp:1301
+#, fuzzy
+#| msgid " days"
 msgid " days"
 msgstr " gün"
 
@@ -6607,9 +6570,9 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_customtracker)
 #: rc.cpp:1335
 #, fuzzy
-#| msgid "Invalid tracker URL"
+#| msgid "Add Trackers"
 msgid "Add a custom tracker URL"
-msgstr "Geçersiz izleyici adresi"
+msgstr "İzleyici Ekle"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:60
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_tr)
@@ -6629,9 +6592,9 @@ msgstr "Bir torrenti kuyrukta aşağıya taşı"
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_dn)
 #: rc.cpp:1344
 #, fuzzy
-#| msgid "Add Tracker"
+#| msgid "Add an item"
 msgid "Add name"
-msgstr "İzleyici Ekle"
+msgstr "Bir öge ekle"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:77
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_onlypublic)
@@ -6676,8 +6639,10 @@ msgstr "Videoyu Göster"
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:14
 #. i18n: ectx: label, entry (customtracker), group (general)
 #: rc.cpp:1362
+#, fuzzy
+#| msgid "Tracker"
 msgid "Toggles if a custom tracker is used"
-msgstr ""
+msgstr "İzleyici"
 
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:18
 #. i18n: ectx: label, entry (tr), group (general)
@@ -7045,10 +7010,8 @@ msgstr ""
 #. i18n: file: ktorrent/pref/networkpref.ui:354
 #. i18n: ectx: property (text), widget (QPushButton, m_recommended_settings)
 #: rc.cpp:1539
-#, fuzzy
-#| msgid "Recommended Settings"
 msgid "Recommended Settings..."
-msgstr "Önerilen Ayarlar"
+msgstr "Önerilen Ayarlar..."
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:17
 #. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_diskPrealloc)
@@ -7403,11 +7366,10 @@ msgid ""
 "This is experimental and should only be used if you are getting a lot of "
 "connection to host broken errors."
 msgstr ""
-"İzleyici bildirimleri için KDE'nin KIO kitaplığının kullanımını "
-"pasifleştirir.\n"
+"İzleyici bildirimleri için KDE'nin KIO kitaplığının kullanımını kapatır.\n"
 "\n"
-"Bu deneysel bir özelliktir ve sadece çok sayıda makineye bağlantı koptu "
-"hatası alındığında kullanılmalıdır."
+"Bu deneysel bir özelliktir ve sadece makineye bağlantı koptu hatalarının "
+"sayısı fazla olduğunda kullanılmalıdır."
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:276
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useQHttpAnnounce)
@@ -7425,16 +7387,12 @@ msgid ""
 "It can be disabled if you do not like the additional network traffic it "
 "generates"
 msgstr ""
-"Bütün uçların alan adlarını bul. Bu seçenek seçildiğinde ucun IP adresi "
-"yerine alan adı gösterilir. \n"
-"\n"
-"Sebep olacağı fazla ağ trafiğini istemezseniz bu seçeneği kapatabilirsiniz"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:288
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_lookUpHostnameOfPeers)
 #: rc.cpp:1660
 msgid "Resolve hostnames of peers"
-msgstr "Uçların alan adlarını bul"
+msgstr ""
 
 #. i18n: file: ktorrent/pref/btpref.ui:16
 #. i18n: ectx: property (title), widget (QGroupBox, dhtGroupBox)
@@ -7793,8 +7751,8 @@ msgid ""
 "What to do when the diskspace is running low and the queue manager wants to "
 "start a torrent."
 msgstr ""
-"Disk alanı azaldığında ve sıra yöneticisi bir torrent başlatmak istediğinde "
-"ne yapılacak."
+"Disk alanı azaldığında ve kuyruk yöneticisi bir torrent başlatmak "
+"istediğinde ne yapılacak."
 
 #. i18n: file: ktorrent/pref/qmpref.ui:85
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startDownloadsOnLowDiskSpace)
@@ -7863,15 +7821,15 @@ msgstr ""
 "</style></head><body style=\" font-size:8pt; font-weight:400; font-style:"
 "normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Etkinleştirildiğinde, sıra "
-"yöneticisi uzun sürdir duraklatılmış bir torrentin önceliğini düşürecektir.</"
-"p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Etkinleştirildiğinde, "
+"kuyruk yöneticisi uzun süredir duraklatılmış bir torrentin önceliğini "
+"düşürecektir.</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
 "p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Bu, sıra yöneticisinin bir "
-"torrent çalışmıyorken diğer torrentleri çalıştırmasına izin verir.</p></"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Bu, kuyruk yöneticisinin "
+"bir torrent çalışmıyorken diğer torrentleri çalıştırmasına izin verir.</p></"
 "body></html>"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:139
@@ -9773,8 +9731,6 @@ msgid ""
 "When there is no space left to complete download, and the available disk "
 "space is less than this value, the torrent will be stopped."
 msgstr ""
-"Bağlantıyı tamamlayacak disk alanı kalmadığında, ve uygun disk alanı bu "
-"değerden az olduğunda, torrent durdurulacak."
 
 #. i18n: file: libktcore/ktorrent.kcfg:256
 #. i18n: ectx: label, entry (useCompletedDir), group (downloads)
@@ -9793,6 +9749,98 @@ msgstr "İndirilme işlemi biten dosyaların taşınacağı dizin"
 #: rc.cpp:2782
 msgid "Maximum seed time in hours (0 = no limit)"
 msgstr "Saat cinsinden azami paylaşım süresi (0 = limit yok)"
+
+#, fuzzy
+#~| msgid " minutes"
+#~ msgid " minute"
+#~ msgid_plural " minutes"
+#~ msgstr[0] " dakika"
+
+#, fuzzy
+#~| msgid "Use DHT to get additional peers"
+#~ msgid "Use DHT to find more peers"
+#~ msgstr "Daha çok paylaşımcı bulmak için DHT kullan"
+
+#, fuzzy
+#~| msgid "Use peer exchange"
+#~ msgid "Use peer exchange to find more peers"
+#~ msgstr "Paylaşımcı takası kullan"
+
+#, fuzzy
+#~| msgid ""
+#~| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/"
+#~| "TR/REC-html40/strict.dtd\">\n"
+#~| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~| "css\">\n"
+#~| "p, li { white-space: pre-wrap; }\n"
+#~| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
+#~| "font-weight:400; font-style:normal;\">\n"
+#~| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~| "right:0px; -qt-block-indent:0; text-indent:0px;\">Scan the folder "
+#~| "recursively for torrents.</p>\n"
+#~| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+#~| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
+#~| "\"></p>\n"
+#~| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~| "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Note: "
+#~| "<span style=\" font-weight:400;\">This will not be done for any folder "
+#~| "named loaded.</span></p></body></html>"
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Superseeding mode, is a "
+#~ "special seeding mode which allows you to achieve much higher seeding "
+#~ "efficiencies. This results in less bandwidth used to spread a torrent.</"
+#~ "p>\n"
+#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
+#~ "\"></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Note: </span>This should only be used if the swarm has not "
+#~ "fully been established. Once there are multiple active seeders, this mode "
+#~ "becomes useless.</p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Torrentler için dizini "
+#~ "özyineli olarak ara.</p>\n"
+#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
+#~ "\"></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Not: "
+#~ "<span style=\" font-weight:400;\">Yüklenen olarak adlandırılan dizinler "
+#~ "için yapılmayacaktır.</span></p></body></html>"
+
+#, fuzzy
+#~| msgid "Queued for seeding"
+#~ msgid "Use superseeding mode for seeding"
+#~ msgstr "Gönderme için kuyruğa eklendi"
+
+#, fuzzy
+#~| msgid "Directory to move data to when a torrent has finished downloading."
+#~ msgid ""
+#~ "Move the files of the torrent to a different directory when it has "
+#~ "finished downloading."
+#~ msgstr "Bir torrent tamamlandığı zaman indirilen verinin taşınacağı dizin"
+
+#, fuzzy
+#~| msgid "Select a directory to move the data to."
+#~ msgid "Location to move the files to."
+#~ msgstr "Verinin taşınacağı bir dizin seçin."
 
 #~ msgid "Malformed URL."
 #~ msgstr "Bozuk Adres."
@@ -9870,7 +9918,7 @@ msgstr "Saat cinsinden azami paylaşım süresi (0 = limit yok)"
 #~ msgstr "Bilinmeyen istemci"
 
 #~ msgid "Redirect without a redirect location"
-#~ msgstr "Bir konum olmadan yeniden yönlendir"
+#~ msgstr "Bir konum olmadan yeniden yönlendir."
 
 #~ msgid "Unable to resolve hostname %1"
 #~ msgstr "%1 makine adı çözümlenemedi"
@@ -9902,15 +9950,21 @@ msgstr "Saat cinsinden azami paylaşım süresi (0 = limit yok)"
 #~ msgid "Unable to create %1 : %2"
 #~ msgstr "%1 oluşturulamıyor : %2"
 
+#, fuzzy
+#~| msgid ""
+#~| "You are already downloading the torrent <b>%1</b>. The tracker lists "
+#~| "from both torrents have been merged."
 #~ msgid ""
 #~ "You are already downloading this torrent %1, the list of trackers of both "
 #~ "torrents has been merged."
 #~ msgstr ""
-#~ "%1 torrentini zaten indiriyorsunuz, iki torrentin izleyici listesi "
+#~ "<b>%1</b> torrentini zaten indiriyorsunuz. İki torrentin izleyici listesi "
 #~ "birleştirildi."
 
+#, fuzzy
+#~| msgid "You are already downloading the torrent <b>%1</b>."
 #~ msgid "You are already downloading the torrent %1"
-#~ msgstr "%1 torrentini zaten indiriyorsunuz"
+#~ msgstr "<b>%1</b> torrentini zaten indiriyorsunuz."
 
 #~ msgid "Not started"
 #~ msgstr "Başlatılmadı"
@@ -9930,9 +9984,6 @@ msgstr "Saat cinsinden azami paylaşım süresi (0 = limit yok)"
 
 #~ msgid "Allocating diskspace"
 #~ msgstr "Disk alanı ayrılıyor"
-
-#~ msgid "Queued for seeding"
-#~ msgstr "Gönderme için kuyruğa eklendi"
 
 #~ msgid "Queued for downloading"
 #~ msgstr "İndirme için kuyruğa eklendi"
@@ -10069,8 +10120,10 @@ msgstr "Saat cinsinden azami paylaşım süresi (0 = limit yok)"
 #~ msgid "Creating %1..."
 #~ msgstr "%1 Oluşturuluyor..."
 
+#, fuzzy
+#~| msgid "Passive Torrents"
 #~ msgid "Pause KTorrent"
-#~ msgstr "KTorrent'i Duraklat"
+#~ msgstr "Pasif Torrentler"
 
 #~ msgid "Invalid URL: "
 #~ msgstr "Geçersiz Adres: "
@@ -10111,6 +10164,8 @@ msgstr "Saat cinsinden azami paylaşım süresi (0 = limit yok)"
 #~ msgid "Resume KTorrent"
 #~ msgstr "KTorrent'i Yeniden Başlat"
 
+#, fuzzy
+#~| msgid "Resume paused torrents"
 #~ msgid "Resume paused torrents"
 #~ msgstr "Durdurulan tüm torrentlere devam et"
 
@@ -10311,3 +10366,21 @@ msgstr "Saat cinsinden azami paylaşım süresi (0 = limit yok)"
 
 #~ msgid "Feed %1"
 #~ msgstr "Kaynak %1"
+
+#, fuzzy
+#~| msgid "Tracker"
+#~ msgid "Tracker:"
+#~ msgstr "İzleyici"
+
+#, fuzzy
+#~| msgid "Insufficient disk space for %1"
+#~ msgid "Not enough free disk space for %1"
+#~ msgstr "%1 için yetersiz disk alanı"
+
+#~ msgid "Invalid tracker URL"
+#~ msgstr "Geçersiz izleyici adresi"
+
+#, fuzzy
+#~| msgid "UDP"
+#~ msgid "UTP"
+#~ msgstr "UDP"

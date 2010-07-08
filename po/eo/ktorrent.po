@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-06-07 01:29+0200\n"
+"POT-Creation-Date: 2010-07-06 01:30+0200\n"
 "PO-Revision-Date: 2009-11-17 11:13+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -431,13 +431,13 @@ msgstr ""
 msgid "KTorrent is playing a video."
 msgstr "Torento estas nekompleta!"
 
-#: plugins/webinterface/httpserver.cpp:332
+#: plugins/webinterface/httpserver.cpp:335
 #, fuzzy
 #| msgid "Webinterface Plugin"
 msgid "Cannot find web interface skins."
 msgstr "RetInterfaca kromprogrameto"
 
-#: plugins/webinterface/httpserver.cpp:497
+#: plugins/webinterface/httpserver.cpp:500
 msgid "Unsupported HTTP method"
 msgstr ""
 
@@ -2132,7 +2132,7 @@ msgstr "Konektoj"
 msgid "Timeout occurred"
 msgstr ""
 
-#: ktorrent/core.cpp:169
+#: ktorrent/core.cpp:170
 #, fuzzy, kde-format
 #| msgid ""
 #| "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -2144,7 +2144,7 @@ msgstr ""
 "KTorrent ne povas akcepti konektojn ĉar la pordoj %1 ĝis %2 estas uzataj de "
 "alia aplikaĵo."
 
-#: ktorrent/core.cpp:183
+#: ktorrent/core.cpp:184
 #, fuzzy, kde-format
 #| msgid ""
 #| "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -2156,18 +2156,18 @@ msgstr ""
 "KTorrent ne povas akcepti konektojn ĉar la pordoj %1 ĝis %2 estas uzataj de "
 "alia aplikaĵo."
 
-#: ktorrent/core.cpp:993
+#: ktorrent/core.cpp:996
 #, fuzzy
 #| msgid "Torrent has no announce or nodes field"
 msgid "KTorrent is running one or more torrents"
 msgstr "Torento ne havas konektan aŭ nodan kampon"
 
-#: ktorrent/core.cpp:1075
+#: ktorrent/core.cpp:1078
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Ne povas krei fontan dosieron: %1"
 
-#: ktorrent/core.cpp:1181
+#: ktorrent/core.cpp:1184
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -2176,21 +2176,21 @@ msgstr ""
 "Pluraj datumdosieroj de la torento \"%1\" mankas, ĉu vi deziras rekrei ilin, "
 "aŭ ĉu vi preferas ne elŝuti ilin?"
 
-#: ktorrent/core.cpp:1190 ktorrent/core.cpp:1202 ktorrent/core.cpp:1215
+#: ktorrent/core.cpp:1193 ktorrent/core.cpp:1205 ktorrent/core.cpp:1218
 msgid "Data files are missing"
 msgstr "Datumdosieroj mankas"
 
-#: ktorrent/core.cpp:1201
+#: ktorrent/core.cpp:1204
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Ne povas malelekti mankantajn dosierojn: %1"
 
-#: ktorrent/core.cpp:1214
+#: ktorrent/core.cpp:1217
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Ne povas rekrei mankantajn dosierojn: %1"
 
-#: ktorrent/core.cpp:1226
+#: ktorrent/core.cpp:1229
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -2199,16 +2199,16 @@ msgstr ""
 "La dosiero al kiu la datumoj por la torento \"%1\" estas konservataj "
 "malaperis, ĉu vi volas rekrei ĝin?"
 
-#: ktorrent/core.cpp:1233 ktorrent/core.cpp:1244
+#: ktorrent/core.cpp:1236 ktorrent/core.cpp:1247
 msgid "Data file is missing"
 msgstr "Datumdosiero mankas"
 
-#: ktorrent/core.cpp:1243
+#: ktorrent/core.cpp:1246
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Ne povas rekrei datumdosieron: %1"
 
-#: ktorrent/core.cpp:1348
+#: ktorrent/core.cpp:1351
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -2219,16 +2219,16 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ktorrent/core.cpp:1370
+#: ktorrent/core.cpp:1373
 msgid "No torrents from the KDE3 version were found."
 msgstr ""
 
-#: ktorrent/core.cpp:1389 ktorrent/core.cpp:1408
+#: ktorrent/core.cpp:1392 ktorrent/core.cpp:1411
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr ""
 
-#: ktorrent/core.cpp:1394 ktorrent/core.cpp:1413
+#: ktorrent/core.cpp:1397 ktorrent/core.cpp:1416
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -2540,8 +2540,10 @@ msgid "Move Data"
 msgstr "Movi datumojn"
 
 #: ktorrent/view/viewmanager.cpp:645
+#, fuzzy
+#| msgid "Move completed downloads to:"
 msgid "Move Data When Completed"
-msgstr ""
+msgstr "Movi finitajn elŝutojn al:"
 
 #: ktorrent/view/viewmanager.cpp:649
 msgid "Remove from Group"
@@ -6993,6 +6995,8 @@ msgstr "Intervalo por la ĝisdatigo de la fasado:"
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:143
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_autoUpdateInterval)
 #: rc.cpp:1301
+#, fuzzy
+#| msgid " days"
 msgid " days"
 msgstr "tagoj"
 
@@ -10776,6 +10780,90 @@ msgstr "Movi finitajn elŝutojn al:"
 #: rc.cpp:2782
 msgid "Maximum seed time in hours (0 = no limit)"
 msgstr ""
+
+#, fuzzy
+#~| msgid " minutes"
+#~ msgid " minute"
+#~ msgid_plural " minutes"
+#~ msgstr[0] " minutoj"
+#~ msgstr[1] " minutoj"
+
+#, fuzzy
+#~| msgid "Use DHT to get additional peers"
+#~ msgid "Use DHT to find more peers"
+#~ msgstr "Uzi DHT por akiri pli multe da kundividantoj"
+
+#, fuzzy
+#~| msgid "Peer Exchange"
+#~ msgid "Use peer exchange to find more peers"
+#~ msgstr "Kolektado de kundividantoj"
+
+#, fuzzy
+#~| msgid ""
+#~| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~| "css\">\n"
+#~| "p, li { white-space: pre-wrap; }\n"
+#~| "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~| "font-weight:400; font-style:normal;\">\n"
+#~| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~| "right:0px; -qt-block-indent:0; text-indent:0px;\">Scan the folder "
+#~| "recursively for torrents.</p>\n"
+#~| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+#~| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
+#~| "\"></p>\n"
+#~| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~| "weight:600;\">Note:</span> This will not be done for any folder named "
+#~| "loaded.</p></body></html>"
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Superseeding mode, is a "
+#~ "special seeding mode which allows you to achieve much higher seeding "
+#~ "efficiencies. This results in less bandwidth used to spread a torrent.</"
+#~ "p>\n"
+#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
+#~ "\"></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Note: </span>This should only be used if the swarm has not "
+#~ "fully been established. Once there are multiple active seeders, this mode "
+#~ "becomes useless.</p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Rekursie serĉi "
+#~ "torentojn en la dosierujo.</p>\n"
+#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
+#~ "\"></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Noto:</span> Ignoros dosierujon nomita ŝargita.</p></body></"
+#~ "html>"
+
+#, fuzzy
+#~| msgid "Directory to move data to when a torrent has finished downloading."
+#~ msgid ""
+#~ "Move the files of the torrent to a different directory when it has "
+#~ "finished downloading."
+#~ msgstr "Dosierujo al kiu vi volas movi datumojn post la elŝuto de torento."
+
+#, fuzzy
+#~| msgid "Select a directory to move the data to."
+#~ msgid "Location to move the files to."
+#~ msgstr "Elektu dosierujon al kie vi volas movi la datumojn."
 
 #, fuzzy
 #~| msgid "Trackers"

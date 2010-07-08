@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-06-07 01:29+0200\n"
+"POT-Creation-Date: 2010-07-06 01:30+0200\n"
 "PO-Revision-Date: 2009-09-22 21:25+0300\n"
 "Last-Translator: Yasen Pramatarov <yasen@lindeas.com>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -444,13 +444,13 @@ msgstr ""
 msgid "KTorrent is playing a video."
 msgstr "Торентът е незавършен!"
 
-#: plugins/webinterface/httpserver.cpp:332
+#: plugins/webinterface/httpserver.cpp:335
 #, fuzzy
 #| msgid "Webinterface Plugin"
 msgid "Cannot find web interface skins."
 msgstr "Приставка за уеб-интерфейса"
 
-#: plugins/webinterface/httpserver.cpp:497
+#: plugins/webinterface/httpserver.cpp:500
 msgid "Unsupported HTTP method"
 msgstr ""
 
@@ -2217,7 +2217,7 @@ msgstr "Връзки"
 msgid "Timeout occurred"
 msgstr ""
 
-#: ktorrent/core.cpp:169
+#: ktorrent/core.cpp:170
 #, fuzzy, kde-format
 #| msgid ""
 #| "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -2229,7 +2229,7 @@ msgstr ""
 "KTorrent не може да приеме връзки, защото портовете %1 и %2 вече се "
 "използват от друга програма."
 
-#: ktorrent/core.cpp:183
+#: ktorrent/core.cpp:184
 #, fuzzy, kde-format
 #| msgid ""
 #| "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -2241,18 +2241,18 @@ msgstr ""
 "KTorrent не може да приеме връзки, защото портовете %1 и %2 вече се "
 "използват от друга програма."
 
-#: ktorrent/core.cpp:993
+#: ktorrent/core.cpp:996
 #, fuzzy
 #| msgid "Torrent has no announce or nodes field"
 msgid "KTorrent is running one or more torrents"
 msgstr "Торентът няма попълнени съобщения или възли"
 
-#: ktorrent/core.cpp:1075
+#: ktorrent/core.cpp:1078
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Грешка при създаване на торент: %1"
 
-#: ktorrent/core.cpp:1181
+#: ktorrent/core.cpp:1184
 #, fuzzy, kde-format
 #| msgid ""
 #| "Several data files of the torrent \"%1\" are missing, do you want to "
@@ -2264,21 +2264,21 @@ msgstr ""
 "Няколко файла с данни на торент \"%1\" липсват. Искате ли да ги възстановите "
 "или не искате да ги сваляте?"
 
-#: ktorrent/core.cpp:1190 ktorrent/core.cpp:1202 ktorrent/core.cpp:1215
+#: ktorrent/core.cpp:1193 ktorrent/core.cpp:1205 ktorrent/core.cpp:1218
 msgid "Data files are missing"
 msgstr "Липсват файловете с данни"
 
-#: ktorrent/core.cpp:1201
+#: ktorrent/core.cpp:1204
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Не могат да бъдат размаркирани липсващи файлове: %1"
 
-#: ktorrent/core.cpp:1214
+#: ktorrent/core.cpp:1217
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Не могат да бъдат наново създадени липсващите файлове: %1"
 
-#: ktorrent/core.cpp:1226
+#: ktorrent/core.cpp:1229
 #, fuzzy, kde-format
 #| msgid ""
 #| "The file where the data is saved of the torrent \"%1\" is missing, do you "
@@ -2290,16 +2290,16 @@ msgstr ""
 "Файлът, съхраняващ информацията за торент \"%1\", липсва. Искате ли да го "
 "създадете отново?"
 
-#: ktorrent/core.cpp:1233 ktorrent/core.cpp:1244
+#: ktorrent/core.cpp:1236 ktorrent/core.cpp:1247
 msgid "Data file is missing"
 msgstr "Файлът с данни липсва"
 
-#: ktorrent/core.cpp:1243
+#: ktorrent/core.cpp:1246
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Не може да бъде създаден файл с данни: %1"
 
-#: ktorrent/core.cpp:1348
+#: ktorrent/core.cpp:1351
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -2310,16 +2310,16 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ktorrent/core.cpp:1370
+#: ktorrent/core.cpp:1373
 msgid "No torrents from the KDE3 version were found."
 msgstr ""
 
-#: ktorrent/core.cpp:1389 ktorrent/core.cpp:1408
+#: ktorrent/core.cpp:1392 ktorrent/core.cpp:1411
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr ""
 
-#: ktorrent/core.cpp:1394 ktorrent/core.cpp:1413
+#: ktorrent/core.cpp:1397 ktorrent/core.cpp:1416
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -2655,8 +2655,10 @@ msgid "Move Data"
 msgstr "Съхранение"
 
 #: ktorrent/view/viewmanager.cpp:645
+#, fuzzy
+#| msgid "Move completed downloads to:"
 msgid "Move Data When Completed"
-msgstr ""
+msgstr "Преместване на свалените в:"
 
 #: ktorrent/view/viewmanager.cpp:649
 #, fuzzy
@@ -9930,6 +9932,28 @@ msgstr "Папка за свалените файлове"
 #: rc.cpp:2782
 msgid "Maximum seed time in hours (0 = no limit)"
 msgstr "Максимално време за качване (0 = без ограничение)"
+
+#, fuzzy
+#~| msgid "Filters"
+#~ msgid " minute"
+#~ msgid_plural " minutes"
+#~ msgstr[0] "Филтри"
+#~ msgstr[1] "Филтри"
+
+#, fuzzy
+#~| msgid "&Use DHT to get additional peers"
+#~ msgid "Use DHT to find more peers"
+#~ msgstr "&Използване на DHT за намиране на потребители"
+
+#, fuzzy
+#~| msgid "Peer Exchange"
+#~ msgid "Use peer exchange to find more peers"
+#~ msgstr "Размяна между потребители"
+
+#, fuzzy
+#~| msgid "The file or folder of which you want to create a torrent:"
+#~ msgid "Location to move the files to."
+#~ msgstr "Файлът или папката, която искате да направите торент:"
 
 #, fuzzy
 #~| msgid "Trackers"

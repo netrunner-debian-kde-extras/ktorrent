@@ -156,6 +156,7 @@ namespace kt
 		{
 			startTCPServer(port);
 		}
+		ServerInterface::setPort(port);
 	}
 	
 	void Core::startTCPServer(bt::Uint16 port)
@@ -730,6 +731,8 @@ namespace kt
 			Out(SYS_GEN|LOG_NOTICE) << "Loading " << idir << endl;
 			loadExistingTorrent(idir);
 		}
+		
+		gman->torrentsLoaded(qman);
 		if (!kt::QueueManager::enabled())
 			qman->startAutoStartTorrents();
 		else

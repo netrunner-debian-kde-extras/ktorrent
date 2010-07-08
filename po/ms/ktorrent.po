@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-06-07 01:29+0200\n"
+"POT-Creation-Date: 2010-07-06 01:30+0200\n"
 "PO-Revision-Date: 2009-06-07 23:54+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -391,12 +391,12 @@ msgstr ""
 msgid "KTorrent is playing a video."
 msgstr ""
 
-#: plugins/webinterface/httpserver.cpp:332
+#: plugins/webinterface/httpserver.cpp:335
 #, fuzzy
 msgid "Cannot find web interface skins."
 msgstr "Antaramuka Pengguna"
 
-#: plugins/webinterface/httpserver.cpp:497
+#: plugins/webinterface/httpserver.cpp:500
 msgid "Unsupported HTTP method"
 msgstr ""
 
@@ -1985,67 +1985,67 @@ msgstr "Sambungan ditutup"
 msgid "Timeout occurred"
 msgstr ""
 
-#: ktorrent/core.cpp:169
+#: ktorrent/core.cpp:170
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the TCP ports %1 is already "
 "in use by another program."
 msgstr ""
 
-#: ktorrent/core.cpp:183
+#: ktorrent/core.cpp:184
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the UDP port %1 is already "
 "in use by another program."
 msgstr ""
 
-#: ktorrent/core.cpp:993
+#: ktorrent/core.cpp:996
 msgid "KTorrent is running one or more torrents"
 msgstr ""
 
-#: ktorrent/core.cpp:1075
+#: ktorrent/core.cpp:1078
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr ""
 
-#: ktorrent/core.cpp:1181
+#: ktorrent/core.cpp:1184
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
 "Do you want to recreate them, or do you want to not download them?"
 msgstr ""
 
-#: ktorrent/core.cpp:1190 ktorrent/core.cpp:1202 ktorrent/core.cpp:1215
+#: ktorrent/core.cpp:1193 ktorrent/core.cpp:1205 ktorrent/core.cpp:1218
 msgid "Data files are missing"
 msgstr ""
 
-#: ktorrent/core.cpp:1201
+#: ktorrent/core.cpp:1204
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr ""
 
-#: ktorrent/core.cpp:1214
+#: ktorrent/core.cpp:1217
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr ""
 
-#: ktorrent/core.cpp:1226
+#: ktorrent/core.cpp:1229
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
 "Do you want to recreate it?"
 msgstr ""
 
-#: ktorrent/core.cpp:1233 ktorrent/core.cpp:1244
+#: ktorrent/core.cpp:1236 ktorrent/core.cpp:1247
 msgid "Data file is missing"
 msgstr ""
 
-#: ktorrent/core.cpp:1243
+#: ktorrent/core.cpp:1246
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr ""
 
-#: ktorrent/core.cpp:1348
+#: ktorrent/core.cpp:1351
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -2056,16 +2056,16 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ktorrent/core.cpp:1370
+#: ktorrent/core.cpp:1373
 msgid "No torrents from the KDE3 version were found."
 msgstr ""
 
-#: ktorrent/core.cpp:1389 ktorrent/core.cpp:1408
+#: ktorrent/core.cpp:1392 ktorrent/core.cpp:1411
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr ""
 
-#: ktorrent/core.cpp:1394 ktorrent/core.cpp:1413
+#: ktorrent/core.cpp:1397 ktorrent/core.cpp:1416
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -2645,8 +2645,10 @@ msgid "Choose a filename to save under"
 msgstr ""
 
 #: ktorrent/gui.cpp:230 ktorrent/gui.cpp:245
+#, fuzzy
+#| msgid "torrent files"
 msgid "Torrent Files"
-msgstr ""
+msgstr "fail torrent"
 
 #: ktorrent/gui.cpp:230 ktorrent/gui.cpp:245
 #, fuzzy
@@ -3252,8 +3254,9 @@ msgid "You must add at least one node."
 msgstr ""
 
 #: ktorrent/dialogs/torrentcreatordlg.cpp:356
+#, fuzzy
 msgid "Torrent Files (*.torrent)"
-msgstr ""
+msgstr "(tiada cadangan ejaan)"
 
 #: ktorrent/dialogs/torrentcreatordlg.cpp:358
 msgid "Choose a file to save the torrent"
@@ -3483,8 +3486,10 @@ msgid "Imported <b>%1</b>"
 msgstr ""
 
 #: ktorrent/dialogs/importdialog.cpp:52
+#, fuzzy
+#| msgid "torrent files"
 msgid "Torrent files"
-msgstr ""
+msgstr "fail torrent"
 
 #: ktorrent/dialogs/importdialog.cpp:122
 #, kde-format
@@ -7349,8 +7354,9 @@ msgstr ""
 #. i18n: file: ktorrent/pref/qmpref.ui:162
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_stallTimer)
 #: rc.cpp:1838
+#, fuzzy
 msgid " Minutes"
-msgstr ""
+msgstr "minit"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:193
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
@@ -8977,6 +8983,12 @@ msgstr ""
 #: rc.cpp:2782
 msgid "Maximum seed time in hours (0 = no limit)"
 msgstr ""
+
+#, fuzzy
+#~ msgid " minute"
+#~ msgid_plural " minutes"
+#~ msgstr[0] "minit"
+#~ msgstr[1] "minit"
 
 #, fuzzy
 #~ msgid "Tracker:"
