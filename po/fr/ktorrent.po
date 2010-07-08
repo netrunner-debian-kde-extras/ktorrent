@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-06-07 01:29+0200\n"
+"POT-Creation-Date: 2010-07-06 01:30+0200\n"
 "PO-Revision-Date: 2009-06-01 23:09+0200\n"
 "Last-Translator: Sébastien Renard <Sebastien.Renard@digitalfox.org>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -469,13 +469,13 @@ msgstr "Mode plein écran"
 msgid "KTorrent is playing a video."
 msgstr "KTorrent n'est pas en cours d'exécution !"
 
-#: plugins/webinterface/httpserver.cpp:332
+#: plugins/webinterface/httpserver.cpp:335
 #, fuzzy
 #| msgid "Webinterface Plugin"
 msgid "Cannot find web interface skins."
 msgstr "Module externe d'interface web"
 
-#: plugins/webinterface/httpserver.cpp:497
+#: plugins/webinterface/httpserver.cpp:500
 msgid "Unsupported HTTP method"
 msgstr ""
 
@@ -2253,7 +2253,7 @@ msgstr "La connexion a été interrompue !"
 msgid "Timeout occurred"
 msgstr "Délai dépassé"
 
-#: ktorrent/core.cpp:169
+#: ktorrent/core.cpp:170
 #, fuzzy, kde-format
 #| msgid ""
 #| "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -2265,7 +2265,7 @@ msgstr ""
 "KTorrent est incapable d'accepter les connexions car les ports %1 et %2 sont "
 "déjà utilisés par un autre programme."
 
-#: ktorrent/core.cpp:183
+#: ktorrent/core.cpp:184
 #, fuzzy, kde-format
 #| msgid ""
 #| "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -2277,16 +2277,16 @@ msgstr ""
 "KTorrent est incapable d'accepter les connexions car les ports %1 et %2 sont "
 "déjà utilisés par un autre programme."
 
-#: ktorrent/core.cpp:993
+#: ktorrent/core.cpp:996
 msgid "KTorrent is running one or more torrents"
 msgstr "KTorrent exécute un ou plusieurs torrents."
 
-#: ktorrent/core.cpp:1075
+#: ktorrent/core.cpp:1078
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Impossible de créer le torrent : %1"
 
-#: ktorrent/core.cpp:1181
+#: ktorrent/core.cpp:1184
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -2295,24 +2295,24 @@ msgstr ""
 "Plusieurs fichiers de données du torrent « %1 » sont manquants, voulez-vous "
 "les recréer, ou ne pas les télécharger ?"
 
-#: ktorrent/core.cpp:1190 ktorrent/core.cpp:1202 ktorrent/core.cpp:1215
+#: ktorrent/core.cpp:1193 ktorrent/core.cpp:1205 ktorrent/core.cpp:1218
 msgid "Data files are missing"
 msgstr "Des fichiers de données sont manquants"
 
 # unreviewed-context
-#: ktorrent/core.cpp:1201
+#: ktorrent/core.cpp:1204
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Impossible de désélectionner les fichiers manquants : %1"
 
 # unreviewed-context
-#: ktorrent/core.cpp:1214
+#: ktorrent/core.cpp:1217
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Impossible de recréer les fichiers manquants : %1"
 
 # unreviewed-context
-#: ktorrent/core.cpp:1226
+#: ktorrent/core.cpp:1229
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -2321,18 +2321,18 @@ msgstr ""
 "Le fichier où sont sauvées les données du torrent « %1 » est manquant. \n"
 "Voulez-vous le recréer ?"
 
-#: ktorrent/core.cpp:1233 ktorrent/core.cpp:1244
+#: ktorrent/core.cpp:1236 ktorrent/core.cpp:1247
 msgid "Data file is missing"
 msgstr "Un fichier de données est manquant"
 
 # unreviewed-context
-#: ktorrent/core.cpp:1243
+#: ktorrent/core.cpp:1246
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Impossible de recréer le fichier de données : %1"
 
 # unreviewed-context
-#: ktorrent/core.cpp:1348
+#: ktorrent/core.cpp:1351
 #, fuzzy, kde-format
 #| msgid ""
 #| "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
@@ -2350,18 +2350,18 @@ msgstr[1] ""
 "KTorrent a trouvé %1 torrents provenant de la version KDE3 de KTorrent, "
 "Voulez-vous les importer ?"
 
-#: ktorrent/core.cpp:1370
+#: ktorrent/core.cpp:1373
 #, fuzzy
 #| msgid "No torrents from the KDE3 version were found !"
 msgid "No torrents from the KDE3 version were found."
 msgstr "Aucun torrent provenant de KTorrent pour KDE3 n'a été trouvé."
 
-#: ktorrent/core.cpp:1389 ktorrent/core.cpp:1408
+#: ktorrent/core.cpp:1392 ktorrent/core.cpp:1411
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr ""
 
-#: ktorrent/core.cpp:1394 ktorrent/core.cpp:1413
+#: ktorrent/core.cpp:1397 ktorrent/core.cpp:1416
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -2681,9 +2681,12 @@ msgstr "Dossier temporaire"
 msgid "Move Data"
 msgstr "Déplacer les données"
 
+# unreviewed-context
 #: ktorrent/view/viewmanager.cpp:645
+#, fuzzy
+#| msgid "Move completed downloads to:"
 msgid "Move Data When Completed"
-msgstr ""
+msgstr "Déplacer les téléchargements complétés vers :"
 
 #: ktorrent/view/viewmanager.cpp:649
 msgid "Remove from Group"
@@ -11043,6 +11046,92 @@ msgstr "Déplacer les téléchargements complétés vers :"
 #: rc.cpp:2782
 msgid "Maximum seed time in hours (0 = no limit)"
 msgstr ""
+
+# # HERE ENDS cygal WORK AND BEGINS asmanur WORK
+#, fuzzy
+#~| msgid " Minutes"
+#~ msgid " minute"
+#~ msgid_plural " minutes"
+#~ msgstr[0] " Minutes"
+#~ msgstr[1] " Minutes"
+
+#, fuzzy
+#~| msgid "Use DHT to get additional peers"
+#~ msgid "Use DHT to find more peers"
+#~ msgstr "Utiliser DHT pour obtenir plus de pairs"
+
+#, fuzzy
+#~| msgid "Peer Exchange"
+#~ msgid "Use peer exchange to find more peers"
+#~ msgstr "Échange de pairs"
+
+# unreviewed-context
+#, fuzzy
+#~| msgid ""
+#~| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~| "css\">\n"
+#~| "p, li { white-space: pre-wrap; }\n"
+#~| "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~| "font-weight:400; font-style:normal;\">\n"
+#~| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~| "right:0px; -qt-block-indent:0; text-indent:0px;\">Scan the folder "
+#~| "recursively for torrents.</p>\n"
+#~| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+#~| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
+#~| "\"></p>\n"
+#~| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~| "weight:600;\">Note:</span> This will not be done for any folder named "
+#~| "loaded.</p></body></html>"
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Superseeding mode, is a "
+#~ "special seeding mode which allows you to achieve much higher seeding "
+#~ "efficiencies. This results in less bandwidth used to spread a torrent.</"
+#~ "p>\n"
+#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
+#~ "\"></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Note: </span>This should only be used if the swarm has not "
+#~ "fully been established. Once there are multiple active seeders, this mode "
+#~ "becomes useless.</p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Rechercher "
+#~ "récursivement des fichiers torrent dans ce dossier</p>\n"
+#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
+#~ "\"></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Remarque :</span> La recherche ne sera pas effectuée dans "
+#~ "les dossiers appelés « loaded ».</p></body></html>"
+
+#, fuzzy
+#~| msgid "Directory to move data to when a torrent has finished downloading."
+#~ msgid ""
+#~ "Move the files of the torrent to a different directory when it has "
+#~ "finished downloading."
+#~ msgstr "Dossier où déplacer les données téléchargées."
+
+#, fuzzy
+#~| msgid "Select a directory to move the data to."
+#~ msgid "Location to move the files to."
+#~ msgstr "Choisissez le dossier où déplacer les données."
 
 # unreviewed-context
 #~ msgid "Tracker:"

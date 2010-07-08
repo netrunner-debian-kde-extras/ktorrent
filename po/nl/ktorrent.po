@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-06-07 01:29+0200\n"
-"PO-Revision-Date: 2010-05-03 15:00+0200\n"
+"POT-Creation-Date: 2010-07-06 01:30+0200\n"
+"PO-Revision-Date: 2010-06-30 13:58+0200\n"
 "Last-Translator: Freek de Kruijf <f.de.kruijf@gmail.com>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -385,11 +385,11 @@ msgstr "Veranderen naar volledig scherm"
 msgid "KTorrent is playing a video."
 msgstr "KTorrent speelt een video af."
 
-#: plugins/webinterface/httpserver.cpp:332
+#: plugins/webinterface/httpserver.cpp:335
 msgid "Cannot find web interface skins."
 msgstr "Webinterface-uiterlijkheden zijn niet te vinden."
 
-#: plugins/webinterface/httpserver.cpp:497
+#: plugins/webinterface/httpserver.cpp:500
 msgid "Unsupported HTTP method"
 msgstr "Niet ondersteunde HTTP-methode"
 
@@ -1942,7 +1942,7 @@ msgstr "Verbinding onverwacht gesloten."
 msgid "Timeout occurred"
 msgstr "Tijdslimiet plaatsgevonden"
 
-#: ktorrent/core.cpp:169
+#: ktorrent/core.cpp:170
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the TCP ports %1 is already "
@@ -1951,7 +1951,7 @@ msgstr ""
 "KTorrent is op het moment niet in staat om verbindingen aan te nemen omdat "
 "TCP-poort %1 reeds in gebruik is door een ander programma."
 
-#: ktorrent/core.cpp:183
+#: ktorrent/core.cpp:184
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the UDP port %1 is already "
@@ -1960,16 +1960,16 @@ msgstr ""
 "KTorrent is op het moment niet in staat om verbindingen aan te nemen omdat "
 "UDP-poort %1 reeds in gebruik is door een ander programma."
 
-#: ktorrent/core.cpp:993
+#: ktorrent/core.cpp:996
 msgid "KTorrent is running one or more torrents"
 msgstr "KTorrent draait nu één of meerdere torrents"
 
-#: ktorrent/core.cpp:1075
+#: ktorrent/core.cpp:1078
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "De torrent %1 kan niet worden aangemaakt."
 
-#: ktorrent/core.cpp:1181
+#: ktorrent/core.cpp:1184
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1978,21 +1978,21 @@ msgstr ""
 "Er ontbreken één of meer gegevensbestanden in de torrent \"%1\".\n"
 "Wilt u deze bestanden opnieuw aanmaken, of wilt u deze niet downloaden?"
 
-#: ktorrent/core.cpp:1190 ktorrent/core.cpp:1202 ktorrent/core.cpp:1215
+#: ktorrent/core.cpp:1193 ktorrent/core.cpp:1205 ktorrent/core.cpp:1218
 msgid "Data files are missing"
 msgstr "Bestandsgegevens ontbreken"
 
-#: ktorrent/core.cpp:1201
+#: ktorrent/core.cpp:1204
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Kan geen ontbrekende bestanden deselecteren: %1"
 
-#: ktorrent/core.cpp:1214
+#: ktorrent/core.cpp:1217
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Kan de ontbrekende bestanden niet opnieuw aanmaken: %1"
 
-#: ktorrent/core.cpp:1226
+#: ktorrent/core.cpp:1229
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -2002,16 +2002,16 @@ msgstr ""
 "ontbreekt. \n"
 "Wilt u dit bestand opnieuw aanmaken?"
 
-#: ktorrent/core.cpp:1233 ktorrent/core.cpp:1244
+#: ktorrent/core.cpp:1236 ktorrent/core.cpp:1247
 msgid "Data file is missing"
 msgstr "Bestand ontbreekt"
 
-#: ktorrent/core.cpp:1243
+#: ktorrent/core.cpp:1246
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Kan het bestand %1 niet opnieuw aanmaken."
 
-#: ktorrent/core.cpp:1348
+#: ktorrent/core.cpp:1351
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -2026,16 +2026,16 @@ msgstr[1] ""
 "KTorrent trof %1 torrents aan vanuit de KDE3-versie van KTorrent, wilt u "
 "deze importeren?"
 
-#: ktorrent/core.cpp:1370
+#: ktorrent/core.cpp:1373
 msgid "No torrents from the KDE3 version were found."
 msgstr "Geen torrents vanuit de KDE3-versie aangetroffen."
 
-#: ktorrent/core.cpp:1389 ktorrent/core.cpp:1408
+#: ktorrent/core.cpp:1392 ktorrent/core.cpp:1411
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr "Ongeldige magneet-bittorrent-koppeling: %1"
 
-#: ktorrent/core.cpp:1394 ktorrent/core.cpp:1413
+#: ktorrent/core.cpp:1397 ktorrent/core.cpp:1416
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -9716,6 +9716,118 @@ msgstr "Map waar afgeronde downloads naar worden verplaatst"
 msgid "Maximum seed time in hours (0 = no limit)"
 msgstr "Maximale seed-tijd in uren (0 = geen limiet)"
 
+#~| msgid "µTP"
+#~ msgid " (µTP)"
+#~ msgstr " (µTP)"
+
+#~| msgid " minutes"
+#~ msgid " minute"
+#~ msgid_plural " minutes"
+#~ msgstr[0] " minuut"
+#~ msgstr[1] " minuten"
+
+#~ msgid ""
+#~ "DHT is a distributed database which can be used to find more peers for a "
+#~ "torrent."
+#~ msgstr ""
+#~ "DHT is een gedistribueerde database die gebruikt kan worden om meer peers "
+#~ "voor een torrent te vinden."
+
+#~| msgid "Use DHT to get additional peers"
+#~ msgid "Use DHT to find more peers"
+#~ msgstr "DHT gebruiken om extra peers te vinden"
+
+#~ msgid ""
+#~ "Peer exchange results in more peers being found, by exchanging "
+#~ "information about peers with other peers."
+#~ msgstr ""
+#~ "Uitwisselen van peers heeft tot gevolg dat meer peers worden gevonden "
+#~ "door het uitwisselen van informatie over peers met andere peers."
+
+#~| msgid "Use peer exchange"
+#~ msgid "Use peer exchange to find more peers"
+#~ msgstr "Peer-uitwisseling gebruiken om meer peers te vinden"
+
+#~| msgid ""
+#~| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/"
+#~| "TR/REC-html40/strict.dtd\">\n"
+#~| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~| "css\">\n"
+#~| "p, li { white-space: pre-wrap; }\n"
+#~| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
+#~| "font-weight:400; font-style:normal;\">\n"
+#~| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~| "right:0px; -qt-block-indent:0; text-indent:0px;\">If login required is "
+#~| "enabled, you need to enter a username and a password.</p>\n"
+#~| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+#~| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
+#~| "\"></p>\n"
+#~| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~| "weight:600;\">Attention: </span>You should not disable this when the "
+#~| "webinterface is accessible from the internet. It will allow anybody "
+#~| "access to it.</p></body></html>"
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Superseeding mode, is a "
+#~ "special seeding mode which allows you to achieve much higher seeding "
+#~ "efficiencies. This results in less bandwidth used to spread a torrent.</"
+#~ "p>\n"
+#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
+#~ "\"></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Note: </span>This should only be used if the swarm has not "
+#~ "fully been established. Once there are multiple active seeders, this mode "
+#~ "becomes useless.</p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Superseedingmodus is "
+#~ "een speciale seedingmodus die u in staat stelt een veel hogere seeding-"
+#~ "efficiëncy te bereiken. Dit resulteert in minder gebruikte bandbreedte om "
+#~ "een torrent te verspreiden.</p>\n"
+#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
+#~ "\"></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Opmerking: </span>U zou dit alleen moeten gebruiken wanneer "
+#~ "de zwerm niet volledig is gevormd. Nadat er meerdere seeders zijn, is "
+#~ "deze modus zinloos geworden</p></body></html>"
+
+#~| msgid "Queued for seeding"
+#~ msgid "Use superseeding mode for seeding"
+#~ msgstr "Superseedingmodus gebruiken voor seeding"
+
+#~| msgid ""
+#~| "Moves the files to the specified location when the torrent finishes "
+#~| "downloading."
+#~ msgid ""
+#~ "Move the files of the torrent to a different directory when it has "
+#~ "finished downloading."
+#~ msgstr ""
+#~ "Verplaats de bestanden van de torrent naar een andere map wanneer deze "
+#~ "klaar is met downloaden."
+
+#~| msgid "Select a directory to move the data to."
+#~ msgid "Location to move the files to."
+#~ msgstr "Locatie waarnaar de gegevens te verplaatsen."
+
 #, fuzzy
 #~| msgid "Tracker"
 #~ msgid "Tracker:"
@@ -9873,9 +9985,6 @@ msgstr "Maximale seed-tijd in uren (0 = geen limiet)"
 
 #~ msgid "Allocating diskspace"
 #~ msgstr "Schijfruimte toewijzen"
-
-#~ msgid "Queued for seeding"
-#~ msgstr "In wachtrij voor seeden"
 
 #~ msgid "Queued for downloading"
 #~ msgstr "In wachtrij voor downloaden"

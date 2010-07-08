@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-06-07 01:29+0200\n"
+"POT-Creation-Date: 2010-07-06 01:30+0200\n"
 "PO-Revision-Date: 2009-08-27 22:14+0200\n"
 "Last-Translator: Milan Baša <minkob@mail.t-com.sk>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -400,13 +400,13 @@ msgstr "Prepnúť do celoobrazovkového režimu"
 msgid "KTorrent is playing a video."
 msgstr "KTorrent nie je spustený!"
 
-#: plugins/webinterface/httpserver.cpp:332
+#: plugins/webinterface/httpserver.cpp:335
 #, fuzzy
 #| msgid "Web interface skin:"
 msgid "Cannot find web interface skins."
 msgstr "Vzhľad webového rozhrania:"
 
-#: plugins/webinterface/httpserver.cpp:497
+#: plugins/webinterface/httpserver.cpp:500
 msgid "Unsupported HTTP method"
 msgstr ""
 
@@ -2028,7 +2028,7 @@ msgstr "Pripojenie bolo neočakávane ukončené!"
 msgid "Timeout occurred"
 msgstr "Vypršal časový limit"
 
-#: ktorrent/core.cpp:169
+#: ktorrent/core.cpp:170
 #, fuzzy, kde-format
 #| msgid ""
 #| "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -2040,7 +2040,7 @@ msgstr ""
 "KTorrent nie je schopný sa pripojiť, pretože porty od %1 do %2 sú už "
 "využívané iným programom."
 
-#: ktorrent/core.cpp:183
+#: ktorrent/core.cpp:184
 #, fuzzy, kde-format
 #| msgid ""
 #| "KTorrent is unable to accept connections because the ports %1 to %2 are "
@@ -2052,16 +2052,16 @@ msgstr ""
 "KTorrent nie je schopný sa pripojiť, pretože porty od %1 do %2 sú už "
 "využívané iným programom."
 
-#: ktorrent/core.cpp:993
+#: ktorrent/core.cpp:996
 msgid "KTorrent is running one or more torrents"
 msgstr "V Ktorrente je spustený jeden alebo viacej torrentov"
 
-#: ktorrent/core.cpp:1075
+#: ktorrent/core.cpp:1078
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Nie je možné vytvoriť torrent: %1"
 
-#: ktorrent/core.cpp:1181
+#: ktorrent/core.cpp:1184
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -2070,22 +2070,22 @@ msgstr ""
 "Niektoré dáta z torrentu \"%1\" chýbajú.\n"
 "Prajete si ich znovu vytvoriť, alebo ich nechcete sťahovať?"
 
-#: ktorrent/core.cpp:1190 ktorrent/core.cpp:1202 ktorrent/core.cpp:1215
+#: ktorrent/core.cpp:1193 ktorrent/core.cpp:1205 ktorrent/core.cpp:1218
 msgid "Data files are missing"
 msgstr "Dátové súbory chýbajú"
 
-#: ktorrent/core.cpp:1201
+#: ktorrent/core.cpp:1204
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Nie je možné odznačit chýbajúce súbory: %1"
 
 # c-format
-#: ktorrent/core.cpp:1214
+#: ktorrent/core.cpp:1217
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Nie je možné vytvoriť chýbajúce súbory: %1"
 
-#: ktorrent/core.cpp:1226
+#: ktorrent/core.cpp:1229
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -2094,16 +2094,16 @@ msgstr ""
 "Súbor, kde boli uložené dáta z torrentu \"%1\" chýba.\n"
 "Prajete si ho znovu vytvoriť?"
 
-#: ktorrent/core.cpp:1233 ktorrent/core.cpp:1244
+#: ktorrent/core.cpp:1236 ktorrent/core.cpp:1247
 msgid "Data file is missing"
 msgstr "Súbor s dátami chýba"
 
-#: ktorrent/core.cpp:1243
+#: ktorrent/core.cpp:1246
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Nie je možné vytvoriť súbor s dátami: %1"
 
-#: ktorrent/core.cpp:1348
+#: ktorrent/core.cpp:1351
 #, fuzzy, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -2118,17 +2118,17 @@ msgstr[1] ""
 msgstr[2] ""
 "KTorrent našiel %1 torrentov z KDE3 verzie KTorrentu, chcete ich importovať?"
 
-#: ktorrent/core.cpp:1370
+#: ktorrent/core.cpp:1373
 #, fuzzy
 msgid "No torrents from the KDE3 version were found."
 msgstr "Žiadne torrenty z KDE3 verzie neboli nájdené!"
 
-#: ktorrent/core.cpp:1389 ktorrent/core.cpp:1408
+#: ktorrent/core.cpp:1392 ktorrent/core.cpp:1411
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr ""
 
-#: ktorrent/core.cpp:1394 ktorrent/core.cpp:1413
+#: ktorrent/core.cpp:1397 ktorrent/core.cpp:1416
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -2440,8 +2440,10 @@ msgid "Move Data"
 msgstr "Presunúť dáta"
 
 #: ktorrent/view/viewmanager.cpp:645
+#, fuzzy
+#| msgid "Move completed downloads to:"
 msgid "Move Data When Completed"
-msgstr ""
+msgstr "Presunúť dokončené sťahovania do:"
 
 #: ktorrent/view/viewmanager.cpp:649
 msgid "Remove from Group"
@@ -6675,6 +6677,8 @@ msgstr "Interval aktualizácie v dňoch."
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:143
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_autoUpdateInterval)
 #: rc.cpp:1301
+#, fuzzy
+#| msgid " days"
 msgid " days"
 msgstr "dni"
 

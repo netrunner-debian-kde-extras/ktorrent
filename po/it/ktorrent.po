@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-06-07 01:29+0200\n"
-"PO-Revision-Date: 2010-05-14 16:11+0200\n"
+"POT-Creation-Date: 2010-07-06 01:30+0200\n"
+"PO-Revision-Date: 2010-06-17 11:58+0200\n"
 "Last-Translator: Nicola Ruggero <nicola@nxnt.org>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -379,11 +379,11 @@ msgstr "Schermo intero"
 msgid "KTorrent is playing a video."
 msgstr "KTorrent sta riproducendo un video."
 
-#: plugins/webinterface/httpserver.cpp:332
+#: plugins/webinterface/httpserver.cpp:335
 msgid "Cannot find web interface skins."
 msgstr "Impossibile trovare i temi per l'interfaccia web."
 
-#: plugins/webinterface/httpserver.cpp:497
+#: plugins/webinterface/httpserver.cpp:500
 msgid "Unsupported HTTP method"
 msgstr "Metodo HTTP non supportato"
 
@@ -1934,7 +1934,7 @@ msgstr "Connessione chiusa inaspettatamente."
 msgid "Timeout occurred"
 msgstr "Tempo scaduto"
 
-#: ktorrent/core.cpp:169
+#: ktorrent/core.cpp:170
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the TCP ports %1 is already "
@@ -1943,7 +1943,7 @@ msgstr ""
 "KTorrent non riesce ad accettare le connessioni perché la porta TCP %1 è già "
 "in uso da un altro programma."
 
-#: ktorrent/core.cpp:183
+#: ktorrent/core.cpp:184
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the UDP port %1 is already "
@@ -1952,16 +1952,16 @@ msgstr ""
 "KTorrent non riesce ad accettare le connessioni perché la porta UDP %1 è già "
 "in uso da un altro programma."
 
-#: ktorrent/core.cpp:993
+#: ktorrent/core.cpp:996
 msgid "KTorrent is running one or more torrents"
 msgstr "KTorrent ha avviato uno o più torrent"
 
-#: ktorrent/core.cpp:1075
+#: ktorrent/core.cpp:1078
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Impossibile creare il torrent: %1"
 
-#: ktorrent/core.cpp:1181
+#: ktorrent/core.cpp:1184
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1970,21 +1970,21 @@ msgstr ""
 "Diversi file di dati del torrent «%1» sono mancanti. \n"
 "Vuoi crearli nuovamente oppure non vuoi scaricarli affatto?"
 
-#: ktorrent/core.cpp:1190 ktorrent/core.cpp:1202 ktorrent/core.cpp:1215
+#: ktorrent/core.cpp:1193 ktorrent/core.cpp:1205 ktorrent/core.cpp:1218
 msgid "Data files are missing"
 msgstr "File di dati mancanti"
 
-#: ktorrent/core.cpp:1201
+#: ktorrent/core.cpp:1204
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Impossibile deselezionare i file mancanti: %1"
 
-#: ktorrent/core.cpp:1214
+#: ktorrent/core.cpp:1217
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Impossibile ricreare i file mancanti: %1"
 
-#: ktorrent/core.cpp:1226
+#: ktorrent/core.cpp:1229
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -1993,16 +1993,16 @@ msgstr ""
 "Il file nel quale sono salvati i dati del torrent «%1» è mancante. \n"
 "Vuoi ricrearlo?"
 
-#: ktorrent/core.cpp:1233 ktorrent/core.cpp:1244
+#: ktorrent/core.cpp:1236 ktorrent/core.cpp:1247
 msgid "Data file is missing"
 msgstr "File di dati mancante"
 
-#: ktorrent/core.cpp:1243
+#: ktorrent/core.cpp:1246
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Impossibile ricreare il file di dati: %1"
 
-#: ktorrent/core.cpp:1348
+#: ktorrent/core.cpp:1351
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -2017,16 +2017,16 @@ msgstr[1] ""
 "KTorrent ha trovato %1 torrent della versione per KDE3 di KTorrent, vuoi "
 "importarli?"
 
-#: ktorrent/core.cpp:1370
+#: ktorrent/core.cpp:1373
 msgid "No torrents from the KDE3 version were found."
 msgstr "Nessun torrent della versione per KDE3 di KTorrent trovato."
 
-#: ktorrent/core.cpp:1389 ktorrent/core.cpp:1408
+#: ktorrent/core.cpp:1392 ktorrent/core.cpp:1411
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr "Collegamento magnet bittorrent non valido: %1"
 
-#: ktorrent/core.cpp:1394 ktorrent/core.cpp:1413
+#: ktorrent/core.cpp:1397 ktorrent/core.cpp:1416
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -3606,7 +3606,7 @@ msgstr "Scaricamenti in corso"
 
 #: libktcore/groups/groupmanager.cpp:112
 msgid "Not Running Downloads"
-msgstr "Nessun scaricamento in corso"
+msgstr "Nessuno scaricamento in corso"
 
 #: libktcore/groups/groupmanager.cpp:116
 msgid "Active Torrents"
@@ -6300,7 +6300,7 @@ msgstr "Settimana intera"
 #. i18n: ectx: property (text), widget (QPushButton, m_weekdays_only)
 #: rc.cpp:1171
 msgid "Weekdays Only"
-msgstr "Solo i giorni della settimana"
+msgstr "Settimana lavorativa"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:91
 #. i18n: ectx: property (text), widget (QPushButton, m_weekend)
@@ -6430,6 +6430,8 @@ msgstr "Intervallo aggiornamento in giorni."
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:143
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_autoUpdateInterval)
 #: rc.cpp:1301
+#, fuzzy
+#| msgid " days"
 msgid " days"
 msgstr " giorni"
 
@@ -9678,6 +9680,103 @@ msgstr "Cartella dove spostare gli scaricamenti completati"
 #: rc.cpp:2782
 msgid "Maximum seed time in hours (0 = no limit)"
 msgstr "Tempo massimo di distribuzione seme in ore (0=illimitato)"
+
+#, fuzzy
+#~| msgid "µTP"
+#~ msgid " (µTP)"
+#~ msgstr "µTP"
+
+#, fuzzy
+#~| msgid " minutes"
+#~ msgid " minute"
+#~ msgid_plural " minutes"
+#~ msgstr[0] " minuti"
+#~ msgstr[1] " minuti"
+
+#, fuzzy
+#~| msgid "Use DHT to get additional peers"
+#~ msgid "Use DHT to find more peers"
+#~ msgstr "Usa DHT per avere nodi aggiuntivi"
+
+#, fuzzy
+#~| msgid "Use peer exchange"
+#~ msgid "Use peer exchange to find more peers"
+#~ msgstr "Usa lo scambio nodo"
+
+#, fuzzy
+#~| msgid ""
+#~| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/"
+#~| "TR/REC-html40/strict.dtd\">\n"
+#~| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~| "css\">\n"
+#~| "p, li { white-space: pre-wrap; }\n"
+#~| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
+#~| "font-weight:400; font-style:normal;\">\n"
+#~| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~| "right:0px; -qt-block-indent:0; text-indent:0px;\">If login required is "
+#~| "enabled, you need to enter a username and a password.</p>\n"
+#~| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+#~| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
+#~| "\"></p>\n"
+#~| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~| "weight:600;\">Attention: </span>You should not disable this when the "
+#~| "webinterface is accessible from the internet. It will allow anybody "
+#~| "access to it.</p></body></html>"
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Superseeding mode, is a "
+#~ "special seeding mode which allows you to achieve much higher seeding "
+#~ "efficiencies. This results in less bandwidth used to spread a torrent.</"
+#~ "p>\n"
+#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
+#~ "\"></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Note: </span>This should only be used if the swarm has not "
+#~ "fully been established. Once there are multiple active seeders, this mode "
+#~ "becomes useless.</p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Se è attivo richiedi "
+#~ "accesso, devi inserire un nome utente e password.</p>\n"
+#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
+#~ "\"></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Attenzione: </span>non disabilitare questa caratteristica "
+#~ "quando l'interfaccia web è accessibile da internet perché permetteresti a "
+#~ "chiunque di accedere.</p></body></html>"
+
+#, fuzzy
+#~| msgid ""
+#~| "Moves the files to the specified location when the torrent finishes "
+#~| "downloading."
+#~ msgid ""
+#~ "Move the files of the torrent to a different directory when it has "
+#~ "finished downloading."
+#~ msgstr "Spostare i dati quando un torrent ha finito lo scaricamento."
+
+#, fuzzy
+#~| msgid "Select a directory to move the data to."
+#~ msgid "Location to move the files to."
+#~ msgstr "Seleziona una cartella dove spostare i dati."
 
 #, fuzzy
 #~| msgid "Tracker"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-06-07 01:29+0200\n"
+"POT-Creation-Date: 2010-07-06 01:30+0200\n"
 "PO-Revision-Date: 2007-10-14 15:28+0000\n"
 "Last-Translator: Youssef Chahibi <chahibi@gmail.com>\n"
 "Language-Team:  <en@li.org>\n"
@@ -412,12 +412,12 @@ msgstr ""
 msgid "KTorrent is playing a video."
 msgstr "السيل غير مكتمل !"
 
-#: plugins/webinterface/httpserver.cpp:332
+#: plugins/webinterface/httpserver.cpp:335
 #, fuzzy
 msgid "Cannot find web interface skins."
 msgstr "ملحق"
 
-#: plugins/webinterface/httpserver.cpp:497
+#: plugins/webinterface/httpserver.cpp:500
 msgid "Unsupported HTTP method"
 msgstr ""
 
@@ -2108,7 +2108,7 @@ msgstr "الإتصالات:"
 msgid "Timeout occurred"
 msgstr ""
 
-#: ktorrent/core.cpp:169
+#: ktorrent/core.cpp:170
 #, fuzzy, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the TCP ports %1 is already "
@@ -2117,7 +2117,7 @@ msgstr ""
 "KTorrent لايمكنه استقبال الاتصالات بسبب أن المنافذ %1 to %2 قيد الاستخدام من "
 "قبل برنامج آخر."
 
-#: ktorrent/core.cpp:183
+#: ktorrent/core.cpp:184
 #, fuzzy, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the UDP port %1 is already "
@@ -2126,56 +2126,56 @@ msgstr ""
 "KTorrent لايمكنه استقبال الاتصالات بسبب أن المنافذ %1 to %2 قيد الاستخدام من "
 "قبل برنامج آخر."
 
-#: ktorrent/core.cpp:993
+#: ktorrent/core.cpp:996
 #, fuzzy
 msgid "KTorrent is running one or more torrents"
 msgstr "السيل لا إعلان أو حقل"
 
-#: ktorrent/core.cpp:1075
+#: ktorrent/core.cpp:1078
 #, fuzzy, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "غير قادر على إنشاء السيل: %1"
 
-#: ktorrent/core.cpp:1181
+#: ktorrent/core.cpp:1184
 #, fuzzy, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
 "Do you want to recreate them, or do you want to not download them?"
 msgstr "عدّة البيانات ملفات من مفقود إلى أو إلى ليس تنزيلات?"
 
-#: ktorrent/core.cpp:1190 ktorrent/core.cpp:1202 ktorrent/core.cpp:1215
+#: ktorrent/core.cpp:1193 ktorrent/core.cpp:1205 ktorrent/core.cpp:1218
 #, fuzzy
 msgid "Data files are missing"
 msgstr "ملفات البيانات ناقصة"
 
-#: ktorrent/core.cpp:1201
+#: ktorrent/core.cpp:1204
 #, fuzzy, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "لا يستطيع عدم انتقاء مفقود ملفات 1"
 
-#: ktorrent/core.cpp:1214
+#: ktorrent/core.cpp:1217
 #, fuzzy, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "لا يستطيع مفقود ملفات 1"
 
-#: ktorrent/core.cpp:1226
+#: ktorrent/core.cpp:1229
 #, fuzzy, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
 "Do you want to recreate it?"
 msgstr "الـ ملفّ البيانات هو من هو مفقود إلى الإيطالية?"
 
-#: ktorrent/core.cpp:1233 ktorrent/core.cpp:1244
+#: ktorrent/core.cpp:1236 ktorrent/core.cpp:1247
 #, fuzzy
 msgid "Data file is missing"
 msgstr "بيانات الملف مفقودة"
 
-#: ktorrent/core.cpp:1243
+#: ktorrent/core.cpp:1246
 #, fuzzy, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "لا يستطيع البيانات ملفّ 1"
 
-#: ktorrent/core.cpp:1348
+#: ktorrent/core.cpp:1351
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -2190,16 +2190,16 @@ msgstr[3] ""
 msgstr[4] ""
 msgstr[5] ""
 
-#: ktorrent/core.cpp:1370
+#: ktorrent/core.cpp:1373
 msgid "No torrents from the KDE3 version were found."
 msgstr ""
 
-#: ktorrent/core.cpp:1389 ktorrent/core.cpp:1408
+#: ktorrent/core.cpp:1392 ktorrent/core.cpp:1411
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr ""
 
-#: ktorrent/core.cpp:1394 ktorrent/core.cpp:1413
+#: ktorrent/core.cpp:1397 ktorrent/core.cpp:1416
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -2523,8 +2523,9 @@ msgid "Move Data"
 msgstr "حفط البيانات"
 
 #: ktorrent/view/viewmanager.cpp:645
+#, fuzzy
 msgid "Move Data When Completed"
-msgstr ""
+msgstr "نقل مكتمل إلى:"
 
 #: ktorrent/view/viewmanager.cpp:649
 #, fuzzy
@@ -10061,6 +10062,65 @@ msgstr "نقل مكتمل إلى:"
 #: rc.cpp:2782
 msgid "Maximum seed time in hours (0 = no limit)"
 msgstr ""
+
+#, fuzzy
+#~ msgid " minute"
+#~ msgid_plural " minutes"
+#~ msgstr[0] "ابحث المسارات"
+#~ msgstr[1] "ابحث المسارات"
+#~ msgstr[2] "ابحث المسارات"
+#~ msgstr[3] "ابحث المسارات"
+#~ msgstr[4] "ابحث المسارات"
+#~ msgstr[5] "ابحث المسارات"
+
+#, fuzzy
+#~ msgid "Use DHT to find more peers"
+#~ msgstr "إستعمل إلى get"
+
+#, fuzzy
+#~ msgid "Use peer exchange to find more peers"
+#~ msgstr "طريقة التبادل"
+
+#, fuzzy
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Superseeding mode, is a "
+#~ "special seeding mode which allows you to achieve much higher seeding "
+#~ "efficiencies. This results in less bandwidth used to spread a torrent.</"
+#~ "p>\n"
+#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
+#~ "\"></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Note: </span>This should only be used if the swarm has not "
+#~ "fully been established. Once there are multiple active seeders, this mode "
+#~ "becomes useless.</p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\"> أبيض فراغ\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"> امسح مجلد لـ</p>\n"
+#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
+#~ "\"></p>\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\"> ملاحظة</span> هذا ليس done لـ أي منها مجلد مسمى تمَ "
+#~ "التحميل</p></body></html>"
+
+#, fuzzy
+#~ msgid "Location to move the files to."
+#~ msgstr "ملف أو دليل إلى إ_نشئ من:"
 
 #, fuzzy
 #~ msgid "Tracker:"
