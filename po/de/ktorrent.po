@@ -7,20 +7,20 @@
 # Jannick Kuhr <opensource@kuhr.org>, 2006, 2007, 2008, 2009, 2010.
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2009, 2010.
 # Burkhard Lück <lueck@hube-lueck.de>, 2009.
-# Markus Slopianka <kamikazow@web.de>, 2009, 2010.
+# Markus Slopianka <markus.s@kdemail.net>, 2009, 2010.
 # Frederik Schwarzer <schwarzerf@gmail.com>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-07-06 01:30+0200\n"
-"PO-Revision-Date: 2010-07-05 17:47+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzerf@gmail.com>\n"
+"POT-Creation-Date: 2010-08-17 01:35+0200\n"
+"PO-Revision-Date: 2010-08-11 14:34+0200\n"
+"Last-Translator: Panagiotis Papadopoulos <pano_90@gmx.net>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 1.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: plugins/scanfolder/scanfolderplugin.cpp:62
@@ -1386,7 +1386,7 @@ msgstr ""
 
 #: plugins/scripting/scriptmodel.cpp:154
 msgid "No script found in archive."
-msgstr "Es  wurde kein Skript im Archiv gefunden."
+msgstr "Es wurde kein Skript im Archiv gefunden."
 
 #: plugins/logviewer/logflags.cpp:121
 msgid "System"
@@ -1924,16 +1924,16 @@ msgstr "UPnP-Testanwendung von KTorrent"
 msgid "(C) 2005 - 2007 Joris Guisson and Ivan Vasic"
 msgstr "Copyright © 2005–2007 Joris Guisson und Ivan Vasic"
 
-#: libktupnp/upnprouter.cpp:139
+#: libktupnp/upnprouter.cpp:143
 #, kde-format
 msgid "Failed to download %1 : %2"
 msgstr "%1 lässt sich nicht herunterladen: %2"
 
-#: libktupnp/upnprouter.cpp:150
+#: libktupnp/upnprouter.cpp:154
 msgid "Error parsing router description."
 msgstr "Fehler beim Einlesen der Router-Beschreibung."
 
-#: libktupnp/upnprouter.cpp:274
+#: libktupnp/upnprouter.cpp:278
 msgid ""
 "Forwarding failed: \n"
 "Device does not have a WANIPConnection or WANPPPConnection."
@@ -1941,17 +1941,17 @@ msgstr ""
 "Weiterleitung fehlgeschlagen: \n"
 "Das Gerät hat keine WANIP- oder WANPPP-Verbindung."
 
-#: libktupnp/upnprouter.cpp:431 libktupnp/upnprouter.cpp:444
+#: libktupnp/upnprouter.cpp:439 libktupnp/upnprouter.cpp:452
 msgid "Cannot find port forwarding service in the device's description."
 msgstr ""
 "In der Beschreibung des Geräts kann kein Dienst für das Weiterleiten von "
 "Ports gefunden werden."
 
-#: libktupnp/httprequest.cpp:80
+#: libktupnp/httprequest.cpp:91
 msgid "Connection closed unexpectedly."
 msgstr "Die Verbindung wurde unerwartet beendet."
 
-#: libktupnp/httprequest.cpp:122
+#: libktupnp/httprequest.cpp:137
 msgid "Timeout occurred"
 msgstr "Wartezeit überschritten"
 
@@ -1973,16 +1973,16 @@ msgstr ""
 "KTorrent kann keine Verbindungen annehmen, da der UDP-Port %1 bereits von "
 "einem anderen Programm verwendet wird."
 
-#: ktorrent/core.cpp:996
+#: ktorrent/core.cpp:1003
 msgid "KTorrent is running one or more torrents"
 msgstr "Ein oder mehrere Torrents laufen derzeit in KTorrent"
 
-#: ktorrent/core.cpp:1078
+#: ktorrent/core.cpp:1085
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Torrent „%1“ lässt sich nicht erstellen."
 
-#: ktorrent/core.cpp:1184
+#: ktorrent/core.cpp:1191
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1991,22 +1991,22 @@ msgstr ""
 "Es fehlen einige Datendateien zum Torrent „%1“.\n"
 "Möchten Sie diese neu erstellen oder möchten Sie sie nicht herunterladen?"
 
-#: ktorrent/core.cpp:1193 ktorrent/core.cpp:1205 ktorrent/core.cpp:1218
+#: ktorrent/core.cpp:1200 ktorrent/core.cpp:1212 ktorrent/core.cpp:1225
 msgid "Data files are missing"
 msgstr "Fehlende Datendateien"
 
-#: ktorrent/core.cpp:1204
+#: ktorrent/core.cpp:1211
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr ""
 "Die Auswahl für folgende fehlende Dateien lässt sich nicht aufheben: %1"
 
-#: ktorrent/core.cpp:1217
+#: ktorrent/core.cpp:1224
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Folgende fehlende Dateien lassen sich nicht neu erstellen: %1"
 
-#: ktorrent/core.cpp:1229
+#: ktorrent/core.cpp:1236
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -2016,16 +2016,16 @@ msgstr ""
 "vorhanden.\n"
 "Möchten Sie sie erstellen?"
 
-#: ktorrent/core.cpp:1236 ktorrent/core.cpp:1247
+#: ktorrent/core.cpp:1243 ktorrent/core.cpp:1254
 msgid "Data file is missing"
 msgstr "Datendatei fehlt"
 
-#: ktorrent/core.cpp:1246
+#: ktorrent/core.cpp:1253
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Folgende Datendatei lässt sich nicht neu erstellen: %1"
 
-#: ktorrent/core.cpp:1351
+#: ktorrent/core.cpp:1358
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -2040,16 +2040,16 @@ msgstr[1] ""
 "KTorrent hat %1 Torrents aus der KDE3-Version von KTorrent gefunden. Möchten "
 "Sie diese importieren?"
 
-#: ktorrent/core.cpp:1373
+#: ktorrent/core.cpp:1380
 msgid "No torrents from the KDE3 version were found."
 msgstr "Es konnten keine Torrents aus der KDE3-Version gefunden werden."
 
-#: ktorrent/core.cpp:1392 ktorrent/core.cpp:1411
+#: ktorrent/core.cpp:1399 ktorrent/core.cpp:1418
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr "Ungültige Magnet-Bittorrent-Verknüpfung: %1"
 
-#: ktorrent/core.cpp:1397 ktorrent/core.cpp:1416
+#: ktorrent/core.cpp:1404 ktorrent/core.cpp:1423
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -2547,7 +2547,7 @@ msgstr "Wann dieser Torrent hinzugefügt wurde"
 
 #: ktorrent/view/viewmodel.cpp:519
 msgid "Unable to contact a tracker."
-msgstr "Es kann keine Verbindung zu einem Tracker hergestellt werden."
+msgstr "Es kann zu keinem Tracker eine Verbindung hergestellt werden."
 
 #: ktorrent/view/viewmodel.cpp:525
 #, kde-format
@@ -3802,7 +3802,7 @@ msgid ""
 "\"unavailable_color\">&nbsp; - Chunks to Download<br><img src="
 "\"excluded_color\">&nbsp; - Excluded Chunks"
 msgstr ""
-"<img src=\"available_color\">&nbsp; - Heruntergeladene Teile<br><img src="
+"<img src=\"available_color\">&nbsp; – Heruntergeladene Teile<br><img src="
 "\"unavailable_color\">&nbsp; – Herunterzuladende Teile<br><img src="
 "\"excluded_color\">&nbsp; – Ausgeschlossene Teile"
 
@@ -4257,7 +4257,7 @@ msgstr ""
 "besondere Bedeutung.</p></td></tr></table>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">*.torrent "
-"findet beispielsweise alle Elemente die auf  .torrent enden. </p></body></"
+"findet beispielsweise alle Elemente die auf .torrent enden. </p></body></"
 "html>"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:84

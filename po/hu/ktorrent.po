@@ -4,19 +4,20 @@
 # Tamas Szanto <tszanto@interware.hu>, 2008.
 # Csanád Tóth <toth.csanad@kde.hu>, 2009, 2010.
 # Tóth Csanád <toth.csanad@kde.hu>, 2009, 2010.
+# Kiszel Kristóf <ulysses@kubuntu.org>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: KTorrent 3.1\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-07-06 01:30+0200\n"
-"PO-Revision-Date: 2010-04-02 07:54+0200\n"
-"Last-Translator: Csanád Tóth <toth.csanad@kde.hu>\n"
-"Language-Team: Magyar <kde-lista-request@sophia.jpte.hu>\n"
+"POT-Creation-Date: 2010-08-17 01:35+0200\n"
+"PO-Revision-Date: 2010-08-15 00:01+0200\n"
+"Last-Translator: Kiszel Kristóf <ulysses@kubuntu.org>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 1.1\n"
 
 #: plugins/scanfolder/scanfolderplugin.cpp:62
 #: plugins/scanfolder/scanfolderplugin.cpp:71
@@ -1895,16 +1896,16 @@ msgstr "A KTorrent UPnP tesztalkalmazása"
 msgid "(C) 2005 - 2007 Joris Guisson and Ivan Vasic"
 msgstr "(C) Joris Guisson és Ivan Vasic, 2005-2007."
 
-#: libktupnp/upnprouter.cpp:139
+#: libktupnp/upnprouter.cpp:143
 #, kde-format
 msgid "Failed to download %1 : %2"
 msgstr "Nem sikerült letölteni: %1. %2"
 
-#: libktupnp/upnprouter.cpp:150
+#: libktupnp/upnprouter.cpp:154
 msgid "Error parsing router description."
 msgstr "Nem sikerült feldolgozni a router leírását."
 
-#: libktupnp/upnprouter.cpp:274
+#: libktupnp/upnprouter.cpp:278
 msgid ""
 "Forwarding failed: \n"
 "Device does not have a WANIPConnection or WANPPPConnection."
@@ -1913,15 +1914,15 @@ msgstr ""
 "Az eszköz nem rendelkezik WANIPConnection, vagy WANPPPConnection "
 "lehetőségekkel."
 
-#: libktupnp/upnprouter.cpp:431 libktupnp/upnprouter.cpp:444
+#: libktupnp/upnprouter.cpp:439 libktupnp/upnprouter.cpp:452
 msgid "Cannot find port forwarding service in the device's description."
 msgstr "Az eszköz leírásában nem található port-átirányítási szolgáltatás."
 
-#: libktupnp/httprequest.cpp:80
+#: libktupnp/httprequest.cpp:91
 msgid "Connection closed unexpectedly."
 msgstr "A kapcsolat váratlanul megszakadt."
 
-#: libktupnp/httprequest.cpp:122
+#: libktupnp/httprequest.cpp:137
 msgid "Timeout occurred"
 msgstr "Időtúllépés"
 
@@ -1943,16 +1944,16 @@ msgstr ""
 "A KTorrent nem tud kapcsolódni, mivel a következő UPD portot más alkalmazás "
 "használja: %1"
 
-#: ktorrent/core.cpp:996
+#: ktorrent/core.cpp:1003
 msgid "KTorrent is running one or more torrents"
 msgstr "A KTorrent jelenleg egy, vagy több torrentet kezel"
 
-#: ktorrent/core.cpp:1078
+#: ktorrent/core.cpp:1085
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "A torrent nem hozható létre: %1"
 
-#: ktorrent/core.cpp:1184
+#: ktorrent/core.cpp:1191
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1961,21 +1962,21 @@ msgstr ""
 "A(z) \"%1\" torrent egyes fájljai hiányoznak. \n"
 "Újra létre szeretné hozni ezeket, vagy ne kerüljenek letöltésre?"
 
-#: ktorrent/core.cpp:1193 ktorrent/core.cpp:1205 ktorrent/core.cpp:1218
+#: ktorrent/core.cpp:1200 ktorrent/core.cpp:1212 ktorrent/core.cpp:1225
 msgid "Data files are missing"
 msgstr "Adatfájlok hiányoznak"
 
-#: ktorrent/core.cpp:1204
+#: ktorrent/core.cpp:1211
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "A hiányzó fájlok kijelölése nem törölhető: %1"
 
-#: ktorrent/core.cpp:1217
+#: ktorrent/core.cpp:1224
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "A hiányzó fájlok nem hozhatóak újra létre: %1"
 
-#: ktorrent/core.cpp:1229
+#: ktorrent/core.cpp:1236
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -1984,16 +1985,16 @@ msgstr ""
 "A(z) %1 torrent adatfájlja hiányzik. \n"
 "Újra létre szeretné hozni ezeket?"
 
-#: ktorrent/core.cpp:1236 ktorrent/core.cpp:1247
+#: ktorrent/core.cpp:1243 ktorrent/core.cpp:1254
 msgid "Data file is missing"
 msgstr "Adatfájl hiányzik"
 
-#: ktorrent/core.cpp:1246
+#: ktorrent/core.cpp:1253
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Az adatfájl nem hozható újra létre: %1"
 
-#: ktorrent/core.cpp:1351
+#: ktorrent/core.cpp:1358
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -2005,16 +2006,16 @@ msgstr[0] ""
 "%1 olyan torrent található, melyek a KTorrent KDE3-as verziójához tartoznak. "
 "Szeretné importálni ezeket?"
 
-#: ktorrent/core.cpp:1373
+#: ktorrent/core.cpp:1380
 msgid "No torrents from the KDE3 version were found."
 msgstr "Nem található a KDE3-as verzióhoz tartozó torrent."
 
-#: ktorrent/core.cpp:1392 ktorrent/core.cpp:1411
+#: ktorrent/core.cpp:1399 ktorrent/core.cpp:1418
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr "Érvénytelen mágneses hivatkozás: %1"
 
-#: ktorrent/core.cpp:1397 ktorrent/core.cpp:1416
+#: ktorrent/core.cpp:1404 ktorrent/core.cpp:1423
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -2394,7 +2395,7 @@ msgstr "Eltávolítás"
 
 #: ktorrent/view/scanextender.cpp:40 ktorrent/view/scanextender.cpp:93
 msgid "Checked %v of %m chunks"
-msgstr "%x / %m darab ellenőrizve"
+msgstr "%v / %m darab ellenőrizve"
 
 #: ktorrent/view/scanextender.cpp:108
 #, kde-format
