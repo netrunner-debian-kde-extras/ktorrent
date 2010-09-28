@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-07-06 01:30+0200\n"
-"PO-Revision-Date: 2010-06-30 21:23-0300\n"
+"POT-Creation-Date: 2010-08-17 01:35+0200\n"
+"PO-Revision-Date: 2010-08-09 22:17-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@lists.kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -1570,7 +1570,7 @@ msgstr " Mecanismo: "
 
 #: plugins/search/htmlpart.cpp:94
 msgid "Do you want to download this magnet link?"
-msgstr "Deseja baixar este link Magnet?"
+msgstr "Deseja baixar este link magnético?"
 
 #: plugins/search/htmlpart.cpp:201
 msgid "Do you want to download or save the torrent?"
@@ -1884,22 +1884,22 @@ msgstr "Nunca"
 
 #: plugins/magnetgenerator/magnetgeneratorplugin.cpp:49
 msgid "Copy Magnet URI"
-msgstr "Copiar URI Magnet"
+msgstr "Copiar URI magnética"
 
 #: plugins/magnetgenerator/magnetgeneratorplugin.cpp:143
 #: ktorrent/torrentactivity.cpp:78
 msgid "Magnet"
-msgstr "Magnet"
+msgstr "Magnética"
 
 #: plugins/magnetgenerator/magnetgeneratorplugin.cpp:143
 msgid "Magnet link copied to clipboard"
-msgstr "Link Magnet copiado para a área de transferência"
+msgstr "Link magnético copiado para a área de transferência"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:32
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_x2)
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.cpp:35 rc.cpp:1323
 msgid "Magnet Generator"
-msgstr "Gerador de Magnet"
+msgstr "Gerador de magnético"
 
 #: ktupnptest/main.cpp:39
 msgid "KTUPnPTest"
@@ -1913,16 +1913,16 @@ msgstr "Aplicativo de teste UPnP do KTorrent"
 msgid "(C) 2005 - 2007 Joris Guisson and Ivan Vasic"
 msgstr "(C) 2005 - 2007 Joris Guisson e Ivan Vasic"
 
-#: libktupnp/upnprouter.cpp:139
+#: libktupnp/upnprouter.cpp:143
 #, kde-format
 msgid "Failed to download %1 : %2"
 msgstr "Falha ao baixar %1 : %2"
 
-#: libktupnp/upnprouter.cpp:150
+#: libktupnp/upnprouter.cpp:154
 msgid "Error parsing router description."
 msgstr "Erro ao analisar a descrição do roteador."
 
-#: libktupnp/upnprouter.cpp:274
+#: libktupnp/upnprouter.cpp:278
 msgid ""
 "Forwarding failed: \n"
 "Device does not have a WANIPConnection or WANPPPConnection."
@@ -1930,17 +1930,17 @@ msgstr ""
 "O encaminhamento falhou: \n"
 "O dispositivo não possui uma WANIPConnection ou WANPPPConnection."
 
-#: libktupnp/upnprouter.cpp:431 libktupnp/upnprouter.cpp:444
+#: libktupnp/upnprouter.cpp:439 libktupnp/upnprouter.cpp:452
 msgid "Cannot find port forwarding service in the device's description."
 msgstr ""
 "Não foi possível encontrar o serviço de encaminhamento de portas na "
 "descrição do dispositivo."
 
-#: libktupnp/httprequest.cpp:80
+#: libktupnp/httprequest.cpp:91
 msgid "Connection closed unexpectedly."
 msgstr "A conexão foi fechada inesperadamente."
 
-#: libktupnp/httprequest.cpp:122
+#: libktupnp/httprequest.cpp:137
 msgid "Timeout occurred"
 msgstr "Ocorreu um tempo esgotado"
 
@@ -1962,16 +1962,16 @@ msgstr ""
 "O KTorrent não é capaz de aceitar conexões, porque a porta %1 já estão sendo "
 "usadas por outro programa."
 
-#: ktorrent/core.cpp:996
+#: ktorrent/core.cpp:1003
 msgid "KTorrent is running one or more torrents"
 msgstr "O KTorrent está executando um ou mais torrents"
 
-#: ktorrent/core.cpp:1078
+#: ktorrent/core.cpp:1085
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Não foi possível criar o torrent: %1"
 
-#: ktorrent/core.cpp:1184
+#: ktorrent/core.cpp:1191
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1980,21 +1980,21 @@ msgstr ""
 "Vários arquivos de dados do torrent \"%1\" estão faltando.\n"
 "Deseja recriá-los, ou deseja que eles não sejam baixados?"
 
-#: ktorrent/core.cpp:1193 ktorrent/core.cpp:1205 ktorrent/core.cpp:1218
+#: ktorrent/core.cpp:1200 ktorrent/core.cpp:1212 ktorrent/core.cpp:1225
 msgid "Data files are missing"
 msgstr "Arquivos de dados estão faltando"
 
-#: ktorrent/core.cpp:1204
+#: ktorrent/core.cpp:1211
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Não foi possível desselecionar os arquivos faltando: %1"
 
-#: ktorrent/core.cpp:1217
+#: ktorrent/core.cpp:1224
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Não foi possível recriar os arquivos faltando: %1"
 
-#: ktorrent/core.cpp:1229
+#: ktorrent/core.cpp:1236
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -2003,16 +2003,16 @@ msgstr ""
 "O arquivo onde os dados do torrent \"%1\" são salvos está faltando.\n"
 "Deseja recriá-lo?"
 
-#: ktorrent/core.cpp:1236 ktorrent/core.cpp:1247
+#: ktorrent/core.cpp:1243 ktorrent/core.cpp:1254
 msgid "Data file is missing"
 msgstr "Arquivo de dados está faltando"
 
-#: ktorrent/core.cpp:1246
+#: ktorrent/core.cpp:1253
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Não foi possível recriar o arquivo de dados: %1"
 
-#: ktorrent/core.cpp:1351
+#: ktorrent/core.cpp:1358
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -2027,22 +2027,22 @@ msgstr[1] ""
 "O KTorrent encontrou %1 torrents da versão do KTorrent para o KDE3. Deseja "
 "importá-los?"
 
-#: ktorrent/core.cpp:1373
+#: ktorrent/core.cpp:1380
 msgid "No torrents from the KDE3 version were found."
 msgstr "Nenhum torrent da versão para o KDE3 foi encontrado."
 
-#: ktorrent/core.cpp:1392 ktorrent/core.cpp:1411
+#: ktorrent/core.cpp:1399 ktorrent/core.cpp:1418
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
-msgstr "Link Magnet de bittorrent inválido: %1"
+msgstr "Link magnético de bittorrent inválido: %1"
 
-#: ktorrent/core.cpp:1397 ktorrent/core.cpp:1416
+#: ktorrent/core.cpp:1404 ktorrent/core.cpp:1423
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
 msgstr ""
-"Você está tentando baixar um link Magnet, e o DHT não está habilitado. Para "
-"melhores resultados, habilite o DHT."
+"Você está tentando baixar um link magnético, e o DHT não está habilitado. "
+"Para melhores resultados, habilite o DHT."
 
 #: ktorrent/pref/proxypref.cpp:27
 msgid "Proxy"
@@ -2206,19 +2206,19 @@ msgstr "Mover um torrent para o final da fila"
 
 #: ktorrent/tools/magnetview.cpp:42
 msgid "Start Magnet"
-msgstr "Iniciar Magnet"
+msgstr "Iniciar magnético"
 
 #: ktorrent/tools/magnetview.cpp:43
 msgid "Stop Magnet"
-msgstr "Parar Magnet"
+msgstr "Parar magnético"
 
 #: ktorrent/tools/magnetview.cpp:45
 msgid "Remove Magnet"
-msgstr "Remover Magnet"
+msgstr "Remover magnético"
 
 #: ktorrent/tools/magnetmodel.cpp:128
 msgid "Magnet Link"
-msgstr "Link Magnet"
+msgstr "Link magnético"
 
 #: ktorrent/tools/magnetmodel.cpp:205
 msgid "Downloading"
@@ -2667,7 +2667,8 @@ msgstr "Abrir URL"
 
 #: ktorrent/gui.cpp:409
 msgid "Open a URL which points to a torrent, magnet links are supported"
-msgstr "Abre uma URL que aponta para um torrent, links Magnet são suportados"
+msgstr ""
+"Abre uma URL que aponta para um torrent, links magnéticos são suportados"
 
 #: ktorrent/gui.cpp:414
 msgid "Suspend Torrents"
@@ -3522,7 +3523,7 @@ msgstr "Widget para gerenciar a fila de torrents"
 
 #: ktorrent/torrentactivity.cpp:79
 msgid "Displays the currently downloading magnet links"
-msgstr "Exibe todos os links Magnet sendo baixados"
+msgstr "Exibe todos os links magnéticos sendo baixados"
 
 #: ktorrent/statusbar.cpp:39 ktorrent/statusbar.cpp:71
 #, kde-format
@@ -3807,7 +3808,7 @@ msgstr "KTMagnetDownloader"
 
 #: ktmagnetdownloader/magnetdownloader.cpp:38
 msgid "KTorrent's magnet link downloader"
-msgstr "Downloader de links Magnet do KTorrent"
+msgstr "Downloader de links magnéticos do KTorrent"
 
 #: ktmagnetdownloader/magnetdownloader.cpp:40
 msgid "(C) 2009 Joris Guisson"
@@ -6478,7 +6479,7 @@ msgstr "&Cancelar"
 #. i18n: ectx: property (windowTitle), widget (QWidget, MagnetGeneratorPrefWidget)
 #: rc.cpp:1320
 msgid "Magnet Generator Preferences"
-msgstr "Preferências do gerador de Magnet"
+msgstr "Preferências do gerador de magnéticos"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:40
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_torrenttracker)
@@ -6514,7 +6515,7 @@ msgstr "Adicionar URL de rastreador personalizado"
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_tr)
 #: rc.cpp:1338
 msgid "The tracker URL that will be a part of the magnet link"
-msgstr "A URL do rastreador que será parte do link Magnet"
+msgstr "A URL do rastreador que será parte do link magnético"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:67
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_dn)
@@ -9691,103 +9692,3 @@ msgstr "Pasta para onde mover os arquivos baixados completados"
 #: rc.cpp:2782
 msgid "Maximum seed time in hours (0 = no limit)"
 msgstr "Tempo de semeação máximo em horas (0 = sem limite)"
-
-#, fuzzy
-#~| msgid "µTP"
-#~ msgid " (µTP)"
-#~ msgstr "µTP"
-
-#, fuzzy
-#~| msgid " minutes"
-#~ msgid " minute"
-#~ msgid_plural " minutes"
-#~ msgstr[0] " minutos"
-#~ msgstr[1] " minutos"
-
-#, fuzzy
-#~| msgid "Use DHT to get additional peers"
-#~ msgid "Use DHT to find more peers"
-#~ msgstr "Usar DHT para obter pares adicionais"
-
-#, fuzzy
-#~| msgid "Use peer exchange"
-#~ msgid "Use peer exchange to find more peers"
-#~ msgstr "Usar troca de pares"
-
-#, fuzzy
-#~| msgid ""
-#~| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/"
-#~| "TR/REC-html40/strict.dtd\">\n"
-#~| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~| "css\">\n"
-#~| "p, li { white-space: pre-wrap; }\n"
-#~| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~| "font-weight:400; font-style:normal;\">\n"
-#~| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~| "right:0px; -qt-block-indent:0; text-indent:0px;\">If login required is "
-#~| "enabled, you need to enter a username and a password.</p>\n"
-#~| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~| "\"></p>\n"
-#~| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~| "weight:600;\">Attention: </span>You should not disable this when the "
-#~| "webinterface is accessible from the internet. It will allow anybody "
-#~| "access to it.</p></body></html>"
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Superseeding mode, is a "
-#~ "special seeding mode which allows you to achieve much higher seeding "
-#~ "efficiencies. This results in less bandwidth used to spread a torrent.</"
-#~ "p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "weight:600;\">Note: </span>This should only be used if the swarm has not "
-#~ "fully been established. Once there are multiple active seeders, this mode "
-#~ "becomes useless.</p></body></html>"
-#~ msgstr ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Se login exigido "
-#~ "estiver habilitada, você precisa digitar um nome de usuário e uma senha.</"
-#~ "p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "weight:600;\">Atenção: </span>Você não deve desabilitar isto, quando a "
-#~ "webinterface estiver acessível à partir da internet. Ela permitirá que "
-#~ "qualquer um a acesse.</p></body></html>"
-
-#, fuzzy
-#~| msgid ""
-#~| "Moves the files to the specified location when the torrent finishes "
-#~| "downloading."
-#~ msgid ""
-#~ "Move the files of the torrent to a different directory when it has "
-#~ "finished downloading."
-#~ msgstr ""
-#~ "Move os arquivos para a localização especificada, quando o torrent "
-#~ "terminar de baixar."
-
-#, fuzzy
-#~| msgid "Select a directory to move the data to."
-#~ msgid "Location to move the files to."
-#~ msgstr "Selecione uma pasta para mover os dados."

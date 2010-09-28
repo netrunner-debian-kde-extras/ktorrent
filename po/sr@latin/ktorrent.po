@@ -6,16 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-07-06 01:30+0200\n"
-"PO-Revision-Date: 2010-05-24 18:10+0200\n"
+"POT-Creation-Date: 2010-08-17 01:35+0200\n"
+"PO-Revision-Date: 2010-07-12 15:18+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n%"
-"10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Associated-UI-Catalogs: kdelibs4\n"
@@ -53,8 +53,8 @@ msgstr "WAN veza"
 #: plugins/upnp/routermodel.cpp:114
 #, kde-format
 msgid ""
-"Model Name: <b>%1</b><br/>Manufacturer: <b>%2</b><br/>Model Description: <b>%"
-"3</b><br/>"
+"Model Name: <b>%1</b><br/>Manufacturer: <b>%2</b><br/>Model Description: <b>"
+"%3</b><br/>"
 msgstr ""
 "Naziv modela: <b>%1</b><br/>Proizvođač: <b>%2</b><br/>Opis modela: <b>%3</"
 "b><br/>"
@@ -1962,16 +1962,16 @@ msgstr "KTorrentov probni program za UPnP"
 msgid "(C) 2005 - 2007 Joris Guisson and Ivan Vasic"
 msgstr "© 2005–2007, Joris Gison i Ivan Vasić"
 
-#: libktupnp/upnprouter.cpp:139
+#: libktupnp/upnprouter.cpp:143
 #, kde-format
 msgid "Failed to download %1 : %2"
 msgstr "Ne mogu da preuzmem %1: %2"
 
-#: libktupnp/upnprouter.cpp:150
+#: libktupnp/upnprouter.cpp:154
 msgid "Error parsing router description."
 msgstr "Greška u raščlanjivanju opisa rutera."
 
-#: libktupnp/upnprouter.cpp:274
+#: libktupnp/upnprouter.cpp:278
 msgid ""
 "Forwarding failed: \n"
 "Device does not have a WANIPConnection or WANPPPConnection."
@@ -1979,15 +1979,15 @@ msgstr ""
 "Neuspelo prosleđivanje: \n"
 "Uređaj ne poseduje WANIPConnection niti WANPPPConnection."
 
-#: libktupnp/upnprouter.cpp:431 libktupnp/upnprouter.cpp:444
+#: libktupnp/upnprouter.cpp:439 libktupnp/upnprouter.cpp:452
 msgid "Cannot find port forwarding service in the device's description."
 msgstr "Ne mogu da nađem servis prosleđivanja portova u opisu uređaja."
 
-#: libktupnp/httprequest.cpp:80
+#: libktupnp/httprequest.cpp:91
 msgid "Connection closed unexpectedly."
 msgstr "Veza je neočekivano zatvorena."
 
-#: libktupnp/httprequest.cpp:122
+#: libktupnp/httprequest.cpp:137
 msgid "Timeout occurred"
 msgstr "Isteklo vreme"
 
@@ -2007,16 +2007,16 @@ msgid ""
 msgstr ""
 "KTorrent ne može da prihvata veze jer UDP port %1 već koristi drugi program."
 
-#: ktorrent/core.cpp:996
+#: ktorrent/core.cpp:1003
 msgid "KTorrent is running one or more torrents"
 msgstr "KTorrent radi sa jednim ili više torenata"
 
-#: ktorrent/core.cpp:1078
+#: ktorrent/core.cpp:1085
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Ne mogu da napravim torent: %1"
 
-#: ktorrent/core.cpp:1184
+#: ktorrent/core.cpp:1191
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -2025,21 +2025,21 @@ msgstr ""
 "Nedostaje nekoliko fajlova torenta „%1“. \n"
 "Želite li da ih ponovo napravite ili da ih ne preuzimate?"
 
-#: ktorrent/core.cpp:1193 ktorrent/core.cpp:1205 ktorrent/core.cpp:1218
+#: ktorrent/core.cpp:1200 ktorrent/core.cpp:1212 ktorrent/core.cpp:1225
 msgid "Data files are missing"
 msgstr "Nedostaju fajlovi sa podacima"
 
-#: ktorrent/core.cpp:1204
+#: ktorrent/core.cpp:1211
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Ne mogu da isključim iz izbora nedostajuće fajlove: %1"
 
-#: ktorrent/core.cpp:1217
+#: ktorrent/core.cpp:1224
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Ne mogu da napravim nedostajuće fajlove: %1"
 
-#: ktorrent/core.cpp:1229
+#: ktorrent/core.cpp:1236
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -2048,16 +2048,16 @@ msgstr ""
 "Nedostaje fajl u koji se upisuju podaci torenta „%1“. \n"
 "Želite li da ga ponovo napravite?"
 
-#: ktorrent/core.cpp:1236 ktorrent/core.cpp:1247
+#: ktorrent/core.cpp:1243 ktorrent/core.cpp:1254
 msgid "Data file is missing"
 msgstr "Nedostaje fajl sa podacima"
 
-#: ktorrent/core.cpp:1246
+#: ktorrent/core.cpp:1253
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Ne mogu da napravim fajl sa podacima: %1"
 
-#: ktorrent/core.cpp:1351
+#: ktorrent/core.cpp:1358
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -2073,16 +2073,16 @@ msgstr[2] ""
 "Nađeno je %1 torenata iz KDE3 verzije KTorrenta. Želite li da ih uvezete?"
 msgstr[3] "Nađen je torent iz KDE3 verzije KTorrenta. Želite li da ga uvezete?"
 
-#: ktorrent/core.cpp:1373
+#: ktorrent/core.cpp:1380
 msgid "No torrents from the KDE3 version were found."
 msgstr "Nema torenata iz KDE3 verzije."
 
-#: ktorrent/core.cpp:1392 ktorrent/core.cpp:1411
+#: ktorrent/core.cpp:1399 ktorrent/core.cpp:1418
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr "Neispravna magnetska bittorrent veza: %1"
 
-#: ktorrent/core.cpp:1397 ktorrent/core.cpp:1416
+#: ktorrent/core.cpp:1404 ktorrent/core.cpp:1423
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -3226,8 +3226,8 @@ msgstr "Nema dovoljno slobodnog prostora."
 #: ktorrent/trayicon.cpp:311
 #, kde-format
 msgid ""
-"Your disk is running out of space.<br /><b>%1</b> is being downloaded to '%"
-"2'."
+"Your disk is running out of space.<br /><b>%1</b> is being downloaded to '"
+"%2'."
 msgstr "Ponestaje prostora na disku.<br /><b>%1</b> se preuzima u „%2“."
 
 #: ktorrent/trayicon.cpp:314
@@ -3600,7 +3600,7 @@ msgid "DHT: %1 nodes, %2 tasks"
 msgstr ""
 "DHT: veza %1, poslova %2"
 "|/|"
-"DHT: %1 $[množ ^1 veza veza veza], %2 $[množ ^2 posao posla poslova]"
+"DHT: %1 $[množ ^1 veza veze veza], %2 $[množ ^2 posao posla poslova]"
 
 #. i18n: file: plasma/applet/appletconfig.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, AppletConfig)
@@ -3612,12 +3612,12 @@ msgstr "Aplet"
 #: plasma/applet/applet.cpp:298 plasma/applet/applet.cpp:363
 #, kde-format
 msgid ""
-"<table>\t\t\t\t<tr><td>Download Speed:</td><td>%5 </td><td>Seeders: </"
-"td><td>%1 (%2)</td></tr>\t\t\t\t<tr><td>Upload Speed:</td><td>%6 </"
-"td><td>Leechers: </td><td>%3 (%4)</td></tr>"
+"<table>\t\t\t\t<tr><td>Download Speed:</td><td>%5 </td><td>Seeders: </td><td>"
+"%1 (%2)</td></tr>\t\t\t\t<tr><td>Upload Speed:</td><td>%6 </td><td>Leechers: "
+"</td><td>%3 (%4)</td></tr>"
 msgstr ""
-"<table>\t\t\t\t<tr><td>Preuzimanje:</td><td>%5 </td><td>Sejača: </td><td>%1 "
-"(%2)</td></tr>\t\t\t\t<tr><td>Brzina slanja:</td><td>%6 </td><td>Pijavica: </"
+"<table>\t\t\t\t<tr><td>Preuzimanje:</td><td>%5 </td><td>Sejača: </td><td>%1 ("
+"%2)</td></tr>\t\t\t\t<tr><td>Brzina slanja:</td><td>%6 </td><td>Pijavica: </"
 "td><td>%3 (%4)</td></tr>"
 
 # skip-rule: x-markup-k

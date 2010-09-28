@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-07-06 01:30+0200\n"
-"PO-Revision-Date: 2010-06-30 08:08+0300\n"
+"POT-Creation-Date: 2010-08-17 01:35+0200\n"
+"PO-Revision-Date: 2010-08-28 08:36+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
 "MIME-Version: 1.0\n"
@@ -1912,16 +1912,16 @@ msgstr "Програма для UPnP-перевірки для KTorrent"
 msgid "(C) 2005 - 2007 Joris Guisson and Ivan Vasic"
 msgstr "© Joris Guisson і Ivan Vasic, 2005–2007"
 
-#: libktupnp/upnprouter.cpp:139
+#: libktupnp/upnprouter.cpp:143
 #, kde-format
 msgid "Failed to download %1 : %2"
 msgstr "Спроба звантаження %1 зазнала невдачі: %2"
 
-#: libktupnp/upnprouter.cpp:150
+#: libktupnp/upnprouter.cpp:154
 msgid "Error parsing router description."
 msgstr "Помилка під час обробки опису маршрутизатора."
 
-#: libktupnp/upnprouter.cpp:274
+#: libktupnp/upnprouter.cpp:278
 msgid ""
 "Forwarding failed: \n"
 "Device does not have a WANIPConnection or WANPPPConnection."
@@ -1929,15 +1929,15 @@ msgstr ""
 "Спроба переспрямування зазнала невдачі: \n"
 "У пристрою відсутнє WANIPConnection або WANPPPConnection."
 
-#: libktupnp/upnprouter.cpp:431 libktupnp/upnprouter.cpp:444
+#: libktupnp/upnprouter.cpp:439 libktupnp/upnprouter.cpp:452
 msgid "Cannot find port forwarding service in the device's description."
 msgstr "Неможливо знайти службу перенаправлення портів в описі пристрою."
 
-#: libktupnp/httprequest.cpp:80
+#: libktupnp/httprequest.cpp:91
 msgid "Connection closed unexpectedly."
 msgstr "З'єднання несподівано закрито."
 
-#: libktupnp/httprequest.cpp:122
+#: libktupnp/httprequest.cpp:137
 msgid "Timeout occurred"
 msgstr "Завершився час очікування"
 
@@ -1959,16 +1959,16 @@ msgstr ""
 "KTorrent не може приймати з'єднання, оскільки UDP-порт %1 вже "
 "використовується іншою програмою."
 
-#: ktorrent/core.cpp:996
+#: ktorrent/core.cpp:1003
 msgid "KTorrent is running one or more torrents"
 msgstr "KTorrent працює над одним або декількома торентами"
 
-#: ktorrent/core.cpp:1078
+#: ktorrent/core.cpp:1085
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Не вдається створити торент: %1"
 
-#: ktorrent/core.cpp:1184
+#: ktorrent/core.cpp:1191
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1977,21 +1977,21 @@ msgstr ""
 "Деякі з файлів даних торента «%1» відсутні. \n"
 "Чи бажаєте ви повторно створити їх, або просто не будете їх звантажувати?"
 
-#: ktorrent/core.cpp:1193 ktorrent/core.cpp:1205 ktorrent/core.cpp:1218
+#: ktorrent/core.cpp:1200 ktorrent/core.cpp:1212 ktorrent/core.cpp:1225
 msgid "Data files are missing"
 msgstr "Відсутні файли з даними"
 
-#: ktorrent/core.cpp:1204
+#: ktorrent/core.cpp:1211
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Не вдається скасувати вибір відсутніх файлів: %1"
 
-#: ktorrent/core.cpp:1217
+#: ktorrent/core.cpp:1224
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Не вдається заново створити відсутні файли: %1"
 
-#: ktorrent/core.cpp:1229
+#: ktorrent/core.cpp:1236
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -2000,16 +2000,16 @@ msgstr ""
 "Файл, до якого було збережено дані торента «%1» відсутній. \n"
 "Бажаєте створити його повторно?"
 
-#: ktorrent/core.cpp:1236 ktorrent/core.cpp:1247
+#: ktorrent/core.cpp:1243 ktorrent/core.cpp:1254
 msgid "Data file is missing"
 msgstr "Відсутній файл з даними"
 
-#: ktorrent/core.cpp:1246
+#: ktorrent/core.cpp:1253
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Не вдається заново створити файл з даними: %1"
 
-#: ktorrent/core.cpp:1351
+#: ktorrent/core.cpp:1358
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -2030,16 +2030,16 @@ msgstr[3] ""
 "Програмою KTorrent знайдено один торент з KTorrent версії KDE3; хочете його "
 "імпортувати?"
 
-#: ktorrent/core.cpp:1373
+#: ktorrent/core.cpp:1380
 msgid "No torrents from the KDE3 version were found."
 msgstr "Не знайдено торентів з версії KDE3."
 
-#: ktorrent/core.cpp:1392 ktorrent/core.cpp:1411
+#: ktorrent/core.cpp:1399 ktorrent/core.cpp:1418
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr "Некоректне маґнет-посилання bittorrent: %1"
 
-#: ktorrent/core.cpp:1397 ktorrent/core.cpp:1416
+#: ktorrent/core.cpp:1404 ktorrent/core.cpp:1423
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -2496,15 +2496,15 @@ msgid ""
 "to the tracker)"
 msgstr ""
 "Кількість поширювачів, з якими з’єднано наш комп’ютер (Кількість поширювачів "
-"згідно до даних координатора)"
+"відповідно до даних координатора)"
 
 #: ktorrent/view/viewmodel.cpp:466
 msgid ""
 "How many leechers we are connected to (How many leechers there are according "
 "to the tracker)"
 msgstr ""
-"Кількість п’явок, з якими з’єднано наш комп’ютер (Кількість п’явок згідно до "
-"даних координатора)"
+"Кількість п’явок, з якими з’єднано наш комп’ютер (Кількість п’явок "
+"відповідно до даних координатора)"
 
 #: ktorrent/view/viewmodel.cpp:468
 #, no-c-format
@@ -3464,7 +3464,7 @@ msgid_plural "Importing %1 torrents ..."
 msgstr[0] "Імпортування %1 торента..."
 msgstr[1] "Імпортування %1 торентів..."
 msgstr[2] "Імпортування %1 торентів..."
-msgstr[3] "Імпортування %1 торента..."
+msgstr[3] "Імпортування торента..."
 
 #: ktorrent/dialogs/torrentmigratordlg.cpp:105
 #, kde-format
@@ -8755,9 +8755,9 @@ msgstr ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Зауваження:</span> Цей параметр використовується лише у "
-"діалозі вибору файла, якщо ви змінюєте групу, місце звантаження буде "
-"встановлено у це значення. Там ви теж зможете його змінити, якщо ви цього "
-"бажаєте. </p></body></html>"
+"діалоговому вікні вибору файла, якщо ви змінюєте групу, місце звантаження "
+"буде встановлено у це значення. Там ви теж зможете його змінити, якщо ви "
+"цього бажаєте. </p></body></html>"
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:53
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, m_default_location)
@@ -8794,9 +8794,9 @@ msgstr ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Зауваження:</span> Цей параметр використовується лише у "
-"діалозі вибору файла, якщо ви змінюєте групу, місце звантаження буде "
-"встановлено у це значення. Там ви теж зможете його змінити, якщо ви цього "
-"бажаєте. </p></body></html>"
+"діалоговому вікні вибору файла, якщо ви змінюєте групу, місце звантаження "
+"буде встановлено у це значення. Там ви теж зможете його змінити, якщо ви "
+"цього бажаєте. </p></body></html>"
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:65
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox)

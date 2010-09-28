@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-07-06 01:30+0200\n"
-"PO-Revision-Date: 2010-06-17 11:58+0200\n"
+"POT-Creation-Date: 2010-08-17 01:35+0200\n"
+"PO-Revision-Date: 2010-08-18 09:26+0200\n"
 "Last-Translator: Nicola Ruggero <nicola@nxnt.org>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -706,11 +706,11 @@ msgstr "Inviati"
 
 #: plugins/infowidget/peerviewmodel.cpp:317
 msgid "Interested"
-msgstr "Interessato"
+msgstr "Vuole scaricare"
 
 #: plugins/infowidget/peerviewmodel.cpp:318
 msgid "Interesting"
-msgstr "In interessamento"
+msgstr "Vuole inviare"
 
 #: plugins/infowidget/peerviewmodel.cpp:326
 msgid "IP address of the peer"
@@ -782,7 +782,7 @@ msgstr "Se il nodo è interessato o no a scaricare dati da noi"
 
 #: plugins/infowidget/peerviewmodel.cpp:341
 msgid "Whether we are interested in downloading from this peer"
-msgstr "Se noi siamo interessati o no a scaricare da questo nodo"
+msgstr "Se noi siamo interessati o no a scaricare dati da questo nodo"
 
 #. i18n: file: plugins/infowidget/statustab.ui:289
 #. i18n: ectx: property (specialValueText), widget (QDoubleSpinBox, ratio_limit)
@@ -1903,16 +1903,16 @@ msgstr "Applicazione di prova UPnP KTorrent"
 msgid "(C) 2005 - 2007 Joris Guisson and Ivan Vasic"
 msgstr "(C) 2005 - 2007 Joris Guisson e Ivan Vasic"
 
-#: libktupnp/upnprouter.cpp:139
+#: libktupnp/upnprouter.cpp:143
 #, kde-format
 msgid "Failed to download %1 : %2"
 msgstr "Impossibile scaricare %1 : %2"
 
-#: libktupnp/upnprouter.cpp:150
+#: libktupnp/upnprouter.cpp:154
 msgid "Error parsing router description."
 msgstr "Errore durante l'analisi della descrizione del router."
 
-#: libktupnp/upnprouter.cpp:274
+#: libktupnp/upnprouter.cpp:278
 msgid ""
 "Forwarding failed: \n"
 "Device does not have a WANIPConnection or WANPPPConnection."
@@ -1920,17 +1920,17 @@ msgstr ""
 "Mappatura non riuscita: \n"
 "Il dispositivo non ha una connessione WAN IP o WAN PPP."
 
-#: libktupnp/upnprouter.cpp:431 libktupnp/upnprouter.cpp:444
+#: libktupnp/upnprouter.cpp:439 libktupnp/upnprouter.cpp:452
 msgid "Cannot find port forwarding service in the device's description."
 msgstr ""
 "Impossibile trovare il servizio di mappatura porte nella descrizione del "
 "dispositivo."
 
-#: libktupnp/httprequest.cpp:80
+#: libktupnp/httprequest.cpp:91
 msgid "Connection closed unexpectedly."
 msgstr "Connessione chiusa inaspettatamente."
 
-#: libktupnp/httprequest.cpp:122
+#: libktupnp/httprequest.cpp:137
 msgid "Timeout occurred"
 msgstr "Tempo scaduto"
 
@@ -1952,16 +1952,16 @@ msgstr ""
 "KTorrent non riesce ad accettare le connessioni perché la porta UDP %1 è già "
 "in uso da un altro programma."
 
-#: ktorrent/core.cpp:996
+#: ktorrent/core.cpp:1003
 msgid "KTorrent is running one or more torrents"
 msgstr "KTorrent ha avviato uno o più torrent"
 
-#: ktorrent/core.cpp:1078
+#: ktorrent/core.cpp:1085
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Impossibile creare il torrent: %1"
 
-#: ktorrent/core.cpp:1184
+#: ktorrent/core.cpp:1191
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1970,21 +1970,21 @@ msgstr ""
 "Diversi file di dati del torrent «%1» sono mancanti. \n"
 "Vuoi crearli nuovamente oppure non vuoi scaricarli affatto?"
 
-#: ktorrent/core.cpp:1193 ktorrent/core.cpp:1205 ktorrent/core.cpp:1218
+#: ktorrent/core.cpp:1200 ktorrent/core.cpp:1212 ktorrent/core.cpp:1225
 msgid "Data files are missing"
 msgstr "File di dati mancanti"
 
-#: ktorrent/core.cpp:1204
+#: ktorrent/core.cpp:1211
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Impossibile deselezionare i file mancanti: %1"
 
-#: ktorrent/core.cpp:1217
+#: ktorrent/core.cpp:1224
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Impossibile ricreare i file mancanti: %1"
 
-#: ktorrent/core.cpp:1229
+#: ktorrent/core.cpp:1236
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -1993,16 +1993,16 @@ msgstr ""
 "Il file nel quale sono salvati i dati del torrent «%1» è mancante. \n"
 "Vuoi ricrearlo?"
 
-#: ktorrent/core.cpp:1236 ktorrent/core.cpp:1247
+#: ktorrent/core.cpp:1243 ktorrent/core.cpp:1254
 msgid "Data file is missing"
 msgstr "File di dati mancante"
 
-#: ktorrent/core.cpp:1246
+#: ktorrent/core.cpp:1253
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Impossibile ricreare il file di dati: %1"
 
-#: ktorrent/core.cpp:1351
+#: ktorrent/core.cpp:1358
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -2017,16 +2017,16 @@ msgstr[1] ""
 "KTorrent ha trovato %1 torrent della versione per KDE3 di KTorrent, vuoi "
 "importarli?"
 
-#: ktorrent/core.cpp:1373
+#: ktorrent/core.cpp:1380
 msgid "No torrents from the KDE3 version were found."
 msgstr "Nessun torrent della versione per KDE3 di KTorrent trovato."
 
-#: ktorrent/core.cpp:1392 ktorrent/core.cpp:1411
+#: ktorrent/core.cpp:1399 ktorrent/core.cpp:1418
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr "Collegamento magnet bittorrent non valido: %1"
 
-#: ktorrent/core.cpp:1397 ktorrent/core.cpp:1416
+#: ktorrent/core.cpp:1404 ktorrent/core.cpp:1423
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -6430,8 +6430,6 @@ msgstr "Intervallo aggiornamento in giorni."
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:143
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_autoUpdateInterval)
 #: rc.cpp:1301
-#, fuzzy
-#| msgid " days"
 msgid " days"
 msgstr " giorni"
 
@@ -7656,7 +7654,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_17)
 #: rc.cpp:1784 rc.cpp:2030
 msgid "Maximum seeds:"
-msgstr "Semi massimi:"
+msgstr "Distribuzioni massime:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:61
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxSeeds)
@@ -7828,7 +7826,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_keepSeeding)
 #: rc.cpp:1847
 msgid "Keep seeding after download is finished"
-msgstr "Mantieni il seme dopo il termine dello scaricamento"
+msgstr "Continua la distribuzione dopo il termine dello scaricamento"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:209
 #. i18n: ectx: property (text), widget (QLabel, label_7)
@@ -9489,7 +9487,7 @@ msgstr "Numero massimo di scaricamenti (0=illimitati)"
 #. i18n: ectx: label, entry (maxSeeds), group (downloads)
 #: rc.cpp:2680
 msgid "Maximum number of seeds (0 = no limit)"
-msgstr "Numero massimo di distribuzioni seme (0=illimitati)"
+msgstr "Numero massimo di distribuzioni seme (0=illimitate)"
 
 #. i18n: file: libktcore/ktorrent.kcfg:20
 #. i18n: ectx: label, entry (startDownloadsOnLowDiskSpace), group (downloads)
@@ -9561,7 +9559,7 @@ msgstr "Mostra messaggio a comparsa quando il torrent finisce."
 #. i18n: ectx: label, entry (keepSeeding), group (downloads)
 #: rc.cpp:2722
 msgid "Keep seeding after download has finished"
-msgstr "Mantieni il seme dopo il termine dello scaricamento"
+msgstr "Continua la distribuzione dopo il termine dello scaricamento"
 
 #. i18n: file: libktcore/ktorrent.kcfg:90
 #. i18n: ectx: label, entry (tempDir), group (downloads)

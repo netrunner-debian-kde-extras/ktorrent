@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-06-30 01:27+0200\n"
+"POT-Creation-Date: 2010-08-17 01:35+0200\n"
 "PO-Revision-Date: 2010-04-20 22:45+0200\n"
 "Last-Translator: Eirik U. Birkeland <eirbir@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
@@ -48,8 +48,8 @@ msgstr "WAN-tilkopling"
 #: plugins/upnp/routermodel.cpp:114
 #, kde-format
 msgid ""
-"Model Name: <b>%1</b><br/>Manufacturer: <b>%2</b><br/>Model Description: <b>%"
-"3</b><br/>"
+"Model Name: <b>%1</b><br/>Manufacturer: <b>%2</b><br/>Model Description: <b>"
+"%3</b><br/>"
 msgstr ""
 "Modellnamn: <b>%1</b><br/>Produsent: <b>%2</b><br/>Modellskildring: <b>%3</"
 "b><br/>"
@@ -1903,16 +1903,16 @@ msgstr "UPnP-testprogram i KTorrent"
 msgid "(C) 2005 - 2007 Joris Guisson and Ivan Vasic"
 msgstr "© 2005–2007 Joris Guisson og Ivan Vasic"
 
-#: libktupnp/upnprouter.cpp:139
+#: libktupnp/upnprouter.cpp:143
 #, kde-format
 msgid "Failed to download %1 : %2"
 msgstr "Klarte ikkje lasta ned «%1»: %2"
 
-#: libktupnp/upnprouter.cpp:150
+#: libktupnp/upnprouter.cpp:154
 msgid "Error parsing router description."
 msgstr "Feil ved tolking av rutarskildring."
 
-#: libktupnp/upnprouter.cpp:274
+#: libktupnp/upnprouter.cpp:278
 msgid ""
 "Forwarding failed: \n"
 "Device does not have a WANIPConnection or WANPPPConnection."
@@ -1920,44 +1920,44 @@ msgstr ""
 "Klarte ikkje vidaresenda: \n"
 "Eininga har inga WANIP- eller WANPPP-tilkopling."
 
-#: libktupnp/upnprouter.cpp:431 libktupnp/upnprouter.cpp:444
+#: libktupnp/upnprouter.cpp:439 libktupnp/upnprouter.cpp:452
 msgid "Cannot find port forwarding service in the device's description."
 msgstr ""
 "Klarer ikkje finna tenesta for vidaresending av portar i skildringa til "
 "eininga."
 
-#: libktupnp/httprequest.cpp:80
+#: libktupnp/httprequest.cpp:91
 msgid "Connection closed unexpectedly."
 msgstr "Tilkoplinga vart uventa avbroten."
 
-#: libktupnp/httprequest.cpp:122
+#: libktupnp/httprequest.cpp:137
 msgid "Timeout occurred"
 msgstr "Tidsavbrot"
 
-#: ktorrent/core.cpp:169
+#: ktorrent/core.cpp:170
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the TCP ports %1 is already "
 "in use by another program."
 msgstr ""
 
-#: ktorrent/core.cpp:183
+#: ktorrent/core.cpp:184
 #, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the UDP port %1 is already "
 "in use by another program."
 msgstr ""
 
-#: ktorrent/core.cpp:995
+#: ktorrent/core.cpp:1003
 msgid "KTorrent is running one or more torrents"
 msgstr "KTorrent køyrer éin eller fleire torrentar"
 
-#: ktorrent/core.cpp:1077
+#: ktorrent/core.cpp:1085
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Klarte ikkje laga torrent: %1"
 
-#: ktorrent/core.cpp:1183
+#: ktorrent/core.cpp:1191
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -1966,21 +1966,21 @@ msgstr ""
 "Manglar fleire datafiler til torrenten «%1».\n"
 "Ønskjer du byggja dei opp på nytt, eller vil du ikkje lasta dei ned?"
 
-#: ktorrent/core.cpp:1192 ktorrent/core.cpp:1204 ktorrent/core.cpp:1217
+#: ktorrent/core.cpp:1200 ktorrent/core.cpp:1212 ktorrent/core.cpp:1225
 msgid "Data files are missing"
 msgstr "Manglar datafiler"
 
-#: ktorrent/core.cpp:1203
+#: ktorrent/core.cpp:1211
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Kan ikkje fjerna merking frå manglande filer: %1"
 
-#: ktorrent/core.cpp:1216
+#: ktorrent/core.cpp:1224
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Kan ikkje byggja opp att manglande filer: %1"
 
-#: ktorrent/core.cpp:1228
+#: ktorrent/core.cpp:1236
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing. \n"
@@ -1989,16 +1989,16 @@ msgstr ""
 "Fila som inneheld data for torrenten «%1» manglar. \n"
 "Vil du byggja henne opp att?"
 
-#: ktorrent/core.cpp:1235 ktorrent/core.cpp:1246
+#: ktorrent/core.cpp:1243 ktorrent/core.cpp:1254
 msgid "Data file is missing"
 msgstr "Manglar datafil"
 
-#: ktorrent/core.cpp:1245
+#: ktorrent/core.cpp:1253
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Kan ikkje byggja opp att datafil: %1"
 
-#: ktorrent/core.cpp:1350
+#: ktorrent/core.cpp:1358
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -2013,16 +2013,16 @@ msgstr[1] ""
 "KTorrent har funne %1 torrentar frå KDE 3-versjonen av KTorrent. Vil du "
 "importera desse?"
 
-#: ktorrent/core.cpp:1372
+#: ktorrent/core.cpp:1380
 msgid "No torrents from the KDE3 version were found."
 msgstr "Fann ingen torrentar frå KDE 3-versjonen av KTorrent."
 
-#: ktorrent/core.cpp:1391 ktorrent/core.cpp:1410
+#: ktorrent/core.cpp:1399 ktorrent/core.cpp:1418
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr ""
 
-#: ktorrent/core.cpp:1396 ktorrent/core.cpp:1415
+#: ktorrent/core.cpp:1404 ktorrent/core.cpp:1423
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -3140,8 +3140,8 @@ msgstr "Det er ikkje nok tilgjengeleg diskplass."
 #: ktorrent/trayicon.cpp:311
 #, kde-format
 msgid ""
-"Your disk is running out of space.<br /><b>%1</b> is being downloaded to '%"
-"2'."
+"Your disk is running out of space.<br /><b>%1</b> is being downloaded to '"
+"%2'."
 msgstr "Det er lite plass på disken.<br /><b>%1</b> vert lasta ned til «%2»."
 
 #: ktorrent/trayicon.cpp:314
@@ -3510,9 +3510,9 @@ msgstr "Panelprogram"
 #: plasma/applet/applet.cpp:298 plasma/applet/applet.cpp:363
 #, kde-format
 msgid ""
-"<table>\t\t\t\t<tr><td>Download Speed:</td><td>%5 </td><td>Seeders: </"
-"td><td>%1 (%2)</td></tr>\t\t\t\t<tr><td>Upload Speed:</td><td>%6 </"
-"td><td>Leechers: </td><td>%3 (%4)</td></tr>"
+"<table>\t\t\t\t<tr><td>Download Speed:</td><td>%5 </td><td>Seeders: </td><td>"
+"%1 (%2)</td></tr>\t\t\t\t<tr><td>Upload Speed:</td><td>%6 </td><td>Leechers: "
+"</td><td>%3 (%4)</td></tr>"
 msgstr ""
 "<table>\t\t\t\t<tr><td>Nedlastingsfart:</td><td>%5 </td><td>Delarar: </"
 "td><td>%1 (%2)</td></tr>\t\t\t\t<tr><td>Opplastingsfart:</td><td>%6 </"
