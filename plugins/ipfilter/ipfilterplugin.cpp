@@ -162,5 +162,10 @@ namespace kt
 			}
 		}
 	}
+	
+	void IPFilterPlugin::notification(const QString& msg)
+	{
+		KNotification::event("PluginEvent",msg,QPixmap(),getGUI()->getMainWindow());
+	}
 
 }

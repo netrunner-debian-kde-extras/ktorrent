@@ -39,6 +39,7 @@ namespace kt
 		connect(m_download,SIGNAL(clicked()),this,SLOT(downloadClicked()));
 		connect(kcfg_autoUpdate,SIGNAL(toggled(bool)),this,SLOT(autoUpdateToggled(bool)));
 		connect(kcfg_autoUpdateInterval,SIGNAL(valueChanged(int)),this,SLOT(autoUpdateIntervalChanged(int)));
+		kcfg_autoUpdateInterval->setSuffix(ki18np(" day", " days"));
 		m_job = 0;
 		m_verbose = true;
 	}
@@ -123,6 +124,7 @@ namespace kt
 		m_plugin->unloadAntiP2P();
 		m_job = new DownloadAndConvertJob(url,m_verbose ? DownloadAndConvertJob::Verbose : DownloadAndConvertJob::Quietly);
 		connect(m_job,SIGNAL(result(KJob*)),this,SLOT(downloadAndConvertFinished(KJob*)));
+		connect(m_job,SIGNAL(notification(QString)),m_plugin,SLOT(notification(QString)));
 		m_job->start();
 	}
 	

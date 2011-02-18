@@ -26,13 +26,20 @@
 #include <Phonon/MediaObject>
 #include <Phonon/SeekSlider>
 #include <Phonon/VolumeSlider>
+#include <kaction.h>
 
 class QAction;
+class QLabel;
+class QStackedWidget;
 class KToolBar;
+class KActionCollection;
 
 namespace kt
 {
+
+	class VideoChunkBar;
 	class MediaPlayer;
+	class MediaFileRef;
 
 	/**
 	 * Widget to display a video
@@ -42,10 +49,8 @@ namespace kt
 	{
 		Q_OBJECT
 	public:
-		VideoWidget(MediaPlayer* player,QWidget* parent);
+		VideoWidget(MediaPlayer* player,KActionCollection* ac,QWidget* parent);
 		virtual ~VideoWidget();
-		
-		virtual void mouseMoveEvent(QMouseEvent* event);
 		
 		/**
 		 * Make the widget full screen or not.
@@ -53,28 +58,42 @@ namespace kt
 		 */
 		void setFullScreen(bool on);
 		
+		/**
+		 * Enable or disable the Video
+		 * @param on True to enable, false to disable
+		 */
+		void setVideoEnabled(bool on);
+		
+	protected:
+		virtual void mouseMoveEvent(QMouseEvent* event);
+		virtual bool eventFilter(QObject* dst, QEvent* event);
+		
 	private slots:
 		void play();
-		void pause();
 		void stop();
 		void setControlsVisible(bool on);
-		void onStateChanged(Phonon::State cur,Phonon::State old);
+		void timerTick(qint64 time);
+		void playing(const MediaFileRef & mfile);
+		void enableActions(unsigned int flags);
 		
 	signals:
 		void toggleFullScreen(bool on);
 		
 	private:
 		void inhibitScreenSaver(bool on);
+		QString formatTime(qint64 cur,qint64 total);
 
 	private:
+		QStackedWidget* stack;
 		Phonon::VideoWidget* video;
 		MediaPlayer* player;
 		Phonon::SeekSlider* slider;
 		KToolBar* tb;
-		QAction* play_act;
-		QAction* pause_act;
-		QAction* stop_act;
+		KAction* play_action;
+		KAction* stop_action;
+		QLabel* time_label;
 		Phonon::VolumeSlider* volume;
+		VideoChunkBar* chunk_bar;
 		bool fullscreen;
 		uint screensaver_cookie;
 		int powermanagement_cookie;

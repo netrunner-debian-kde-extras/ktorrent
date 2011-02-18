@@ -81,6 +81,12 @@ int main(int argc, char **argv)
 	signal(SIGPIPE,SIG_IGN);
 	signal(SIGXFSZ,SIG_IGN);
 #endif
+	
+	if (!bt::InitLibKTorrent())
+	{
+		fprintf(stderr,"Failed to initialize libktorrent\n");
+		return -1;
+	}
 
 	bt::SetClientInfo("KTorrent",kt::MAJOR,kt::MINOR,kt::RELEASE,kt::VERSION_TYPE,"KT");
 	
@@ -97,6 +103,7 @@ int main(int argc, char **argv)
 	about.addAuthor(ki18n("Alan Jones"),ki18n("BitFinder Plugin"),"skyphyr@gmail.com");
 	about.addAuthor(ki18n("Diego R. Brogna"),ki18n("Webinterface Plugin"),"dierbro@gmail.com");
 	about.addAuthor(ki18n("Krzysztof Kundzicz"),ki18n("Statistics Plugin"),"athantor@gmail.com"); 
+	about.addAuthor(ki18n("Christian Weilbach"),ki18n("kio-magnet"),"christian_weilbach@web.de");
 
 	about.addCredit(ki18n("Mladen Babic"),	ki18n("Application icon and a couple of others"),"bmladen@EUnet.yu");
 	about.addCredit(ki18n("Adam Treat"), KLocalizedString(), "treat@kde.org" );
@@ -131,13 +138,15 @@ int main(int argc, char **argv)
 	about.addCredit(ki18n("Rickard Närström"),ki18n("A couple of bugfixes"),"rickard.narstrom@gmail.com");
 	about.addCredit(ki18n("caruccio"),ki18n("Patch to load torrents silently from the command line"),"mateus@caruccio.com");
 	about.addCredit(ki18n("Lee Olson"),ki18n("New set of icons"),"leetolson@gmail.com");
-	about.addCredit(ki18n("Aaron J. Seigo"),ki18n("Drag and drop support for plasma applet"),"aseigo@kde.org");
+	about.addCredit(ki18n("Aaron J. Seigo"),ki18n("Drag and drop support for Plasma applet"),"aseigo@kde.org");
 	about.addCredit(ki18n("Ian Higginson"),ki18n("Patch to cleanup the plugin list"),"xeriouxi@fastmail.fm");
-	about.addCredit(ki18n("Amichai Rothman"),ki18n("Patch to make the plasma applet a popup applet"),"amichai@amichais.net");
+	about.addCredit(ki18n("Amichai Rothman"),ki18n("Patch to make the Plasma applet a popup applet"),"amichai@amichais.net");
 	about.addCredit(ki18n("Leo Trubach"),ki18n("Patch to add support for IP ranges in IP filter dialog"),"leotrubach@gmail.com");
 	about.addCredit(ki18n("Andrei Barbu"),ki18n("Feature which adds the date a torrent was added"),"andrei@0xab.com");
 	KCmdLineArgs::init(argc, argv, &about);
 	about.addCredit(ki18n("Jonas Lundqvist"),ki18n("Feature to disable authentication in the webinterface"),"jonas@gannon.se"); 
+	about.addCredit(ki18n("Jaroslaw Swierczynski"),ki18n("Exclusion patterns in the syndication plugin"),"swiergot@gmail.com");
+	about.addCredit(ki18n("Alexey Shildyakov "),ki18n("Patch to rename single file torrents to the file inside"),"ashl1future@gmail.com");
 
 	KCmdLineOptions options;
 	options.add("+[Url]", ki18n("Document to open"));
@@ -158,14 +167,6 @@ int main(int argc, char **argv)
 		fprintf(stderr, "ktorrent is already running !\n");
 		return 0;
 
-	}
-#endif
-
-#ifdef Q_WS_WIN
-	if (!bt::InitWindowsSocketsAPI())
-	{
-		kError()<< "Couldn't load winsock dll";
-		return 0;
 	}
 #endif
 

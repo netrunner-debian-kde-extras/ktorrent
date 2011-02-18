@@ -77,7 +77,11 @@ namespace kt
 			{
 				((KIO::Job*)j)->ui()->showErrorMessage();
 			}
-			
+			else
+			{
+				QString msg = i18n("Automatic update of IP filter failed: %1", j->errorString());
+				notification(msg);
+			}
 			setError(unzip ? UNZIP_FAILED : MOVE_FAILED);
 			emitResult();
 		}
@@ -94,6 +98,11 @@ namespace kt
 			if (mode == Verbose)
 			{
 				((KIO::Job*)j)->ui()->showErrorMessage();
+			}
+			else
+			{
+				QString msg = i18n("Automatic update of IP filter failed: %1", j->errorString());
+				notification(msg);
 			}
 			
 			setError(DOWNLOAD_FAILED); 
@@ -133,7 +142,11 @@ namespace kt
 			{
 				((KIO::Job*)j)->ui()->showErrorMessage();
 			}
-			
+			else
+			{
+				QString msg = i18n("Automatic update of IP filter failed: %1", j->errorString());
+				notification(msg);
+			}
 			setError(MOVE_FAILED);
 			emitResult();
 			return;
@@ -147,6 +160,11 @@ namespace kt
 			if (mode == Verbose)
 			{
 				KMessageBox::error(0,i18n("Cannot open zip file %1.",zipfile));
+			}
+			else
+			{
+				QString msg = i18n("Automatic update of IP filter failed: cannot open zip file %1", zipfile);
+				notification(msg);
 			}
 			
 			setError(UNZIP_FAILED);
@@ -170,12 +188,24 @@ namespace kt
 			unzip = true;
 			active_job->start();
 		}
+		else if (zip->directory()->entries().contains("ipfilter.dat"))
+		{
+			active_job = new bt::ExtractFileJob(zip,"ipfilter.dat",destination);
+			connect(active_job,SIGNAL(result(KJob*)),this,SLOT(convert(KJob*)));
+			unzip = true;
+			active_job->start();
+		}
 		else
 		{
 			Out(SYS_IPF|LOG_NOTICE) << "IP filter update failed: no blocklist found in zipfile " << zipfile << endl;
 			if (mode == Verbose)
 			{
 				KMessageBox::error(0,i18n("Cannot find blocklist in zip file %1.",zipfile));
+			}
+			else
+			{
+				QString msg = i18n("Automatic update of IP filter failed: cannot find blocklist in zip file %1", zipfile);
+				notification(msg);
 			}
 			
 			setError(UNZIP_FAILED);
@@ -201,7 +231,11 @@ namespace kt
 			{
 				((KIO::Job*)j)->ui()->showErrorMessage();
 			}
-			
+			else
+			{
+				QString msg = i18n("Automatic update of IP filter failed: %1", j->errorString());
+				notification(msg);
+			}
 			setError(BACKUP_FAILED);
 			emitResult();
 		}
@@ -249,17 +283,6 @@ namespace kt
 	{
 		if (bt::Exists(kt::DataDir() + "level1.dat"))
 		{
-			if (mode == Verbose) 
-			{
-				QString msg = i18n("Filter file (level1.dat) already exists, do you want to convert it again?");
-				if (KMessageBox::questionYesNo(0,msg,i18n("File Exists")) == KMessageBox::No)
-				{
-					setError(CANCELED);
-					emitResult();
-					return;
-				}
-			}
-			
 			// make backup of data file, if stuff fails we can always go back
 			QString dat_file = kt::DataDir() + "level1.dat";
 			QString tmp_file = kt::DataDir() + "level1.dat.tmp";

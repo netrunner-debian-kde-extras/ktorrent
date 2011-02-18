@@ -8,8 +8,11 @@ set(ktmediaplayerplugin_SRC
 	mediaplayerplugin.cpp 
 	mediaview.cpp 
 	mediamodel.cpp 
+	mediafile.cpp 
+	mediafilestream.cpp 
 	mediaplayer.cpp 
 	videowidget.cpp
+	videochunkbar.cpp
 )
 
 set(screensaver_xml ${KTORRENT_DBUS_XML_DIR}/org.freedesktop.ScreenSaver.xml)

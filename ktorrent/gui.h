@@ -23,9 +23,9 @@
 
 #include <QTimer>
 #include <QStackedWidget>
-#include <KXmlGuiWindow>
 #include <util/constants.h>
 #include <interfaces/guiinterface.h>
+#include <kparts/mainwindow.h>
 
 class KUrl;
 class KAction;
@@ -43,7 +43,7 @@ namespace kt
 	class CentralWidget;
 	
 
-	class GUI : public KXmlGuiWindow,public GUIInterface
+	class GUI : public KParts::MainWindow,public GUIInterface
 	{
 		Q_OBJECT
 	public:
@@ -58,8 +58,6 @@ namespace kt
 		virtual void removePrefPage(PrefPageInterface* page);
 		virtual void mergePluginGui(Plugin* p);
 		virtual void removePluginGui(Plugin* p);
-		virtual void dataScanStarted(ScanListener* listener);
-		virtual void dataScanClosed(ScanListener* listener);
 		virtual bool selectFiles(bt::TorrentInterface* tc,bool* start_torrent,const QString & group_hint,const QString & location_hint,bool* skip_check);
 		virtual void errorMsg(const QString & err);
 		virtual void errorMsg(KIO::Job* j);
@@ -67,7 +65,6 @@ namespace kt
 		virtual StatusBarInterface* getStatusBar();
 		virtual void addActivity(Activity* act);
 		virtual void removeActivity(Activity* act);
-		virtual void setCurrentActivity(Activity* act);
 		virtual TorrentActivityInterface* getTorrentActivity(); 
 		
 		/**
@@ -84,12 +81,6 @@ namespace kt
 		void loadSilently(const KUrl & url);
 		
 	public slots:
-		/**
-		 * The suspended state has changed
-		 * @param suspended 
-		 */
-		void onSuspendedStateChanged(bool suspended);
-		
 		/// Update all actions
 		void updateActions();
 		
@@ -98,14 +89,14 @@ namespace kt
 		 * @param on Set on
 		 */
 		void setPasteDisabled(bool on);
+		
+		/// Set the current activity
+		virtual void setCurrentActivity(Activity* act);
 
 	private slots:
 		void createTorrent();
 		void openTorrent();
 		void openTorrentSilently();
-		void suspendQueue(bool suspend);
-		void startAllTorrents();
-		void stopAllTorrents();
 		void pasteURL();
 		void paste();
 		void showPrefDialog();
@@ -121,6 +112,7 @@ namespace kt
 		void applySettings();
 		void showOrHide();
 		void configureNotifications();
+		void activePartChanged(KParts::Part* p);
 		
 	private:
 		void setupActions();
@@ -139,20 +131,18 @@ namespace kt
 		TorrentActivity* torrent_activity;
 		CentralWidget* central;
 		PrefDialog* pref_dlg;
+		KParts::PartManager* part_manager;
 		
 		KToggleAction* show_status_bar_action;
 		KToggleAction* show_menu_bar_action;
 		KAction* open_silently_action;
-		KAction* start_all_action;
-		KAction* stop_all_action;
+		
 		KAction* paste_url_action;
-		KToggleAction* queue_suspend_action;
 		KAction* ipfilter_action;
 		KAction* import_action;
 		KAction* import_kde3_torrents_action;
 		KAction* show_kt_action;
 		KAction* paste_action;
-		KAction* show_group_view_action;
 	};
 }
 

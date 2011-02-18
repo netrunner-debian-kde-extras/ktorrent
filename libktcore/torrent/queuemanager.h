@@ -22,9 +22,9 @@
 #define KTQUEUEMANAGER_H
 
 #include <set>
-#include <qobject.h>
-#include <qlinkedlist.h>
+#include <QObject>
 #include <solid/networking.h>
+#include <KSharedConfig>
 #include <interfaces/torrentinterface.h>
 #include <interfaces/queuemanagerinterface.h>
 #include <ktcore_export.h>
@@ -69,6 +69,18 @@ namespace kt
 		void append(bt::TorrentInterface* tc);
 		void remove(bt::TorrentInterface* tc);
 		void clear();
+		
+		/**
+			Save the state of the QueueManager
+			@param cfg The config
+		*/
+		void saveState(KSharedConfigPtr cfg);
+		
+		/**
+			Load the state of the QueueManager
+			@param cfg The config
+		*/
+		void loadState(KSharedConfigPtr cfg);
 		
 		/**
 		 * Check if we need to decrease the priority of stalled torrents
@@ -213,6 +225,14 @@ namespace kt
 		 */
 		void reindexQueue();
 		
+		/**
+		 * Check if a torrent has file conflicts with other torrents.
+		 * If conflicting are found, a list of names of the conflicting torrents is filled in.
+		 * @param tc The torrent 
+		 * @param conflicting List of conflicting torrents
+		 */
+		bool checkFileConflicts(bt::TorrentInterface* tc, QStringList & conflicting) const;
+		
 	public slots:
 		/**
 		 * Places all torrents from downloads in the right order in queue.
@@ -235,8 +255,11 @@ namespace kt
 		*/
 		void lowDiskSpace(bt::TorrentInterface* tc, bool stopped);
 		
+		/// Emitted before the queue is reordered
+		void orderingQueue();
+		
 		/**
-		* Emitted when the QM reorders it's queue
+		* Emitted when the QM has reordered it's queue
 		*/
 		void queueOrdered();
 		

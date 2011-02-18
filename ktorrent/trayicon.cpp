@@ -39,6 +39,7 @@
 #include <kactioncollection.h>
 
 
+
 using namespace bt;
 
 namespace kt
@@ -136,10 +137,10 @@ namespace kt
 			return;
 		
 		QString tip = i18n("<table>"
-				"<tr><td>Download&nbsp;speed:</td><td><font color='#1c9a1c'>%1</font></td></tr>"
-				"<tr><td>Upload&nbsp;speed:</td><td><font color='#990000'>%2</font></td></tr>"
-				"<tr><td>Received:</td><td><font color='#1c9a1c'>%3</font></td></tr>"
-				"<tr><td>Transmitted:</td><td><font color='#990000'>%4</font></td></tr>"
+				"<tr><td>Download&nbsp;speed:</td><td><b>%1</b></td></tr>"
+				"<tr><td>Upload&nbsp;speed:</td><td><b>%2</b></td></tr>"
+				"<tr><td>Received:</td><td><b>%3</b></td></tr>"
+				"<tr><td>Transmitted:</td><td><b>%4</b></td></tr>"
 				"</table>",
 				BytesPerSecToString((double)stats.download_speed),
 				BytesPerSecToString((double)stats.upload_speed),
@@ -276,7 +277,7 @@ namespace kt
 		if (!Settings::showPopups())
 			return;
 		
-		QString msg = i18n("Cannot start <b>%1</b> : <br>",tc->getDisplayName());
+		QString msg = i18n("Cannot start <b>%1</b>: <br>",tc->getDisplayName());
 		switch (reason)
 		{
 		case bt::QM_LIMITS_REACHED:
@@ -342,7 +343,7 @@ namespace kt
 
 	void SetMaxRate::makeMenu()
 	{
-		int rate=(type==UPLOAD) ? Settings::maxUploadRate() : Settings::maxDownloadRate();
+		int rate = (type==UPLOAD) ? net::SocketMonitor::getUploadCap() / 1024 : net::SocketMonitor::getDownloadCap() / 1024;
 		int maxBandwidth=(rate > 0) ? rate : (type==UPLOAD) ? 0 : 20 ;
 		int delta = 0;
 		int maxBandwidthRounded;

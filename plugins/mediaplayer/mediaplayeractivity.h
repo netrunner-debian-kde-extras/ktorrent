@@ -26,6 +26,7 @@
 #include <KTabWidget>
 #include <interfaces/activity.h>
 #include <QToolButton>
+#include "mediafile.h"
 
 class KAction;
 class KActionCollection;
@@ -46,26 +47,26 @@ namespace kt
 	{
 		Q_OBJECT
 	public:
-		MediaPlayerActivity(CoreInterface* core,QWidget* parent);
+		MediaPlayerActivity(CoreInterface* core,KActionCollection* ac,QWidget* parent);
 		virtual ~MediaPlayerActivity();
 		
-		void setupActions(KActionCollection* ac);
+		void setupActions();
 		void saveState(KSharedConfigPtr cfg);
 		void loadState(KSharedConfigPtr cfg);
 		
 	public slots:
 		void play();
-		void play(const QString & file);
+		void play(const MediaFileRef & file);
 		void pause();
 		void stop();
 		void prev();
 		void next();
 		void enableActions(unsigned int flags);
 		void onSelectionChanged(const QModelIndex & idx);
-		void openVideo();
+		void openVideo(bool tab_only);
 		void closeVideo();
 		void setVideoFullScreen(bool on);
-		void onDoubleClicked(const QModelIndex & idx);
+		void onDoubleClicked(const MediaFileRef & file);
 		void randomPlayActivated();
 		void aboutToFinishPlaying();
 		void showVideo(bool on);
@@ -93,6 +94,8 @@ namespace kt
 		KAction* show_video_action;
 		KAction* clear_action;
 		KAction* add_media_action;
+		KAction* status_action;
+		KActionCollection* ac;
 	};
 
 }

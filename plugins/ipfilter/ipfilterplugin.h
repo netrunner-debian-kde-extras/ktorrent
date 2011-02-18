@@ -65,6 +65,7 @@ namespace kt
 		
 	public slots:
 		void checkAutoUpdate();
+		void notification(const QString & msg);
 		
 	private:
 		IPBlockingPrefPage* pref;

@@ -67,7 +67,6 @@ namespace kt
 	void QueueManager::append(bt::TorrentInterface* tc)
 	{
 		downloads.append(tc);
-		downloads.sort();
 		connect(tc, SIGNAL(diskSpaceLow(bt::TorrentInterface*, bool)), this, SLOT(onLowDiskSpace(bt::TorrentInterface*, bool)));	
 		connect(tc, SIGNAL(torrentStopped(bt::TorrentInterface*)), this, SLOT(torrentStopped(bt::TorrentInterface*)));
 		connect(tc,SIGNAL(updateQueue()),this,SLOT(orderQueue()));
@@ -84,7 +83,6 @@ namespace kt
 	void QueueManager::clear()
 	{
 		exiting = true;
-		Uint32 nd = downloads.count();
 		suspended_torrents.clear();
 		qDeleteAll(downloads);
 		downloads.clear();
@@ -240,7 +238,7 @@ namespace kt
 			
 			if (tmp.count() > 0)
 			{
-				if (KMessageBox::questionYesNoList(0,i18n("Not enough disk space for the following torrents. Do you want to start them anyway ?"),names) == KMessageBox::No)
+				if (KMessageBox::questionYesNoList(0,i18n("Not enough disk space for the following torrents. Do you want to start them anyway?"),names) == KMessageBox::No)
 				{
 					foreach (bt::TorrentInterface* tc,tmp)
 						todo.removeAll(tc);
@@ -279,7 +277,7 @@ namespace kt
 			
 		if (tmp.count() > 0)
 		{
-			if (KMessageBox::questionYesNoList(0,i18n("The following torrents have reached their maximum seed time. Do you want to start them anyway ?"),names) == KMessageBox::No)
+			if (KMessageBox::questionYesNoList(0,i18n("The following torrents have reached their maximum seed time. Do you want to start them anyway?"),names) == KMessageBox::No)
 			{
 				foreach (bt::TorrentInterface* tc,tmp)
 					todo.removeAll(tc);
@@ -308,7 +306,7 @@ namespace kt
 			
 		if (tmp.count() > 0)
 		{
-			if (KMessageBox::questionYesNoList(0,i18n("The following torrents have reached their maximum share ratio. Do you want to start them anyway ?"),names) == KMessageBox::No)
+			if (KMessageBox::questionYesNoList(0,i18n("The following torrents have reached their maximum share ratio. Do you want to start them anyway?"),names) == KMessageBox::No)
 			{
 				foreach (bt::TorrentInterface* tc,tmp)
 					todo.removeAll(tc);
@@ -396,7 +394,7 @@ namespace kt
 	
 	void QueueManager::startAutoStartTorrents()
 	{
-		if (enabled()) 
+		if (enabled() || suspended_state) 
 			return;
 		
 		// first get the list of torrents which need to be started
@@ -548,6 +546,8 @@ namespace kt
 		if (ordering || !downloads.count() || exiting)
 			return;
 		
+		emit orderingQueue();
+		
 		downloads.sort(); // sort downloads, even when suspended so that the QM widget is updated
 		if (Settings::manuallyControlTorrents() || suspended_state)
 		{
@@ -563,11 +563,11 @@ namespace kt
 		foreach (TorrentInterface* tc,downloads)
 		{
 			const TorrentStats & s = tc->getStats();
-			if (tc->isAllowedToStart() && !s.stopped_by_error && !tc->getJobQueue()->runningJobs())
+			if (s.running || (tc->isAllowedToStart() && !s.stopped_by_error && !tc->getJobQueue()->runningJobs()))
 			{
 				if (s.completed)
 				{
-					if (!tc->overMaxRatio() && !tc->overMaxSeedTime())
+					if (s.running || (!tc->overMaxRatio() && !tc->overMaxSeedTime()))
 						seed_queue.append(tc);
 				}
 				else
@@ -734,7 +734,7 @@ namespace kt
 		{
 			const TorrentStats & s = tc->getStats();
 			QString msg =
-					i18n("Error starting torrent %1 : %2",
+					i18n("Error starting torrent %1: %2",
 					s.torrent_name,err.toString());
 			KMessageBox::error(0,msg,i18n("Error"));
 		}
@@ -750,7 +750,7 @@ namespace kt
 		{
 			const TorrentStats & s = tc->getStats();
 			QString msg =
-					i18n("Error stopping torrent %1 : %2",
+					i18n("Error stopping torrent %1: %2",
 					s.torrent_name,err.toString());
 			KMessageBox::error(0,msg,i18n("Error"));
 		}
@@ -849,7 +849,78 @@ namespace kt
 			tc->setPriority(prio--);
 		}
 	}
+	
+	void QueueManager::loadState(KSharedConfigPtr cfg)
+	{
+		KConfigGroup g = cfg->group("QueueManager");
+		suspended_state = g.readEntry("suspended",false);
+		
+		if (suspended_state)
+		{
+			QStringList info_hash_list = g.readEntry("suspended_torrents",QStringList());
+			foreach (bt::TorrentInterface* t,downloads)
+			{
+				if (info_hash_list.contains(t->getInfoHash().toString()))
+					suspended_torrents.insert(t);
+			}
+		}
+	}
+	
+	void QueueManager::saveState(KSharedConfigPtr cfg)
+	{
+		KConfigGroup g = cfg->group("QueueManager");
+		g.writeEntry("suspended",suspended_state);
+		
+		if (suspended_state)
+		{
+			QStringList info_hash_list;
+			foreach (bt::TorrentInterface* t,suspended_torrents)
+			{
+				info_hash_list << t->getInfoHash().toString();
+			}
+			g.writeEntry("suspended_torrents",info_hash_list);
+		}
+	}
 
+	bool QueueManager::checkFileConflicts(TorrentInterface* tc, QStringList & conflicting) const
+	{
+		conflicting.clear();
+		
+		// First get a set off all files of tc
+		QSet<QString> files;
+		if (tc->getStats().multi_file_torrent)
+		{
+			for (bt::Uint32 i = 0;i < tc->getNumFiles();i++)
+				files.insert(tc->getTorrentFile(i).getPathOnDisk());
+		}
+		else
+			files.insert(tc->getStats().output_path);
+		
+		foreach (bt::TorrentInterface* t, downloads)
+		{
+			if (t == tc)
+				continue;
+			
+			if (t->getStats().multi_file_torrent)
+			{
+				for (bt::Uint32 i = 0;i < t->getNumFiles();i++)
+				{
+					if (files.contains(t->getTorrentFile(i).getPathOnDisk()))
+					{
+						conflicting.append(t->getDisplayName());
+						break;
+					}
+				}
+			}
+			else
+			{
+				if (files.contains(t->getStats().output_path))
+					conflicting.append(t->getDisplayName());
+			}
+		}
+		
+		return !conflicting.isEmpty();
+	}
 	
 	/////////////////////////////////////////////////////////////////////////////////////////////
 

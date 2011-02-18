@@ -45,7 +45,6 @@
 #include "dialogs/addpeersdlg.h"
 #include "viewselectionmodel.h"
 #include "viewdelegate.h"
-#include "scanlistener.h"
 #include "propertiesextender.h"
 
 using namespace bt;
@@ -137,29 +136,43 @@ namespace kt
 	{
 		if (!uniformRowHeights() && !delegate->hasExtenders())
 			setUniformRowHeights(true);
-		model->update(delegate);
+		
+		if (!model->update(delegate))
+		{
+			// model wasn't resorted, so update individual items
+			const QModelIndexList & to_update = model->updateList();
+			foreach (const QModelIndex & idx, to_update)
+				QAbstractItemView::update(idx);
+		}
 	}
+	
+	struct RunningCounter
+	{
+	public:
+		Uint32 torrents;
+		Uint32 running;
+		
+		RunningCounter() : torrents(0),running(0)
+		{}
+		
+		bool operator()(bt::TorrentInterface* tc)
+		{
+			torrents++;
+			if (tc->getStats().running)
+				running++;
+			return true;
+		}
+	};
 
 	bool View::needToUpdateCaption()
 	{
-		Uint32 torrents = 0;
-		Uint32 running = 0;
-		QList<bt::TorrentInterface*> all;
-		model->allTorrents(all);
-		foreach (bt::TorrentInterface* ti,all)
-		{
-			if (!group || (group && group->isMember(ti)))
-			{
-				torrents++;
-				if (ti->getStats().running)
-					running++;
-			}
-		}
+		RunningCounter rc;
+		model->visit(rc);
 
-		if (num_running != running || num_torrents != torrents)
+		if (num_running != rc.running || num_torrents != rc.torrents)
 		{
-			num_running = running;
-			num_torrents = torrents;
+			num_running = rc.running;
+			num_torrents = rc.torrents;
 			return true;
 		}
 		
@@ -345,7 +358,7 @@ namespace kt
 		}
 	}
 
-	void View::moveDataWhenCompleted()
+	void View::showProperties()
 	{
 		QList<bt::TorrentInterface*> sel;
 		getSelection(sel);
@@ -354,7 +367,7 @@ namespace kt
 
 		foreach(bt::TorrentInterface *tc,sel)
 		{
-			delegate->extend(tc,new PropertiesExtender(tc,0));
+			extend(tc,new PropertiesExtender(tc,0));
 		}
 	}
 
@@ -371,34 +384,6 @@ namespace kt
 		update();
 		num_running++; // set these wrong so that the caption is updated on the next update
 		num_torrents++;
-	}
-
-	void View::toggleDHT()
-	{
-		QList<bt::TorrentInterface*> sel;
-		getSelection(sel);
-		foreach(bt::TorrentInterface* tc,sel)
-		{
-			if (tc)
-			{
-				bool on = tc->isFeatureEnabled(bt::DHT_FEATURE);
-				tc->setFeatureEnabled(bt::DHT_FEATURE,!on);
-			}
-		}
-	}
-
-	void View::togglePEX()
-	{
-		QList<bt::TorrentInterface*> sel;
-		getSelection(sel);
-		foreach(bt::TorrentInterface* tc,sel)
-		{
-			if (tc)
-			{
-				bool on = tc->isFeatureEnabled(bt::UT_PEX_FEATURE);
-				tc->setFeatureEnabled(bt::UT_PEX_FEATURE,!on);
-			}
-		}
 	}
 
 	void View::renameTorrent()
@@ -422,30 +407,6 @@ namespace kt
 			core->startUpdateTimer(); // make sure update timer of core is running
 		}
 	}
-
-	void View::dataScanStarted(ScanListener* listener)
-	{
-		Extender* ext = listener->createExtender();
-		if (ext)
-		{
-			ext->hide();
-			delegate->extend(listener->torrent(),ext);
-			data_scan_extenders.insert(listener->torrent(),ext);
-			if (group && !group->isMember(listener->torrent()))
-				delegate->hideExtender(listener->torrent());
-		}
-	}
-	
-	void View::dataScanClosed(ScanListener* listener)
-	{
-		QMap<bt::TorrentInterface*,Extender*>::iterator itr = data_scan_extenders.find(listener->torrent());
-		if (itr != data_scan_extenders.end())
-		{
-			delegate->closeExtender(listener->torrent(),itr.value());
-			data_scan_extenders.erase(itr);
-		}
-	}
-
 
 	void View::showMenu(const QPoint & pos)
 	{
@@ -554,6 +515,15 @@ namespace kt
 				new KRun(KUrl(tc->getDataDir()), 0, 0, true, true);
 		}
 	}
+	
+	void View::extend(TorrentInterface* tc, Extender* widget)
+	{
+		setUniformRowHeights(false);
+		delegate->extend(tc,widget);
+		if (group && !group->isMember(tc))
+			delegate->hideExtender(tc);
+	}
+
 	
 }
 

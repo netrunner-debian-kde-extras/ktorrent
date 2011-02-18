@@ -29,6 +29,7 @@
 
 namespace kt
 {
+	class SearchToolBar;
 	class SearchWidget;
 	class SearchPlugin;
 
@@ -51,26 +52,34 @@ namespace kt
 		void loadState(KSharedConfigPtr cfg);
 		void saveState(KSharedConfigPtr cfg);
 		
+		/// Create a new empty search tab
+		SearchWidget* newTab();
+		
 	public slots:
-		void find();
-		void back();
-		void reload();
-		void search();
-		void copy();
 		void home();
 		void openNewTab(const KUrl & url);
 		void currentTabChanged(int idx);
 		void closeTab();
 		void openTab();
 		void setTabTitle(SearchWidget* sw,const QString & title);
+		void setTabIcon(SearchWidget* sw,const QIcon & icon);
+		void clearSearchHistory();
+		void search();
+		void find();
 		
 	private:
 		SearchWidget* newSearchWidget(const QString & text);
+		void setupActions();
 		
 	private:
 		KTabWidget* tabs;
 		QList<SearchWidget*> searches;
 		SearchPlugin* sp;
+		SearchToolBar* toolbar;
+		
+		KAction* find_action;
+		KAction* search_action;
+		KAction* home_action;
 	};
 }
 

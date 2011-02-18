@@ -53,7 +53,7 @@ namespace kt
 		void removeFeed();
 		void loadingComplete(Syndication::Loader* loader, Syndication::FeedPtr feed, Syndication::ErrorCode status);
 		void activateFeedWidget(Feed* f);
-		void downloadLink(const KUrl & url,const QString & group,const QString & location,bool silently);
+		void downloadLink(const KUrl & url,const QString & group,const QString & location,const QString & move_on_completion,bool silently);
 		void updateTabText(QWidget* w,const QString & text);
 		void showFeed();
 		void addFilter();
@@ -73,7 +73,7 @@ namespace kt
 		SyndicationTab* tab;
 		KTabWidget* tabs;
 		QSplitter* splitter;
-		QMap<Syndication::Loader*,KUrl> downloads;
+		QMap<Syndication::Loader*,QString> downloads;
 		SyndicationPlugin* sp;
 	};
 }

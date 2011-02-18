@@ -26,7 +26,7 @@
 #include <torrent/globals.h>
 #include <interfaces/functions.h>
 #include <settings.h>
-#include <libktupnp/upnpmcastsocket.h>
+#include <upnp/upnpmcastsocket.h>
 #include <QTimer>
 #include <QNetworkInterface>
 #include <util/functions.h>
@@ -43,8 +43,8 @@ using namespace bt;
 
 MagnetTest::MagnetTest(const bt::MagnetLink & mlink, QObject* parent) : QObject(parent),mlink(mlink)
 {
-	upnp = new kt::UPnPMCastSocket();
-	connect(upnp,SIGNAL(discovered(kt::UPnPRouter*)),this,SLOT(routerDiscovered(kt::UPnPRouter*)));
+	upnp = new bt::UPnPMCastSocket();
+	connect(upnp,SIGNAL(discovered(bt::UPnPRouter*)),this,SLOT(routerDiscovered(bt::UPnPRouter*)));
 	
 	mdownloader = new MagnetDownloader(mlink,this);
 	connect(mdownloader,SIGNAL(foundMetaData(bt::MagnetDownloader*,QByteArray)),
@@ -60,7 +60,7 @@ MagnetTest::~MagnetTest()
 }
 
 
-void MagnetTest::routerDiscovered(kt::UPnPRouter* router)
+void MagnetTest::routerDiscovered(bt::UPnPRouter* router)
 {
 	net::Port port;
 	port.number = Settings::dhtPort();
@@ -137,10 +137,21 @@ void MagnetTest::foundMetaData(MagnetDownloader* md, const QByteArray& data)
 	{
 		BEncoder enc(&fptr);
 		enc.beginDict();
-		if (!mlink.tracker().isEmpty())
+		KUrl::List trs = mlink.trackers();
+		if (trs.count())
 		{
 			enc.write("announce");
-			enc.write(mlink.tracker());
+			enc.write(trs.first().prettyUrl());
+			if (trs.count() > 1)
+			{
+				enc.write("announce-list");
+				enc.beginList();
+				foreach (const KUrl & u,trs)
+				{
+					enc.write(u.prettyUrl());
+				}
+				enc.end();
+			}	
 		}
 		enc.write("info");
 		fptr.write(data.data(),data.size());

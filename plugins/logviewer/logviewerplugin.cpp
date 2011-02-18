@@ -89,6 +89,7 @@ namespace kt
 	void LogViewerPlugin::applySettings()
 	{
 		lv->setRichText(LogViewerPluginSettings::useRichText());
+		lv->setMaxBlockCount(LogViewerPluginSettings::maxBlockCount());
 		LogViewerPosition p = (LogViewerPosition)LogViewerPluginSettings::logWidgetPosition();
 		if (pos != p)
 		{
@@ -143,7 +144,11 @@ namespace kt
 		}
 	}
 
-
+	void LogViewerPlugin::guiUpdate()
+	{
+		if (lv)
+			lv->processPending();
+	}
 
 	bool LogViewerPlugin::versionCheck(const QString & version) const
 	{

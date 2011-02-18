@@ -1,3 +1,54 @@
+Changes in 4.1rc1:
+- Make sure that apply button of config dialog is enabled properly when the group changes in the scanfolder settings
+- Add kio-magnet
+- Improve performance of ktorrent in situations where there are many torrents (262571)
+- Fix memory leak on exit (263802)
+- Fix tab bar not matching TabBarWidget state in some circumstances (263068)
+- Fix libktorrent not gettting updated when the download of a magnet link finishes and the FileSelectDlg is shown
+- Update view tab when switching to it, fixes data scan widget showing in the wrong place (259483)
+- Update view captions every GUI update (264215)
+- Use user modified path for file column in chunks view (264814)
+- Fix QM bug causing torrents to get started when it is not needed (262570)
+
+Changes in 4.1beta1:
+- Remove libktupnp it is now part of libktorrent
+- Add support for superseeding (171661)
+- Change from and to fields to always ensure that from is smaller then to in the bandwidth scheduler plugin (225951)
+- Show if a peer is using the µTP protocol or not 
+- Cleanup file dialog filters for torrents and make sure that files named torrent, are also seen by the filter (241259)
+- Ensure that webinterface plugin works properly with bindv6only flag on (238688)
+- Add option to not restore the previous session of the search plugin (233288)
+- Save suspended state on exit and restore on restart (241675)
+- Add support for cookies in syndication plugin (244967)
+- Change GUI to use KParts
+- Add feature to set the move on completion directory in the syndication plugin filters
+- Improve display of errors in the syndication plugin when downloading a feed fails (246421)
+- Make ChunkDownloadView and PeerView use a QSortFilterProxyModel (246835)
+- Add download and move when completed location history buttons to FileSelectDlg (218048)
+- Make file view of FileSelectDlg sortable (248090)
+- Clicking item in day list of AddItemDlg of bwscheduler plugin now toggles it (225953)
+- Add support for emule blocklists (194915)
+- Add option to configure the number of log lines shown in the logviewer (223887)
+- Add default move on completion location to group policy (248092)
+- Prevent torrents from sharing the same files (228220)
+- Add option to open all torrents silently
+- Add exclusion patterns to syndication plugin filters (251141)
+- Show current upload and download limit in trayicon submenus instead of limits from the settings (251953)
+- Show notifications when automatic update of IP filter fails (243458)
+- Add video streaming support (234212)
+- Make ratio configurable at which the share ratio becomes green (254144)
+- Don't show an error message for each duplicate tracker which is added
+- Stop using hardcoded colors in system tray tooltip (255732)
+- Add support for tracking jobs inside the GUI of ktorrent
+- Ask if an existing file must be overwritten when exporting a torrent (256416)
+- Don't reinclude files when changing priority of a directory (252555)
+- Open new search tab on middle click (151429)
+- Search plugin now uses webkit instead of KHTML
+- Add do not ask again option to dialog shown when torrent file is downloaded in the search plugin (210701)
+- Add option to rename single file torrents to the file inside (251799)
+- Make sure that items in history of download locations and completed locations end with a slash (259499)
+- Make search filter in MediaView of mediaplayer plugin case insensitive (259782)
+
 Changes in 4.0.5:
 - Fix crash due to uncaught exception when creating torrent (255020)
 - Modify tracker grouping script to avoid a memory leak in krosspython

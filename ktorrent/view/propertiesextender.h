@@ -23,6 +23,7 @@
 
 #include <QWidget>
 #include <view/viewdelegate.h>
+#include <gui/extender.h>
 #include "ui_propertiesextender.h"
 
 

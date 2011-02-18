@@ -40,6 +40,7 @@
 #include "syndicationtab.h"
 #include "syndicationplugin.h"
 #include "linkdownloader.h"
+#include "feedretriever.h"
 
 namespace kt
 {
@@ -131,17 +132,28 @@ namespace kt
 					QString(),&ok,sp->getGUI()->getMainWindow());
 		if (!ok || url.isEmpty())
 			return;
-					
-		Syndication::Loader *loader = Syndication::Loader::create(this,SLOT(loadingComplete(Syndication::Loader*, Syndication::FeedPtr, Syndication::ErrorCode)));
-		loader->loadFrom(KUrl(url));
-		downloads.insert(loader,KUrl(url));
+		
+		Syndication::Loader* loader = Syndication::Loader::create(this,SLOT(loadingComplete(Syndication::Loader*, Syndication::FeedPtr, Syndication::ErrorCode)));
+		QStringList sl = url.split(":COOKIE:");
+		if (sl.size() == 2)
+		{
+			FeedRetriever* retr = new FeedRetriever();
+			retr->setAuthenticationCookie(sl.last());
+			loader->loadFrom(KUrl(sl.first()),retr);
+			downloads.insert(loader,url);
+		}
+		else
+		{
+			loader->loadFrom(KUrl(url));
+			downloads.insert(loader,url);
+		}
 	}
 
 	void SyndicationActivity::loadingComplete(Syndication::Loader* loader, Syndication::FeedPtr feed, Syndication::ErrorCode status)
 	{
 		if (status != Syndication::Success)
 		{
-			KMessageBox::error(tab,i18n("Failed to load feed %1.",downloads[loader].prettyUrl()));
+			KMessageBox::error(tab,i18n("Failed to load feed %1.",downloads[loader]));
 			downloads.remove(loader);
 			return;
 		}
@@ -150,14 +162,14 @@ namespace kt
 		{
 			QString ddir = kt::DataDir() + "syndication/";
 			Feed* f = new Feed(downloads[loader],feed,Feed::newFeedDir(ddir));
-			connect(f,SIGNAL(downloadLink(const KUrl&, const QString&, const QString&, bool)),
-					this,SLOT(downloadLink(const KUrl&, const QString&, const QString&, bool)));
+			connect(f,SIGNAL(downloadLink(const KUrl&, const QString&, const QString&, const QString&, bool)),
+					this,SLOT(downloadLink(const KUrl&, const QString&, const QString&, const QString&, bool)));
 			f->save();
 			feed_list->addFeed(f);
 		}
 		catch (bt::Error & err)
 		{
-			KMessageBox::error(tab,i18n("Failed to create directory for feed %1 : %2",downloads[loader].prettyUrl(),err.toString()));
+			KMessageBox::error(tab,i18n("Failed to create directory for feed %1: %2",downloads[loader],err.toString()));
 		}
 		downloads.remove(loader);
 	}
@@ -233,9 +245,13 @@ namespace kt
 		}
 	}
 	
-	void SyndicationActivity::downloadLink(const KUrl & url,const QString & group,const QString & location,bool silently)
+	void SyndicationActivity::downloadLink(const KUrl& url, 
+										   const QString& group, 
+										   const QString& location, 
+										   const QString& move_on_completion, 
+										   bool silently)
 	{
-		LinkDownloader* dlr = new LinkDownloader(url,sp->getCore(),!silently,group,location);
+		LinkDownloader* dlr = new LinkDownloader(url,sp->getCore(),!silently,group,location,move_on_completion);
 		dlr->start();
 	}
 	
