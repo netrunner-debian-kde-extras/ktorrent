@@ -29,6 +29,9 @@
 
 namespace kt
 {
+
+	class DBusTorrentFileStream;
+
 	
 
 	/**
@@ -122,6 +125,8 @@ namespace kt
 		Q_SCRIPTABLE double maxSeedTime() const;
 		Q_SCRIPTABLE double seedTime() const;
 		
+		Q_SCRIPTABLE bool createStream(uint file_index);
+		Q_SCRIPTABLE bool removeStream(uint file_index);
 		
 	Q_SIGNALS:
 		Q_SCRIPTABLE void finished(QObject* tor);
@@ -139,6 +144,7 @@ namespace kt
 		
 	private:
 		bt::TorrentInterface* ti;
+		DBusTorrentFileStream* stream;
 	};
 
 }

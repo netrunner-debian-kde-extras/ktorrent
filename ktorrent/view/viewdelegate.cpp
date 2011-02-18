@@ -27,17 +27,12 @@
 #include <KLocale>
 #include <KApplication>
 #include <QVBoxLayout>
+#include <gui/extender.h>
 
 
 namespace kt
 {
-	Extender::Extender(bt::TorrentInterface* tc, QWidget* parent): QWidget(parent),tc(tc)
-	{
-	}
-
-	Extender::~Extender()
-	{
-	}
+	
 	
 	//////////////////////////
 	
@@ -93,10 +88,6 @@ namespace kt
 	
 	void ViewDelegate::extend(bt::TorrentInterface* tc, Extender* widget)
 	{
-		View* view = qobject_cast<View*>(parent());
-		if (view)
-			view->setUniformRowHeights(false);
-
 		ExtenderBox* ext = 0;
 		ExtItr itr = extenders.find(tc);
 		if (itr == extenders.end())
@@ -131,11 +122,6 @@ namespace kt
 			extenders.erase(itr);
 		}
 		
-		
-		View* view = qobject_cast<View*>(parent());
-		if (view && extenders.isEmpty())
-			view->setUniformRowHeights(true);
-						 
 		scheduleUpdateViewLayout();
 	}
 	
@@ -154,10 +140,6 @@ namespace kt
 			}
 		}
 		
-		View* view = qobject_cast<View*>(parent());
-		if (view && extenders.isEmpty())
-			view->setUniformRowHeights(true);
-		
 		scheduleUpdateViewLayout();
 	}
 	
@@ -173,6 +155,7 @@ namespace kt
 	
 	void ViewDelegate::resized(Extender* ext)
 	{
+		Q_UNUSED(ext);
 		scheduleUpdateViewLayout();
 	}
 

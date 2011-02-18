@@ -22,8 +22,10 @@
 #define FILESELECTDLG_H
 
 #include <KDialog>
-#include "ui_fileselectdlg.h"
+#include <QSet>
 #include <QSortFilterProxyModel>
+#include "ui_fileselectdlg.h"
+
 
 namespace bt
 {
@@ -33,6 +35,7 @@ namespace bt
 namespace kt
 {
 	class GroupManager;
+	class QueueManager;
 	class TorrentFileModel;
 	class Group;
 
@@ -45,17 +48,8 @@ namespace kt
 	{
 		Q_OBJECT
 
-		bt::TorrentInterface* tc;
-		TorrentFileModel* model;
-		kt::GroupManager* gman;
-		bool* start;
-		bool* skip_check;
-		QList<int> encodings;
-		kt::Group* initial_group;
-		bool show_file_tree;
-		QSortFilterProxyModel* filter_model;
 	public:
-		FileSelectDlg(kt::GroupManager* gman,const QString & group_hint,QWidget* parent);
+		FileSelectDlg(kt::QueueManager* qman,kt::GroupManager* gman,const QString & group_hint,QWidget* parent);
 		virtual ~FileSelectDlg();
 		
 		int execute(bt::TorrentInterface* tc, bool* start,bool* skip_check,const QString & location_hint);
@@ -85,10 +79,29 @@ namespace kt
 		void setFilter(const QString & filter);
 		void updateExistingFiles();
 		void moveCompletedToggled(bool on);
+		QMenu* createHistoryMenu(const QSet<QString> & urls,const char* slot);
+		void clearDownloadLocationHistory();
+		void clearMoveOnCompletionLocationHistory();
+		void downloadLocationHistoryTriggered(QAction* act);
+		void moveOnCompletionLocationHistoryTriggered(QAction* act);
 
 	private:
 		void populateFields(const QString & location_hint);
 		void loadGroups();
+		
+	private:
+		bt::TorrentInterface* tc;
+		TorrentFileModel* model;
+		kt::QueueManager* qman;
+		kt::GroupManager* gman;
+		bool* start;
+		bool* skip_check;
+		QList<int> encodings;
+		kt::Group* initial_group;
+		bool show_file_tree;
+		QSortFilterProxyModel* filter_model;
+		QSet<QString> download_location_history;
+		QSet<QString> move_on_completion_location_history;
 	};
 }
 

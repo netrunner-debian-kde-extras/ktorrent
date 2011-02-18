@@ -24,6 +24,9 @@ set(libktorrent_SRC
 	torrent/torrentfilelistmodel.cpp
 	torrent/chunkbar.cpp 
 	torrent/chunkbarrenderer.cpp
+	torrent/jobtracker.cpp
+	torrent/jobprogresswidget.cpp 
+	torrent/basicjobprogresswidget.cpp 
 	
 	groups/group.cpp
 	groups/torrentgroup.cpp
@@ -36,13 +39,11 @@ set(libktorrent_SRC
 	dbus/dbustorrent.cpp
 	dbus/dbusgroup.cpp
 	dbus/dbussettings.cpp
+	dbus/dbustorrentfilestream.cpp
 	
 	gui/centralwidget.cpp
-	gui/activitybar.cpp
-	gui/activitylistmodel.cpp
-	gui/activitylistwidget.cpp
-	gui/activitylistdelegate.cpp
 	gui/tabbarwidget.cpp
+	gui/extender.cpp
 	
 	plugin/pluginmanager.cpp
 	plugin/pluginactivity.cpp
@@ -50,13 +51,13 @@ set(libktorrent_SRC
 	ktorrent.kcfg
 )
 
-# set(libktorrent_UI pluginmanagerwidget.ui )
+set(libktorrent_UI torrent/basicjobprogresswidget.ui )
 
 kde4_add_ui_files(libktorrent_SRC ${libktorrent_UI})
 kde4_add_kcfg_files(libktorrent_SRC settings.kcfgc)
 kde4_add_library(ktcore SHARED ${libktorrent_SRC})
 
 target_link_libraries(ktcore ${QT_QT3SUPPORT_LIBRARY} ${KDE4_KPARTS_LIBS} ${KDE4_KUTILS_LIBS} ${LIBKTORRENT_LIBRARIES} ${KDE4_SOLID_LIBS} ${GMP_LIBRARIES})
-set_target_properties(ktcore PROPERTIES VERSION 11.0.4 SOVERSION 11 )
+set_target_properties(ktcore PROPERTIES VERSION 12.0.0 SOVERSION 12 )
 install(TARGETS ktcore  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 

@@ -45,6 +45,7 @@
 #include <util/functions.h>
 #include <util/waitjob.h>
 #include <bcodec/bencoder.h>
+#include <bcodec/bnode.h>
 #include <plugin/pluginmanager.h>
 #include <groups/groupmanager.h>
 #include <groups/group.h>
@@ -58,7 +59,6 @@
 #include "dialogs/missingfilesdlg.h"
 #include "gui.h"
 #include "dialogs/torrentmigratordlg.h"
-#include "scanlistener.h"
 #include "tools/magnetmodel.h"
 
 
@@ -68,7 +68,12 @@ namespace kt
 {
 	const Uint32 CORE_UPDATE_INTERVAL = 250;
 
-	Core::Core(kt::GUI* gui) : gui(gui),keep_seeding(true),sleep_suppression_cookie(-1),exiting(false)
+	Core::Core(kt::GUI* gui) 
+		: gui(gui),
+		keep_seeding(true),
+		sleep_suppression_cookie(-1),
+		exiting(false),
+		reordering_queue(false)
 	{
 		UpdateCurrentTime();
 		qman = new QueueManager();
@@ -78,6 +83,8 @@ namespace kt
 				this, SLOT(enqueueTorrentOverMaxRatio( bt::TorrentInterface* )));
 		connect(qman, SIGNAL(lowDiskSpace(bt::TorrentInterface*, bool)),
 				this, SLOT(onLowDiskSpace(bt::TorrentInterface*, bool)));
+		connect(qman, SIGNAL(orderingQueue()), this, SLOT(beforeQueueReorder()));
+		connect(qman, SIGNAL(queueOrdered()), this, SLOT(afterQueueReorder()));
 		
 		data_dir = Settings::tempDir().toLocalFile();
 		bool dd_not_exist = !bt::Exists(data_dir);
@@ -118,10 +125,10 @@ namespace kt
 		applySettings();
 		gman->loadGroups();
 		
-		connect(qman,SIGNAL(queueOrdered()),this,SLOT(startUpdateTimer()));
-		connect(qman,SIGNAL(suspendStateChanged(bool)),gui,SLOT(onSuspendedStateChanged(bool)));
+		qRegisterMetaType<bt::MagnetLink>("bt::MagnetLink");
 		connect(magnet,SIGNAL(metadataFound(bt::MagnetLink,QByteArray,bool)),
-				this,SLOT(onMetadataDownloaded(bt::MagnetLink,QByteArray,bool)));
+				this,SLOT(onMetadataDownloaded(bt::MagnetLink,QByteArray,bool)),
+				Qt::QueuedConnection);
 		
 		if (!Settings::oldTorrentsImported()) // check for old torrents if this hasn't happened yet
 			QTimer::singleShot(1000,this,SLOT(checkForKDE3Torrents()));
@@ -251,8 +258,19 @@ namespace kt
 
 		if (Settings::useCompletedDir() && silently)
 			tc->setMoveWhenCompletedDir(Settings::completedDir());
+		
+		if (qman->alreadyLoaded(tc->getInfoHash()))
+		{
+			Out(SYS_GEN|LOG_IMPORTANT) << "Torrent " << tc->getDisplayName() << " already loaded" << endl;
+			// Cleanup tor dir
+			QString dir = tc->getTorDir();
+			if (bt::Exists(dir))
+				bt::Delete(dir,true);
+			delete tc;
+			return false;
+		}
 
-		if (!silently)
+		if (!silently && !Settings::openAllTorrentsSilently())
 		{
 			if (!gui->selectFiles(tc,&start_torrent,group,location,&skip_check))
 			{
@@ -260,7 +278,7 @@ namespace kt
 				QString dir = tc->getTorDir();
 				if (bt::Exists(dir))
 					bt::Delete(dir,true);
-				delete tc;	
+				delete tc;
 				return false;
 			}
 		}
@@ -276,9 +294,18 @@ namespace kt
 			}
 		}
 		
-		if (qman->alreadyLoaded(tc->getInfoHash()))
+		QStringList conflicting;
+		if (qman->checkFileConflicts(tc,conflicting))
 		{
-			Out(SYS_GEN|LOG_IMPORTANT) << "Torrent " << tc->getDisplayName() << " already loaded" << endl;
+			Out(SYS_GEN|LOG_IMPORTANT) << "Torrent " << tc->getDisplayName() << " conflicts with the following torrents: " << endl;
+			Out(SYS_GEN|LOG_IMPORTANT) << conflicting.join(", ") << endl;
+			if (!silently)
+			{
+				QString err = i18n("Opening the torrent <b>%1</b>, "
+								   "would share one or more files with the following torrents. ."
+								   "Torrents are not allowed to write to the same files. ", tc->getDisplayName());
+				KMessageBox::errorList(gui,err,conflicting);
+			}
 			// Cleanup tor dir
 			QString dir = tc->getTorDir();
 			if (bt::Exists(dir))
@@ -306,7 +333,7 @@ namespace kt
 		if (tc->hasExistingFiles())
 		{
 			if (!skip_check)
-				doDataCheck(tc);
+				doDataCheck(tc,true);
 			else
 				tc->markExistingFilesAsDownloaded();
 		}
@@ -334,7 +361,7 @@ namespace kt
 		return true;
 	}
 	
-	bool Core::loadFromData(const QByteArray & data,const QString & dir,const QString & group,bool silently, const KUrl& url)
+	bt::TorrentInterface* Core::loadFromData(const QByteArray & data,const QString & dir,const QString & group,bool silently, const KUrl& url)
 	{
 		QString tdir = findNewTorrentDir();
 		TorrentControl* tc = 0;
@@ -342,8 +369,9 @@ namespace kt
 		{
 			Out(SYS_GEN|LOG_NOTICE) << "Loading torrent from data " << endl;
 			tc = new TorrentControl();
-			tc->init(qman, data, tdir, dir);
 			tc->setLoadUrl(url);
+			tc->init(qman, data, tdir, dir);
+			
 
 			if(!init(tc,group,dir,silently))
 				loadingFinished(url, false, true);
@@ -351,7 +379,7 @@ namespace kt
 				loadingFinished(url, true, false);
 			
 			startUpdateTimer();
-			return true;
+			return tc;
 		}
 		catch (bt::Warning & warning)
 		{
@@ -377,10 +405,10 @@ namespace kt
 			bt::Delete(tdir,true);
 		
 		loadingFinished(url, false, false);
-		return false;
+		return 0;
 	}
 
-	bool Core::loadFromFile(const QString & target,const QString & dir,const QString & group,bool silently)
+	bt::TorrentInterface* Core::loadFromFile(const QString & target,const QString & dir,const QString & group,bool silently)
 	{
 		QString tdir = findNewTorrentDir();
 		TorrentControl* tc = 0;
@@ -393,7 +421,7 @@ namespace kt
 
 			init(tc,group,dir,silently);
 			startUpdateTimer();
-			return true;
+			return tc;
 		}
 		catch (bt::Warning & warning)
 		{
@@ -417,7 +445,7 @@ namespace kt
 		// delete tdir if necesarry
 		if (bt::Exists(tdir))
 			bt::Delete(tdir,true);
-		return false;
+		return 0;
 	}
 
 	void Core::downloadFinished(KJob *job)
@@ -554,7 +582,7 @@ namespace kt
 		}
 	}
 	
-	void Core::load(const QByteArray & data,const KUrl& url,const QString & group,const QString & savedir)
+	bt::TorrentInterface* Core::load(const QByteArray & data,const KUrl& url,const QString & group,const QString & savedir)
 	{
 		QString dir;
 		if (savedir.isEmpty() || !bt::Exists(savedir))
@@ -562,13 +590,16 @@ namespace kt
 		else
 			dir = savedir;
 		
-		if (dir != QString::null && loadFromData(data,dir,group,false,url))
+		bt::TorrentInterface* tc = 0;
+		if (dir != QString::null && (tc = loadFromData(data,dir,group,false,url)))
 			loadingFinished(url,true,false);
 		else
 			loadingFinished(url,false,true);
+		
+		return tc;
 	}
 	
-	void Core::loadSilently(const QByteArray & data,const KUrl& url,const QString & group,const QString & savedir)
+	bt::TorrentInterface* Core::loadSilently(const QByteArray & data,const KUrl& url,const QString & group,const QString & savedir)
 	{
 		QString dir;
 		if (savedir.isEmpty() || !bt::Exists(savedir))
@@ -576,10 +607,13 @@ namespace kt
 		else
 			dir = savedir;
 		
-		if (dir != QString::null && loadFromData(data,dir,group,true,url))
+		bt::TorrentInterface* tc = 0;
+		if (dir != QString::null && (tc = loadFromData(data,dir,group,true,url)))
 			loadingFinished(url,true,false);
 		else
 			loadingFinished(url,false,true);
+		
+		return tc;
 	}
 	
 	void Core::start(bt::TorrentInterface* tc)
@@ -716,6 +750,7 @@ namespace kt
 		}
 		
 		gman->torrentsLoaded(qman);
+		qman->loadState(KGlobal::config());
 		QTimer::singleShot(0,this,SLOT(delayedStart()));
 	}
 	
@@ -757,11 +792,6 @@ namespace kt
 			{
 				gui->errorMsg(e.toString());
 			}
-			
-			// cleanup potential data scans
-			QMap<bt::TorrentInterface*,ScanListener*>::iterator i = active_scans.find(tc);
-			if (i != active_scans.end())
-				closeScanListener(i.value());
 			
 			torrentRemoved(tc);
 			gman->torrentRemoved(tc);
@@ -813,11 +843,6 @@ namespace kt
 			{
 				gui->errorMsg(e.toString());
 			}
-			
-			// cleanup potential data scans
-			QMap<bt::TorrentInterface*,ScanListener*>::iterator i = active_scans.find(tc);
-			if (i != active_scans.end())
-				closeScanListener(i.value());
 			
 			torrentRemoved(tc);
 			gman->torrentRemoved(tc);
@@ -879,9 +904,10 @@ namespace kt
 		// make sure DHT is stopped
 		Globals::instance().getDHT().stop();
 		// stop all authentications going on
-		AuthenticationMonitor::instance().clear();
+		AuthenticationMonitor::instance().shutdown();
 		
 		WaitJob* job = new WaitJob(5000);
+		qman->saveState(KGlobal::config());
 		qman->onExit(job);
 		// wait for completion of stopped events
 		if (job->needToWait())
@@ -1044,7 +1070,9 @@ namespace kt
 				magnet->updateMagnetDownloaders();
 				// check if the priority of stalled torrents must be decreased
 				if (Settings::decreasePriorityOfStalledTorrents())
+				{
 					qman->checkStalledTorrents(bt::CurrentTime(),Settings::stallTimer());
+				}
 			}
 		}
 		catch (bt::Error & err)
@@ -1228,7 +1256,7 @@ namespace kt
 		}
 		else
 		{
-			QString msg = i18n("The file where the data is saved of the torrent \"%1\" is missing. \n"
+			QString msg = i18n("The file where the data is saved of the torrent \"%1\" is missing.\n"
 					"Do you want to recreate it?",tc->getStats().torrent_name);
 			MissingFilesDlg dlg(msg,missing,tc,0);
 						
@@ -1303,31 +1331,9 @@ namespace kt
 		doDataCheck(tc);
 	}
 
-	void Core::doDataCheck(bt::TorrentInterface* tc)
+	void Core::doDataCheck(bt::TorrentInterface* tc, bool auto_import)
 	{
-		QMap<bt::TorrentInterface*,ScanListener*>::iterator itr = active_scans.find(tc);
-		if (itr == active_scans.end())
-		{
-			ScanListener* listener = new ScanListener(tc);
-			connect(listener,SIGNAL(closeRequested(ScanListener*)),this,SLOT(closeScanListener(ScanListener*)));
-			active_scans.insert(tc,listener);
-			gui->dataScanStarted(listener);
-			tc->startDataCheck(listener);
-		}
-		else
-		{
-			ScanListener* listener = itr.value();
-			if (listener->isFinished())
-				listener->restart();
-		}
-	}
-	
-	
-	void Core::closeScanListener(ScanListener* sl)
-	{
-		gui->dataScanClosed(sl);
-		active_scans.remove(sl->torrent());
-		sl->deleteLater();
+		tc->startDataCheck(auto_import);
 	}
 
 
@@ -1384,7 +1390,20 @@ namespace kt
 	void Core::onStatusChanged(bt::TorrentInterface* tc)
 	{
 		Q_UNUSED(tc);
+		if (!reordering_queue)
+			gui->updateActions();
+	}
+	
+	void Core::beforeQueueReorder()
+	{
+		reordering_queue = true;
+	}
+	
+	void Core::afterQueueReorder()
+	{
+		reordering_queue = false;
 		gui->updateActions();
+		startUpdateTimer();
 	}
 	
 	void Core::load(const bt::MagnetLink& mlink,const QString & group)
@@ -1430,10 +1449,23 @@ namespace kt
 		BEncoderBufferOutput* out = new BEncoderBufferOutput(tmp);
 		BEncoder enc(out);
 		enc.beginDict();
-		if (!mlink.tracker().isEmpty())
+		KUrl::List trs = mlink.trackers();
+		if (trs.count())
 		{
 			enc.write("announce");
-			enc.write(mlink.tracker());
+			enc.write(trs.first().prettyUrl());
+			if (trs.count() > 1)
+			{
+				enc.write("announce-list");
+				enc.beginList();
+				foreach (const KUrl &tracker,trs)
+				{
+					enc.beginList();
+					enc.write(tracker.prettyUrl());
+					enc.end();
+				}
+				enc.end();
+			}
 		}
 		enc.write("info");
 		out->write(data.data(),data.size());

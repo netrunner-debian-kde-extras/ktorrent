@@ -39,7 +39,6 @@ namespace bt
 namespace kt
 {
 	class MagnetModel;
-	class ScanListener;
 	class GUI;
 	class PluginManager;
 	class GroupManager;
@@ -64,9 +63,9 @@ namespace kt
 		virtual bt::Uint32 getNumTorrentsRunning() const;
 		virtual bt::Uint32 getNumTorrentsNotRunning() const;
 		virtual void load(const KUrl& url,const QString & group);
-		virtual void load(const QByteArray & data,const KUrl& url,const QString & group,const QString & savedir);
+		virtual bt::TorrentInterface* load(const QByteArray & data,const KUrl& url,const QString & group,const QString & savedir);
 		virtual void loadSilently(const KUrl& url,const QString & group);
-		virtual void loadSilently(const QByteArray & data,const KUrl& url,const QString & group,const QString & savedir);
+		virtual bt::TorrentInterface* loadSilently(const QByteArray & data,const KUrl& url,const QString & group,const QString & savedir);
 		virtual void load(const bt::MagnetLink & mlink,const QString & group);
 		virtual void loadSilently(const bt::MagnetLink & mlink,const QString & group);
 		virtual QString findNewTorrentDir() const;
@@ -116,25 +115,6 @@ namespace kt
 		void startUpdateTimer();
 		
 		/**
-		 * Load a torrent file. Pops up an error dialog
-		 * if something goes wrong.
-		 * @param file The torrent file (always a local file)
-		 * @param dir Directory to save the data
-		 * @param group Group to add torrent to
-		 * @param silently Whether or not to do this silently
-		 */
-		bool loadFromFile(const QString & file,const QString & dir,const QString & group,bool silently);
-		
-		/**
-		 * Load a torrent file. Pops up an error dialog
-		 * if something goes wrong.
-		 * @param data Byte array of the torrent file
-		 * @param dir Directory to save the data
-		 * @param silently Whether or not to do this silently
-		 */
-		bool loadFromData(const QByteArray & data,const QString & dir,const QString & group,bool silently, const KUrl& url);
-		
-		/**
 		 * Update all torrents.
 		 */
 		void update();
@@ -162,9 +142,10 @@ namespace kt
 		
 		/**
 		 * Do a data check on a torrent
-		 * @param tc 
+		 * @param tc The torrent
+		 * @param auto_import Is this an automatic import
 		 */
-		void doDataCheck(bt::TorrentInterface* tc);
+		void doDataCheck(bt::TorrentInterface* tc,bool auto_import = false);
 		
 		///Fires when disk space is running low
 		void onLowDiskSpace(bt::TorrentInterface* tc, bool stopped);
@@ -248,6 +229,8 @@ namespace kt
 		void startServers();
 		void startTCPServer(bt::Uint16 port);
 		void startUTPServer(bt::Uint16 port);
+		bt::TorrentInterface* loadFromFile(const QString & file,const QString & dir,const QString & group,bool silently);
+		bt::TorrentInterface* loadFromData(const QByteArray & data,const QString & dir,const QString & group,bool silently, const KUrl& url);
 
 	public:
 		void loadTorrents();
@@ -261,9 +244,10 @@ namespace kt
 		void emitCorruptedData(bt::TorrentInterface* tc);
 		void autoCheckData(bt::TorrentInterface* tc);
 		void checkForKDE3Torrents();
-		void closeScanListener(ScanListener* sl);
 		void delayedRemove(bt::TorrentInterface* tc);
 		void delayedStart();
+		void beforeQueueReorder();
+		void afterQueueReorder();
 
 	private:
 		GUI* gui;
@@ -278,9 +262,9 @@ namespace kt
 		QMap<KJob*,KUrl> custom_save_locations; // map to store save locations
 		QMap<KUrl,QString> add_to_groups; // Map to keep track of which group to add a torrent to
 		int sleep_suppression_cookie;
-		QMap<bt::TorrentInterface*,ScanListener*> active_scans;
 		QMap<bt::TorrentInterface*,bool> delayed_removal;
 		bool exiting;
+		bool reordering_queue;
 	};
 }
 

@@ -40,17 +40,21 @@
 #include <KNotifyConfigWidget>
 #include <kio/jobclasses.h>
 #include <kio/jobuidelegate.h>
+#include <kparts/partmanager.h>
 
 #include <interfaces/torrentinterface.h>
 #include <torrent/queuemanager.h>
 #include <torrent/torrentcontrol.h>
 #include <util/log.h>
+#include <util/timer.h>
 #include <util/error.h>
 #include <dht/dhtbase.h>
 #include <groups/group.h>
 #include <groups/groupmanager.h>
 #include <plugin/pluginmanager.h>
 #include <settings.h>
+
+#include <gui/centralwidget.h>
 #include "gui.h"
 #include "core.h"
 #include "view/view.h"
@@ -66,10 +70,13 @@
 #include "dialogs/torrentcreatordlg.h"
 #include "dialogs/importdialog.h"
 #include "tools/queuemanagerwidget.h"
-#include <util/timer.h>
-#include <gui/activitybar.h>
+
 #include "torrentactivity.h"
-#include <gui/centralwidget.h>
+
+#include <interfaces/functions.h>
+
+
+
 
 
 
@@ -78,22 +85,29 @@ namespace kt
 	GUI::GUI() : core(0),pref_dlg(0)
 	{
 		//Marker markk("GUI::GUI()");
+		part_manager = new KParts::PartManager(this);
+		connect(part_manager,SIGNAL(activePartChanged(KParts::Part*)),this,SLOT(activePartChanged(KParts::Part*)));
 		core = new Core(this);
+		core->loadTorrents();
+		
 		tray_icon = new TrayIcon(core,this);
 		
 		central = new CentralWidget(this);
 		setCentralWidget(central);
+		connect(central,SIGNAL(changeActivity(Activity*)),this,SLOT(setCurrentActivity(Activity*)));
 		torrent_activity = new TorrentActivity(core,this,0);
-		addActivity(torrent_activity);
 		
 		setupActions();
-		createGUI("ktorrentui.rc");
+		setupGUI(Default,"ktorrentui.rc");
+		
+		addActivity(torrent_activity);
 		
 		status_bar = new kt::StatusBar(this);
 		setStatusBar(status_bar);
 
 		//Marker mark("core->loadTorrents()");
-		core->loadTorrents();
+		//core->loadTorrents();
+	
 		//mark.update();
 		connect(&timer,SIGNAL(timeout()),this,SLOT(update()));
 		timer.start(Settings::guiUpdateInterval());
@@ -125,17 +139,33 @@ namespace kt
 	
 	void GUI::addActivity(Activity* act)
 	{
-		central->activityBar()->addActivity(act);
+		unplugActionList("activities_list");
+		central->addActivity(act);
+		if (act->part())
+			part_manager->addPart(act->part(),false);
+		plugActionList("activities_list",central->activitySwitchingActions());
 	}
 	
 	void GUI::removeActivity(Activity* act)
 	{
-		central->activityBar()->removeActivity(act);
+		unplugActionList("activities_list");
+		central->removeActivity(act);
+		if (act->part())
+			part_manager->removePart(act->part());
+		plugActionList("activities_list",central->activitySwitchingActions());
 	}
 	
 	void GUI::setCurrentActivity(Activity* act)
 	{
-		central->activityBar()->setCurrentActivity(act);
+		central->setCurrentActivity(act);
+		part_manager->setActivePart(act ? act->part() : 0);
+	}
+	
+	void GUI::activePartChanged(KParts::Part* p)
+	{
+		unplugActionList("activities_list");
+		createGUI(p);
+		plugActionList("activities_list",central->activitySwitchingActions());
 	}
 
 	void GUI::addPrefPage(PrefPageInterface* page)
@@ -162,30 +192,47 @@ namespace kt
 
 	void GUI::mergePluginGui(Plugin* p)
 	{
-		guiFactory()->addClient(p);
+		if (p->parentPart() == "ktorrent")
+		{
+			guiFactory()->addClient(p);
+		}
+		else
+		{
+			QList<KParts::Part*> parts = part_manager->parts();
+			foreach (KParts::Part* part,parts)
+			{
+				if (part->domDocument().documentElement().attribute("name") == p->parentPart())
+				{
+					part->insertChildClient(p);
+					break;
+				}
+			}
+		}
 	}
 
 	void GUI::removePluginGui(Plugin* p)
 	{
-		guiFactory()->removeClient(p);
+		if (p->parentPart() == "ktorrent")
+		{
+			guiFactory()->removeClient(p);
+		}
+		else
+		{
+			QList<KParts::Part*> parts = part_manager->parts();
+			foreach (KParts::Part* part,parts)
+			{
+				if (part->domDocument().documentElement().attribute("name") == p->parentPart())
+				{
+					part->removeChildClient(p);
+					break;
+				}
+			}
+		}
 	}
-	
-	
-	void GUI::dataScanStarted(ScanListener* listener)
-	{
-		torrent_activity->dataScanStarted(listener);
-		core->startUpdateTimer(); // make sure update timer is running
-	}
-	
-	void GUI::dataScanClosed(ScanListener* listener)
-	{
-		torrent_activity->dataScanClosed(listener);
-	}
-
 
 	bool GUI::selectFiles(bt::TorrentInterface* tc,bool* start_torrent,const QString & group_hint,const QString & location_hint,bool* skip_check)
 	{
-		FileSelectDlg dlg(core->getGroupManager(),group_hint,this);
+		FileSelectDlg dlg(core->getQueueManager(),core->getGroupManager(),group_hint,this);
 		dlg.loadState(KGlobal::config());
 		bool ret = dlg.execute(tc,start_torrent,skip_check,location_hint) == QDialog::Accepted;
 		dlg.saveState(KGlobal::config());
@@ -227,7 +274,7 @@ namespace kt
 	
 	void GUI::openTorrentSilently()
 	{
-		QString filter = "*.torrent|" + i18n("Torrent Files") + "\n*|" + i18n("All Files");
+		QString filter = kt::TorrentFileFilter(true);
 		KUrl::List urls = KFileDialog::getOpenUrls(KUrl("kfiledialog:///openTorrent"), filter, this, i18n("Open Location"));
 
 		if (urls.count() == 0)
@@ -242,7 +289,7 @@ namespace kt
 
 	void GUI::openTorrent()
 	{
-		QString filter = "*.torrent|" + i18n("Torrent Files") + "\n*|" + i18n("All Files");
+		QString filter = kt::TorrentFileFilter(true);
 		KUrl::List urls = KFileDialog::getOpenUrls(KUrl("kfiledialog:///openTorrent"), filter, this, i18n("Open Location"));
 
 		if (urls.count() == 0)
@@ -269,27 +316,8 @@ namespace kt
 		}
 	}
 	
-	void GUI::suspendQueue(bool suspend)
-	{
-		Out(SYS_GEN|LOG_NOTICE) << "Setting suspended state to " << suspend << endl;
-		core->setSuspendedState(suspend);
-		torrent_activity->updateActions();
-	}
 	
-	void GUI::onSuspendedStateChanged(bool suspended)
-	{
-		queue_suspend_action->setChecked(suspended);
-	}
 	
-	void GUI::startAllTorrents()
-	{
-		core->startAll();
-	}
-
-	void GUI::stopAllTorrents()
-	{
-		core->stopAll();
-	}
 
 	void GUI::pasteURL()
 	{
@@ -389,21 +417,12 @@ namespace kt
 		show_status_bar_action = KStandardAction::showStatusbar(this, SLOT(showStatusBar()),ac);
 		show_status_bar_action->setIcon(KIcon("kt-show-statusbar"));
 		show_menu_bar_action = KStandardAction::showMenubar(this, SLOT(showMenuBar()),ac);
-		KAction* pref_action = KStandardAction::preferences(this, SLOT(showPrefDialog()),ac);
+		KStandardAction::preferences(this, SLOT(showPrefDialog()),ac);
 		KStandardAction::keyBindings(this, SLOT(configureKeys()),ac);
 		
 		KStandardAction::configureToolbars(this,SLOT(configureToolBars()),ac);
 		KStandardAction::configureNotifications(this,SLOT(configureNotifications()),ac);		
 		
-		start_all_action = new KAction(KIcon("kt-start-all"),i18n("Start All"),this);
-		start_all_action->setToolTip(i18n("Start all torrents"));
-		connect(start_all_action,SIGNAL(triggered()),this,SLOT(startAllTorrents()));
-		ac->addAction("start_all",start_all_action);
-		
-		stop_all_action = new KAction(KIcon("kt-stop-all"),i18n("Stop All"),this);
-		stop_all_action->setToolTip(i18n("Stop all torrents"));
-		connect(stop_all_action,SIGNAL(triggered()),this,SLOT(stopAllTorrents()));
-		ac->addAction("stop_all",stop_all_action);
 		
 		paste_url_action = new KAction(KIcon("document-open-remote"),i18n("Open URL"),this);
 		paste_url_action->setToolTip(i18n("Open a URL which points to a torrent, magnet links are supported"));
@@ -411,21 +430,12 @@ namespace kt
 		connect(paste_url_action,SIGNAL(triggered()),this,SLOT(pasteURL()));
 		ac->addAction("paste_url",paste_url_action);
 		
-		queue_suspend_action = new KToggleAction(KIcon("kt-pause"),i18n("Suspend Torrents"),this);
-		ac->addAction("queue_suspend",queue_suspend_action);
-		queue_suspend_action->setToolTip(i18n("Suspend all running torrents"));
-		queue_suspend_action->setShortcut(KShortcut(Qt::SHIFT + Qt::Key_P));
-		queue_suspend_action->setGlobalShortcut(KShortcut(Qt::ALT + Qt::SHIFT + Qt::Key_P));
-		connect(queue_suspend_action,SIGNAL(toggled(bool)),this,SLOT(suspendQueue(bool)));
-		
 		ipfilter_action = new KAction(KIcon("view-filter"),i18n("IP Filter"),this);
 		ipfilter_action->setToolTip(i18n("Show the list of blocked IP addresses"));
 		ipfilter_action->setShortcut(KShortcut(Qt::CTRL + Qt::Key_I));
 		connect(ipfilter_action,SIGNAL(triggered()),this,SLOT(showIPFilter()));
 		ac->addAction("ipfilter_action",ipfilter_action);
 
-		
-		
 		import_action = new KAction(KIcon("document-import"),i18n("Import Torrent"),this);
 		import_action->setToolTip(i18n("Import a torrent"));
 		import_action->setShortcut(KShortcut(Qt::SHIFT + Qt::Key_I));
@@ -446,14 +456,7 @@ namespace kt
 		ac->addAction("show_kt",show_kt_action);
 		show_kt_action->setGlobalShortcut(KShortcut(Qt::ALT+ Qt::SHIFT + Qt::Key_T));
 		
-		show_group_view_action = new KToggleAction(KIcon("view-list-tree"),i18n("Group View Visible"),this);
-		show_group_view_action->setToolTip(i18n("Show or hide the group view"));
-		connect(show_group_view_action,SIGNAL(toggled(bool)),torrent_activity,SLOT(setGroupViewVisible(bool)));
-		ac->addAction("show_group_view",show_group_view_action);
-		
 		setStandardToolBarMenuEnabled(true);
-				
-		
 	}
 
 	void GUI::update()
@@ -493,7 +496,7 @@ namespace kt
 		setAutoSaveSettings("MainWindow",true);
 		central->loadState(cfg);
 		torrent_activity->loadState(cfg);
-		show_group_view_action->setChecked(!torrent_activity->getGroupView()->isHidden());
+		
 		
 		KConfigGroup g = cfg->group("MainWindow");
 		bool statusbar_hidden = g.readEntry("statusbar_hidden",false);
@@ -521,6 +524,8 @@ namespace kt
 		{
 			show();
 		}
+		
+		setCurrentActivity(central->currentActivity());
 	}
 
 	void GUI::saveState(KSharedConfigPtr cfg)
@@ -569,10 +574,6 @@ namespace kt
 	void GUI::updateActions()
 	{
 		torrent_activity->updateActions();
-		Uint32 nr = core->getNumTorrentsRunning();
-		queue_suspend_action->setEnabled(core->getSuspendedState() || nr > 0);
-		start_all_action->setEnabled(core->getNumTorrentsNotRunning() > 0);
-		stop_all_action->setEnabled(nr > 0);
 	}
 	
 	void GUI::showOrHide()

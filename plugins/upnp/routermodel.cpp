@@ -20,28 +20,29 @@
  ***************************************************************************/
 #include <klocale.h>
 #include <kicon.h>
+#include <upnp/upnprouter.h>
 #include "routermodel.h"
-#include "upnprouter.h"
 
-namespace kt 
+
+namespace kt
 {
 
 	RouterModel::RouterModel(QObject* parent)
 		: QAbstractTableModel(parent)
 	{
 	}
-	
-	
+
+
 	RouterModel::~RouterModel()
 	{
 	}
-	
-	void RouterModel::addRouter(UPnPRouter* r)
+
+	void RouterModel::addRouter(bt::UPnPRouter* r)
 	{
 		routers.append(r);
 		insertRow(routers.count() - 1);
 	}
-	
+
 	int RouterModel::rowCount(const QModelIndex & parent) const
 	{
 		if (!parent.isValid())
@@ -49,7 +50,7 @@ namespace kt
 		else
 			return 0;
 	}
-	
+
 	int RouterModel::columnCount(const QModelIndex & parent) const
 	{
 		if (!parent.isValid())
@@ -57,12 +58,12 @@ namespace kt
 		else
 			return 0;
 	}
-	
+
 	QVariant RouterModel::headerData(int section, Qt::Orientation orientation,int role) const
 	{
 		if (role != Qt::DisplayRole || orientation != Qt::Horizontal)
 			return QVariant();
-		 
+
 		switch (section)
 		{
 			case 0: return i18n("Device");
@@ -72,20 +73,20 @@ namespace kt
 		}
 	}
 
-	UPnPRouter* RouterModel::routerForIndex(const QModelIndex & index)
+	bt::UPnPRouter* RouterModel::routerForIndex(const QModelIndex & index)
 	{
 		if (!index.isValid())
 			return 0;
 		else
 			return routers.at(index.row());
 	}
-	
+
 	QVariant RouterModel::data(const QModelIndex & index, int role) const
 	{
 		if (!index.isValid())
 			return QVariant();
-		
-		const UPnPRouter* r = routers.at(index.row());
+
+		const bt::UPnPRouter* r = routers.at(index.row());
 		if (role == Qt::DisplayRole)
 		{
 			switch (index.column())
@@ -109,7 +110,7 @@ namespace kt
 		{
 			if (index.column() == 0)
 			{
-				const UPnPDeviceDescription & d = r->getDescription();
+				const bt::UPnPDeviceDescription & d = r->getDescription();
 				return i18n(
 					"Model Name: <b>%1</b><br/>"
 					"Manufacturer: <b>%2</b><br/>"
@@ -118,65 +119,88 @@ namespace kt
 			else if (index.column() == 1 && !r->getError().isEmpty())
 				return r->getError();
 		}
-		
+
 		return QVariant();
 	}
-	
+
 	bool RouterModel::removeRows(int row,int count,const QModelIndex & parent)
 	{
+		Q_UNUSED(parent);
 		beginRemoveRows(QModelIndex(),row,row + count - 1);
 		endRemoveRows();
 		return true;
 	}
-	
+
 	bool RouterModel::insertRows(int row,int count,const QModelIndex & parent)
 	{
+		Q_UNUSED(parent);
 		beginInsertRows(QModelIndex(),row,row + count - 1);
 		endInsertRows();
 		return true;
 	}
-	
-	QString RouterModel::ports(const UPnPRouter* r) const
+
+	class PortsVisitor : public bt::UPnPRouter::Visitor
 	{
-		QString ret;
-		QList<UPnPRouter::Forwarding>::const_iterator j = r->beginPortMappings();
-		while (j != r->endPortMappings())
+	public:
+		virtual ~PortsVisitor() {}
+
+		virtual void forwarding(const net::Port& port, bool pending, const bt::UPnPService* service)
 		{
-			const UPnPRouter::Forwarding & f = *j;
-			if (!f.pending_req)
+			Q_UNUSED(service);
+			if (!pending)
 			{
-				ret += QString::number(f.port.number) + " (";
-				QString prot = (f.port.proto == net::UDP ? "UDP" : "TCP");
+				QString ret = QString::number(port.number) + " (";
+				QString prot = (port.proto == net::UDP ? "UDP" : "TCP");
 				ret +=  prot + ")";
+				ports.append(ret);
 			}
-			j++;
-			
-			if (j != r->endPortMappings())
-				ret += "\n";
 		}
-		return ret;
-	}
-	
-	QString RouterModel::connections(const UPnPRouter* r) const
-	{
-		QString ret;
-		QList<UPnPRouter::Forwarding>::const_iterator j = r->beginPortMappings();
-		while (j != r->endPortMappings())
+
+		QString result()
 		{
-			const UPnPRouter::Forwarding & f = *j;
-			if (!f.pending_req)
-			{
-				if (f.service->servicetype.contains("WANPPPConnection"))
-					ret += "PPP";
-				else
-					ret += "IP";
-			}
-			j++;
-			
-			if (j != r->endPortMappings())
-				ret += "\n";
+			return ports.join("\n");
 		}
-		return ret;
+
+		QStringList ports;
+	};
+
+	QString RouterModel::ports(const bt::UPnPRouter* r) const
+	{
+		PortsVisitor pv;
+		r->visit(&pv);
+		return pv.result();
+	}
+
+	class ConnectionsVisitor : public bt::UPnPRouter::Visitor
+	{
+	public:
+		virtual ~ConnectionsVisitor() {}
+
+		virtual void forwarding(const net::Port& port, bool pending, const bt::UPnPService* service)
+		{
+			Q_UNUSED(port);
+			if (!pending)
+			{
+				if (service->servicetype.contains("WANPPPConnection"))
+					connections.append("PPP");
+				else
+					connections.append("IP");
+			}
+		}
+
+		QString result()
+		{
+			return connections.join("\n");
+		}
+
+		QStringList connections;
+	};
+
+	QString RouterModel::connections(const bt::UPnPRouter* r) const
+	{
+		ConnectionsVisitor cv;
+		r->visit(&cv);
+		return cv.result();
 	}
 
 	void RouterModel::update()

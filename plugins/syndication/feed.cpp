@@ -29,6 +29,7 @@
 #include "filter.h"
 #include "filterlist.h"
 #include "feedretriever.h"
+#include <kio/global.h>
 
 using namespace bt;
 
@@ -42,23 +43,39 @@ namespace kt
 		connect(&update_timer,SIGNAL(timeout()),this,SLOT(refresh()));
 	}
 	
-	Feed::Feed(const KUrl & url,const QString & dir) : url(url),dir(dir),status(UNLOADED),refresh_rate(DEFAULT_REFRESH_RATE)
+	Feed::Feed(const QString & feed_url,const QString & dir) 
+		: dir(dir),status(UNLOADED),refresh_rate(DEFAULT_REFRESH_RATE)
 	{
+		parseUrl(feed_url);
 		connect(&update_timer,SIGNAL(timeout()),this,SLOT(refresh()));
 		refresh();
 		save();
 	}
 	
-	Feed::Feed(const KUrl & url,Syndication::FeedPtr feed,const QString & dir) : url(url),feed(feed),dir(dir),status(OK),refresh_rate(DEFAULT_REFRESH_RATE)
+	Feed::Feed(const QString & feed_url,Syndication::FeedPtr feed,const QString & dir) 
+		: feed(feed),dir(dir),status(OK),refresh_rate(DEFAULT_REFRESH_RATE)
 	{
+		parseUrl(feed_url);
 		connect(&update_timer,SIGNAL(timeout()),this,SLOT(refresh()));
 		update_timer.start(refresh_rate * 60 * 1000);
 	}
 
-
 	Feed::~Feed()
 	{
 	}
+	
+	void Feed::parseUrl(const QString& feed_url)
+	{
+		QStringList sl = feed_url.split(":COOKIE:");
+		if (sl.size() == 2)
+		{
+			url = KUrl(sl.first());
+			cookie = sl.last();
+		}
+		else
+			url = KUrl(feed_url);
+	}
+
 	
 	void Feed::save()
 	{
@@ -74,6 +91,11 @@ namespace kt
 		enc.beginDict();
 		enc.write("url");
 		enc.write(url.prettyUrl());
+		if (!cookie.isEmpty())
+		{
+			enc.write("cookie");
+			enc.write(cookie);
+		}
 		enc.write("filters");
 		enc.beginList();
 		foreach (Filter* f,filters)
@@ -132,6 +154,7 @@ namespace kt
 		try
 		{
 			url = KUrl(dict->getString("url",0));
+			cookie = dict->getValue("cookie") ? dict->getString("cookie",0) : QString();
 			custom_name = dict->getValue("custom_name") ? dict->getString("custom_name",0) : QString();
 			refresh_rate = dict->getValue("refresh_rate") ? dict->getInt("refresh_rate") : DEFAULT_REFRESH_RATE;
 			
@@ -201,7 +224,8 @@ namespace kt
 		
 		if (status != Syndication::Success)
 		{
-			Out(SYS_SYN|LOG_NOTICE) << "Failed to load feed " << url.prettyUrl() << endl;
+			update_error = KIO::buildErrorString(loader->retrieverError(),QString());
+			Out(SYS_SYN|LOG_NOTICE) << "Failed to load feed " << url.prettyUrl() << ": " << update_error << endl;
 			this->status = FAILED_TO_DOWNLOAD;
 			update_timer.start(refresh_rate * 60 * 1000);
 			updated();
@@ -220,9 +244,13 @@ namespace kt
 	void Feed::refresh()
 	{
 		status = DOWNLOADING;
+		update_error.clear();
 		update_timer.stop();
 		Syndication::Loader *loader = Syndication::Loader::create(this,SLOT(loadingComplete(Syndication::Loader*, Syndication::FeedPtr, Syndication::ErrorCode)));
-		loader->loadFrom(url,new FeedRetriever(dir + "feed.xml"));
+		FeedRetriever* retr = new FeedRetriever(dir + "feed.xml");
+		if (!cookie.isEmpty())
+			retr->setAuthenticationCookie(cookie);
+		loader->loadFrom(url,retr);
 		updated();
 	}
 	
@@ -324,7 +352,7 @@ namespace kt
 				if (needToDownload(item,f))
 				{
 					Out(SYS_SYN|LOG_NOTICE) << "Downloading item " << item->title() << " (filter: " << f->filterName() << ")" << endl;
-					downloadItem(item,f->group(),f->downloadLocation(),f->openSilently());
+					downloadItem(item,f->group(),f->downloadLocation(),f->moveOnCompletionLocation(),f->openSilently());
 				}
 			}
 		}
@@ -332,14 +360,14 @@ namespace kt
 	
 	QString TorrentUrlFromItem(Syndication::ItemPtr item);
 	
-	void Feed::downloadItem(Syndication::ItemPtr item,const QString & group,const QString & location,bool silently)
+	void Feed::downloadItem(Syndication::ItemPtr item, const QString& group, const QString& location, const QString& move_on_completion, bool silently)
 	{
 		loaded.append(item->id());
 		QString url = TorrentUrlFromItem(item);
 		if (!url.isEmpty())
-			downloadLink(KUrl(url),group,location,silently);
+			downloadLink(KUrl(url),group,location,move_on_completion,silently);
 		else
-			downloadLink(KUrl(item->link()),group,location,silently);
+			downloadLink(KUrl(item->link()),group,location,move_on_completion,silently);
 		save();
 	}
 		

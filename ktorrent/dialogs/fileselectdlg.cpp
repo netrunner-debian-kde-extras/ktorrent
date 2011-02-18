@@ -17,12 +17,12 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.             *
  ***************************************************************************/
+#include <QMenu>
 #include <QTextCodec>
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kiconloader.h>
 #include <kmimetype.h>
-#include <qtreewidget.h>
 #include <kstandardguiitem.h>
 #include <kpushbutton.h>
 #include <interfaces/torrentfileinterface.h>
@@ -35,6 +35,7 @@
 #include <interfaces/functions.h>
 #include <groups/group.h>
 #include <groups/groupmanager.h>
+#include <torrent/queuemanager.h>
 #include <torrent/torrentfiletreemodel.h>
 #include <torrent/torrentfilelistmodel.h>
 #include "fileselectdlg.h"
@@ -45,7 +46,8 @@ using namespace bt;
 namespace kt
 {
 
-	FileSelectDlg::FileSelectDlg(kt::GroupManager* gman,const QString & group_hint,QWidget* parent) : KDialog(parent),gman(gman),initial_group(0),show_file_tree(true)
+	FileSelectDlg::FileSelectDlg(kt::QueueManager* qman,kt::GroupManager* gman,const QString & group_hint,QWidget* parent) 
+		: KDialog(parent),qman(qman),gman(gman),initial_group(0),show_file_tree(true)
 	{
 		setupUi(mainWidget());
 		m_file_view->setAlternatingRowColors(true);
@@ -61,6 +63,11 @@ namespace kt
 		
 		m_downloadLocation->setMode(KFile::Directory|KFile::ExistingOnly|KFile::LocalOnly);
 		m_completedLocation->setMode(KFile::Directory|KFile::ExistingOnly|KFile::LocalOnly);
+		
+		m_download_location_history->setIcon(KIcon("view-history"));
+		m_download_location_history->setPopupMode(QToolButton::MenuButtonPopup);
+		m_move_when_completed_history->setIcon(KIcon("view-history"));
+		m_move_when_completed_history->setPopupMode(QToolButton::MenuButtonPopup);
 
 		
 		encodings = QTextCodec::availableMibs();
@@ -133,6 +140,8 @@ namespace kt
 			connect(m_downloadLocation,SIGNAL(textChanged(QString)),this,SLOT(updateSizeLabels()));
 			connect(m_downloadLocation,SIGNAL(textChanged(QString)),this,SLOT(updateExistingFiles()));
 			filter_model->setSourceModel(model);
+			filter_model->setSortRole(Qt::UserRole);
+			m_file_view->setSortingEnabled(true);
 			m_file_view->expandAll();
 			
 			updateSizeLabels();
@@ -154,8 +163,6 @@ namespace kt
 
 			m_file_view->setAlternatingRowColors(false);
 			m_file_view->setRootIsDecorated(show_file_tree && tc->getStats().multi_file_torrent);
-			m_file_view->resizeColumnToContents(0);
-			m_file_view->resizeColumnToContents(1);
 			return exec();
 		}
 		return QDialog::Rejected;
@@ -170,13 +177,13 @@ namespace kt
 	{
 		QStringList pe_ex;
 		
-		QString cn = m_completedLocation->url().toLocalFile();
-		if (!cn.endsWith(bt::DirSeparator()))
-			cn += bt::DirSeparator();
+		QString cn = m_completedLocation->url().toLocalFile(KUrl::AddTrailingSlash);
+		if (m_moveCompleted->isChecked() && !cn.isEmpty())
+			move_on_completion_location_history.insert(cn);
 
-		QString dn = m_downloadLocation->url().toLocalFile();
-		if (!dn.endsWith(bt::DirSeparator()))
-			dn += bt::DirSeparator();
+		QString dn = m_downloadLocation->url().toLocalFile(KUrl::AddTrailingSlash);
+		if (!dn.isEmpty())
+			download_location_history.insert(dn);
 
 		
 		QString tld = tc->getUserModifiedFileName();
@@ -282,7 +289,6 @@ namespace kt
 				pe_ex.append(file.getUserModifiedPath());
 			}
 			file.setPathOnDisk(path);
-			file.setEmitDownloadStatusChanged(true);
 		}
 
 		if (pe_ex.count() > 0)
@@ -304,12 +310,6 @@ namespace kt
 			}
 		}
 
-		for (Uint32 i = 0;i < tc->getNumFiles();i++)
-		{
-			bt::TorrentFileInterface & file = tc->getTorrentFile(i);
-			file.setEmitDownloadStatusChanged(true);
-		}
-
 		//Setup custom download location
 		QString ddir = tc->getDataDir();
 		if (!ddir.endsWith(bt::DirSeparator()))
@@ -319,14 +319,32 @@ namespace kt
 			tc->changeOutputDir(dn + tld,bt::TorrentInterface::FULL_PATH);
 		else if (dn != ddir)
 			tc->changeOutputDir(dn, 0);
-
-		if(m_moveCompleted->checkState() == Qt::Checked)
-			tc->setMoveWhenCompletedDir(KUrl(cn));
+		
+		QStringList conflicting;
+		if (qman->checkFileConflicts(tc,conflicting))
+		{
+			QString err = i18n("Opening the torrent <b>%1</b>, "
+							   "would share one or more files with the following torrents. "
+							   "Torrents are not allowed to write to the same files. "
+							   "Please select a different location.", tc->getDisplayName());
+			KMessageBox::errorList(this,err,conflicting);
+			return;
+		}
+		
+		for (Uint32 i = 0;i < tc->getNumFiles();i++)
+		{
+			bt::TorrentFileInterface & file = tc->getTorrentFile(i);
+			file.setEmitDownloadStatusChanged(true);
+		}
 
 		//Make it user controlled if needed
 		*start = m_chkStartTorrent->isChecked();
 		*skip_check = m_skip_data_check->isChecked();
 		
+		// set display name for non-multifile torrent as file name inside
+		if (Settings::autoRenameSingleFileTorrents() && !tc->getStats().multi_file_torrent)
+			tc->setDisplayName(QFileInfo(tc->getUserModifiedFileName()).completeBaseName());
+
 		//Now add torrent to selected group
 		if (m_cmbGroups->currentIndex() > 0)
 		{
@@ -339,6 +357,14 @@ namespace kt
 				gman->saveGroups();
 			}
 		}
+		
+		// Set this value after the group policy is applied, 
+		// so that the user selection in the dialog is not
+		// overwritten by the group policy
+		if (m_moveCompleted->checkState() == Qt::Checked)
+			tc->setMoveWhenCompletedDir(KUrl(cn));
+		else
+			tc->setMoveWhenCompletedDir(KUrl());
 
 		// update the last save directory
 		Settings::setLastSaveDir(dn);
@@ -421,6 +447,10 @@ namespace kt
 			QString dir = initial_group->groupPolicy().default_save_location;
 			if (!dir.isNull() && bt::Exists(dir))
 				m_downloadLocation->setUrl(KUrl(dir));
+			
+			dir = initial_group->groupPolicy().default_move_on_completion_location;
+			if (!dir.isNull() && bt::Exists(dir))
+				m_completedLocation->setUrl(KUrl(dir));
 		}
 	}
 	
@@ -437,6 +467,17 @@ namespace kt
 		QString dir = g->groupPolicy().default_save_location;
 		if (!dir.isNull() && bt::Exists(dir))
 			m_downloadLocation->setUrl(KUrl(dir));
+		
+		dir = g->groupPolicy().default_move_on_completion_location;
+		if (!dir.isNull() && bt::Exists(dir))
+		{
+			m_moveCompleted->setChecked(true);
+			m_completedLocation->setUrl(KUrl(dir));
+		}
+		else
+		{
+			m_moveCompleted->setChecked(false);
+		}
 	}
 
 	void FileSelectDlg::updateSizeLabels()
@@ -523,6 +564,33 @@ namespace kt
 		show_file_tree = g.readEntry("show_file_tree",true);
 		m_tree->setChecked(show_file_tree);
 		m_list->setChecked(!show_file_tree);
+		QStringList tmp = g.readEntry("download_location_history",QStringList());
+		download_location_history = QSet<QString>::fromList(tmp);
+		tmp = g.readEntry("move_on_completion_location_history",QStringList());
+		move_on_completion_location_history = QSet<QString>::fromList(tmp);
+		
+		if (download_location_history.count())
+		{
+			QMenu* m = createHistoryMenu(download_location_history,
+										 SLOT(downloadLocationHistoryTriggered(QAction*)));
+			m_download_location_history->setMenu(m); 
+		}
+		else
+			m_download_location_history->setEnabled(false);
+		
+		if (move_on_completion_location_history.count())
+		{
+			QMenu* m = createHistoryMenu(
+					move_on_completion_location_history,
+					SLOT(moveOnCompletionLocationHistoryTriggered(QAction*)));
+			m_move_when_completed_history->setMenu(m);
+		}
+		else
+			m_move_when_completed_history->setEnabled(false);
+		
+		QByteArray state = g.readEntry("file_view",QByteArray());
+		if (state.size() > 0)
+			m_file_view->header()->restoreState(state);
 	}
 	
 	
@@ -531,7 +599,52 @@ namespace kt
 		KConfigGroup g = cfg->group("FileSelectDlg");
 		g.writeEntry("size",size());
 		g.writeEntry("show_file_tree",show_file_tree);
+		g.writeEntry("download_location_history",download_location_history.toList());
+		g.writeEntry("move_on_completion_location_history",move_on_completion_location_history.toList());
+		g.writeEntry("file_view",m_file_view->header()->saveState());
 	}
+	
+	QMenu* FileSelectDlg::createHistoryMenu(const QSet<QString> & urls, const char* slot)
+	{
+		QMenu* m = new QMenu(this);
+		foreach (const QString & url,urls)
+		{
+			QAction* a = m->addAction(url);
+			a->setData(url);
+		}
+		m->addSeparator();
+		m->addAction(i18n("Clear History"));
+		connect(m,SIGNAL(triggered(QAction*)),this,slot);
+		return m;
+	}
+	
+	void FileSelectDlg::clearDownloadLocationHistory()
+	{
+		download_location_history.clear();
+		m_download_location_history->setEnabled(false);
+	}
+	
+	void FileSelectDlg::clearMoveOnCompletionLocationHistory()
+	{
+		move_on_completion_location_history.clear();
+		m_move_when_completed_history->setEnabled(false);
+	}
+
+	void FileSelectDlg::downloadLocationHistoryTriggered(QAction* act)
+	{
+		if (!act->data().isNull())
+			m_downloadLocation->setUrl(act->data().toString());
+		else
+			clearDownloadLocationHistory();
+	}
+	void FileSelectDlg::moveOnCompletionLocationHistoryTriggered(QAction* act)
+	{
+		if (!act->data().isNull())
+			m_completedLocation->setUrl(act->data().toString());
+		else
+			clearMoveOnCompletionLocationHistory();
+	}
+
 
 	void FileSelectDlg::fileTree(bool)
 	{

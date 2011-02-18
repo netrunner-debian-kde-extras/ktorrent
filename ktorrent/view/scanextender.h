@@ -22,8 +22,7 @@
 
 #include <QWidget>
 #include <QTimer>
-#include <view/viewdelegate.h>
-#include "scanlistener.h"
+#include <torrent/jobprogresswidget.h>
 #include "ui_scanextender.h"
 
 namespace bt
@@ -38,24 +37,25 @@ namespace kt
 	/**
 		Extender widget which displays the results of a data scan
 	*/
-	class ScanExtender : public Extender,public Ui_ScanExtender
+	class ScanExtender : public JobProgressWidget,public Ui_ScanExtender
 	{
 		Q_OBJECT
 	public:
-		ScanExtender(ScanListener* lst,bt::TorrentInterface* tc,QWidget* parent);
+		ScanExtender(bt::Job* job,QWidget* parent);
 		virtual ~ScanExtender();
+		
+		virtual void description(const QString& title, const QPair< QString, QString >& field1, const QPair< QString, QString >& field2);
+		virtual void infoMessage(const QString& plain, const QString& rich);
+		virtual void warning(const QString& plain, const QString& rich);
+		virtual void percent(long unsigned int percent);
+		virtual void speed(long unsigned int value);
+		virtual void processedAmount(KJob::Unit unit, qulonglong amount);
+		virtual void totalAmount(KJob::Unit unit, qulonglong amount);
 
 	private slots:
-		void update();
 		void cancelPressed();
-		void finished();
-		void restart();
+		void finished(KJob* j);
 		void closeRequested();
-		void scanError(const QString & err);
-		
-	private:
-		QTimer timer;
-		ScanListener* listener;
 	};
 }
 

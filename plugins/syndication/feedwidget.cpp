@@ -19,12 +19,14 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 #include <QHeaderView>
+#include <kinputdialog.h>
 #include "feed.h"
 #include "feedwidget.h"
 #include "feedwidgetmodel.h"
 #include "managefiltersdlg.h"
 #include "filterlist.h"
 #include "syndicationplugin.h"
+
 
 namespace kt
 {
@@ -39,6 +41,13 @@ namespace kt
 		connect(m_refresh,SIGNAL(clicked()),this,SLOT(refreshClicked()));
 		connect(m_filters,SIGNAL(clicked()),this,SLOT(filtersClicked()));
 		connect(m_refresh_rate,SIGNAL(valueChanged(int)),this,SLOT(refreshRateChanged(int)));
+		connect(m_cookies,SIGNAL(clicked()),this,SLOT(cookiesClicked()));
+		
+		m_refresh->setIcon(KIcon("view-refresh"));
+		m_filters->setIcon(KIcon("view-filter"));
+		m_cookies->setIcon(KIcon("preferences-web-browser-cookies"));
+		m_download->setIcon(KIcon("ktorrent"));
+		
 		
 		model = new FeedWidgetModel(feed,this);
 		m_item_list->setModel(model);
@@ -66,7 +75,7 @@ namespace kt
 		{
 			Syndication::ItemPtr ptr = model->itemForIndex(idx);
 			if (ptr)
-				feed->downloadItem(ptr,QString(),QString(),false);
+				feed->downloadItem(ptr,QString(),QString(),QString(),false);
 		}
 	}
 	
@@ -91,6 +100,18 @@ namespace kt
 		}
 	}
 	
+	void FeedWidget::cookiesClicked()
+	{
+		bool ok = false;
+		QString cookie = feed->authenticationCookie();
+		QString nc = KInputDialog::getText(i18n("Authentication Cookie"),i18n("Enter the new authentication cookie"),cookie,&ok);
+		if (ok)
+		{
+			feed->setAuthenticationCookie(nc);
+			feed->save();
+		}
+	}
+	
 	void FeedWidget::selectionChanged(const QItemSelection& sel, const QItemSelection& prev)
 	{
 		Q_UNUSED(prev);
@@ -108,7 +129,7 @@ namespace kt
 				m_status->setText(i18n("<b>Not Loaded</b>"));
 				break;
 			case Feed::FAILED_TO_DOWNLOAD:
-				m_status->setText(i18n("<b>Download Failed</b>"));
+				m_status->setText(i18n("<b>Download Failed: %1</b>",feed->errorString()));
 				break;
 			case Feed::DOWNLOADING:
 				m_status->setText(i18n("<b>Downloading</b>"));

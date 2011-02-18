@@ -100,14 +100,12 @@ namespace kt
 		virtual void closeEditor(QWidget* editor,QAbstractItemDelegate::EndEditHint hint);
 		virtual bool edit(const QModelIndex & index,EditTrigger trigger,QEvent* event);
 		
-		/// A data scan was started
-		void dataScanStarted(ScanListener* listener);
-		
-		/// A data scan was closed
-		void dataScanClosed(ScanListener* listener);
-		
 		/// Get the ViewDelegate
 		ViewDelegate* viewDelegate() {return delegate;}
+		
+		/// Extend a widget
+		void extend(bt::TorrentInterface* tc,Extender* widget);
+		
 	public slots:
 		/**
 		 * Update all items in the view
@@ -127,11 +125,9 @@ namespace kt
 		void openDataDir();
 		void openTorDir();
 		void removeFromGroup();
-		void toggleDHT();
-		void togglePEX();
 		void scrape();
 		void moveData();
-		void moveDataWhenCompleted();
+		void showProperties();
 		void renameTorrent();
 		void showMenu(const QPoint & pos);
 		void showHeaderMenu(const QPoint& pos);
@@ -145,7 +141,6 @@ namespace kt
 		void torrentSelectionChanged(View* v);
 		void showMenu(View* v,const QPoint & pos);
 		void editingItem(bool on);
-	
 		
 	private:
 		Core* core;

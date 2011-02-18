@@ -21,18 +21,23 @@
 #include <QWidget>
 #include <QClipboard>
 #include <QApplication>
-#include <ksharedconfig.h>
-#include <kconfiggroup.h>
-#include <kaction.h>
-#include <kactioncollection.h>
-#include <klocale.h>
-#include <kmenu.h>
-#include <kshortcut.h>
+#include <KSharedConfig>
+#include <KConfigGroup>
+#include <KAction>
+#include <KActionCollection>
+#include <KLocale>
+#include <KMenu>
+#include <KShortcut>
+#include <KFileDialog>
+#include <KMessageBox>
 #include <groups/group.h>
 #include <util/log.h>
 #include <util/indexofcompare.h>
 #include <groups/groupmanager.h>
 #include <torrent/jobqueue.h>
+#include <torrent/jobprogresswidget.h>
+#include <torrent/torrentcontrol.h>
+#include <interfaces/functions.h>
 #include "gui.h"
 #include "view.h"
 #include "viewmodel.h"
@@ -42,15 +47,17 @@
 #include "settings.h"
 #include "torrentactivity.h"
 #include "dialogs/speedlimitsdlg.h"
-#include <kfiledialog.h>
-#include <kio/job.h>
+#include "viewdelegate.h"
+#include "scanextender.h"
+#include <util/fileops.h>
+
 
 using namespace bt;
 
 namespace kt
 {
 	ViewManager::ViewManager(Group* all_group,GUI* gui,Core* core,TorrentActivity* ta) 
-		: QObject(ta),gui(gui),core(core),current(0),all_group(all_group),ta(ta)
+		: JobTracker(ta),gui(gui),core(core),current(0),all_group(all_group),ta(ta)
 	{
 	}
 
@@ -161,19 +168,7 @@ namespace kt
 		if (current)
 			current->addPeers();
 	}
-
-	void ViewManager::toggleDHT()
-	{
-		if (current)
-			current->toggleDHT();
-	}
-		
-	void ViewManager::togglePEX()
-	{
-		if (current)
-			current->togglePEX();
-	}
-		
+	
 	void ViewManager::manualAnnounce()
 	{
 		if (current)
@@ -210,10 +205,10 @@ namespace kt
 			current->moveData();
 	}
 
-	void ViewManager::moveDataWhenCompleted()
+	void ViewManager::showProperties()
 	{
 		if (current)
-			current->moveDataWhenCompleted();
+			current->showProperties();
 	}
 
 	void ViewManager::removeFromGroup()
@@ -230,8 +225,13 @@ namespace kt
 
 	void ViewManager::update()
 	{
-		if (current)
-			current->update();
+		foreach (View* v,views)
+		{
+			if (current == v)
+				current->update();
+			else if (v->needToUpdateCaption())
+				ta->setTabProperties(v,v->caption(false),v->getGroup()->groupIconName(),v->caption(true));
+		}
 	}
 	
 	const bt::TorrentInterface* ViewManager::getCurrentTorrent() const
@@ -261,6 +261,7 @@ namespace kt
 				current = v;
 				updateActions();
 				//Out(SYS_GEN|LOG_DEBUG) << "onCurrentTabChanged " << current->caption() << endl;
+				current->update();
 				break;
 			}
 		}
@@ -335,7 +336,7 @@ namespace kt
 				i++;
 		}
 		
-		gui->unplugActionList("view_groups_list");
+		gui->getTorrentActivity()->part()->unplugActionList("view_groups_list");
 		QList<QAction*> actions;
 		QMap<Group*,KAction*>::iterator j = group_actions.begin();
 		while (j != group_actions.end())
@@ -352,12 +353,12 @@ namespace kt
 			}
 		}
 		
-		gui->plugActionList("view_groups_list",actions);
+		gui->getTorrentActivity()->part()->plugActionList("view_groups_list",actions);
 	}
 	
 	void ViewManager::onGroupAdded(kt::Group* g)
 	{
-		gui->unplugActionList("view_groups_list");
+		gui->getTorrentActivity()->part()->unplugActionList("view_groups_list");
 		KAction* act = new KAction(KIcon("application-x-bittorrent"),g->groupName(),this);
 		connect(act,SIGNAL(triggered()),this,SLOT(addToGroupItemTriggered()));
 		group_actions.insert(g,act);
@@ -370,7 +371,7 @@ namespace kt
 			j++;
 		}
 		
-		gui->plugActionList("view_groups_list",actions);
+		gui->getTorrentActivity()->part()->plugActionList("view_groups_list",actions);
 	}
 
 	void ViewManager::onCurrentTorrentChanged(View* v,bt::TorrentInterface* tc)
@@ -387,18 +388,57 @@ namespace kt
 		updateActions();
 	}
 	
-	
-	void ViewManager::dataScanStarted(ScanListener* listener)
+	void ViewManager::jobRegistered(bt::Job* j)
 	{
 		foreach (View* v,views)
-			v->dataScanStarted(listener);
+		{
+			JobProgressWidget* w = createJobWidget(j);
+			v->extend(j->torrent(),w);
+		}
 	}
 	
-	void ViewManager::dataScanClosed(ScanListener* listener)
+	void ViewManager::jobUnregistered(bt::Job* j)
 	{
-		foreach (View* v,views)
-			v->dataScanClosed(listener);
+		JobProgessWidgetList & jpw = widgets[j];
+		foreach (JobProgressWidget* w,jpw)
+			if (w->automaticRemove())
+				w->emitCloseRequest();
 	}
+
+	JobProgressWidget* ViewManager::createJobWidget(Job* job)
+	{
+		if (job->torrentStatus() == bt::CHECKING_DATA)
+		{
+			ScanExtender* ext = new ScanExtender(job,0);
+			widgets[job].append(ext);
+			return ext;
+		}
+		else
+			return kt::JobTracker::createJobWidget(job);
+	}
+
+	struct StartAndStopAllVisitor
+	{
+		QAction* start_all;
+		QAction* stop_all;
+		
+		StartAndStopAllVisitor(QAction* start_all,QAction* stop_all) : start_all(start_all),stop_all(stop_all)
+		{}
+		
+		bool operator()(bt::TorrentInterface* tc)
+		{
+			if (tc->getJobQueue()->runningJobs())
+				return true;
+			
+			const TorrentStats & s = tc->getStats();
+			if (s.running || (tc->isAllowedToStart() && !tc->overMaxRatio() && !tc->overMaxSeedTime()))
+				stop_all->setEnabled(true);
+			else
+				start_all->setEnabled(true);
+			
+			return !stop_all->isEnabled() || !start_all->isEnabled();
+		}
+	};
 	
 	void ViewManager::updateActions()
 	{
@@ -479,7 +519,6 @@ namespace kt
 		manual_announce->setEnabled(en_announce);
 		do_scrape->setEnabled(sel.count() > 0);
 		move_data->setEnabled(sel.count() > 0);
-		move_data_when_completed->setEnabled(!en_completed && sel.count() > 0);
 
 		const kt::Group* current_group = current->getGroup();
 		remove_from_group->setEnabled(current_group && !current_group->isStandardGroup());
@@ -487,25 +526,13 @@ namespace kt
 
 		if (sel.count() == 1)
 		{
-			//enable additional peer sources if torrent is not private
-			dht_enabled->setEnabled(en_peer_sources && Settings::dhtSupport());
-			pex_enabled->setEnabled(en_peer_sources && Settings::pexEnabled());
-			
 			TorrentInterface* tc = sel.front();
 			// no data check when we are preallocating diskspace
 			check_data->setEnabled(tc->getStats().status != bt::ALLOCATING_DISKSPACE);
-			
-			if (en_peer_sources)
-			{
-				dht_enabled->setChecked(tc->isFeatureEnabled(bt::DHT_FEATURE));
-				pex_enabled->setChecked(tc->isFeatureEnabled(bt::UT_PEX_FEATURE));
-			}
 		}
 		else
 		{
 			check_data->setEnabled(false);
-			dht_enabled->setEnabled(false);	
-			pex_enabled->setEnabled(false);	
 		}
 		
 		rename_torrent->setEnabled(sel.count() == 1);
@@ -518,24 +545,10 @@ namespace kt
 		
 		if (qm_enabled)
 		{
-			QList<bt::TorrentInterface*> all;
-			current->viewModel()->allTorrents(all);
 			start_all->setEnabled(false);
 			stop_all->setEnabled(false);
-			foreach (bt::TorrentInterface* tc,all)
-			{
-				if (tc->getJobQueue()->runningJobs())
-					continue;
-				
-				const TorrentStats & s = tc->getStats();
-				if (s.running || (tc->isAllowedToStart() && !tc->overMaxRatio() && !tc->overMaxSeedTime()))
-					stop_all->setEnabled(true);
-				else
-					start_all->setEnabled(true);
-				
-				if (stop_all->isEnabled() && start_all->isEnabled())
-					break;
-			}
+			StartAndStopAllVisitor v(start_all,stop_all);
+			current->viewModel()->visit(v);
 		}
 		else
 		{
@@ -553,9 +566,8 @@ namespace kt
 		}
 	}
 	
-	void ViewManager::setupActions()
+	void ViewManager::setupActions(KActionCollection* ac)
 	{
-		KActionCollection* ac = gui->actionCollection();
 		KStandardAction::selectAll(this,SLOT(selectAll()),ac);
 		
 		start_torrent = new KAction(KIcon("kt-start"),i18nc("@action Start all selected torrents in the current tab", "Start"), this);
@@ -605,17 +617,6 @@ namespace kt
 		add_peers = new KAction(KIcon("list-add"),i18n("Add Peers"),this);
 		connect(add_peers,SIGNAL(triggered()),this,SLOT(addPeers()));
 		ac->addAction("view_add_peers",add_peers);
-		
-		dht_enabled = new KAction(i18n("DHT"),this);
-		connect(dht_enabled,SIGNAL(triggered()),this,SLOT(toggleDHT()));
-		dht_enabled->setCheckable(true);
-		ac->addAction("view_dht_enabled",dht_enabled);
-		
-		
-		pex_enabled = new KAction(i18n("Peer Exchange"),this);
-		connect(pex_enabled,SIGNAL(triggered()),this,SLOT(togglePEX()));
-		pex_enabled->setCheckable(true);
-		ac->addAction("view_pex_enabled",pex_enabled);
 	
 		manual_announce = new KAction(i18n("Manual Announce"),this);
 		manual_announce->setShortcut(KShortcut(Qt::SHIFT + Qt::Key_A));
@@ -642,9 +643,9 @@ namespace kt
 		connect(move_data,SIGNAL(triggered()),this,SLOT(moveData()));
 		ac->addAction("view_move_data",move_data);
 
-		move_data_when_completed = new KAction(i18n("Move Data When Completed"),this);
-		connect(move_data_when_completed,SIGNAL(triggered()),this,SLOT(moveDataWhenCompleted()));
-		ac->addAction("view_move_data_when_completed", move_data_when_completed);
+		torrent_properties = new KAction(i18n("Settings"),this);
+		connect(torrent_properties,SIGNAL(triggered()),this,SLOT(showProperties()));
+		ac->addAction("view_torrent_properties", torrent_properties);
 
 		remove_from_group = new KAction(i18n("Remove from Group"),this);
 		connect(remove_from_group,SIGNAL(triggered()),this,SLOT(removeFromGroup()));
@@ -772,10 +773,13 @@ namespace kt
 		if (sel.count() == 1)
 		{
 			bt::TorrentInterface* tc = sel.front();
-			QString filter = "*.torrent|" + i18n("Torrents (*.torrent)");
-			QString fn = KFileDialog::getSaveFileName(KUrl("kfiledialog:///exportTorrent"),filter);
-			if (!fn.isEmpty())
-				KIO::file_copy(tc->getTorDir() + "torrent",fn);
+			QString filter = kt::TorrentFileFilter(false);
+			QString fn = KFileDialog::getSaveFileName(KUrl("kfiledialog:///exportTorrent"),filter,gui,
+													  QString(),KFileDialog::ConfirmOverwrite);
+			if (fn.isEmpty())
+				return;
+			
+			KIO::file_copy(tc->getTorDir() + "torrent",fn,-1,KIO::Overwrite);
 		}
 	}
 	
@@ -784,7 +788,7 @@ namespace kt
 		if (!v)
 			return;
 		
-		KMenu* view_menu = qobject_cast<KMenu*>(gui->container("ViewMenu"));
+		KMenu* view_menu = gui->getTorrentActivity()->part()->menu("ViewMenu");
 		if (!view_menu)
 			return;
 		
@@ -796,18 +800,9 @@ namespace kt
 			j++;
 		}
 			
-		gui->plugActionList("view_groups_list",actions);
-		
-		gui->unplugActionList("view_columns_list");
-		gui->plugActionList("view_columns_list",v->columnActionList());
-
-		// disable DHT and PEX if they are globally disabled
-		if (!Settings::dhtSupport())
-			dht_enabled->setEnabled(false);
-		
-		if (!Settings::pexEnabled())
-			pex_enabled->setEnabled(false);
-		
+		gui->getTorrentActivity()->part()->plugActionList("view_groups_list",actions);
+		gui->getTorrentActivity()->part()->unplugActionList("view_columns_list");
+		gui->getTorrentActivity()->part()->plugActionList("view_columns_list",v->columnActionList());
 		view_menu->popup(pos);
 	}
 }

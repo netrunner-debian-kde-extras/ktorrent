@@ -2,6 +2,7 @@ project(KTORRENT)
 find_package(Qt4 4.6.0 REQUIRED)
 find_package(KDE4 4.4.0 REQUIRED)
 find_package(KTorrent REQUIRED)
+find_package(Boost REQUIRED)
 
 # set some default settings
 include(KDE4Defaults)
@@ -35,13 +36,13 @@ include_directories( ${KDE4_INCLUDES}
    )
 
 add_subdirectory(libktcore)
-add_subdirectory(libktupnp)
 add_subdirectory(plugins)
-add_subdirectory(ideal)
 add_subdirectory(ktorrent)
 add_subdirectory(ktupnptest)
 add_subdirectory(plasma)
 add_subdirectory(ktmagnetdownloader)
+add_subdirectory(kio-magnet)
+add_subdirectory(doc)
 
 # --- show log ---
 macro_display_feature_log()

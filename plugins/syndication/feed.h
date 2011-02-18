@@ -57,8 +57,8 @@ namespace kt
 		Q_OBJECT
 	public:
 		Feed(const QString & dir);
-		Feed(const KUrl & url,const QString & dir);
-		Feed(const KUrl & url,Syndication::FeedPtr feed,const QString & dir);
+		Feed(const QString & feed_url,const QString & dir);
+		Feed(const QString & feed_url,Syndication::FeedPtr feed,const QString & dir);
 		virtual ~Feed();
 		
 		enum Status
@@ -78,6 +78,12 @@ namespace kt
 		/// Get the URL of the feed
 		KUrl feedUrl() const {return url;}
 		
+		/// Get the authentication cookie
+		const QString & authenticationCookie() const {return cookie;}
+		
+		/// Set the authentication cookie
+		void setAuthenticationCookie(const QString & nc) {cookie = nc;}
+		
 		/// Is the feed OK
 		bool ok() const {return feed.get() != 0;}
 		
@@ -95,6 +101,9 @@ namespace kt
 		
 		/// Get the tile of the feed
 		QString title() const;
+		
+		/// Get the update error string
+		QString errorString() const {return update_error;}
 		
 		/// Create a new feed directory
 		static QString newFeedDir(const QString & base);
@@ -115,7 +124,7 @@ namespace kt
 		void clearFilters();
 		
 		/// Download an item from the feed
-		void downloadItem(Syndication::ItemPtr item,const QString & group,const QString & location,bool silently);
+		void downloadItem(Syndication::ItemPtr item,const QString & group,const QString & location,const QString & move_on_completion,bool silently);
 		
 		/// Check if an item is downloaded
 		bool downloaded(Syndication::ItemPtr item) const; 
@@ -131,7 +140,7 @@ namespace kt
 		
 	signals:
 		/// Emitted when a link must de downloaded
-		void downloadLink(const KUrl & link,const QString & group,const QString & location,bool silently);
+		void downloadLink(const KUrl & link,const QString & group,const QString & location,const QString & move_on_completion,bool silently);
 		
 		/// A feed has been renamed
 		void feedRenamed(Feed* f);
@@ -151,6 +160,7 @@ namespace kt
 		bool needToDownload(Syndication::ItemPtr item,Filter* filter);
 		void checkLoaded();
 		void loadFromDisk();
+		void parseUrl(const QString & feed_url);
 
 	private:
 		KUrl url;
@@ -163,6 +173,8 @@ namespace kt
 		QMap<Filter*,QList<SeasonEpisodeItem> > downloaded_se_items;
 		QString custom_name;
 		bt::Uint32 refresh_rate;
+		QString cookie;
+		QString update_error;
 	};
 
 }
