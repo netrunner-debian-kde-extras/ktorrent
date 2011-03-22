@@ -21,6 +21,7 @@
 #include <QNetworkInterface>
 #include <klocale.h>
 #include <kio/job.h>
+#include <kio/copyjob.h>
 #include <kmessagebox.h>
 #include <kstandardguiitem.h>
 #include <kfiledialog.h>
@@ -342,7 +343,7 @@ namespace kt
 		qman->torrentAdded(tc,start_torrent);
 		
 		//now copy torrent file to user specified dir if needed
-		if(Settings::useTorrentCopyDir())
+		if (Settings::useTorrentCopyDir())
 		{
 			QString torFile = tc->getTorDir();
 			if(!torFile.endsWith(bt::DirSeparator()))
@@ -354,7 +355,7 @@ namespace kt
 				destination += bt::DirSeparator();
 			
 			destination += tc->getStats().torrent_name + ".torrent";
-			KIO::file_copy(torFile,destination,-1, KIO::HideProgressInfo);
+			KIO::copy(torFile,destination);
 		}
 		
 		torrentAdded(tc);
@@ -1198,15 +1199,12 @@ namespace kt
 	{
 		return qman->getSuspendedState();
 	}
-
-	void Core::aboutToBeStarted(bt::TorrentInterface* tc,bool & ret)
+	
+	bool Core::checkMissingFiles(TorrentInterface* tc)
 	{
-		ret = true;
-		
 		QStringList missing;
 		if (!tc->hasMissingFiles(missing))
-			return;
-		
+			return true;
 		
 		if (tc->getStats().multi_file_torrent)
 		{	
@@ -1221,8 +1219,7 @@ namespace kt
 			{
 				case MissingFilesDlg::CANCEL:
 					tc->handleError(i18n("Data files are missing"));
-					ret = false;
-					break;
+					return false;
 				case MissingFilesDlg::DO_NOT_DOWNLOAD:
 					try
 					{
@@ -1233,7 +1230,7 @@ namespace kt
 					{
 						gui->errorMsg(i18n("Cannot deselect missing files: %1",e.toString()));
 						tc->handleError(i18n("Data files are missing"));
-						ret = false;
+						return false;
 					}
 					break;
 				case MissingFilesDlg::RECREATE:
@@ -1246,11 +1243,10 @@ namespace kt
 					{
 						KMessageBox::error(0,i18n("Cannot recreate missing files: %1",e.toString()));
 						tc->handleError(i18n("Data files are missing"));
-						ret = false;
+						return false;
 					}
 					break;
 				case MissingFilesDlg::NEW_LOCATION_SELECTED:
-					ret = true;
 					break;
 			}
 		}
@@ -1264,8 +1260,7 @@ namespace kt
 			{
 				case MissingFilesDlg::CANCEL:
 					tc->handleError(i18n("Data file is missing"));
-					ret = false;
-					break;
+					return false;
 				case MissingFilesDlg::RECREATE:
 					try
 					{
@@ -1275,18 +1270,23 @@ namespace kt
 					{
 						gui->errorMsg(i18n("Cannot recreate data file: %1",e.toString()));
 						tc->handleError(i18n("Data file is missing"));
-						ret = false;
+						return false;
 					}
 					break;
 				case MissingFilesDlg::DO_NOT_DOWNLOAD:
-					ret = false;
-					break;
+					return false;
 				case MissingFilesDlg::NEW_LOCATION_SELECTED:
-					ret = true;
 					break;
 			}
 		}
 		
+		return true;
+	}
+
+
+	void Core::aboutToBeStarted(bt::TorrentInterface* tc,bool & ret)
+	{
+		ret = checkMissingFiles(tc);
 	}
 
 	void Core::emitCorruptedData(bt::TorrentInterface* tc)
