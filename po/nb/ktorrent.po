@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2011-03-01 13:52+0100\n"
-"PO-Revision-Date: 2011-01-29 18:54+0100\n"
+"PO-Revision-Date: 2011-03-08 21:49+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -402,6 +402,9 @@ msgid ""
 "following torrents. Torrents are not allowed to write to the same files. "
 "Please select a different location."
 msgstr ""
+"Hvis torrenten <b>%1</b> åpnes så vil en eller flere filer deles med "
+"følgende torrenter.  Torrenter har ikke lov til å skrive til de samme "
+"filene. Velg en annen plassering."
 
 #: ktorrent/dialogs/fileselectdlg.cpp:499
 msgid "<b>Unable to determine free space</b>"
@@ -436,24 +439,24 @@ msgstr "Eksisterende fil: <b>Ja</b>"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:616
 msgid "Clear History"
-msgstr ""
+msgstr "Tøm historien"
 
 #: ktorrent/dialogs/importdialog.cpp:225 ktorrent/dialogs/importdialog.cpp:257
 #, kde-format
 msgid "Cannot load the torrent file: %1"
-msgstr ""
+msgstr "Klarte ikke laste inn torrentfila: %1"
 
 #: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:67
 #: plugins/ipfilter/convertthread.cpp:167
 #: plugins/search/searchenginelist.cpp:192
 #, kde-format
 msgid "Cannot open %1: %2"
-msgstr ""
+msgstr "Klarte ikke åpne %1: %2"
 
 #: ktorrent/dialogs/importdialog.cpp:394 ktorrent/dialogs/importdialog.cpp:411
 #, kde-format
 msgid "Failed to create %1: %2"
-msgstr ""
+msgstr "Klarte ikke opprette %1: %2"
 
 #: ktorrent/dialogs/torrentcreatordlg.cpp:44
 msgid "Create A Torrent"
@@ -471,6 +474,8 @@ msgstr "Du må velge en fil eller en mappe."
 msgid ""
 "You have not added a tracker, are you sure you want to create this torrent?"
 msgstr ""
+"Du har ikke lagt til en sporer; er du sikker på at du vil lage denne "
+"torrenten?"
 
 #: ktorrent/dialogs/torrentcreatordlg.cpp:303
 msgid "You must add at least one node."
@@ -509,7 +514,7 @@ msgstr "Klarte ikke laste <b>%1</b>"
 #: ktorrent/dialogs/torrentmigratordlg.cpp:160
 #, kde-format
 msgid "Failed to import <b>%1</b>: %2"
-msgstr ""
+msgstr "Klarte ikke importere <b>%1</b>: %2"
 
 #: ktorrent/dialogs/torrentmigratordlg.cpp:164
 #, kde-format
@@ -655,8 +660,8 @@ msgstr "Købehandler"
 #: ktorrent/pref/qmpref.cpp:29
 msgid " minute"
 msgid_plural " minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " minutt"
+msgstr[1] " minutter"
 
 #: ktorrent/tools/magnetmodel.cpp:128
 msgid "Magnet Link"
@@ -1166,6 +1171,9 @@ msgid ""
 "Opening the torrent <b>%1</b>, would share one or more files with the "
 "following torrents. .Torrents are not allowed to write to the same files. "
 msgstr ""
+"Hvis torrenten <b>%1</b> åpnes. så vil en eller flere filer deles med "
+"følgende torrenter.  Torrenter har ikke lov til å skrive til de samme "
+"filene. "
 
 #: ktorrent/core.cpp:1022
 msgid "KTorrent is running one or more torrents"
@@ -1205,6 +1213,8 @@ msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing.\n"
 "Do you want to recreate it?"
 msgstr ""
+"Fila som inneholder data for torrenten «%1» mangler.\n"
+"Vil du bygge den opp igjen?"
 
 #: ktorrent/core.cpp:1262 ktorrent/core.cpp:1272
 msgid "Data file is missing"
@@ -1353,11 +1363,11 @@ msgstr "Statistikkmodul"
 
 #: ktorrent/main.cpp:106
 msgid "Christian Weilbach"
-msgstr ""
+msgstr "Christian Weilbach"
 
 #: ktorrent/main.cpp:106
 msgid "kio-magnet"
-msgstr ""
+msgstr "kio-magnet"
 
 #: ktorrent/main.cpp:108
 msgid "Mladen Babic"
@@ -1609,7 +1619,7 @@ msgstr "Aaron J. Seigo"
 
 #: ktorrent/main.cpp:141
 msgid "Drag and drop support for Plasma applet"
-msgstr ""
+msgstr "Dra og slipp-støtte i plasmoiden"
 
 #: ktorrent/main.cpp:142
 msgid "Ian Higginson"
@@ -1625,7 +1635,7 @@ msgstr "Amichai Rothman"
 
 #: ktorrent/main.cpp:143
 msgid "Patch to make the Plasma applet a popup applet"
-msgstr ""
+msgstr "Oppdatering for å gjøre om plasmoiden til et sprettoppvindu"
 
 #: ktorrent/main.cpp:144
 msgid "Leo Trubach"
@@ -1653,19 +1663,19 @@ msgstr "Funksjon for å slå av autentisering i nettgrensesnittet"
 
 #: ktorrent/main.cpp:148
 msgid "Jaroslaw Swierczynski"
-msgstr ""
+msgstr "Jaroslaw Swierczynski"
 
 #: ktorrent/main.cpp:148
 msgid "Exclusion patterns in the syndication plugin"
-msgstr ""
+msgstr "Mønster for utelukking i syndikerings-programtillegget"
 
 #: ktorrent/main.cpp:149
 msgid "Alexey Shildyakov "
-msgstr ""
+msgstr "Alexey Shildyakov "
 
 #: ktorrent/main.cpp:149
 msgid "Patch to rename single file torrents to the file inside"
-msgstr ""
+msgstr "Oppdatering for å endre navn på enkeltfil-torrenter til fila inni"
 
 #: ktorrent/main.cpp:153
 msgid "Silently open torrent given on URL"
@@ -1772,6 +1782,9 @@ msgid ""
 "td><td><b>%3</b></td></tr><tr><td>Transmitted:</td><td><b>%4</b></td></tr></"
 "table>"
 msgstr ""
+"<table><tr><td>Nedlastingsfart:</td><td><b>%1</b></td></"
+"tr><tr><td>Opplastingsfart:</td><td><b>%2</b></td></tr><tr><td>Mottatt:</"
+"td><td><b>%3</b></td></tr><tr><td>Sendt:</td><td><b>%4</b></td></tr></table>"
 
 #: ktorrent/trayicon.cpp:184
 #, kde-format
@@ -1832,7 +1845,7 @@ msgstr ""
 #: ktorrent/trayicon.cpp:280
 #, kde-format
 msgid "Cannot start <b>%1</b>: <br>"
-msgstr ""
+msgstr "Klarte ikke starte <b>%1</b>: <br/>"
 
 #: ktorrent/trayicon.cpp:287
 #, kde-format
@@ -1970,12 +1983,12 @@ msgstr "Fil"
 #: libktcore/torrent/basicjobprogresswidget.cpp:49
 #, kde-format
 msgid "%1: %2<br/>%3: %4"
-msgstr ""
+msgstr "%1: %2<br/>%3: %4"
 
 #: libktcore/torrent/basicjobprogresswidget.cpp:64
 #, kde-format
 msgid "Warning: %1"
-msgstr ""
+msgstr "Advarsel: %1"
 
 #: libktcore/torrent/chunkbar.cpp:93
 msgid ""
@@ -2036,23 +2049,29 @@ msgid ""
 "Not enough disk space for the following torrents. Do you want to start them "
 "anyway?"
 msgstr ""
+"Du har ikke nok diskplass til å laste ned følgende torrenter. Vil du starte "
+"dem likevel?"
 
 #: libktcore/torrent/queuemanager.cpp:280
 msgid ""
 "The following torrents have reached their maximum seed time. Do you want to "
 "start them anyway?"
 msgstr ""
+"Følgende torrenter har nådd sine lengste delingstider. Vil du starte dem "
+"likevel?"
 
 #: libktcore/torrent/queuemanager.cpp:309
 msgid ""
 "The following torrents have reached their maximum share ratio. Do you want "
 "to start them anyway?"
 msgstr ""
+"Følgende torrenter har nådd sine høyeste delingsforhold. Vil du starte dem "
+"likevel?"
 
 #: libktcore/torrent/queuemanager.cpp:737
 #, kde-format
 msgid "Error starting torrent %1: %2"
-msgstr ""
+msgstr "Feil ved å starte torrenten %1: %2"
 
 #: libktcore/torrent/queuemanager.cpp:739
 #: libktcore/torrent/queuemanager.cpp:755
@@ -2062,7 +2081,7 @@ msgstr "Feil"
 #: libktcore/torrent/queuemanager.cpp:753
 #, kde-format
 msgid "Error stopping torrent %1: %2"
-msgstr ""
+msgstr "Feil ved å stoppe torrenten %1: %2"
 
 #: libktcore/util/mmapfile.cpp:164
 msgid "Cannot write beyond end of the mmap buffer."
@@ -2207,7 +2226,7 @@ msgstr "Rediger et element"
 #. i18n: ectx: ToolBar (SchedulerToolbar)
 #: plugins/bwscheduler/scheduleeditor.cpp:42 rc.cpp:1763
 msgid "Bandwidth Schedule"
-msgstr ""
+msgstr "Båndbreddeplan"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:45
 msgid "Edit the bandwidth schedule"
@@ -2537,7 +2556,7 @@ msgstr "Bannlys deltaker"
 
 #: plugins/infowidget/peerviewmodel.cpp:88
 msgid " (µTP)"
-msgstr ""
+msgstr " (µTP)"
 
 #: plugins/infowidget/peerviewmodel.cpp:103
 msgctxt "Choked"
@@ -2751,7 +2770,7 @@ msgstr "Det finnes allerede en sporer kalt <b>%1</b>."
 
 #: plugins/infowidget/trackerview.cpp:135
 msgid "The following duplicate trackers were not added:"
-msgstr ""
+msgstr "Følgende dupliserte sporer ble ikke lagt til:"
 
 #: plugins/ipfilter/convertthread.cpp:72
 msgid "Loading txt file..."
@@ -2774,7 +2793,7 @@ msgstr "Gjør om …"
 #: plugins/ipfilter/downloadandconvertjob.cpp:236
 #, kde-format
 msgid "Automatic update of IP filter failed: %1"
-msgstr ""
+msgstr "Automatisk oppdatering av IP-filter mislyktes: %1"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:162
 #, kde-format
@@ -2785,6 +2804,7 @@ msgstr "Klarer ikke å åpne zip-fila %1."
 #, kde-format
 msgid "Automatic update of IP filter failed: cannot open zip file %1"
 msgstr ""
+"Automatisk oppdatering av IP-filter mislyktes: kan ikke åpne zip-fila %1"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:203
 #, kde-format
@@ -2796,12 +2816,14 @@ msgstr "Klarer ikke å finne blokkliste i zipfila %1."
 msgid ""
 "Automatic update of IP filter failed: cannot find blocklist in zip file %1"
 msgstr ""
+"Automatisk oppdatering av IP-filter mislyktes:  kan ikke finne blokkliste i "
+"zipfila %1."
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:42
 msgid " day"
 msgid_plural " days"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " dag"
+msgstr[1] " dager"
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:67
 #: plugins/ipfilter/ipblockingprefpage.cpp:89
@@ -2971,7 +2993,7 @@ msgstr "Filmavspiller"
 
 #: plugins/mediaplayer/mediaview.cpp:54
 msgid "Search media files"
-msgstr ""
+msgstr "Søk i mediafiler"
 
 #: plugins/mediaplayer/playlist.cpp:91
 #: plugins/syndication/feedwidgetmodel.cpp:82
@@ -3147,6 +3169,8 @@ msgid ""
 "Removing these scripts will fully delete them from your disk. Are you sure "
 "you want to do this?"
 msgstr ""
+"Hvis du fjerner disse skriptene blir de slettet fra disken. Er du sikker på "
+"at du vil gjøre dette?"
 
 #: plugins/scripting/scriptmanager.cpp:47
 msgid "Widget to start, stop and manage scripts"
@@ -3207,7 +3231,7 @@ msgstr "Klarte ikke tolke %1"
 #: plugins/search/searchenginelist.cpp:365
 #, kde-format
 msgid "URL: <b>%1</b>"
-msgstr ""
+msgstr "URL: <b>%1</b>"
 
 #: plugins/search/searchprefpage.cpp:105 plugins/search/searchprefpage.cpp:146
 msgid "Add a Search Engine"
@@ -3215,7 +3239,7 @@ msgstr "Legg til en søkemotor"
 
 #: plugins/search/searchprefpage.cpp:106
 msgid "Enter the hostname of the search engine (for example www.google.com):"
-msgstr ""
+msgstr "Skriv inn vertsnavnet til søkemotoren (f.eks. www.google.com):"
 
 #: plugins/search/searchprefpage.cpp:144
 #, kde-format
@@ -3301,12 +3325,12 @@ msgstr "Søk på nettet etter torrenter."
 #: plugins/search/webview.cpp:188
 #, kde-format
 msgid "Save %1 to"
-msgstr ""
+msgstr "Lagre %1 til"
 
 #: plugins/search/webview.cpp:205
 #, kde-format
 msgid "Cannot open <b>%1</b>: %2"
-msgstr ""
+msgstr "Klarte ikke åpne <b>%1</b>: %2"
 
 #: plugins/shutdown/shutdowndlg.cpp:34
 msgctxt "@title:window"
@@ -3620,15 +3644,15 @@ msgstr[1] ""
 #: plugins/syndication/feedlist.cpp:183
 #, kde-format
 msgid "<b>%1</b><br/><br/>Download failed: <b>%2</b>"
-msgstr ""
+msgstr "<b>%1</b><br/> <br/> Nedlasting mislyktes: <b>%2</b>"
 
 #: plugins/syndication/feedwidget.cpp:107
 msgid "Authentication Cookie"
-msgstr ""
+msgstr "Infokapsel for autentisering"
 
 #: plugins/syndication/feedwidget.cpp:107
 msgid "Enter the new authentication cookie"
-msgstr ""
+msgstr "Skriv inn den nye infokapselen for autentisering"
 
 #: plugins/syndication/feedwidget.cpp:126
 msgid "<b>OK</b>"
@@ -3641,7 +3665,7 @@ msgstr "<b>Ikke lastet inn</b>"
 #: plugins/syndication/feedwidget.cpp:132
 #, kde-format
 msgid "<b>Download Failed: %1</b>"
-msgstr ""
+msgstr "<b>Nedlasting mislyktes: %1</b>"
 
 #: plugins/syndication/feedwidget.cpp:135
 msgid "<b>Downloading</b>"
@@ -3677,7 +3701,7 @@ msgstr "Klarte ikke å laste kilden  %1."
 #: plugins/syndication/syndicationactivity.cpp:172
 #, kde-format
 msgid "Failed to create directory for feed %1: %2"
-msgstr ""
+msgstr "Klarte ikke å opprette mappe for kilden %1: %2"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:127
 #. i18n: ectx: property (text), widget (QPushButton, m_new_filter)
@@ -4400,7 +4424,7 @@ msgstr "Last ned til:"
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_download_location_history)
 #: rc.cpp:250
 msgid "History of all recently used download locations"
-msgstr ""
+msgstr "Historie over alle nylig brukte nedlastingssteder"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:41
 #. i18n: ectx: property (text), widget (QToolButton, m_download_location_history)
@@ -4472,6 +4496,7 @@ msgstr "Flytt når fullført til:"
 #: rc.cpp:262
 msgid "History of all recently used move when completed locations"
 msgstr ""
+"Historie over alle nylig brukte steder til flytting ved fullført nedlasting"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:96
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -4687,7 +4712,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, m_default_move_on_completion_enabled)
 #: rc.cpp:352
 msgid "Default move when completed location:"
-msgstr ""
+msgstr "Standard sted for å flytte til når fullført:"
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:63
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, m_default_move_on_completion_location)
@@ -4715,6 +4740,26 @@ msgid ""
 "be set to this. You can still override it, if you want to.</span></p></"
 "body></html>"
 msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Bitstream Vera Sans';\">Standard sted dit filer skal flyttes når "
+"torrenter fra denne gruppen er ferdig lastet. </span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Bitstream Vera Sans';\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Bitstream Vera Sans'; font-weight:600;\">Merk: </span><span style=\" "
+"font-family:'Bitstream Vera Sans';\">Dette brukes bare i filvalgsdialogen, "
+"Når du endrer gruppe, blir nedlastingsstedet i dialogen satt til dette. Du "
+"kan fremdeles overstyre det, hvis du vil.</span></p></body></html>"
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:73
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox)
@@ -6482,12 +6527,23 @@ msgid ""
 "family:'Bitstream Vera Sans';\">Open all torrents silently.</span></p></"
 "body></html>"
 msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Bitstream Vera Sans';\">Åpne alle torrenter stille.</span></p></"
+"body></html>"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:146
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openAllTorrentsSilently)
 #: rc.cpp:1060
 msgid "Open all torrents silently"
-msgstr ""
+msgstr "Åpne alle torrenter stille"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:156
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_suppressSleep)
@@ -6540,12 +6596,31 @@ msgid ""
 "torrent will be displayed as <span style=\" font-weight:600;\">linux-desktop."
 "</span></p></body></html>"
 msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Gi en torrent med bare én "
+"fil navnet til den fila. </p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Hvis for eksempel fila "
+"hete <span style=\" font-weight:600;\">linux-desktop.iso</span>, vil "
+"torrenten bli vist som<span style=\" font-weight:600;\">linux-desktop.</"
+"span></p></body></html>"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:175
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_autoRenameSingleFileTorrents)
 #: rc.cpp:1081
 msgid "Rename single file torrents with the name its only file"
 msgstr ""
+"Endre navn på enkeltfil-torrenter til navnet på den eneste fila i torrenten"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:17
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_manuallyControlTorrents)
@@ -6820,12 +6895,14 @@ msgid ""
 "Value at which the share ratio will be displayed with a green color. Lower "
 "ratios will be displayed in red."
 msgstr ""
+"Dette og høyere delingsforhold vil bli vist med grønn farge. Lavere "
+"delingsforhold blir vist  med rødt."
 
 #. i18n: file: ktorrent/pref/qmpref.ui:291
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: rc.cpp:1198
 msgid "Minimum good share ratio:"
-msgstr ""
+msgstr "Laveste gode deleforhold:"
 
 #. i18n: file: ktorrent/view/scanextender.ui:21
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
@@ -6978,12 +7055,14 @@ msgid ""
 "DHT is a distributed database which can be used to find more peers for a "
 "torrent."
 msgstr ""
+"DHT er en distribuert database som kan brukes til å finne flere deltakere "
+"for en torrent."
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:23
 #. i18n: ectx: property (text), widget (QCheckBox, dht)
 #: rc.cpp:1294
 msgid "Use DHT to find more peers"
-msgstr ""
+msgstr "Brukt DHT for å finne flere deltakere"
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:30
 #. i18n: ectx: property (toolTip), widget (QCheckBox, pex)
@@ -6992,12 +7071,14 @@ msgid ""
 "Peer exchange results in more peers being found, by exchanging information "
 "about peers with other peers."
 msgstr ""
+"Deltakerutveksling gjør at flere deltakere blir funnet, ved å utveksle "
+"informasjon om deltakere med andre deltakere."
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:33
 #. i18n: ectx: property (text), widget (QCheckBox, pex)
 #: rc.cpp:1300
 msgid "Use peer exchange to find more peers"
-msgstr ""
+msgstr "Bruk deltakerutveksling til å finne flere deltakere"
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:46
 #. i18n: ectx: property (toolTip), widget (QCheckBox, superseeding)
@@ -7023,12 +7104,31 @@ msgid ""
 "fully been established. Once there are multiple active seeders, this mode "
 "becomes useless.</p></body></html>"
 msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Superdelemodus er en "
+"spesiell delemodus som gir mye større effektivitet for kilden. Dette gjør at "
+"det brukes mindre nettkapasitet til å spre en torrent.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Merk: </span>Dette bør bare brukes når svermen ikke er helt "
+"etablert. Når det er flere aktive delere blir denne kjøremåten helt unyttig."
+"</p></body></html>"
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:49
 #. i18n: ectx: property (text), widget (QCheckBox, superseeding)
 #: rc.cpp:1312
 msgid "Use superseeding mode for seeding"
-msgstr ""
+msgstr "Bruk superdelingsmodus for deling"
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:58
 #. i18n: ectx: property (toolTip), widget (QCheckBox, move_on_completion_enabled)
@@ -7036,13 +7136,13 @@ msgstr ""
 msgid ""
 "Move the files of the torrent to a different directory when it has finished "
 "downloading."
-msgstr ""
+msgstr "Flytter filene til en annen mappe når torrenten er ferdig nedlastet."
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:68
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, move_on_completion_url)
 #: rc.cpp:1321
 msgid "Location to move the files to."
-msgstr ""
+msgstr "Sted som filene skal flyttes til."
 
 #. i18n: file: ktorrent/ktorrentui.rc:4
 #. i18n: ectx: Menu (file)
@@ -7060,19 +7160,19 @@ msgstr "&Vis"
 #. i18n: ectx: ToolBar (mainToolBar)
 #: rc.cpp:1330
 msgid "Main"
-msgstr ""
+msgstr "Hoved"
 
 #. i18n: file: ktorrent/kttorrentactivityui.rc:24
 #. i18n: ectx: Menu (GroupsMenu)
 #: rc.cpp:1336
 msgid "Groups"
-msgstr ""
+msgstr "Grupper"
 
 #. i18n: file: ktorrent/kttorrentactivityui.rc:37
 #. i18n: ectx: Menu (ViewMenu)
 #: rc.cpp:1339
 msgid "View"
-msgstr ""
+msgstr "Vis"
 
 #. i18n: file: ktorrent/kttorrentactivityui.rc:69
 #. i18n: ectx: Menu (ColumnsMenu)
@@ -7164,7 +7264,7 @@ msgstr "Utdypet modus"
 #. i18n: ectx: property (text), widget (QLabel, msg)
 #: rc.cpp:1390 rc.cpp:1393 rc.cpp:1396 rc.cpp:1399
 msgid "TextLabel"
-msgstr ""
+msgstr "TextLabel"
 
 #. i18n: file: libktcore/ktorrent.kcfg:10
 #. i18n: ectx: label, entry (maxDownloads), group (downloads)
@@ -8230,7 +8330,7 @@ msgstr "Torrentaktivitet"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: rc.cpp:2051
 msgid "Maximum number of visible lines:"
-msgstr ""
+msgstr "Største antall synlige linjer:"
 
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:10
 #. i18n: ectx: label, entry (torrenttracker), group (general)
@@ -8742,24 +8842,25 @@ msgstr "Tøm søkehistorien"
 #: rc.cpp:2308
 msgid "Reset the default action taken when a torrent is downloaded."
 msgstr ""
+"Tilbakestill standardhandlingen som blir gjprt når en torrent er lastet ned."
 
 #. i18n: file: plugins/search/searchpref.ui:47
 #. i18n: ectx: property (text), widget (QPushButton, m_reset_default_action)
 #: rc.cpp:2311
 msgid "Reset Default Torrent Action"
-msgstr ""
+msgstr "Tilbakestill standard torrent-handling"
 
 #. i18n: file: plugins/search/searchpref.ui:69
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_restorePreviousSession)
 #: rc.cpp:2314
 msgid "Restore all the active searches of the last session"
-msgstr ""
+msgstr "Gjenopprett alle aktive søk fra forrige økt"
 
 #. i18n: file: plugins/search/searchpref.ui:72
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_restorePreviousSession)
 #: rc.cpp:2317
 msgid "Restore previous searches"
-msgstr ""
+msgstr "Gjenopprett forrige søk"
 
 #. i18n: file: plugins/search/searchpref.ui:79
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openInExternal)
@@ -9356,7 +9457,7 @@ msgstr "Filtre"
 #. i18n: ectx: property (text), widget (KPushButton, m_cookies)
 #: rc.cpp:2718
 msgid "Cookies"
-msgstr ""
+msgstr "Informasjonskapsler"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:22
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -9539,7 +9640,7 @@ msgstr "Strenger er regulære uttrykk"
 #. i18n: ectx: property (text), widget (QCheckBox, m_all_words_must_match)
 #: rc.cpp:2764
 msgid "Item must match all strings to be included"
-msgstr ""
+msgstr "Element må gi treff på alle strenger for å bli tatt med"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:102
 #. i18n: ectx: property (text), widget (QCheckBox, m_match_case_sensitive)
@@ -9557,13 +9658,13 @@ msgstr "Skill mellom små og store bokstaver"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_5)
 #: rc.cpp:2770
 msgid "Exclusion Patterns"
-msgstr ""
+msgstr "Mønster for utelukking"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:167
 #. i18n: ectx: property (text), widget (QCheckBox, m_exclusion_all_must_match)
 #: rc.cpp:2810
 msgid "Item must match all strings to be excluded"
-msgstr ""
+msgstr "Element må gi treff på alle strenger for å bli utelatt"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:182
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
