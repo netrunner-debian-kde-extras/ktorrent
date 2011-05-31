@@ -18,6 +18,7 @@ Package: ktorrent
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, ktorrent-data (= ${source:Version}),
  libktorrent-l10n
+Recommends: krosspython
 Suggests: plasma-widget-ktorrent (= ${binary:Version})
 Description: BitTorrent client based on the KDE platform
  This package contains KTorrent, a BitTorrent peer-to-peer network client, that
