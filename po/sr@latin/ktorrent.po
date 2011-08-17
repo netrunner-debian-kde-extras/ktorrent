@@ -1,13 +1,13 @@
 # Translation of ktorrent.po into Serbian.
 # Slobodan Simic <slsimic@gmail.com>, 2007, 2008, 2009, 2010.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2010, 2011.
-# Dalibor Djuric <daliborddjuric@gmail.com>, 2010.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2010, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-04-23 13:50+0200\n"
-"PO-Revision-Date: 2011-01-15 13:07+0100\n"
+"POT-Creation-Date: 2011-08-03 07:44+0200\n"
+"PO-Revision-Date: 2011-05-20 18:29+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
@@ -246,11 +246,11 @@ msgstr "obezbeđena brzina otpremanja"
 #: ktorrent/dialogs/speedlimitsmodel.cpp:143
 #: ktorrent/dialogs/spinboxdelegate.cpp:41 plugins/infowidget/statustab.cpp:66
 #: rc.cpp:121 rc.cpp:130 rc.cpp:376 rc.cpp:385 rc.cpp:394 rc.cpp:403
-#: rc.cpp:706 rc.cpp:715 rc.cpp:724 rc.cpp:736 rc.cpp:1099 rc.cpp:1108
-#: rc.cpp:1183 rc.cpp:1192 rc.cpp:1204 rc.cpp:1555 rc.cpp:1564 rc.cpp:1576
-#: rc.cpp:1585 rc.cpp:1600 rc.cpp:1606 rc.cpp:1624 rc.cpp:1636 rc.cpp:1699
-#: rc.cpp:1708 rc.cpp:1720 rc.cpp:1729 rc.cpp:1744 rc.cpp:1750 rc.cpp:1898
-#: rc.cpp:1904
+#: rc.cpp:706 rc.cpp:715 rc.cpp:724 rc.cpp:736 rc.cpp:1093 rc.cpp:1102
+#: rc.cpp:1177 rc.cpp:1186 rc.cpp:1198 rc.cpp:1549 rc.cpp:1558 rc.cpp:1570
+#: rc.cpp:1579 rc.cpp:1594 rc.cpp:1600 rc.cpp:1618 rc.cpp:1630 rc.cpp:1693
+#: rc.cpp:1702 rc.cpp:1714 rc.cpp:1723 rc.cpp:1738 rc.cpp:1744 rc.cpp:1891
+#: rc.cpp:1897
 msgid "No limit"
 msgstr "bez ograničenja"
 
@@ -330,9 +330,9 @@ msgstr "nema obezbeđene brzine"
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:189
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_ss_upload_limit)
 #: ktorrent/dialogs/spinboxdelegate.cpp:39 rc.cpp:124 rc.cpp:133 rc.cpp:379
-#: rc.cpp:388 rc.cpp:727 rc.cpp:739 rc.cpp:945 rc.cpp:1558 rc.cpp:1567
-#: rc.cpp:1579 rc.cpp:1588 rc.cpp:1627 rc.cpp:1639 rc.cpp:1702 rc.cpp:1711
-#: rc.cpp:1723 rc.cpp:1732
+#: rc.cpp:388 rc.cpp:727 rc.cpp:739 rc.cpp:945 rc.cpp:1552 rc.cpp:1561
+#: rc.cpp:1573 rc.cpp:1582 rc.cpp:1621 rc.cpp:1633 rc.cpp:1696 rc.cpp:1705
+#: rc.cpp:1717 rc.cpp:1726
 msgid " KiB/s"
 msgstr " kiB/s"
 
@@ -409,6 +409,9 @@ msgid ""
 "following torrents. Torrents are not allowed to write to the same files. "
 "Please select a different location."
 msgstr ""
+"Otvaranje torenta <b>%1</b> dovelo bi do deljenja jednog ili više fajlova sa "
+"sledećim torentima. Torentima nije dozvoljeno da pišu u iste fajlove. "
+"Izaberite neku drugu lokaciju."
 
 #: ktorrent/dialogs/fileselectdlg.cpp:499
 msgid "<b>Unable to determine free space</b>"
@@ -442,28 +445,23 @@ msgid "Existing file: <b>Yes</b>"
 msgstr "Postojeći fajl: <b>da</b>"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:616
-#, fuzzy
-#| msgid "Clear Search History"
 msgid "Clear History"
-msgstr "Očisti istorijat pretrage"
+msgstr "Očisti istorijat"
 
 #: ktorrent/dialogs/importdialog.cpp:225 ktorrent/dialogs/importdialog.cpp:257
-#, fuzzy, kde-format
-#| msgid "Cannot load the torrent file : %1"
+#, kde-format
 msgid "Cannot load the torrent file: %1"
 msgstr "Ne mogu da učitam torent: %1"
 
 #: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:67
 #: plugins/ipfilter/convertthread.cpp:167
 #: plugins/search/searchenginelist.cpp:192
-#, fuzzy, kde-format
-#| msgid "Cannot open %1 : %2"
+#, kde-format
 msgid "Cannot open %1: %2"
 msgstr "Ne mogu da otvorim %1: %2"
 
 #: ktorrent/dialogs/importdialog.cpp:394 ktorrent/dialogs/importdialog.cpp:411
-#, fuzzy, kde-format
-#| msgid "Failed to create %1 : %2"
+#, kde-format
 msgid "Failed to create %1: %2"
 msgstr "Ne mogu da napravim %1: %2"
 
@@ -481,10 +479,6 @@ msgid "You must select a file or a folder."
 msgstr "Morate izabrati fajl ili fasciklu."
 
 #: ktorrent/dialogs/torrentcreatordlg.cpp:295
-#, fuzzy
-#| msgid ""
-#| "You have not added a tracker, are you sure you want to create this "
-#| "torrent ?"
 msgid ""
 "You have not added a tracker, are you sure you want to create this torrent?"
 msgstr "Niste dodali pratilac. Želite li zaista da napravite ovaj torent?"
@@ -527,8 +521,7 @@ msgid "Failed to load <b>%1</b>"
 msgstr "Ne mogu da učitam <b>%1</b>"
 
 #: ktorrent/dialogs/torrentmigratordlg.cpp:160
-#, fuzzy, kde-format
-#| msgid "Failed to import <b>%1</b> : %2"
+#, kde-format
 msgid "Failed to import <b>%1</b>: %2"
 msgstr "Ne mogu da učitam <b>%1</b>: %2"
 
@@ -671,27 +664,25 @@ msgstr "(= %1/s)"
 #. i18n: ectx: property (title), widget (QGroupBox, m_qm_group_box)
 #. i18n: file: ktorrent/tools/queuemanagerwidget.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, QueueManagerWidget)
-#: ktorrent/pref/qmpref.cpp:25 ktorrent/torrentactivity.cpp:82 rc.cpp:976
-#: rc.cpp:1090 rc.cpp:1207
+#: ktorrent/pref/qmpref.cpp:25 ktorrent/torrentactivity.cpp:82 rc.cpp:972
+#: rc.cpp:1084 rc.cpp:1201
 msgid "Queue Manager"
 msgstr "Menadžer redosleda"
 
 #: ktorrent/pref/qmpref.cpp:29
-#, fuzzy
-#| msgid " minutes"
 msgid " minute"
 msgid_plural " minutes"
 msgstr[0] " minuta"
 msgstr[1] " minuta"
 msgstr[2] " minuta"
-msgstr[3] " minuta"
+msgstr[3] " minut"
 
 #: ktorrent/tools/magnetmodel.cpp:128
 msgid "Magnet Link"
 msgstr "Magnetska veza"
 
 #: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:123
-#: ktorrent/view/viewmodel.cpp:437 ktorrent/trayicon.cpp:150
+#: ktorrent/view/viewmodel.cpp:437 ktorrent/trayicon.cpp:153
 #: plugins/infowidget/webseedsmodel.cpp:127
 #: plugins/infowidget/trackermodel.cpp:148
 msgid "Status"
@@ -710,8 +701,8 @@ msgstr "Stanje"
 #. i18n: file: plugins/stats/Spd.ui:31
 #. i18n: ectx: property (title), widget (QGroupBox, PeersSpdGbw)
 #: ktorrent/tools/magnetmodel.cpp:130
-#: plugins/infowidget/infowidgetplugin.cpp:222 rc.cpp:2401 rc.cpp:2515
-#: rc.cpp:2551
+#: plugins/infowidget/infowidgetplugin.cpp:222 rc.cpp:2388 rc.cpp:2502
+#: rc.cpp:2538
 msgid "Peers"
 msgstr "Vršnjaci"
 
@@ -816,7 +807,7 @@ msgstr "Pomera torent na vrh redosleda"
 #. i18n: ectx: property (text), widget (KPushButton, m_move_up)
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:50
 #. i18n: ectx: property (text), widget (KPushButton, m_move_up)
-#: ktorrent/tools/queuemanagerwidget.cpp:74 rc.cpp:196 rc.cpp:1775
+#: ktorrent/tools/queuemanagerwidget.cpp:74 rc.cpp:196 rc.cpp:1769
 msgid "Move Up"
 msgstr "Pomeri nagore"
 
@@ -832,7 +823,7 @@ msgstr "Pomera torent nagore u redosledu"
 #. i18n: ectx: property (text), widget (KPushButton, m_move_down)
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:57
 #. i18n: ectx: property (text), widget (KPushButton, m_move_down)
-#: ktorrent/tools/queuemanagerwidget.cpp:77 rc.cpp:199 rc.cpp:1778
+#: ktorrent/tools/queuemanagerwidget.cpp:77 rc.cpp:199 rc.cpp:1772
 msgid "Move Down"
 msgstr "Pomeri nadole"
 
@@ -859,7 +850,7 @@ msgstr "<font color=\"red\">%1</font>"
 
 #. i18n: file: ktorrent/kttorrentactivityui.rc:70
 #. i18n: ectx: Menu (ColumnsMenu)
-#: ktorrent/view/view.cpp:79 rc.cpp:1345
+#: ktorrent/view/view.cpp:79 rc.cpp:1339
 msgid "Columns"
 msgstr "Kolone"
 
@@ -990,7 +981,7 @@ msgstr "Premesti podatke"
 
 #. i18n: file: plugins/stats/Settings.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, StatsSettingsWgt)
-#: ktorrent/view/viewmanager.cpp:646 rc.cpp:2488
+#: ktorrent/view/viewmanager.cpp:646 rc.cpp:2475
 msgid "Settings"
 msgstr "Postavke"
 
@@ -1008,13 +999,13 @@ msgstr "Proveri sve podatke torenta"
 
 #. i18n: file: ktorrent/kttorrentactivityui.rc:56
 #. i18n: ectx: Menu (OpenDirMenu)
-#: ktorrent/view/viewmanager.cpp:672 rc.cpp:1336
+#: ktorrent/view/viewmanager.cpp:672 rc.cpp:1330
 msgid "Open Directory"
 msgstr "Otvori fasciklu"
 
 #. i18n: file: ktorrent/kttorrentactivityui.rc:62
 #. i18n: ectx: Menu (GroupsSubMenu)
-#: ktorrent/view/viewmanager.cpp:675 rc.cpp:1339
+#: ktorrent/view/viewmanager.cpp:675 rc.cpp:1333
 msgid "Add to Group"
 msgstr "Dodaj u grupu"
 
@@ -1206,6 +1197,8 @@ msgid ""
 "Opening the torrent <b>%1</b>, would share one or more files with the "
 "following torrents. .Torrents are not allowed to write to the same files. "
 msgstr ""
+"Otvaranje torenta <b>%1</b> dovelo bi do deljenja jednog ili više fajlova sa "
+"sledećim torentima. Torentima nije dozvoljeno da pišu u iste fajlove."
 
 #: ktorrent/core.cpp:1022
 msgid "KTorrent is running one or more torrents"
@@ -1240,10 +1233,7 @@ msgid "Cannot recreate missing files: %1"
 msgstr "Ne mogu da napravim nedostajuće fajlove: %1"
 
 #: ktorrent/core.cpp:1255
-#, fuzzy, kde-format
-#| msgid ""
-#| "The file where the data is saved of the torrent \"%1\" is missing. \n"
-#| "Do you want to recreate it?"
+#, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing.\n"
 "Do you want to recreate it?"
@@ -1341,13 +1331,11 @@ msgstr "Priključak statistike"
 
 #: ktorrent/main.cpp:106
 msgid "Christian Weilbach"
-msgstr ""
+msgstr "Kristijan Vajlbah"
 
 #: ktorrent/main.cpp:106
-#, fuzzy
-#| msgid "Magnet"
 msgid "kio-magnet"
-msgstr "Magnet"
+msgstr "U/I zahvat za magnet"
 
 #: ktorrent/main.cpp:108
 msgid "Mladen Babic"
@@ -1600,8 +1588,6 @@ msgid "Aaron J. Seigo"
 msgstr "Aron Dž. Sajgo"
 
 #: ktorrent/main.cpp:141
-#, fuzzy
-#| msgid "Drag and drop support for plasma applet"
 msgid "Drag and drop support for Plasma applet"
 msgstr "Podrška za prevlačenje za plasma aplet"
 
@@ -1618,8 +1604,6 @@ msgid "Amichai Rothman"
 msgstr "Amikaj Rotman"
 
 #: ktorrent/main.cpp:143
-#, fuzzy
-#| msgid "Patch to make the plasma applet a popup applet"
 msgid "Patch to make the Plasma applet a popup applet"
 msgstr "Zakrpa za pretvaranje plasma apleta u iskačući"
 
@@ -1649,21 +1633,19 @@ msgstr "Mogućnost isključenja autentifikacije u veb sučelju"
 
 #: ktorrent/main.cpp:148
 msgid "Jaroslaw Swierczynski"
-msgstr ""
+msgstr "Jaroslav Svjerčinjski"
 
 #: ktorrent/main.cpp:148
 msgid "Exclusion patterns in the syndication plugin"
-msgstr ""
+msgstr "Obrasci isključivanja u priključku za sindikaciju"
 
 #: ktorrent/main.cpp:149
 msgid "Alexey Shildyakov "
-msgstr ""
+msgstr "Aleksej Šiljdjakov"
 
 #: ktorrent/main.cpp:149
-#, fuzzy
-#| msgid "Patch to change file priorities in the webgui"
 msgid "Patch to rename single file torrents to the file inside"
-msgstr "Zakrpa za menjanje prioriteta fajla u veb sučelju"
+msgstr "Zakrpa za preimenovanje torenata od jednog fajla na ime tog fajla"
 
 #: ktorrent/main.cpp:153
 msgid "Silently open torrent given on URL"
@@ -1701,7 +1683,7 @@ msgstr ""
 #. i18n: file: ktorrent/kttorrentactivityui.rc:77
 #. i18n: ectx: ToolBar (TorrentsToolBar)
 #: ktorrent/torrentactivity.cpp:48 libktcore/interfaces/functions.cpp:186
-#: rc.cpp:1327 rc.cpp:1348
+#: rc.cpp:1321 rc.cpp:1342
 msgid "Torrents"
 msgstr "Torenti"
 
@@ -1746,7 +1728,7 @@ msgstr "Suspenduj torente"
 #. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:99
 #. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
-#: ktorrent/torrentactivity.cpp:122 rc.cpp:1549 rc.cpp:1693
+#: ktorrent/torrentactivity.cpp:122 rc.cpp:1543 rc.cpp:1687
 msgid "Suspend all running torrents"
 msgstr "Suspenduj sve pokrenute torente"
 
@@ -1757,144 +1739,6 @@ msgstr "Grupni prikaz vidljiv"
 #: ktorrent/torrentactivity.cpp:128
 msgid "Show or hide the group view"
 msgstr "Prikazuje ili skriva grupni prikaz"
-
-#: ktorrent/trayicon.cpp:108
-msgid "Set max upload speed"
-msgstr "Postavi najveću brzinu otpremanja"
-
-#: ktorrent/trayicon.cpp:110
-msgid "Set max download speed"
-msgstr "Postavi najveću brzinu preuzimanja"
-
-#: ktorrent/trayicon.cpp:139
-#, fuzzy, kde-format
-#| msgid ""
-#| "<table><tr><td>Download&nbsp;speed:</td><td><font color='#1c9a1c'>%1</"
-#| "font></td></tr><tr><td>Upload&nbsp;speed:</td><td><font color='#990000'>"
-#| "%2</font></td></tr><tr><td>Received:</td><td><font color='#1c9a1c'>%3</"
-#| "font></td></tr><tr><td>Transmitted:</td><td><font color='#990000'>%4</"
-#| "font></td></tr></table>"
-msgid ""
-"<table><tr><td>Download&nbsp;speed:</td><td><b>%1</b></td></"
-"tr><tr><td>Upload&nbsp;speed:</td><td><b>%2</b></td></tr><tr><td>Received:</"
-"td><td><b>%3</b></td></tr><tr><td>Transmitted:</td><td><b>%4</b></td></tr></"
-"table>"
-msgstr ""
-"<table><tr><td>Preuzimanje:</td><td><font color='#1c9a1c'>%1</font></td></"
-"tr><tr><td>Otpremanje:</td><td><font color='#990000'>%2</font></td></"
-"tr><tr><td>Primljeno:</td><td><font color='#1c9a1c'>%3</font></td></"
-"tr><tr><td>Odaslato:</td><td><font color='#990000'>%4</font></td></tr></"
-"table>"
-
-#: ktorrent/trayicon.cpp:184
-#, kde-format
-msgid "<b>%1</b> has completed downloading.<br>Average speed: %2 DL / %3 UL."
-msgstr "Završeno preuzimanje <b>%1</b>.<br/>Prosečna brzina: %2 pr. / %3 sl."
-
-#: ktorrent/trayicon.cpp:202
-#, kde-format
-msgid ""
-"<b>%1</b> has reached its maximum share ratio of %2 and has been stopped."
-"<br>Uploaded %3 at an average speed of %4."
-msgstr ""
-"Dostignut najveći odnos deljenja %2 za <b>%1</b>, pa je zaustavljen.<br/"
-">Otpremljeno %3 pri prosečnoj brzini %4."
-
-#: ktorrent/trayicon.cpp:221
-#, kde-format
-msgid ""
-"<b>%1</b> has reached its maximum seed time of %2 hours and has been stopped."
-"<br>Uploaded %3 at an average speed of %4."
-msgstr ""
-"Dostignuto najveće vreme sejanja od %2 sata za <b>%1</b>, pa je zaustavljen."
-"<br/>Otpremljeno %3 pri prosečnoj brzini %4."
-
-#: ktorrent/trayicon.cpp:236
-#, kde-format
-msgid "<b>%1</b> has been stopped with the following error: <br>%2"
-msgstr "<b>%1</b> je zaustavljen sa sledećom greškom: <br/>%2"
-
-#: ktorrent/trayicon.cpp:247
-#, kde-format
-msgid ""
-"Corrupted data has been found in the torrent <b>%1</b><br>It would be a good "
-"idea to do a data integrity check on the torrent."
-msgstr ""
-"Nađeni su oštećeni podaci u torentu <b>%1</b><br/>Bilo bi dobro da proverite "
-"celovitost podataka ovog torenta."
-
-#: ktorrent/trayicon.cpp:264
-#, kde-format
-msgid ""
-"<b>%1</b> has reached its maximum share ratio of %2 and cannot be enqueued. "
-"<br>Remove the limit manually if you want to continue seeding."
-msgstr ""
-"Dostignut najveći odnos deljenja %2 za <b>%1</b>, pa se ne može ponovo "
-"staviti u red. Ručno uklonite ograničenje ako želite da nastavite sejanje."
-
-#: ktorrent/trayicon.cpp:268
-#, kde-format
-msgid ""
-"<b>%1</b> has reached its maximum seed time of %2 hours and cannot be "
-"enqueued. <br>Remove the limit manually if you want to continue seeding."
-msgstr ""
-"Dostignuto najveće vreme sejanja od %2 sati za <b>%1</b>, pa se ne može "
-"ponovo staviti u red. Ručno uklonite ograničenje ako želite da nastavite "
-"sejanje."
-
-#: ktorrent/trayicon.cpp:280
-#, fuzzy, kde-format
-#| msgid "Cannot start <b>%1</b> : <br>"
-msgid "Cannot start <b>%1</b>: <br>"
-msgstr "Ne mogu da pokrenem <b>%1</b>: <br/>"
-
-#: ktorrent/trayicon.cpp:287
-#, kde-format
-msgid "Cannot seed more than 1 torrent. <br>"
-msgid_plural "Cannot seed more than %1 torrents. <br>"
-msgstr[0] "<html>Ne mogu da sejem više od %1 torenta. <br/></html>"
-msgstr[1] "<html>Ne mogu da sejem više od %1 torenta. <br/></html>"
-msgstr[2] "<html>Ne mogu da sejem više od %1 torenata. <br/></html>"
-msgstr[3] "<html>Ne mogu da sejem više od jednog torenta. <br/></html>"
-
-#: ktorrent/trayicon.cpp:292
-#, kde-format
-msgid "Cannot download more than 1 torrent. <br>"
-msgid_plural "Cannot download more than %1 torrents. <br>"
-msgstr[0] "<html>Ne mogu da preuzimam više od %1 torenta. <br/></html>"
-msgstr[1] "<html>Ne mogu da preuzimam više od %1 torenta. <br/></html>"
-msgstr[2] "<html>Ne mogu da preuzimam više od %1 torenata. <br/></html>"
-msgstr[3] "<html>Ne mogu da preuzimam više od jednog torenta. <br/></html>"
-
-#: ktorrent/trayicon.cpp:295
-msgid "Go to Settings -> Configure KTorrent, if you want to change the limits."
-msgstr ""
-"Ograničenja možete promeniti pod <interface>Postavke->Podesi KTorrent...</"
-"interface>."
-
-#: ktorrent/trayicon.cpp:299
-msgid "There is not enough diskspace available."
-msgstr "Nema dovoljno slobodnog prostora."
-
-#: ktorrent/trayicon.cpp:312
-#, kde-format
-msgid ""
-"Your disk is running out of space.<br /><b>%1</b> is being downloaded to '"
-"%2'."
-msgstr "Ponestaje prostora na disku.<br /><b>%1</b> se preuzima u „%2“."
-
-#: ktorrent/trayicon.cpp:315
-msgid "Torrent has been stopped.<br />"
-msgstr "<html>Torent je zaustavljen.<br /></html>"
-
-#: ktorrent/trayicon.cpp:351
-msgid "Speed limit in KiB/s"
-msgstr "Ograničenje u kiB/s"
-
-#: ktorrent/trayicon.cpp:353 plugins/bwscheduler/schedulegraphicsitem.cpp:83
-#: plugins/bwscheduler/schedulegraphicsitem.cpp:84
-msgid "Unlimited"
-msgstr "neograničeno"
 
 #: ktorrent/gui.cpp:274 ktorrent/gui.cpp:289
 msgid "Open Location"
@@ -1953,6 +1797,135 @@ msgstr "Uvozi sve torente iz KDE3 verzije KTorrenta"
 #: ktorrent/gui.cpp:454
 msgid "Show/Hide KTorrent"
 msgstr "Prikaži/sakrij KTorrent"
+
+#: ktorrent/trayicon.cpp:110
+msgid "Set max upload speed"
+msgstr "Postavi najveću brzinu otpremanja"
+
+#: ktorrent/trayicon.cpp:112
+msgid "Set max download speed"
+msgstr "Postavi najveću brzinu preuzimanja"
+
+#: ktorrent/trayicon.cpp:142
+#, kde-format
+msgid ""
+"<table><tr><td>Download&nbsp;speed:</td><td><b>%1</b></td></"
+"tr><tr><td>Upload&nbsp;speed:</td><td><b>%2</b></td></tr><tr><td>Received:</"
+"td><td><b>%3</b></td></tr><tr><td>Transmitted:</td><td><b>%4</b></td></tr></"
+"table>"
+msgstr ""
+"<table><tr><td>Preuzimanje:</td><td><b>%1</b></td></tr><tr><td>Otpremanje:</"
+"td><td><b>%2</b></td></tr><tr><td>Primljeno:</td><td><b>%3</b></td></"
+"tr><tr><td>Odaslato:</td><td><b>%4</b></td></tr></table>"
+
+#: ktorrent/trayicon.cpp:187
+#, kde-format
+msgid "<b>%1</b> has completed downloading.<br>Average speed: %2 DL / %3 UL."
+msgstr "Završeno preuzimanje <b>%1</b>.<br/>Prosečna brzina: %2 pr. / %3 sl."
+
+#: ktorrent/trayicon.cpp:205
+#, kde-format
+msgid ""
+"<b>%1</b> has reached its maximum share ratio of %2 and has been stopped."
+"<br>Uploaded %3 at an average speed of %4."
+msgstr ""
+"Dostignut najveći odnos deljenja %2 za <b>%1</b>, pa je zaustavljen.<br/"
+">Otpremljeno %3 pri prosečnoj brzini %4."
+
+#: ktorrent/trayicon.cpp:224
+#, kde-format
+msgid ""
+"<b>%1</b> has reached its maximum seed time of %2 hours and has been stopped."
+"<br>Uploaded %3 at an average speed of %4."
+msgstr ""
+"Dostignuto najveće vreme sejanja od %2 sata za <b>%1</b>, pa je zaustavljen."
+"<br/>Otpremljeno %3 pri prosečnoj brzini %4."
+
+#: ktorrent/trayicon.cpp:239
+#, kde-format
+msgid "<b>%1</b> has been stopped with the following error: <br>%2"
+msgstr "<b>%1</b> je zaustavljen sa sledećom greškom: <br/>%2"
+
+#: ktorrent/trayicon.cpp:250
+#, kde-format
+msgid ""
+"Corrupted data has been found in the torrent <b>%1</b><br>It would be a good "
+"idea to do a data integrity check on the torrent."
+msgstr ""
+"Nađeni su oštećeni podaci u torentu <b>%1</b><br/>Bilo bi dobro da proverite "
+"celovitost podataka ovog torenta."
+
+#: ktorrent/trayicon.cpp:267
+#, kde-format
+msgid ""
+"<b>%1</b> has reached its maximum share ratio of %2 and cannot be enqueued. "
+"<br>Remove the limit manually if you want to continue seeding."
+msgstr ""
+"Dostignut najveći odnos deljenja %2 za <b>%1</b>, pa se ne može ponovo "
+"staviti u red. Ručno uklonite ograničenje ako želite da nastavite sejanje."
+
+#: ktorrent/trayicon.cpp:271
+#, kde-format
+msgid ""
+"<b>%1</b> has reached its maximum seed time of %2 hours and cannot be "
+"enqueued. <br>Remove the limit manually if you want to continue seeding."
+msgstr ""
+"Dostignuto najveće vreme sejanja od %2 sati za <b>%1</b>, pa se ne može "
+"ponovo staviti u red. Ručno uklonite ograničenje ako želite da nastavite "
+"sejanje."
+
+#: ktorrent/trayicon.cpp:283
+#, kde-format
+msgid "Cannot start <b>%1</b>: <br>"
+msgstr "Ne mogu da pokrenem <b>%1</b>: <br/>"
+
+#: ktorrent/trayicon.cpp:290
+#, kde-format
+msgid "Cannot seed more than 1 torrent. <br>"
+msgid_plural "Cannot seed more than %1 torrents. <br>"
+msgstr[0] "<html>Ne mogu da sejem više od %1 torenta. <br/></html>"
+msgstr[1] "<html>Ne mogu da sejem više od %1 torenta. <br/></html>"
+msgstr[2] "<html>Ne mogu da sejem više od %1 torenata. <br/></html>"
+msgstr[3] "<html>Ne mogu da sejem više od jednog torenta. <br/></html>"
+
+#: ktorrent/trayicon.cpp:295
+#, kde-format
+msgid "Cannot download more than 1 torrent. <br>"
+msgid_plural "Cannot download more than %1 torrents. <br>"
+msgstr[0] "<html>Ne mogu da preuzimam više od %1 torenta. <br/></html>"
+msgstr[1] "<html>Ne mogu da preuzimam više od %1 torenta. <br/></html>"
+msgstr[2] "<html>Ne mogu da preuzimam više od %1 torenata. <br/></html>"
+msgstr[3] "<html>Ne mogu da preuzimam više od jednog torenta. <br/></html>"
+
+#: ktorrent/trayicon.cpp:298
+msgid "Go to Settings -> Configure KTorrent, if you want to change the limits."
+msgstr ""
+"Ograničenja možete promeniti pod <interface>Postavke->Podesi KTorrent...</"
+"interface>."
+
+#: ktorrent/trayicon.cpp:302
+msgid "There is not enough diskspace available."
+msgstr "Nema dovoljno slobodnog prostora."
+
+#: ktorrent/trayicon.cpp:315
+#, kde-format
+msgid ""
+"Your disk is running out of space.<br /><b>%1</b> is being downloaded to '"
+"%2'."
+msgstr "Ponestaje prostora na disku.<br /><b>%1</b> se preuzima u „%2“."
+
+#: ktorrent/trayicon.cpp:318
+msgid "Torrent has been stopped.<br />"
+msgstr "<html>Torent je zaustavljen.<br /></html>"
+
+#: ktorrent/trayicon.cpp:354
+msgid "Speed limit in KiB/s"
+msgstr "Ograničenje u kiB/s"
+
+#: ktorrent/trayicon.cpp:356 plugins/bwscheduler/schedulegraphicsitem.cpp:83
+#: plugins/bwscheduler/schedulegraphicsitem.cpp:84
+msgid "Unlimited"
+msgstr "neograničeno"
 
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"
@@ -2098,10 +2071,6 @@ msgid "Insufficient disk space for %1"
 msgstr "Nedovoljno prostora za %1"
 
 #: libktcore/torrent/queuemanager.cpp:241
-#, fuzzy
-#| msgid ""
-#| "Not enough disk space for the following torrents. Do you want to start "
-#| "them anyway ?"
 msgid ""
 "Not enough disk space for the following torrents. Do you want to start them "
 "anyway?"
@@ -2110,10 +2079,6 @@ msgstr ""
 "pokrenete?"
 
 #: libktcore/torrent/queuemanager.cpp:280
-#, fuzzy
-#| msgid ""
-#| "The following torrents have reached their maximum seed time. Do you want "
-#| "to start them anyway ?"
 msgid ""
 "The following torrents have reached their maximum seed time. Do you want to "
 "start them anyway?"
@@ -2122,10 +2087,6 @@ msgstr ""
 "pokrenete?"
 
 #: libktcore/torrent/queuemanager.cpp:309
-#, fuzzy
-#| msgid ""
-#| "The following torrents have reached their maximum share ratio. Do you "
-#| "want to start them anyway ?"
 msgid ""
 "The following torrents have reached their maximum share ratio. Do you want "
 "to start them anyway?"
@@ -2134,8 +2095,7 @@ msgstr ""
 "pokrenete?"
 
 #: libktcore/torrent/queuemanager.cpp:737
-#, fuzzy, kde-format
-#| msgid "Error starting torrent %1 : %2"
+#, kde-format
 msgid "Error starting torrent %1: %2"
 msgstr "Greška pri pokretanju torenta %1: %2"
 
@@ -2145,21 +2105,19 @@ msgid "Error"
 msgstr "Greška"
 
 #: libktcore/torrent/queuemanager.cpp:753
-#, fuzzy, kde-format
-#| msgid "Error stopping torrent %1 : %2"
+#, kde-format
 msgid "Error stopping torrent %1: %2"
 msgstr "Greška pri zaustavljanju torenta %1: %2"
 
 #: libktcore/torrent/basicjobprogresswidget.cpp:53
 #, kde-format
 msgid "%1: %2<br/>%3: %4"
-msgstr ""
+msgstr "<html>%1: %2<br/>%3: %4</html>"
 
 #: libktcore/torrent/basicjobprogresswidget.cpp:68
-#, fuzzy, kde-format
-#| msgid "Opening %1"
+#, kde-format
 msgid "Warning: %1"
-msgstr "Otvaram %1"
+msgstr "Upozorenje: %1"
 
 #: libktcore/util/mmapfile.cpp:164
 msgid "Cannot write beyond end of the mmap buffer."
@@ -2167,7 +2125,7 @@ msgstr "Ne mogu da pišem nakon kraja mmap bafera."
 
 #. i18n: file: plasma/applet/appletconfig.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, AppletConfig)
-#: plasma/applet/applet.cpp:234 rc.cpp:1510
+#: plasma/applet/applet.cpp:234 rc.cpp:1504
 msgid "Applet"
 msgstr "Aplet"
 
@@ -2297,17 +2255,15 @@ msgstr ""
 
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, EditItemDlg)
-#: plugins/bwscheduler/edititemdlg.cpp:46 rc.cpp:1669
+#: plugins/bwscheduler/edititemdlg.cpp:46 rc.cpp:1663
 msgid "Edit an item"
 msgstr "Uredi stavku"
 
 #. i18n: file: plugins/bwscheduler/ktbwschedulerpluginui.rc:4
 #. i18n: ectx: ToolBar (SchedulerToolbar)
-#: plugins/bwscheduler/scheduleeditor.cpp:42 rc.cpp:1757
-#, fuzzy
-#| msgid "Bandwidth Scheduler"
+#: plugins/bwscheduler/scheduleeditor.cpp:42 rc.cpp:1751
 msgid "Bandwidth Schedule"
-msgstr "Raspoređivač protoka"
+msgstr "Raspored protoka"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:45
 msgid "Edit the bandwidth schedule"
@@ -2360,7 +2316,7 @@ msgstr ""
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, DownloadOrderWidget)
 #: plugins/downloadorder/downloadorderdialog.cpp:38
-#: plugins/downloadorder/downloadorderplugin.cpp:46 rc.cpp:1760
+#: plugins/downloadorder/downloadorderplugin.cpp:46 rc.cpp:1754
 msgid "File Download Order"
 msgstr "Redosled preuzimanja fajlova"
 
@@ -2479,7 +2435,7 @@ msgstr "Svi vršnjaci na koje ste povezani za dati torent"
 #. i18n: ectx: property (windowTitle), widget (QWidget, ChunkDownloadView)
 #. i18n: file: plugins/infowidget/statustab.ui:164
 #. i18n: ectx: property (text), widget (QLabel, hdr_chunks)
-#: plugins/infowidget/infowidgetplugin.cpp:244 rc.cpp:1781 rc.cpp:1880
+#: plugins/infowidget/infowidgetplugin.cpp:244 rc.cpp:1775 rc.cpp:1873
 msgid "Chunks"
 msgstr "Parčići"
 
@@ -2646,7 +2602,7 @@ msgstr "Zabrani vršnjaka"
 
 #: plugins/infowidget/peerviewmodel.cpp:88
 msgid " (µTP)"
-msgstr ""
+msgstr " (µTP)"
 
 #: plugins/infowidget/peerviewmodel.cpp:103
 msgctxt "Choked"
@@ -2730,7 +2686,7 @@ msgstr "dostupnost"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_5)
 #. i18n: file: plugins/stats/Settings.ui:234
 #. i18n: ectx: property (text), widget (QLabel, label_12)
-#: plugins/infowidget/peerviewmodel.cpp:262 rc.cpp:2383 rc.cpp:2458 rc.cpp:2521
+#: plugins/infowidget/peerviewmodel.cpp:262 rc.cpp:2370 rc.cpp:2445 rc.cpp:2508
 msgid "DHT"
 msgstr "DHT"
 
@@ -2850,7 +2806,7 @@ msgstr "sledeće ažuriranje"
 # >! @title:window (in trackerview.cpp)
 #. i18n: file: plugins/infowidget/trackerview.ui:22
 #. i18n: ectx: property (text), widget (KPushButton, m_add_tracker)
-#: plugins/infowidget/trackerview.cpp:88 rc.cpp:1910
+#: plugins/infowidget/trackerview.cpp:88 rc.cpp:1903
 msgid "Add Trackers"
 msgstr "Dodaj pratioce"
 
@@ -2869,7 +2825,7 @@ msgstr "Već postoji pratilac po imenu <b>%1</b>."
 
 #: plugins/infowidget/trackerview.cpp:135
 msgid "The following duplicate trackers were not added:"
-msgstr ""
+msgstr "Sledeći pratioci duplikati nisu dodati:"
 
 #: plugins/ipfilter/convertthread.cpp:72
 msgid "Loading txt file..."
@@ -2882,7 +2838,7 @@ msgstr "Nema IP adresa za pretvaranje u %1"
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:19
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
-#: plugins/ipfilter/convertthread.cpp:174 rc.cpp:1945
+#: plugins/ipfilter/convertthread.cpp:174 rc.cpp:1938
 msgid "Converting..."
 msgstr "Pretvaram..."
 
@@ -2892,7 +2848,7 @@ msgstr "Pretvaram..."
 #: plugins/ipfilter/downloadandconvertjob.cpp:236
 #, kde-format
 msgid "Automatic update of IP filter failed: %1"
-msgstr ""
+msgstr "Automatsko ažuriranje IP filtera nije uspelo: %1"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:162
 #, kde-format
@@ -2903,6 +2859,7 @@ msgstr "Ne mogu da otvorim arhivu %1."
 #, kde-format
 msgid "Automatic update of IP filter failed: cannot open zip file %1"
 msgstr ""
+"Automatsko ažuriranje IP filtera nije uspelo: ne mogu da otvorim ZIP fajl %1"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:203
 #, kde-format
@@ -2910,21 +2867,20 @@ msgid "Cannot find blocklist in zip file %1."
 msgstr "Ne mogu nađem listu blokiranja u arhivi: %1"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:207
-#, fuzzy, kde-format
-#| msgid "Cannot find blocklist in zip file %1."
+#, kde-format
 msgid ""
 "Automatic update of IP filter failed: cannot find blocklist in zip file %1"
-msgstr "Ne mogu nađem listu blokiranja u arhivi: %1"
+msgstr ""
+"Automatsko ažuriranje IP filtera nije uspelo: ne mogu nađem listu blokiranja "
+"u ZIP fajlu %1"
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:42
-#, fuzzy
-#| msgid " days"
 msgid " day"
 msgid_plural " days"
 msgstr[0] " dana"
 msgstr[1] " dana"
 msgstr[2] " dana"
-msgstr[3] " dana"
+msgstr[3] " dan"
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:67
 #: plugins/ipfilter/ipblockingprefpage.cpp:89
@@ -3002,11 +2958,11 @@ msgstr "Izlaz dnevnika KTorrenta"
 msgid "Suspend Output"
 msgstr "Onemogući izlaz"
 
-#: plugins/logviewer/logviewer.cpp:124
+#: plugins/logviewer/logviewer.cpp:127
 msgid "<font color=\"#FF0000\">Logging output suspended</font>"
 msgstr "<font color=\"#FF0000\">Beleženje izlaza je onemogućeno</font>"
 
-#: plugins/logviewer/logviewer.cpp:126
+#: plugins/logviewer/logviewer.cpp:129
 msgid "<font color=\"#00FF00\">Logging output resumed</font>"
 msgstr "<font color=\"#00FF00\">Beleženje izlaza je nastavljeno</font>"
 
@@ -3020,7 +2976,7 @@ msgstr "Magnetska veza kopirana u klipbord"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:32
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_x2)
-#: plugins/magnetgenerator/magnetgeneratorprefwidget.cpp:35 rc.cpp:2069
+#: plugins/magnetgenerator/magnetgeneratorprefwidget.cpp:35 rc.cpp:2061
 msgid "Magnet Generator"
 msgstr "Generator magneta"
 
@@ -3097,10 +3053,8 @@ msgid "Movie player"
 msgstr "Plejer filmova"
 
 #: plugins/mediaplayer/mediaview.cpp:54
-#, fuzzy
-#| msgid "Search Engines"
 msgid "Search media files"
-msgstr "Pretraživači"
+msgstr "Pretraži medija fajlove"
 
 # >> @title:column
 #: plugins/mediaplayer/playlist.cpp:91
@@ -3173,7 +3127,7 @@ msgstr "nasumično"
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:67
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
 #: plugins/mediaplayer/playlistwidget.cpp:107 rc.cpp:193 rc.cpp:220 rc.cpp:229
-#: rc.cpp:434 rc.cpp:2674
+#: rc.cpp:434 rc.cpp:2661
 msgid "Remove"
 msgstr "Ukloni"
 
@@ -3266,7 +3220,7 @@ msgstr "<b>%1</b><br/><br/>%2"
 #. i18n: file: plugins/scripting/ktscriptingpluginui.rc:15
 #. i18n: ectx: Menu (ScriptingMenu)
 #: plugins/scripting/scriptingplugin.cpp:75
-#: plugins/scripting/scriptingplugin.cpp:96 rc.cpp:2272 rc.cpp:2275
+#: plugins/scripting/scriptingplugin.cpp:96 rc.cpp:2259 rc.cpp:2262
 msgid "Scripting"
 msgstr "Skriptovanje"
 
@@ -3280,10 +3234,6 @@ msgid "Scripts"
 msgstr "Skripte"
 
 #: plugins/scripting/scriptingplugin.cpp:245
-#, fuzzy
-#| msgid ""
-#| "Removing these scripts will fully delete them from your disk. Are you "
-#| "sure you want to do this ?"
 msgid ""
 "Removing these scripts will fully delete them from your disk. Are you sure "
 "you want to do this?"
@@ -3317,7 +3267,7 @@ msgstr "Uredi skriptu"
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, PropertiesExtender)
-#: plugins/scripting/scriptmanager.cpp:110 rc.cpp:1282
+#: plugins/scripting/scriptmanager.cpp:110 rc.cpp:1276
 msgid "Properties"
 msgstr "Svojstva"
 
@@ -3327,7 +3277,7 @@ msgstr "Podesi"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, ScriptProperties)
-#: plugins/scripting/scriptmanager.cpp:228 rc.cpp:2189
+#: plugins/scripting/scriptmanager.cpp:229 rc.cpp:2181
 msgid "Script Properties"
 msgstr "Svojstva skripte"
 
@@ -3348,8 +3298,7 @@ msgid "Failed to parse %1"
 msgstr "Ne mogu da raščlanim %1"
 
 #: plugins/search/searchenginelist.cpp:365
-#, fuzzy, kde-format
-#| msgid "Url: <b>%1</b>"
+#, kde-format
 msgid "URL: <b>%1</b>"
 msgstr "URL: <b>%1</b>"
 
@@ -3358,9 +3307,6 @@ msgid "Add a Search Engine"
 msgstr "Dodaj pretraživač"
 
 #: plugins/search/searchprefpage.cpp:106
-#, fuzzy
-#| msgid ""
-#| "Enter the hostname of the search engine (for example www.google.com) :"
 msgid "Enter the hostname of the search engine (for example www.google.com):"
 msgstr ""
 "Unesite ime domaćina za pretraživač (na primer <link>www.google.com</link>):"
@@ -3415,13 +3361,12 @@ msgstr "Traženje torenata na Webu."
 #: plugins/search/webview.cpp:188
 #, kde-format
 msgid "Save %1 to"
-msgstr ""
+msgstr "Sačuvaj %1 u"
 
 #: plugins/search/webview.cpp:205
-#, fuzzy, kde-format
-#| msgid "Cannot open %1 : %2"
+#, kde-format
 msgid "Cannot open <b>%1</b>: %2"
-msgstr "Ne mogu da otvorim %1: %2"
+msgstr "Ne mogu da otvorim <b>%1</b>: %2"
 
 #: plugins/search/searchwidget.cpp:75
 msgid " Engine:"
@@ -3455,8 +3400,8 @@ msgstr "Preuzmi torent"
 #. i18n: ectx: property (title), widget (QGroupBox, DlSpdGbw)
 #. i18n: file: plugins/syndication/feedwidget.ui:121
 #. i18n: ectx: property (text), widget (KPushButton, m_download)
-#: plugins/search/searchwidget.cpp:230 rc.cpp:2389 rc.cpp:2392 rc.cpp:2509
-#: rc.cpp:2548 rc.cpp:2703
+#: plugins/search/searchwidget.cpp:230 rc.cpp:2376 rc.cpp:2379 rc.cpp:2496
+#: rc.cpp:2535 rc.cpp:2688
 msgid "Download"
 msgstr "Preuzimanje"
 
@@ -3468,7 +3413,7 @@ msgstr "Podešavanje gašenja"
 #. i18n: file: plugins/shutdown/ktshutdownpluginui.rc:5
 #. i18n: ectx: Menu (shutdown)
 #: plugins/shutdown/shutdowndlg.cpp:37 plugins/shutdown/shutdownplugin.cpp:166
-#: rc.cpp:2362
+#: rc.cpp:2349
 msgid "Shutdown"
 msgstr "Gašenje"
 
@@ -3534,20 +3479,20 @@ msgstr "događaj"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:512
 #. i18n: ectx: property (text), widget (QLabel, label_23)
-#: plugins/stats/ConnsTabPage.cc:57 rc.cpp:2434
+#: plugins/stats/ConnsTabPage.cc:57 rc.cpp:2421
 msgid "Leechers connected"
 msgstr "Pijavica povezano"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:547
 #. i18n: ectx: property (text), widget (QLabel, label_24)
 #: plugins/stats/ConnsTabPage.cc:61 plugins/stats/ConnsTabPage.cc:106
-#: rc.cpp:2437
+#: rc.cpp:2424
 msgid "Leechers in swarms"
 msgstr "Pijavica u rojevima"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:582
 #. i18n: ectx: property (text), widget (QLabel, label_25)
-#: plugins/stats/ConnsTabPage.cc:64 rc.cpp:2440
+#: plugins/stats/ConnsTabPage.cc:64 rc.cpp:2427
 msgid "Seeds connected"
 msgstr "Sejača povezano"
 
@@ -3558,13 +3503,13 @@ msgstr "Sejača u rojevima"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:652
 #. i18n: ectx: property (text), widget (QLabel, label_27)
-#: plugins/stats/ConnsTabPage.cc:71 rc.cpp:2446
+#: plugins/stats/ConnsTabPage.cc:71 rc.cpp:2433
 msgid "Average leechers connected per torrent"
 msgstr "Prosečno pijavica vezano po torentu"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:687
 #. i18n: ectx: property (text), widget (QLabel, label_28)
-#: plugins/stats/ConnsTabPage.cc:73 rc.cpp:2449
+#: plugins/stats/ConnsTabPage.cc:73 rc.cpp:2436
 msgid "Average seeds connected per torrent"
 msgstr "Prosečno sejača vezano po torentu"
 
@@ -3578,19 +3523,19 @@ msgstr "Prosečno sejača vezanih po aktivnom torentu"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:805
 #. i18n: ectx: property (text), widget (QLabel, label_31)
-#: plugins/stats/ConnsTabPage.cc:83 rc.cpp:2461
+#: plugins/stats/ConnsTabPage.cc:83 rc.cpp:2448
 msgid "Nodes"
 msgstr "Čvorovi"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:844
 #. i18n: ectx: property (text), widget (QLabel, label_32)
-#: plugins/stats/ConnsTabPage.cc:84 rc.cpp:2464
+#: plugins/stats/ConnsTabPage.cc:84 rc.cpp:2451
 msgid "Tasks"
 msgstr "Poslovi"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:903
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: plugins/stats/DisplaySettingsPage.cc:28 rc.cpp:2467
+#: plugins/stats/DisplaySettingsPage.cc:28 rc.cpp:2454
 msgid "Display"
 msgstr "Prikaz"
 
@@ -3686,31 +3631,31 @@ msgstr "Ograničenja brzine"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:172
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: plugins/stats/SpdTabPage.cc:73 rc.cpp:2404
+#: plugins/stats/SpdTabPage.cc:73 rc.cpp:2391
 msgid "Average from leechers"
 msgstr "Prosečno od pijavica"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:207
 #. i18n: ectx: property (text), widget (QLabel, label_19)
-#: plugins/stats/SpdTabPage.cc:74 rc.cpp:2407
+#: plugins/stats/SpdTabPage.cc:74 rc.cpp:2394
 msgid "Average to leechers"
 msgstr "Prosečno ka pijavicama"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:242
 #. i18n: ectx: property (text), widget (QLabel, label_20)
-#: plugins/stats/SpdTabPage.cc:75 rc.cpp:2410
+#: plugins/stats/SpdTabPage.cc:75 rc.cpp:2397
 msgid "Average from seeds"
 msgstr "Prosečno od sejača"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:277
 #. i18n: ectx: property (text), widget (QLabel, label_21)
-#: plugins/stats/SpdTabPage.cc:76 rc.cpp:2413
+#: plugins/stats/SpdTabPage.cc:76 rc.cpp:2400
 msgid "From leechers"
 msgstr "Od pijavica"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:312
 #. i18n: ectx: property (text), widget (QLabel, label_22)
-#: plugins/stats/SpdTabPage.cc:77 rc.cpp:2416
+#: plugins/stats/SpdTabPage.cc:77 rc.cpp:2403
 msgid "From seeds"
 msgstr "Od sejanja"
 
@@ -3786,18 +3731,17 @@ msgstr[3] ""
 "1 aktivan filter"
 
 #: plugins/syndication/feedlist.cpp:183
-#, fuzzy, kde-format
-#| msgid "<b>%1</b><br/>Preview: %2<br/>Downloaded: %3 %"
+#, kde-format
 msgid "<b>%1</b><br/><br/>Download failed: <b>%2</b>"
-msgstr "<b>%1</b><br/>Pregled: %2<br/>Preuzeto: %3 %"
+msgstr "<b>%1</b><br/><br/>Preuzimanje propalo: <b>%2</b>"
 
 #: plugins/syndication/feedwidget.cpp:107
 msgid "Authentication Cookie"
-msgstr ""
+msgstr "Autentifikacioni kolačić"
 
 #: plugins/syndication/feedwidget.cpp:107
 msgid "Enter the new authentication cookie"
-msgstr ""
+msgstr "Unesite novi autentifikacioni kolačić"
 
 #: plugins/syndication/feedwidget.cpp:126
 msgid "<b>OK</b>"
@@ -3808,10 +3752,9 @@ msgid "<b>Not Loaded</b>"
 msgstr "<b>Nije učitan</b>"
 
 #: plugins/syndication/feedwidget.cpp:132
-#, fuzzy, kde-format
-#| msgid "<b>Download Failed</b>"
+#, kde-format
 msgid "<b>Download Failed: %1</b>"
-msgstr "<b>Neuspelo preuzimanje</b>"
+msgstr "<b>Preuzimanje propalo: %1</b>"
 
 #: plugins/syndication/feedwidget.cpp:135
 msgid "<b>Downloading</b>"
@@ -3845,14 +3788,13 @@ msgid "Failed to load feed %1."
 msgstr "Ne mogu da učitam dovod %1."
 
 #: plugins/syndication/syndicationactivity.cpp:172
-#, fuzzy, kde-format
-#| msgid "Failed to create directory for feed %1 : %2"
+#, kde-format
 msgid "Failed to create directory for feed %1: %2"
 msgstr "Ne mogu da stvorim fasciklu za dovod %1: %2"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:127
 #. i18n: ectx: property (text), widget (QPushButton, m_new_filter)
-#: plugins/syndication/syndicationactivity.cpp:280 rc.cpp:2683
+#: plugins/syndication/syndicationactivity.cpp:280 rc.cpp:2670
 msgid "New Filter"
 msgstr "Novi filter"
 
@@ -3868,7 +3810,7 @@ msgstr "uređaj"
 # >> @title:column
 #: plugins/upnp/routermodel.cpp:70
 msgid "Port Forwarded"
-msgstr "port prosleđen"
+msgstr "prosleđen port"
 
 # >> @title:column
 #: plugins/upnp/routermodel.cpp:71
@@ -3887,7 +3829,7 @@ msgstr ""
 #. i18n: file: plugins/upnp/upnpwidget.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, UPnPWidget)
 #: plugins/upnp/upnpplugin.cpp:56 plugins/upnp/upnpplugin.cpp:60
-#: plugins/upnp/upnpplugin.cpp:71 rc.cpp:2872
+#: plugins/upnp/upnpplugin.cpp:71 rc.cpp:2857
 msgid "UPnP"
 msgstr "UPnP"
 
@@ -3916,7 +3858,7 @@ msgstr "Neuspelo otvaranje privremenog fajla"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: plugins/webinterface/webinterfaceplugin.cpp:55
 #: plugins/webinterface/webinterfaceplugin.cpp:65
-#: plugins/webinterface/webinterfaceprefwidget.cpp:40 rc.cpp:2905
+#: plugins/webinterface/webinterfaceprefwidget.cpp:40 rc.cpp:2890
 msgid "Web Interface"
 msgstr "Veb sučelje"
 
@@ -4038,8 +3980,8 @@ msgstr "127.0.0.1"
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:152
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:25 rc.cpp:208 rc.cpp:676 rc.cpp:824 rc.cpp:870 rc.cpp:1363
-#: rc.cpp:2254 rc.cpp:2941
+#: rc.cpp:25 rc.cpp:208 rc.cpp:676 rc.cpp:824 rc.cpp:870 rc.cpp:1357
+#: rc.cpp:2241 rc.cpp:2926
 msgid "Port:"
 msgstr "Port:"
 
@@ -4071,8 +4013,8 @@ msgstr "Port:"
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:60
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
-#: rc.cpp:28 rc.cpp:190 rc.cpp:211 rc.cpp:226 rc.cpp:431 rc.cpp:2341
-#: rc.cpp:2671
+#: rc.cpp:28 rc.cpp:190 rc.cpp:211 rc.cpp:226 rc.cpp:431 rc.cpp:2328
+#: rc.cpp:2658
 msgid "Add"
 msgstr "Dodaj"
 
@@ -4092,7 +4034,7 @@ msgstr "Dodaj"
 #. i18n: ectx: property (text), widget (KPushButton, m_close)
 #. i18n: file: ktorrent/view/scanextender.ui:233
 #. i18n: ectx: property (text), widget (KPushButton, close_button)
-#: rc.cpp:31 rc.cpp:241 rc.cpp:446 rc.cpp:1276
+#: rc.cpp:31 rc.cpp:241 rc.cpp:446 rc.cpp:1270
 msgid "Close"
 msgstr "Zatvori"
 
@@ -4222,7 +4164,7 @@ msgstr "<html><p>Odustani, ne pokreći torent.</p></html>"
 #. i18n: ectx: property (text), widget (KPushButton, m_cancel)
 #. i18n: file: ktorrent/view/scanextender.ui:226
 #. i18n: ectx: property (text), widget (KPushButton, cancel_button)
-#: rc.cpp:91 rc.cpp:1273
+#: rc.cpp:91 rc.cpp:1267
 msgid "Cancel"
 msgstr "Odustani"
 
@@ -4234,7 +4176,7 @@ msgstr "Odustani"
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #. i18n: file: plugins/syndication/feedwidget.ui:27
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:97 rc.cpp:2686
+#: rc.cpp:97 rc.cpp:2673
 msgid "URL:"
 msgstr "URL:"
 
@@ -4246,7 +4188,7 @@ msgstr "URL:"
 #. i18n: ectx: property (text), widget (QCheckBox, m_silently)
 #. i18n: file: plugins/scanfolder/scanfolderprefpage.ui:80
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openSilently)
-#: rc.cpp:100 rc.cpp:2147
+#: rc.cpp:100 rc.cpp:2139
 msgid "Open silently"
 msgstr "Otvori tiho"
 
@@ -4296,7 +4238,7 @@ msgstr "Globalna ograničenja"
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:65
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:118 rc.cpp:718 rc.cpp:964 rc.cpp:1630
+#: rc.cpp:118 rc.cpp:718 rc.cpp:963 rc.cpp:1624
 msgid "Maximum download speed:"
 msgstr "Najveća brzina preuzimanja:"
 
@@ -4316,7 +4258,7 @@ msgstr "Najveća brzina preuzimanja:"
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:36
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:127 rc.cpp:730 rc.cpp:960 rc.cpp:1618
+#: rc.cpp:127 rc.cpp:730 rc.cpp:960 rc.cpp:1612
 msgid "Maximum upload speed:"
 msgstr "Najveća brzina otpremanja:"
 
@@ -4352,7 +4294,7 @@ msgstr "Fajl ili fascikla od koje se pravi torent:"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: file: plugins/syndication/filtereditor.ui:256
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: rc.cpp:142 rc.cpp:298 rc.cpp:2024 rc.cpp:2141 rc.cpp:2839
+#: rc.cpp:142 rc.cpp:298 rc.cpp:2016 rc.cpp:2133 rc.cpp:2824
 msgid "Options"
 msgstr "Opcije"
 
@@ -4442,7 +4384,7 @@ msgstr "Decentralizovan (samo DHT)"
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: file: plugins/scanfolder/scanfolderprefpage.ui:134
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_addToGroup)
-#: rc.cpp:184 rc.cpp:2183
+#: rc.cpp:184 rc.cpp:2175
 msgid "Add torrent to group:"
 msgstr "Dodaj torent u grupu:"
 
@@ -4476,7 +4418,7 @@ msgstr "IP ili ime domaćina"
 #. i18n: ectx: label, entry (port), group (downloads)
 #. i18n: file: libktcore/ktorrent.kcfg:60
 #. i18n: ectx: label, entry (udpTrackerPort), group (downloads)
-#: rc.cpp:217 rc.cpp:1420 rc.cpp:1423
+#: rc.cpp:217 rc.cpp:1414 rc.cpp:1417
 msgid "Port"
 msgstr "Port"
 
@@ -4494,7 +4436,7 @@ msgstr "Veb sejanja"
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: file: plugins/infowidget/statustab.ui:123
 #. i18n: ectx: property (text), widget (QLabel, label_17)
-#: rc.cpp:232 rc.cpp:1876
+#: rc.cpp:232 rc.cpp:1870
 msgid "Comments:"
 msgstr "Komentari:"
 
@@ -4524,7 +4466,7 @@ msgstr "Izbor fajlova za preuzimanje"
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #. i18n: file: plugins/syndication/filtereditor.ui:312
 #. i18n: ectx: property (text), widget (QCheckBox, m_use_custom_download_location)
-#: rc.cpp:247 rc.cpp:2851
+#: rc.cpp:247 rc.cpp:2836
 msgid "Download to:"
 msgstr "Preuzmi u:"
 
@@ -4532,7 +4474,7 @@ msgstr "Preuzmi u:"
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_download_location_history)
 #: rc.cpp:250
 msgid "History of all recently used download locations"
-msgstr ""
+msgstr "Istorijat nedavno zadatih lokacija za preuzimanje."
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:41
 #. i18n: ectx: property (text), widget (QToolButton, m_download_location_history)
@@ -4570,8 +4512,8 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QToolButton, m_move_down)
 #. i18n: file: ktorrent/tools/queuemanagerwidget.ui:56
 #. i18n: ectx: property (text), widget (QToolButton, m_move_bottom)
-#: rc.cpp:253 rc.cpp:265 rc.cpp:268 rc.cpp:271 rc.cpp:1210 rc.cpp:1213
-#: rc.cpp:1216 rc.cpp:1219 rc.cpp:1222
+#: rc.cpp:253 rc.cpp:265 rc.cpp:268 rc.cpp:271 rc.cpp:1204 rc.cpp:1207
+#: rc.cpp:1210 rc.cpp:1213 rc.cpp:1216
 msgid "..."
 msgstr "..."
 
@@ -4596,7 +4538,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, move_on_completion_enabled)
 #. i18n: file: plugins/syndication/filtereditor.ui:322
 #. i18n: ectx: property (text), widget (QCheckBox, m_move_on_completion)
-#: rc.cpp:259 rc.cpp:1312 rc.cpp:2854
+#: rc.cpp:259 rc.cpp:1306 rc.cpp:2839
 msgid "Move when completed to:"
 msgstr "Premesti kada se završi u:"
 
@@ -4604,7 +4546,7 @@ msgstr "Premesti kada se završi u:"
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_move_when_completed_history)
 #: rc.cpp:262
 msgid "History of all recently used move when completed locations"
-msgstr ""
+msgstr "Istorijat nedavno zadatih lokacija za premeštanje po završetku."
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:96
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -4751,7 +4693,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, m_default_location_enabled)
 #. i18n: file: ktorrent/pref/generalpref.ui:40
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useSaveDir)
-#: rc.cpp:341 rc.cpp:1002
+#: rc.cpp:341 rc.cpp:996
 msgid "Default save location:"
 msgstr "Podrazumevana lokacija upisivanja:"
 
@@ -4784,33 +4726,12 @@ msgstr ""
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:50
 #. i18n: ectx: property (text), widget (QCheckBox, m_default_move_on_completion_enabled)
 #: rc.cpp:352
-#, fuzzy
-#| msgid "Move when completed to:"
 msgid "Default move when completed location:"
-msgstr "Premesti kada se završi u:"
+msgstr "Podrazumevana lokacija premeštanja po završetku:"
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:63
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, m_default_move_on_completion_location)
 #: rc.cpp:355
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Default save location "
-#| "for torrents from this group. </p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">Note: </span>This is only used in the file selection "
-#| "dialog, when you change the group, the download location in the dialog "
-#| "will be set to this. You can still override it, if you want to.</p></"
-#| "body></html>"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -4834,10 +4755,10 @@ msgid ""
 "be set to this. You can still override it, if you want to.</span></p></"
 "body></html>"
 msgstr ""
-"<html><p>Podrazumevana lokacija za upisivanje torenata iz ove grupe.</"
-"p><p><b>Napomena:</b> koristi se samo u dijalogu izbora fajla. Kada menjate "
-"grupu, lokacija za preuzimanje će biti postavljena na ovu. I dalje ćete moći "
-"da je potisnete kad poželite.</p></html>"
+"<html><p>Podrazumevana lokacija za premeštanje po završetku za torente iz "
+"ove grupe.</p><p><b>Napomena:</b> koristi se samo u dijalogu izbora fajla. "
+"Kada menjate grupu, lokacija za preuzimanje će biti postavljena na ovu. I "
+"dalje ćete moći da je potisnete kad poželite.</p></html>"
 
 #. i18n: file: ktorrent/groups/grouppolicydlg.ui:73
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox)
@@ -4885,7 +4806,7 @@ msgstr "Najduže vreme sejanja:"
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, m_max_seed_time)
 #. i18n: file: plugins/infowidget/statustab.ui:318
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, time_limit)
-#: rc.cpp:397 rc.cpp:1907
+#: rc.cpp:397 rc.cpp:1900
 msgid " Hours"
 msgstr " sati"
 
@@ -5105,7 +5026,7 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: file: ktorrent/pref/generalpref.ui:120
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:496 rc.cpp:1041
+#: rc.cpp:496 rc.cpp:1035
 msgid "Miscellaneous"
 msgstr "Razno"
 
@@ -5392,7 +5313,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useEncryption)
 #. i18n: file: libktcore/ktorrent.kcfg:148
 #. i18n: ectx: label, entry (useEncryption), group (downloads)
-#: rc.cpp:613 rc.cpp:1480
+#: rc.cpp:613 rc.cpp:1474
 msgid "Use protocol encryption"
 msgstr "Šifrovanje protokola"
 
@@ -5416,7 +5337,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_allowUnencryptedConnections)
 #. i18n: file: libktcore/ktorrent.kcfg:152
 #. i18n: ectx: label, entry (allowUnencryptedConnections), group (downloads)
-#: rc.cpp:619 rc.cpp:1483
+#: rc.cpp:619 rc.cpp:1477
 msgid "Allow unencrypted connections"
 msgstr "Dozvoli nešifrovane veze"
 
@@ -5622,7 +5543,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:219
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:700 rc.cpp:968 rc.cpp:1597 rc.cpp:1741
+#: rc.cpp:700 rc.cpp:966 rc.cpp:1591 rc.cpp:1735
 msgid "Maximum connections per torrent:"
 msgstr "Najviše veza po torentu:"
 
@@ -5648,7 +5569,7 @@ msgstr "Najveći dozvoljeni broj veza po torentu."
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:236
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:709 rc.cpp:972 rc.cpp:1603 rc.cpp:1747
+#: rc.cpp:709 rc.cpp:969 rc.cpp:1597 rc.cpp:1741
 msgid "Global connection limit:"
 msgstr "Globalno ograničenje veza:"
 
@@ -5807,7 +5728,7 @@ msgstr ""
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_primaryTransportProtocol)
 #. i18n: file: ktupnptest/upnptestwidget.ui:102
 #. i18n: ectx: property (text), item, widget (QComboBox, m_protocol)
-#: rc.cpp:793 rc.cpp:1372
+#: rc.cpp:793 rc.cpp:1366
 msgid "TCP"
 msgstr "TCP"
 
@@ -6026,7 +5947,7 @@ msgstr "Neophodni su korisničko ime i lozinka"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:105
 #. i18n: ectx: property (text), widget (QLabel, textLabel5)
-#: rc.cpp:889 rc.cpp:2245 rc.cpp:2926
+#: rc.cpp:889 rc.cpp:2232 rc.cpp:2911
 msgid "Username:"
 msgstr "Korisničko ime:"
 
@@ -6059,7 +5980,7 @@ msgstr "<html><p>Korisničko ime za SOCKS proksi server.</p></html>"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:122
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:899 rc.cpp:2248 rc.cpp:2932
+#: rc.cpp:899 rc.cpp:2235 rc.cpp:2917
 msgid "Password:"
 msgstr "Lozinka:"
 
@@ -6178,7 +6099,7 @@ msgstr "Preporučene postavke:"
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: file: ktorrent/pref/qmpref.ui:210
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:979 rc.cpp:1165
+#: rc.cpp:975 rc.cpp:1159
 msgid "Number of upload slots:"
 msgstr "Broj veza otpremanja:"
 
@@ -6190,7 +6111,7 @@ msgstr "Broj veza otpremanja:"
 #. i18n: ectx: property (text), widget (QLabel, label_14)
 #. i18n: file: ktorrent/pref/qmpref.ui:35
 #. i18n: ectx: property (text), widget (QLabel, label_11)
-#: rc.cpp:983 rc.cpp:1093
+#: rc.cpp:978 rc.cpp:1087
 msgid "Maximum downloads:"
 msgstr "Najviše preuzimanja:"
 
@@ -6202,25 +6123,25 @@ msgstr "Najviše preuzimanja:"
 #. i18n: ectx: property (text), widget (QLabel, label_17)
 #. i18n: file: ktorrent/pref/qmpref.ui:55
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:987 rc.cpp:1102
+#: rc.cpp:981 rc.cpp:1096
 msgid "Maximum seeds:"
 msgstr "Najviše sejanja:"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:17
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:990
+#: rc.cpp:984
 msgid "Folders"
 msgstr "Fascikle"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:23
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:993
+#: rc.cpp:987
 msgid "Folder to store torrent information:"
 msgstr "Fascikla za smeštanje podataka o torentu:"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:30
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_tempDir)
-#: rc.cpp:996
+#: rc.cpp:990
 msgid ""
 "Directory to store information about all torrents currently opened in "
 "KTorrent."
@@ -6236,7 +6157,7 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useSaveDir)
 #. i18n: file: ktorrent/pref/generalpref.ui:47
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_saveDir)
-#: rc.cpp:999 rc.cpp:1005
+#: rc.cpp:993 rc.cpp:999
 msgid "Directory to use as a default save location for all data."
 msgstr "Fascikla koja će biti podrazumevana za upisivanje svih podataka."
 
@@ -6248,13 +6169,13 @@ msgstr "Fascikla koja će biti podrazumevana za upisivanje svih podataka."
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useCompletedDir)
 #. i18n: file: ktorrent/pref/generalpref.ui:64
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_completedDir)
-#: rc.cpp:1008 rc.cpp:1014
+#: rc.cpp:1002 rc.cpp:1008
 msgid "Directory to move data to when a torrent has finished downloading."
 msgstr "Fascikla gde će se premestiti podaci nakon završenog preuzimanja."
 
 #. i18n: file: ktorrent/pref/generalpref.ui:57
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useCompletedDir)
-#: rc.cpp:1011
+#: rc.cpp:1005
 msgid "Move completed downloads to:"
 msgstr "Premesti završena preuzimanja u:"
 
@@ -6266,49 +6187,49 @@ msgstr "Premesti završena preuzimanja u:"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useTorrentCopyDir)
 #. i18n: file: ktorrent/pref/generalpref.ui:81
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_torrentCopyDir)
-#: rc.cpp:1017 rc.cpp:1023
+#: rc.cpp:1011 rc.cpp:1017
 msgid "Directory to copy all torrent files in, which are opened by KTorrent."
 msgstr "Fascikla gde se kopiraju svi torent fajlovi otvoreni u KTorrentu."
 
 #. i18n: file: ktorrent/pref/generalpref.ui:74
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useTorrentCopyDir)
-#: rc.cpp:1020
+#: rc.cpp:1014
 msgid "Copy torrent files to:"
 msgstr "Kopiraj torent fajlove u:"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:91
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:1026
+#: rc.cpp:1020
 msgid "System Tray Icon"
 msgstr "Ikona sistemske kasete"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:97
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showSystemTrayIcon)
-#: rc.cpp:1029
+#: rc.cpp:1023
 msgid "Whether or not to show an icon in the system tray."
 msgstr "Da prikazivati ikonu sistemske kasete."
 
 #. i18n: file: ktorrent/pref/generalpref.ui:100
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showSystemTrayIcon)
-#: rc.cpp:1032
+#: rc.cpp:1026
 msgid "Show system tray icon"
 msgstr "Ikona sistemske kasete"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:107
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showPopups)
-#: rc.cpp:1035
+#: rc.cpp:1029
 msgid "Whether or not to show system tray popup messages."
 msgstr "Da li prikazivati iskačuće poruke iz sistemske kasete."
 
 #. i18n: file: ktorrent/pref/generalpref.ui:110
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showPopups)
-#: rc.cpp:1038
+#: rc.cpp:1032
 msgid "Show system tray popup messages"
 msgstr "Iskačuće poruke u sistemskoj kaseti"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:129
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openMultipleTorrentsSilently)
-#: rc.cpp:1044
+#: rc.cpp:1038
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
 "css\">\n"
@@ -6324,26 +6245,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/generalpref.ui:132
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openMultipleTorrentsSilently)
-#: rc.cpp:1050
+#: rc.cpp:1044
 msgid "Open multiple torrents silently"
 msgstr "Otvaraj višestruke torente tiho"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:143
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openAllTorrentsSilently)
-#: rc.cpp:1053
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><span "
-#| "style=\" font-size:8pt;\">Username for the SOCKS proxy server.</span></"
-#| "p></body></html>"
+#: rc.cpp:1047
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -6356,19 +6264,17 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "family:'Bitstream Vera Sans';\">Open all torrents silently.</span></p></"
 "body></html>"
-msgstr "<html><p>Korisničko ime za SOCKS proksi server.</p></html>"
+msgstr "<html><p>Otvaraj sve torente tiho.</p></html>"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:146
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openAllTorrentsSilently)
-#: rc.cpp:1060
-#, fuzzy
-#| msgid "Open torrents silently"
+#: rc.cpp:1054
 msgid "Open all torrents silently"
-msgstr "Otvori torente tiho"
+msgstr "Otvaraj sve torente tiho"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:156
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_suppressSleep)
-#: rc.cpp:1063
+#: rc.cpp:1057
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
 "css\">\n"
@@ -6383,32 +6289,14 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/generalpref.ui:159
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_suppressSleep)
-#: rc.cpp:1069
+#: rc.cpp:1063
 msgid "Suppress sleep when torrents are running"
 msgstr "Ne uspavljuj računar kada torenti rade"
 
+# literal-segment: linux-desktop(.iso)?
 #. i18n: file: ktorrent/pref/generalpref.ui:172
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_autoRenameSingleFileTorrents)
-#: rc.cpp:1072
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">When a torrent file has "
-#| "been found and loaded, delete it.</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;"
-#| "\">Warning:<span style=\" font-weight:400;\"> you will permanently lose "
-#| "this file.</span></p></body></html>"
+#: rc.cpp:1066
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -6429,18 +6317,19 @@ msgid ""
 "torrent will be displayed as <span style=\" font-weight:600;\">linux-desktop."
 "</span></p></body></html>"
 msgstr ""
-"<html><p>Kada je torent pronađen i učitan, obriši ga.</p><p><b>Upozorenje:</"
-"b> zauvek ćete izgubiti taj fajl.</p></html>"
+"<html><p>Preimenuj torent sa jednim fajlom na ime tog fajla.</p><p>Ako se "
+"fajl zove na primer <b>linux-desktop.iso</b>, torent će biti prikazan kao "
+"<b>linux-desktop</b>.</p></html>"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:175
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_autoRenameSingleFileTorrents)
-#: rc.cpp:1081
+#: rc.cpp:1075
 msgid "Rename single file torrents with the name its only file"
-msgstr ""
+msgstr "Preimenuj torent sa jednim fajlom na ime tog fajla"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:17
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_manuallyControlTorrents)
-#: rc.cpp:1084
+#: rc.cpp:1078
 msgid ""
 "When enabled, the queue manager will be totally disabled, allowing you to "
 "fully control all torrents manually."
@@ -6450,13 +6339,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:20
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_manuallyControlTorrents)
-#: rc.cpp:1087
+#: rc.cpp:1081
 msgid "Control torrents manually"
 msgstr "Ručno upravljanje torentima"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:42
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_maxDownloads)
-#: rc.cpp:1096
+#: rc.cpp:1090
 msgid ""
 "The maximum number of simultaneous downloads the queue manager will run."
 msgstr ""
@@ -6464,19 +6353,19 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:62
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_maxSeeds)
-#: rc.cpp:1105
+#: rc.cpp:1099
 msgid "The maximum number of simultaneous seeds the queue manager will run."
 msgstr "Najveći broj sejanja koje će menadžer redosleda istovremeno pokrenuti."
 
 #. i18n: file: ktorrent/pref/qmpref.ui:75
 #. i18n: ectx: property (text), widget (QLabel, label_12)
-#: rc.cpp:1111
+#: rc.cpp:1105
 msgid "When diskspace is running low:"
 msgstr "Kada ponestaje prostora na disku:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:82
 #. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_startDownloadsOnLowDiskSpace)
-#: rc.cpp:1114
+#: rc.cpp:1108
 msgid ""
 "What to do when the diskspace is running low and the queue manager wants to "
 "start a torrent."
@@ -6486,31 +6375,31 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:86
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startDownloadsOnLowDiskSpace)
-#: rc.cpp:1117
+#: rc.cpp:1111
 msgid "Don't start torrents"
 msgstr "Ne pokreći torente"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:91
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startDownloadsOnLowDiskSpace)
-#: rc.cpp:1120
+#: rc.cpp:1114
 msgid "Ask if torrents can be started"
 msgstr "Pitaj da li pokrenuti torente"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:96
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startDownloadsOnLowDiskSpace)
-#: rc.cpp:1123
+#: rc.cpp:1117
 msgid "Start torrents"
 msgstr "Pokreni torente"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:104
 #. i18n: ectx: property (text), widget (QLabel, label_13)
-#: rc.cpp:1126
+#: rc.cpp:1120
 msgid "Stop torrents when free disk space is lower than:"
 msgstr "Zaustavi torente kada je slobodan prostor manji od:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:111
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_minDiskSpace)
-#: rc.cpp:1129
+#: rc.cpp:1123
 msgid ""
 "When the free diskspace drops below this value, stop all torrents "
 "downloading."
@@ -6520,13 +6409,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:114
 #. i18n: ectx: property (suffix), widget (KIntSpinBox, kcfg_minDiskSpace)
-#: rc.cpp:1132
+#: rc.cpp:1126
 msgid " MiB"
 msgstr " MiB"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:137
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_decreasePriorityOfStalledTorrents)
-#: rc.cpp:1135
+#: rc.cpp:1129
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
 "css\">\n"
@@ -6551,19 +6440,19 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:140
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_decreasePriorityOfStalledTorrents)
-#: rc.cpp:1143
+#: rc.cpp:1137
 msgid "Decrease priority of torrents which are stalled for too long"
 msgstr "Smanji prioritet torenata koji su predugo u zastoju"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:149
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1146
+#: rc.cpp:1140
 msgid "Stalled timer:"
 msgstr "Vreme zastoja:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:160
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_stallTimer)
-#: rc.cpp:1149
+#: rc.cpp:1143
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -6582,14 +6471,14 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:194
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:1156
+#: rc.cpp:1150
 msgctxt "@title:group Options regarging Seeding"
 msgid "Seeding"
 msgstr "Sejanje"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:200
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_keepSeeding)
-#: rc.cpp:1159
+#: rc.cpp:1153
 msgid ""
 "When a download is finished, continue seeding it. If this is disabled, the "
 "torrent will be stopped."
@@ -6599,13 +6488,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:203
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_keepSeeding)
-#: rc.cpp:1162
+#: rc.cpp:1156
 msgid "Keep seeding after download is finished"
 msgstr "Nastavi da seješ nakon završenog preuzimanja"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:217
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_numUploadSlots)
-#: rc.cpp:1168
+#: rc.cpp:1162
 msgid ""
 "The number of upload slots, this determines the number of peers you can "
 "upload to simultaneously for one torrent."
@@ -6615,13 +6504,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:233
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:1171
+#: rc.cpp:1165
 msgid "Default maximum share ratio:"
 msgstr "Podrazumevani najveći odnos deljenja:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:246
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_maxRatio)
-#: rc.cpp:1174
+#: rc.cpp:1168
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -6650,13 +6539,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/pref/qmpref.ui:262
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:1186
+#: rc.cpp:1180
 msgid "Default maximum seed time:"
 msgstr "Podrazumevano najduže vreme sejanja:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:269
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_maxSeedTime)
-#: rc.cpp:1189
+#: rc.cpp:1183
 msgid ""
 "The maximum seed time in hours. Once you reach this time, the torrent will "
 "be stopped. This is only applied to newly opened torrents, existing torrents "
@@ -6674,29 +6563,29 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (QLabel, label_2)
 #. i18n: file: ktorrent/pref/qmpref.ui:298
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_greenRatio)
-#: rc.cpp:1195 rc.cpp:1201
+#: rc.cpp:1189 rc.cpp:1195
 msgid ""
 "Value at which the share ratio will be displayed with a green color. Lower "
 "ratios will be displayed in red."
 msgstr ""
+"Vrednost pri kojoj će odnos deljenja biti prikazan zelenom. Niži odnosi biće "
+"prikazani crvenom."
 
 #. i18n: file: ktorrent/pref/qmpref.ui:291
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1198
-#, fuzzy
-#| msgid "Maximum share ratio:"
+#: rc.cpp:1192
 msgid "Minimum good share ratio:"
-msgstr "Najveći odnos deljenja:"
+msgstr "Najmanji dobar odnos deljenja:"
 
 #. i18n: file: ktorrent/view/scanextender.ui:21
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:1225
+#: rc.cpp:1219
 msgid "Found:"
 msgstr "Nađeno:"
 
 #. i18n: file: ktorrent/view/scanextender.ui:46
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_found)
-#: rc.cpp:1228
+#: rc.cpp:1222
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
 "css\">\n"
@@ -6725,19 +6614,19 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, chunks_not_downloaded)
 #. i18n: file: ktorrent/view/scanextender.ui:187
 #. i18n: ectx: property (text), widget (QLabel, chunks_downloaded)
-#: rc.cpp:1234 rc.cpp:1246 rc.cpp:1258 rc.cpp:1270
+#: rc.cpp:1228 rc.cpp:1240 rc.cpp:1252 rc.cpp:1264
 msgid "0"
 msgstr "0"
 
 #. i18n: file: ktorrent/view/scanextender.ui:69
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:1237
+#: rc.cpp:1231
 msgid "Failed:"
 msgstr "Neuspelo:"
 
 #. i18n: file: ktorrent/view/scanextender.ui:88
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_failed)
-#: rc.cpp:1240
+#: rc.cpp:1234
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
 "css\">\n"
@@ -6751,13 +6640,13 @@ msgstr "<html><p>Broj parčića koji su preuzeti a koji nisu u redu.</p></html>"
 
 #. i18n: file: ktorrent/view/scanextender.ui:114
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1249
+#: rc.cpp:1243
 msgid "Not downloaded:"
 msgstr "Nepreuzeto:"
 
 #. i18n: file: ktorrent/view/scanextender.ui:136
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_not_downloaded)
-#: rc.cpp:1252
+#: rc.cpp:1246
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
 "css\">\n"
@@ -6777,13 +6666,13 @@ msgstr "<html><p>Broj parčića koji nisu preuzeti.</p></html>"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: file: plugins/infowidget/chunkdownloadview.ui:98
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:1261 rc.cpp:1790
+#: rc.cpp:1255 rc.cpp:1784
 msgid "Downloaded:"
 msgstr "Preuzeto:"
 
 #. i18n: file: ktorrent/view/scanextender.ui:178
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_downloaded)
-#: rc.cpp:1264
+#: rc.cpp:1258
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
 "css\">\n"
@@ -6797,65 +6686,45 @@ msgstr "<html><p>Broj parčića koji su preuzeti a koji su u redu.</p></html>"
 
 #. i18n: file: ktorrent/view/scanextender.ui:242
 #. i18n: ectx: property (text), widget (QLabel, error_msg)
-#: rc.cpp:1279
+#: rc.cpp:1273
 msgid "Errors:"
 msgstr "Greške:"
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:20
 #. i18n: ectx: property (toolTip), widget (QCheckBox, dht)
-#: rc.cpp:1285
+#: rc.cpp:1279
 msgid ""
 "DHT is a distributed database which can be used to find more peers for a "
 "torrent."
 msgstr ""
+"DHT je distribuirana baza podataka u kojoj se može pronaći još vršnjaka za "
+"torent."
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:23
 #. i18n: ectx: property (text), widget (QCheckBox, dht)
-#: rc.cpp:1288
-#, fuzzy
-#| msgid "Use DHT to get additional peers"
+#: rc.cpp:1282
 msgid "Use DHT to find more peers"
 msgstr "DHT za dodatne vršnjake"
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:30
 #. i18n: ectx: property (toolTip), widget (QCheckBox, pex)
-#: rc.cpp:1291
+#: rc.cpp:1285
 msgid ""
 "Peer exchange results in more peers being found, by exchanging information "
 "about peers with other peers."
 msgstr ""
+"Razmena vršnjaka dovodi do više pronađenih vršnjaka, tako što se podaci o "
+"vršnjacima razmenjuju sa drugim vršnjacima."
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:33
 #. i18n: ectx: property (text), widget (QCheckBox, pex)
-#: rc.cpp:1294
-#, fuzzy
-#| msgid "Use peer exchange"
+#: rc.cpp:1288
 msgid "Use peer exchange to find more peers"
-msgstr "Razmena vršnjaka"
+msgstr "Razmena vršnjaka radi nalaženja više njih"
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:46
 #. i18n: ectx: property (toolTip), widget (QCheckBox, superseeding)
-#: rc.cpp:1297
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">If login required is "
-#| "enabled, you need to enter a username and a password.</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">Attention: </span>You should not disable this when the "
-#| "webinterface is accessible from the internet. It will allow anybody "
-#| "access to it.</p></body></html>"
+#: rc.cpp:1291
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -6877,111 +6746,101 @@ msgid ""
 "fully been established. Once there are multiple active seeders, this mode "
 "becomes useless.</p></body></html>"
 msgstr ""
-"<html><p>Ako je uključeno <interface>Neophodno prijavljivanje</interface>, "
-"morate zadati korisničko ime i lozinku.</p><p><b>Pažnja</b>: Ovo ne treba da "
-"isključujete kada je veb sučelje dostupno preko Interneta, jer biste onda "
-"svima dozvolili pristup.</p></html>"
+"<html><p>Supersejanje je specijalan režim sejanja koji omogućava postizanje "
+"znatno veće efikasnosti sejanja. Ovim se smanjuje potrošnja protoka potrebna "
+"za širenje torenta.</p><p><b>Napomena</b>: Ovo treba koristiti samo kada roj "
+"još uvek nije potpuno uspostavljen. Pošto se pojavi više aktivnih sejača, "
+"ovaj režim više nije od koristi.</p></html>"
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:49
 #. i18n: ectx: property (text), widget (QCheckBox, superseeding)
-#: rc.cpp:1306
+#: rc.cpp:1300
 msgid "Use superseeding mode for seeding"
-msgstr ""
+msgstr "Supersejanje umesto običnog sejanja"
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:58
 #. i18n: ectx: property (toolTip), widget (QCheckBox, move_on_completion_enabled)
-#: rc.cpp:1309
-#, fuzzy
-#| msgid ""
-#| "Moves the files to the specified location when the torrent finishes "
-#| "downloading."
+#: rc.cpp:1303
 msgid ""
 "Move the files of the torrent to a different directory when it has finished "
 "downloading."
-msgstr ""
-"Premešta fajlove na navedenu lokaciju po završetku preuzimanja torenta."
+msgstr "Premešta fajlove torenta u drugu fasciklu po završetku preuzimanja."
 
 #. i18n: file: ktorrent/view/propertiesextender.ui:68
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, move_on_completion_url)
-#: rc.cpp:1315
-#, fuzzy
-#| msgid "Select a directory to move the data to."
+#: rc.cpp:1309
 msgid "Location to move the files to."
-msgstr "Izaberite fasciklu gde premeštate podatke."
+msgstr "Lokacija gde treba premestiti fajlove."
 
 #. i18n: file: ktorrent/ktorrentui.rc:4
 #. i18n: ectx: Menu (file)
-#: rc.cpp:1318
+#: rc.cpp:1312
 msgid "&File"
 msgstr "&Fajl"
 
 #. i18n: file: ktorrent/ktorrentui.rc:16
 #. i18n: ectx: Menu (view)
-#: rc.cpp:1321
+#: rc.cpp:1315
 msgid "&View"
 msgstr "&Prikaz"
 
 #. i18n: file: ktorrent/ktorrentui.rc:25
 #. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:1324
+#: rc.cpp:1318
 msgid "Main"
-msgstr ""
+msgstr "Glavna"
 
 #. i18n: file: ktorrent/kttorrentactivityui.rc:24
 #. i18n: ectx: Menu (GroupsMenu)
-#: rc.cpp:1330
-#, fuzzy
-#| msgid "Group:"
+#: rc.cpp:1324
 msgid "Groups"
-msgstr "Grupa:"
+msgstr "Grupe"
 
 #. i18n: file: ktorrent/kttorrentactivityui.rc:37
 #. i18n: ectx: Menu (ViewMenu)
-#: rc.cpp:1333
-#, fuzzy
-#| msgid "&View"
+#: rc.cpp:1327
 msgid "View"
-msgstr "&Prikaz"
+msgstr "Prikaz"
 
 #. i18n: file: ktorrent/kttorrentactivityui.rc:69
 #. i18n: ectx: Menu (ColumnsMenu)
-#: rc.cpp:1342
+#: rc.cpp:1336
 msgid "Configure Columns"
 msgstr "Podešavanje kolona"
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, UPnPTestWidget)
-#: rc.cpp:1351
+#: rc.cpp:1345
 msgid "UPnP Test Application"
 msgstr "Probni program za UPnP"
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:24
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:1354
+#: rc.cpp:1348
 msgid "Router:"
 msgstr "Ruter:"
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:40
 #. i18n: ectx: property (text), widget (QLabel, m_router)
-#: rc.cpp:1357
+#: rc.cpp:1351
 msgid "No routers found."
 msgstr "Nijedan ruter nije nađen."
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:49
 #. i18n: ectx: property (text), widget (QPushButton, m_find_routers)
-#: rc.cpp:1360
+#: rc.cpp:1354
 msgid "Find Routers"
 msgstr "Nađi rutere"
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:89
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1366
+#: rc.cpp:1360
 msgid "Protocol:"
 msgstr "Protokol:"
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:97
 #. i18n: ectx: property (text), item, widget (QComboBox, m_protocol)
-#: rc.cpp:1369
+#: rc.cpp:1363
 msgid "UDP"
 msgstr "UDP"
 
@@ -6993,7 +6852,7 @@ msgstr "UDP"
 #. i18n: ectx: property (text), widget (QPushButton, m_forward)
 #. i18n: file: plugins/upnp/upnpwidget.ui:27
 #. i18n: ectx: property (text), widget (QPushButton, m_forward)
-#: rc.cpp:1375 rc.cpp:2875
+#: rc.cpp:1369 rc.cpp:2860
 msgid "Forward"
 msgstr "Prosledi"
 
@@ -7005,16 +6864,17 @@ msgstr "Prosledi"
 #. i18n: ectx: property (text), widget (QPushButton, m_undo_forward)
 #. i18n: file: plugins/upnp/upnpwidget.ui:34
 #. i18n: ectx: property (text), widget (QPushButton, m_undo_forward)
-#: rc.cpp:1378 rc.cpp:2878
+#: rc.cpp:1372 rc.cpp:2863
 msgid "Undo Forward"
 msgstr "Opozovi prosleđivanje"
 
 #. i18n: file: ktupnptest/upnptestwidget.ui:139
 #. i18n: ectx: property (text), widget (QCheckBox, m_verbose)
-#: rc.cpp:1381
+#: rc.cpp:1375
 msgid "Verbose mode"
 msgstr "Opširni režim"
 
+# rewrite-msgid: /.*//
 #. i18n: file: libktcore/torrent/basicjobprogresswidget.ui:24
 #. i18n: ectx: property (text), widget (QLabel, job_title)
 #. i18n: file: libktcore/torrent/basicjobprogresswidget.ui:31
@@ -7031,181 +6891,181 @@ msgstr "Opširni režim"
 #. i18n: ectx: property (text), widget (QLabel, job_speed)
 #. i18n: file: libktcore/torrent/basicjobprogresswidget.ui:59
 #. i18n: ectx: property (text), widget (QLabel, msg)
-#: rc.cpp:1384 rc.cpp:1387 rc.cpp:1390 rc.cpp:1393
+#: rc.cpp:1378 rc.cpp:1381 rc.cpp:1384 rc.cpp:1387
 msgid "TextLabel"
-msgstr ""
+msgstr "TextLabel"
 
 #. i18n: file: libktcore/ktorrent.kcfg:10
 #. i18n: ectx: label, entry (maxDownloads), group (downloads)
-#: rc.cpp:1396
+#: rc.cpp:1390
 msgid "Maximum number of downloads (0 = no limit)"
 msgstr "Najveći broj preuzimanja (0 = neograničeno)"
 
 #. i18n: file: libktcore/ktorrent.kcfg:15
 #. i18n: ectx: label, entry (maxSeeds), group (downloads)
-#: rc.cpp:1399
+#: rc.cpp:1393
 msgid "Maximum number of seeds (0 = no limit)"
 msgstr "Najveći broj sejanja (0 = neograničeno)"
 
 #. i18n: file: libktcore/ktorrent.kcfg:20
 #. i18n: ectx: label, entry (startDownloadsOnLowDiskSpace), group (downloads)
-#: rc.cpp:1402
+#: rc.cpp:1396
 msgid "Start downloads on low disk space?"
 msgstr "Da li započinjati preuzimanje pri malo prostora na disku"
 
 #. i18n: file: libktcore/ktorrent.kcfg:25
 #. i18n: ectx: label, entry (maxConnections), group (downloads)
-#: rc.cpp:1405
+#: rc.cpp:1399
 msgid "Maximum number of connections per torrent (0 = no limit)"
 msgstr "Najveći broj veza po torentu (0 = neograničeno)"
 
 #. i18n: file: libktcore/ktorrent.kcfg:30
 #. i18n: ectx: label, entry (maxTotalConnections), group (downloads)
-#: rc.cpp:1408
+#: rc.cpp:1402
 msgid "Maximum number of connections for all torrents (0 = no limit) "
 msgstr "Najveći broj veza za sve torente (0 = neograničeno)"
 
 #. i18n: file: libktcore/ktorrent.kcfg:35
 #. i18n: ectx: label, entry (maxUploadRate), group (downloads)
-#: rc.cpp:1411
+#: rc.cpp:1405
 msgid "Maximum upload speed in KiB/sec (0 = no limit)"
 msgstr "Najveća brzina otpremanja u KiB/s (0 = neograničeno)"
 
 #. i18n: file: libktcore/ktorrent.kcfg:40
 #. i18n: ectx: label, entry (maxDownloadRate), group (downloads)
-#: rc.cpp:1414
+#: rc.cpp:1408
 msgid "Maximum download speed in KiB/sec (0 = no limit)"
 msgstr "Najveća brzina preuzimanja u KiB/s (0 = neograničeno)."
 
 #. i18n: file: libktcore/ktorrent.kcfg:45
 #. i18n: ectx: label, entry (maxRatio), group (downloads)
-#: rc.cpp:1417
+#: rc.cpp:1411
 msgid "Maximum share ratio (0 = no limit)"
 msgstr "Najveći odnos deljenja (0 = neograničeno)"
 
 #. i18n: file: libktcore/ktorrent.kcfg:66
 #. i18n: ectx: label, entry (showSystemTrayIcon), group (downloads)
-#: rc.cpp:1426
+#: rc.cpp:1420
 msgid "Show a system tray icon"
 msgstr "Ikona sistemske kasete"
 
 #. i18n: file: libktcore/ktorrent.kcfg:70
 #. i18n: ectx: label, entry (showSpeedBarInTrayIcon), group (downloads)
-#: rc.cpp:1429
+#: rc.cpp:1423
 msgid "Show speed bar in tray icon"
 msgstr "Traka brzine u ikoni kasete"
 
 #. i18n: file: libktcore/ktorrent.kcfg:74
 #. i18n: ectx: label, entry (downloadBandwidth), group (downloads)
-#: rc.cpp:1432
+#: rc.cpp:1426
 msgid "Download bandwidth (in kb/s):"
 msgstr "Protok za preuzimanje (u KiB/s):"
 
 #. i18n: file: libktcore/ktorrent.kcfg:80
 #. i18n: ectx: label, entry (uploadBandwidth), group (downloads)
-#: rc.cpp:1435
+#: rc.cpp:1429
 msgid "Upload bandwidth (in kb/s):"
 msgstr "Protok za otpremanje (u KiB/s):"
 
 #. i18n: file: libktcore/ktorrent.kcfg:86
 #. i18n: ectx: label, entry (showPopups), group (downloads)
-#: rc.cpp:1438
+#: rc.cpp:1432
 msgid "Show popup messages when torrent is finished."
 msgstr "Prikaži iskačuću poruka na završetku torenta"
 
 #. i18n: file: libktcore/ktorrent.kcfg:90
 #. i18n: ectx: label, entry (keepSeeding), group (downloads)
-#: rc.cpp:1441
+#: rc.cpp:1435
 msgid "Keep seeding after download has finished"
 msgstr "Nastavi da seješ nakon završenog preuzimanja"
 
 #. i18n: file: libktcore/ktorrent.kcfg:94
 #. i18n: ectx: label, entry (tempDir), group (downloads)
-#: rc.cpp:1444
+#: rc.cpp:1438
 msgid "Folder to store temporary files"
 msgstr "Fascikla za smeštanje privremenih fajlova"
 
 #. i18n: file: libktcore/ktorrent.kcfg:97
 #. i18n: ectx: label, entry (useSaveDir), group (downloads)
-#: rc.cpp:1447
+#: rc.cpp:1441
 msgid "Whether to automatically save downloads to saveDir"
 msgstr "Da li automatski upisivati preuzimanja u zadatu fasciklu"
 
 #. i18n: file: libktcore/ktorrent.kcfg:101
 #. i18n: ectx: label, entry (saveDir), group (downloads)
-#: rc.cpp:1450
+#: rc.cpp:1444
 msgid "Folder to store downloaded files"
 msgstr "Fascikla za smeštanje preuzetih fajlova"
 
 #. i18n: file: libktcore/ktorrent.kcfg:104
 #. i18n: ectx: label, entry (useTorrentCopyDir), group (downloads)
-#: rc.cpp:1453
+#: rc.cpp:1447
 msgid "Whether to automatically copy .torrent files to torrentCopyDir"
 msgstr "Da li automatski kopirati torent fajlove u zadatu fasciklu"
 
 #. i18n: file: libktcore/ktorrent.kcfg:108
 #. i18n: ectx: label, entry (torrentCopyDir), group (downloads)
-#: rc.cpp:1456
+#: rc.cpp:1450
 msgid "Folder to copy .torrent files to"
 msgstr "Fascikla za kopiranje torent fajlova"
 
 #. i18n: file: libktcore/ktorrent.kcfg:111
 #. i18n: ectx: label, entry (useCustomIP), group (downloads)
-#: rc.cpp:1459
+#: rc.cpp:1453
 msgid "Whether to use a custom IP to pass to the tracker"
 msgstr "Da li proslediti pratiocu posebnu IP adresu"
 
 #. i18n: file: libktcore/ktorrent.kcfg:115
 #. i18n: ectx: label, entry (lastSaveDir), group (downloads)
-#: rc.cpp:1462
+#: rc.cpp:1456
 msgid "Directory which was used as the last save directory"
 msgstr "Fascikla u koju je poslednji put upisivano"
 
 #. i18n: file: libktcore/ktorrent.kcfg:119
 #. i18n: ectx: label, entry (customIP), group (downloads)
-#: rc.cpp:1465
+#: rc.cpp:1459
 msgid "IP to pass to the tracker"
 msgstr "IP adresa za prosleđivanje pratiocu"
 
 #. i18n: file: libktcore/ktorrent.kcfg:123
 #. i18n: ectx: label, entry (guiUpdateInterval), group (downloads)
-#: rc.cpp:1468
+#: rc.cpp:1462
 msgid "GUI update interval"
 msgstr "Period ažuriranja sučelja"
 
 #. i18n: file: libktcore/ktorrent.kcfg:129
 #. i18n: ectx: label, entry (dhtSupport), group (downloads)
-#: rc.cpp:1471
+#: rc.cpp:1465
 msgid "Support for DHT"
 msgstr "Podrška za DHT"
 
 #. i18n: file: libktcore/ktorrent.kcfg:133
 #. i18n: ectx: label, entry (dhtPort), group (downloads)
-#: rc.cpp:1474
+#: rc.cpp:1468
 msgid "DHT port"
 msgstr "DHT port"
 
 #. i18n: file: libktcore/ktorrent.kcfg:142
 #. i18n: ectx: label, entry (numUploadSlots), group (downloads)
-#: rc.cpp:1477
+#: rc.cpp:1471
 msgid "Number of upload slots"
 msgstr "Broj veza otpremanja"
 
 #. i18n: file: libktcore/ktorrent.kcfg:192
 #. i18n: ectx: label, entry (shownColumns), group (downloads)
-#: rc.cpp:1486
+#: rc.cpp:1480
 msgid "Columns shown in KTorrentView"
 msgstr "Kolone date u glavnom prikazu"
 
 #. i18n: file: libktcore/ktorrent.kcfg:237
 #. i18n: ectx: label, entry (eta), group (downloads)
-#: rc.cpp:1489
+#: rc.cpp:1483
 msgid "Algorithm to estimate the time when a torrent is finished"
 msgstr "Algoritam za procenu vremena dovršavanja torenta"
 
 #. i18n: file: libktcore/ktorrent.kcfg:249
 #. i18n: ectx: label, entry (minDiskSpace), group (downloads)
-#: rc.cpp:1492
+#: rc.cpp:1486
 msgid ""
 "When there is no space left to complete download, and the available disk "
 "space is less than this value, the torrent will be stopped."
@@ -7215,31 +7075,31 @@ msgstr ""
 
 #. i18n: file: libktcore/ktorrent.kcfg:260
 #. i18n: ectx: label, entry (useCompletedDir), group (downloads)
-#: rc.cpp:1495
+#: rc.cpp:1489
 msgid "Whether to automatically move completed downloads to completedDir"
 msgstr "Da li automatski premeštati završena preuzimanja u zadatu fasciklu"
 
 #. i18n: file: libktcore/ktorrent.kcfg:264
 #. i18n: ectx: label, entry (completedDir), group (downloads)
-#: rc.cpp:1498
+#: rc.cpp:1492
 msgid "Folder to move completed downloaded files to"
 msgstr "Fascikla u koju se premeštaju završena preuzimanja"
 
 #. i18n: file: libktcore/ktorrent.kcfg:267
 #. i18n: ectx: label, entry (maxSeedTime), group (downloads)
-#: rc.cpp:1501
+#: rc.cpp:1495
 msgid "Maximum seed time in hours (0 = no limit)"
 msgstr "Najduže vreme sejanja u satima (0 = neograničeno)"
 
 #. i18n: file: plasma/applet/appletconfig.ui:21
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1513
+#: rc.cpp:1507
 msgid "Torrent to display:"
 msgstr "Torenti koji se prikazuju:"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, AddItemDlg)
-#: rc.cpp:1516
+#: rc.cpp:1510
 msgid "Add a new item to the schedule"
 msgstr "Dodaj novu stavku u raspored"
 
@@ -7251,7 +7111,7 @@ msgstr "Dodaj novu stavku u raspored"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:23
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:1519 rc.cpp:1672
+#: rc.cpp:1513 rc.cpp:1666
 msgid "Time"
 msgstr "Vreme"
 
@@ -7263,7 +7123,7 @@ msgstr "Vreme"
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:31
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:1522 rc.cpp:1675
+#: rc.cpp:1516 rc.cpp:1669
 msgid "From:"
 msgstr "Od:"
 
@@ -7284,7 +7144,7 @@ msgstr "Od:"
 #. i18n: ectx: property (displayFormat), widget (QTimeEdit, m_from)
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:52
 #. i18n: ectx: property (displayFormat), widget (QTimeEdit, m_to)
-#: rc.cpp:1525 rc.cpp:1531 rc.cpp:1678 rc.cpp:1684
+#: rc.cpp:1519 rc.cpp:1525 rc.cpp:1672 rc.cpp:1678
 msgid "hh:mm"
 msgstr "čč:mm"
 
@@ -7296,31 +7156,31 @@ msgstr "čč:mm"
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:45
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:1528 rc.cpp:1681
+#: rc.cpp:1522 rc.cpp:1675
 msgid "To:"
 msgstr "Do:"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:63
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:1534
+#: rc.cpp:1528
 msgid "Days:"
 msgstr "Dani:"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:77
 #. i18n: ectx: property (text), widget (QPushButton, m_entire_week)
-#: rc.cpp:1537
+#: rc.cpp:1531
 msgid "Entire Week"
 msgstr "Cela sedmica"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:84
 #. i18n: ectx: property (text), widget (QPushButton, m_weekdays_only)
-#: rc.cpp:1540
+#: rc.cpp:1534
 msgid "Weekdays Only"
 msgstr "Samo radni dani"
 
 #. i18n: file: plugins/bwscheduler/additemdlg.ui:91
 #. i18n: ectx: property (text), widget (QPushButton, m_weekend)
-#: rc.cpp:1543
+#: rc.cpp:1537
 msgid "Weekend"
 msgstr "Vikend"
 
@@ -7332,7 +7192,7 @@ msgstr "Vikend"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:93
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:1546 rc.cpp:1690
+#: rc.cpp:1540 rc.cpp:1684
 msgid "Limits"
 msgstr "Ograničenja"
 
@@ -7352,7 +7212,7 @@ msgstr "Ograničenja"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:159
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:1552 rc.cpp:1573 rc.cpp:1696 rc.cpp:1717
+#: rc.cpp:1546 rc.cpp:1567 rc.cpp:1690 rc.cpp:1711
 msgid "Download limit:"
 msgstr "Ograničenje preuzimanja:"
 
@@ -7372,7 +7232,7 @@ msgstr "Ograničenje preuzimanja:"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:179
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:1561 rc.cpp:1582 rc.cpp:1705 rc.cpp:1726
+#: rc.cpp:1555 rc.cpp:1576 rc.cpp:1699 rc.cpp:1720
 msgid "Upload limit:"
 msgstr "Ograničenje otpremanja:"
 
@@ -7384,7 +7244,7 @@ msgstr "Ograničenje otpremanja:"
 #. i18n: ectx: property (text), widget (QCheckBox, m_screensaver_limits)
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:150
 #. i18n: ectx: property (text), widget (QCheckBox, m_screensaver_limits)
-#: rc.cpp:1570 rc.cpp:1714
+#: rc.cpp:1564 rc.cpp:1708
 msgid "When screensaver is activated:"
 msgstr "Kada se aktivira čuvar ekrana:"
 
@@ -7396,7 +7256,7 @@ msgstr "Kada se aktivira čuvar ekrana:"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:204
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:1591 rc.cpp:1735
+#: rc.cpp:1585 rc.cpp:1729
 msgid "Connection Limits"
 msgstr "Ograničenja veze"
 
@@ -7408,19 +7268,19 @@ msgstr "Ograničenja veze"
 #. i18n: ectx: property (text), widget (QCheckBox, m_set_connection_limits)
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:210
 #. i18n: ectx: property (text), widget (QCheckBox, m_set_connection_limits)
-#: rc.cpp:1594 rc.cpp:1738
+#: rc.cpp:1588 rc.cpp:1732
 msgid "Set connection limits"
 msgstr "Postavi ograničenja veze"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:16
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:1609
+#: rc.cpp:1603
 msgid "Special Limits"
 msgstr "Specijalna ograničenja"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:22
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_screensaverLimits)
-#: rc.cpp:1612
+#: rc.cpp:1606
 msgid ""
 "Use these global limits when the screensaver is activated, instead of the "
 "ones configured in the network settings."
@@ -7430,19 +7290,19 @@ msgstr ""
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:25
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_screensaverLimits)
-#: rc.cpp:1615
+#: rc.cpp:1609
 msgid "Use different speed limits when the screensaver is activated"
 msgstr "Različita ograničenja brzine pod čuvarom ekrana"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:49
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_screensaverUploadLimit)
-#: rc.cpp:1621
+#: rc.cpp:1615
 msgid "Global upload limit when the screensaver is activated."
 msgstr "Globalno ograničenje otpremanja kada se aktivira čuvar ekrana."
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:78
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_screensaverDownloadLimit)
-#: rc.cpp:1633
+#: rc.cpp:1627
 msgid "Global download limit when the screensaver is activated."
 msgstr "Globalno ograničenje preuzimanja kada se aktivira čuvar ekrana."
 
@@ -7454,87 +7314,87 @@ msgstr "Globalno ograničenje preuzimanja kada se aktivira čuvar ekrana."
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: file: plugins/stats/DisplaySettings.ui:16
 #. i18n: ectx: property (title), widget (QGroupBox, ColorsGbw)
-#: rc.cpp:1642 rc.cpp:2386
+#: rc.cpp:1636 rc.cpp:2373
 msgid "Colors"
 msgstr "Boje"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:120
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1645
+#: rc.cpp:1639
 msgid "Schedule background color:"
 msgstr "Boja pozadine rasporeda:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:127
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_scheduleBackgroundColor)
-#: rc.cpp:1648
+#: rc.cpp:1642
 msgid "Color of the schedule background."
 msgstr "Boja pozadine rasporeda."
 
 # skip-rule: t-line
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:134
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:1651
+#: rc.cpp:1645
 msgid "Schedule line color:"
 msgstr "Boja linije rasporeda:"
 
 # skip-rule: t-line
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:141
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_scheduleLineColor)
-#: rc.cpp:1654
+#: rc.cpp:1648
 msgid "Color of all lines on the schedule."
 msgstr "Boja svih linija rasporeda."
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:148
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:1657
+#: rc.cpp:1651
 msgid "Schedule Item color:"
 msgstr "Boja stavke rasporeda:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:155
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_itemColor)
-#: rc.cpp:1660
+#: rc.cpp:1654
 msgid "Color of each normal item on the schedule."
 msgstr "Boja obične stavke u rasporedu."
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:162
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:1663
+#: rc.cpp:1657
 msgid "Suspended schedule item color:"
 msgstr "Boja suspendovane stavke u rasporedu:"
 
 #. i18n: file: plugins/bwscheduler/bwprefpage.ui:169
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_suspendedColor)
-#: rc.cpp:1666
+#: rc.cpp:1660
 msgid "Color of each suspended item on the schedule."
 msgstr "Boja svake suspendovane stavke u rasporedu."
 
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:63
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:1687
+#: rc.cpp:1681
 msgid "Day:"
 msgstr "Dan:"
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:22
 #. i18n: ectx: property (text), widget (QLabel, m_top_label)
-#: rc.cpp:1763
+#: rc.cpp:1757
 msgid "File download order for:"
 msgstr "Redosled preuzimanja fajlova za:"
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:29
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_custom_order_enabled)
-#: rc.cpp:1766
+#: rc.cpp:1760
 msgid "Whether or not to enable a custom download order."
 msgstr "Da li se uključuje poseban redosled preuzimanja."
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:32
 #. i18n: ectx: property (text), widget (QCheckBox, m_custom_order_enabled)
-#: rc.cpp:1769
+#: rc.cpp:1763
 msgid "Custom file download order enabled"
 msgstr "Poseban redosled preuzimanja fajlova"
 
 #. i18n: file: plugins/downloadorder/downloadorderwidget.ui:41
 #. i18n: ectx: property (toolTip), widget (QListView, m_order)
-#: rc.cpp:1772
+#: rc.cpp:1766
 msgid ""
 "Order in which to download the files of a torrent. The file at the top will "
 "be downloaded first, followed by the second, then the third ..."
@@ -7544,79 +7404,79 @@ msgstr ""
 
 #. i18n: file: plugins/infowidget/chunkdownloadview.ui:26
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:1784
+#: rc.cpp:1778
 msgid "Total:"
 msgstr "Ukupno:"
 
 #. i18n: file: plugins/infowidget/chunkdownloadview.ui:62
 #. i18n: ectx: property (text), widget (QLabel, textLabel5)
-#: rc.cpp:1787
+#: rc.cpp:1781
 msgid "Currently downloading:"
 msgstr "Trenutno se preuzima:"
 
 #. i18n: file: plugins/infowidget/chunkdownloadview.ui:134
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
-#: rc.cpp:1793
+#: rc.cpp:1787
 msgid "Excluded:"
 msgstr "Izuzeto:"
 
 #. i18n: file: plugins/infowidget/chunkdownloadview.ui:170
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_4_2)
-#: rc.cpp:1796
+#: rc.cpp:1790
 msgid "Left:"
 msgstr "Preostalo:"
 
 #. i18n: file: plugins/infowidget/chunkdownloadview.ui:206
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_8)
-#: rc.cpp:1799
+#: rc.cpp:1793
 msgid "Size:"
 msgstr "Veličina:"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:17
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:1802
+#: rc.cpp:1796
 msgid "Tabs"
 msgstr "Jezičci"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:23
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showPeerView)
-#: rc.cpp:1805
+#: rc.cpp:1799
 msgid "Whether or not to show the peers tab in the bottom of the window."
 msgstr "Da li prikazivati jezičak vršnjaka u dnu ekrana."
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:26
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showPeerView)
-#: rc.cpp:1808
+#: rc.cpp:1802
 msgid "Show list of peers"
 msgstr "Spisak vršnjaka"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:33
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showChunkView)
-#: rc.cpp:1811
+#: rc.cpp:1805
 msgid "Whether or not to show the chunks tab in the bottom of the window."
 msgstr "Da li prikazivati jezičak parčića u dnu ekrana."
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:36
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showChunkView)
-#: rc.cpp:1814
+#: rc.cpp:1808
 msgid "Show list of chunks currently downloading"
 msgstr "Spisak parčića koji se trenutno preuzimaju"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:43
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showTrackersView)
-#: rc.cpp:1817
+#: rc.cpp:1811
 msgid "Whether or not to show the trackers tab in the bottom of the window."
 msgstr "Da li prikazivati jezičak pratilaca u dnu ekrana."
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:46
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showTrackersView)
-#: rc.cpp:1820
+#: rc.cpp:1814
 msgid "Show list of trackers"
 msgstr "Spisak pratilaca"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:56
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showWebSeedsTab)
-#: rc.cpp:1823
+#: rc.cpp:1817
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
 "css\">\n"
@@ -7631,25 +7491,25 @@ msgstr ""
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:59
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showWebSeedsTab)
-#: rc.cpp:1829
+#: rc.cpp:1823
 msgid "Show list of webseeds"
 msgstr "Spisak veb sejanja"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:69
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:1832
+#: rc.cpp:1826
 msgid "File Priority Colors"
 msgstr "Boje za prioritete fajla"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:75
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1835
+#: rc.cpp:1829
 msgid "First priority:"
 msgstr "Prvi prioritet:"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:85
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_firstColor)
-#: rc.cpp:1838
+#: rc.cpp:1832
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
 "css\">\n"
@@ -7663,13 +7523,13 @@ msgstr "<html><p>Boja za fajlove prvog prioriteta.</p></html>"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:92
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:1844
+#: rc.cpp:1838
 msgid "Last priority:"
 msgstr "Poslednji prioritet:"
 
 #. i18n: file: plugins/infowidget/iwprefpage.ui:102
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_lastColor)
-#: rc.cpp:1847
+#: rc.cpp:1841
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
 "css\">\n"
@@ -7683,109 +7543,109 @@ msgstr "<html><p>Boja za fajlove poslednjeg prioriteta.</p></html>"
 
 #. i18n: file: plugins/infowidget/ktinfowidgetplugin.kcfg:10
 #. i18n: ectx: label, entry (showPeerView), group (general)
-#: rc.cpp:1853
+#: rc.cpp:1847
 msgid "Show peer view tab in main window"
 msgstr "Jezičak prikaza vršnjaka u glavnom prozoru"
 
 #. i18n: file: plugins/infowidget/ktinfowidgetplugin.kcfg:14
 #. i18n: ectx: label, entry (showChunkView), group (general)
-#: rc.cpp:1856
+#: rc.cpp:1850
 msgid "Show chunk download view tab in main window"
 msgstr "Jezičak prikaza preuzimanja parčića u glavnom prozoru"
 
 #. i18n: file: plugins/infowidget/ktinfowidgetplugin.kcfg:18
 #. i18n: ectx: label, entry (showTrackersView), group (general)
-#: rc.cpp:1859
+#: rc.cpp:1853
 msgid "Show trackers view tab in main window"
 msgstr "Jezičak prikaza pratilaca u glavnom prozoru"
 
 #. i18n: file: plugins/infowidget/statustab.ui:32
 #. i18n: ectx: property (text), widget (QLabel, hdr_info)
-#: rc.cpp:1864
+#: rc.cpp:1858
 msgid "Info"
 msgstr "Podaci"
 
 #. i18n: file: plugins/infowidget/statustab.ui:41
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:1867
+#: rc.cpp:1861
 msgid "Average down speed:"
 msgstr "Prosečna brzina preuzimanja:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:64
 #. i18n: ectx: property (text), widget (QLabel, label_16)
-#: rc.cpp:1870
+#: rc.cpp:1864
 msgid "Type:"
 msgstr "Vrsta:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:100
 #. i18n: ectx: property (text), widget (QLabel, label_15)
-#: rc.cpp:1873
+#: rc.cpp:1867
 msgid "Average up speed:"
 msgstr "Prosečna brzina slanja:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:171
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:1883
+#: rc.cpp:1876
 msgid "Downloaded chunks:"
 msgstr "Preuzeto parčića:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:194
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:1886
+#: rc.cpp:1879
 msgid "Available chunks:"
 msgstr "Dostupno parčića:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:256
 #. i18n: ectx: property (text), widget (QLabel, hdr_sharing)
-#: rc.cpp:1889
+#: rc.cpp:1882
 msgid "Sharing"
 msgstr "Deljenje"
 
 #. i18n: file: plugins/infowidget/statustab.ui:265
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:1892
+#: rc.cpp:1885
 msgid "Share ratio:"
 msgstr "Odnos deljenja:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:282
 #. i18n: ectx: property (text), widget (QCheckBox, use_ratio_limit)
-#: rc.cpp:1895
+#: rc.cpp:1888
 msgid "Ratio limit:"
 msgstr "Ograničenje odnosa:"
 
 #. i18n: file: plugins/infowidget/statustab.ui:308
 #. i18n: ectx: property (text), widget (QCheckBox, use_time_limit)
-#: rc.cpp:1901
+#: rc.cpp:1894
 msgid "Time limit:"
 msgstr "Vremensko ograničenje:"
 
 #. i18n: file: plugins/infowidget/trackerview.ui:29
 #. i18n: ectx: property (text), widget (KPushButton, m_remove_tracker)
-#: rc.cpp:1913
+#: rc.cpp:1906
 msgid "Remove Tracker"
 msgstr "Ukloni pratilac"
 
 #. i18n: file: plugins/infowidget/trackerview.ui:36
 #. i18n: ectx: property (text), widget (KPushButton, m_change_tracker)
-#: rc.cpp:1916
+#: rc.cpp:1909
 msgid "Change Tracker"
 msgstr "Promeni pratilac"
 
 #. i18n: file: plugins/infowidget/trackerview.ui:43
 #. i18n: ectx: property (text), widget (QPushButton, m_scrape)
-#: rc.cpp:1919
+#: rc.cpp:1912
 msgid "Update Trackers"
 msgstr "Ažuriraj pratioce"
 
 #. i18n: file: plugins/infowidget/trackerview.ui:63
 #. i18n: ectx: property (text), widget (KPushButton, m_restore_defaults)
-#: rc.cpp:1922
+#: rc.cpp:1915
 msgid "Restore Defaults"
 msgstr "Vrati podrazumevano"
 
 #. i18n: file: plugins/infowidget/webseedstab.ui:21
 #. i18n: ectx: property (toolTip), widget (KLineEdit, m_webseed)
-#: rc.cpp:1925
+#: rc.cpp:1918
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
 "css\">\n"
@@ -7808,103 +7668,103 @@ msgstr ""
 
 #. i18n: file: plugins/infowidget/webseedstab.ui:28
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
-#: rc.cpp:1933
+#: rc.cpp:1926
 msgid "Add Webseed"
 msgstr "Dodaj veb sejanje"
 
 #. i18n: file: plugins/infowidget/webseedstab.ui:50
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
-#: rc.cpp:1936
+#: rc.cpp:1929
 msgid "Remove Webseed"
 msgstr "Ukloni veb sejanje"
 
 #. i18n: file: plugins/infowidget/webseedstab.ui:70
 #. i18n: ectx: property (text), widget (QPushButton, m_enable_all)
-#: rc.cpp:1939
+#: rc.cpp:1932
 msgid "Enable All"
 msgstr "Uključi sve"
 
 #. i18n: file: plugins/infowidget/webseedstab.ui:77
 #. i18n: ectx: property (text), widget (QPushButton, m_disable_all)
-#: rc.cpp:1942
+#: rc.cpp:1935
 msgid "Disable All"
 msgstr "Isključi sve"
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:28
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:1948
+#: rc.cpp:1941
 msgid "Converting block list to KTorrent format. This might take some time."
 msgstr "Pretvori listu blokiranja u KTorrentov format. Može potrajati."
 
 #. i18n: file: plugins/ipfilter/convertdialog.ui:95
 #. i18n: ectx: property (text), widget (QPushButton, m_cancel)
-#: rc.cpp:1951
+#: rc.cpp:1944
 msgid "C&ancel"
 msgstr "&Otkaži"
 
 #. i18n: file: plugins/ipfilter/ktipfilterplugin.kcfg:10
 #. i18n: ectx: label, entry (filterURL), group (general)
-#: rc.cpp:1954
+#: rc.cpp:1947
 msgid "Level1 filter url"
 msgstr "URL filtera nivoa 1"
 
 #. i18n: file: plugins/ipfilter/ktipfilterplugin.kcfg:14
 #. i18n: ectx: label, entry (useLevel1), group (general)
-#: rc.cpp:1957
+#: rc.cpp:1950
 msgid "Use level1 filter?"
 msgstr "Koristiti filter nivoa 1?"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, IPBlockingPrefPage)
-#: rc.cpp:1961
+#: rc.cpp:1954
 msgid "IPBlocking Preferences"
 msgstr "Postavke IP blokiranja"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:23
 #. i18n: ectx: property (title), widget (Q3GroupBox, groupBox1)
-#: rc.cpp:1964
+#: rc.cpp:1957
 msgid "PeerGuardian Filter File "
 msgstr "Filterski fajl PeerGuardiana"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:29
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useLevel1)
-#: rc.cpp:1967
+#: rc.cpp:1960
 msgid "Enable this if you want the IP filter plugin to work."
 msgstr "Uključite ovo ako želite da vam radi priključak IP filtera."
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:32
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useLevel1)
-#: rc.cpp:1970
+#: rc.cpp:1963
 msgid "Use PeerGuardian filter"
 msgstr "Filter PeerGuardiana"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:44
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:1973
+#: rc.cpp:1966
 msgid "IP filter file:"
 msgstr "Fajl IP filtera:"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:54
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_filterURL)
-#: rc.cpp:1976
+#: rc.cpp:1969
 msgid "Filter file to use, this can be a local file or a remote file."
 msgstr "Fajl filtera koji se koristi. Može biti lokalni ili udaljeni."
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:81
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_download)
-#: rc.cpp:1979
+#: rc.cpp:1972
 msgid "Download and convert the IP filter file."
 msgstr "Preuzimam i pretvaram fajl IP filtera."
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:84
 #. i18n: ectx: property (text), widget (QPushButton, m_download)
-#: rc.cpp:1982
+#: rc.cpp:1975
 msgid "Dow&nload/Convert"
 msgstr "P&reuzmi/pretvori"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:94
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: rc.cpp:1985
+#: rc.cpp:1978
 msgid ""
 "Download PeerGuardian filter from bluetack.co.uk or blocklist.org.\n"
 "NOTE: ZIP file from bluetack.co.uk is supported."
@@ -7915,49 +7775,49 @@ msgstr ""
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:117
 #. i18n: ectx: property (title), widget (QGroupBox, m_auto_update_group_box)
-#: rc.cpp:1989
+#: rc.cpp:1982
 msgid "Automatic Update"
 msgstr "Automatsko ažuriranje"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:125
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_autoUpdate)
-#: rc.cpp:1992
+#: rc.cpp:1985
 msgid "Enable this if you want to automatically update the filter file."
 msgstr "Uključite ovo ukoliko želite da se fajl filtera automatski ažurira."
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:128
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_autoUpdate)
-#: rc.cpp:1995
+#: rc.cpp:1988
 msgid "Update file every:"
 msgstr "Ažuriraj fajl na:"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:147
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_autoUpdateInterval)
-#: rc.cpp:1998
+#: rc.cpp:1991
 msgid "Update interval in days."
 msgstr "Period ažuriranja u danima."
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:167
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2001
+#: rc.cpp:1994
 msgid "Last updated:"
 msgstr "Ažuriran:"
 
 #. i18n: file: plugins/ipfilter/ipblockingprefpage.ui:187
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2005
+#: rc.cpp:1997
 msgid "Next update:"
 msgstr "Sledeće ažuriranje:"
 
 #. i18n: file: plugins/logviewer/ktlogviewerplugin.kcfg:11
 #. i18n: ectx: label, entry (useRichText), group (general)
-#: rc.cpp:2008
+#: rc.cpp:2000
 msgid "Use rich log text"
 msgstr "Bogati tekst u dnevniku"
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:27
 #. i18n: ectx: property (toolTip), widget (QTreeView, m_logging_flags)
-#: rc.cpp:2011
+#: rc.cpp:2003
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -8000,7 +7860,7 @@ msgstr ""
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:46
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useRichText)
-#: rc.cpp:2027
+#: rc.cpp:2019
 msgid ""
 "Whether or not to use rich text or just plain text, for the logging output "
 "shown in the logviewer."
@@ -8008,41 +7868,39 @@ msgstr "Da li koristiti bogati ili običan tekst za u prikazivaču dnevnika."
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:49
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useRichText)
-#: rc.cpp:2030
+#: rc.cpp:2022
 msgid "Use rich text for logging output"
 msgstr "Bogati tekst za izlaz dnevnika"
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:58
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2033
+#: rc.cpp:2025
 msgid "Log widget position:"
 msgstr "Položaj dnevničkog vidžeta:"
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:72
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
-#: rc.cpp:2036
+#: rc.cpp:2028
 msgid "Separate activity"
 msgstr "zasebna aktivnost"
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:77
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
-#: rc.cpp:2039
+#: rc.cpp:2031
 msgid "Dockable widget"
 msgstr "usidrivi vidžet"
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:82
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
-#: rc.cpp:2042
+#: rc.cpp:2034
 msgid "Torrent activity"
 msgstr "aktivnost torenta"
 
 #. i18n: file: plugins/logviewer/logprefwidget.ui:107
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2045
-#, fuzzy
-#| msgid "Maximum number of connection setups:"
+#: rc.cpp:2037
 msgid "Maximum number of visible lines:"
-msgstr "Najveći broj uspostavljenih veza:"
+msgstr "Najveći broj vidljivih redova:"
 
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:10
 #. i18n: ectx: label, entry (torrenttracker), group (general)
@@ -8052,26 +7910,26 @@ msgstr "Najveći broj uspostavljenih veza:"
 #. i18n: ectx: label, entry (torrenttracker), group (general)
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:40
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_torrenttracker)
-#: rc.cpp:2048 rc.cpp:2072
+#: rc.cpp:2040 rc.cpp:2064
 msgid "Grabs a tracker from the torrent file"
 msgstr "Uzima pratioce iz torent fajla"
 
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:14
 #. i18n: ectx: label, entry (customtracker), group (general)
-#: rc.cpp:2051
+#: rc.cpp:2043
 msgid "Toggles if a custom tracker is used"
 msgstr "Da li se koristi poseban pratilac"
 
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:18
 #. i18n: ectx: label, entry (tr), group (general)
-#: rc.cpp:2054
+#: rc.cpp:2046
 msgid "The default tracker"
 msgstr "Podrazumevani pratilac"
 
 # >> dn= is a keyword inside magnet link
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:22
 #. i18n: ectx: label, entry (dn), group (general)
-#: rc.cpp:2057
+#: rc.cpp:2049
 msgid "Show dn"
 msgstr "Prikaži dn"
 
@@ -8083,7 +7941,7 @@ msgstr "Prikaži dn"
 #. i18n: ectx: label, entry (popup), group (general)
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:90
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_popup)
-#: rc.cpp:2060 rc.cpp:2102
+#: rc.cpp:2052 rc.cpp:2094
 msgid "Show popup"
 msgstr "Prikaži iskakač"
 
@@ -8095,80 +7953,80 @@ msgstr "Prikaži iskakač"
 #. i18n: ectx: label, entry (onlypublic), group (general)
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:77
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_onlypublic)
-#: rc.cpp:2063 rc.cpp:2093
+#: rc.cpp:2055 rc.cpp:2085
 msgid "Only enable on public torrents"
 msgstr "Uključi samo za javne torente"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:26
 #. i18n: ectx: property (windowTitle), widget (QWidget, MagnetGeneratorPrefWidget)
-#: rc.cpp:2066
+#: rc.cpp:2058
 msgid "Magnet Generator Preferences"
 msgstr "Postavke generatora magneta"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:43
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_torrenttracker)
-#: rc.cpp:2075
+#: rc.cpp:2067
 msgid "Add a tracker from the torrent file"
 msgstr "Dodaj pratilac iz torent fajla"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:50
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_customtracker)
-#: rc.cpp:2078
+#: rc.cpp:2070
 msgid "Define what tracker to add"
 msgstr "Definišite pratilac koji se dodaje"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:53
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_customtracker)
-#: rc.cpp:2081
+#: rc.cpp:2073
 msgid "Add a custom tracker URL"
 msgstr "Dodaj poseban URL pratioca"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:60
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_tr)
-#: rc.cpp:2084
+#: rc.cpp:2076
 msgid "The tracker URL that will be a part of the magnet link"
 msgstr "URL pratioca koji će biti deo magnetske veze"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:67
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_dn)
-#: rc.cpp:2087
+#: rc.cpp:2079
 msgid "Add the torrent name in the URI"
 msgstr "Dodaj ime torenta u URI"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:70
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_dn)
-#: rc.cpp:2090
+#: rc.cpp:2082
 msgid "Add name"
 msgstr "Dodaj ime"
 
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:80
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_onlypublic)
-#: rc.cpp:2096
+#: rc.cpp:2088
 msgid "Disable the menu item for private torrents"
 msgstr "Isključi stavku menija za privatne torente"
 
 # skip-rule: t-form
 #. i18n: file: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:87
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_popup)
-#: rc.cpp:2099
+#: rc.cpp:2091
 msgid "Give feedback in form of a popup"
 msgstr "Pruži odziv u obliku iskakača"
 
 #. i18n: file: plugins/mediaplayer/ktmediaplayerpluginui.rc:3
 #. i18n: ectx: Menu (MediaPlayerMenu)
-#: rc.cpp:2105
+#: rc.cpp:2097
 msgid "Media Player Menu"
 msgstr "Meni medija plejera"
 
 #. i18n: file: plugins/mediaplayer/ktmediaplayerpluginui.rc:11
 #. i18n: ectx: ToolBar (MediaPlayerToolBar)
-#: rc.cpp:2108
+#: rc.cpp:2100
 msgid "Media Player Toolbar"
 msgstr "Traka medija plejera"
 
 #. i18n: file: plugins/scanfolder/ktscanfolderplugin.kcfg:13
 #. i18n: ectx: label, entry (openSilently), group (general)
-#: rc.cpp:2111
+#: rc.cpp:2103
 msgid "Whether to open torrent silently or not."
 msgstr "Da li otvoriti torent tiho."
 
@@ -8176,7 +8034,7 @@ msgstr "Da li otvoriti torent tiho."
 # rewrite-msgid: /.*/Delete torrent after opening/
 #. i18n: file: plugins/scanfolder/ktscanfolderplugin.kcfg:18
 #. i18n: ectx: label, entry (actionDelete), group (general)
-#: rc.cpp:2114
+#: rc.cpp:2106
 msgid "Delete action checked."
 msgstr "Brisanje torenta po otvaranju."
 
@@ -8184,61 +8042,61 @@ msgstr "Brisanje torenta po otvaranju."
 # rewrite-msgid: /.*/Move torrent after opening/
 #. i18n: file: plugins/scanfolder/ktscanfolderplugin.kcfg:23
 #. i18n: ectx: label, entry (actionMove), group (general)
-#: rc.cpp:2117
+#: rc.cpp:2109
 msgid "Move action checked."
 msgstr "Premeštanje torenta po otvaranju."
 
 #. i18n: file: plugins/scanfolder/ktscanfolderplugin.kcfg:28
 #. i18n: ectx: label, entry (recursive), group (general)
-#: rc.cpp:2120
+#: rc.cpp:2112
 msgid "Scan directories recursively."
 msgstr "Rekurzivno pretraživanje fascikli"
 
 #. i18n: file: plugins/scanfolder/scanfolderprefpage.ui:16
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2123
+#: rc.cpp:2115
 msgid "Folders to scan for torrents:"
 msgstr "Fascikle gde se traže torenti:"
 
 #. i18n: file: plugins/scanfolder/scanfolderprefpage.ui:25
 #. i18n: ectx: property (toolTip), widget (KListWidget, m_folders)
-#: rc.cpp:2126
+#: rc.cpp:2118
 msgid "List of folders which will be scanned for torrents by this plugin."
 msgstr "Spisak fascikli u kojima će priključak tražiti torente."
 
 #. i18n: file: plugins/scanfolder/scanfolderprefpage.ui:34
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_add)
-#: rc.cpp:2129
+#: rc.cpp:2121
 msgid "Add a new folder to be scanned."
 msgstr "Dodaje novu fasciklu za pretragu."
 
 #. i18n: file: plugins/scanfolder/scanfolderprefpage.ui:37
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
-#: rc.cpp:2132
+#: rc.cpp:2124
 msgid "Add Folder"
 msgstr "Dodaj fasciklu"
 
 #. i18n: file: plugins/scanfolder/scanfolderprefpage.ui:44
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_remove)
-#: rc.cpp:2135
+#: rc.cpp:2127
 msgid "Remove a folder from the list."
 msgstr "Ukloni fasciklu sa spiska."
 
 #. i18n: file: plugins/scanfolder/scanfolderprefpage.ui:47
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
-#: rc.cpp:2138
+#: rc.cpp:2130
 msgid "Remove Folder"
 msgstr "Ukloni fasciklu"
 
 #. i18n: file: plugins/scanfolder/scanfolderprefpage.ui:77
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openSilently)
-#: rc.cpp:2144
+#: rc.cpp:2136
 msgid "Open the torrents without asking any questions."
 msgstr "Otvori torente bez ikakvih pitanja."
 
 #. i18n: file: plugins/scanfolder/scanfolderprefpage.ui:93
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_recursive)
-#: rc.cpp:2150
+#: rc.cpp:2142
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -8263,13 +8121,13 @@ msgstr ""
 
 #. i18n: file: plugins/scanfolder/scanfolderprefpage.ui:96
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_recursive)
-#: rc.cpp:2159
+#: rc.cpp:2151
 msgid "Scan subfolders"
 msgstr "Pretraži potfascikle"
 
 #. i18n: file: plugins/scanfolder/scanfolderprefpage.ui:109
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_actionDelete)
-#: rc.cpp:2162
+#: rc.cpp:2154
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -8294,13 +8152,13 @@ msgstr ""
 
 #. i18n: file: plugins/scanfolder/scanfolderprefpage.ui:112
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_actionDelete)
-#: rc.cpp:2171
+#: rc.cpp:2163
 msgid "Remove torrent file after loading"
 msgstr "Ukloni torent fajl nakon učitavanja"
 
 #. i18n: file: plugins/scanfolder/scanfolderprefpage.ui:119
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_actionMove)
-#: rc.cpp:2174
+#: rc.cpp:2166
 msgid ""
 "When a torrent file is loaded, move it to a subdirectory named loaded. If "
 "the folder does not exist, it will be created."
@@ -8310,49 +8168,49 @@ msgstr ""
 
 #. i18n: file: plugins/scanfolder/scanfolderprefpage.ui:122
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_actionMove)
-#: rc.cpp:2177
+#: rc.cpp:2169
 msgid "Move torrent file to loaded directory"
 msgstr "Premesti torent fajl u fasciklu učitanih"
 
 #. i18n: file: plugins/scanfolder/scanfolderprefpage.ui:131
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_addToGroup)
-#: rc.cpp:2180
+#: rc.cpp:2172
 msgid "Add torrents opened with this plugin to a group."
 msgstr "Dodaj torente otvorene ovim priključkom u grupu."
 
 #. i18n: file: plugins/scanfolder/scanfolderprefpage.ui:141
 #. i18n: ectx: property (toolTip), widget (QComboBox, m_group)
-#: rc.cpp:2186
+#: rc.cpp:2178
 msgid "Group to add torrents to."
 msgstr "Grupa gde će se dodati torenti."
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:51
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2193
+#: rc.cpp:2184
 msgid "Description:"
 msgstr "Opis:"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:65
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2197
+#: rc.cpp:2187
 msgid "License:"
 msgstr "Licenca:"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:79
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2201
+#: rc.cpp:2190
 msgid "Author:"
 msgstr "Autor:"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:93
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:2205
+#: rc.cpp:2193
 msgid "E-Mail:"
 msgstr "E‑pošta:"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:107
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:2209
+#: rc.cpp:2196
 msgid "Website:"
 msgstr "Veb sajt:"
 
@@ -8364,37 +8222,37 @@ msgstr "Veb sajt:"
 #. i18n: ectx: property (windowTitle), widget (QWidget, AutoRemoveConfig)
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, AutoResumeConfig)
-#: rc.cpp:2212 rc.cpp:2224
+#: rc.cpp:2199 rc.cpp:2211
 msgid "Auto Resume Settings"
 msgstr "Postavke automatskog nastavljanja"
 
 #. i18n: file: plugins/scripting/scripts/auto_remove/auto_remove.ui:19
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2215
+#: rc.cpp:2202
 msgid "Auto remove a torrent when:"
 msgstr "Automatski ukloni torent po:"
 
 #. i18n: file: plugins/scripting/scripts/auto_remove/auto_remove.ui:26
 #. i18n: ectx: property (text), widget (QCheckBox, finish_downloading)
-#: rc.cpp:2218
+#: rc.cpp:2205
 msgid "The torrent finishes downloading"
 msgstr "završetku preuzimanja torenta"
 
 #. i18n: file: plugins/scripting/scripts/auto_remove/auto_remove.ui:33
 #. i18n: ectx: property (text), widget (QCheckBox, finish_seeding)
-#: rc.cpp:2221
+#: rc.cpp:2208
 msgid "The torrent finishes seeding"
 msgstr "završetku sejanja torenta"
 
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:19
 #. i18n: ectx: property (text), widget (QCheckBox, auto_resume)
-#: rc.cpp:2227
+#: rc.cpp:2214
 msgid "Auto resume after:"
 msgstr "Automatski nastavi nakon:"
 
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:41
 #. i18n: ectx: property (suffix), widget (QSpinBox, hours)
-#: rc.cpp:2230
+#: rc.cpp:2217
 msgid " hours"
 msgstr " sati"
 
@@ -8406,73 +8264,73 @@ msgstr " sati"
 #. i18n: ectx: property (suffix), widget (QSpinBox, minutes)
 #. i18n: file: plugins/syndication/feedwidget.ui:87
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_refresh_rate)
-#: rc.cpp:2233 rc.cpp:2700
+#: rc.cpp:2220 rc.cpp:2685
 msgid " minutes"
 msgstr " minuta"
 
 #. i18n: file: plugins/scripting/scripts/auto_resume/auto_resume.ui:61
 #. i18n: ectx: property (suffix), widget (QSpinBox, seconds)
-#: rc.cpp:2236
+#: rc.cpp:2223
 msgid " seconds"
 msgstr " sekundi"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, EMailConfigWidget)
-#: rc.cpp:2239
+#: rc.cpp:2226
 msgid "EMail Settings"
 msgstr "Postavke e‑pošte"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:19
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:2242
+#: rc.cpp:2229
 msgid "SMTP Server"
 msgstr "SMTP server"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:49
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2251
+#: rc.cpp:2238
 msgid "SMTP server:"
 msgstr "SMTP server:"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:80
 #. i18n: ectx: property (text), widget (QCheckBox, tls)
-#: rc.cpp:2257
+#: rc.cpp:2244
 msgid "Use SSL/TLS encryption"
 msgstr "SSL/TLS šifrovanje"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:90
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:2260
+#: rc.cpp:2247
 msgid "Destination"
 msgstr "Odredište"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:96
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2263
+#: rc.cpp:2250
 msgid "Send mails to:"
 msgstr "Šalji poštu:"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:106
 #. i18n: ectx: property (text), widget (QCheckBox, add_cc)
-#: rc.cpp:2266
+#: rc.cpp:2253
 msgid "Add CC:"
 msgstr "Dodaj CC:"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:116
 #. i18n: ectx: property (text), widget (QCheckBox, add_bcc)
-#: rc.cpp:2269
+#: rc.cpp:2256
 msgid "Add BCC:"
 msgstr "Dodaj BCC:"
 
 #. i18n: file: plugins/search/ktsearchpluginui.rc:3
 #. i18n: ectx: ToolBar (SearchToolBar)
-#: rc.cpp:2278
+#: rc.cpp:2265
 msgid "Search Toolbar"
 msgstr "Pretraživačka traka"
 
 #. i18n: file: plugins/search/ktsearchplugin.kcfg:10
 #. i18n: ectx: label, entry (searchEngine), group (general)
-#: rc.cpp:2281
+#: rc.cpp:2268
 msgid "Current search engine"
 msgstr "Tekući pretraživač"
 
@@ -8484,19 +8342,19 @@ msgstr "Tekući pretraživač"
 #. i18n: ectx: label, entry (useDefaultBrowser), group (general)
 #. i18n: file: plugins/search/searchpref.ui:92
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_useDefaultBrowser)
-#: rc.cpp:2284 rc.cpp:2323
+#: rc.cpp:2271 rc.cpp:2310
 msgid "Use default browser"
 msgstr "Podrazumevani pregledač"
 
 #. i18n: file: plugins/search/ktsearchplugin.kcfg:19
 #. i18n: ectx: label, entry (useCustomBrowser), group (general)
-#: rc.cpp:2287
+#: rc.cpp:2274
 msgid "Use custom browser"
 msgstr "Koristi posebni pregledač"
 
 #. i18n: file: plugins/search/ktsearchplugin.kcfg:23
 #. i18n: ectx: label, entry (customBrowser), group (general)
-#: rc.cpp:2290
+#: rc.cpp:2277
 msgid "Custom browser executable path"
 msgstr "Putanja posebnog pregledača"
 
@@ -8508,155 +8366,151 @@ msgstr "Putanja posebnog pregledača"
 #. i18n: ectx: property (windowTitle), widget (QWidget, SearchPref)
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:26
 #. i18n: ectx: property (windowTitle), widget (QWidget, WebInterfacePrefWidget)
-#: rc.cpp:2293 rc.cpp:2902
+#: rc.cpp:2280 rc.cpp:2887
 msgid "Search Preferences"
 msgstr "Postavke pretrage"
 
 #. i18n: file: plugins/search/searchpref.ui:34
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_clear_history)
-#: rc.cpp:2296
+#: rc.cpp:2283
 msgid "Clear the search history combo boxes."
 msgstr "Očisti istorijat pretrage."
 
 #. i18n: file: plugins/search/searchpref.ui:37
 #. i18n: ectx: property (text), widget (QPushButton, m_clear_history)
-#: rc.cpp:2299
+#: rc.cpp:2286
 msgid "Clear Search History"
 msgstr "Očisti istorijat pretrage"
 
 #. i18n: file: plugins/search/searchpref.ui:44
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_reset_default_action)
-#: rc.cpp:2302
-#, fuzzy
-#| msgid "Directory to move data to when a torrent has finished downloading."
+#: rc.cpp:2289
 msgid "Reset the default action taken when a torrent is downloaded."
-msgstr "Fascikla gde će se premestiti podaci nakon završenog preuzimanja."
+msgstr "Resetuj podrazumevanu radnju pošto se torent preuzme."
 
 #. i18n: file: plugins/search/searchpref.ui:47
 #. i18n: ectx: property (text), widget (QPushButton, m_reset_default_action)
-#: rc.cpp:2305
-#, fuzzy
-#| msgid "Default save location:"
+#: rc.cpp:2292
 msgid "Reset Default Torrent Action"
-msgstr "Podrazumevana lokacija upisivanja:"
+msgstr "Resetuj podrazumevanu radnju torenta"
 
 #. i18n: file: plugins/search/searchpref.ui:69
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_restorePreviousSession)
-#: rc.cpp:2308
+#: rc.cpp:2295
 msgid "Restore all the active searches of the last session"
-msgstr ""
+msgstr "Povrati sve aktivne pretrage iz poslednje sesije."
 
 #. i18n: file: plugins/search/searchpref.ui:72
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_restorePreviousSession)
-#: rc.cpp:2311
+#: rc.cpp:2298
 msgid "Restore previous searches"
-msgstr ""
+msgstr "Povrati prethodne pretrage"
 
 #. i18n: file: plugins/search/searchpref.ui:79
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openInExternal)
-#: rc.cpp:2314
+#: rc.cpp:2301
 msgid "Whether or not to open searches in an external browser."
 msgstr "Da li se pretrage otvaraju u spoljnom pregledaču."
 
 #. i18n: file: plugins/search/searchpref.ui:82
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openInExternal)
-#: rc.cpp:2317
+#: rc.cpp:2304
 msgid "Open searches in external browser"
 msgstr "Otvori pretrage u spoljnom pregledaču"
 
 #. i18n: file: plugins/search/searchpref.ui:89
 #. i18n: ectx: property (toolTip), widget (QRadioButton, kcfg_useDefaultBrowser)
-#: rc.cpp:2320
+#: rc.cpp:2307
 msgid "Use the default browser configured in the system settings."
 msgstr "Koristi podrazumevani pregledač podešen u sistemskim postavkama."
 
 #. i18n: file: plugins/search/searchpref.ui:104
 #. i18n: ectx: property (toolTip), widget (QRadioButton, kcfg_useCustomBrowser)
-#: rc.cpp:2326
+#: rc.cpp:2313
 msgid "Use a custom browser."
 msgstr "Koristi posebni pregledač."
 
 #. i18n: file: plugins/search/searchpref.ui:107
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_useCustomBrowser)
-#: rc.cpp:2329
+#: rc.cpp:2316
 msgid "Custom browser path:"
 msgstr "Putanja posebnog pregledača:"
 
 #. i18n: file: plugins/search/searchpref.ui:117
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_customBrowser)
-#: rc.cpp:2332
+#: rc.cpp:2319
 msgid "Path of the custom browser."
 msgstr "Putanja do posebnog pregledača."
 
 #. i18n: file: plugins/search/searchpref.ui:142
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox8)
-#: rc.cpp:2335
+#: rc.cpp:2322
 msgid "Search Engines"
 msgstr "Pretraživači"
 
 #. i18n: file: plugins/search/searchpref.ui:157
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_add)
-#: rc.cpp:2338
+#: rc.cpp:2325
 msgid "Add a new search engine."
 msgstr "Dodaj novi pretraživač."
 
 #. i18n: file: plugins/search/searchpref.ui:167
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_remove)
-#: rc.cpp:2344
+#: rc.cpp:2331
 msgid "Remove all selected search engines."
 msgstr "Ukloni sve izabrane pretraživače."
 
 #. i18n: file: plugins/search/searchpref.ui:170
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
-#: rc.cpp:2347
+#: rc.cpp:2334
 msgid "&Remove"
 msgstr "&Ukloni"
 
 #. i18n: file: plugins/search/searchpref.ui:177
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_remove_all)
-#: rc.cpp:2350
+#: rc.cpp:2337
 msgid "Remove all search engines."
 msgstr "Ukloni sve pretraživače."
 
 #. i18n: file: plugins/search/searchpref.ui:180
 #. i18n: ectx: property (text), widget (QPushButton, m_remove_all)
-#: rc.cpp:2353
+#: rc.cpp:2340
 msgid "R&emove All"
 msgstr "U&kloni sve"
 
 #. i18n: file: plugins/search/searchpref.ui:200
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_add_default)
-#: rc.cpp:2356
+#: rc.cpp:2343
 msgid "Add all default search engines."
 msgstr "Dodaj sve podrazumevane pretraživače."
 
 #. i18n: file: plugins/search/searchpref.ui:203
 #. i18n: ectx: property (text), widget (QPushButton, m_add_default)
-#: rc.cpp:2359
+#: rc.cpp:2346
 msgid "Add Defau&lt"
 msgstr "Dodaj pod&razumevane"
 
 #. i18n: file: plugins/shutdown/ktshutdownpluginui.rc:11
 #. i18n: ectx: ToolBar (ShutdownToolBar)
-#: rc.cpp:2365
+#: rc.cpp:2352
 msgid "Shutdown Toolbar"
 msgstr "Traka gašenja"
 
 #. i18n: file: plugins/shutdown/shutdowndlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, ShutdownDlg)
-#: rc.cpp:2368
+#: rc.cpp:2355
 msgid "Shutdown Settings"
 msgstr "Postavke gašenja"
 
 #. i18n: file: plugins/shutdown/shutdowndlg.ui:24
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2371
+#: rc.cpp:2358
 msgid "Action to execute:"
 msgstr "Radnja za izvršavanje:"
 
 #. i18n: file: plugins/shutdown/shutdowndlg.ui:34
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2374
+#: rc.cpp:2361
 msgid "Execute action when:"
 msgstr "Izvrši radnju:"
 
@@ -8676,7 +8530,7 @@ msgstr "Izvrši radnju:"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. i18n: file: plugins/stats/Settings.ui:140
 #. i18n: ectx: property (text), widget (QLabel, label_11)
-#: rc.cpp:2377 rc.cpp:2380 rc.cpp:2431 rc.cpp:2512
+#: rc.cpp:2364 rc.cpp:2367 rc.cpp:2418 rc.cpp:2499
 msgid "Connections"
 msgstr "Veze"
 
@@ -8688,7 +8542,7 @@ msgstr "Veze"
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #. i18n: file: plugins/stats/DisplaySettings.ui:412
 #. i18n: ectx: property (text), widget (QLabel, label_16)
-#: rc.cpp:2395 rc.cpp:2425
+#: rc.cpp:2382 rc.cpp:2412
 msgid "Average"
 msgstr "Prosečno"
 
@@ -8700,7 +8554,7 @@ msgstr "Prosečno"
 #. i18n: ectx: property (text), widget (QLabel, label_13)
 #. i18n: file: plugins/stats/DisplaySettings.ui:451
 #. i18n: ectx: property (text), widget (QLabel, label_17)
-#: rc.cpp:2398 rc.cpp:2428
+#: rc.cpp:2385 rc.cpp:2415
 msgid "Limit"
 msgstr "Ograničenje"
 
@@ -8720,325 +8574,325 @@ msgstr "Ograničenje"
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #. i18n: file: plugins/stats/Spd.ui:43
 #. i18n: ectx: property (title), widget (QGroupBox, UlSpdGbw)
-#: rc.cpp:2419 rc.cpp:2422 rc.cpp:2518 rc.cpp:2554
+#: rc.cpp:2406 rc.cpp:2409 rc.cpp:2505 rc.cpp:2541
 msgid "Upload"
 msgstr "Otpremanje"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:617
 #. i18n: ectx: property (text), widget (QLabel, label_26)
-#: rc.cpp:2443
+#: rc.cpp:2430
 msgid "Seeds  in swarms"
 msgstr "Sejača u rojevima"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:722
 #. i18n: ectx: property (text), widget (QLabel, label_29)
-#: rc.cpp:2452
+#: rc.cpp:2439
 msgid "Avg. leechers connected per running torr."
 msgstr "Prosek pijavica vezanih po aktivnom torentu"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:757
 #. i18n: ectx: property (text), widget (QLabel, label_30)
-#: rc.cpp:2455
+#: rc.cpp:2442
 msgid "Avg. seeds connected per running torrent"
 msgstr "Prosek sejača vezanih po aktivnom torentu"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:909
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AntiAliasing)
-#: rc.cpp:2470
+#: rc.cpp:2457
 msgid "Use anti-aliasing"
 msgstr "Omekšavanje"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:919
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_DrawBgdGrid)
-#: rc.cpp:2473
+#: rc.cpp:2460
 msgid "Draw background grid"
 msgstr "Mreža u pozadini"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:931
 #. i18n: ectx: property (text), widget (QLabel, label_18)
-#: rc.cpp:2476
+#: rc.cpp:2463
 msgid "Widget type:"
 msgstr "Vrsta vidžeta:"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:939
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_WidgetType)
-#: rc.cpp:2479
+#: rc.cpp:2466
 msgid "Native"
 msgstr "samosvojna"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:944
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_WidgetType)
-#: rc.cpp:2482
+#: rc.cpp:2469
 msgid "KDE"
 msgstr "KDE"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:952
 #. i18n: ectx: property (text), widget (QLabel, label_33)
-#: rc.cpp:2485
+#: rc.cpp:2472
 msgid "(plugin reload is needed after change)"
 msgstr "(traži ponovno učitavanje priključka nakon izmene)"
 
 #. i18n: file: plugins/stats/Settings.ui:19
 #. i18n: ectx: property (title), widget (QGroupBox, UpdateGbw)
-#: rc.cpp:2491
+#: rc.cpp:2478
 msgid "Update"
 msgstr "Ažuriranje"
 
 #. i18n: file: plugins/stats/Settings.ui:25
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2494
+#: rc.cpp:2481
 msgid "Update charts every"
 msgstr "Ažuriraj grafik svakih"
 
 #. i18n: file: plugins/stats/Settings.ui:50
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2497
+#: rc.cpp:2484
 msgid "GUI updates"
 msgstr "Ažuriranje sučelja"
 
 #. i18n: file: plugins/stats/Settings.ui:69
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2500
+#: rc.cpp:2487
 msgid "Gather data every"
 msgstr "Prikupi podatke svakih"
 
 #. i18n: file: plugins/stats/Settings.ui:95
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:2503
+#: rc.cpp:2490
 msgid "milliseconds"
 msgstr "milisekundi"
 
 #. i18n: file: plugins/stats/Settings.ui:108
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:2506
+#: rc.cpp:2493
 msgid "Measurements counts"
 msgstr "Raspon merenja"
 
 #. i18n: file: plugins/stats/Settings.ui:247
 #. i18n: ectx: property (title), widget (QGroupBox, MaxModeGbw)
-#: rc.cpp:2524
+#: rc.cpp:2511
 msgid "Maximum"
 msgstr "Maksimum"
 
 #. i18n: file: plugins/stats/Settings.ui:255
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:2527
+#: rc.cpp:2514
 msgid "Maximum speed scale mode: "
 msgstr "Maksimum razmere brzine: "
 
 # >> @option:radio
 #. i18n: file: plugins/stats/Settings.ui:272
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MaxMode)
-#: rc.cpp:2530
+#: rc.cpp:2517
 msgid "Top"
 msgstr "Vrh"
 
 #. i18n: file: plugins/stats/Settings.ui:277
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MaxMode)
-#: rc.cpp:2533
+#: rc.cpp:2520
 msgid "Exact"
 msgstr "tačno"
 
 #. i18n: file: plugins/stats/Settings.ui:290
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:2536
+#: rc.cpp:2523
 msgid "Peers connections"
 msgstr "Veze vršnjaka"
 
 #. i18n: file: plugins/stats/Settings.ui:296
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowSeedsInSwarms)
-#: rc.cpp:2539
+#: rc.cpp:2526
 msgid "Show seeds in swarms"
 msgstr "Prikaži sejače u rojevima"
 
 #. i18n: file: plugins/stats/Settings.ui:303
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowLeechersInSwarms)
-#: rc.cpp:2542
+#: rc.cpp:2529
 msgid "Show leechers in swarms"
 msgstr "Prikaži pijavice u rojevima"
 
 #. i18n: file: plugins/stats/Spd.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpdWgt)
-#: rc.cpp:2545
+#: rc.cpp:2532
 msgctxt "@title:window"
 msgid "Speed"
 msgstr "Brzina"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:10
 #. i18n: ectx: label, entry (UpdateEveryGuiUpdates), group (general)
-#: rc.cpp:2557
+#: rc.cpp:2544
 msgid "Update charts every n gui updates"
 msgstr "Ažuriraj grafike na dati broj ažuriranja sučelja"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:15
 #. i18n: ectx: label, entry (DataGatherIval), group (general)
-#: rc.cpp:2560
+#: rc.cpp:2547
 msgid "Interval in milliseconds between data gathering"
 msgstr "Period u milisekundama između sakupljanja podataka"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:20
 #. i18n: ectx: label, entry (MaxMode), group (general)
-#: rc.cpp:2563
+#: rc.cpp:2550
 msgid "Method of determining maximum value of the scale"
 msgstr "Metod određivanja najveće vrednosti na skali"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:25
 #. i18n: ectx: label, entry (ShowSeedsInSwarms), group (general)
-#: rc.cpp:2566
+#: rc.cpp:2553
 msgid "Whether to show seeds in swarms"
 msgstr "Da li prikazivati sejače u rojevima"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:30
 #. i18n: ectx: label, entry (ShowLeechersInSwarms), group (general)
-#: rc.cpp:2569
+#: rc.cpp:2556
 msgid "Whether to show leachers in swarms"
 msgstr "Da li prikazivati pijavice u rojevima"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:35
 #. i18n: ectx: label, entry (DlSpdSamples), group (general)
-#: rc.cpp:2572
+#: rc.cpp:2559
 msgid "Samples to show on download chart"
 msgstr "Uzorci za prikaz na grafiku preuzimanja"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:40
 #. i18n: ectx: label, entry (PeersSpdSamples), group (general)
-#: rc.cpp:2575
+#: rc.cpp:2562
 msgid "Samples to show on peers chart"
 msgstr "Uzorci za prikaz na grafiku vršnjaka"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:45
 #. i18n: ectx: label, entry (UlSpdSamples), group (general)
-#: rc.cpp:2578
+#: rc.cpp:2565
 msgid "Samples to show on upload chart"
 msgstr "Uzorci za prikaz na grafiku otpremanja"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:50
 #. i18n: ectx: label, entry (ConnsSamples), group (general)
-#: rc.cpp:2581
+#: rc.cpp:2568
 msgid "Samples to show on connections chart"
 msgstr "Uzorci za prikaz na grafiku veze"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:55
 #. i18n: ectx: label, entry (DhtSpdSamples), group (general)
-#: rc.cpp:2584
+#: rc.cpp:2571
 msgid "Samples to show on DHT chart"
 msgstr "Uzorci za prikaz na grafiku DHT‑a"
 
 # rewrite-msgid:/\bdl\b/download/
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:60
 #. i18n: ectx: label, entry (DlSpdColor), group (general)
-#: rc.cpp:2587
+#: rc.cpp:2574
 msgid "Color of the speed on dl chart"
 msgstr "Boja brzine na grafiku preuzimanja"
 
 # rewrite-msgid: /\bdl\b/download/
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:65
 #. i18n: ectx: label, entry (DlAvgColor), group (general)
-#: rc.cpp:2590
+#: rc.cpp:2577
 msgid "Color of the average on dl chart"
 msgstr "Boja proseka na grafiku preuzimanja"
 
 # rewrite-msgid: /\bdl\b/download/
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:70
 #. i18n: ectx: label, entry (DlLimitColor), group (general)
-#: rc.cpp:2593
+#: rc.cpp:2580
 msgid "Color of the limit on dl chart"
 msgstr "Boja ograničenja na grafiku preuzimanja"
 
 # rewrite-msgid: /avg/average/
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:75
 #. i18n: ectx: label, entry (PrAvgFromLColor), group (general)
-#: rc.cpp:2596
+#: rc.cpp:2583
 msgid "Color of the avg from leecher on peers chart"
 msgstr "Boja proseka od pijavica na grafiku vršnjaka"
 
 # rewrite-msgid: /avg/average/
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:80
 #. i18n: ectx: label, entry (PrAvgToLColor), group (general)
-#: rc.cpp:2599
+#: rc.cpp:2586
 msgid "Color of the avg to leecher on peers chart"
 msgstr "Boja proseka ka pijavicama na grafiku vršnjaka"
 
 # rewrite-msgid: /avg/average/
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:85
 #. i18n: ectx: label, entry (PrAvgFromSColor), group (general)
-#: rc.cpp:2602
+#: rc.cpp:2589
 msgid "Color of the avg from seeds on peers chart"
 msgstr "Boja proseka od sejača na grafiku vršnjaka"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:90
 #. i18n: ectx: label, entry (PrFromLColor), group (general)
-#: rc.cpp:2605
+#: rc.cpp:2592
 msgid "Color of the leechers on peers chart"
 msgstr "Boja pijavica na grafiku vršnjaka"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:95
 #. i18n: ectx: label, entry (PrFromSColor), group (general)
-#: rc.cpp:2608
+#: rc.cpp:2595
 msgid "Color of the seeds on peers chart"
 msgstr "Boja sejača na grafiku vršnjaka"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:100
 #. i18n: ectx: label, entry (UlSpdColor), group (general)
-#: rc.cpp:2611
+#: rc.cpp:2598
 msgid "Color of the speed on upload chart"
 msgstr "Boja brzine na grafiku otpremanja"
 
 # rewrite-msgid: /avg/average/
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:105
 #. i18n: ectx: label, entry (UlAvgColor), group (general)
-#: rc.cpp:2614
+#: rc.cpp:2601
 msgid "Color of the avg on upload chart"
 msgstr "Boja proseka na grafiku otpremanja"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:110
 #. i18n: ectx: label, entry (UlLimitColor), group (general)
-#: rc.cpp:2617
+#: rc.cpp:2604
 msgid "Color of the limit on upload chart"
 msgstr "Boja ograničenja na grafiku otpremanja"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:115
 #. i18n: ectx: label, entry (CnLConnColor), group (general)
-#: rc.cpp:2620
+#: rc.cpp:2607
 msgid "Color of the connected leechers on connections chart"
 msgstr "Boja povezanih pijavica na grafiku veza"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:120
 #. i18n: ectx: label, entry (CnLSwarmsColor), group (general)
-#: rc.cpp:2623
+#: rc.cpp:2610
 msgid "Color of the leechers in swarms on connections chart"
 msgstr "Boja pijavica u rojevima na grafiku veza"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:125
 #. i18n: ectx: label, entry (CnSConnColor), group (general)
-#: rc.cpp:2626
+#: rc.cpp:2613
 msgid "Color of the connected seeds on connections chart"
 msgstr "Boja povezanih sejača na grafiku veza"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:130
 #. i18n: ectx: label, entry (CnSSwarmsColor), group (general)
-#: rc.cpp:2629
+#: rc.cpp:2616
 msgid "Color of the seeds in swarms on connections chart"
 msgstr "Boja sejača u rojevima na grafiku veza"
 
 # rewrite-msgid: /avg/average/
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:135
 #. i18n: ectx: label, entry (CnAvgLConnPerTorrColor), group (general)
-#: rc.cpp:2632
+#: rc.cpp:2619
 msgid "Color of the avg connected leecher per torrent on connections chart"
 msgstr "Boja proseka povezanih pijavica po torentu na grafiku veza"
 
 # rewrite-msgid: /avg/average/
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:140
 #. i18n: ectx: label, entry (CnAvgSConnPerTorrColor), group (general)
-#: rc.cpp:2635
+#: rc.cpp:2622
 msgid "Color of the avg connected seeds per torrent on connections chart"
 msgstr "Boja proseka povezanih sejača po torentu na grafiku veza"
 
 # rewrite-msgid: /avg/average/
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:145
 #. i18n: ectx: label, entry (CnAvgLConnPerRunTorrColor), group (general)
-#: rc.cpp:2638
+#: rc.cpp:2625
 msgid ""
 "Color of the avg connected leechers per running torrent on connections chart"
 msgstr "Boja proseka povezanih pijavica po torentu u pogonu na grafiku veza"
@@ -9046,122 +8900,122 @@ msgstr "Boja proseka povezanih pijavica po torentu u pogonu na grafiku veza"
 # rewrite-msgid: /avg/average/
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:150
 #. i18n: ectx: label, entry (CnAvgSConnPerRunTorrColor), group (general)
-#: rc.cpp:2641
+#: rc.cpp:2628
 msgid ""
 "Color of the avg connected seeds per running torrent on connections chart"
 msgstr "Boja proseka povezanih sejača po torentu u pogonu na grafiku veza"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:155
 #. i18n: ectx: label, entry (DhtNodesColor), group (general)
-#: rc.cpp:2644
+#: rc.cpp:2631
 msgid "Color of the nodes on DHT chart"
 msgstr "Boja čvorova na grafiku DHT‑a"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:160
 #. i18n: ectx: label, entry (DhtTasksColor), group (general)
-#: rc.cpp:2647
+#: rc.cpp:2634
 msgid "Color of the tasks on DHT chart"
 msgstr "Boja zadataka na grafiku DHT‑a"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:165
 #. i18n: ectx: label, entry (AntiAliasing), group (general)
-#: rc.cpp:2650
+#: rc.cpp:2637
 msgid "Use anti aliasing on charts?"
 msgstr "Da li omekšavati grafike"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:170
 #. i18n: ectx: label, entry (DrawBgdGrid), group (general)
-#: rc.cpp:2653
+#: rc.cpp:2640
 msgid "Draw ugly grey background grid?"
 msgstr "Da li crtati ružnu sivu mrežu pozadine"
 
 #. i18n: file: plugins/stats/ktstatsplugin.kcfg:175
 #. i18n: ectx: label, entry (WidgetType), group (general)
-#: rc.cpp:2656
+#: rc.cpp:2643
 msgid "Type of widget used for chart drawing"
 msgstr "Vrsta vidžeta za iscrtavanje grafika"
 
 #. i18n: file: plugins/syndication/ktsyndicationpluginui.rc:4
 #. i18n: ectx: ToolBar (SyndicationToolBar)
-#: rc.cpp:2659
+#: rc.cpp:2646
 msgid "Syndication Toolbar"
 msgstr "Traka alatki sindikacije"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, ManageFiltersDlg)
-#: rc.cpp:2662
+#: rc.cpp:2649
 msgid "Manage Filters"
 msgstr "Upravljanje filterima"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:22
 #. i18n: ectx: property (text), widget (QLabel, m_feed_text)
-#: rc.cpp:2665
+#: rc.cpp:2652
 msgid "Feed:"
 msgstr "Dovod:"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:33
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2668
+#: rc.cpp:2655
 msgid "Active filters:"
 msgstr "Aktivni filteri:"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:91
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2677
+#: rc.cpp:2664
 msgid "Available filters:"
 msgstr "Dostupni filteri:"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:107
 #. i18n: ectx: property (text), widget (QPushButton, m_remove_all)
-#: rc.cpp:2680
+#: rc.cpp:2667
 msgid "Remove All"
 msgstr "Ukloni sve"
 
 #. i18n: file: plugins/syndication/feedwidget.ui:53
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2690
+#: rc.cpp:2676
 msgid "Status:"
 msgstr "Stanje:"
 
 #. i18n: file: plugins/syndication/feedwidget.ui:77
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2694
+#: rc.cpp:2679
 msgid "Refresh every:"
 msgstr "Osveži na:"
 
 #. i18n: file: plugins/syndication/feedwidget.ui:84
 #. i18n: ectx: property (toolTip), widget (QSpinBox, m_refresh_rate)
-#: rc.cpp:2697
+#: rc.cpp:2682
 msgid "Time between automatic refreshes of the feed."
 msgstr "Vreme između automatski ažuriranja dovoda."
 
 #. i18n: file: plugins/syndication/feedwidget.ui:128
 #. i18n: ectx: property (text), widget (KPushButton, m_refresh)
-#: rc.cpp:2706
+#: rc.cpp:2691
 msgid "Refresh"
 msgstr "Osveži"
 
 #. i18n: file: plugins/syndication/feedwidget.ui:148
 #. i18n: ectx: property (text), widget (KPushButton, m_filters)
-#: rc.cpp:2709
+#: rc.cpp:2694
 msgid "Filters"
 msgstr "Filteri"
 
 #. i18n: file: plugins/syndication/feedwidget.ui:155
 #. i18n: ectx: property (text), widget (KPushButton, m_cookies)
-#: rc.cpp:2712
+#: rc.cpp:2697
 msgid "Cookies"
-msgstr ""
+msgstr "Kolačići"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:22
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:2715
+#: rc.cpp:2700
 msgid "Name:"
 msgstr "Ime:"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:38
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: rc.cpp:2718
+#: rc.cpp:2703
 msgid "String Matching"
 msgstr "Poklapanje niski"
 
@@ -9173,7 +9027,7 @@ msgstr "Poklapanje niski"
 #. i18n: ectx: property (toolTip), widget (KEditListBox, m_word_matches)
 #. i18n: file: plugins/syndication/filtereditor.ui:144
 #. i18n: ectx: property (toolTip), widget (KEditListBox, m_exclusion_patterns)
-#: rc.cpp:2721 rc.cpp:2767
+#: rc.cpp:2706 rc.cpp:2752
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -9263,7 +9117,7 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_reg_exp_syntax)
 #. i18n: file: plugins/syndication/filtereditor.ui:157
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_exclusion_reg_exp)
-#: rc.cpp:2752 rc.cpp:2798
+#: rc.cpp:2737 rc.cpp:2783
 msgid ""
 "By default strings will use wildcard matching. If you want to use regular "
 "expressions, this needs to be enabled."
@@ -9279,17 +9133,15 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, m_reg_exp_syntax)
 #. i18n: file: plugins/syndication/filtereditor.ui:160
 #. i18n: ectx: property (text), widget (QCheckBox, m_exclusion_reg_exp)
-#: rc.cpp:2755 rc.cpp:2801
+#: rc.cpp:2740 rc.cpp:2786
 msgid "Strings are regular expressions"
 msgstr "Niske su regularni izrazi"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:95
 #. i18n: ectx: property (text), widget (QCheckBox, m_all_words_must_match)
-#: rc.cpp:2758
-#, fuzzy
-#| msgid "Item must match all strings"
+#: rc.cpp:2743
 msgid "Item must match all strings to be included"
-msgstr "Stavka mora poklapa sve niske"
+msgstr "Stavka mora poklopiti sve niske da bi bila uključena"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:102
 #. i18n: ectx: property (text), widget (QCheckBox, m_match_case_sensitive)
@@ -9299,45 +9151,43 @@ msgstr "Stavka mora poklapa sve niske"
 #. i18n: ectx: property (text), widget (QCheckBox, m_match_case_sensitive)
 #. i18n: file: plugins/syndication/filtereditor.ui:174
 #. i18n: ectx: property (text), widget (QCheckBox, m_exclusion_case_sensitive)
-#: rc.cpp:2761 rc.cpp:2807
+#: rc.cpp:2746 rc.cpp:2792
 msgid "Case sensitive matching"
 msgstr "Razlikuje veličinu slova"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:110
 #. i18n: ectx: attribute (title), widget (QWidget, tab_5)
-#: rc.cpp:2764
+#: rc.cpp:2749
 msgid "Exclusion Patterns"
-msgstr ""
+msgstr "Obrasci isključivanja"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:167
 #. i18n: ectx: property (text), widget (QCheckBox, m_exclusion_all_must_match)
-#: rc.cpp:2804
-#, fuzzy
-#| msgid "Item must match all strings"
+#: rc.cpp:2789
 msgid "Item must match all strings to be excluded"
-msgstr "Stavka mora poklapa sve niske"
+msgstr "Stavka mora poklopiti sve niske da bi bila isključena"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:182
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: rc.cpp:2810
+#: rc.cpp:2795
 msgid "Seasons && Episodes"
 msgstr "Sezone i epizode"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:188
 #. i18n: ectx: property (text), widget (QCheckBox, m_use_se_matching)
-#: rc.cpp:2813
+#: rc.cpp:2798
 msgid "Use season and episode matching"
 msgstr "Poklapanje sezona i epizoda"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:197
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:2816
+#: rc.cpp:2801
 msgid "Seasons: "
 msgstr "Sezone: "
 
 #. i18n: file: plugins/syndication/filtereditor.ui:208
 #. i18n: ectx: property (toolTip), widget (QLineEdit, m_seasons)
-#: rc.cpp:2819
+#: rc.cpp:2804
 msgid ""
 "Specify the seasons to download, multiple seasons can be separated by a , "
 "and you can also use ranges by using a -\n"
@@ -9355,13 +9205,13 @@ msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:215
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:2826
+#: rc.cpp:2811
 msgid "Episodes:"
 msgstr "Epizode:"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:226
 #. i18n: ectx: property (toolTip), widget (QLineEdit, m_episodes)
-#: rc.cpp:2829
+#: rc.cpp:2814
 msgid ""
 "Specify the episodes to download, multiple episodes can be separated by a , "
 "and you can also use ranges by using a -\n"
@@ -9379,31 +9229,31 @@ msgstr ""
 
 #. i18n: file: plugins/syndication/filtereditor.ui:235
 #. i18n: ectx: property (text), widget (QCheckBox, m_se_no_duplicates)
-#: rc.cpp:2836
+#: rc.cpp:2821
 msgid "Do not download multiple items with the same season and episode"
 msgstr "Ne preuzimaj više stavki istovetne sezone i epizode"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:262
 #. i18n: ectx: property (text), widget (QCheckBox, m_download_matches)
-#: rc.cpp:2842
+#: rc.cpp:2827
 msgid "Download torrents of matching items"
 msgstr "Preuzmi torente poklopljenih stavki"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:269
 #. i18n: ectx: property (text), widget (QCheckBox, m_download_non_matches)
-#: rc.cpp:2845
+#: rc.cpp:2830
 msgid "Download torrents of non matching items"
 msgstr "Preuzmi torente nepoklopljenih stavki"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:278
 #. i18n: ectx: property (text), widget (QCheckBox, m_add_to_group)
-#: rc.cpp:2848
+#: rc.cpp:2833
 msgid "Add to group:"
 msgstr "Dodaj u grupu:"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:334
 #. i18n: ectx: property (text), widget (QCheckBox, m_silently)
-#: rc.cpp:2857
+#: rc.cpp:2842
 msgid "Open torrents silently"
 msgstr "Otvori torente tiho"
 
@@ -9415,79 +9265,79 @@ msgstr "Otvori torente tiho"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. i18n: file: plugins/syndication/filtereditor.ui:363
 #. i18n: ectx: property (text), widget (QPushButton, m_test)
-#: rc.cpp:2860 rc.cpp:2863
+#: rc.cpp:2845 rc.cpp:2848
 msgid "Test"
 msgstr "Proba"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:370
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:2866
+#: rc.cpp:2851
 msgid "filter on feed:"
 msgstr "filter na dovodu:"
 
 #. i18n: file: plugins/upnp/ktupnpplugin.kcfg:10
 #. i18n: ectx: label, entry (defaultDevice), group (general)
-#: rc.cpp:2869
+#: rc.cpp:2854
 msgid "Default UPnP device to use"
 msgstr "Željeni podrazumevani UPnP uređaj"
 
 #. i18n: file: plugins/upnp/upnpwidget.ui:54
 #. i18n: ectx: property (text), widget (QPushButton, m_rescan)
-#: rc.cpp:2881
+#: rc.cpp:2866
 msgid "Rescan"
 msgstr "Ponovo pretraži"
 
 #. i18n: file: plugins/webinterface/ktwebinterfaceplugin.kcfg:10
 #. i18n: ectx: label, entry (port), group (general)
-#: rc.cpp:2884
+#: rc.cpp:2869
 msgid "Port number"
 msgstr "Broj porta"
 
 #. i18n: file: plugins/webinterface/ktwebinterfaceplugin.kcfg:15
 #. i18n: ectx: label, entry (forward), group (general)
-#: rc.cpp:2887
+#: rc.cpp:2872
 msgid "forward Port"
 msgstr "Prosledi port"
 
 #. i18n: file: plugins/webinterface/ktwebinterfaceplugin.kcfg:20
 #. i18n: ectx: label, entry (sessionTTL), group (general)
-#: rc.cpp:2890
+#: rc.cpp:2875
 msgid "Session time to live"
 msgstr "Vreme života sesije"
 
 #. i18n: file: plugins/webinterface/ktwebinterfaceplugin.kcfg:26
 #. i18n: ectx: label, entry (skin), group (general)
-#: rc.cpp:2893
+#: rc.cpp:2878
 msgid "interface skin"
 msgstr "Maska sučelja"
 
 #. i18n: file: plugins/webinterface/ktwebinterfaceplugin.kcfg:33
 #. i18n: ectx: label, entry (username), group (general)
-#: rc.cpp:2896
+#: rc.cpp:2881
 msgid "username"
 msgstr "Korisničko ime"
 
 #. i18n: file: plugins/webinterface/ktwebinterfaceplugin.kcfg:37
 #. i18n: ectx: label, entry (password), group (general)
-#: rc.cpp:2899
+#: rc.cpp:2884
 msgid "password"
 msgstr "Lozinka"
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:40
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: rc.cpp:2908
+#: rc.cpp:2893
 msgid "Web interface skin:"
 msgstr "Maska veb sučelja:"
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:62
 #. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_skin)
-#: rc.cpp:2911
+#: rc.cpp:2896
 msgid "Which interface to use."
 msgstr "Koje sučelje se koristi."
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:95
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_authentication)
-#: rc.cpp:2914
+#: rc.cpp:2899
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -9515,19 +9365,19 @@ msgstr ""
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:98
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_authentication)
-#: rc.cpp:2923
+#: rc.cpp:2908
 msgid "Login required"
 msgstr "Neophodno prijavljivanje"
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:115
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_username)
-#: rc.cpp:2929
+#: rc.cpp:2914
 msgid "Username you need to use in the login page of the webinterface."
 msgstr "Korisničko ime koje vam treba za prijavnu stranicu veb sučelja."
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:129
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_password)
-#: rc.cpp:2935
+#: rc.cpp:2920
 msgid ""
 "The password for the webinterface login page. By default this is set to "
 "ktorrent."
@@ -9536,19 +9386,19 @@ msgstr ""
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:144
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:2938
+#: rc.cpp:2923
 msgid "Web Server"
 msgstr "Veb server"
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:168
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_port)
-#: rc.cpp:2944
+#: rc.cpp:2929
 msgid "The port the webinterface listens on."
 msgstr "Port na kome veb sučelje osluškuje."
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:196
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_forward)
-#: rc.cpp:2947
+#: rc.cpp:2932
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -9576,24 +9426,24 @@ msgstr ""
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:199
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_forward)
-#: rc.cpp:2956
+#: rc.cpp:2941
 msgid "Forward port"
 msgstr "Prosledi port"
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:206
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
-#: rc.cpp:2959
+#: rc.cpp:2944
 msgid "Session TTL:"
 msgstr "Vreme trajanja sesije:"
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:222
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_sessionTTL)
-#: rc.cpp:2962
+#: rc.cpp:2947
 msgid "How long a session is valid (in seconds)."
 msgstr "Koliko dugo je sesija važeća (u sekundama)."
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:225
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_sessionTTL)
-#: rc.cpp:2965
+#: rc.cpp:2950
 msgid " secs"
 msgstr " sekundi"
