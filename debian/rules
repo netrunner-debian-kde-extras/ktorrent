@@ -6,6 +6,6 @@ override_dh_auto_configure:
 	dh_auto_configure -Skde -- -DCMAKE_USE_RELATIVE_PATHS=ON \
 	                           -DWITH_SYSTEM_GEOIP:BOOL=ON
 %:
-	dh --parallel --dbg-package=ktorrent-dbg --with kde $@
+	dh $@ --parallel --dbg-package=ktorrent-dbg --with kde
 
 .PHONY: override_dh_auto_test
