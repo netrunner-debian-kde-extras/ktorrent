@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-03 07:44+0200\n"
-"PO-Revision-Date: 2011-03-08 21:49+0100\n"
+"POT-Creation-Date: 2011-10-05 11:02+0200\n"
+"PO-Revision-Date: 2011-09-21 20:31+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 1.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -77,7 +77,7 @@ msgid "All Torrents"
 msgstr "Alle torrenter"
 
 #: ktorrent/dialogs/pastedialog.cpp:105
-#: ktorrent/dialogs/torrentcreatordlg.cpp:251 ktorrent/gui.cpp:341
+#: ktorrent/dialogs/torrentcreatordlg.cpp:251 ktorrent/gui.cpp:338
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "Ugyldig URL: %1"
@@ -668,7 +668,7 @@ msgid "Magnet Link"
 msgstr "Magnet-lenke"
 
 #: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:123
-#: ktorrent/view/viewmodel.cpp:437 ktorrent/trayicon.cpp:153
+#: ktorrent/view/viewmodel.cpp:437 ktorrent/trayicon.cpp:157
 #: plugins/infowidget/webseedsmodel.cpp:127
 #: plugins/infowidget/trackermodel.cpp:148
 msgid "Status"
@@ -1147,116 +1147,6 @@ msgstr "Klarer ikke kontakte en sporer."
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "%1<br>URL: <b>%2</b>"
 
-#: ktorrent/core.cpp:178
-#, kde-format
-msgid ""
-"KTorrent is unable to accept connections because the TCP ports %1 is already "
-"in use by another program."
-msgstr ""
-"KTorrent kan ikke ta i mot tilkoblinger fordi TCP-portene %1 er i bruk av et "
-"annet program."
-
-#: ktorrent/core.cpp:192
-#, kde-format
-msgid ""
-"KTorrent is unable to accept connections because the UDP port %1 is already "
-"in use by another program."
-msgstr ""
-"KTorrent kan ikke ta i mot tilkoblinger fordi UDP-porten %1 er i bruk av et "
-"annet program."
-
-#: ktorrent/core.cpp:305
-#, kde-format
-msgid ""
-"Opening the torrent <b>%1</b>, would share one or more files with the "
-"following torrents. .Torrents are not allowed to write to the same files. "
-msgstr ""
-"Hvis torrenten <b>%1</b> åpnes. så vil en eller flere filer deles med "
-"følgende torrenter.  Torrenter har ikke lov til å skrive til de samme "
-"filene. "
-
-#: ktorrent/core.cpp:1022
-msgid "KTorrent is running one or more torrents"
-msgstr "KTorrent kjører en eller flere torrrenter"
-
-#: ktorrent/core.cpp:1109
-#, kde-format
-msgid "Cannot create torrent: %1"
-msgstr "Klarte ikke lage torrent: %1"
-
-#: ktorrent/core.cpp:1212
-#, kde-format
-msgid ""
-"Several data files of the torrent \"%1\" are missing. \n"
-"Do you want to recreate them, or do you want to not download them?"
-msgstr ""
-"Flere datafiler i torrenten «%1» mangler. \n"
-"Vil du lage dem på nytt eller la være å laste dem ned?"
-
-#: ktorrent/core.cpp:1221 ktorrent/core.cpp:1232 ktorrent/core.cpp:1245
-msgid "Data files are missing"
-msgstr "Datafiler mangler"
-
-#: ktorrent/core.cpp:1231
-#, kde-format
-msgid "Cannot deselect missing files: %1"
-msgstr "Klarte ikke fravelge manglende filer: %1"
-
-#: ktorrent/core.cpp:1244
-#, kde-format
-msgid "Cannot recreate missing files: %1"
-msgstr "Klarte ikke lage manglende filer på nytt: %1"
-
-#: ktorrent/core.cpp:1255
-#, kde-format
-msgid ""
-"The file where the data is saved of the torrent \"%1\" is missing.\n"
-"Do you want to recreate it?"
-msgstr ""
-"Fila som inneholder data for torrenten «%1» mangler.\n"
-"Vil du bygge den opp igjen?"
-
-#: ktorrent/core.cpp:1262 ktorrent/core.cpp:1272
-msgid "Data file is missing"
-msgstr "Datafil mangler"
-
-#: ktorrent/core.cpp:1271
-#, kde-format
-msgid "Cannot recreate data file: %1"
-msgstr "Klarte ikke lage datafil på nytt: %1"
-
-#: ktorrent/core.cpp:1359
-#, kde-format
-msgid ""
-"KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
-"to import it?"
-msgid_plural ""
-"KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
-"want to import them?"
-msgstr[0] ""
-"KTorrent har funnet en torrent fra KDE3-versjonen av KTorrent. Vil du "
-"importere den?"
-msgstr[1] ""
-"KTorrent har funnet %1 torrenter fra KDE3-versjonen av KTorrent. Vil du "
-"importere dem?"
-
-#: ktorrent/core.cpp:1381
-msgid "No torrents from the KDE3 version were found."
-msgstr "Fant ingen torrenter fra KDE3-versjonen."
-
-#: ktorrent/core.cpp:1413 ktorrent/core.cpp:1432
-#, kde-format
-msgid "Invalid magnet bittorrent link: %1"
-msgstr "Ugyldig magnet bittorrent-lenke: %1"
-
-#: ktorrent/core.cpp:1418 ktorrent/core.cpp:1437
-msgid ""
-"You are attempting to download a magnet link, and DHT is not enabled. For "
-"optimum results enable DHT."
-msgstr ""
-"Du forsøker å laste ned en magnet-lenke, og DHT er ikke slått på. Slå på DHT "
-"for å få best resultat."
-
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
 #: ktorrent/main.cpp:94 plugins/search/webview.cpp:158 rc.cpp:515
@@ -1345,7 +1235,7 @@ msgstr "Felix Berger"
 
 #: ktorrent/main.cpp:113
 msgid "ChunkBar's tooltip and IWFileTreeItem sorting"
-msgstr "Verktøytips på blokklinja og «IWFileTreeItem»-sortering"
+msgstr "Hjelpeboble på blokklinja og «IWFileTreeItem»-sortering"
 
 #: ktorrent/main.cpp:114
 msgid "Andreas Kling"
@@ -1708,61 +1598,61 @@ msgstr "Gruppevisning synlig"
 msgid "Show or hide the group view"
 msgstr "Vis eller skjul gruppevisning"
 
-#: ktorrent/gui.cpp:274 ktorrent/gui.cpp:289
+#: ktorrent/gui.cpp:271 ktorrent/gui.cpp:286
 msgid "Open Location"
 msgstr "Åpne adresse"
 
-#: ktorrent/gui.cpp:406
+#: ktorrent/gui.cpp:403
 msgid "Create a new torrent"
 msgstr "Lag en ny torrent"
 
-#: ktorrent/gui.cpp:408
+#: ktorrent/gui.cpp:405
 msgid "Open a torrent"
 msgstr "Åpne en torrent"
 
-#: ktorrent/gui.cpp:411
+#: ktorrent/gui.cpp:408
 msgid "Open Silently"
 msgstr "Åpne stille"
 
-#: ktorrent/gui.cpp:412
+#: ktorrent/gui.cpp:409
 msgid "Open a torrent without asking any questions"
 msgstr "Åpne en torrent uten å stille spørsmål"
 
-#: ktorrent/gui.cpp:427
+#: ktorrent/gui.cpp:424
 msgid "Open URL"
 msgstr "Åpne URL"
 
-#: ktorrent/gui.cpp:428
+#: ktorrent/gui.cpp:425
 msgid "Open a URL which points to a torrent, magnet links are supported"
 msgstr "Åpne en URL som peker til en torrent, magnet-lenker er støttet"
 
-#: ktorrent/gui.cpp:433 plugins/ipfilter/ipblockingprefpage.cpp:35
+#: ktorrent/gui.cpp:430 plugins/ipfilter/ipblockingprefpage.cpp:35
 #: plugins/ipfilter/ipfilterplugin.cpp:62
 #: plugins/ipfilter/ipfilterplugin.cpp:75
 msgid "IP Filter"
 msgstr "IP-filter"
 
-#: ktorrent/gui.cpp:434
+#: ktorrent/gui.cpp:431
 msgid "Show the list of blocked IP addresses"
 msgstr "Vis liste over blokkerte IP-adresser"
 
-#: ktorrent/gui.cpp:439
+#: ktorrent/gui.cpp:436
 msgid "Import Torrent"
 msgstr "Importer torrent"
 
-#: ktorrent/gui.cpp:440
+#: ktorrent/gui.cpp:437
 msgid "Import a torrent"
 msgstr "Importer en torrent"
 
-#: ktorrent/gui.cpp:446
+#: ktorrent/gui.cpp:443
 msgid "Import KDE3 Torrents"
 msgstr "Importer KDE 3-torrenter"
 
-#: ktorrent/gui.cpp:447
+#: ktorrent/gui.cpp:444
 msgid "Import all torrents from the KDE3 version of KTorrent"
 msgstr "Importer alle torrentene fra KDE 3-versjonen av KTorrent"
 
-#: ktorrent/gui.cpp:454
+#: ktorrent/gui.cpp:451
 msgid "Show/Hide KTorrent"
 msgstr "Vis/Skjul KTorrent"
 
@@ -1774,7 +1664,7 @@ msgstr "Angi høyeste opplastingsfart"
 msgid "Set max download speed"
 msgstr "Angi høyeste nedlastingsfart"
 
-#: ktorrent/trayicon.cpp:142
+#: ktorrent/trayicon.cpp:146
 #, kde-format
 msgid ""
 "<table><tr><td>Download&nbsp;speed:</td><td><b>%1</b></td></"
@@ -1786,13 +1676,13 @@ msgstr ""
 "tr><tr><td>Opplastingsfart:</td><td><b>%2</b></td></tr><tr><td>Mottatt:</"
 "td><td><b>%3</b></td></tr><tr><td>Sendt:</td><td><b>%4</b></td></tr></table>"
 
-#: ktorrent/trayicon.cpp:187
+#: ktorrent/trayicon.cpp:191
 #, kde-format
 msgid "<b>%1</b> has completed downloading.<br>Average speed: %2 DL / %3 UL."
 msgstr ""
 "<b>%1</b> er ferdig lastet ned.<br/>Gjennomsnittsfart: %2 ned / %3 opp."
 
-#: ktorrent/trayicon.cpp:205
+#: ktorrent/trayicon.cpp:209
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum share ratio of %2 and has been stopped."
@@ -1801,7 +1691,7 @@ msgstr ""
 "<b>%1</b> har nådd det høyeste delingsforholdet på %2 og er derfor stoppet."
 "<br/>Lastet opp %3 med en gjennomsnittsfart på %4."
 
-#: ktorrent/trayicon.cpp:224
+#: ktorrent/trayicon.cpp:228
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum seed time of %2 hours and has been stopped."
@@ -1810,12 +1700,12 @@ msgstr ""
 "<b>%1</b> har nådd høyeste delingstid på  %2 timer og har blitt stoppet.<br/"
 ">Lastet opp %3 med en gjennomsnittsfart på %4."
 
-#: ktorrent/trayicon.cpp:239
+#: ktorrent/trayicon.cpp:243
 #, kde-format
 msgid "<b>%1</b> has been stopped with the following error: <br>%2"
 msgstr "<b>%1</b> har blitt stoppet med følgende feil: <br/>%2"
 
-#: ktorrent/trayicon.cpp:250
+#: ktorrent/trayicon.cpp:254
 #, kde-format
 msgid ""
 "Corrupted data has been found in the torrent <b>%1</b><br>It would be a good "
@@ -1824,7 +1714,7 @@ msgstr ""
 "Fant ødelagte data i torrenten <b>%1</b> <br/>Du bør kjøre en datakontroll "
 "på torrenten."
 
-#: ktorrent/trayicon.cpp:267
+#: ktorrent/trayicon.cpp:271
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum share ratio of %2 and cannot be enqueued. "
@@ -1833,7 +1723,7 @@ msgstr ""
 "<b>%1</b> har nådd det høyeste delingsforholdet på %2 og kan derfor ikke "
 "legges til i køen.<br />  Fjern grensen manuelt hvis du vil fortsette å dele."
 
-#: ktorrent/trayicon.cpp:271
+#: ktorrent/trayicon.cpp:275
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum seed time of %2 hours and cannot be "
@@ -1842,35 +1732,35 @@ msgstr ""
 "<b>%1</b> har nådd sin grense for delingstid på %2 timer og kan ikke legges "
 "til i køen. <br /> Fjern grensen manuelt hvis du vil fortsette å dele."
 
-#: ktorrent/trayicon.cpp:283
+#: ktorrent/trayicon.cpp:287
 #, kde-format
 msgid "Cannot start <b>%1</b>: <br>"
 msgstr "Klarte ikke starte <b>%1</b>: <br/>"
 
-#: ktorrent/trayicon.cpp:290
+#: ktorrent/trayicon.cpp:294
 #, kde-format
 msgid "Cannot seed more than 1 torrent. <br>"
 msgid_plural "Cannot seed more than %1 torrents. <br>"
 msgstr[0] "Kan ikke dele mer enn én torrent. <br/>"
 msgstr[1] "Kan ikke dele mer enn %1 torrenter. <br/>"
 
-#: ktorrent/trayicon.cpp:295
+#: ktorrent/trayicon.cpp:299
 #, kde-format
 msgid "Cannot download more than 1 torrent. <br>"
 msgid_plural "Cannot download more than %1 torrents. <br>"
 msgstr[0] "Kan ikke laste ned mer enn én torrent. <br/>"
 msgstr[1] "Kan ikke laste ned mer enn %1 torrenter. <br/>"
 
-#: ktorrent/trayicon.cpp:298
+#: ktorrent/trayicon.cpp:302
 msgid "Go to Settings -> Configure KTorrent, if you want to change the limits."
 msgstr ""
 "Gå til «Innstillinger → Oppsett av KTorrent» hvis du vil endre grensene."
 
-#: ktorrent/trayicon.cpp:302
+#: ktorrent/trayicon.cpp:306
 msgid "There is not enough diskspace available."
 msgstr "Det er ikke nok plass på harddisken"
 
-#: ktorrent/trayicon.cpp:315
+#: ktorrent/trayicon.cpp:319
 #, kde-format
 msgid ""
 "Your disk is running out of space.<br /><b>%1</b> is being downloaded to '"
@@ -1879,18 +1769,128 @@ msgstr ""
 "Det er snart ikke mer diskplass igjen.<br /><b>%1</b> blir lastet ned til «"
 "%2»."
 
-#: ktorrent/trayicon.cpp:318
+#: ktorrent/trayicon.cpp:322
 msgid "Torrent has been stopped.<br />"
 msgstr "Torrenten har blitt stoppet.<br />"
 
-#: ktorrent/trayicon.cpp:354
+#: ktorrent/trayicon.cpp:358
 msgid "Speed limit in KiB/s"
 msgstr "Fartsgrense i KiB/s"
 
-#: ktorrent/trayicon.cpp:356 plugins/bwscheduler/schedulegraphicsitem.cpp:83
+#: ktorrent/trayicon.cpp:360 plugins/bwscheduler/schedulegraphicsitem.cpp:83
 #: plugins/bwscheduler/schedulegraphicsitem.cpp:84
 msgid "Unlimited"
 msgstr "Ubegrenset"
+
+#: ktorrent/core.cpp:178
+#, kde-format
+msgid ""
+"KTorrent is unable to accept connections because the TCP ports %1 is already "
+"in use by another program."
+msgstr ""
+"KTorrent kan ikke ta i mot tilkoblinger fordi TCP-portene %1 er i bruk av et "
+"annet program."
+
+#: ktorrent/core.cpp:192
+#, kde-format
+msgid ""
+"KTorrent is unable to accept connections because the UDP port %1 is already "
+"in use by another program."
+msgstr ""
+"KTorrent kan ikke ta i mot tilkoblinger fordi UDP-porten %1 er i bruk av et "
+"annet program."
+
+#: ktorrent/core.cpp:305
+#, kde-format
+msgid ""
+"Opening the torrent <b>%1</b>, would share one or more files with the "
+"following torrents. .Torrents are not allowed to write to the same files. "
+msgstr ""
+"Hvis torrenten <b>%1</b> åpnes. så vil en eller flere filer deles med "
+"følgende torrenter.  Torrenter har ikke lov til å skrive til de samme "
+"filene. "
+
+#: ktorrent/core.cpp:1022
+msgid "KTorrent is running one or more torrents"
+msgstr "KTorrent kjører en eller flere torrrenter"
+
+#: ktorrent/core.cpp:1109
+#, kde-format
+msgid "Cannot create torrent: %1"
+msgstr "Klarte ikke lage torrent: %1"
+
+#: ktorrent/core.cpp:1212
+#, kde-format
+msgid ""
+"Several data files of the torrent \"%1\" are missing. \n"
+"Do you want to recreate them, or do you want to not download them?"
+msgstr ""
+"Flere datafiler i torrenten «%1» mangler. \n"
+"Vil du lage dem på nytt eller la være å laste dem ned?"
+
+#: ktorrent/core.cpp:1221 ktorrent/core.cpp:1232 ktorrent/core.cpp:1245
+msgid "Data files are missing"
+msgstr "Datafiler mangler"
+
+#: ktorrent/core.cpp:1231
+#, kde-format
+msgid "Cannot deselect missing files: %1"
+msgstr "Klarte ikke fravelge manglende filer: %1"
+
+#: ktorrent/core.cpp:1244
+#, kde-format
+msgid "Cannot recreate missing files: %1"
+msgstr "Klarte ikke lage manglende filer på nytt: %1"
+
+#: ktorrent/core.cpp:1255
+#, kde-format
+msgid ""
+"The file where the data is saved of the torrent \"%1\" is missing.\n"
+"Do you want to recreate it?"
+msgstr ""
+"Fila som inneholder data for torrenten «%1» mangler.\n"
+"Vil du bygge den opp igjen?"
+
+#: ktorrent/core.cpp:1262 ktorrent/core.cpp:1272
+msgid "Data file is missing"
+msgstr "Datafil mangler"
+
+#: ktorrent/core.cpp:1271
+#, kde-format
+msgid "Cannot recreate data file: %1"
+msgstr "Klarte ikke lage datafil på nytt: %1"
+
+#: ktorrent/core.cpp:1359
+#, kde-format
+msgid ""
+"KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
+"to import it?"
+msgid_plural ""
+"KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
+"want to import them?"
+msgstr[0] ""
+"KTorrent har funnet en torrent fra KDE3-versjonen av KTorrent. Vil du "
+"importere den?"
+msgstr[1] ""
+"KTorrent har funnet %1 torrenter fra KDE3-versjonen av KTorrent. Vil du "
+"importere dem?"
+
+#: ktorrent/core.cpp:1381
+msgid "No torrents from the KDE3 version were found."
+msgstr "Fant ingen torrenter fra KDE3-versjonen."
+
+#: ktorrent/core.cpp:1413 ktorrent/core.cpp:1432
+#, kde-format
+msgid "Invalid magnet bittorrent link: %1"
+msgstr "Ugyldig magnet bittorrent-lenke: %1"
+
+#: ktorrent/core.cpp:1418 ktorrent/core.cpp:1437
+msgid ""
+"You are attempting to download a magnet link, and DHT is not enabled. For "
+"optimum results enable DHT."
+msgstr ""
+"Du forsøker å laste ned en magnet-lenke, og DHT er ikke slått på. Slå på DHT "
+"for å få best resultat."
 
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"
@@ -9640,7 +9640,7 @@ msgstr "Strenger er regulære uttrykk"
 #. i18n: ectx: property (text), widget (QCheckBox, m_all_words_must_match)
 #: rc.cpp:2743
 msgid "Item must match all strings to be included"
-msgstr "Element må gi treff på alle strenger for å bli tatt med"
+msgstr "Element må samsvare med alle strenger for å bli tatt med"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:102
 #. i18n: ectx: property (text), widget (QCheckBox, m_match_case_sensitive)
@@ -9664,7 +9664,7 @@ msgstr "Mønster for utelukking"
 #. i18n: ectx: property (text), widget (QCheckBox, m_exclusion_all_must_match)
 #: rc.cpp:2789
 msgid "Item must match all strings to be excluded"
-msgstr "Element må gi treff på alle strenger for å bli utelatt"
+msgstr "Element må samsvare med alle strenger for å bli utelatt"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:182
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
@@ -9676,7 +9676,7 @@ msgstr "Sesonger og episoder"
 #. i18n: ectx: property (text), widget (QCheckBox, m_use_se_matching)
 #: rc.cpp:2798
 msgid "Use season and episode matching"
-msgstr "Gi treff på sesong og episode"
+msgstr "Bruk samsvar med sesong og episode"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:197
 #. i18n: ectx: property (text), widget (QLabel, label_3)

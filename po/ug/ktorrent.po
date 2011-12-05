@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-03 07:44+0200\n"
+"POT-Creation-Date: 2011-10-05 11:02+0200\n"
 "PO-Revision-Date: 2011-07-05 14:13+0900\n"
 "Last-Translator: Sahran <sahran@live.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -68,7 +68,7 @@ msgid "All Torrents"
 msgstr ""
 
 #: ktorrent/dialogs/pastedialog.cpp:105
-#: ktorrent/dialogs/torrentcreatordlg.cpp:251 ktorrent/gui.cpp:341
+#: ktorrent/dialogs/torrentcreatordlg.cpp:251 ktorrent/gui.cpp:338
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "ئىناۋەتسىز URL: %1"
@@ -639,11 +639,11 @@ msgid "Magnet Link"
 msgstr ""
 
 #: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:123
-#: ktorrent/view/viewmodel.cpp:437 ktorrent/trayicon.cpp:153
+#: ktorrent/view/viewmodel.cpp:437 ktorrent/trayicon.cpp:157
 #: plugins/infowidget/webseedsmodel.cpp:127
 #: plugins/infowidget/trackermodel.cpp:148
 msgid "Status"
-msgstr "ھالەت"
+msgstr "ھالىتى"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:164
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
@@ -699,7 +699,7 @@ msgstr ""
 #: plugins/infowidget/iwfilelistmodel.cpp:77
 #: plugins/infowidget/iwfiletreemodel.cpp:89
 msgid "Priority"
-msgstr "ئالدىنلىق"
+msgstr "مەرتىۋە"
 
 #: ktorrent/tools/queuemanagermodel.cpp:158
 msgid "Running"
@@ -833,7 +833,7 @@ msgstr ""
 #: ktorrent/view/view.cpp:354 plugins/infowidget/fileview.cpp:320
 #: plugins/infowidget/fileview.cpp:341
 msgid "Select a directory to move the data to."
-msgstr ""
+msgstr "سانلىق-مەلۇماتلارنى يۆتكەيدىغان مۇندەرىجىنى تاللايدۇ."
 
 #: ktorrent/view/viewmanager.cpp:573
 msgctxt "@action Start all selected torrents in the current tab"
@@ -874,7 +874,7 @@ msgstr ""
 #: ktorrent/view/viewmanager.cpp:596
 msgctxt "@action Start all torrents in the current tab"
 msgid "Start All"
-msgstr ""
+msgstr "ھەممىنى باشلاش"
 
 #: ktorrent/view/viewmanager.cpp:597
 msgid "Start all torrents in the current tab"
@@ -883,7 +883,7 @@ msgstr ""
 #: ktorrent/view/viewmanager.cpp:602
 msgctxt "@action Stop all torrents in the current tab"
 msgid "Stop All"
-msgstr ""
+msgstr "ھەممىنى توختىتىش"
 
 #: ktorrent/view/viewmanager.cpp:603
 msgid "Stop all torrents in the current tab"
@@ -1002,7 +1002,7 @@ msgstr ""
 
 #: ktorrent/view/viewmodel.cpp:445 plugins/infowidget/trackermodel.cpp:150
 msgid "Leechers"
-msgstr ""
+msgstr "لىچېر"
 
 #: ktorrent/view/viewmodel.cpp:447
 #, no-c-format
@@ -1103,98 +1103,6 @@ msgstr ""
 #: ktorrent/view/viewmodel.cpp:526
 #, kde-format
 msgid "%1<br>Url: <b>%2</b>"
-msgstr ""
-
-#: ktorrent/core.cpp:178
-#, kde-format
-msgid ""
-"KTorrent is unable to accept connections because the TCP ports %1 is already "
-"in use by another program."
-msgstr ""
-
-#: ktorrent/core.cpp:192
-#, kde-format
-msgid ""
-"KTorrent is unable to accept connections because the UDP port %1 is already "
-"in use by another program."
-msgstr ""
-
-#: ktorrent/core.cpp:305
-#, kde-format
-msgid ""
-"Opening the torrent <b>%1</b>, would share one or more files with the "
-"following torrents. .Torrents are not allowed to write to the same files. "
-msgstr ""
-
-#: ktorrent/core.cpp:1022
-msgid "KTorrent is running one or more torrents"
-msgstr ""
-
-#: ktorrent/core.cpp:1109
-#, kde-format
-msgid "Cannot create torrent: %1"
-msgstr ""
-
-#: ktorrent/core.cpp:1212
-#, kde-format
-msgid ""
-"Several data files of the torrent \"%1\" are missing. \n"
-"Do you want to recreate them, or do you want to not download them?"
-msgstr ""
-
-#: ktorrent/core.cpp:1221 ktorrent/core.cpp:1232 ktorrent/core.cpp:1245
-msgid "Data files are missing"
-msgstr ""
-
-#: ktorrent/core.cpp:1231
-#, kde-format
-msgid "Cannot deselect missing files: %1"
-msgstr ""
-
-#: ktorrent/core.cpp:1244
-#, kde-format
-msgid "Cannot recreate missing files: %1"
-msgstr ""
-
-#: ktorrent/core.cpp:1255
-#, kde-format
-msgid ""
-"The file where the data is saved of the torrent \"%1\" is missing.\n"
-"Do you want to recreate it?"
-msgstr ""
-
-#: ktorrent/core.cpp:1262 ktorrent/core.cpp:1272
-msgid "Data file is missing"
-msgstr ""
-
-#: ktorrent/core.cpp:1271
-#, kde-format
-msgid "Cannot recreate data file: %1"
-msgstr ""
-
-#: ktorrent/core.cpp:1359
-#, kde-format
-msgid ""
-"KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
-"to import it?"
-msgid_plural ""
-"KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
-"want to import them?"
-msgstr[0] ""
-
-#: ktorrent/core.cpp:1381
-msgid "No torrents from the KDE3 version were found."
-msgstr ""
-
-#: ktorrent/core.cpp:1413 ktorrent/core.cpp:1432
-#, kde-format
-msgid "Invalid magnet bittorrent link: %1"
-msgstr ""
-
-#: ktorrent/core.cpp:1418 ktorrent/core.cpp:1437
-msgid ""
-"You are attempting to download a magnet link, and DHT is not enabled. For "
-"optimum results enable DHT."
 msgstr ""
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
@@ -1608,7 +1516,7 @@ msgstr ""
 
 #: ktorrent/torrentactivity.cpp:110
 msgid "Start All"
-msgstr ""
+msgstr "ھەممىنى باشلاش"
 
 #: ktorrent/torrentactivity.cpp:111
 msgid "Start all torrents"
@@ -1616,7 +1524,7 @@ msgstr ""
 
 #: ktorrent/torrentactivity.cpp:115
 msgid "Stop All"
-msgstr ""
+msgstr "ھەممىنى توختىتىش"
 
 #: ktorrent/torrentactivity.cpp:116
 msgid "Stop all torrents"
@@ -1646,61 +1554,61 @@ msgstr ""
 msgid "Show or hide the group view"
 msgstr ""
 
-#: ktorrent/gui.cpp:274 ktorrent/gui.cpp:289
+#: ktorrent/gui.cpp:271 ktorrent/gui.cpp:286
 msgid "Open Location"
-msgstr "تور ئادرېسىنى ئاچ"
+msgstr "ئورۇننى ئاچ"
 
-#: ktorrent/gui.cpp:406
+#: ktorrent/gui.cpp:403
 msgid "Create a new torrent"
 msgstr ""
 
-#: ktorrent/gui.cpp:408
+#: ktorrent/gui.cpp:405
 msgid "Open a torrent"
 msgstr ""
 
-#: ktorrent/gui.cpp:411
+#: ktorrent/gui.cpp:408
 msgid "Open Silently"
 msgstr ""
 
-#: ktorrent/gui.cpp:412
+#: ktorrent/gui.cpp:409
 msgid "Open a torrent without asking any questions"
 msgstr ""
 
-#: ktorrent/gui.cpp:427
+#: ktorrent/gui.cpp:424
 msgid "Open URL"
 msgstr "URL ئاچ"
 
-#: ktorrent/gui.cpp:428
+#: ktorrent/gui.cpp:425
 msgid "Open a URL which points to a torrent, magnet links are supported"
 msgstr ""
 
-#: ktorrent/gui.cpp:433 plugins/ipfilter/ipblockingprefpage.cpp:35
+#: ktorrent/gui.cpp:430 plugins/ipfilter/ipblockingprefpage.cpp:35
 #: plugins/ipfilter/ipfilterplugin.cpp:62
 #: plugins/ipfilter/ipfilterplugin.cpp:75
 msgid "IP Filter"
 msgstr "IP سۈزگۈچ"
 
-#: ktorrent/gui.cpp:434
+#: ktorrent/gui.cpp:431
 msgid "Show the list of blocked IP addresses"
 msgstr ""
 
-#: ktorrent/gui.cpp:439
+#: ktorrent/gui.cpp:436
 msgid "Import Torrent"
 msgstr ""
 
-#: ktorrent/gui.cpp:440
+#: ktorrent/gui.cpp:437
 msgid "Import a torrent"
 msgstr ""
 
-#: ktorrent/gui.cpp:446
+#: ktorrent/gui.cpp:443
 msgid "Import KDE3 Torrents"
 msgstr ""
 
-#: ktorrent/gui.cpp:447
+#: ktorrent/gui.cpp:444
 msgid "Import all torrents from the KDE3 version of KTorrent"
 msgstr ""
 
-#: ktorrent/gui.cpp:454
+#: ktorrent/gui.cpp:451
 msgid "Show/Hide KTorrent"
 msgstr ""
 
@@ -1712,7 +1620,7 @@ msgstr ""
 msgid "Set max download speed"
 msgstr ""
 
-#: ktorrent/trayicon.cpp:142
+#: ktorrent/trayicon.cpp:146
 #, kde-format
 msgid ""
 "<table><tr><td>Download&nbsp;speed:</td><td><b>%1</b></td></"
@@ -1721,95 +1629,187 @@ msgid ""
 "table>"
 msgstr ""
 
-#: ktorrent/trayicon.cpp:187
+#: ktorrent/trayicon.cpp:191
 #, kde-format
 msgid "<b>%1</b> has completed downloading.<br>Average speed: %2 DL / %3 UL."
 msgstr ""
 
-#: ktorrent/trayicon.cpp:205
+#: ktorrent/trayicon.cpp:209
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum share ratio of %2 and has been stopped."
 "<br>Uploaded %3 at an average speed of %4."
 msgstr ""
 
-#: ktorrent/trayicon.cpp:224
+#: ktorrent/trayicon.cpp:228
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum seed time of %2 hours and has been stopped."
 "<br>Uploaded %3 at an average speed of %4."
 msgstr ""
 
-#: ktorrent/trayicon.cpp:239
+#: ktorrent/trayicon.cpp:243
 #, kde-format
 msgid "<b>%1</b> has been stopped with the following error: <br>%2"
 msgstr ""
 
-#: ktorrent/trayicon.cpp:250
+#: ktorrent/trayicon.cpp:254
 #, kde-format
 msgid ""
 "Corrupted data has been found in the torrent <b>%1</b><br>It would be a good "
 "idea to do a data integrity check on the torrent."
 msgstr ""
 
-#: ktorrent/trayicon.cpp:267
+#: ktorrent/trayicon.cpp:271
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum share ratio of %2 and cannot be enqueued. "
 "<br>Remove the limit manually if you want to continue seeding."
 msgstr ""
 
-#: ktorrent/trayicon.cpp:271
+#: ktorrent/trayicon.cpp:275
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum seed time of %2 hours and cannot be "
 "enqueued. <br>Remove the limit manually if you want to continue seeding."
 msgstr ""
 
-#: ktorrent/trayicon.cpp:283
+#: ktorrent/trayicon.cpp:287
 #, kde-format
 msgid "Cannot start <b>%1</b>: <br>"
 msgstr ""
 
-#: ktorrent/trayicon.cpp:290
+#: ktorrent/trayicon.cpp:294
 #, kde-format
 msgid "Cannot seed more than 1 torrent. <br>"
 msgid_plural "Cannot seed more than %1 torrents. <br>"
 msgstr[0] ""
 
-#: ktorrent/trayicon.cpp:295
+#: ktorrent/trayicon.cpp:299
 #, kde-format
 msgid "Cannot download more than 1 torrent. <br>"
 msgid_plural "Cannot download more than %1 torrents. <br>"
 msgstr[0] ""
 
-#: ktorrent/trayicon.cpp:298
+#: ktorrent/trayicon.cpp:302
 msgid "Go to Settings -> Configure KTorrent, if you want to change the limits."
 msgstr ""
 
-#: ktorrent/trayicon.cpp:302
+#: ktorrent/trayicon.cpp:306
 msgid "There is not enough diskspace available."
 msgstr ""
 
-#: ktorrent/trayicon.cpp:315
+#: ktorrent/trayicon.cpp:319
 #, kde-format
 msgid ""
 "Your disk is running out of space.<br /><b>%1</b> is being downloaded to "
 "'%2'."
 msgstr ""
 
-#: ktorrent/trayicon.cpp:318
+#: ktorrent/trayicon.cpp:322
 msgid "Torrent has been stopped.<br />"
 msgstr ""
 
-#: ktorrent/trayicon.cpp:354
+#: ktorrent/trayicon.cpp:358
 msgid "Speed limit in KiB/s"
 msgstr ""
 
-#: ktorrent/trayicon.cpp:356 plugins/bwscheduler/schedulegraphicsitem.cpp:83
+#: ktorrent/trayicon.cpp:360 plugins/bwscheduler/schedulegraphicsitem.cpp:83
 #: plugins/bwscheduler/schedulegraphicsitem.cpp:84
 msgid "Unlimited"
 msgstr "چەكسىز"
+
+#: ktorrent/core.cpp:178
+#, kde-format
+msgid ""
+"KTorrent is unable to accept connections because the TCP ports %1 is already "
+"in use by another program."
+msgstr ""
+
+#: ktorrent/core.cpp:192
+#, kde-format
+msgid ""
+"KTorrent is unable to accept connections because the UDP port %1 is already "
+"in use by another program."
+msgstr ""
+
+#: ktorrent/core.cpp:305
+#, kde-format
+msgid ""
+"Opening the torrent <b>%1</b>, would share one or more files with the "
+"following torrents. .Torrents are not allowed to write to the same files. "
+msgstr ""
+
+#: ktorrent/core.cpp:1022
+msgid "KTorrent is running one or more torrents"
+msgstr ""
+
+#: ktorrent/core.cpp:1109
+#, kde-format
+msgid "Cannot create torrent: %1"
+msgstr ""
+
+#: ktorrent/core.cpp:1212
+#, kde-format
+msgid ""
+"Several data files of the torrent \"%1\" are missing. \n"
+"Do you want to recreate them, or do you want to not download them?"
+msgstr ""
+
+#: ktorrent/core.cpp:1221 ktorrent/core.cpp:1232 ktorrent/core.cpp:1245
+msgid "Data files are missing"
+msgstr ""
+
+#: ktorrent/core.cpp:1231
+#, kde-format
+msgid "Cannot deselect missing files: %1"
+msgstr ""
+
+#: ktorrent/core.cpp:1244
+#, kde-format
+msgid "Cannot recreate missing files: %1"
+msgstr ""
+
+#: ktorrent/core.cpp:1255
+#, kde-format
+msgid ""
+"The file where the data is saved of the torrent \"%1\" is missing.\n"
+"Do you want to recreate it?"
+msgstr ""
+
+#: ktorrent/core.cpp:1262 ktorrent/core.cpp:1272
+msgid "Data file is missing"
+msgstr ""
+
+#: ktorrent/core.cpp:1271
+#, kde-format
+msgid "Cannot recreate data file: %1"
+msgstr ""
+
+#: ktorrent/core.cpp:1359
+#, kde-format
+msgid ""
+"KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
+"to import it?"
+msgid_plural ""
+"KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
+"want to import them?"
+msgstr[0] ""
+
+#: ktorrent/core.cpp:1381
+msgid "No torrents from the KDE3 version were found."
+msgstr ""
+
+#: ktorrent/core.cpp:1413 ktorrent/core.cpp:1432
+#, kde-format
+msgid "Invalid magnet bittorrent link: %1"
+msgstr ""
+
+#: ktorrent/core.cpp:1418 ktorrent/core.cpp:1437
+msgid ""
+"You are attempting to download a magnet link, and DHT is not enabled. For "
+"optimum results enable DHT."
+msgstr ""
 
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"
@@ -1983,7 +1983,7 @@ msgstr ""
 #: libktcore/torrent/basicjobprogresswidget.cpp:68
 #, kde-format
 msgid "Warning: %1"
-msgstr ""
+msgstr "ئاگاھلاندۇرۇش: %1"
 
 #: libktcore/util/mmapfile.cpp:164
 msgid "Cannot write beyond end of the mmap buffer."
@@ -2136,7 +2136,7 @@ msgstr "يېڭى تۈر"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:91
 msgid "Remove Item"
-msgstr ""
+msgstr "تۈر چىقىرىۋېتىش"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:92
 msgid "Edit Item"
@@ -2239,6 +2239,7 @@ msgid "You will lose all data in this file, are you sure you want to do this?"
 msgid_plural ""
 "You will lose all data in these files, are you sure you want to do this?"
 msgstr[0] ""
+"بۇ ھۆججەتلەرنىڭ بارلىق سانلىق-مەلۇماتلىرى يوقىلىدۇ، راست بۇنى قىلامسىز؟"
 
 #: plugins/infowidget/infowidgetplugin.cpp:71
 #: plugins/infowidget/iwprefpage.cpp:27
@@ -2248,7 +2249,7 @@ msgstr ""
 #: plugins/infowidget/infowidgetplugin.cpp:83
 msgctxt "@title:tab"
 msgid "Status"
-msgstr "ھالەت"
+msgstr "ھالىتى"
 
 #: plugins/infowidget/infowidgetplugin.cpp:84
 msgid "Displays status information about a torrent"
@@ -2277,7 +2278,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, hdr_chunks)
 #: plugins/infowidget/infowidgetplugin.cpp:244 rc.cpp:1775 rc.cpp:1873
 msgid "Chunks"
-msgstr ""
+msgstr "پارچىلار"
 
 #: plugins/infowidget/infowidgetplugin.cpp:245
 msgid "Displays all the chunks you are downloading, of a torrent"
@@ -2384,7 +2385,7 @@ msgstr ""
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:198
 msgid "Chunk"
-msgstr ""
+msgstr "پارچە"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:199
 msgid "Progress"
@@ -2392,7 +2393,7 @@ msgstr "سۈرئەت"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:200
 msgid "Peer"
-msgstr ""
+msgstr "كىشى"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:202
 msgid "Files"
@@ -2523,19 +2524,19 @@ msgstr "DHT"
 
 #: plugins/infowidget/peerviewmodel.cpp:263
 msgid "Score"
-msgstr "شەرەپ سەھنىسى"
+msgstr "ئېرىشكەن نومۇر"
 
 #: plugins/infowidget/peerviewmodel.cpp:264
 msgid "Upload Slot"
-msgstr ""
+msgstr "يۈكلەش ئوقۇرى"
 
 #: plugins/infowidget/peerviewmodel.cpp:265
 msgid "Requests"
-msgstr ""
+msgstr "ئىلتىماسلار"
 
 #: plugins/infowidget/peerviewmodel.cpp:268
 msgid "Interested"
-msgstr ""
+msgstr "قىزىقارلىق"
 
 #: plugins/infowidget/peerviewmodel.cpp:269
 msgid "Interesting"
@@ -2543,7 +2544,7 @@ msgstr ""
 
 #: plugins/infowidget/peerviewmodel.cpp:277
 msgid "IP address of the peer"
-msgstr ""
+msgstr "قارشى تەرەپنىڭ IP ئادرېسى"
 
 #: plugins/infowidget/peerviewmodel.cpp:278
 msgid "Country the peer is in"
@@ -2559,7 +2560,7 @@ msgstr "چۈشۈرۈش تېزىكى"
 
 #: plugins/infowidget/peerviewmodel.cpp:281
 msgid "Upload speed"
-msgstr ""
+msgstr "يۈكلەش تېزلىكى"
 
 #: plugins/infowidget/peerviewmodel.cpp:282
 msgid ""
@@ -2589,7 +2590,7 @@ msgstr ""
 
 #: plugins/infowidget/peerviewmodel.cpp:288
 msgid "The number of download and upload requests"
-msgstr ""
+msgstr "چۈشۈرۈش ۋە يۈكلەش ئىلتىماس سانى"
 
 #: plugins/infowidget/peerviewmodel.cpp:289
 msgid "How much data we have downloaded from this peer"
@@ -2617,7 +2618,7 @@ msgstr "ئاممىۋى"
 
 #: plugins/infowidget/trackermodel.cpp:151
 msgid "Times Downloaded"
-msgstr ""
+msgstr "چۈشۈرۈش سانى"
 
 #: plugins/infowidget/trackermodel.cpp:152
 msgid "Next Update"
@@ -2640,7 +2641,7 @@ msgstr ""
 #: plugins/infowidget/trackerview.cpp:133
 #, kde-format
 msgid "There already is a tracker named <b>%1</b>."
-msgstr ""
+msgstr "بۇ يەردە ئىسمى <b>%1</b> بولغان ئىزلىغۇچى بار."
 
 #: plugins/infowidget/trackerview.cpp:135
 msgid "The following duplicate trackers were not added:"
@@ -2736,7 +2737,7 @@ msgstr "خاتىرە دەرىجىسى"
 #: plugins/logviewer/logflags.cpp:201
 #: plugins/logviewer/logflagsdelegate.cpp:46
 msgid "Debug"
-msgstr "سازلاش"
+msgstr "سازلا"
 
 #: plugins/logviewer/logflags.cpp:202
 #: plugins/logviewer/logflagsdelegate.cpp:45
@@ -2815,7 +2816,7 @@ msgstr ""
 #: plugins/mediaplayer/mediaplayerplugin.cpp:49
 #: plugins/mediaplayer/mediaplayerplugin.cpp:61
 msgid "Media Player"
-msgstr "ۋاسىتە قويغۇچ"
+msgstr "ۋاسىتە قويغۇ"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:75
 msgid "Play List"
@@ -2850,12 +2851,12 @@ msgstr ""
 #: plugins/mediaplayer/mediaplayeractivity.cpp:123
 #: plugins/mediaplayer/playlistwidget.cpp:109
 msgid "Add Media"
-msgstr ""
+msgstr "ۋاسىتە قوشۇش"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:127
 #: plugins/mediaplayer/playlistwidget.cpp:110
 msgid "Clear Playlist"
-msgstr ""
+msgstr "قويۇش تىزىمى تازىلاش"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:131
 msgid "Toggle Fullscreen"
@@ -2942,7 +2943,7 @@ msgstr "چىقىرىۋەت"
 #: plugins/mediaplayer/playlistwidget.cpp:211
 #, kde-format
 msgid "Playing: <b>%1</b>"
-msgstr ""
+msgstr "قويۇۋاتقىنى: <b>%1</b>"
 
 #: plugins/mediaplayer/playlistwidget.cpp:196
 #, kde-format
@@ -3073,7 +3074,7 @@ msgstr "خاسلىق"
 
 #: plugins/scripting/scriptmanager.cpp:114
 msgid "Configure"
-msgstr "سەپلە"
+msgstr "سەپلەش"
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, ScriptProperties)
@@ -3090,7 +3091,7 @@ msgstr "ئىزدە"
 #: plugins/search/searchactivity.cpp:246
 #, kde-format
 msgid "Search for %1"
-msgstr ""
+msgstr "%1 نى ئىزدە"
 
 #: plugins/search/searchenginelist.cpp:216
 #, kde-format
@@ -3197,7 +3198,7 @@ msgstr ""
 #: plugins/search/searchwidget.cpp:230 rc.cpp:2376 rc.cpp:2379 rc.cpp:2496
 #: rc.cpp:2535 rc.cpp:2688
 msgid "Download"
-msgstr "چۈشۈر"
+msgstr "چۈشۈرۈش"
 
 #: plugins/shutdown/shutdowndlg.cpp:34
 msgctxt "@title:window"
@@ -3387,7 +3388,7 @@ msgstr ""
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:391
 #: plugins/stats/drawer/PlainChartDrawer.cc:331
 msgid "Reset"
-msgstr "ئەسلىگە قايتۇر"
+msgstr "ئەسلىگە قايتۇرۇش"
 
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:403
 #: plugins/stats/drawer/PlainChartDrawer.cc:343
@@ -3408,7 +3409,7 @@ msgstr ""
 
 #: plugins/stats/SpdTabPage.cc:70 plugins/stats/SpdTabPage.cc:71
 msgid "Speed limit"
-msgstr ""
+msgstr "سۈرئەت چەكلىمىسى"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:172
 #. i18n: ectx: property (text), widget (QLabel, label_14)
@@ -3458,7 +3459,7 @@ msgstr ""
 #: plugins/syndication/syndicationplugin.cpp:47
 #: plugins/syndication/syndicationactivity.cpp:48
 msgid "Syndication"
-msgstr ""
+msgstr "قەدەمداشلاش"
 
 #: plugins/syndication/syndicationplugin.cpp:86
 msgid "Add Feed"
@@ -3595,7 +3596,7 @@ msgstr ""
 #: plugins/upnp/upnpplugin.cpp:56 plugins/upnp/upnpplugin.cpp:60
 #: plugins/upnp/upnpplugin.cpp:71 rc.cpp:2857
 msgid "UPnP"
-msgstr ""
+msgstr "UPnP"
 
 #: plugins/upnp/upnpplugin.cpp:61
 msgid "Shows the status of the UPnP plugin"
@@ -3795,7 +3796,7 @@ msgstr "قوش"
 #. i18n: ectx: property (text), widget (KPushButton, close_button)
 #: rc.cpp:31 rc.cpp:241 rc.cpp:446 rc.cpp:1270
 msgid "Close"
-msgstr "ياپ"
+msgstr "يېپىش"
 
 #. i18n: file: ktorrent/dialogs/importdialog.ui:13
 #. i18n: ectx: property (windowTitle), widget (QDialog, ImportDialog)
@@ -3813,7 +3814,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: rc.cpp:40
 msgid "Data:"
-msgstr "سانلىق مەلۇمات:"
+msgstr "سانلىق-مەلۇمات:"
 
 #. i18n: file: ktorrent/dialogs/importdialog.ui:69
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -3923,7 +3924,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KPushButton, cancel_button)
 #: rc.cpp:91 rc.cpp:1267
 msgid "Cancel"
-msgstr "ۋاز كەچ"
+msgstr "ئەمەلدىن قالدۇرۇش"
 
 #. i18n: file: ktorrent/dialogs/pastedlgbase.ui:25
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
@@ -4053,7 +4054,7 @@ msgstr ""
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: rc.cpp:142 rc.cpp:298 rc.cpp:2016 rc.cpp:2133 rc.cpp:2824
 msgid "Options"
-msgstr "تاللانمىلار"
+msgstr "تاللانما"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:54
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -4308,7 +4309,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: rc.cpp:274
 msgid "Text encoding:"
-msgstr ""
+msgstr "تېكىست كودلىنىشى"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:123
 #. i18n: ectx: property (toolTip), widget (QTreeView, m_file_view)
@@ -4327,7 +4328,7 @@ msgstr "ھەممىنى تاللا(&A)"
 #. i18n: ectx: property (text), widget (KPushButton, m_select_none)
 #: rc.cpp:283
 msgid "Select &None"
-msgstr ""
+msgstr "ھەممىنى تاللىما(&N)"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:146
 #. i18n: ectx: property (text), widget (KPushButton, m_invert_selection)
@@ -5035,7 +5036,7 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: rc.cpp:622
 msgid "Tracker"
-msgstr ""
+msgstr "ئىزلىغۇچ"
 
 #. i18n: file: ktorrent/pref/btpref.ui:129
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useCustomIP)
@@ -5310,7 +5311,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: rc.cpp:763
 msgid "Network interface:"
-msgstr ""
+msgstr "تور ئارايۈزى"
 
 #. i18n: file: ktorrent/pref/networkpref.ui:247
 #. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_networkInterface)
@@ -5443,7 +5444,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: rc.cpp:818
 msgid "Proxy:"
-msgstr ""
+msgstr "ۋاكالەتچى:"
 
 #. i18n: file: ktorrent/pref/proxypref.ui:45
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_httpProxy)
@@ -5860,7 +5861,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showSystemTrayIcon)
 #: rc.cpp:1026
 msgid "Show system tray icon"
-msgstr ""
+msgstr "سىستېما قونداق سىنبەلگىسىنى كۆرسەت"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:107
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showPopups)
@@ -6393,7 +6394,7 @@ msgstr "كۆرۈنۈش(&V)"
 #. i18n: ectx: ToolBar (mainToolBar)
 #: rc.cpp:1318
 msgid "Main"
-msgstr "ئاساسىي تىزىملىك"
+msgstr "ئاساس"
 
 #. i18n: file: ktorrent/kttorrentactivityui.rc:24
 #. i18n: ectx: Menu (GroupsMenu)
@@ -7157,7 +7158,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, hdr_info)
 #: rc.cpp:1858
 msgid "Info"
-msgstr "ئۇچۇرى"
+msgstr "ئۇچۇر"
 
 #. i18n: file: plugins/infowidget/statustab.ui:41
 #. i18n: ectx: property (text), widget (QLabel, label_14)
@@ -7211,7 +7212,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, use_time_limit)
 #: rc.cpp:1894
 msgid "Time limit:"
-msgstr ""
+msgstr "ۋاقىت چەكلىمىسى:"
 
 #. i18n: file: plugins/infowidget/trackerview.ui:29
 #. i18n: ectx: property (text), widget (KPushButton, m_remove_tracker)
@@ -7229,7 +7230,7 @@ msgstr "ئىزلىغۇچنى ئۆزگەرتىش"
 #. i18n: ectx: property (text), widget (QPushButton, m_scrape)
 #: rc.cpp:1912
 msgid "Update Trackers"
-msgstr ""
+msgstr "ئىزلىغۇچلارنى يېڭىلاش"
 
 #. i18n: file: plugins/infowidget/trackerview.ui:63
 #. i18n: ectx: property (text), widget (KPushButton, m_restore_defaults)
@@ -7782,7 +7783,7 @@ msgstr "ئېلخەت:"
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: rc.cpp:2196
 msgid "Website:"
-msgstr "تور بېكىتى:"
+msgstr "تورتۇرا:"
 
 #. i18n: file: plugins/scripting/scripts/auto_remove/auto_remove.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, AutoRemoveConfig)
@@ -7854,13 +7855,13 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: rc.cpp:2229
 msgid "SMTP Server"
-msgstr ""
+msgstr "SMTP مۇلازىمېتىر"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:49
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: rc.cpp:2238
 msgid "SMTP server:"
-msgstr ""
+msgstr "SMTP مۇلازىمېتىرى:"
 
 #. i18n: file: plugins/scripting/scripts/email_notifications/emailconfig.ui:80
 #. i18n: ectx: property (text), widget (QCheckBox, tls)
@@ -8575,7 +8576,7 @@ msgstr "ئاتى:"
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: rc.cpp:2703
 msgid "String Matching"
-msgstr ""
+msgstr "تېكىست ماسلاشتۇرۇش"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:72
 #. i18n: ectx: property (toolTip), widget (KEditListBox, m_word_matches)
@@ -8795,7 +8796,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, m_test)
 #: rc.cpp:2845 rc.cpp:2848
 msgid "Test"
-msgstr "سىنا"
+msgstr "سىناق"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:370
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -8813,7 +8814,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, m_rescan)
 #: rc.cpp:2866
 msgid "Rescan"
-msgstr ""
+msgstr "قايتا تەكشۈر"
 
 #. i18n: file: plugins/webinterface/ktwebinterfaceplugin.kcfg:10
 #. i18n: ectx: label, entry (port), group (general)

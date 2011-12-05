@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-03 07:44+0200\n"
+"POT-Creation-Date: 2011-10-05 11:02+0200\n"
 "PO-Revision-Date: 2011-03-07 18:30+0200\n"
 "Last-Translator: Marek Laane <bald@smail.ee>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
@@ -74,7 +74,7 @@ msgid "All Torrents"
 msgstr "Kõik torrentid"
 
 #: ktorrent/dialogs/pastedialog.cpp:105
-#: ktorrent/dialogs/torrentcreatordlg.cpp:251 ktorrent/gui.cpp:341
+#: ktorrent/dialogs/torrentcreatordlg.cpp:251 ktorrent/gui.cpp:338
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "Vigane URL: %1"
@@ -664,7 +664,7 @@ msgid "Magnet Link"
 msgstr "Magnetlink"
 
 #: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:123
-#: ktorrent/view/viewmodel.cpp:437 ktorrent/trayicon.cpp:153
+#: ktorrent/view/viewmodel.cpp:437 ktorrent/trayicon.cpp:157
 #: plugins/infowidget/webseedsmodel.cpp:127
 #: plugins/infowidget/trackermodel.cpp:148
 msgid "Status"
@@ -1142,113 +1142,6 @@ msgstr "Ühendumine tracker'iga nurjus."
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "%1<br>URL: <b>%2</b>"
 
-#: ktorrent/core.cpp:178
-#, kde-format
-msgid ""
-"KTorrent is unable to accept connections because the TCP ports %1 is already "
-"in use by another program."
-msgstr ""
-"KTorrent ei saa ühendusi vastu võtta, sest TCP porte %1 kasutab juba mingi "
-"muu rakendus."
-
-#: ktorrent/core.cpp:192
-#, kde-format
-msgid ""
-"KTorrent is unable to accept connections because the UDP port %1 is already "
-"in use by another program."
-msgstr ""
-"KTorrent ei saa ühendusi vastu võtta, sest UDP porte %1 kasutab juba mingi "
-"muu rakendus."
-
-#: ktorrent/core.cpp:305
-#, kde-format
-msgid ""
-"Opening the torrent <b>%1</b>, would share one or more files with the "
-"following torrents. .Torrents are not allowed to write to the same files. "
-msgstr ""
-"Torrenti <b>%1</b>avamisel jagatakse vähemalt üht faili järgmiste "
-"torrentitega. Torrentid ei tohi kirjutada ühtesid ja samu faile."
-
-#: ktorrent/core.cpp:1022
-msgid "KTorrent is running one or more torrents"
-msgstr "KTorrentis töötab vähemalt üks torrent"
-
-#: ktorrent/core.cpp:1109
-#, kde-format
-msgid "Cannot create torrent: %1"
-msgstr "Torrenti loomine nurjus: %1"
-
-#: ktorrent/core.cpp:1212
-#, kde-format
-msgid ""
-"Several data files of the torrent \"%1\" are missing. \n"
-"Do you want to recreate them, or do you want to not download them?"
-msgstr ""
-"Mõned torrenti \"%1\" andmefailid on puudu.\n"
-"Kas soovid need uuesti luua või ei tahagi sa neid alla laadida?"
-
-#: ktorrent/core.cpp:1221 ktorrent/core.cpp:1232 ktorrent/core.cpp:1245
-msgid "Data files are missing"
-msgstr "Andmefailid puuduvad"
-
-#: ktorrent/core.cpp:1231
-#, kde-format
-msgid "Cannot deselect missing files: %1"
-msgstr "Puuduvate failide valiku tühistamine nurjus: %1"
-
-#: ktorrent/core.cpp:1244
-#, kde-format
-msgid "Cannot recreate missing files: %1"
-msgstr "Puuduvate failide taasloomine nurjus: %1"
-
-#: ktorrent/core.cpp:1255
-#, kde-format
-msgid ""
-"The file where the data is saved of the torrent \"%1\" is missing.\n"
-"Do you want to recreate it?"
-msgstr ""
-"Fail, kuhu on salvestatud torrenti \"%1\" andmed, puudub.\n"
-"Kas soovid selle uuesti luua?"
-
-#: ktorrent/core.cpp:1262 ktorrent/core.cpp:1272
-msgid "Data file is missing"
-msgstr "Andmefail puudub"
-
-#: ktorrent/core.cpp:1271
-#, kde-format
-msgid "Cannot recreate data file: %1"
-msgstr "Andmefaili taasloomine nurjus: %1"
-
-#: ktorrent/core.cpp:1359
-#, kde-format
-msgid ""
-"KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
-"to import it?"
-msgid_plural ""
-"KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
-"want to import them?"
-msgstr[0] ""
-"KTorrent leidis ühe KDE3 versiooni torrenti. Kas soovid selle importida?"
-msgstr[1] ""
-"KTorrent leidis %1 KDE3 versiooni torrentit. Kas soovid need importida?"
-
-#: ktorrent/core.cpp:1381
-msgid "No torrents from the KDE3 version were found."
-msgstr "KDE3 versiooni torrenteid ei leitud."
-
-#: ktorrent/core.cpp:1413 ktorrent/core.cpp:1432
-#, kde-format
-msgid "Invalid magnet bittorrent link: %1"
-msgstr "Vigane bittorrenti magnetlink: %1"
-
-#: ktorrent/core.cpp:1418 ktorrent/core.cpp:1437
-msgid ""
-"You are attempting to download a magnet link, and DHT is not enabled. For "
-"optimum results enable DHT."
-msgstr ""
-"Püüad alla laadida magnetlinki, kuid DHT pole lubatud. Parima tulemuse "
-"saavutamiseks lülita DHT sisse."
-
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
 #: ktorrent/main.cpp:94 plugins/search/webview.cpp:158 rc.cpp:515
@@ -1701,61 +1594,61 @@ msgstr "Grupivaate näitamine"
 msgid "Show or hide the group view"
 msgstr "Grupivaate näitamine või peitmine"
 
-#: ktorrent/gui.cpp:274 ktorrent/gui.cpp:289
+#: ktorrent/gui.cpp:271 ktorrent/gui.cpp:286
 msgid "Open Location"
 msgstr "Asukoha avamine"
 
-#: ktorrent/gui.cpp:406
+#: ktorrent/gui.cpp:403
 msgid "Create a new torrent"
 msgstr "Uue torrenti loomine"
 
-#: ktorrent/gui.cpp:408
+#: ktorrent/gui.cpp:405
 msgid "Open a torrent"
 msgstr "Torrenti avamine"
 
-#: ktorrent/gui.cpp:411
+#: ktorrent/gui.cpp:408
 msgid "Open Silently"
 msgstr "Avamine vaikselt"
 
-#: ktorrent/gui.cpp:412
+#: ktorrent/gui.cpp:409
 msgid "Open a torrent without asking any questions"
 msgstr "Torrenti avamine küsimusi esitamata"
 
-#: ktorrent/gui.cpp:427
+#: ktorrent/gui.cpp:424
 msgid "Open URL"
 msgstr "Ava URL"
 
-#: ktorrent/gui.cpp:428
+#: ktorrent/gui.cpp:425
 msgid "Open a URL which points to a torrent, magnet links are supported"
 msgstr "Torrentile osutava URL-i avamine, toetatud on ka magnetlingid"
 
-#: ktorrent/gui.cpp:433 plugins/ipfilter/ipblockingprefpage.cpp:35
+#: ktorrent/gui.cpp:430 plugins/ipfilter/ipblockingprefpage.cpp:35
 #: plugins/ipfilter/ipfilterplugin.cpp:62
 #: plugins/ipfilter/ipfilterplugin.cpp:75
 msgid "IP Filter"
 msgstr "IP filter"
 
-#: ktorrent/gui.cpp:434
+#: ktorrent/gui.cpp:431
 msgid "Show the list of blocked IP addresses"
 msgstr "Blokeeritud IP-aadresside nimekirja näitamine"
 
-#: ktorrent/gui.cpp:439
+#: ktorrent/gui.cpp:436
 msgid "Import Torrent"
 msgstr "Impordi torrent"
 
-#: ktorrent/gui.cpp:440
+#: ktorrent/gui.cpp:437
 msgid "Import a torrent"
 msgstr "Torrenti import"
 
-#: ktorrent/gui.cpp:446
+#: ktorrent/gui.cpp:443
 msgid "Import KDE3 Torrents"
 msgstr "Impordi KDE3 torrentid"
 
-#: ktorrent/gui.cpp:447
+#: ktorrent/gui.cpp:444
 msgid "Import all torrents from the KDE3 version of KTorrent"
 msgstr "Kõigi KTorrenti KDE3 versiooni torrentide import"
 
-#: ktorrent/gui.cpp:454
+#: ktorrent/gui.cpp:451
 msgid "Show/Hide KTorrent"
 msgstr "KTorrenti näitamine/peitmine"
 
@@ -1767,7 +1660,7 @@ msgstr "Määra maks. üleslaadimise kiirus"
 msgid "Set max download speed"
 msgstr "Määra maks. allalaadimise kiirus"
 
-#: ktorrent/trayicon.cpp:142
+#: ktorrent/trayicon.cpp:146
 #, kde-format
 msgid ""
 "<table><tr><td>Download&nbsp;speed:</td><td><b>%1</b></td></"
@@ -1780,13 +1673,13 @@ msgstr ""
 "tr><tr><td>Saadud:</td><td><b>%3</b></td></tr><tr><td>Saadetud:</td><td><b>"
 "%4</b></td></tr></table>"
 
-#: ktorrent/trayicon.cpp:187
+#: ktorrent/trayicon.cpp:191
 #, kde-format
 msgid "<b>%1</b> has completed downloading.<br>Average speed: %2 DL / %3 UL."
 msgstr ""
 "<b>%1</b> lõpetas allalaadimise.<br>Keskmine kiirus: %2 alla / %3 üles."
 
-#: ktorrent/trayicon.cpp:205
+#: ktorrent/trayicon.cpp:209
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum share ratio of %2 and has been stopped."
@@ -1795,7 +1688,7 @@ msgstr ""
 "<b>%1</b> saavutas maksimaalne jagamissuhte %2 ja peatati.<br>Laaditi üles "
 "%3 keskmise kiirusega %4."
 
-#: ktorrent/trayicon.cpp:224
+#: ktorrent/trayicon.cpp:228
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum seed time of %2 hours and has been stopped."
@@ -1804,12 +1697,12 @@ msgstr ""
 "<b>%1</b> saavutas maksimaalne levitamisaja %2 tundi ja peatati.<br>Laaditi "
 "üles %3 keskmise kiirusega %4."
 
-#: ktorrent/trayicon.cpp:239
+#: ktorrent/trayicon.cpp:243
 #, kde-format
 msgid "<b>%1</b> has been stopped with the following error: <br>%2"
 msgstr "<b>%1</b> peatati järgmise veaga: <br>%2"
 
-#: ktorrent/trayicon.cpp:250
+#: ktorrent/trayicon.cpp:254
 #, kde-format
 msgid ""
 "Corrupted data has been found in the torrent <b>%1</b><br>It would be a good "
@@ -1818,7 +1711,7 @@ msgstr ""
 "Torrentis <b>%1</b> leiti vigaseid andmeid<br>Vahest tasuks kontrollida "
 "torrenti andmete terviklikkust."
 
-#: ktorrent/trayicon.cpp:267
+#: ktorrent/trayicon.cpp:271
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum share ratio of %2 and cannot be enqueued. "
@@ -1827,7 +1720,7 @@ msgstr ""
 "<b>%1</b> saavutas maksimaalne jagamissuhte %2 ja seda ei saa järjekorda "
 "seada. <br>Kui soovid seda edasi jagada, eemalda piirang."
 
-#: ktorrent/trayicon.cpp:271
+#: ktorrent/trayicon.cpp:275
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum seed time of %2 hours and cannot be "
@@ -1836,53 +1729,160 @@ msgstr ""
 "<b>%1</b> saavutas maksimaalne levitamisaja %2 tundi ja seda ei saa "
 "järjekorda seada. <br>Kui soovid seda edasi jagada, eemalda piirang."
 
-#: ktorrent/trayicon.cpp:283
+#: ktorrent/trayicon.cpp:287
 #, kde-format
 msgid "Cannot start <b>%1</b>: <br>"
 msgstr "<b>%1</b> alustamine nurjus: <br>"
 
-#: ktorrent/trayicon.cpp:290
+#: ktorrent/trayicon.cpp:294
 #, kde-format
 msgid "Cannot seed more than 1 torrent. <br>"
 msgid_plural "Cannot seed more than %1 torrents. <br>"
 msgstr[0] "Ei saa levitada enam kui 1 torrentit. <br>"
 msgstr[1] "Ei saa levitada enam kui %1 torrentit. <br>"
 
-#: ktorrent/trayicon.cpp:295
+#: ktorrent/trayicon.cpp:299
 #, kde-format
 msgid "Cannot download more than 1 torrent. <br>"
 msgid_plural "Cannot download more than %1 torrents. <br>"
 msgstr[0] "Ei saa alla laadida üle 1 torrenti. <br>"
 msgstr[1] "Ei saa alla laadida üle %1 torrenti. <br>"
 
-#: ktorrent/trayicon.cpp:298
+#: ktorrent/trayicon.cpp:302
 msgid "Go to Settings -> Configure KTorrent, if you want to change the limits."
 msgstr ""
 "Kui soovid piiranguid muuta, vali Seadistused -> KTorrenti seadistamine."
 
-#: ktorrent/trayicon.cpp:302
+#: ktorrent/trayicon.cpp:306
 msgid "There is not enough diskspace available."
 msgstr "Kettaruumi napib."
 
-#: ktorrent/trayicon.cpp:315
+#: ktorrent/trayicon.cpp:319
 #, kde-format
 msgid ""
 "Your disk is running out of space.<br /><b>%1</b> is being downloaded to "
 "'%2'."
 msgstr "Kettal pole enam ruumi.<br /><b>%1</b> laaditakse alla asukohta '%2'."
 
-#: ktorrent/trayicon.cpp:318
+#: ktorrent/trayicon.cpp:322
 msgid "Torrent has been stopped.<br />"
 msgstr "Torrent on peatatud.<br />"
 
-#: ktorrent/trayicon.cpp:354
+#: ktorrent/trayicon.cpp:358
 msgid "Speed limit in KiB/s"
 msgstr "Kiiruse piirang KiB/s"
 
-#: ktorrent/trayicon.cpp:356 plugins/bwscheduler/schedulegraphicsitem.cpp:83
+#: ktorrent/trayicon.cpp:360 plugins/bwscheduler/schedulegraphicsitem.cpp:83
 #: plugins/bwscheduler/schedulegraphicsitem.cpp:84
 msgid "Unlimited"
 msgstr "Piiramatu"
+
+#: ktorrent/core.cpp:178
+#, kde-format
+msgid ""
+"KTorrent is unable to accept connections because the TCP ports %1 is already "
+"in use by another program."
+msgstr ""
+"KTorrent ei saa ühendusi vastu võtta, sest TCP porte %1 kasutab juba mingi "
+"muu rakendus."
+
+#: ktorrent/core.cpp:192
+#, kde-format
+msgid ""
+"KTorrent is unable to accept connections because the UDP port %1 is already "
+"in use by another program."
+msgstr ""
+"KTorrent ei saa ühendusi vastu võtta, sest UDP porte %1 kasutab juba mingi "
+"muu rakendus."
+
+#: ktorrent/core.cpp:305
+#, kde-format
+msgid ""
+"Opening the torrent <b>%1</b>, would share one or more files with the "
+"following torrents. .Torrents are not allowed to write to the same files. "
+msgstr ""
+"Torrenti <b>%1</b>avamisel jagatakse vähemalt üht faili järgmiste "
+"torrentitega. Torrentid ei tohi kirjutada ühtesid ja samu faile."
+
+#: ktorrent/core.cpp:1022
+msgid "KTorrent is running one or more torrents"
+msgstr "KTorrentis töötab vähemalt üks torrent"
+
+#: ktorrent/core.cpp:1109
+#, kde-format
+msgid "Cannot create torrent: %1"
+msgstr "Torrenti loomine nurjus: %1"
+
+#: ktorrent/core.cpp:1212
+#, kde-format
+msgid ""
+"Several data files of the torrent \"%1\" are missing. \n"
+"Do you want to recreate them, or do you want to not download them?"
+msgstr ""
+"Mõned torrenti \"%1\" andmefailid on puudu.\n"
+"Kas soovid need uuesti luua või ei tahagi sa neid alla laadida?"
+
+#: ktorrent/core.cpp:1221 ktorrent/core.cpp:1232 ktorrent/core.cpp:1245
+msgid "Data files are missing"
+msgstr "Andmefailid puuduvad"
+
+#: ktorrent/core.cpp:1231
+#, kde-format
+msgid "Cannot deselect missing files: %1"
+msgstr "Puuduvate failide valiku tühistamine nurjus: %1"
+
+#: ktorrent/core.cpp:1244
+#, kde-format
+msgid "Cannot recreate missing files: %1"
+msgstr "Puuduvate failide taasloomine nurjus: %1"
+
+#: ktorrent/core.cpp:1255
+#, kde-format
+msgid ""
+"The file where the data is saved of the torrent \"%1\" is missing.\n"
+"Do you want to recreate it?"
+msgstr ""
+"Fail, kuhu on salvestatud torrenti \"%1\" andmed, puudub.\n"
+"Kas soovid selle uuesti luua?"
+
+#: ktorrent/core.cpp:1262 ktorrent/core.cpp:1272
+msgid "Data file is missing"
+msgstr "Andmefail puudub"
+
+#: ktorrent/core.cpp:1271
+#, kde-format
+msgid "Cannot recreate data file: %1"
+msgstr "Andmefaili taasloomine nurjus: %1"
+
+#: ktorrent/core.cpp:1359
+#, kde-format
+msgid ""
+"KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
+"to import it?"
+msgid_plural ""
+"KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
+"want to import them?"
+msgstr[0] ""
+"KTorrent leidis ühe KDE3 versiooni torrenti. Kas soovid selle importida?"
+msgstr[1] ""
+"KTorrent leidis %1 KDE3 versiooni torrentit. Kas soovid need importida?"
+
+#: ktorrent/core.cpp:1381
+msgid "No torrents from the KDE3 version were found."
+msgstr "KDE3 versiooni torrenteid ei leitud."
+
+#: ktorrent/core.cpp:1413 ktorrent/core.cpp:1432
+#, kde-format
+msgid "Invalid magnet bittorrent link: %1"
+msgstr "Vigane bittorrenti magnetlink: %1"
+
+#: ktorrent/core.cpp:1418 ktorrent/core.cpp:1437
+msgid ""
+"You are attempting to download a magnet link, and DHT is not enabled. For "
+"optimum results enable DHT."
+msgstr ""
+"Püüad alla laadida magnetlinki, kuid DHT pole lubatud. Parima tulemuse "
+"saavutamiseks lülita DHT sisse."
 
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"
