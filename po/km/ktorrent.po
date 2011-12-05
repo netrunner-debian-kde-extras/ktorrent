@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-03 07:44+0200\n"
+"POT-Creation-Date: 2011-10-05 11:02+0200\n"
 "PO-Revision-Date: 2010-12-30 14:42+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -78,7 +78,7 @@ msgid "All Torrents"
 msgstr "Torrent ទាំងអស់"
 
 #: ktorrent/dialogs/pastedialog.cpp:105
-#: ktorrent/dialogs/torrentcreatordlg.cpp:251 ktorrent/gui.cpp:341
+#: ktorrent/dialogs/torrentcreatordlg.cpp:251 ktorrent/gui.cpp:338
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "URL មិនត្រឹមត្រូវ ៖ %1"
@@ -660,7 +660,7 @@ msgid "Magnet Link"
 msgstr "តំណ Magnet"
 
 #: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:123
-#: ktorrent/view/viewmodel.cpp:437 ktorrent/trayicon.cpp:153
+#: ktorrent/view/viewmodel.cpp:437 ktorrent/trayicon.cpp:157
 #: plugins/infowidget/webseedsmodel.cpp:127
 #: plugins/infowidget/trackermodel.cpp:148
 msgid "Status"
@@ -1134,109 +1134,6 @@ msgstr "មិន​អនុញ្ញាត​ទាក់​ទងអ្នក
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "%1<br>Url ៖ <b>%2</b>"
 
-#: ktorrent/core.cpp:178
-#, kde-format
-msgid ""
-"KTorrent is unable to accept connections because the TCP ports %1 is already "
-"in use by another program."
-msgstr ""
-"KTorrent មិន​អាច​ទទួល​យក​ការ​តភ្ជាប់​ទេ ពីព្រោះ​ច្រក %1 របស់​ TCP ​ប្រើ​រួច​ហើយ​ដោយ​កម្មវិធី​ផ្សេង ។"
-
-#: ktorrent/core.cpp:192
-#, kde-format
-msgid ""
-"KTorrent is unable to accept connections because the UDP port %1 is already "
-"in use by another program."
-msgstr ""
-"KTorrent មិន​អាច​ទទួល​យក​ការ​តភ្ជាប់​ទេ ពីព្រោះ​ច្រក %1 របស់​ UDP ប្រើ​រួច​ហើយ​ដោយ​កម្មវិធី​ផ្សេង ។"
-
-#: ktorrent/core.cpp:305
-#, kde-format
-msgid ""
-"Opening the torrent <b>%1</b>, would share one or more files with the "
-"following torrents. .Torrents are not allowed to write to the same files. "
-msgstr ""
-"ការ​បើក torrent​ <b>%1</b> នឹង​ចែក​រំលែក​​ឯកសារ​មួយ​ ឬ​ច្រើន​​ជា​មួយ​ torrents ដូច​ខាង​ក្រោម ។​ "
-"Torrents មិន​ត្រូវ​បាន​អនុញ្ញាត​ឲ្យ​សរសេរ​ទៅកាន់​ឯកសារ​ដូច​គ្នា​ឡើយ​ ។"
-
-#: ktorrent/core.cpp:1022
-msgid "KTorrent is running one or more torrents"
-msgstr "KTorrent កំពុង​រត់​មួយ ឬ​ច្រើន"
-
-#: ktorrent/core.cpp:1109
-#, kde-format
-msgid "Cannot create torrent: %1"
-msgstr "មិន​អាច​បង្កើត torrent ៖ %1"
-
-#: ktorrent/core.cpp:1212
-#, kde-format
-msgid ""
-"Several data files of the torrent \"%1\" are missing. \n"
-"Do you want to recreate them, or do you want to not download them?"
-msgstr ""
-"ឯកសារ​ទិន្នន័យ​របស់ torrent \"%1\" មួយ​ចំនួន​បាត់ ។ \n"
-"តើ​អ្នក​ពិតជា​ចង់​បង្កើត​ពួកវា​ឡើងវិញ​ ឬ​អ្នក​មិន​ទាញយក​ពួកវា ?"
-
-#: ktorrent/core.cpp:1221 ktorrent/core.cpp:1232 ktorrent/core.cpp:1245
-msgid "Data files are missing"
-msgstr "បាត់​ឯកសារ​ទិន្នន័យ"
-
-#: ktorrent/core.cpp:1231
-#, kde-format
-msgid "Cannot deselect missing files: %1"
-msgstr "មិន​អាច​ដោះជ្រើស​ឯកសារ​ដែល​បាត់ ៖ %1"
-
-#: ktorrent/core.cpp:1244
-#, kde-format
-msgid "Cannot recreate missing files: %1"
-msgstr "មិន​អាច​បង្កើត​ឯកសារ​ដែល​បាត់ ៖ %1"
-
-#: ktorrent/core.cpp:1255
-#, kde-format
-msgid ""
-"The file where the data is saved of the torrent \"%1\" is missing.\n"
-"Do you want to recreate it?"
-msgstr ""
-"ឯកសារ​ដែល​ទិន្នន័យ​​ត្រូវ​បាន​រក្សាទុក​នៃ​ torrent \"%1\" គឺ​ខូច​ ។\n"
-"តើ​អ្នក​ចង់​បង្កើត​វា​ឡើង​វិញ​ដែរ​ឬ​ទេ​ ?"
-
-#: ktorrent/core.cpp:1262 ktorrent/core.cpp:1272
-msgid "Data file is missing"
-msgstr "បាត់​ឯកសារ​ទិន្នន័យ"
-
-#: ktorrent/core.cpp:1271
-#, kde-format
-msgid "Cannot recreate data file: %1"
-msgstr "មិន​អាច​បង្កើត​ឯកសារ​ទិន្នន័យ​ឡើង​វិញ ៖ %1"
-
-#: ktorrent/core.cpp:1359
-#, kde-format
-msgid ""
-"KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
-"to import it?"
-msgid_plural ""
-"KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
-"want to import them?"
-msgstr[0] ""
-"KTorrent បាន​រកឃើញ torrent %1 ពី KTorrent កំណែ KDE3 តើ​អ្នក​ចង់​នាំចូល​ពួកវា​ទេ ?​"
-
-#: ktorrent/core.cpp:1381
-msgid "No torrents from the KDE3 version were found."
-msgstr "គ្មាន torrents ពី​កំណែ KDE3 ដែល​​រក​ឃើញ​ឡើយ​ ។"
-
-#: ktorrent/core.cpp:1413 ktorrent/core.cpp:1432
-#, kde-format
-msgid "Invalid magnet bittorrent link: %1"
-msgstr "តំណ magnet bittorrent មិន​ត្រឹមត្រូវ​ឡើយ ៖ %1​"
-
-#: ktorrent/core.cpp:1418 ktorrent/core.cpp:1437
-msgid ""
-"You are attempting to download a magnet link, and DHT is not enabled. For "
-"optimum results enable DHT."
-msgstr ""
-"អ្នក​កំពុង​ប៉ុនប៉ង​ទាញ​យក​តំណ​​មេដែក និង​ DHT ដែល​មិន​ត្រូវ​បាន​​អនុញ្ញាត ។ សម្រាប់​​លទ្ធផល​ប្រសើរ​បំផុត សូម​បើក "
-"DHT ។"
-
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
 #: ktorrent/main.cpp:94 plugins/search/webview.cpp:158 rc.cpp:515
@@ -1688,61 +1585,61 @@ msgstr "ទិដ្ឋភាព​ក្រុម​ដែល​អាច​ម
 msgid "Show or hide the group view"
 msgstr "បង្ហាញ​ ឬ​លាក់​ទិដ្ឋភាព​ក្រុម​​"
 
-#: ktorrent/gui.cpp:274 ktorrent/gui.cpp:289
+#: ktorrent/gui.cpp:271 ktorrent/gui.cpp:286
 msgid "Open Location"
 msgstr "បើក​ទីតាំង"
 
-#: ktorrent/gui.cpp:406
+#: ktorrent/gui.cpp:403
 msgid "Create a new torrent"
 msgstr "បង្កើត torrent ថ្មី​មួយ"
 
-#: ktorrent/gui.cpp:408
+#: ktorrent/gui.cpp:405
 msgid "Open a torrent"
 msgstr "បើក torrent"
 
-#: ktorrent/gui.cpp:411
+#: ktorrent/gui.cpp:408
 msgid "Open Silently"
 msgstr "បើក​ស្ងាត់ៗ"
 
-#: ktorrent/gui.cpp:412
+#: ktorrent/gui.cpp:409
 msgid "Open a torrent without asking any questions"
 msgstr "បើក​ torrent ដោយ​មិន​សួរ​សំណួរ"
 
-#: ktorrent/gui.cpp:427
+#: ktorrent/gui.cpp:424
 msgid "Open URL"
 msgstr "បើក URL"
 
-#: ktorrent/gui.cpp:428
+#: ktorrent/gui.cpp:425
 msgid "Open a URL which points to a torrent, magnet links are supported"
 msgstr "បើក URL ដែល​ចង្អុល​ទៅកាន់ torrent តំណ​មេដែក​ដែល​ត្រូវ​បាន​គាំទ្រ​"
 
-#: ktorrent/gui.cpp:433 plugins/ipfilter/ipblockingprefpage.cpp:35
+#: ktorrent/gui.cpp:430 plugins/ipfilter/ipblockingprefpage.cpp:35
 #: plugins/ipfilter/ipfilterplugin.cpp:62
 #: plugins/ipfilter/ipfilterplugin.cpp:75
 msgid "IP Filter"
 msgstr "តម្រង IP"
 
-#: ktorrent/gui.cpp:434
+#: ktorrent/gui.cpp:431
 msgid "Show the list of blocked IP addresses"
 msgstr "បង្ហាញ​បញ្ជី​អាសយដ្ឋាន IP ដែល​បាន​ទប់ស្កាត់"
 
-#: ktorrent/gui.cpp:439
+#: ktorrent/gui.cpp:436
 msgid "Import Torrent"
 msgstr "នាំចូល Torrent"
 
-#: ktorrent/gui.cpp:440
+#: ktorrent/gui.cpp:437
 msgid "Import a torrent"
 msgstr "នាំចូល torrent"
 
-#: ktorrent/gui.cpp:446
+#: ktorrent/gui.cpp:443
 msgid "Import KDE3 Torrents"
 msgstr "នាំចូល Torrent KDE3"
 
-#: ktorrent/gui.cpp:447
+#: ktorrent/gui.cpp:444
 msgid "Import all torrents from the KDE3 version of KTorrent"
 msgstr "នាំចូល​ torrents ទាំង​អស់​ពី​កំណែ KDE3 របស់ KTorrent"
 
-#: ktorrent/gui.cpp:454
+#: ktorrent/gui.cpp:451
 msgid "Show/Hide KTorrent"
 msgstr "បង្ហាញ​/​លាក់ KTorrent"
 
@@ -1754,7 +1651,7 @@ msgstr "កំណត់​ល្បឿន​ផ្ទុកឡើង​អតិ
 msgid "Set max download speed"
 msgstr "កំណត់​ល្បឿន​ទាញយក​អតិបរមា"
 
-#: ktorrent/trayicon.cpp:142
+#: ktorrent/trayicon.cpp:146
 #, kde-format
 msgid ""
 "<table><tr><td>Download&nbsp;speed:</td><td><b>%1</b></td></"
@@ -1766,12 +1663,12 @@ msgstr ""
 "ល្បឿន​ ៖</td><td><b>%2</b></td></tr><tr><td>បាន​ទទួល ៖​</td><td><b>%3</b></td></"
 "tr><tr><td>បាន​បញ្ជូន ៖</td><td><b>%4</b></td></tr></table>"
 
-#: ktorrent/trayicon.cpp:187
+#: ktorrent/trayicon.cpp:191
 #, kde-format
 msgid "<b>%1</b> has completed downloading.<br>Average speed: %2 DL / %3 UL."
 msgstr "3<b>%1</b> បាន​បញ្ចប់​ការ​ទាញយក ។<br>ល្បឿន​មធ្យម ៖ %2 DL / %3 UL ។"
 
-#: ktorrent/trayicon.cpp:205
+#: ktorrent/trayicon.cpp:209
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum share ratio of %2 and has been stopped."
@@ -1780,7 +1677,7 @@ msgstr ""
 "<b>%1</b> បាន​ដល់​សមាមាត្រ​ចែករំលែក​អតិបរមា​​នៃ %2 ហើយ​វា​ត្រូវបាន​បញ្ឈប់ ។<br>បាន​ផ្ទុកឡើង %3 នៅ​"
 "ល្បឿន​មធ្យម​នៃ %4 ។"
 
-#: ktorrent/trayicon.cpp:224
+#: ktorrent/trayicon.cpp:228
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum seed time of %2 hours and has been stopped."
@@ -1789,12 +1686,12 @@ msgstr ""
 "<b>%1</b> បាន​ដល់​ពេលវេលា​បណ្ដុះ​អតិបរមា​ %2 ម៉ោង ហើយ​ត្រូវបាន​បញ្ឈប់ ។<br>បាន​ផ្ទុកឡើង %3 នៅ​"
 "ល្បឿន​មធ្យម %4 ។"
 
-#: ktorrent/trayicon.cpp:239
+#: ktorrent/trayicon.cpp:243
 #, kde-format
 msgid "<b>%1</b> has been stopped with the following error: <br>%2"
 msgstr "<b>%1</b> ត្រូវបាន​បញ្ឈប់ ដោយសារ​មាន​កំហុស​ដូចខាងក្រោម ៖ <br>%2"
 
-#: ktorrent/trayicon.cpp:250
+#: ktorrent/trayicon.cpp:254
 #, kde-format
 msgid ""
 "Corrupted data has been found in the torrent <b>%1</b><br>It would be a good "
@@ -1803,7 +1700,7 @@ msgstr ""
 "បាន​រកឃើញ​ទិន្នន័យ​ដែល​ខូច​នៅក្នុង torrent <b>%1</b><br>យើង​គប្បី​ធ្វើការ​ពិនិត្យ​ភាពត្រឹមត្រូវ​​របស់​"
 "ទិន្នន័យ​នៅលើ torrent ។"
 
-#: ktorrent/trayicon.cpp:267
+#: ktorrent/trayicon.cpp:271
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum share ratio of %2 and cannot be enqueued. "
@@ -1812,7 +1709,7 @@ msgstr ""
 "<b>%1</b> បាន​មក​ដល់​សមាមាត្រ​ចែករំលែក​អតិបរមា​នៃ %2 និង​មិនអាច​ត្រូវ​បាន​ដាក់ជា​ជួរ ។<br>យក​ដែល​កំណត់​"
 "ចេញ​ដោយដៃ ប្រសិន​បើ​អ្នក​ចង់​បន្ត​បណ្ដុះ ។"
 
-#: ktorrent/trayicon.cpp:271
+#: ktorrent/trayicon.cpp:275
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum seed time of %2 hours and cannot be "
@@ -1821,50 +1718,153 @@ msgstr ""
 "<b>%1</b> បាន​ដល់​ពេលវេលា​បណ្ដុះ​អតិបរមា %2 ម៉ោង ហើយ​មិនអាច​ដាក់​តាម​លំដាប់​បានទេ ។ យក​ដែន​កំណត់​ចេញ​"
 "ដោយដៃ ប្រសិន​បើ​អ្នក​ចង់​បន្ត​ការ​បណ្ដុះ ។"
 
-#: ktorrent/trayicon.cpp:283
+#: ktorrent/trayicon.cpp:287
 #, kde-format
 msgid "Cannot start <b>%1</b>: <br>"
 msgstr "មិន​អាច​ចាប់​ផ្ដើម​ <b>%1</b> ៖ <br>"
 
-#: ktorrent/trayicon.cpp:290
+#: ktorrent/trayicon.cpp:294
 #, kde-format
 msgid "Cannot seed more than 1 torrent. <br>"
 msgid_plural "Cannot seed more than %1 torrents. <br>"
 msgstr[0] "មិនអាច​បណ្ដុះ torrents ច្រើន​ជាង %1 បានទេ ។ <br>"
 
-#: ktorrent/trayicon.cpp:295
+#: ktorrent/trayicon.cpp:299
 #, kde-format
 msgid "Cannot download more than 1 torrent. <br>"
 msgid_plural "Cannot download more than %1 torrents. <br>"
 msgstr[0] "មិនអាច​ទាញយក torrent ច្រើន​ជាង %1 បានទេ ។ <br>"
 
-#: ktorrent/trayicon.cpp:298
+#: ktorrent/trayicon.cpp:302
 msgid "Go to Settings -> Configure KTorrent, if you want to change the limits."
 msgstr "ទៅ ការ​កំណត់ -> កំណត់​រចនា​សម្ព័ន្ធ KTorrent ប្រសិន​បើ​អ្នក​ចង់​ផ្លាស់ប្ដូរ​ចំនួន​កំណត់ ។"
 
-#: ktorrent/trayicon.cpp:302
+#: ktorrent/trayicon.cpp:306
 msgid "There is not enough diskspace available."
 msgstr "មិនមាន​ទំហំថាស​គ្រប់គ្រាន់​ទេ ។"
 
-#: ktorrent/trayicon.cpp:315
+#: ktorrent/trayicon.cpp:319
 #, kde-format
 msgid ""
 "Your disk is running out of space.<br /><b>%1</b> is being downloaded to "
 "'%2'."
 msgstr "ទំហំ​ថាស​របស់​អ្នក​ជិត​អស់​ហើយ ។<br /><b>%1</b> កំពុង​ត្រូវបាន​ទាញយក​ទៅកាន់ '%2' ។"
 
-#: ktorrent/trayicon.cpp:318
+#: ktorrent/trayicon.cpp:322
 msgid "Torrent has been stopped.<br />"
 msgstr "បាន​បញ្ឈប់ Torrent ។<br />"
 
-#: ktorrent/trayicon.cpp:354
+#: ktorrent/trayicon.cpp:358
 msgid "Speed limit in KiB/s"
 msgstr "ល្បឿន​កំណត់​គិតជា គ.ប./វិ."
 
-#: ktorrent/trayicon.cpp:356 plugins/bwscheduler/schedulegraphicsitem.cpp:83
+#: ktorrent/trayicon.cpp:360 plugins/bwscheduler/schedulegraphicsitem.cpp:83
 #: plugins/bwscheduler/schedulegraphicsitem.cpp:84
 msgid "Unlimited"
 msgstr "មិន​កំណត់"
+
+#: ktorrent/core.cpp:178
+#, kde-format
+msgid ""
+"KTorrent is unable to accept connections because the TCP ports %1 is already "
+"in use by another program."
+msgstr ""
+"KTorrent មិន​អាច​ទទួល​យក​ការ​តភ្ជាប់​ទេ ពីព្រោះ​ច្រក %1 របស់​ TCP ​ប្រើ​រួច​ហើយ​ដោយ​កម្មវិធី​ផ្សេង ។"
+
+#: ktorrent/core.cpp:192
+#, kde-format
+msgid ""
+"KTorrent is unable to accept connections because the UDP port %1 is already "
+"in use by another program."
+msgstr ""
+"KTorrent មិន​អាច​ទទួល​យក​ការ​តភ្ជាប់​ទេ ពីព្រោះ​ច្រក %1 របស់​ UDP ប្រើ​រួច​ហើយ​ដោយ​កម្មវិធី​ផ្សេង ។"
+
+#: ktorrent/core.cpp:305
+#, kde-format
+msgid ""
+"Opening the torrent <b>%1</b>, would share one or more files with the "
+"following torrents. .Torrents are not allowed to write to the same files. "
+msgstr ""
+"ការ​បើក torrent​ <b>%1</b> នឹង​ចែក​រំលែក​​ឯកសារ​មួយ​ ឬ​ច្រើន​​ជា​មួយ​ torrents ដូច​ខាង​ក្រោម ។​ "
+"Torrents មិន​ត្រូវ​បាន​អនុញ្ញាត​ឲ្យ​សរសេរ​ទៅកាន់​ឯកសារ​ដូច​គ្នា​ឡើយ​ ។"
+
+#: ktorrent/core.cpp:1022
+msgid "KTorrent is running one or more torrents"
+msgstr "KTorrent កំពុង​រត់​មួយ ឬ​ច្រើន"
+
+#: ktorrent/core.cpp:1109
+#, kde-format
+msgid "Cannot create torrent: %1"
+msgstr "មិន​អាច​បង្កើត torrent ៖ %1"
+
+#: ktorrent/core.cpp:1212
+#, kde-format
+msgid ""
+"Several data files of the torrent \"%1\" are missing. \n"
+"Do you want to recreate them, or do you want to not download them?"
+msgstr ""
+"ឯកសារ​ទិន្នន័យ​របស់ torrent \"%1\" មួយ​ចំនួន​បាត់ ។ \n"
+"តើ​អ្នក​ពិតជា​ចង់​បង្កើត​ពួកវា​ឡើងវិញ​ ឬ​អ្នក​មិន​ទាញយក​ពួកវា ?"
+
+#: ktorrent/core.cpp:1221 ktorrent/core.cpp:1232 ktorrent/core.cpp:1245
+msgid "Data files are missing"
+msgstr "បាត់​ឯកសារ​ទិន្នន័យ"
+
+#: ktorrent/core.cpp:1231
+#, kde-format
+msgid "Cannot deselect missing files: %1"
+msgstr "មិន​អាច​ដោះជ្រើស​ឯកសារ​ដែល​បាត់ ៖ %1"
+
+#: ktorrent/core.cpp:1244
+#, kde-format
+msgid "Cannot recreate missing files: %1"
+msgstr "មិន​អាច​បង្កើត​ឯកសារ​ដែល​បាត់ ៖ %1"
+
+#: ktorrent/core.cpp:1255
+#, kde-format
+msgid ""
+"The file where the data is saved of the torrent \"%1\" is missing.\n"
+"Do you want to recreate it?"
+msgstr ""
+"ឯកសារ​ដែល​ទិន្នន័យ​​ត្រូវ​បាន​រក្សាទុក​នៃ​ torrent \"%1\" គឺ​ខូច​ ។\n"
+"តើ​អ្នក​ចង់​បង្កើត​វា​ឡើង​វិញ​ដែរ​ឬ​ទេ​ ?"
+
+#: ktorrent/core.cpp:1262 ktorrent/core.cpp:1272
+msgid "Data file is missing"
+msgstr "បាត់​ឯកសារ​ទិន្នន័យ"
+
+#: ktorrent/core.cpp:1271
+#, kde-format
+msgid "Cannot recreate data file: %1"
+msgstr "មិន​អាច​បង្កើត​ឯកសារ​ទិន្នន័យ​ឡើង​វិញ ៖ %1"
+
+#: ktorrent/core.cpp:1359
+#, kde-format
+msgid ""
+"KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
+"to import it?"
+msgid_plural ""
+"KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
+"want to import them?"
+msgstr[0] ""
+"KTorrent បាន​រកឃើញ torrent %1 ពី KTorrent កំណែ KDE3 តើ​អ្នក​ចង់​នាំចូល​ពួកវា​ទេ ?​"
+
+#: ktorrent/core.cpp:1381
+msgid "No torrents from the KDE3 version were found."
+msgstr "គ្មាន torrents ពី​កំណែ KDE3 ដែល​​រក​ឃើញ​ឡើយ​ ។"
+
+#: ktorrent/core.cpp:1413 ktorrent/core.cpp:1432
+#, kde-format
+msgid "Invalid magnet bittorrent link: %1"
+msgstr "តំណ magnet bittorrent មិន​ត្រឹមត្រូវ​ឡើយ ៖ %1​"
+
+#: ktorrent/core.cpp:1418 ktorrent/core.cpp:1437
+msgid ""
+"You are attempting to download a magnet link, and DHT is not enabled. For "
+"optimum results enable DHT."
+msgstr ""
+"អ្នក​កំពុង​ប៉ុនប៉ង​ទាញ​យក​តំណ​​មេដែក និង​ DHT ដែល​មិន​ត្រូវ​បាន​​អនុញ្ញាត ។ សម្រាប់​​លទ្ធផល​ប្រសើរ​បំផុត សូម​បើក "
+"DHT ។"
 
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"

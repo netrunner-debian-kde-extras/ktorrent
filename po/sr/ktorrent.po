@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-03 07:44+0200\n"
-"PO-Revision-Date: 2011-05-20 18:29+0200\n"
+"POT-Creation-Date: 2011-10-05 11:02+0200\n"
+"PO-Revision-Date: 2011-09-02 16:21+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
@@ -79,7 +79,7 @@ msgid "All Torrents"
 msgstr "Сви торенти"
 
 #: ktorrent/dialogs/pastedialog.cpp:105
-#: ktorrent/dialogs/torrentcreatordlg.cpp:251 ktorrent/gui.cpp:341
+#: ktorrent/dialogs/torrentcreatordlg.cpp:251 ktorrent/gui.cpp:338
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "Неисправан УРЛ: %1"
@@ -682,7 +682,7 @@ msgid "Magnet Link"
 msgstr "Магнетска веза"
 
 #: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:123
-#: ktorrent/view/viewmodel.cpp:437 ktorrent/trayicon.cpp:153
+#: ktorrent/view/viewmodel.cpp:437 ktorrent/trayicon.cpp:157
 #: plugins/infowidget/webseedsmodel.cpp:127
 #: plugins/infowidget/trackermodel.cpp:148
 msgid "Status"
@@ -1175,115 +1175,6 @@ msgstr "Не могу да контактирам пратилац."
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "<html>%1<br />УРЛ: <b>%2</b></html>"
 
-#: ktorrent/core.cpp:178
-#, kde-format
-msgid ""
-"KTorrent is unable to accept connections because the TCP ports %1 is already "
-"in use by another program."
-msgstr ""
-"К‑торент не може да прихвата везе јер ТЦП порт %1 већ користи други програм."
-
-#: ktorrent/core.cpp:192
-#, kde-format
-msgid ""
-"KTorrent is unable to accept connections because the UDP port %1 is already "
-"in use by another program."
-msgstr ""
-"К‑торент не може да прихвата везе јер УДП порт %1 већ користи други програм."
-
-#: ktorrent/core.cpp:305
-#, kde-format
-msgid ""
-"Opening the torrent <b>%1</b>, would share one or more files with the "
-"following torrents. .Torrents are not allowed to write to the same files. "
-msgstr ""
-"Отварање торента <b>%1</b> довело би до дељења једног или више фајлова са "
-"следећим торентима. Торентима није дозвољено да пишу у исте фајлове."
-
-#: ktorrent/core.cpp:1022
-msgid "KTorrent is running one or more torrents"
-msgstr "К‑торент ради са једним или више торената"
-
-#: ktorrent/core.cpp:1109
-#, kde-format
-msgid "Cannot create torrent: %1"
-msgstr "Не могу да направим торент: %1"
-
-#: ktorrent/core.cpp:1212
-#, kde-format
-msgid ""
-"Several data files of the torrent \"%1\" are missing. \n"
-"Do you want to recreate them, or do you want to not download them?"
-msgstr ""
-"Недостаје неколико фајлова торента „%1“. \n"
-"Желите ли да их поново направите или да их не преузимате?"
-
-#: ktorrent/core.cpp:1221 ktorrent/core.cpp:1232 ktorrent/core.cpp:1245
-msgid "Data files are missing"
-msgstr "Недостају фајлови са подацима"
-
-#: ktorrent/core.cpp:1231
-#, kde-format
-msgid "Cannot deselect missing files: %1"
-msgstr "Не могу да искључим из избора недостајуће фајлове: %1"
-
-#: ktorrent/core.cpp:1244
-#, kde-format
-msgid "Cannot recreate missing files: %1"
-msgstr "Не могу да направим недостајуће фајлове: %1"
-
-#: ktorrent/core.cpp:1255
-#, kde-format
-msgid ""
-"The file where the data is saved of the torrent \"%1\" is missing.\n"
-"Do you want to recreate it?"
-msgstr ""
-"Недостаје фајл у који се уписују подаци торента „%1“. \n"
-"Желите ли да га поново направите?"
-
-#: ktorrent/core.cpp:1262 ktorrent/core.cpp:1272
-msgid "Data file is missing"
-msgstr "Недостаје фајл са подацима"
-
-#: ktorrent/core.cpp:1271
-#, kde-format
-msgid "Cannot recreate data file: %1"
-msgstr "Не могу да направим фајл са подацима: %1"
-
-#: ktorrent/core.cpp:1359
-#, kde-format
-msgid ""
-"KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
-"to import it?"
-msgid_plural ""
-"KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
-"want to import them?"
-msgstr[0] ""
-"Нађен је %1 торент из КДЕ‑3 верзије К‑торента. Желите ли да их увезете?"
-msgstr[1] ""
-"Нађена су %1 торента из КДЕ‑3 верзије К‑торента. Желите ли да их увезете?"
-msgstr[2] ""
-"Нађено је %1 торената из КДЕ‑3 верзије К‑торента. Желите ли да их увезете?"
-msgstr[3] ""
-"Нађен је торент из КДЕ‑3 верзије К‑торента. Желите ли да га увезете?"
-
-#: ktorrent/core.cpp:1381
-msgid "No torrents from the KDE3 version were found."
-msgstr "Нема торената из КДЕ‑3 верзије."
-
-#: ktorrent/core.cpp:1413 ktorrent/core.cpp:1432
-#, kde-format
-msgid "Invalid magnet bittorrent link: %1"
-msgstr "Неисправна магнетска битторент веза: %1"
-
-#: ktorrent/core.cpp:1418 ktorrent/core.cpp:1437
-msgid ""
-"You are attempting to download a magnet link, and DHT is not enabled. For "
-"optimum results enable DHT."
-msgstr ""
-"Покушавате да преузмете магнетску везу а ДХТ није укључен. За оптималне "
-"резултате укључите ДХТ."
-
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
 #: ktorrent/main.cpp:94 plugins/search/webview.cpp:158 rc.cpp:515
@@ -1741,61 +1632,61 @@ msgstr "Групни приказ видљив"
 msgid "Show or hide the group view"
 msgstr "Приказује или скрива групни приказ"
 
-#: ktorrent/gui.cpp:274 ktorrent/gui.cpp:289
+#: ktorrent/gui.cpp:271 ktorrent/gui.cpp:286
 msgid "Open Location"
 msgstr "Отвори локацију"
 
-#: ktorrent/gui.cpp:406
+#: ktorrent/gui.cpp:403
 msgid "Create a new torrent"
 msgstr "Направи нови торент"
 
-#: ktorrent/gui.cpp:408
+#: ktorrent/gui.cpp:405
 msgid "Open a torrent"
 msgstr "Отвори торент"
 
-#: ktorrent/gui.cpp:411
+#: ktorrent/gui.cpp:408
 msgid "Open Silently"
 msgstr "Отвори тихо"
 
-#: ktorrent/gui.cpp:412
+#: ktorrent/gui.cpp:409
 msgid "Open a torrent without asking any questions"
 msgstr "Отвори торент без икаквих питања"
 
-#: ktorrent/gui.cpp:427
+#: ktorrent/gui.cpp:424
 msgid "Open URL"
 msgstr "Отвори УРЛ"
 
-#: ktorrent/gui.cpp:428
+#: ktorrent/gui.cpp:425
 msgid "Open a URL which points to a torrent, magnet links are supported"
 msgstr "Отвара УРЛ који показује на торент, магнетске везе су подржане"
 
-#: ktorrent/gui.cpp:433 plugins/ipfilter/ipblockingprefpage.cpp:35
+#: ktorrent/gui.cpp:430 plugins/ipfilter/ipblockingprefpage.cpp:35
 #: plugins/ipfilter/ipfilterplugin.cpp:62
 #: plugins/ipfilter/ipfilterplugin.cpp:75
 msgid "IP Filter"
 msgstr "ИП филтер"
 
-#: ktorrent/gui.cpp:434
+#: ktorrent/gui.cpp:431
 msgid "Show the list of blocked IP addresses"
 msgstr "Прикажи списак блокираних ИП адреса"
 
-#: ktorrent/gui.cpp:439
+#: ktorrent/gui.cpp:436
 msgid "Import Torrent"
 msgstr "Увези торент"
 
-#: ktorrent/gui.cpp:440
+#: ktorrent/gui.cpp:437
 msgid "Import a torrent"
 msgstr "Увези торент"
 
-#: ktorrent/gui.cpp:446
+#: ktorrent/gui.cpp:443
 msgid "Import KDE3 Torrents"
 msgstr "Увези КДЕ‑3 торенте"
 
-#: ktorrent/gui.cpp:447
+#: ktorrent/gui.cpp:444
 msgid "Import all torrents from the KDE3 version of KTorrent"
 msgstr "Увози све торенте из КДЕ‑3 верзије К‑торента"
 
-#: ktorrent/gui.cpp:454
+#: ktorrent/gui.cpp:451
 msgid "Show/Hide KTorrent"
 msgstr "Прикажи/сакриј К‑торент"
 
@@ -1807,7 +1698,7 @@ msgstr "Постави највећу брзину отпремања"
 msgid "Set max download speed"
 msgstr "Постави највећу брзину преузимања"
 
-#: ktorrent/trayicon.cpp:142
+#: ktorrent/trayicon.cpp:146
 #, kde-format
 msgid ""
 "<table><tr><td>Download&nbsp;speed:</td><td><b>%1</b></td></"
@@ -1819,12 +1710,12 @@ msgstr ""
 "td><td><b>%2</b></td></tr><tr><td>Примљено:</td><td><b>%3</b></td></"
 "tr><tr><td>Одаслато:</td><td><b>%4</b></td></tr></table>"
 
-#: ktorrent/trayicon.cpp:187
+#: ktorrent/trayicon.cpp:191
 #, kde-format
 msgid "<b>%1</b> has completed downloading.<br>Average speed: %2 DL / %3 UL."
 msgstr "Завршено преузимање <b>%1</b>.<br/>Просечна брзина: %2 пр. / %3 сл."
 
-#: ktorrent/trayicon.cpp:205
+#: ktorrent/trayicon.cpp:209
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum share ratio of %2 and has been stopped."
@@ -1833,7 +1724,7 @@ msgstr ""
 "Достигнут највећи однос дељења %2 за <b>%1</b>, па је заустављен.<br/"
 ">Отпремљено %3 при просечној брзини %4."
 
-#: ktorrent/trayicon.cpp:224
+#: ktorrent/trayicon.cpp:228
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum seed time of %2 hours and has been stopped."
@@ -1842,12 +1733,12 @@ msgstr ""
 "Достигнуто највеће време сејања од %2 сата за <b>%1</b>, па је заустављен."
 "<br/>Отпремљено %3 при просечној брзини %4."
 
-#: ktorrent/trayicon.cpp:239
+#: ktorrent/trayicon.cpp:243
 #, kde-format
 msgid "<b>%1</b> has been stopped with the following error: <br>%2"
 msgstr "<b>%1</b> је заустављен са следећом грешком: <br/>%2"
 
-#: ktorrent/trayicon.cpp:250
+#: ktorrent/trayicon.cpp:254
 #, kde-format
 msgid ""
 "Corrupted data has been found in the torrent <b>%1</b><br>It would be a good "
@@ -1856,7 +1747,7 @@ msgstr ""
 "Нађени су оштећени подаци у торенту <b>%1</b><br/>Било би добро да проверите "
 "целовитост података овог торента."
 
-#: ktorrent/trayicon.cpp:267
+#: ktorrent/trayicon.cpp:271
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum share ratio of %2 and cannot be enqueued. "
@@ -1865,7 +1756,7 @@ msgstr ""
 "Достигнут највећи однос дељења %2 за <b>%1</b>, па се не може поново ставити "
 "у ред. Ручно уклоните ограничење ако желите да наставите сејање."
 
-#: ktorrent/trayicon.cpp:271
+#: ktorrent/trayicon.cpp:275
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum seed time of %2 hours and cannot be "
@@ -1875,12 +1766,12 @@ msgstr ""
 "поново ставити у ред. Ручно уклоните ограничење ако желите да наставите "
 "сејање."
 
-#: ktorrent/trayicon.cpp:283
+#: ktorrent/trayicon.cpp:287
 #, kde-format
 msgid "Cannot start <b>%1</b>: <br>"
 msgstr "Не могу да покренем <b>%1</b>: <br/>"
 
-#: ktorrent/trayicon.cpp:290
+#: ktorrent/trayicon.cpp:294
 #, kde-format
 msgid "Cannot seed more than 1 torrent. <br>"
 msgid_plural "Cannot seed more than %1 torrents. <br>"
@@ -1889,7 +1780,7 @@ msgstr[1] "<html>Не могу да сејем више од %1 торента. 
 msgstr[2] "<html>Не могу да сејем више од %1 торената. <br/></html>"
 msgstr[3] "<html>Не могу да сејем више од једног торента. <br/></html>"
 
-#: ktorrent/trayicon.cpp:295
+#: ktorrent/trayicon.cpp:299
 #, kde-format
 msgid "Cannot download more than 1 torrent. <br>"
 msgid_plural "Cannot download more than %1 torrents. <br>"
@@ -1898,35 +1789,144 @@ msgstr[1] "<html>Не могу да преузимам више од %1 торе
 msgstr[2] "<html>Не могу да преузимам више од %1 торената. <br/></html>"
 msgstr[3] "<html>Не могу да преузимам више од једног торента. <br/></html>"
 
-#: ktorrent/trayicon.cpp:298
+#: ktorrent/trayicon.cpp:302
 msgid "Go to Settings -> Configure KTorrent, if you want to change the limits."
 msgstr ""
 "Ограничења можете променити под <interface>Поставке->Подеси К‑торент...</"
 "interface>."
 
-#: ktorrent/trayicon.cpp:302
+#: ktorrent/trayicon.cpp:306
 msgid "There is not enough diskspace available."
 msgstr "Нема довољно слободног простора."
 
-#: ktorrent/trayicon.cpp:315
+#: ktorrent/trayicon.cpp:319
 #, kde-format
 msgid ""
 "Your disk is running out of space.<br /><b>%1</b> is being downloaded to '"
 "%2'."
 msgstr "Понестаје простора на диску.<br /><b>%1</b> се преузима у „%2“."
 
-#: ktorrent/trayicon.cpp:318
+#: ktorrent/trayicon.cpp:322
 msgid "Torrent has been stopped.<br />"
 msgstr "<html>Торент је заустављен.<br /></html>"
 
-#: ktorrent/trayicon.cpp:354
+#: ktorrent/trayicon.cpp:358
 msgid "Speed limit in KiB/s"
 msgstr "Ограничење у kiB/s"
 
-#: ktorrent/trayicon.cpp:356 plugins/bwscheduler/schedulegraphicsitem.cpp:83
+#: ktorrent/trayicon.cpp:360 plugins/bwscheduler/schedulegraphicsitem.cpp:83
 #: plugins/bwscheduler/schedulegraphicsitem.cpp:84
 msgid "Unlimited"
 msgstr "неограничено"
+
+#: ktorrent/core.cpp:178
+#, kde-format
+msgid ""
+"KTorrent is unable to accept connections because the TCP ports %1 is already "
+"in use by another program."
+msgstr ""
+"К‑торент не може да прихвата везе јер ТЦП порт %1 већ користи други програм."
+
+#: ktorrent/core.cpp:192
+#, kde-format
+msgid ""
+"KTorrent is unable to accept connections because the UDP port %1 is already "
+"in use by another program."
+msgstr ""
+"К‑торент не може да прихвата везе јер УДП порт %1 већ користи други програм."
+
+#: ktorrent/core.cpp:305
+#, kde-format
+msgid ""
+"Opening the torrent <b>%1</b>, would share one or more files with the "
+"following torrents. .Torrents are not allowed to write to the same files. "
+msgstr ""
+"Отварање торента <b>%1</b> довело би до дељења једног или више фајлова са "
+"следећим торентима. Торентима није дозвољено да пишу у исте фајлове."
+
+#: ktorrent/core.cpp:1022
+msgid "KTorrent is running one or more torrents"
+msgstr "К‑торент ради са једним или више торената"
+
+#: ktorrent/core.cpp:1109
+#, kde-format
+msgid "Cannot create torrent: %1"
+msgstr "Не могу да направим торент: %1"
+
+#: ktorrent/core.cpp:1212
+#, kde-format
+msgid ""
+"Several data files of the torrent \"%1\" are missing. \n"
+"Do you want to recreate them, or do you want to not download them?"
+msgstr ""
+"Недостаје неколико фајлова торента „%1“. \n"
+"Желите ли да их поново направите или да их не преузимате?"
+
+#: ktorrent/core.cpp:1221 ktorrent/core.cpp:1232 ktorrent/core.cpp:1245
+msgid "Data files are missing"
+msgstr "Недостају фајлови са подацима"
+
+#: ktorrent/core.cpp:1231
+#, kde-format
+msgid "Cannot deselect missing files: %1"
+msgstr "Не могу да искључим из избора недостајуће фајлове: %1"
+
+#: ktorrent/core.cpp:1244
+#, kde-format
+msgid "Cannot recreate missing files: %1"
+msgstr "Не могу да направим недостајуће фајлове: %1"
+
+#: ktorrent/core.cpp:1255
+#, kde-format
+msgid ""
+"The file where the data is saved of the torrent \"%1\" is missing.\n"
+"Do you want to recreate it?"
+msgstr ""
+"Недостаје фајл у који се уписују подаци торента „%1“. \n"
+"Желите ли да га поново направите?"
+
+#: ktorrent/core.cpp:1262 ktorrent/core.cpp:1272
+msgid "Data file is missing"
+msgstr "Недостаје фајл са подацима"
+
+#: ktorrent/core.cpp:1271
+#, kde-format
+msgid "Cannot recreate data file: %1"
+msgstr "Не могу да направим фајл са подацима: %1"
+
+#: ktorrent/core.cpp:1359
+#, kde-format
+msgid ""
+"KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
+"to import it?"
+msgid_plural ""
+"KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
+"want to import them?"
+msgstr[0] ""
+"Нађен је %1 торент из КДЕ‑3 верзије К‑торента. Желите ли да их увезете?"
+msgstr[1] ""
+"Нађена су %1 торента из КДЕ‑3 верзије К‑торента. Желите ли да их увезете?"
+msgstr[2] ""
+"Нађено је %1 торената из КДЕ‑3 верзије К‑торента. Желите ли да их увезете?"
+msgstr[3] ""
+"Нађен је торент из КДЕ‑3 верзије К‑торента. Желите ли да га увезете?"
+
+#: ktorrent/core.cpp:1381
+msgid "No torrents from the KDE3 version were found."
+msgstr "Нема торената из КДЕ‑3 верзије."
+
+#: ktorrent/core.cpp:1413 ktorrent/core.cpp:1432
+#, kde-format
+msgid "Invalid magnet bittorrent link: %1"
+msgstr "Неисправна магнетска битторент веза: %1"
+
+#: ktorrent/core.cpp:1418 ktorrent/core.cpp:1437
+msgid ""
+"You are attempting to download a magnet link, and DHT is not enabled. For "
+"optimum results enable DHT."
+msgstr ""
+"Покушавате да преузмете магнетску везу а ДХТ није укључен. За оптималне "
+"резултате укључите ДХТ."
 
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"
@@ -9192,7 +9192,7 @@ msgid ""
 "\n"
 "Will download seasons 1, 3, 4, 5, 6 and 9"
 msgstr ""
-"Наведите сезоне за преузимање, више сезона може бити раздвојено зарезом а "
+"Наведите сезоне за преузимање, више сезона може бити раздвојено запетом а "
 "можете користити и опсеге са -\n"
 "\n"
 "На пример: 1, 3-6, 9\n"
@@ -9216,7 +9216,7 @@ msgid ""
 "\n"
 "Will download episodes 1, 3, 4, 5, 6 and 9"
 msgstr ""
-"Наведите епизоде за преузимање, више епизода може бити раздвојено зарезом а "
+"Наведите епизоде за преузимање, више епизода може бити раздвојено запетом а "
 "можете користити и опсеге са -\n"
 "\n"
 "На пример: 1, 3-6, 9\n"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent(2)\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-03 07:44+0200\n"
+"POT-Creation-Date: 2011-10-05 11:02+0200\n"
 "PO-Revision-Date: 2009-07-20 16:52+0300\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -80,7 +80,7 @@ msgid "All Torrents"
 msgstr "Toate torentele"
 
 #: ktorrent/dialogs/pastedialog.cpp:105
-#: ktorrent/dialogs/torrentcreatordlg.cpp:251 ktorrent/gui.cpp:341
+#: ktorrent/dialogs/torrentcreatordlg.cpp:251 ktorrent/gui.cpp:338
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "URL invalid: %1"
@@ -706,7 +706,7 @@ msgid "Magnet Link"
 msgstr ""
 
 #: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:123
-#: ktorrent/view/viewmodel.cpp:437 ktorrent/trayicon.cpp:153
+#: ktorrent/view/viewmodel.cpp:437 ktorrent/trayicon.cpp:157
 #: plugins/infowidget/webseedsmodel.cpp:127
 #: plugins/infowidget/trackermodel.cpp:148
 msgid "Status"
@@ -1216,123 +1216,6 @@ msgstr ""
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "%1<br>Url: <b>%2</b>"
 
-#: ktorrent/core.cpp:178
-#, fuzzy, kde-format
-#| msgid ""
-#| "KTorrent is unable to accept connections because the ports %1 to %2 are "
-#| "already in use by another program."
-msgid ""
-"KTorrent is unable to accept connections because the TCP ports %1 is already "
-"in use by another program."
-msgstr ""
-"KTorrent nu poate accepta conexiuni deoarece intervalul de porturi %1 - %2 "
-"este deja utilizat de către o altă aplicație."
-
-#: ktorrent/core.cpp:192
-#, fuzzy, kde-format
-#| msgid ""
-#| "KTorrent is unable to accept connections because the ports %1 to %2 are "
-#| "already in use by another program."
-msgid ""
-"KTorrent is unable to accept connections because the UDP port %1 is already "
-"in use by another program."
-msgstr ""
-"KTorrent nu poate accepta conexiuni deoarece intervalul de porturi %1 - %2 "
-"este deja utilizat de către o altă aplicație."
-
-#: ktorrent/core.cpp:305
-#, kde-format
-msgid ""
-"Opening the torrent <b>%1</b>, would share one or more files with the "
-"following torrents. .Torrents are not allowed to write to the same files. "
-msgstr ""
-
-#: ktorrent/core.cpp:1022
-msgid "KTorrent is running one or more torrents"
-msgstr "KTorrent utilizează unul sau mai multe torente."
-
-#: ktorrent/core.cpp:1109
-#, kde-format
-msgid "Cannot create torrent: %1"
-msgstr "Nu am putut crea torentul: %1"
-
-#: ktorrent/core.cpp:1212
-#, kde-format
-msgid ""
-"Several data files of the torrent \"%1\" are missing. \n"
-"Do you want to recreate them, or do you want to not download them?"
-msgstr ""
-"Cîteva fișiere de date ale torentului „%1” lipsesc. \n"
-"Doriți să le recreem sau să renunțați la descărcarea lor?"
-
-#: ktorrent/core.cpp:1221 ktorrent/core.cpp:1232 ktorrent/core.cpp:1245
-msgid "Data files are missing"
-msgstr "Fișierele de date lipsesc"
-
-#: ktorrent/core.cpp:1231
-#, kde-format
-msgid "Cannot deselect missing files: %1"
-msgstr "Nu am putut deselecta fișierele lipsă: %1"
-
-#: ktorrent/core.cpp:1244
-#, kde-format
-msgid "Cannot recreate missing files: %1"
-msgstr "Nu am putut recrea fișierele lipsă: %1"
-
-#: ktorrent/core.cpp:1255
-#, fuzzy, kde-format
-#| msgid ""
-#| "The file where the data is saved of the torrent \"%1\" is missing. \n"
-#| "Do you want to recreate it?"
-msgid ""
-"The file where the data is saved of the torrent \"%1\" is missing.\n"
-"Do you want to recreate it?"
-msgstr ""
-"Fișierul care conține datele salvate pentru torentul „%1” lipsește. \n"
-"Doriți să îl recreem?"
-
-#: ktorrent/core.cpp:1262 ktorrent/core.cpp:1272
-msgid "Data file is missing"
-msgstr "Fișierul de date lipsește"
-
-#: ktorrent/core.cpp:1271
-#, kde-format
-msgid "Cannot recreate data file: %1"
-msgstr "Nu am putut recrea fișierul de date: %1"
-
-#: ktorrent/core.cpp:1359
-#, fuzzy, kde-format
-#| msgid ""
-#| "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
-#| "want to import them ?"
-msgid ""
-"KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
-"to import it?"
-msgid_plural ""
-"KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
-"want to import them?"
-msgstr[0] ""
-"KTorrent a găsit %1 torente din versiunea KDE3, doriți să le importăm?"
-msgstr[1] ""
-"KTorrent a găsit %1 torente din versiunea KDE3, doriți să le importăm?"
-msgstr[2] ""
-"KTorrent a găsit %1 torente din versiunea KDE3, doriți să le importăm?"
-
-#: ktorrent/core.cpp:1381
-msgid "No torrents from the KDE3 version were found."
-msgstr "Niciun torent din versiunea KDE3 nu a fost găsit."
-
-#: ktorrent/core.cpp:1413 ktorrent/core.cpp:1432
-#, kde-format
-msgid "Invalid magnet bittorrent link: %1"
-msgstr ""
-
-#: ktorrent/core.cpp:1418 ktorrent/core.cpp:1437
-msgid ""
-"You are attempting to download a magnet link, and DHT is not enabled. For "
-"optimum results enable DHT."
-msgstr ""
-
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
 #: ktorrent/main.cpp:94 plugins/search/webview.cpp:158 rc.cpp:515
@@ -1800,63 +1683,63 @@ msgstr ""
 msgid "Show or hide the group view"
 msgstr ""
 
-#: ktorrent/gui.cpp:274 ktorrent/gui.cpp:289
+#: ktorrent/gui.cpp:271 ktorrent/gui.cpp:286
 msgid "Open Location"
 msgstr "Deschidere locație"
 
-#: ktorrent/gui.cpp:406
+#: ktorrent/gui.cpp:403
 msgid "Create a new torrent"
 msgstr "Creează un torent nou"
 
-#: ktorrent/gui.cpp:408
+#: ktorrent/gui.cpp:405
 msgid "Open a torrent"
 msgstr "Deschide un torent"
 
-#: ktorrent/gui.cpp:411
+#: ktorrent/gui.cpp:408
 msgid "Open Silently"
 msgstr "Deschidere silențioasă"
 
-#: ktorrent/gui.cpp:412
+#: ktorrent/gui.cpp:409
 msgid "Open a torrent without asking any questions"
 msgstr "Deschide torentele fără a pune alte întrebări"
 
-#: ktorrent/gui.cpp:427
+#: ktorrent/gui.cpp:424
 msgid "Open URL"
 msgstr "Deschide URL"
 
-#: ktorrent/gui.cpp:428
+#: ktorrent/gui.cpp:425
 #, fuzzy
 #| msgid "Open a URL which points to a torrent"
 msgid "Open a URL which points to a torrent, magnet links are supported"
 msgstr "Deschide un URL ce indică spre un torent"
 
-#: ktorrent/gui.cpp:433 plugins/ipfilter/ipblockingprefpage.cpp:35
+#: ktorrent/gui.cpp:430 plugins/ipfilter/ipblockingprefpage.cpp:35
 #: plugins/ipfilter/ipfilterplugin.cpp:62
 #: plugins/ipfilter/ipfilterplugin.cpp:75
 msgid "IP Filter"
 msgstr "Filtru IP"
 
-#: ktorrent/gui.cpp:434
+#: ktorrent/gui.cpp:431
 msgid "Show the list of blocked IP addresses"
 msgstr "Arată lista adreselor IP blocate"
 
-#: ktorrent/gui.cpp:439
+#: ktorrent/gui.cpp:436
 msgid "Import Torrent"
 msgstr "Import torente"
 
-#: ktorrent/gui.cpp:440
+#: ktorrent/gui.cpp:437
 msgid "Import a torrent"
 msgstr "Importă un torent"
 
-#: ktorrent/gui.cpp:446
+#: ktorrent/gui.cpp:443
 msgid "Import KDE3 Torrents"
 msgstr "Import torente KDE3"
 
-#: ktorrent/gui.cpp:447
+#: ktorrent/gui.cpp:444
 msgid "Import all torrents from the KDE3 version of KTorrent"
 msgstr "Importă toate torentele din versiunea KDE3 a KTorrent"
 
-#: ktorrent/gui.cpp:454
+#: ktorrent/gui.cpp:451
 msgid "Show/Hide KTorrent"
 msgstr "Arată/ascunde KTorrent"
 
@@ -1868,7 +1751,7 @@ msgstr "Viteza maximă de încărcare"
 msgid "Set max download speed"
 msgstr "Viteza maximă de descărcare"
 
-#: ktorrent/trayicon.cpp:142
+#: ktorrent/trayicon.cpp:146
 #, fuzzy, kde-format
 #| msgid ""
 #| "<table cellpadding='2' cellspacing='2' align='center'><tr><td><b>Speed:</"
@@ -1890,13 +1773,13 @@ msgstr ""
 "color='#1c9a1c'>%3</font></td><td>Încărcare: <font color='#990000'>%4</"
 "font></td></tr></table>"
 
-#: ktorrent/trayicon.cpp:187
+#: ktorrent/trayicon.cpp:191
 #, kde-format
 msgid "<b>%1</b> has completed downloading.<br>Average speed: %2 DL / %3 UL."
 msgstr ""
 "<b>%1</b> s-a descărcat.<br>Viteza medie: %2 descărcare / %3 încărcare."
 
-#: ktorrent/trayicon.cpp:205
+#: ktorrent/trayicon.cpp:209
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum share ratio of %2 and has been stopped."
@@ -1905,7 +1788,7 @@ msgstr ""
 "<b>%1</b> a ajuns la rata maximă de partajare de %2 și a fost oprit.<br>S-a "
 "încărcat %3 la o viteză medie de %4."
 
-#: ktorrent/trayicon.cpp:224
+#: ktorrent/trayicon.cpp:228
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum seed time of %2 hours and has been stopped."
@@ -1914,12 +1797,12 @@ msgstr ""
 "<b>%1</b> a ajuns la timpul maxim de însămînțare de %2 ore și a fost oprit."
 "<br>S-a încărcat %3 la o viteză medie de  %4."
 
-#: ktorrent/trayicon.cpp:239
+#: ktorrent/trayicon.cpp:243
 #, kde-format
 msgid "<b>%1</b> has been stopped with the following error: <br>%2"
 msgstr "<b>%1</b> a fost oprit cu eroarea următoare: <br>%2"
 
-#: ktorrent/trayicon.cpp:250
+#: ktorrent/trayicon.cpp:254
 #, kde-format
 msgid ""
 "Corrupted data has been found in the torrent <b>%1</b><br>It would be a good "
@@ -1928,7 +1811,7 @@ msgstr ""
 "Au fost găsite date corupte în torentul <b>%1</b><br>Ar fi bine să "
 "verificați integritatea torentului."
 
-#: ktorrent/trayicon.cpp:267
+#: ktorrent/trayicon.cpp:271
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum share ratio of %2 and cannot be enqueued. "
@@ -1937,7 +1820,7 @@ msgstr ""
 "<b>%1</b> a ajuns la rata maximă de partajare de %2 și nu poate fi adăugat "
 "în coadă.<br>Eliminați manual limita dacă doriți să continuați încărcarea."
 
-#: ktorrent/trayicon.cpp:271
+#: ktorrent/trayicon.cpp:275
 #, kde-format
 msgid ""
 "<b>%1</b> has reached its maximum seed time of %2 hours and cannot be "
@@ -1947,13 +1830,13 @@ msgstr ""
 "pus în coadă. <br>Eliminați manual limita dacă doriți să continuați "
 "încărcarea."
 
-#: ktorrent/trayicon.cpp:283
+#: ktorrent/trayicon.cpp:287
 #, fuzzy, kde-format
 #| msgid "Cannot start <b>%1</b> : <br>"
 msgid "Cannot start <b>%1</b>: <br>"
 msgstr "Nu am putut porni <b>%1</b> : <br>"
 
-#: ktorrent/trayicon.cpp:290
+#: ktorrent/trayicon.cpp:294
 #, kde-format
 msgid "Cannot seed more than 1 torrent. <br>"
 msgid_plural "Cannot seed more than %1 torrents. <br>"
@@ -1961,7 +1844,7 @@ msgstr[0] "Nu se poate încărca mai mult de 1 torent. <br>"
 msgstr[1] "Nu se pot încărca mai mult de %1 torente. <br>"
 msgstr[2] "Nu se pot încărca mai mult de %1 de torente. <br>"
 
-#: ktorrent/trayicon.cpp:295
+#: ktorrent/trayicon.cpp:299
 #, kde-format
 msgid "Cannot download more than 1 torrent. <br>"
 msgid_plural "Cannot download more than %1 torrents. <br>"
@@ -1969,16 +1852,16 @@ msgstr[0] "Nu se poate descărca mai mult de 1 torent. <br>"
 msgstr[1] "Nu se pot descărca mai mult de %1 torente. <br>"
 msgstr[2] "Nu se pot descărca mai mult de %1 de torente. <br>"
 
-#: ktorrent/trayicon.cpp:298
+#: ktorrent/trayicon.cpp:302
 msgid "Go to Settings -> Configure KTorrent, if you want to change the limits."
 msgstr ""
 "Mergeți la Setări -> Configurare KTorrent, dacă doriți să schimbați limitele."
 
-#: ktorrent/trayicon.cpp:302
+#: ktorrent/trayicon.cpp:306
 msgid "There is not enough diskspace available."
 msgstr "Nu există destul spațiu pe disc la dispoziție."
 
-#: ktorrent/trayicon.cpp:315
+#: ktorrent/trayicon.cpp:319
 #, kde-format
 msgid ""
 "Your disk is running out of space.<br /><b>%1</b> is being downloaded to "
@@ -1987,18 +1870,135 @@ msgstr ""
 "Discul dumneavoastră rămîne fără spațiu.<br /><b>%1</b> este descărcat pe "
 "'%2'."
 
-#: ktorrent/trayicon.cpp:318
+#: ktorrent/trayicon.cpp:322
 msgid "Torrent has been stopped.<br />"
 msgstr "Torentul a fost oprit.<br />"
 
-#: ktorrent/trayicon.cpp:354
+#: ktorrent/trayicon.cpp:358
 msgid "Speed limit in KiB/s"
 msgstr "Limita de viteză în KiO/s"
 
-#: ktorrent/trayicon.cpp:356 plugins/bwscheduler/schedulegraphicsitem.cpp:83
+#: ktorrent/trayicon.cpp:360 plugins/bwscheduler/schedulegraphicsitem.cpp:83
 #: plugins/bwscheduler/schedulegraphicsitem.cpp:84
 msgid "Unlimited"
 msgstr "Nelimitat"
+
+#: ktorrent/core.cpp:178
+#, fuzzy, kde-format
+#| msgid ""
+#| "KTorrent is unable to accept connections because the ports %1 to %2 are "
+#| "already in use by another program."
+msgid ""
+"KTorrent is unable to accept connections because the TCP ports %1 is already "
+"in use by another program."
+msgstr ""
+"KTorrent nu poate accepta conexiuni deoarece intervalul de porturi %1 - %2 "
+"este deja utilizat de către o altă aplicație."
+
+#: ktorrent/core.cpp:192
+#, fuzzy, kde-format
+#| msgid ""
+#| "KTorrent is unable to accept connections because the ports %1 to %2 are "
+#| "already in use by another program."
+msgid ""
+"KTorrent is unable to accept connections because the UDP port %1 is already "
+"in use by another program."
+msgstr ""
+"KTorrent nu poate accepta conexiuni deoarece intervalul de porturi %1 - %2 "
+"este deja utilizat de către o altă aplicație."
+
+#: ktorrent/core.cpp:305
+#, kde-format
+msgid ""
+"Opening the torrent <b>%1</b>, would share one or more files with the "
+"following torrents. .Torrents are not allowed to write to the same files. "
+msgstr ""
+
+#: ktorrent/core.cpp:1022
+msgid "KTorrent is running one or more torrents"
+msgstr "KTorrent utilizează unul sau mai multe torente."
+
+#: ktorrent/core.cpp:1109
+#, kde-format
+msgid "Cannot create torrent: %1"
+msgstr "Nu am putut crea torentul: %1"
+
+#: ktorrent/core.cpp:1212
+#, kde-format
+msgid ""
+"Several data files of the torrent \"%1\" are missing. \n"
+"Do you want to recreate them, or do you want to not download them?"
+msgstr ""
+"Cîteva fișiere de date ale torentului „%1” lipsesc. \n"
+"Doriți să le recreem sau să renunțați la descărcarea lor?"
+
+#: ktorrent/core.cpp:1221 ktorrent/core.cpp:1232 ktorrent/core.cpp:1245
+msgid "Data files are missing"
+msgstr "Fișierele de date lipsesc"
+
+#: ktorrent/core.cpp:1231
+#, kde-format
+msgid "Cannot deselect missing files: %1"
+msgstr "Nu am putut deselecta fișierele lipsă: %1"
+
+#: ktorrent/core.cpp:1244
+#, kde-format
+msgid "Cannot recreate missing files: %1"
+msgstr "Nu am putut recrea fișierele lipsă: %1"
+
+#: ktorrent/core.cpp:1255
+#, fuzzy, kde-format
+#| msgid ""
+#| "The file where the data is saved of the torrent \"%1\" is missing. \n"
+#| "Do you want to recreate it?"
+msgid ""
+"The file where the data is saved of the torrent \"%1\" is missing.\n"
+"Do you want to recreate it?"
+msgstr ""
+"Fișierul care conține datele salvate pentru torentul „%1” lipsește. \n"
+"Doriți să îl recreem?"
+
+#: ktorrent/core.cpp:1262 ktorrent/core.cpp:1272
+msgid "Data file is missing"
+msgstr "Fișierul de date lipsește"
+
+#: ktorrent/core.cpp:1271
+#, kde-format
+msgid "Cannot recreate data file: %1"
+msgstr "Nu am putut recrea fișierul de date: %1"
+
+#: ktorrent/core.cpp:1359
+#, fuzzy, kde-format
+#| msgid ""
+#| "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
+#| "want to import them ?"
+msgid ""
+"KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
+"to import it?"
+msgid_plural ""
+"KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you "
+"want to import them?"
+msgstr[0] ""
+"KTorrent a găsit %1 torente din versiunea KDE3, doriți să le importăm?"
+msgstr[1] ""
+"KTorrent a găsit %1 torente din versiunea KDE3, doriți să le importăm?"
+msgstr[2] ""
+"KTorrent a găsit %1 torente din versiunea KDE3, doriți să le importăm?"
+
+#: ktorrent/core.cpp:1381
+msgid "No torrents from the KDE3 version were found."
+msgstr "Niciun torent din versiunea KDE3 nu a fost găsit."
+
+#: ktorrent/core.cpp:1413 ktorrent/core.cpp:1432
+#, kde-format
+msgid "Invalid magnet bittorrent link: %1"
+msgstr ""
+
+#: ktorrent/core.cpp:1418 ktorrent/core.cpp:1437
+msgid ""
+"You are attempting to download a magnet link, and DHT is not enabled. For "
+"optimum results enable DHT."
+msgstr ""
 
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"
