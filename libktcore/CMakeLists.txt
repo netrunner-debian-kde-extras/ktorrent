@@ -7,7 +7,6 @@ set(libktorrent_SRC
 	util/mmapfile.cpp
 	util/itemselectionmodel.cpp
 	util/stringcompletionmodel.cpp
-	util/hintlineedit.cpp
 	util/treefiltermodel.cpp
 	
 	interfaces/functions.cpp
@@ -58,6 +57,6 @@ kde4_add_kcfg_files(libktorrent_SRC settings.kcfgc)
 kde4_add_library(ktcore SHARED ${libktorrent_SRC})
 
 target_link_libraries(ktcore ${QT_QT3SUPPORT_LIBRARY} ${KDE4_KPARTS_LIBS} ${KDE4_KUTILS_LIBS} ${LIBKTORRENT_LIBRARIES} ${KDE4_SOLID_LIBS} ${GMP_LIBRARIES})
-set_target_properties(ktcore PROPERTIES VERSION 12.0.2 SOVERSION 12 )
+set_target_properties(ktcore PROPERTIES VERSION 13.0.0 SOVERSION 13 )
 install(TARGETS ktcore  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 

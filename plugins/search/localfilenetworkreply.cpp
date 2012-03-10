@@ -57,11 +57,8 @@ namespace kt
 
 	void LocalFileNetworkReply::abort()
 	{
-		if (fptr)
-		{
-			delete fptr;
-			fptr = 0;
-		}
+		delete fptr;
+		fptr = 0;
 	}
 
 	qint64 LocalFileNetworkReply::readData(char* data, qint64 maxlen)
@@ -76,7 +73,7 @@ namespace kt
 
 	qint64 LocalFileNetworkReply::bytesAvailable() const
 	{
-		return fptr ? fptr->bytesAvailable() : 0;
+		return fptr ? fptr->size() : 0;
 	}
 }
 

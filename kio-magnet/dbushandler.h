@@ -26,6 +26,7 @@
 
 #include <QObject>
 #include <QtCore/QMutex>
+#include <QtCore/QWaitCondition>
 #include <QtDBus/QDBusConnection>
 
 class KProcess;;
@@ -40,7 +41,7 @@ public:
     DBusHandler( MagnetProtocol* );
     ~DBusHandler();
     void init();
-    void load(const KUrl&);
+    bool load(const KUrl&);
     bool seek(qint64 pos);
     qlonglong fileSize(qint32 idx);
 
@@ -65,13 +66,13 @@ private:
     KProcess* m_process;
     QDBusConnection* m_bus;
     KUrl m_url;
-    QMutex m_mutex;
+    QWaitCondition m_initWaiter;
     QThread* m_thread;
     MagnetProtocol* m_slave;
     QString m_tor, m_path;
     QStringList m_files;
     int m_file, m_passedTime;
-    bool m_loadInProgress;
+    bool m_init;
 };
 
 #endif // DBUSHANDLER_H

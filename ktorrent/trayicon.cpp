@@ -103,6 +103,7 @@ namespace kt
 			return;
 		
 		status_notifier_item = new KStatusNotifierItem(mwnd);
+		connect(status_notifier_item, SIGNAL(secondaryActivateRequested(QPoint)), this, SLOT(secondaryActivate(QPoint)));
 		
 		menu = status_notifier_item->contextMenu();
 	
@@ -130,7 +131,7 @@ namespace kt
 		
 		status_notifier_item->setIconByName("ktorrent");
 		status_notifier_item->setCategory(KStatusNotifierItem::ApplicationStatus);
-		status_notifier_item->setStatus(KStatusNotifierItem::Active);
+		status_notifier_item->setStatus(KStatusNotifierItem::Passive);
 		status_notifier_item->setStandardActionsEnabled(true);
 		status_notifier_item->setContextMenu(menu);
 		if (queue_suspended)
@@ -143,6 +144,8 @@ namespace kt
 		if (!status_notifier_item)
 			return;
 		
+		status_notifier_item->setStatus(core->getQueueManager()->getNumRunning(QueueManager::DOWNLOADS) > 0 ?
+						KStatusNotifierItem::Active : KStatusNotifierItem::Passive);
 		QString tip = i18n("<table>"
 				"<tr><td>Download&nbsp;speed:</td><td><b>%1</b></td></tr>"
 				"<tr><td>Upload&nbsp;speed:</td><td><b>%2</b></td></tr>"
@@ -440,6 +443,12 @@ namespace kt
 			if (status_notifier_item)
 				status_notifier_item->setOverlayIconByName("kt-pause");
 		}
+	}
+
+	void TrayIcon::secondaryActivate(const QPoint& pos)
+	{
+		Q_UNUSED(pos);
+		core->setSuspendedState(!core->getSuspendedState());
 	}
 
 }

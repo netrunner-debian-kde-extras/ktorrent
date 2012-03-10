@@ -1,3 +1,57 @@
+Changes in 4.2:
+- Add new group switcher combobox in toolbar (290888)
+- Make kio-magnet optional
+- Improve handing magnet uris in search plugin
+- Fix bug causing kio-magnet to deselect all files
+- Close current scan widget when a new one is started for a torrent (292001)
+- Fix syndication plugin not handling relative urls properly
+- Fix magnet uri's not being handled properly in load torrent feature of webinterface
+
+Changes in 4.2rc1:
+- Make it possible to check individual files of a torrent
+- Data checks for multiple torrents can now get started at the same time (265611)
+- Make links clickable in the status tab comments field (266089)
+- Revamp UPnP plugin (266397)
+- Fix bug making it possible to add conflicting items to the schedule (268879)
+- Make it possible for schedule items to span multiple days (225939)
+- Include disk usage of existing files when calculating bytes left after download in FileSelectDlg (267220)
+- Disable scripts in GUI, if no interpreter could be found for the script (270226)
+- Show shutdown plugin's config dialog when no rules are present and the enable button is pressed (271311)
+- Make it possible to wait for several events before activating the shutdown action
+- Fix wrong required diskspace calculation in some rare circumstances (271097)
+- Revamp scanfolder plugin (263813, 271657)
+- Revamp GUI of mediaplayer plugin
+- Make properties extender a dialog (274356)
+- Fix bug causing scripts not to be selectable in scripting plugin
+- Show info hash in status tab
+- Improve video streaming support
+- Add Open With option to FileView context menu (279386)
+- Fix bug causing views to not get properly restored when the application language changes (279588)
+- Check if new trackers have a supported protocol
+- Remove usage of several deprecated KDE3 networking classes
+- Remove obsolete config options of datacheck during upload feature
+- Improve error display of syndication plugin errors (280814)
+- Remove multiple views support (281675)
+- Relabel Change Tracker button into Switch Tracker to avoid user confusion (282951)
+- Revamp IP filter widget (281245)
+- Fix scanfolder moving to loaded directory causing a flurry of popups about the torrent already being loaded (283508)
+- Only enable the infowidget plugin by default (278283)
+- Add force start option (213504)
+- Add torrent search bar for view (269279)
+- Make it possible to hide uploads, downloads and not queued torrents in the queue manager (253779, 251861, 210064)
+- Merge status and name column into one column and use icons to show the status (272160, 228564)
+- Highlight in bold and scroll to newly added torrents (145028)
+- Show torrent names in remove torrent and data confirmation dialog (284728)
+- Enable select new location button when all non excluded files are missing instead of when all files are missing
+- Hide chunkbar when download of stream is complete (259788)
+- Suspend/resume queue when middle clicking on tray icon (210027)
+- Use dbus to show ktorrent window from plasma applet (287309)
+- Fix crash due to dangling pointer (281196)
+- Always make already loaded message of a torrent a passive popup (288201)
+- Make torrent properties dialog modal (288448)
+- Allow i2p addresses as a custom ip in tracker announces
+- Fix bug causing homepage of search plugin not the render properly
+
 Changes in 4.1.3:
 - Fix statusbar hiding and showing not working (281674)
 - Fix missing items in tray menu (282304)

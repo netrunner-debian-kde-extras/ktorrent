@@ -385,10 +385,7 @@ namespace kt
 		catch (bt::Warning & warning)
 		{
 			bt::Out(SYS_GEN|LOG_NOTICE) << warning.toString() << endl;
-			if (!silently)
-				gui->infoMsg(warning.toString());
-			else
-				canNotLoadSilently(warning.toString());
+			canNotLoadSilently(warning.toString());
 		}
 		catch (bt::Error & err)
 		{
@@ -427,10 +424,7 @@ namespace kt
 		catch (bt::Warning & warning)
 		{
 			bt::Out(SYS_GEN|LOG_NOTICE) << warning.toString() << endl;
-			if (!silently)
-				gui->infoMsg(warning.toString());
-			else
-				canNotLoadSilently(warning.toString());
+			canNotLoadSilently(warning.toString());
 		}
 		catch (bt::Error & err)
 		{
@@ -729,7 +723,7 @@ namespace kt
 		catch (bt::Warning & warning)
 		{
 			bt::Out(SYS_GEN|LOG_NOTICE) << warning.toString() << endl;
-			gui->infoMsg(warning.toString());
+			canNotLoadSilently(warning.toString());
 			bt::Delete(tor_dir,true);
 		}
 	}
@@ -882,7 +876,7 @@ namespace kt
 	void Core::torrentFinished(bt::TorrentInterface* tc)
 	{
 		if (!keep_seeding)
-			tc->stop(false);
+			tc->stop();
 
 		finished(tc);
 		qman->torrentFinished(tc);
@@ -1333,7 +1327,7 @@ namespace kt
 
 	void Core::doDataCheck(bt::TorrentInterface* tc, bool auto_import)
 	{
-		tc->startDataCheck(auto_import);
+		tc->startDataCheck(auto_import, 0, tc->getStats().total_chunks);
 	}
 
 

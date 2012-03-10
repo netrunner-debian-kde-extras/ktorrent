@@ -1,7 +1,6 @@
 /***************************************************************************
- *   Copyright (C) 2007 by Joris Guisson and Ivan Vasic                    *
+ *   Copyright (C) 2011 by Joris Guisson                                   *
  *   joris.guisson@gmail.com                                               *
- *   ivasic@gmail.com                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -18,50 +17,38 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
-#ifndef KTADDITEMDLG_H
-#define KTADDITEMDLG_H
 
-#include <KDialog>
-#include "ui_additemdlg.h"
+
+#ifndef KT_VIEWJOBTRACKER_H
+#define KT_VIEWJOBTRACKER_H
+
+#include <torrent/jobtracker.h>
+
 
 namespace kt
 {
-	struct ScheduleItem;
-	class WeekDayModel;
-	class Schedule;
-	
 
+	class ScanExtender;
+	class View;
 
 	/**
-		@author
-	*/
-	class AddItemDlg : public KDialog, public Ui_AddItemDlg
+		JobTracker for the View
+	 */
+	class ViewJobTracker : public kt::JobTracker
 	{
 		Q_OBJECT
-	public:	
-		AddItemDlg(Schedule* schedule,QWidget* parent);
-		virtual ~AddItemDlg();
-		
-		virtual void accept();
-		
-		QList<ScheduleItem*> getAddedItems() const {return added_items;}
+	public:
+		ViewJobTracker(View* parent);
+		virtual ~ViewJobTracker();
 
-	private slots:
-		void fromChanged(const QTime & time);
-		void toChanged(const QTime & time);
-		void selectEntireWeek();
-		void selectWeekDays();
-		void selectWeekend();
-		void suspendedChanged(bool on);
-		void screensaverLimitsToggled(bool on);
-		void dayClicked(const QModelIndex & idx);
+		virtual void jobUnregistered(bt::Job* j);
+		virtual void jobRegistered(bt::Job* j);
+		virtual kt::JobProgressWidget* createJobWidget(bt::Job* job);
 		
 	private:
-		WeekDayModel* model;
-		Schedule* schedule;
-		QList<ScheduleItem*> added_items;
+		View* view;
 	};
 
 }
 
-#endif
+#endif // KT_VIEWJOBTRACKER_H

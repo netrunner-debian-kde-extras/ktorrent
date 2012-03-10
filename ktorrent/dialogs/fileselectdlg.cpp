@@ -47,7 +47,12 @@ namespace kt
 {
 
 	FileSelectDlg::FileSelectDlg(kt::QueueManager* qman,kt::GroupManager* gman,const QString & group_hint,QWidget* parent) 
-		: KDialog(parent),qman(qman),gman(gman),initial_group(0),show_file_tree(true)
+		: KDialog(parent),
+		qman(qman),
+		gman(gman),
+		initial_group(0),
+		show_file_tree(true),
+		already_downloaded(0)
 	{
 		setupUi(mainWidget());
 		m_file_view->setAlternatingRowColors(true);
@@ -93,7 +98,7 @@ namespace kt
 		bg->setExclusive(true);
 		
 		m_filter->setClearButtonShown(true);
-		m_filter->setHintText(i18n("Filter"));
+		m_filter->setClickMessage(i18n("Filter"));
 		connect(m_filter,SIGNAL(textChanged(QString)),this,SLOT(setFilter(QString)));
 
 		if (Settings::useCompletedDir())
@@ -137,15 +142,13 @@ namespace kt
 			model->setFileNamesEditable(true);
 			
 			connect(model,SIGNAL(checkStateChanged()),this,SLOT(updateSizeLabels()));
-			connect(m_downloadLocation,SIGNAL(textChanged(QString)),this,SLOT(updateSizeLabels()));
-			connect(m_downloadLocation,SIGNAL(textChanged(QString)),this,SLOT(updateExistingFiles()));
+			connect(m_downloadLocation,SIGNAL(textChanged(QString)),this,SLOT(downloadLocationChanged(QString)));
 			filter_model->setSourceModel(model);
 			filter_model->setSortRole(Qt::UserRole);
 			m_file_view->setSortingEnabled(true);
 			m_file_view->expandAll();
 			
 			updateSizeLabels();
-			updateExistingFiles();
 			
 			if (!tc->getStats().multi_file_torrent)
 			{
@@ -419,7 +422,7 @@ namespace kt
 
 	void FileSelectDlg::loadGroups()
 	{
-		GroupManager::iterator it = gman->begin();
+		GroupManager::Itr it = gman->begin();
 		
 		QStringList grps;
 		
@@ -432,10 +435,13 @@ namespace kt
 		while(it != gman->end())
 		{
 			grps << it->first;		
-			if (it->second == initial_group)
-				selected = cnt + 1;
+			if (!it->second->isStandardGroup())
+			{
+				if (it->second == initial_group)
+					selected = cnt + 1;
+				cnt++;	
+			}
 			++it;
-			cnt++;
 		}
 		
 		m_cmbGroups->addItems(grps);
@@ -485,8 +491,10 @@ namespace kt
 		if (!model)
 			return;
 		
+		updateExistingFiles();
+		
 		//calculate free disk space
-		KUrl sdir = KUrl(m_downloadLocation -> url());
+		KUrl sdir = KUrl(m_downloadLocation->url());
 		while( sdir.isValid() && sdir.isLocalFile() && (!sdir.isEmpty())  && (! QDir(sdir.toLocalFile()).exists()) ) 
 		{
 			sdir = sdir.upUrl();
@@ -504,8 +512,15 @@ namespace kt
 			Uint64 bytes_to_download = model->bytesToDownload();
 	
 			lblFree->setText(bt::BytesToString(bytes_free));
-			lblRequired->setText(bt::BytesToString(bytes_to_download));
+			if (already_downloaded > 0)
+				lblRequired->setText(
+					i18n("%1 (%2 in use by existing files)", 
+						 bt::BytesToString(bytes_to_download), 
+						 bt::BytesToString(already_downloaded)));
+			else
+				lblRequired->setText(bt::BytesToString(bytes_to_download));
 
+			bytes_to_download -= already_downloaded;
 			if (bytes_to_download > bytes_free)
 				lblStatus->setText(
 						"<font color=\"#ff0000\">" + i18nc("We are %1 bytes short of what we need", "%1 short", 
@@ -519,13 +534,24 @@ namespace kt
 	{
 		if (tc->getStats().multi_file_torrent)
 		{
+			already_downloaded = 0;
 			bt::Uint32 found = 0;
 			QString path = m_downloadLocation->url().path(KUrl::AddTrailingSlash) + tc->getDisplayName() + '/';
 			for (bt::Uint32 i = 0;i < tc->getNumFiles();i++)
 			{
 				const bt::TorrentFileInterface & file = tc->getTorrentFile(i);
-				if (bt::Exists(path + file.getPath()))
+				if (bt::Exists(path + file.getUserModifiedPath()))
+				{
 					found++;
+					if (!file.doNotDownload()) // Do not include excluded files in the already downloaded calculation
+					{
+						bt::Uint64 size = bt::DiskUsage(path + file.getUserModifiedPath());
+						if (size <= file.getSize())
+							already_downloaded += file.getSize() - size;
+						else
+							already_downloaded += file.getSize();
+					}
+				}
 			}
 			
 			if (found == 0)
@@ -539,11 +565,23 @@ namespace kt
 		{
 			QString path = m_downloadLocation->url().path(KUrl::AddTrailingSlash) + tc->getDisplayName();
 			if (!bt::Exists(path))
+			{
 				m_existing_found->setText(i18n("Existing file: <b>No</b>"));
+			}
 			else
+			{
+				already_downloaded = bt::DiskUsage(path);
 				m_existing_found->setText(i18n("Existing file: <b>Yes</b>"));
+			}
 		}
 	}
+	
+	void FileSelectDlg::downloadLocationChanged(const QString& path)
+	{
+		Q_UNUSED(path);
+		updateSizeLabels();
+	}
+
 	
 	void FileSelectDlg::onCodecChanged(const QString & text)
 	{
@@ -686,8 +724,7 @@ namespace kt
 	void FileSelectDlg::setFilter(const QString & f)
 	{
 		Q_UNUSED(f);
-		// use typedText so we don't filter on the hint
-		filter_model->setFilterFixedString(m_filter->typedText());
+		filter_model->setFilterFixedString(m_filter->text());
 	}
 
 	void FileSelectDlg::moveCompletedToggled(bool on)

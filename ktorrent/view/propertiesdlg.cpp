@@ -19,16 +19,20 @@
  ***************************************************************************/
 
 
-#include "propertiesextender.h"
+#include "propertiesdlg.h"
 #include <KUrl>
 #include <interfaces/torrentinterface.h>
 #include <settings.h>
 
 namespace kt
 {
-	PropertiesExtender::PropertiesExtender(bt::TorrentInterface* tc, QWidget* parent): Extender(tc,parent)
+	PropertiesDlg::PropertiesDlg(bt::TorrentInterface* tc, QWidget* parent)
+		: KDialog(parent),
+		tc(tc)
 	{
-		setupUi(this);
+		setupUi(mainWidget());
+		setWindowTitle(i18n("Torrent Settings"));
+		
 		KUrl url = tc->getMoveWhenCompletedDir();
 		if (url.isValid())
 		{
@@ -51,36 +55,18 @@ namespace kt
 		
 		superseeding->setChecked(s.superseeding);
 		connect(move_on_completion_enabled,SIGNAL(toggled(bool)),this,SLOT(moveOnCompletionEnabled(bool)));
-		connect(buttons,SIGNAL(clicked(QAbstractButton*)),this,SLOT(buttonClicked(QAbstractButton*)));
 	}
 
-	PropertiesExtender::~PropertiesExtender()
+	PropertiesDlg::~PropertiesDlg()
 	{
 	}
 
-	void PropertiesExtender::moveOnCompletionEnabled(bool on)
+	void PropertiesDlg::moveOnCompletionEnabled(bool on)
 	{
 		move_on_completion_url->setEnabled(on);
 	}
 	
-	void PropertiesExtender::buttonClicked(QAbstractButton* btn)
-	{
-		if (btn == buttons->button(QDialogButtonBox::Apply))
-		{
-			apply();
-		}
-		else if (btn == buttons->button(QDialogButtonBox::Ok))
-		{
-			apply();
-			closeRequest(this);
-		}
-		else if (btn == buttons->button(QDialogButtonBox::Cancel))
-		{
-			closeRequest(this);
-		}
-	}
-	
-	void PropertiesExtender::apply()
+	void PropertiesDlg::accept()
 	{
 		if (move_on_completion_enabled->isChecked())
 		{
@@ -94,6 +80,7 @@ namespace kt
 		tc->setFeatureEnabled(bt::DHT_FEATURE,dht->isChecked());
 		tc->setFeatureEnabled(bt::UT_PEX_FEATURE,pex->isChecked());
 		tc->setSuperSeeding(superseeding->isChecked());
+		QDialog::accept();
 	}
 
 
