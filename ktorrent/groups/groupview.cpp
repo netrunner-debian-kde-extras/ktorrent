@@ -35,7 +35,6 @@
 #include <groups/group.h>
 #include <groups/groupmanager.h>
 #include <groups/torrentgroup.h>
-#include "view/viewmanager.h"
 #include "view/view.h"
 #include "groupview.h"
 #include "grouppolicydlg.h"
@@ -86,7 +85,7 @@ namespace kt
 		setIcon(0,g->groupIcon());
 	}
 
-	GroupView::GroupView(GroupManager* gman,ViewManager* view,GUI* gui,QWidget* parent)
+	GroupView::GroupView(GroupManager* gman,View* view,GUI* gui,QWidget* parent)
 	: QTreeWidget(parent),gui(gui),view(view),custom_root(0),gman(gman)
 	{
 		setColumnCount(1);
@@ -101,17 +100,16 @@ namespace kt
 		connect(this,SIGNAL(itemChanged(QTreeWidgetItem*,int)),this,SLOT(onItemChanged(QTreeWidgetItem*,int)));
 		connect(this,SIGNAL(currentGroupChanged(kt::Group*)),view,SLOT(onCurrentGroupChanged(kt::Group*)));
 		connect(this,SIGNAL(groupRenamed(kt::Group*)),view,SLOT(onGroupRenamed(kt::Group*)));
-		connect(gman,SIGNAL(customGroupRemoved(Group*)),this,SLOT(customGroupRemoved(Group*)));
-		connect(gman,SIGNAL(customGroupAdded(Group*)),this,SLOT(customGroupAdded(Group*)));
-		connect(gman,SIGNAL(defaultGroupRemoved(Group*)),this,SLOT(defaultGroupRemoved(Group*)));
-		connect(gman,SIGNAL(defaultGroupAdded(Group*)),this,SLOT(defaultGroupAdded(Group*)));
+		connect(gman,SIGNAL(groupRemoved(Group*)),this,SLOT(groupRemoved(Group*)));
+		connect(gman,SIGNAL(groupAdded(Group*)),this,SLOT(groupAdded(Group*)));
 
 		current_item = 0;
 		
-		for (GroupManager::DefGroupItr i = gman->beginDefaults();i != gman->endDefaults();i++)
+		for (GroupManager::Itr i = gman->begin();i != gman->end();i++)
 		{
-			Group* g = *i;
-			add(0,g->groupPath(),g);
+			Group* g = i->second;
+			if (g->isStandardGroup())
+				add(0, g->groupPath(), g);
 		}
 		
 		custom_root = add(0,"/all/custom",0);
@@ -119,10 +117,14 @@ namespace kt
 		custom_root->setIcon(0,SmallIcon("folder"));
 		custom_root->setExpanded(true);
 		
-		for (GroupManager::iterator i = gman->begin();i != gman->end();i++)
+		for (GroupManager::Itr i = gman->begin();i != gman->end();i++)
 		{
-			GroupViewItem* gvi = addGroup(i->second,custom_root,i->second->groupName());
-			gvi->setFlags(gvi->flags() | Qt::ItemIsEditable | Qt::ItemIsDropEnabled);
+			Group* g = i->second;
+			if (!g->isStandardGroup())
+			{
+				GroupViewItem* gvi = addGroup(g, custom_root, g->groupName());
+				gvi->setFlags(gvi->flags() | Qt::ItemIsEditable | Qt::ItemIsDropEnabled);
+			}
 		}
 
 		setAcceptDrops(true);
@@ -149,10 +151,6 @@ namespace kt
 		connect(remove_group,SIGNAL(triggered()),this,SLOT(removeGroup()));
 		col->addAction("remove_group",remove_group);
 		
-		open_in_new_tab = new KAction(KIcon("tab-new"),i18n("Open Tab"),this);
-		connect(open_in_new_tab,SIGNAL(triggered()),this,SLOT(openView()));
-		col->addAction("open_tab",open_in_new_tab);
-		
 		edit_group_policy = new KAction(KIcon("preferences-other"),i18n("Group Policy"),this);
 		connect(edit_group_policy,SIGNAL(triggered()),this,SLOT(editGroupPolicy()));
 		col->addAction("edit_group_policy",edit_group_policy);
@@ -161,6 +159,7 @@ namespace kt
 	GroupViewItem* GroupView::add(QTreeWidgetItem* parent,const QString & path,Group* g)
 	{
 		// if path looks like /foo we are at a leaf of the tree
+		Out(SYS_GEN|LOG_DEBUG) << "Adding " << path << endl;
 		if (path.count('/') == 1)
 		{
 			QString name = path.mid(1);
@@ -402,9 +401,6 @@ namespace kt
 			edit_group_policy->setEnabled(true);
 		}
 		
-		open_in_new_tab->setEnabled(g != 0);
-		
-
 		KMenu* menu = gui->getTorrentActivity()->part()->menu("GroupsMenu");
 		if (menu)
 			menu->popup(viewport()->mapToGlobal(p));
@@ -499,16 +495,6 @@ namespace kt
 		return Qt::CopyAction;
 	}
 
-	void GroupView::openView()
-	{
-		if (!current_item)
-			return;
-		
-		Group* g = current_item->group();
-		if (g)
-			openNewTab(g);
-	}
-	
 	void GroupView::editGroupPolicy()
 	{
 		if (!current_item)
@@ -554,32 +540,16 @@ namespace kt
 		setVisible(g.readEntry("visible",true));
 	}
 	
-	void GroupView::defaultGroupAdded(Group* g)
+	void GroupView::groupAdded(Group* g)
 	{
 		add(0,g->groupPath(),g);
+		if (!g->isStandardGroup())
+			view->onGroupAdded(g);
 	}
 	
 	
 	
-	void GroupView::defaultGroupRemoved(Group* g)
-	{
-		if (g == current)
-		{
-			current = gman->allGroup();
-			currentGroupChanged(current);
-		}
-		
-		view->onGroupRemoved(g);
-		remove(0,g->groupPath(),g);
-	}
-
-	void GroupView::customGroupAdded(Group* g)
-	{
-		add(0,g->groupPath(),g);
-		view->onGroupAdded(g);
-	}
-	
-	void GroupView::customGroupRemoved(Group* g)
+	void GroupView::groupRemoved(Group* g)
 	{
 		if (g == current)
 		{

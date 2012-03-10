@@ -193,8 +193,7 @@ namespace kt
 		if (ti->getStats().priv_torrent)
 			return false;
 		
-		ti->getTrackersList()->addTracker(KUrl(tracker_url),true);
-		return true;
+		return ti->getTrackersList()->addTracker(KUrl(tracker_url),true) != 0;
 	}
 	
 	bool DBusTorrent::removeTracker(const QString & tracker_url)
@@ -480,8 +479,7 @@ namespace kt
 	
 	bool DBusTorrent::createStream(uint file_index)
 	{
-		if (stream)
-			delete stream;
+		delete stream;
 		
 		stream = new DBusTorrentFileStream(file_index,this);
 		if (!stream->ok())
@@ -497,11 +495,8 @@ namespace kt
 	// streaming only works for one file at once atm, so the index has no effect yet
 	bool DBusTorrent::removeStream(uint file_index) 
 	{
-		if (stream) 
-		{
-			delete stream;
-			stream = 0;
-		}
+		delete stream;
+		stream = 0;
 		return true;
 	}
 

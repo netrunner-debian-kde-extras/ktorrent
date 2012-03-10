@@ -22,6 +22,7 @@
 #include <kio/slavebase.h>
 
 #include <QtCore/QMutex>
+#include <QtCore/QWaitCondition>
 
 class KUrl;
 class DBusHandler;
@@ -50,7 +51,8 @@ public:
 private:
     virtual void load( const KUrl& url );
     virtual bool isDir( const KUrl& url );
-    QMutex m_mutex;
+    QMutex m_loadMutex;
+    QWaitCondition m_loadWaiter;
     KUrl m_url;
     DBusHandler* m_dbusHandler;
     bool m_downloaded;

@@ -22,22 +22,22 @@
 
 #include <QTreeView>
 #include <util/constants.h>
+#include <interfaces/torrentinterface.h>
 #include <ksharedconfig.h>
 
+class KLineEdit;
 class KMenu;
 class QSortFilterProxyModel;
 class QToolBar;
 
 namespace bt
 {
-	class TorrentInterface;
 	class TorrentFileInterface;
 }
 
 namespace kt
 {
 	class TorrentFileModel;
-	class HintLineEdit;
 
 	/**
 		@author Joris Guisson <joris.guisson@gmail.com>
@@ -73,6 +73,7 @@ namespace kt
 		
 	private slots:
 		void open();
+		void openWith();
 		void downloadFirst();
 		void downloadLast();
 		void downloadNormal();
@@ -84,13 +85,15 @@ namespace kt
 		void showTree();
 		void showList();
 		void setFilter(const QString& f);
+		void checkFile();
 
 	private:
-		bt::TorrentInterface* curr_tc;
+		bt::TorrentInterface::WPtr curr_tc;
 		TorrentFileModel* model;
 
 		KMenu* context_menu;
 		QAction* open_action;
+		QAction* open_with_action;
 		QAction* download_first_action;
 		QAction* download_normal_action;
 		QAction* download_last_action;
@@ -102,6 +105,7 @@ namespace kt
 		QAction* show_tree_action;
 		QAction* show_list_action;
 		QAction* show_filter_action;
+		QAction* check_data;
 
 		QString preview_path;
 		bool show_list_of_files;
@@ -110,7 +114,7 @@ namespace kt
 		
 		QTreeView* view;
 		QToolBar* toolbar;
-		HintLineEdit* filter;
+		KLineEdit* filter;
 	};
 
 }

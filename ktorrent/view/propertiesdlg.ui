@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>PropertiesExtender</class>
- <widget class="QWidget" name="PropertiesExtender">
+ <class>PropertiesDlg</class>
+ <widget class="QWidget" name="PropertiesDlg">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>145</height>
+    <height>130</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Properties</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="margin">
+    <number>0</number>
+   </property>
    <item>
     <widget class="QCheckBox" name="dht">
      <property name="toolTip">
@@ -51,33 +54,29 @@ p, li { white-space: pre-wrap; }
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QCheckBox" name="move_on_completion_enabled">
-       <property name="toolTip">
-        <string>Move the files of the torrent to a different directory when it has finished downloading.</string>
-       </property>
-       <property name="text">
-        <string>Move when completed to:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="KUrlRequester" name="move_on_completion_url">
-       <property name="toolTip">
-        <string>Location to move the files to.</string>
-       </property>
-       <property name="mode">
-        <set>KFile::Directory|KFile::ExistingOnly|KFile::LocalOnly</set>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <widget class="QCheckBox" name="move_on_completion_enabled">
+     <property name="toolTip">
+      <string>Move the files of the torrent to a different directory when it has finished downloading.</string>
+     </property>
+     <property name="text">
+      <string>Move when completed to:</string>
+     </property>
+    </widget>
    </item>
    <item>
-    <widget class="QDialogButtonBox" name="buttons">
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Apply|QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+    <widget class="KUrlRequester" name="move_on_completion_url">
+     <property name="toolTip">
+      <string>Location to move the files to.</string>
+     </property>
+     <property name="mode">
+      <set>KFile::Directory|KFile::ExistingOnly|KFile::LocalOnly</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>

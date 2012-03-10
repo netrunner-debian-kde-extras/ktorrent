@@ -22,11 +22,12 @@
 #define TORRENTACTIVITY_H
 
 #include <QSplitter>
-#include <KTabWidget>
 #include <interfaces/torrentactivityinterface.h>
+
 
 class KToggleAction;
 class KAction;
+class KComboBox;
 
 namespace kt
 {
@@ -34,12 +35,12 @@ namespace kt
 	class GUI;
 	class Core;
 	class View;
-	class ViewManager;
 	class GroupView;
 	class QueueManagerWidget;
 	class TabBarWidget;
 	class Group;
-	
+	class TorrentSearchBar;
+	class GroupModel;
 	
 	/**
 	 * Activity which manages torrents.
@@ -54,9 +55,6 @@ namespace kt
 		/// Get the group view
 		GroupView* getGroupView() {return group_view;}
 		
-		/// Set the tab properties of a view 
-		void setTabProperties(View* v,const QString & name,const QString & icon,const QString & tooltip);
-		
 		virtual void loadState(KSharedConfigPtr cfg);
 		virtual void saveState(KSharedConfigPtr cfg);
 		virtual const bt::TorrentInterface* getCurrentTorrent() const;
@@ -64,7 +62,7 @@ namespace kt
 		virtual void updateActions();
 		virtual void addToolWidget(QWidget* widget,const QString & text,const QString & icon,const QString & tooltip);
 		virtual void removeToolWidget(QWidget* widget);
-		virtual View* getCurrentView();
+		virtual Group* addNewGroup();
 		
 		/// Update the activity
 		void update();
@@ -73,25 +71,6 @@ namespace kt
 		void setupActions();
 		
 	public slots:
-		/**
-		* Open a view
-		* @param g The group to show in the view
-		* */
-		void openNewView(kt::Group* g);
-		
-		/**
-		* Open a view
-		* @param group_name Name of group to show in view
-		* @param starting_up Wether or not we are starting up (and thus are loading existing views)
-		*/
-		void openView(const QString & group_name,bool starting_up);
-		
-		/**
-		* Remove a View
-		* @param v The View to remove
-		* */
-		void removeView(View* v);
-		
 		/**
 		* Called by the ViewManager when the current torrent has changed
 		* @param tc The torrent 
@@ -111,32 +90,31 @@ namespace kt
 		
 		
 	private slots:
-		void newView();
-		void closeTab();
-		void currentTabPageChanged(int idx);
 		void startAllTorrents();
 		void stopAllTorrents();
 		void suspendQueue(bool suspend);
-		
-	private:
-		View* newView(kt::Group* g);
+		void groupActivated(int idx);
+		void currentGroupChanged(kt::Group* g);
 		
 	private:
 		Core* core;
 		GUI* gui;
-		KTabWidget* tabs;
-		ViewManager* view_man; 
+		View* view;
 		GroupView* group_view;
 		QueueManagerWidget* qm;
 		QSplitter* hsplit;
 		QSplitter* vsplit;
 		TabBarWidget* tool_views;
 		MagnetView* magnet_view;
+		TorrentSearchBar* search_bar;
+		KComboBox* view_switcher;
+		GroupModel* view_switcher_model;
 		
 		KAction* start_all_action;
 		KAction* stop_all_action;
 		KToggleAction* queue_suspend_action;
 		KAction* show_group_view_action;
+		KAction* filter_torrent_action;
 	};
 }
 

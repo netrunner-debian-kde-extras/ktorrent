@@ -58,11 +58,11 @@ namespace kt
 		 */
 		bool update(ViewDelegate* delegate,bool force_resort = false);
 		
-		/// Is a column a default column for an upload view
-		bool defaultColumnForUpload(int column);
-		
-		/// Is a column a default column for a download view
-		bool defaultColumnForDownload(int column);
+		/**
+		 * Set the current filter string
+		 * @param filter The filter string
+		 */
+		void setFilterString(const QString & filter);
 		
 		virtual int rowCount(const QModelIndex & parent = QModelIndex()) const;
 		virtual int columnCount(const QModelIndex & parent = QModelIndex()) const;
@@ -127,7 +127,7 @@ namespace kt
 		{
 			foreach (Item* item,torrents)
 			{
-				if (item->member(group))
+				if (item->visible(group, filter_string))
 					if (!a(item->tc))
 						break;
 			}
@@ -148,7 +148,6 @@ namespace kt
 		enum Column
 		{
 			NAME = 0,
-			STATUS,
 			BYTES_DOWNLOADED,
 			TOTAL_BYTES_TO_DOWNLOAD,
 			BYTES_UPLOADED,
@@ -187,14 +186,16 @@ namespace kt
 			int eta;
 			bool hidden;
 			QDateTime time_added;
+			bool highlight;
 			
 			Item(bt::TorrentInterface* tc);
 
 			bool update(int row,int sort_column,QModelIndexList & to_update,ViewModel* model);
 			QVariant data(int col) const;
 			QVariant color(int col) const;
+			QVariant statusIcon() const;
 			bool lessThan(int col,const Item* other) const;
-			bool member(Group* group) const;
+			bool visible(Group* group, const QString & filter_string) const;
 		};
 			
 	private:
@@ -206,6 +207,7 @@ namespace kt
 		Group* group;
 		int num_visible;
 		QModelIndexList update_list;
+		QString filter_string;
 	};
 
 }

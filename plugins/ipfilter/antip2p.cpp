@@ -50,15 +50,6 @@ namespace kt
 		return ret;
 	}
 	
-	static QString StringFromUint32(Uint32 ip)
-	{
-		return QString("%1.%2.%3.%4")
-				.arg((ip & 0xFF000000) >> 24)
-				.arg((ip & 0x00FF0000) >> 16)
-				.arg((ip & 0x0000FF00) >> 8)
-				.arg((ip & 0x000000FF));
-	}
-	
 	IPBlock::IPBlock() : ip1(0),ip2(0)
 	{}
 	
@@ -84,27 +75,18 @@ namespace kt
 		Out(SYS_IPF|LOG_ALL) << "Anti-P2P filter unloaded." << endl;
 	}
 	
-	bool AntiP2P::isBlockedIP(const net::Address & addr)
-	{
-		if (addr.ipVersion() != 4)
-			return false;
-		
-		return isBlockedIP(ntohl(addr.ipAddress().IPv4Addr()));
-	}
-	
-	bool AntiP2P::isBlockedIP(const QString & addr)
-	{
-		return isBlockedIP(StringToUint32(addr));
-	}
-	
-	bool AntiP2P::isBlockedIP(Uint32 ip)
+	bool AntiP2P::blocked(const net::Address& addr) const
 	{
 		if (!header_loaded)
 		{
 			Out(SYS_IPF|LOG_IMPORTANT) << "Tried to check if IP was blocked, but no AntiP2P header was loaded." << endl;
 			return false;
 		}
-
+		
+		if (addr.protocol() == QAbstractSocket::IPv6Protocol)
+			return false;
+		
+		quint32 ip = addr.toIPv4Address();
 		int in_header = searchHeader(ip, 0, blocks.count());
 		switch (in_header)
 		{
@@ -178,7 +160,7 @@ namespace kt
 		return file != 0;
 	}
 	
-	int AntiP2P::searchHeader(Uint32& ip, int start, int end)
+	int AntiP2P::searchHeader(Uint32& ip, int start, int end) const
 	{
 		if (end == 0)
 			return -1; //empty list
@@ -207,7 +189,7 @@ namespace kt
 	
 	
 	
-	bool AntiP2P::searchFile(IPBlock* file_blocks, Uint32& ip, int start, int end)
+	bool AntiP2P::searchFile(IPBlock* file_blocks, Uint32& ip, int start, int end) const
 	{
 		if (end == 0)
 			return false; //empty list, so not found

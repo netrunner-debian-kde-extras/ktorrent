@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2010 by Joris Guisson                                   *
+ *   Copyright (C) 2011 by Joris Guisson                                   *
  *   joris.guisson@gmail.com                                               *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,40 +18,42 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef KT_PROPERTIESEXTENDER_H
-#define KT_PROPERTIESEXTENDER_H
+
+#ifndef KT_TORRENTSEARCHBAR_H
+#define KT_TORRENTSEARCHBAR_H
 
 #include <QWidget>
-#include <view/viewdelegate.h>
-#include <gui/extender.h>
-#include "ui_propertiesextender.h"
+#include <KSharedConfig>
+#include <QToolButton>
+#include <KLineEdit>
 
-
-namespace bt
+namespace kt
 {
-	class TorrentInterface;
-}
+	class View;
 
-namespace kt 
-{
 	/**
-		Extender which shows properties about a torrent.
-	*/
-	class PropertiesExtender : public Extender,public Ui_PropertiesExtender
+	 * Search bar widget for torrents.
+	 */
+	class TorrentSearchBar : public QWidget
 	{
 		Q_OBJECT
 	public:
-		PropertiesExtender(bt::TorrentInterface* tc,QWidget* parent);
-		virtual ~PropertiesExtender();
-		
-	public slots:
-		void moveOnCompletionEnabled(bool on);
-		void buttonClicked(QAbstractButton*);
-		
-	private:
-		void apply();
-	};
+		TorrentSearchBar(View* view, QWidget* parent);
+		virtual ~TorrentSearchBar();
 
+		void loadState(KSharedConfigPtr cfg);
+		void saveState(KSharedConfigPtr cfg);
+
+	public slots:
+		void showBar();
+
+	protected:
+		virtual bool eventFilter(QObject* obj, QEvent* ev);
+
+	private:
+		QToolButton* hide_search_bar;
+		KLineEdit* search_bar;
+	};
 }
 
-#endif // KT_PROPERTIESEXTENDER_H
+#endif // KT_TORRENTSEARCHBAR_H

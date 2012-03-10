@@ -49,7 +49,6 @@ namespace kt
 		LogSystemManager::instance().registerSystem(i18n("Media Player"),SYS_MPL);
 		CoreInterface* core = getCore();
 		act = new MediaPlayerActivity(core,actionCollection(),0);
-		act->setupActions();
 		getGUI()->addActivity(act);
 		setXMLFile("ktmediaplayerpluginui.rc");
 		act->enableActions(0);
