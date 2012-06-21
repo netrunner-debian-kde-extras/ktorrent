@@ -2,14 +2,13 @@
 # This file is distributed under the same license as the ktorrent package.
 #
 # Tommi Nieminen <translator@legisign.org>, 2010.
-# Lasse Liehu <lliehu@kolumbus.fi>, 2011.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-02-01 11:49+0100\n"
-"PO-Revision-Date: 2012-03-03 13:52+0200\n"
+"POT-Creation-Date: 2012-04-10 17:33+0200\n"
+"PO-Revision-Date: 2012-04-20 07:47+0300\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -17,7 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.4\n"
 
 #: ktmagnetdownloader/magnetdownloader.cpp:44
 msgid "KTMagnetDownloader"
@@ -452,7 +450,7 @@ msgid "Open an URL"
 msgstr "Avaa verkko-osoite"
 
 #: ktorrent/dialogs/pastedialog.cpp:106
-#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:337
+#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:339
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "Kelvoton URL: %1"
@@ -584,7 +582,7 @@ msgstr "BitTorrent"
 msgid "Magnet Link"
 msgstr "Magnet-linkki"
 
-#: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:194
+#: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:197
 #: ktorrent/trayicon.cpp:160 plugins/infowidget/trackermodel.cpp:148
 #: plugins/infowidget/webseedsmodel.cpp:127
 msgid "Status"
@@ -627,51 +625,6 @@ msgstr "Pysäytä Magnet"
 #: ktorrent/tools/magnetview.cpp:45
 msgid "Remove Magnet"
 msgstr "Poista Magnet"
-
-#: ktorrent/tools/queuemanagermodel.cpp:190
-msgid "Order"
-msgstr "Järjestys"
-
-#: ktorrent/tools/queuemanagermodel.cpp:192 ktorrent/view/viewmodel.cpp:489
-msgid "Name"
-msgstr "Nimi"
-
-#: ktorrent/tools/queuemanagermodel.cpp:196
-msgid "Time Stalled"
-msgstr "Pysähdysaika"
-
-#: ktorrent/tools/queuemanagermodel.cpp:198
-#: plugins/infowidget/iwfilelistmodel.cpp:77
-#: plugins/infowidget/iwfiletreemodel.cpp:89
-msgid "Priority"
-msgstr "Etusija"
-
-#: ktorrent/tools/queuemanagermodel.cpp:233
-msgid "Running"
-msgstr "Ajossa"
-
-#: ktorrent/tools/queuemanagermodel.cpp:235
-msgid "Queued"
-msgstr "Jonossa"
-
-#: ktorrent/tools/queuemanagermodel.cpp:237
-msgid "Not queued"
-msgstr "Ei jonossa"
-
-#: ktorrent/tools/queuemanagermodel.cpp:246
-#, kde-format
-msgid "%1"
-msgstr "%1"
-
-#: ktorrent/tools/queuemanagermodel.cpp:259
-msgid ""
-"Order of a torrent in the queue.\n"
-"Use drag and drop or the move up and down buttons on the right to change the "
-"order."
-msgstr ""
-"Torrentin järjestys jonossa.\n"
-"Vedä ja pudota tai käytä oikealla olevia Ylemmäs- ja Alemmas-painikkeita "
-"muuttaaksesi järjestystä."
 
 #: ktorrent/tools/queuemanagerwidget.cpp:57
 #: plugins/search/searchactivity.cpp:81 plugins/search/searchtoolbar.cpp:70
@@ -758,6 +711,51 @@ msgstr "Näytä torrentit, jotka eivät ole jonossa"
 #: ktorrent/tools/queuemanagerwidget.cpp:94
 msgid "Show all not queued torrents"
 msgstr "Näytä kaikki torrentit, jotka eivät ole jonossa"
+
+#: ktorrent/tools/queuemanagermodel.cpp:193
+msgid "Order"
+msgstr "Järjestys"
+
+#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:489
+msgid "Name"
+msgstr "Nimi"
+
+#: ktorrent/tools/queuemanagermodel.cpp:199
+msgid "Time Stalled"
+msgstr "Pysähdysaika"
+
+#: ktorrent/tools/queuemanagermodel.cpp:201
+#: plugins/infowidget/iwfilelistmodel.cpp:77
+#: plugins/infowidget/iwfiletreemodel.cpp:89
+msgid "Priority"
+msgstr "Etusija"
+
+#: ktorrent/tools/queuemanagermodel.cpp:236
+msgid "Running"
+msgstr "Ajossa"
+
+#: ktorrent/tools/queuemanagermodel.cpp:238
+msgid "Queued"
+msgstr "Jonossa"
+
+#: ktorrent/tools/queuemanagermodel.cpp:240
+msgid "Not queued"
+msgstr "Ei jonossa"
+
+#: ktorrent/tools/queuemanagermodel.cpp:249
+#, kde-format
+msgid "%1"
+msgstr "%1"
+
+#: ktorrent/tools/queuemanagermodel.cpp:262
+msgid ""
+"Order of a torrent in the queue.\n"
+"Use drag and drop or the move up and down buttons on the right to change the "
+"order."
+msgstr ""
+"Torrentin järjestys jonossa.\n"
+"Vedä ja pudota tai käytä oikealla olevia Ylemmäs- ja Alemmas-painikkeita "
+"muuttaaksesi järjestystä."
 
 #: ktorrent/view/propertiesdlg.cpp:34
 msgid "Torrent Settings"
@@ -995,7 +993,7 @@ msgstr "Pysäyttää kaikki nykyisen välilehden torrentit"
 
 #: ktorrent/view/view.cpp:173
 msgid "Remove Torrent and Data"
-msgstr "Poista torrentti datoineen"
+msgstr "Poista torrentti ja tiedostot"
 
 #: ktorrent/view/view.cpp:178
 msgid "Rename Torrent"
@@ -1234,87 +1232,6 @@ msgid ""
 msgstr ""
 "Yrität ladata Magnet-linkkiä, mutta DHT ei ole käytössä. Optimituloksiin "
 "pääset ottamalla DHT:n käyttöön."
-
-#: ktorrent/gui.cpp:270 ktorrent/gui.cpp:285
-msgid "Open Location"
-msgstr "Avaa sijainti"
-
-#: ktorrent/gui.cpp:402
-msgid "Create a new torrent"
-msgstr "Luo uusi torrentti"
-
-#: ktorrent/gui.cpp:404
-msgid "Open a torrent"
-msgstr "Avaa torrentti"
-
-#: ktorrent/gui.cpp:407
-msgid "Open Silently"
-msgstr "Avaa hiljaisesti"
-
-#: ktorrent/gui.cpp:408
-msgid "Open a torrent without asking any questions"
-msgstr "Avaa torrentti kysymättä mitään"
-
-#: ktorrent/gui.cpp:423
-msgid "Open URL"
-msgstr "Avaa verkko-osoite"
-
-#: ktorrent/gui.cpp:424
-msgid "Open a URL which points to a torrent, magnet links are supported"
-msgstr "Avaa torrenttiin osoittava verkko-osoite (Magnet-linkit ovat tuettuja)"
-
-#: ktorrent/gui.cpp:429 plugins/ipfilter/ipblockingprefpage.cpp:35
-#: plugins/ipfilter/ipfilterplugin.cpp:62
-#: plugins/ipfilter/ipfilterplugin.cpp:75
-msgid "IP Filter"
-msgstr "IP-suodin"
-
-#: ktorrent/gui.cpp:430
-msgid "Show the list of blocked IP addresses"
-msgstr "Näytä estettyjen IP-osoitteiden luettelo"
-
-#: ktorrent/gui.cpp:435
-msgid "Import Torrent"
-msgstr "Tuo torrentti"
-
-#: ktorrent/gui.cpp:436
-msgid "Import a torrent"
-msgstr "Tuo torrentti"
-
-#: ktorrent/gui.cpp:442
-msgid "Import KDE3 Torrents"
-msgstr "Tuo KDE3-torrentteja"
-
-#: ktorrent/gui.cpp:443
-msgid "Import all torrents from the KDE3 version of KTorrent"
-msgstr "Tuo kaikki KDE3-version KTorrentin torrentit"
-
-#: ktorrent/gui.cpp:450
-msgid "Show/Hide KTorrent"
-msgstr "Näytä tai piilota KTorrent"
-
-#: ktorrent/ipfilterwidget.cpp:53
-msgid "IP Filter List"
-msgstr "IP-suodinluettelo"
-
-#: ktorrent/ipfilterwidget.cpp:107
-#, kde-format
-msgid ""
-"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
-"XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
-"ranges like '200.10.10.0-200.10.10.40'."
-msgstr ""
-"Kelvoton IP-osoite <b>%1</b>. IP-osoitteiden tulee olla muodossa ”xxx.xxx."
-"xxx.xxx”.<br/><br/>Voit käyttää myös jokerimerkkejä, esim. ”127.0.0.*”, tai "
-"määrittää alueen, esim. ”200.10.10.0-200.10.10.40”."
-
-#: ktorrent/ipfilterwidget.cpp:135
-msgid "Choose a file"
-msgstr "Valitse tiedosto"
-
-#: ktorrent/ipfilterwidget.cpp:147
-msgid "Choose a filename to save under"
-msgstr "Valitse tallennuksen tiedostonimi"
 
 # pmap: =:gen=KTorrentin:
 # pmap: =:elat=KTorrentista:
@@ -1883,6 +1800,87 @@ msgstr "Suodata torrentteja suotimen tekstin perusteella"
 #: ktorrent/torrentactivity.cpp:142
 msgid "Switch To View"
 msgstr "Vaihda näkymään"
+
+#: ktorrent/gui.cpp:272 ktorrent/gui.cpp:287
+msgid "Open Location"
+msgstr "Avaa sijainti"
+
+#: ktorrent/gui.cpp:404
+msgid "Create a new torrent"
+msgstr "Luo uusi torrentti"
+
+#: ktorrent/gui.cpp:406
+msgid "Open a torrent"
+msgstr "Avaa torrentti"
+
+#: ktorrent/gui.cpp:409
+msgid "Open Silently"
+msgstr "Avaa hiljaisesti"
+
+#: ktorrent/gui.cpp:410
+msgid "Open a torrent without asking any questions"
+msgstr "Avaa torrentti kysymättä mitään"
+
+#: ktorrent/gui.cpp:425
+msgid "Open URL"
+msgstr "Avaa verkko-osoite"
+
+#: ktorrent/gui.cpp:426
+msgid "Open a URL which points to a torrent, magnet links are supported"
+msgstr "Avaa torrenttiin osoittava verkko-osoite (Magnet-linkit ovat tuettuja)"
+
+#: ktorrent/gui.cpp:431 plugins/ipfilter/ipblockingprefpage.cpp:35
+#: plugins/ipfilter/ipfilterplugin.cpp:62
+#: plugins/ipfilter/ipfilterplugin.cpp:75
+msgid "IP Filter"
+msgstr "IP-suodin"
+
+#: ktorrent/gui.cpp:432
+msgid "Show the list of blocked IP addresses"
+msgstr "Näytä estettyjen IP-osoitteiden luettelo"
+
+#: ktorrent/gui.cpp:437
+msgid "Import Torrent"
+msgstr "Tuo torrentti"
+
+#: ktorrent/gui.cpp:438
+msgid "Import a torrent"
+msgstr "Tuo torrentti"
+
+#: ktorrent/gui.cpp:444
+msgid "Import KDE3 Torrents"
+msgstr "Tuo KDE3-torrentteja"
+
+#: ktorrent/gui.cpp:445
+msgid "Import all torrents from the KDE3 version of KTorrent"
+msgstr "Tuo kaikki KDE3-version KTorrentin torrentit"
+
+#: ktorrent/gui.cpp:452
+msgid "Show/Hide KTorrent"
+msgstr "Näytä tai piilota KTorrent"
+
+#: ktorrent/ipfilterwidget.cpp:53
+msgid "IP Filter List"
+msgstr "IP-suodinluettelo"
+
+#: ktorrent/ipfilterwidget.cpp:111
+#, kde-format
+msgid ""
+"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
+"XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
+"ranges like '200.10.10.0-200.10.10.40'."
+msgstr ""
+"Kelvoton IP-osoite <b>%1</b>. IP-osoitteiden tulee olla muodossa ”xxx.xxx."
+"xxx.xxx”.<br/><br/>Voit käyttää myös jokerimerkkejä, esim. ”127.0.0.*”, tai "
+"määrittää alueen, esim. ”200.10.10.0-200.10.10.40”."
+
+#: ktorrent/ipfilterwidget.cpp:139
+msgid "Choose a file"
+msgstr "Valitse tiedosto"
+
+#: ktorrent/ipfilterwidget.cpp:151
+msgid "Choose a filename to save under"
+msgstr "Valitse tallennuksen tiedostonimi"
 
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"
@@ -8239,7 +8237,7 @@ msgstr ""
 "weight:600;\">Tärkeät: </span>Näytetään vain tärkeät viestit</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Huomautukset: </span>Näytetään vain huomautukset ja tärkeät "
+"weight:600;\">Ilmoitukset: </span>Näytetään vain ilmoitukset ja tärkeät "
 "viestit</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
@@ -9997,265 +9995,3 @@ msgstr "Sähköpostiskriptin asetukset"
 #: plugins/scripting/scripts/email_notifications/email_notifications.py:107
 msgid "E-Mail Settings"
 msgstr "Sähköpostiasetukset"
-
-#~ msgid "Open Tab"
-#~ msgstr "Avaa välilehti"
-
-#~ msgid "Invalid IP address %1"
-#~ msgstr "Kelvoton IP-osoite %1"
-
-#~ msgid "Duplicate IP address %1"
-#~ msgstr "Toistuva IP-osoite %1"
-
-#~ msgid " corrupted chunk"
-#~ msgid_plural " corrupted chunks"
-#~ msgstr[0] " viallisen lohkon jälkeen"
-#~ msgstr[1] " viallisen lohkon jälkeen"
-
-#~ msgid " corrupted chunks"
-#~ msgstr " viallista lohkoa"
-
-#~ msgid "No day has been selected."
-#~ msgstr "Päivää ei ole valittu."
-
-#~ msgid ""
-#~ "Failed to add item, because it conflicts with another item on the "
-#~ "schedule."
-#~ msgstr ""
-#~ "Kohtaa ei voitu lisätä, koska se on ristiriidassa toisen ajastuksen "
-#~ "kanssa."
-
-#~ msgid ""
-#~ "This item could not be added to all selected days, because it conflicts "
-#~ "with another item on the schedule."
-#~ msgstr ""
-#~ "Tätä kohtaa ei voitu lisätty kaikille valituille päiville, koska se on "
-#~ "ristiriidassa toisen ajastuksen kanssa."
-
-#~ msgid "Play List"
-#~ msgstr "Soittolista"
-
-#~ msgid "Mode:"
-#~ msgstr "Tila:"
-
-#~ msgid "Single File"
-#~ msgstr "Yksittäinen tiedosto"
-
-#~ msgid "Playlist"
-#~ msgstr "Soittolista"
-
-#~ msgid "Random"
-#~ msgstr "Satunnainen"
-
-#~ msgid ""
-#~ "Playing: <b>%1</b><br/>\n"
-#~ "%2"
-#~ msgstr ""
-#~ "Toistetaan: <b>%1</b><br/>\n"
-#~ "%2"
-
-#~ msgid "Title: <b>%1</b><br/>Artist: <b>%2</b>"
-#~ msgstr "Otsikko: <b>%1</b><br/>Artisti: <b>%2</b>"
-
-#~ msgid "Title: <b>%1</b>"
-#~ msgstr "Otsikko: <b>%1</b>"
-
-#~ msgid "WAN Connection"
-#~ msgstr "WAN-yhteys"
-
-#~ msgid "Data Checking"
-#~ msgstr "Datan tarkistus"
-
-#~ msgid ""
-#~ "During uploading when a chunk is loaded into memory automatically recheck "
-#~ "this chunk, to see if it still is OK."
-#~ msgstr ""
-#~ "Kun lohko on muistissa lähetettäessä, tarkista automaattisesti, onko se "
-#~ "yhä kunnossa."
-
-#~ msgid "Recheck chunks during uploading"
-#~ msgstr "Tarkista lohkot lähetettäessä"
-
-#~ msgid ""
-#~ "Because rechecking big chunks can take a lot of time, the recheck can be "
-#~ "disabled when the chunks are bigger then a certain size."
-#~ msgstr ""
-#~ "Koska suurten lohkojen tarkistus vie aikaa, tarkistus voidaan poistaa "
-#~ "käytöstä, kun lohkot ovat määräkokoa suuremmat."
-
-#~ msgid "Do not recheck when chunks are bigger than"
-#~ msgstr "Älä tarkista lohkoja, jotka ovat suurempia kuin"
-
-#~ msgid "The maximum size a chunk can be for rechecking during uploading."
-#~ msgstr "Lohkon enimmäiskoko, jotta sitä tarkistettaisiin lähetettäessä."
-
-#~ msgid ""
-#~ "Automatically do a full data check when we find to many corrupted chunks."
-#~ msgstr ""
-#~ "Tee automaattisesti täydellinen datan tarkistus, kun viallisia lohkoja "
-#~ "löytyy."
-
-#~ msgid "Do a full data check after "
-#~ msgstr "Suorita täysi tietojen tarkistus"
-
-#~ msgid "The number of corrupted chunks before a full data check is done"
-#~ msgstr "Viallisten lohkojen määrä ennen täydellistä datan tarkistusta"
-
-#~ msgid "TextLabel"
-#~ msgstr "TextLabel"
-
-#~ msgid "Add a new item to the schedule"
-#~ msgstr "Lisää kohde ajastuksiin"
-
-#~ msgid "Time"
-#~ msgstr "Aika"
-
-#~ msgid "Days:"
-#~ msgstr "Päivät:"
-
-#~ msgid "Entire Week"
-#~ msgstr "Koko viikko"
-
-#~ msgid "Weekdays Only"
-#~ msgstr "Vain arkipäivät"
-
-#~ msgid "Weekend"
-#~ msgstr "Viikonloppu"
-
-#~ msgid "Day:"
-#~ msgstr "Päivä:"
-
-#~ msgid "Change Tracker"
-#~ msgstr "Vaihda seurantapalvelinta"
-
-#~ msgid "Media Player Toolbar"
-#~ msgstr "Mediasoitintyökalurivi"
-
-#~ msgid "Cannot verify data : %1"
-#~ msgstr "Ei voi varmentaa tietoa: %1"
-
-#~ msgid "Invalid url %1"
-#~ msgstr "Kelvoton verkko-osoite %1"
-
-#~ msgid "Torrent Files (*.torrent)"
-#~ msgstr "Torrenttitiedostot (*.torrent)"
-
-#~ msgid "Torrent Files"
-#~ msgstr "Torrenttitiedostot"
-
-#~ msgid "All Files"
-#~ msgstr "Kaikki tiedostot"
-
-#~ msgid "Peer Exchange"
-#~ msgstr "Käyttäjätietojen vaihto (PEX)"
-
-#, fuzzy
-#~ msgid "Move Data When Completed"
-#~ msgstr "Siirrä valmistuneet lataukset kansioon:"
-
-#~ msgid "Torrents (*.torrent)"
-#~ msgstr "Torrentit (*.torrent)"
-
-#~ msgid "Little icons"
-#~ msgstr "Pienet kuvakkeet"
-
-#~ msgid "Normal icons"
-#~ msgstr "Tavalliset kuvakkeet"
-
-#~ msgid "Big icons"
-#~ msgstr "Suuret kuvakkeet"
-
-#~ msgid "Icons only"
-#~ msgstr "Vain kuvakkeet"
-
-#~ msgid "Text only"
-#~ msgstr "Vain teksti"
-
-#~ msgid "Icons and text"
-#~ msgstr "Kuvakkeet ja teksti"
-
-#~ msgid "Left"
-#~ msgstr "Vasemmalla"
-
-#~ msgid "Right"
-#~ msgstr "Oikealla"
-
-#~ msgid "Bottom"
-#~ msgstr "Alla"
-
-#~ msgid "Connection closed unexpectedly."
-#~ msgstr "Yhteys katkesi odottamatta."
-
-#~ msgid "Timeout occurred"
-#~ msgstr "Tapahtui aikakatkaisu"
-
-#~ msgid "Failed to download %1 : %2"
-#~ msgstr "Kohteen %1 lataus epäonnistui: %2"
-
-#~ msgid "Error parsing router description."
-#~ msgstr "Virhe jäsennettäessä reitittimen kuvausta."
-
-#~ msgid ""
-#~ "Forwarding failed: \n"
-#~ "Device does not have a WANIPConnection or WANPPPConnection."
-#~ msgstr ""
-#~ "Ohjaus epäonnistui:\n"
-#~ "Laitteella ei ole WANIPConnection- tai WANPPPConnection-ominaisuutta."
-
-#~ msgid "Cannot find port forwarding service in the device's description."
-#~ msgstr "Portin ohjauspalvelua ei löydy laitteen kuvauksesta."
-
-#~ msgid ""
-#~ "Bandwidth\n"
-#~ "Schedule"
-#~ msgstr ""
-#~ "Kaistankäytön\n"
-#~ "ajastin"
-
-#~ msgid "Url"
-#~ msgstr "Osoite"
-
-#~ msgid ""
-#~ "Filter file (level1.dat) already exists, do you want to convert it again?"
-#~ msgstr ""
-#~ "Suodintiedosto (level1.dat) on jo olemassa. Haluatko muuntaa sen "
-#~ "uudelleen?"
-
-#~ msgid "File Exists"
-#~ msgstr "Tiedosto on jo olemassa"
-
-#~ msgid "Collection:"
-#~ msgstr "Kokoelma:"
-
-#~ msgid "Do you want to download this magnet link?"
-#~ msgstr "Haluatko ladata tämän Magnet-linkin?"
-
-#~ msgid "Open in New Tab"
-#~ msgstr "Avaa uuteen välilehteen"
-
-#~ msgid "Copy URL"
-#~ msgstr "Kopioi osoite"
-
-#~ msgid "Searching for %1..."
-#~ msgstr "Etsitään (%1)..."
-
-#~ msgid "Search finished"
-#~ msgstr "Haku valmis"
-
-#~ msgid "GroupsMenu"
-#~ msgstr "Ryhmävalikko"
-
-#~ msgid "ViewMenu"
-#~ msgstr "Näkymävalikko"
-
-#~ msgid "Additional Peer Sources"
-#~ msgstr "Käyttäjien lisälähteet"
-
-#~ msgid "Download Toolbar"
-#~ msgstr "Lataustyökalurivi"
-
-#~ msgid " Minutes"
-#~ msgstr " minuuttia"
-
-#~ msgid "torrent files"
-#~ msgstr "torrent-tiedostot"

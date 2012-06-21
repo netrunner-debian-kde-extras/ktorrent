@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-02-01 11:49+0100\n"
+"POT-Creation-Date: 2012-04-10 17:33+0200\n"
 "PO-Revision-Date: 2011-11-15 16:23+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <info@hantha.org>\n"
@@ -432,7 +432,7 @@ msgid "Open an URL"
 msgstr "URL විවෘත කරන්න"
 
 #: ktorrent/dialogs/pastedialog.cpp:106
-#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:337
+#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:339
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "සාවද්‍ය URL: %1"
@@ -563,7 +563,7 @@ msgstr "BitTorrent"
 msgid "Magnet Link"
 msgstr "වුම්භක සබැඳිය"
 
-#: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:194
+#: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:197
 #: ktorrent/trayicon.cpp:160 plugins/infowidget/trackermodel.cpp:148
 #: plugins/infowidget/webseedsmodel.cpp:127
 msgid "Status"
@@ -606,48 +606,6 @@ msgstr "චුම්භක නවතන්න"
 #: ktorrent/tools/magnetview.cpp:45
 msgid "Remove Magnet"
 msgstr "චුම්භක ඉවත් කරන්න"
-
-#: ktorrent/tools/queuemanagermodel.cpp:190
-msgid "Order"
-msgstr "පෙළගැස්ම"
-
-#: ktorrent/tools/queuemanagermodel.cpp:192 ktorrent/view/viewmodel.cpp:489
-msgid "Name"
-msgstr "නම"
-
-#: ktorrent/tools/queuemanagermodel.cpp:196
-msgid "Time Stalled"
-msgstr "නැවතූ කාලය"
-
-#: ktorrent/tools/queuemanagermodel.cpp:198
-#: plugins/infowidget/iwfilelistmodel.cpp:77
-#: plugins/infowidget/iwfiletreemodel.cpp:89
-msgid "Priority"
-msgstr "ප්‍රමුඛතාව"
-
-#: ktorrent/tools/queuemanagermodel.cpp:233
-msgid "Running"
-msgstr "ක්‍රියාත්මක වන"
-
-#: ktorrent/tools/queuemanagermodel.cpp:235
-msgid "Queued"
-msgstr "පෙළගැසූ"
-
-#: ktorrent/tools/queuemanagermodel.cpp:237
-msgid "Not queued"
-msgstr "පෙළ නොගැසූ"
-
-#: ktorrent/tools/queuemanagermodel.cpp:246
-#, kde-format
-msgid "%1"
-msgstr "%1"
-
-#: ktorrent/tools/queuemanagermodel.cpp:259
-msgid ""
-"Order of a torrent in the queue.\n"
-"Use drag and drop or the move up and down buttons on the right to change the "
-"order."
-msgstr ""
 
 #: ktorrent/tools/queuemanagerwidget.cpp:57
 #: plugins/search/searchactivity.cpp:81 plugins/search/searchtoolbar.cpp:70
@@ -734,6 +692,48 @@ msgstr "පෙළ නොගැසූ පෙන්වන්න"
 #: ktorrent/tools/queuemanagerwidget.cpp:94
 msgid "Show all not queued torrents"
 msgstr "සියළු පෙළ නොගැසූ ටොරෙන්ට පෙන්වන්න"
+
+#: ktorrent/tools/queuemanagermodel.cpp:193
+msgid "Order"
+msgstr "පෙළගැස්ම"
+
+#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:489
+msgid "Name"
+msgstr "නම"
+
+#: ktorrent/tools/queuemanagermodel.cpp:199
+msgid "Time Stalled"
+msgstr "නැවතූ කාලය"
+
+#: ktorrent/tools/queuemanagermodel.cpp:201
+#: plugins/infowidget/iwfilelistmodel.cpp:77
+#: plugins/infowidget/iwfiletreemodel.cpp:89
+msgid "Priority"
+msgstr "ප්‍රමුඛතාව"
+
+#: ktorrent/tools/queuemanagermodel.cpp:236
+msgid "Running"
+msgstr "ක්‍රියාත්මක වන"
+
+#: ktorrent/tools/queuemanagermodel.cpp:238
+msgid "Queued"
+msgstr "පෙළගැසූ"
+
+#: ktorrent/tools/queuemanagermodel.cpp:240
+msgid "Not queued"
+msgstr "පෙළ නොගැසූ"
+
+#: ktorrent/tools/queuemanagermodel.cpp:249
+#, kde-format
+msgid "%1"
+msgstr "%1"
+
+#: ktorrent/tools/queuemanagermodel.cpp:262
+msgid ""
+"Order of a torrent in the queue.\n"
+"Use drag and drop or the move up and down buttons on the right to change the "
+"order."
+msgstr ""
 
 #: ktorrent/view/propertiesdlg.cpp:34
 msgid "Torrent Settings"
@@ -1184,84 +1184,6 @@ msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
 msgstr ""
-
-#: ktorrent/gui.cpp:270 ktorrent/gui.cpp:285
-msgid "Open Location"
-msgstr "ස්ථානය විවෘත"
-
-#: ktorrent/gui.cpp:402
-msgid "Create a new torrent"
-msgstr "නව ටොරෙන්ටයක් නිර්මාණය "
-
-#: ktorrent/gui.cpp:404
-msgid "Open a torrent"
-msgstr "ටොරන්ට් විවෘත කරන්න"
-
-#: ktorrent/gui.cpp:407
-msgid "Open Silently"
-msgstr "නිහඬව විවෘත කරන්න"
-
-#: ktorrent/gui.cpp:408
-msgid "Open a torrent without asking any questions"
-msgstr "ප්‍රශ්ණ විමසීමකින් තොරව ටොරෙන්ට විවෘත කරන්න"
-
-#: ktorrent/gui.cpp:423
-msgid "Open URL"
-msgstr "URL විවෘත කරන්න"
-
-#: ktorrent/gui.cpp:424
-msgid "Open a URL which points to a torrent, magnet links are supported"
-msgstr "ටොරෙන්ටයක් වෙත යොමුවන සබැඳියක් විවෘත කරන්න, චුම්භක සබැඳි සහය දක්වයි"
-
-#: ktorrent/gui.cpp:429 plugins/ipfilter/ipblockingprefpage.cpp:35
-#: plugins/ipfilter/ipfilterplugin.cpp:62
-#: plugins/ipfilter/ipfilterplugin.cpp:75
-msgid "IP Filter"
-msgstr "IP පෙරහණ"
-
-#: ktorrent/gui.cpp:430
-msgid "Show the list of blocked IP addresses"
-msgstr "අවහිර කල IP ලිපින ලැයිස්තුව පෙන්වන්න"
-
-#: ktorrent/gui.cpp:435
-msgid "Import Torrent"
-msgstr "ටොරෙන්ට් ආයාත කරන්න"
-
-#: ktorrent/gui.cpp:436
-msgid "Import a torrent"
-msgstr "ටොරෙන්ටයක් නිර්යාත කරන්න"
-
-#: ktorrent/gui.cpp:442
-msgid "Import KDE3 Torrents"
-msgstr "KDE3  ටොරෙන්ට ආයාත කරන්න"
-
-#: ktorrent/gui.cpp:443
-msgid "Import all torrents from the KDE3 version of KTorrent"
-msgstr "KTorrent හි KDE3 සංස්කරණයෙන් සියළු ටොරෙන්ට ආයාත කරන්න"
-
-#: ktorrent/gui.cpp:450
-msgid "Show/Hide KTorrent"
-msgstr "KTorrent පෙන්වන්න/සඟවන්න"
-
-#: ktorrent/ipfilterwidget.cpp:53
-msgid "IP Filter List"
-msgstr "IP පෙරහන් ලැයිස්තුව"
-
-#: ktorrent/ipfilterwidget.cpp:107
-#, kde-format
-msgid ""
-"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
-"XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
-"ranges like '200.10.10.0-200.10.10.40'."
-msgstr ""
-
-#: ktorrent/ipfilterwidget.cpp:135
-msgid "Choose a file"
-msgstr "ගොනුක් තෝරන්න"
-
-#: ktorrent/ipfilterwidget.cpp:147
-msgid "Choose a filename to save under"
-msgstr "සුරැකීමට ගොනු නමක් තෝරන්න"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
@@ -1813,6 +1735,84 @@ msgstr ""
 #| msgid "Switch Tracker"
 msgid "Switch To View"
 msgstr "හඹායන්නා මාරු කරන්න"
+
+#: ktorrent/gui.cpp:272 ktorrent/gui.cpp:287
+msgid "Open Location"
+msgstr "ස්ථානය විවෘත"
+
+#: ktorrent/gui.cpp:404
+msgid "Create a new torrent"
+msgstr "නව ටොරෙන්ටයක් නිර්මාණය "
+
+#: ktorrent/gui.cpp:406
+msgid "Open a torrent"
+msgstr "ටොරන්ට් විවෘත කරන්න"
+
+#: ktorrent/gui.cpp:409
+msgid "Open Silently"
+msgstr "නිහඬව විවෘත කරන්න"
+
+#: ktorrent/gui.cpp:410
+msgid "Open a torrent without asking any questions"
+msgstr "ප්‍රශ්ණ විමසීමකින් තොරව ටොරෙන්ට විවෘත කරන්න"
+
+#: ktorrent/gui.cpp:425
+msgid "Open URL"
+msgstr "URL විවෘත කරන්න"
+
+#: ktorrent/gui.cpp:426
+msgid "Open a URL which points to a torrent, magnet links are supported"
+msgstr "ටොරෙන්ටයක් වෙත යොමුවන සබැඳියක් විවෘත කරන්න, චුම්භක සබැඳි සහය දක්වයි"
+
+#: ktorrent/gui.cpp:431 plugins/ipfilter/ipblockingprefpage.cpp:35
+#: plugins/ipfilter/ipfilterplugin.cpp:62
+#: plugins/ipfilter/ipfilterplugin.cpp:75
+msgid "IP Filter"
+msgstr "IP පෙරහණ"
+
+#: ktorrent/gui.cpp:432
+msgid "Show the list of blocked IP addresses"
+msgstr "අවහිර කල IP ලිපින ලැයිස්තුව පෙන්වන්න"
+
+#: ktorrent/gui.cpp:437
+msgid "Import Torrent"
+msgstr "ටොරෙන්ට් ආයාත කරන්න"
+
+#: ktorrent/gui.cpp:438
+msgid "Import a torrent"
+msgstr "ටොරෙන්ටයක් නිර්යාත කරන්න"
+
+#: ktorrent/gui.cpp:444
+msgid "Import KDE3 Torrents"
+msgstr "KDE3  ටොරෙන්ට ආයාත කරන්න"
+
+#: ktorrent/gui.cpp:445
+msgid "Import all torrents from the KDE3 version of KTorrent"
+msgstr "KTorrent හි KDE3 සංස්කරණයෙන් සියළු ටොරෙන්ට ආයාත කරන්න"
+
+#: ktorrent/gui.cpp:452
+msgid "Show/Hide KTorrent"
+msgstr "KTorrent පෙන්වන්න/සඟවන්න"
+
+#: ktorrent/ipfilterwidget.cpp:53
+msgid "IP Filter List"
+msgstr "IP පෙරහන් ලැයිස්තුව"
+
+#: ktorrent/ipfilterwidget.cpp:111
+#, kde-format
+msgid ""
+"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
+"XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
+"ranges like '200.10.10.0-200.10.10.40'."
+msgstr ""
+
+#: ktorrent/ipfilterwidget.cpp:139
+msgid "Choose a file"
+msgstr "ගොනුක් තෝරන්න"
+
+#: ktorrent/ipfilterwidget.cpp:151
+msgid "Choose a filename to save under"
+msgstr "සුරැකීමට ගොනු නමක් තෝරන්න"
 
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"

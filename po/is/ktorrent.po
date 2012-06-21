@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-02-01 11:49+0100\n"
+"POT-Creation-Date: 2012-04-10 17:33+0200\n"
 "PO-Revision-Date: 2011-04-20 10:13+0000\n"
 "Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
 "Language-Team: Icelandic <kde-isl@molar.is>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
 "\n"
@@ -462,7 +462,7 @@ msgid "Open an URL"
 msgstr "Opna slóð"
 
 #: ktorrent/dialogs/pastedialog.cpp:106
-#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:337
+#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:339
 #, fuzzy, kde-format
 msgid "Invalid URL: %1"
 msgstr "Ógild slóð: %1"
@@ -607,7 +607,7 @@ msgstr "BitTorrent"
 msgid "Magnet Link"
 msgstr ""
 
-#: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:194
+#: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:197
 #: ktorrent/trayicon.cpp:160 plugins/infowidget/trackermodel.cpp:148
 #: plugins/infowidget/webseedsmodel.cpp:127
 #, fuzzy
@@ -656,56 +656,6 @@ msgstr ""
 #, fuzzy
 msgid "Remove Magnet"
 msgstr "Fjarlægja"
-
-#: ktorrent/tools/queuemanagermodel.cpp:190
-#, fuzzy
-msgid "Order"
-msgstr "Röð"
-
-#: ktorrent/tools/queuemanagermodel.cpp:192 ktorrent/view/viewmodel.cpp:489
-#, fuzzy
-msgid "Name"
-msgstr "Nafn"
-
-#: ktorrent/tools/queuemanagermodel.cpp:196
-#, fuzzy
-msgid "Time Stalled"
-msgstr "Tími Töf"
-
-#: ktorrent/tools/queuemanagermodel.cpp:198
-#: plugins/infowidget/iwfilelistmodel.cpp:77
-#: plugins/infowidget/iwfiletreemodel.cpp:89
-#, fuzzy
-msgid "Priority"
-msgstr "Forgangur"
-
-#: ktorrent/tools/queuemanagermodel.cpp:233
-#, fuzzy
-msgid "Running"
-msgstr "Keyrandi"
-
-#: ktorrent/tools/queuemanagermodel.cpp:235
-#, fuzzy
-msgid "Queued"
-msgstr "Í biðröð"
-
-#: ktorrent/tools/queuemanagermodel.cpp:237
-#, fuzzy
-msgid "Not queued"
-msgstr "Ekki"
-
-#: ktorrent/tools/queuemanagermodel.cpp:246
-#, fuzzy, kde-format
-msgid "%1"
-msgstr "%1"
-
-#: ktorrent/tools/queuemanagermodel.cpp:259
-#, fuzzy
-msgid ""
-"Order of a torrent in the queue.\n"
-"Use drag and drop or the move up and down buttons on the right to change the "
-"order."
-msgstr "Uppröðun af a \" og eða og á hægri til."
 
 #: ktorrent/tools/queuemanagerwidget.cpp:57
 #: plugins/search/searchactivity.cpp:81 plugins/search/searchtoolbar.cpp:70
@@ -808,6 +758,56 @@ msgstr "Ekki"
 #, fuzzy
 msgid "Show all not queued torrents"
 msgstr "Stöðva allir"
+
+#: ktorrent/tools/queuemanagermodel.cpp:193
+#, fuzzy
+msgid "Order"
+msgstr "Röð"
+
+#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:489
+#, fuzzy
+msgid "Name"
+msgstr "Nafn"
+
+#: ktorrent/tools/queuemanagermodel.cpp:199
+#, fuzzy
+msgid "Time Stalled"
+msgstr "Tími Töf"
+
+#: ktorrent/tools/queuemanagermodel.cpp:201
+#: plugins/infowidget/iwfilelistmodel.cpp:77
+#: plugins/infowidget/iwfiletreemodel.cpp:89
+#, fuzzy
+msgid "Priority"
+msgstr "Forgangur"
+
+#: ktorrent/tools/queuemanagermodel.cpp:236
+#, fuzzy
+msgid "Running"
+msgstr "Keyrandi"
+
+#: ktorrent/tools/queuemanagermodel.cpp:238
+#, fuzzy
+msgid "Queued"
+msgstr "Í biðröð"
+
+#: ktorrent/tools/queuemanagermodel.cpp:240
+#, fuzzy
+msgid "Not queued"
+msgstr "Ekki"
+
+#: ktorrent/tools/queuemanagermodel.cpp:249
+#, fuzzy, kde-format
+msgid "%1"
+msgstr "%1"
+
+#: ktorrent/tools/queuemanagermodel.cpp:262
+#, fuzzy
+msgid ""
+"Order of a torrent in the queue.\n"
+"Use drag and drop or the move up and down buttons on the right to change the "
+"order."
+msgstr "Uppröðun af a \" og eða og á hægri til."
 
 #: ktorrent/view/propertiesdlg.cpp:34
 #, fuzzy
@@ -1326,101 +1326,6 @@ msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
 msgstr ""
-
-#: ktorrent/gui.cpp:270 ktorrent/gui.cpp:285
-#, fuzzy
-msgid "Open Location"
-msgstr "Opna staðsetningu"
-
-#: ktorrent/gui.cpp:402
-#, fuzzy
-msgid "Create a new torrent"
-msgstr "Búa til nýjan straum"
-
-#: ktorrent/gui.cpp:404
-#, fuzzy
-msgid "Open a torrent"
-msgstr "Opna straum"
-
-#: ktorrent/gui.cpp:407
-#, fuzzy
-msgid "Open Silently"
-msgstr "Opna"
-
-#: ktorrent/gui.cpp:408
-#, fuzzy
-msgid "Open a torrent without asking any questions"
-msgstr "Opna a"
-
-#: ktorrent/gui.cpp:423
-#, fuzzy
-msgid "Open URL"
-msgstr "Opna slóð"
-
-#: ktorrent/gui.cpp:424
-#, fuzzy
-msgid "Open a URL which points to a torrent, magnet links are supported"
-msgstr "Opna a Slóð punktar til a"
-
-#: ktorrent/gui.cpp:429 plugins/ipfilter/ipblockingprefpage.cpp:35
-#: plugins/ipfilter/ipfilterplugin.cpp:62
-#: plugins/ipfilter/ipfilterplugin.cpp:75
-#, fuzzy
-msgid "IP Filter"
-msgstr "IP síun"
-
-#: ktorrent/gui.cpp:430
-#, fuzzy
-msgid "Show the list of blocked IP addresses"
-msgstr "Sýna af IP"
-
-#: ktorrent/gui.cpp:435
-#, fuzzy
-msgid "Import Torrent"
-msgstr "Flytja inn"
-
-#: ktorrent/gui.cpp:436
-#, fuzzy
-msgid "Import a torrent"
-msgstr "Flytja inn a"
-
-#: ktorrent/gui.cpp:442
-#, fuzzy
-msgid "Import KDE3 Torrents"
-msgstr "Flytja inn"
-
-#: ktorrent/gui.cpp:443
-#, fuzzy
-msgid "Import all torrents from the KDE3 version of KTorrent"
-msgstr "Flytja inn allir frá útgáfa af"
-
-#: ktorrent/gui.cpp:450
-#, fuzzy
-msgid "Show/Hide KTorrent"
-msgstr "Sýna Fela"
-
-#: ktorrent/ipfilterwidget.cpp:53
-msgid "IP Filter List"
-msgstr "IP síulisti"
-
-#: ktorrent/ipfilterwidget.cpp:107
-#, fuzzy, kde-format
-msgid ""
-"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
-"XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
-"ranges like '200.10.10.0-200.10.10.40'."
-msgstr ""
-"Ógilt IP vistfang %1. Þú verður að setja IP vistföng inn á sniðinu 'XXX.XXX."
-"XXX.XXX'. Þú getur líka notað útskiptitákn við tilgreiningu breiðari sviða "
-"eins og '127.0.0.*'."
-
-#: ktorrent/ipfilterwidget.cpp:135
-msgid "Choose a file"
-msgstr "Veldu skrá"
-
-#: ktorrent/ipfilterwidget.cpp:147
-msgid "Choose a filename to save under"
-msgstr "Veldu skráarnafn til að vista undir"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
@@ -2072,6 +1977,101 @@ msgstr ""
 #, fuzzy
 msgid "Switch To View"
 msgstr "Skrásetjari (tracker)"
+
+#: ktorrent/gui.cpp:272 ktorrent/gui.cpp:287
+#, fuzzy
+msgid "Open Location"
+msgstr "Opna staðsetningu"
+
+#: ktorrent/gui.cpp:404
+#, fuzzy
+msgid "Create a new torrent"
+msgstr "Búa til nýjan straum"
+
+#: ktorrent/gui.cpp:406
+#, fuzzy
+msgid "Open a torrent"
+msgstr "Opna straum"
+
+#: ktorrent/gui.cpp:409
+#, fuzzy
+msgid "Open Silently"
+msgstr "Opna"
+
+#: ktorrent/gui.cpp:410
+#, fuzzy
+msgid "Open a torrent without asking any questions"
+msgstr "Opna a"
+
+#: ktorrent/gui.cpp:425
+#, fuzzy
+msgid "Open URL"
+msgstr "Opna slóð"
+
+#: ktorrent/gui.cpp:426
+#, fuzzy
+msgid "Open a URL which points to a torrent, magnet links are supported"
+msgstr "Opna a Slóð punktar til a"
+
+#: ktorrent/gui.cpp:431 plugins/ipfilter/ipblockingprefpage.cpp:35
+#: plugins/ipfilter/ipfilterplugin.cpp:62
+#: plugins/ipfilter/ipfilterplugin.cpp:75
+#, fuzzy
+msgid "IP Filter"
+msgstr "IP síun"
+
+#: ktorrent/gui.cpp:432
+#, fuzzy
+msgid "Show the list of blocked IP addresses"
+msgstr "Sýna af IP"
+
+#: ktorrent/gui.cpp:437
+#, fuzzy
+msgid "Import Torrent"
+msgstr "Flytja inn"
+
+#: ktorrent/gui.cpp:438
+#, fuzzy
+msgid "Import a torrent"
+msgstr "Flytja inn a"
+
+#: ktorrent/gui.cpp:444
+#, fuzzy
+msgid "Import KDE3 Torrents"
+msgstr "Flytja inn"
+
+#: ktorrent/gui.cpp:445
+#, fuzzy
+msgid "Import all torrents from the KDE3 version of KTorrent"
+msgstr "Flytja inn allir frá útgáfa af"
+
+#: ktorrent/gui.cpp:452
+#, fuzzy
+msgid "Show/Hide KTorrent"
+msgstr "Sýna Fela"
+
+#: ktorrent/ipfilterwidget.cpp:53
+msgid "IP Filter List"
+msgstr "IP síulisti"
+
+#: ktorrent/ipfilterwidget.cpp:111
+#, fuzzy, kde-format
+msgid ""
+"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
+"XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
+"ranges like '200.10.10.0-200.10.10.40'."
+msgstr ""
+"Ógilt IP vistfang %1. Þú verður að setja IP vistföng inn á sniðinu 'XXX.XXX."
+"XXX.XXX'. Þú getur líka notað útskiptitákn við tilgreiningu breiðari sviða "
+"eins og '127.0.0.*'."
+
+#: ktorrent/ipfilterwidget.cpp:139
+msgid "Choose a file"
+msgstr "Veldu skrá"
+
+#: ktorrent/ipfilterwidget.cpp:151
+msgid "Choose a filename to save under"
+msgstr "Veldu skráarnafn til að vista undir"
 
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"

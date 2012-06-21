@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-02-01 11:49+0100\n"
-"PO-Revision-Date: 2012-02-18 13:02+0100\n"
+"POT-Creation-Date: 2012-04-10 17:33+0200\n"
+"PO-Revision-Date: 2012-05-16 15:01+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
@@ -460,7 +460,7 @@ msgid "Open an URL"
 msgstr "Отвори УРЛ"
 
 #: ktorrent/dialogs/pastedialog.cpp:106
-#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:337
+#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:339
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "Неисправан УРЛ: %1"
@@ -595,7 +595,7 @@ msgstr "Битторент"
 msgid "Magnet Link"
 msgstr "Магнетска веза"
 
-#: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:194
+#: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:197
 #: ktorrent/trayicon.cpp:160 plugins/infowidget/trackermodel.cpp:148
 #: plugins/infowidget/webseedsmodel.cpp:127
 msgid "Status"
@@ -638,57 +638,6 @@ msgstr "Заустави магнет"
 #: ktorrent/tools/magnetview.cpp:45
 msgid "Remove Magnet"
 msgstr "Уклони магнет"
-
-# >> @title:column
-#: ktorrent/tools/queuemanagermodel.cpp:190
-msgid "Order"
-msgstr "редослед"
-
-# >> @title:column
-#: ktorrent/tools/queuemanagermodel.cpp:192 ktorrent/view/viewmodel.cpp:489
-msgid "Name"
-msgstr "име"
-
-# >> @title:column
-#: ktorrent/tools/queuemanagermodel.cpp:196
-msgid "Time Stalled"
-msgstr "време застоја"
-
-# >> @title:column
-#: ktorrent/tools/queuemanagermodel.cpp:198
-#: plugins/infowidget/iwfilelistmodel.cpp:77
-#: plugins/infowidget/iwfiletreemodel.cpp:89
-msgid "Priority"
-msgstr "приоритет"
-
-# >> @item:intable
-#: ktorrent/tools/queuemanagermodel.cpp:233
-msgid "Running"
-msgstr "ради"
-
-# >> @item:intable
-#: ktorrent/tools/queuemanagermodel.cpp:235
-msgid "Queued"
-msgstr "у реду"
-
-# >> @item:intable
-#: ktorrent/tools/queuemanagermodel.cpp:237
-msgid "Not queued"
-msgstr "није у реду"
-
-#: ktorrent/tools/queuemanagermodel.cpp:246
-#, kde-format
-msgid "%1"
-msgstr "%1"
-
-#: ktorrent/tools/queuemanagermodel.cpp:259
-msgid ""
-"Order of a torrent in the queue.\n"
-"Use drag and drop or the move up and down buttons on the right to change the "
-"order."
-msgstr ""
-"Редослед торената у реду.\n"
-"Редослед мењајте превлачењем или дугмадима горе‑доле десно."
 
 #: ktorrent/tools/queuemanagerwidget.cpp:57
 #: plugins/search/searchactivity.cpp:81 plugins/search/searchtoolbar.cpp:70
@@ -775,6 +724,59 @@ msgstr "Прикаже ван реда"
 #: ktorrent/tools/queuemanagerwidget.cpp:94
 msgid "Show all not queued torrents"
 msgstr "Прикажи све торенте ван реда"
+
+# >> @title:column
+#: ktorrent/tools/queuemanagermodel.cpp:193
+msgid "Order"
+msgstr "редослед"
+
+# >! Contexts.
+# >> @item:inmenu Sort By
+# >> @title:column
+#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:489
+msgid "Name"
+msgstr "име"
+
+# >> @title:column
+#: ktorrent/tools/queuemanagermodel.cpp:199
+msgid "Time Stalled"
+msgstr "време застоја"
+
+# >> @title:column
+#: ktorrent/tools/queuemanagermodel.cpp:201
+#: plugins/infowidget/iwfilelistmodel.cpp:77
+#: plugins/infowidget/iwfiletreemodel.cpp:89
+msgid "Priority"
+msgstr "приоритет"
+
+# >> @item:intable
+#: ktorrent/tools/queuemanagermodel.cpp:236
+msgid "Running"
+msgstr "ради"
+
+# >> @item:intable
+#: ktorrent/tools/queuemanagermodel.cpp:238
+msgid "Queued"
+msgstr "у реду"
+
+# >> @item:intable
+#: ktorrent/tools/queuemanagermodel.cpp:240
+msgid "Not queued"
+msgstr "није у реду"
+
+#: ktorrent/tools/queuemanagermodel.cpp:249
+#, kde-format
+msgid "%1"
+msgstr "%1"
+
+#: ktorrent/tools/queuemanagermodel.cpp:262
+msgid ""
+"Order of a torrent in the queue.\n"
+"Use drag and drop or the move up and down buttons on the right to change the "
+"order."
+msgstr ""
+"Редослед торената у реду.\n"
+"Редослед мењајте превлачењем или дугмадима горе‑доле десно."
 
 #: ktorrent/view/propertiesdlg.cpp:34
 msgid "Torrent Settings"
@@ -1263,88 +1265,6 @@ msgid ""
 msgstr ""
 "Покушавате да преузмете магнетску везу а ДХТ није укључен. За оптималне "
 "резултате укључите ДХТ."
-
-#: ktorrent/gui.cpp:270 ktorrent/gui.cpp:285
-msgid "Open Location"
-msgstr "Отвори локацију"
-
-#: ktorrent/gui.cpp:402
-msgid "Create a new torrent"
-msgstr "Направи нови торент"
-
-#: ktorrent/gui.cpp:404
-msgid "Open a torrent"
-msgstr "Отвори торент"
-
-#: ktorrent/gui.cpp:407
-msgid "Open Silently"
-msgstr "Отвори тихо"
-
-#: ktorrent/gui.cpp:408
-msgid "Open a torrent without asking any questions"
-msgstr "Отвори торент без икаквих питања"
-
-#: ktorrent/gui.cpp:423
-msgid "Open URL"
-msgstr "Отвори УРЛ"
-
-#: ktorrent/gui.cpp:424
-msgid "Open a URL which points to a torrent, magnet links are supported"
-msgstr "Отвара УРЛ који показује на торент, магнетске везе су подржане"
-
-#: ktorrent/gui.cpp:429 plugins/ipfilter/ipblockingprefpage.cpp:35
-#: plugins/ipfilter/ipfilterplugin.cpp:62
-#: plugins/ipfilter/ipfilterplugin.cpp:75
-msgid "IP Filter"
-msgstr "ИП филтер"
-
-#: ktorrent/gui.cpp:430
-msgid "Show the list of blocked IP addresses"
-msgstr "Прикажи списак блокираних ИП адреса"
-
-#: ktorrent/gui.cpp:435
-msgid "Import Torrent"
-msgstr "Увези торент"
-
-#: ktorrent/gui.cpp:436
-msgid "Import a torrent"
-msgstr "Увези торент"
-
-#: ktorrent/gui.cpp:442
-msgid "Import KDE3 Torrents"
-msgstr "Увези КДЕ‑3 торенте"
-
-#: ktorrent/gui.cpp:443
-msgid "Import all torrents from the KDE3 version of KTorrent"
-msgstr "Увози све торенте из КДЕ‑3 верзије К‑торента"
-
-#: ktorrent/gui.cpp:450
-msgid "Show/Hide KTorrent"
-msgstr "Прикажи/сакриј К‑торент"
-
-#: ktorrent/ipfilterwidget.cpp:53
-msgid "IP Filter List"
-msgstr "Списак ИП филтера"
-
-#: ktorrent/ipfilterwidget.cpp:107
-#, kde-format
-msgid ""
-"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
-"XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
-"ranges like '200.10.10.0-200.10.10.40'."
-msgstr ""
-"<html><p>Лоша ИП адреса <b>%1</b>. ИП адресе морају бити облика <icode>XXX."
-"XXX.XXX.XXX</icode>.</p><p>Такође можете користити џокере, нпр. <icode>127.0."
-"0.*</icode>, и задавати опсеге, нпр. <icode>200.10.10.0-200.10.10.40</icode>."
-"</p></html>"
-
-#: ktorrent/ipfilterwidget.cpp:135
-msgid "Choose a file"
-msgstr "Изаберите фајл"
-
-#: ktorrent/ipfilterwidget.cpp:147
-msgid "Choose a filename to save under"
-msgstr "Изаберите име фајла за уписивање"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
@@ -1914,6 +1834,88 @@ msgstr "Филтрирај торенте по филтерској ниски"
 #: ktorrent/torrentactivity.cpp:142
 msgid "Switch To View"
 msgstr "Пребаци на приказ"
+
+#: ktorrent/gui.cpp:272 ktorrent/gui.cpp:287
+msgid "Open Location"
+msgstr "Отвори локацију"
+
+#: ktorrent/gui.cpp:404
+msgid "Create a new torrent"
+msgstr "Направи нови торент"
+
+#: ktorrent/gui.cpp:406
+msgid "Open a torrent"
+msgstr "Отвори торент"
+
+#: ktorrent/gui.cpp:409
+msgid "Open Silently"
+msgstr "Отвори тихо"
+
+#: ktorrent/gui.cpp:410
+msgid "Open a torrent without asking any questions"
+msgstr "Отвори торент без икаквих питања"
+
+#: ktorrent/gui.cpp:425
+msgid "Open URL"
+msgstr "Отвори УРЛ"
+
+#: ktorrent/gui.cpp:426
+msgid "Open a URL which points to a torrent, magnet links are supported"
+msgstr "Отвара УРЛ који показује на торент, магнетске везе су подржане"
+
+#: ktorrent/gui.cpp:431 plugins/ipfilter/ipblockingprefpage.cpp:35
+#: plugins/ipfilter/ipfilterplugin.cpp:62
+#: plugins/ipfilter/ipfilterplugin.cpp:75
+msgid "IP Filter"
+msgstr "ИП филтер"
+
+#: ktorrent/gui.cpp:432
+msgid "Show the list of blocked IP addresses"
+msgstr "Прикажи списак блокираних ИП адреса"
+
+#: ktorrent/gui.cpp:437
+msgid "Import Torrent"
+msgstr "Увези торент"
+
+#: ktorrent/gui.cpp:438
+msgid "Import a torrent"
+msgstr "Увези торент"
+
+#: ktorrent/gui.cpp:444
+msgid "Import KDE3 Torrents"
+msgstr "Увези КДЕ‑3 торенте"
+
+#: ktorrent/gui.cpp:445
+msgid "Import all torrents from the KDE3 version of KTorrent"
+msgstr "Увози све торенте из КДЕ‑3 верзије К‑торента"
+
+#: ktorrent/gui.cpp:452
+msgid "Show/Hide KTorrent"
+msgstr "Прикажи/сакриј К‑торент"
+
+#: ktorrent/ipfilterwidget.cpp:53
+msgid "IP Filter List"
+msgstr "Списак ИП филтера"
+
+#: ktorrent/ipfilterwidget.cpp:111
+#, kde-format
+msgid ""
+"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
+"XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
+"ranges like '200.10.10.0-200.10.10.40'."
+msgstr ""
+"<html><p>Лоша ИП адреса <b>%1</b>. ИП адресе морају бити облика <icode>XXX."
+"XXX.XXX.XXX</icode>.</p><p>Такође можете користити џокере, нпр. <icode>127.0."
+"0.*</icode>, и задавати опсеге, нпр. <icode>200.10.10.0-200.10.10.40</icode>."
+"</p></html>"
+
+#: ktorrent/ipfilterwidget.cpp:139
+msgid "Choose a file"
+msgstr "Изаберите фајл"
+
+#: ktorrent/ipfilterwidget.cpp:151
+msgid "Choose a filename to save under"
+msgstr "Изаберите име фајла за уписивање"
 
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"
@@ -4690,7 +4692,7 @@ msgstr "Без &избора"
 #. i18n: ectx: property (text), widget (KPushButton, m_invert_selection)
 #: rc.cpp:286
 msgid "Invert Selection"
-msgstr "Обрни избор"
+msgstr "Изврни избор"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:153
 #. i18n: ectx: property (text), widget (KPushButton, m_collapse_all)
