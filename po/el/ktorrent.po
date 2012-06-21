@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-02-01 11:49+0100\n"
-"PO-Revision-Date: 2012-02-24 06:54+0100\n"
+"POT-Creation-Date: 2012-04-10 17:33+0200\n"
+"PO-Revision-Date: 2012-04-22 08:05+0200\n"
 "Last-Translator: Dimitrios Glentadakis <dglent@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
@@ -458,7 +458,7 @@ msgid "Open an URL"
 msgstr "Άνοιγμα ενός URL"
 
 #: ktorrent/dialogs/pastedialog.cpp:106
-#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:337
+#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:339
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "Μη έγκυρο URL: %1"
@@ -591,7 +591,7 @@ msgstr "BitTorrent"
 msgid "Magnet Link"
 msgstr "Σύνδεσμος μαγνήτης"
 
-#: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:194
+#: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:197
 #: ktorrent/trayicon.cpp:160 plugins/infowidget/trackermodel.cpp:148
 #: plugins/infowidget/webseedsmodel.cpp:127
 msgid "Status"
@@ -634,51 +634,6 @@ msgstr "Διακοπή μαγνήτη"
 #: ktorrent/tools/magnetview.cpp:45
 msgid "Remove Magnet"
 msgstr "Αφαίρεση μαγνήτη"
-
-#: ktorrent/tools/queuemanagermodel.cpp:190
-msgid "Order"
-msgstr "Σειρά"
-
-#: ktorrent/tools/queuemanagermodel.cpp:192 ktorrent/view/viewmodel.cpp:489
-msgid "Name"
-msgstr "Όνομα"
-
-#: ktorrent/tools/queuemanagermodel.cpp:196
-msgid "Time Stalled"
-msgstr "Σταματημένο"
-
-#: ktorrent/tools/queuemanagermodel.cpp:198
-#: plugins/infowidget/iwfilelistmodel.cpp:77
-#: plugins/infowidget/iwfiletreemodel.cpp:89
-msgid "Priority"
-msgstr "Προτεραιότητα"
-
-#: ktorrent/tools/queuemanagermodel.cpp:233
-msgid "Running"
-msgstr "Εκτελείται"
-
-#: ktorrent/tools/queuemanagermodel.cpp:235
-msgid "Queued"
-msgstr "Σε αναμονή"
-
-#: ktorrent/tools/queuemanagermodel.cpp:237
-msgid "Not queued"
-msgstr "Όχι σε αναμονή"
-
-#: ktorrent/tools/queuemanagermodel.cpp:246
-#, kde-format
-msgid "%1"
-msgstr "%1"
-
-#: ktorrent/tools/queuemanagermodel.cpp:259
-msgid ""
-"Order of a torrent in the queue.\n"
-"Use drag and drop or the move up and down buttons on the right to change the "
-"order."
-msgstr ""
-"Η σειρά ενός torrent στην ουρά αναμονής.\n"
-"Χρησιμοποιήστε έλξη και εναπόθεση ή τα κουμπιά μετακίνησης πάνω και κάτω στα "
-"δεξιά για να τροποποιήσετε τη σειρά."
 
 #: ktorrent/tools/queuemanagerwidget.cpp:57
 #: plugins/search/searchactivity.cpp:81 plugins/search/searchtoolbar.cpp:70
@@ -765,6 +720,51 @@ msgstr "Εμφάνιση των όχι σε αναμονή"
 #: ktorrent/tools/queuemanagerwidget.cpp:94
 msgid "Show all not queued torrents"
 msgstr "Εμφάνιση όλων των όχι σε αναμονή torrent"
+
+#: ktorrent/tools/queuemanagermodel.cpp:193
+msgid "Order"
+msgstr "Σειρά"
+
+#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:489
+msgid "Name"
+msgstr "Όνομα"
+
+#: ktorrent/tools/queuemanagermodel.cpp:199
+msgid "Time Stalled"
+msgstr "Χρόνος ακινητοποιημένων"
+
+#: ktorrent/tools/queuemanagermodel.cpp:201
+#: plugins/infowidget/iwfilelistmodel.cpp:77
+#: plugins/infowidget/iwfiletreemodel.cpp:89
+msgid "Priority"
+msgstr "Προτεραιότητα"
+
+#: ktorrent/tools/queuemanagermodel.cpp:236
+msgid "Running"
+msgstr "Εκτελείται"
+
+#: ktorrent/tools/queuemanagermodel.cpp:238
+msgid "Queued"
+msgstr "Σε αναμονή"
+
+#: ktorrent/tools/queuemanagermodel.cpp:240
+msgid "Not queued"
+msgstr "Όχι σε αναμονή"
+
+#: ktorrent/tools/queuemanagermodel.cpp:249
+#, kde-format
+msgid "%1"
+msgstr "%1"
+
+#: ktorrent/tools/queuemanagermodel.cpp:262
+msgid ""
+"Order of a torrent in the queue.\n"
+"Use drag and drop or the move up and down buttons on the right to change the "
+"order."
+msgstr ""
+"Η σειρά ενός torrent στην ουρά αναμονής.\n"
+"Χρησιμοποιήστε έλξη και εναπόθεση ή τα κουμπιά μετακίνησης πάνω και κάτω στα "
+"δεξιά για να τροποποιήσετε τη σειρά."
 
 #: ktorrent/view/propertiesdlg.cpp:34
 msgid "Torrent Settings"
@@ -1244,90 +1244,6 @@ msgid ""
 msgstr ""
 "Προσπαθείτε να κάνετε λήψη ενός συνδέσμου μαγνήτη και το DHT δεν είναι "
 "ενεργό. Για βέλτιστα αποτελέσματα ενεργοποιήστε το DHT."
-
-#: ktorrent/gui.cpp:270 ktorrent/gui.cpp:285
-msgid "Open Location"
-msgstr "Άνοιγμα τοποθεσίας"
-
-#: ktorrent/gui.cpp:402
-msgid "Create a new torrent"
-msgstr "Δημιουργία ενός νέου torrent"
-
-#: ktorrent/gui.cpp:404
-msgid "Open a torrent"
-msgstr "Άνοιγμα ενός torrent"
-
-#: ktorrent/gui.cpp:407
-msgid "Open Silently"
-msgstr "Σιωπηλό άνοιγμα"
-
-#: ktorrent/gui.cpp:408
-msgid "Open a torrent without asking any questions"
-msgstr "Άνοιγμα ενός torrent χωρίς ερωτήσεις"
-
-#: ktorrent/gui.cpp:423
-msgid "Open URL"
-msgstr "Άνοιγμα URL"
-
-#: ktorrent/gui.cpp:424
-msgid "Open a URL which points to a torrent, magnet links are supported"
-msgstr ""
-"Άνοιγμα ενός URL το οποίο υποδεικνύει ένα torrent, υποστηρίζονται σύνδεσμοι "
-"μαγνήτες"
-
-#: ktorrent/gui.cpp:429 plugins/ipfilter/ipblockingprefpage.cpp:35
-#: plugins/ipfilter/ipfilterplugin.cpp:62
-#: plugins/ipfilter/ipfilterplugin.cpp:75
-msgid "IP Filter"
-msgstr "Φίλτρο IP"
-
-#: ktorrent/gui.cpp:430
-msgid "Show the list of blocked IP addresses"
-msgstr "Εμφάνιση λίστας των διευθύνσεων IP σε φραγή"
-
-#: ktorrent/gui.cpp:435
-msgid "Import Torrent"
-msgstr "Εισαγωγή torrent"
-
-#: ktorrent/gui.cpp:436
-msgid "Import a torrent"
-msgstr "Εισαγωγή ενός torrent"
-
-#: ktorrent/gui.cpp:442
-msgid "Import KDE3 Torrents"
-msgstr "Εισαγωγή torrent KDE3"
-
-#: ktorrent/gui.cpp:443
-msgid "Import all torrents from the KDE3 version of KTorrent"
-msgstr "Εισαγωγή όλων των torrent από την έκδοση KDE3 του KTorrent"
-
-#: ktorrent/gui.cpp:450
-msgid "Show/Hide KTorrent"
-msgstr "Εμφάνιση/Απόκρυψη του KTorrent"
-
-#: ktorrent/ipfilterwidget.cpp:53
-msgid "IP Filter List"
-msgstr "Λίστα φίλτρων IP"
-
-#: ktorrent/ipfilterwidget.cpp:107
-#, kde-format
-msgid ""
-"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
-"XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
-"ranges like '200.10.10.0-200.10.10.40'."
-msgstr ""
-"Μη έγκυρη διεύθυνση IP <b>%1</b>. Οι διευθύνσεις IP πρέπει να είναι του "
-"τύπου  'XXX.XXX.XXX.XXX'.<br/><br/>Μπορείτε να χρησιμοποιήσετε χαρακτήρες "
-"αντικατάστασης '127.0.0.*' ή να ορίσετε διαστήματα όπως "
-"'200.10.10.0-200.10.10.40'."
-
-#: ktorrent/ipfilterwidget.cpp:135
-msgid "Choose a file"
-msgstr "Επιλέξτε ένα αρχείο"
-
-#: ktorrent/ipfilterwidget.cpp:147
-msgid "Choose a filename to save under"
-msgstr "Επιλέξτε όνομα αρχείου για αποθήκευση"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
@@ -1904,6 +1820,90 @@ msgstr "Φιλτράρισμα torrents με βάση συμβολοσειρά �
 #: ktorrent/torrentactivity.cpp:142
 msgid "Switch To View"
 msgstr "Εναλλαγή σε προβολή"
+
+#: ktorrent/gui.cpp:272 ktorrent/gui.cpp:287
+msgid "Open Location"
+msgstr "Άνοιγμα τοποθεσίας"
+
+#: ktorrent/gui.cpp:404
+msgid "Create a new torrent"
+msgstr "Δημιουργία ενός νέου torrent"
+
+#: ktorrent/gui.cpp:406
+msgid "Open a torrent"
+msgstr "Άνοιγμα ενός torrent"
+
+#: ktorrent/gui.cpp:409
+msgid "Open Silently"
+msgstr "Σιωπηλό άνοιγμα"
+
+#: ktorrent/gui.cpp:410
+msgid "Open a torrent without asking any questions"
+msgstr "Άνοιγμα ενός torrent χωρίς ερωτήσεις"
+
+#: ktorrent/gui.cpp:425
+msgid "Open URL"
+msgstr "Άνοιγμα URL"
+
+#: ktorrent/gui.cpp:426
+msgid "Open a URL which points to a torrent, magnet links are supported"
+msgstr ""
+"Άνοιγμα ενός URL το οποίο υποδεικνύει ένα torrent, υποστηρίζονται σύνδεσμοι "
+"μαγνήτες"
+
+#: ktorrent/gui.cpp:431 plugins/ipfilter/ipblockingprefpage.cpp:35
+#: plugins/ipfilter/ipfilterplugin.cpp:62
+#: plugins/ipfilter/ipfilterplugin.cpp:75
+msgid "IP Filter"
+msgstr "Φίλτρο IP"
+
+#: ktorrent/gui.cpp:432
+msgid "Show the list of blocked IP addresses"
+msgstr "Εμφάνιση λίστας των διευθύνσεων IP σε φραγή"
+
+#: ktorrent/gui.cpp:437
+msgid "Import Torrent"
+msgstr "Εισαγωγή torrent"
+
+#: ktorrent/gui.cpp:438
+msgid "Import a torrent"
+msgstr "Εισαγωγή ενός torrent"
+
+#: ktorrent/gui.cpp:444
+msgid "Import KDE3 Torrents"
+msgstr "Εισαγωγή torrent KDE3"
+
+#: ktorrent/gui.cpp:445
+msgid "Import all torrents from the KDE3 version of KTorrent"
+msgstr "Εισαγωγή όλων των torrent από την έκδοση KDE3 του KTorrent"
+
+#: ktorrent/gui.cpp:452
+msgid "Show/Hide KTorrent"
+msgstr "Εμφάνιση/Απόκρυψη του KTorrent"
+
+#: ktorrent/ipfilterwidget.cpp:53
+msgid "IP Filter List"
+msgstr "Λίστα φίλτρων IP"
+
+#: ktorrent/ipfilterwidget.cpp:111
+#, kde-format
+msgid ""
+"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
+"XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
+"ranges like '200.10.10.0-200.10.10.40'."
+msgstr ""
+"Μη έγκυρη διεύθυνση IP <b>%1</b>. Οι διευθύνσεις IP πρέπει να είναι του "
+"τύπου  'XXX.XXX.XXX.XXX'.<br/><br/>Μπορείτε να χρησιμοποιήσετε χαρακτήρες "
+"αντικατάστασης '127.0.0.*' ή να ορίσετε διαστήματα όπως "
+"'200.10.10.0-200.10.10.40'."
+
+#: ktorrent/ipfilterwidget.cpp:139
+msgid "Choose a file"
+msgstr "Επιλέξτε ένα αρχείο"
+
+#: ktorrent/ipfilterwidget.cpp:151
+msgid "Choose a filename to save under"
+msgstr "Επιλέξτε όνομα αρχείου για αποθήκευση"
 
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"
@@ -6429,7 +6429,8 @@ msgstr ""
 #: rc.cpp:972
 msgid "Rename single file torrents with the name its only file"
 msgstr ""
-"Μετονομασία ενός μεμονωμένου αρχείου torrent με το όνομα του αρχείου αυτού"
+"Να μετονομαστεί ένα μεμονωμένο αρχείο torrent με το όνομα του σχετικού "
+"αρχείου"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:17
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_manuallyControlTorrents)
@@ -6445,7 +6446,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_manuallyControlTorrents)
 #: rc.cpp:978
 msgid "Control torrents manually"
-msgstr "Χειρισμός torrents χειροκίνητα"
+msgstr "Χειροκίνητος έλεγχος torrents"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:42
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_maxDownloads)
@@ -6562,14 +6563,13 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_decreasePriorityOfStalledTorrents)
 #: rc.cpp:1034
 msgid "Decrease priority of torrents which are stalled for too long"
-msgstr ""
-"Μείωση προτεραιότητας torrent που είναι σταματημένα για μεγάλο διάστημα"
+msgstr "Να μειωθεί η προτεραιότητα των ακινητοποιημένων επί μακρόν torrent"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:149
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: rc.cpp:1037
 msgid "Stalled timer:"
-msgstr "Χρονόμετρο σταματημένων:"
+msgstr "Χρονόμετρο ακινητοποιημένων:"
 
 #. i18n: file: ktorrent/pref/qmpref.ui:160
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_stallTimer)

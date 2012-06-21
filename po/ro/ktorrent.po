@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the ktorrent package.
 # Laurențiu Buzdugan <lbuz@rolix.org>, 2008".
 # Cristian Tarsoaga <cristian.tarsoaga@gmail.com>, 2008.
-# Sergiu Bivol <sergiu@ase.md>, 2008, 2009.
+# Sergiu Bivol <sergiu@ase.md>, 2008, 2009, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent(2)\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-02-01 11:49+0100\n"
-"PO-Revision-Date: 2009-07-20 16:52+0300\n"
+"POT-Creation-Date: 2012-04-10 17:33+0200\n"
+"PO-Revision-Date: 2012-05-27 22:47+0300\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -17,21 +17,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 1.4\n"
 
 #: ktmagnetdownloader/magnetdownloader.cpp:44
-#, fuzzy
 msgid "KTMagnetDownloader"
-msgstr "Timp descărcare"
+msgstr "KTMagnetDownloader"
 
 #: ktmagnetdownloader/magnetdownloader.cpp:45
 msgid "KTorrent's magnet link downloader"
 msgstr ""
 
 #: ktmagnetdownloader/magnetdownloader.cpp:47
-#, fuzzy
 msgid "(C) 2009 Joris Guisson"
-msgstr "Joris Guisson"
+msgstr "(C) 2009 Joris Guisson"
 
 #: ktmagnetdownloader/magnetdownloader.cpp:52 ktorrent/main.cpp:152
 msgid "Document to open"
@@ -286,14 +284,14 @@ msgstr "Nu am putut încărca torentul din fișierul : %1"
 #: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:67
 #: plugins/ipfilter/convertthread.cpp:167
 #: plugins/search/searchenginelist.cpp:192
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cannot open %1: %2"
-msgstr "Nu am putut deschide %1 : %2"
+msgstr "Nu se poate deschide %1: %2"
 
 #: ktorrent/dialogs/importdialog.cpp:394 ktorrent/dialogs/importdialog.cpp:411
-#, fuzzy, kde-format
+#, kde-format
 msgid "Failed to create %1: %2"
-msgstr "Nu am putut crea %1 : %2"
+msgstr "Crearea %1 a eșuat: %2"
 
 #: ktorrent/dialogs/missingfilesdlg.cpp:77
 #: ktorrent/dialogs/missingfilesdlg.cpp:110
@@ -407,12 +405,12 @@ msgstr "Toate torentele"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:507
 msgid "<b>Unable to determine free space</b>"
-msgstr ""
+msgstr "<b>Spațiul liber nu poate fi determinat</b>"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:517
 #, kde-format
 msgid "%1 (%2 in use by existing files)"
-msgstr ""
+msgstr "%1 (%2 ocupat cu fișiere existente)"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:526
 #, kde-format
@@ -421,34 +419,29 @@ msgid "%1 short"
 msgstr "%1 neajuns"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:558
-#, fuzzy
 msgid "Existing files: <b>None</b>"
-msgstr "Titlu: <b>%1</b>"
+msgstr "Fișiere existente: <b>niciunul</b>"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:560
-#, fuzzy
 msgid "Existing files: <b>All</b>"
-msgstr "Titlu: <b>%1</b>"
+msgstr "Fișiere existente: <b>toate</b>"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:562
-#, fuzzy, kde-format
+#, kde-format
 msgid "Existing files: <b>%1</b> of <b>%2</b>"
-msgstr "Titlu: <b>%1</b><br/>Artist: <b>%2</b>"
+msgstr "Fișiere existente: <b>%1</b> din <b>%2</b>"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:569
-#, fuzzy
 msgid "Existing file: <b>No</b>"
-msgstr "Titlu: <b>%1</b>"
+msgstr "Fișier existent: <b>nu</b>"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:574
-#, fuzzy
 msgid "Existing file: <b>Yes</b>"
-msgstr "Titlu: <b>%1</b>"
+msgstr "Fișier existent: <b>da</b>"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:654
-#, fuzzy
 msgid "Clear History"
-msgstr "Curăță istoric căutare"
+msgstr "Șterge istoricul"
 
 #. i18n: file: ktorrent/dialogs/pastedlgbase.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, PasteDlgBase)
@@ -457,7 +450,7 @@ msgid "Open an URL"
 msgstr "Deschideți un URL"
 
 #: ktorrent/dialogs/pastedialog.cpp:106
-#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:337
+#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:339
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "URL invalid: %1"
@@ -475,11 +468,9 @@ msgid "You must select a file or a folder."
 msgstr "Trebuie să selectați un fișier sau un director."
 
 #: ktorrent/dialogs/torrentcreatordlg.cpp:296
-#, fuzzy
 msgid ""
 "You have not added a tracker, are you sure you want to create this torrent?"
-msgstr ""
-"Nu ați adăugat un tracker, sunteți sigur că doriți să creați acest torent?"
+msgstr "Nu ați adăugat un tracker. Sigur doriți să creați acest torent?"
 
 #: ktorrent/dialogs/torrentcreatordlg.cpp:304
 msgid "You must add at least one node."
@@ -555,7 +546,7 @@ msgstr "Proxy"
 
 #: ktorrent/pref/recommendedsettingsdlg.cpp:37
 msgid "Calculate Recommended Settings"
-msgstr "Calculează configurările recomandate"
+msgstr "Calculează parametrii recomandați"
 
 #: ktorrent/pref/recommendedsettingsdlg.cpp:245
 #: ktorrent/pref/recommendedsettingsdlg.cpp:251
@@ -577,12 +568,11 @@ msgid "Queue Manager"
 msgstr "Gestionar coadă"
 
 #: ktorrent/pref/qmpref.cpp:29
-#, fuzzy
 msgid " minute"
 msgid_plural " minutes"
-msgstr[0] " minute"
+msgstr[0] " minut"
 msgstr[1] " minute"
-msgstr[2] " minute"
+msgstr[2] " de minute"
 
 #: ktorrent/pref/btpref.cpp:27
 msgid "BitTorrent"
@@ -590,9 +580,9 @@ msgstr "BitTorrent"
 
 #: ktorrent/tools/magnetmodel.cpp:128
 msgid "Magnet Link"
-msgstr ""
+msgstr "Legătură Magnet"
 
-#: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:194
+#: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:197
 #: ktorrent/trayicon.cpp:160 plugins/infowidget/trackermodel.cpp:148
 #: plugins/infowidget/webseedsmodel.cpp:127
 msgid "Status"
@@ -625,63 +615,16 @@ msgid "Stopped"
 msgstr "Oprit"
 
 #: ktorrent/tools/magnetview.cpp:42
-#, fuzzy
 msgid "Start Magnet"
-msgstr "Pornire torent"
+msgstr "Pornire magnet"
 
 #: ktorrent/tools/magnetview.cpp:43
 msgid "Stop Magnet"
-msgstr ""
+msgstr "Oprire magnet"
 
 #: ktorrent/tools/magnetview.cpp:45
-#, fuzzy
 msgid "Remove Magnet"
-msgstr "Eliminare torent"
-
-#: ktorrent/tools/queuemanagermodel.cpp:190
-msgid "Order"
-msgstr "Ordine"
-
-#: ktorrent/tools/queuemanagermodel.cpp:192 ktorrent/view/viewmodel.cpp:489
-msgid "Name"
-msgstr "Nume"
-
-#: ktorrent/tools/queuemanagermodel.cpp:196
-msgid "Time Stalled"
-msgstr "Timp întreruperi"
-
-#: ktorrent/tools/queuemanagermodel.cpp:198
-#: plugins/infowidget/iwfilelistmodel.cpp:77
-#: plugins/infowidget/iwfiletreemodel.cpp:89
-msgid "Priority"
-msgstr "Prioritate"
-
-#: ktorrent/tools/queuemanagermodel.cpp:233
-msgid "Running"
-msgstr "Rulare"
-
-#: ktorrent/tools/queuemanagermodel.cpp:235
-msgid "Queued"
-msgstr "În coadă"
-
-#: ktorrent/tools/queuemanagermodel.cpp:237
-msgid "Not queued"
-msgstr "În afara cozii"
-
-#: ktorrent/tools/queuemanagermodel.cpp:246
-#, kde-format
-msgid "%1"
-msgstr "%1"
-
-#: ktorrent/tools/queuemanagermodel.cpp:259
-msgid ""
-"Order of a torrent in the queue.\n"
-"Use drag and drop or the move up and down buttons on the right to change the "
-"order."
-msgstr ""
-"Ordinea torentului în coadă \n"
-" Foloșiți funcția trage și scapă sau butoanele sus și jos din dreapta pentru "
-"a schimba ordinea."
+msgstr "Eliminare magnet"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:57
 #: plugins/search/searchactivity.cpp:81 plugins/search/searchtoolbar.cpp:70
@@ -690,22 +633,20 @@ msgid "Search"
 msgstr "Caută"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:66
-#, fuzzy
 msgid "Show Search"
-msgstr "Caută"
+msgstr "Arată căutarea"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:67
 msgid "Show or hide the search bar"
-msgstr ""
+msgstr "Arată sau ascunde bara de căutare"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:71
-#, fuzzy
 msgid "Move Top"
-msgstr "Mută în sus"
+msgstr "Mută în vîrf"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:72
 msgid "Move a torrent to the top of the queue"
-msgstr "Mutați torentul la începutul cozii"
+msgstr "Mută torentul în vîrful cozii"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:188
 #. i18n: ectx: property (text), widget (KPushButton, m_move_up)
@@ -740,48 +681,85 @@ msgid "Move a torrent down in the queue"
 msgstr "Mutați torentul din coadă în jos"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:80
-#, fuzzy
 msgid "Move Bottom"
-msgstr "Jos"
+msgstr "Mută la capăt"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:81
 msgid "Move a torrent to the bottom of the queue"
-msgstr "Mutați torentul la capătul cozii"
+msgstr "Mută torentul la capătul cozii"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:83
-#, fuzzy
 msgid "Show Downloads"
-msgstr "Descărcări"
+msgstr "Arată descărcările"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:84
-#, fuzzy
 msgid "Show all downloads"
-msgstr "Viteza maximă de descărcare"
+msgstr "Arată toate descărcările"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:88
-#, fuzzy
 msgid "Show Uploads"
-msgstr "Încărcări"
+msgstr "Arată încărcările"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:89
-#, fuzzy
 msgid "Show all uploads"
-msgstr "Arată o listă de fișiere"
+msgstr "Arată toate încărcările"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:93
-#, fuzzy
 msgid "Show Not Queued"
-msgstr "În afara cozii"
+msgstr "Arată în afara cozii"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:94
-#, fuzzy
 msgid "Show all not queued torrents"
-msgstr "Oprește toate torentele"
+msgstr "Arată toate torentele din afara cozii"
+
+#: ktorrent/tools/queuemanagermodel.cpp:193
+msgid "Order"
+msgstr "Ordine"
+
+#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:489
+msgid "Name"
+msgstr "Nume"
+
+#: ktorrent/tools/queuemanagermodel.cpp:199
+msgid "Time Stalled"
+msgstr "Timp întreruperi"
+
+#: ktorrent/tools/queuemanagermodel.cpp:201
+#: plugins/infowidget/iwfilelistmodel.cpp:77
+#: plugins/infowidget/iwfiletreemodel.cpp:89
+msgid "Priority"
+msgstr "Prioritate"
+
+#: ktorrent/tools/queuemanagermodel.cpp:236
+msgid "Running"
+msgstr "Rulare"
+
+#: ktorrent/tools/queuemanagermodel.cpp:238
+msgid "Queued"
+msgstr "În coadă"
+
+#: ktorrent/tools/queuemanagermodel.cpp:240
+msgid "Not queued"
+msgstr "În afara cozii"
+
+#: ktorrent/tools/queuemanagermodel.cpp:249
+#, kde-format
+msgid "%1"
+msgstr "%1"
+
+#: ktorrent/tools/queuemanagermodel.cpp:262
+msgid ""
+"Order of a torrent in the queue.\n"
+"Use drag and drop or the move up and down buttons on the right to change the "
+"order."
+msgstr ""
+"Ordinea torentului în coadă \n"
+" Foloșiți funcția trage și scapă sau butoanele sus și jos din dreapta pentru "
+"a schimba ordinea."
 
 #: ktorrent/view/propertiesdlg.cpp:34
-#, fuzzy
 msgid "Torrent Settings"
-msgstr "Fișiere torent"
+msgstr "Configurări torent"
 
 #: ktorrent/view/torrentsearchbar.cpp:47
 #, fuzzy
@@ -807,11 +785,11 @@ msgstr "Încărcat"
 #: plugins/infowidget/chunkdownloadmodel.cpp:200
 #: plugins/infowidget/peerviewmodel.cpp:257
 msgid "Down Speed"
-msgstr "Viteză descărcare"
+msgstr "Viteză desc."
 
 #: ktorrent/view/viewmodel.cpp:494 plugins/infowidget/peerviewmodel.cpp:258
 msgid "Up Speed"
-msgstr "Viteză încărcare"
+msgstr "Viteză înc."
 
 #: ktorrent/view/viewmodel.cpp:495
 msgid "Time Left"
@@ -828,28 +806,27 @@ msgstr "Descărcători"
 #: ktorrent/view/viewmodel.cpp:499
 #, no-c-format
 msgid "% Complete"
-msgstr "% Complet"
+msgstr "% complet"
 
 #: ktorrent/view/viewmodel.cpp:500
 msgid "Share Ratio"
-msgstr "Rata de partajare"
+msgstr "Rată partajare"
 
 #: ktorrent/view/viewmodel.cpp:501
 msgid "Time Downloaded"
-msgstr "Timp descărcare"
+msgstr "Timp desc."
 
 #: ktorrent/view/viewmodel.cpp:502
 msgid "Time Seeded"
-msgstr "Timp încărcare"
+msgstr "Timp înc."
 
 #: ktorrent/view/viewmodel.cpp:503
 msgid "Location"
 msgstr "Locație"
 
 #: ktorrent/view/viewmodel.cpp:504
-#, fuzzy
 msgid "Added"
-msgstr "Adaugă flux"
+msgstr "Adăugat"
 
 #: ktorrent/view/viewmodel.cpp:512
 msgid "How much data we have downloaded of the torrent"
@@ -924,9 +901,8 @@ msgid "The location of the torrent's data on disk"
 msgstr "Locația datelor torentului pe disc"
 
 #: ktorrent/view/viewmodel.cpp:526
-#, fuzzy
 msgid "When this torrent was added"
-msgstr "Niciun torent încărcat."
+msgstr "Cînd a fost adăugat acest torent"
 
 #: ktorrent/view/viewmodel.cpp:575
 #, kde-format
@@ -935,16 +911,16 @@ msgstr "%1<br>Url: <b>%2</b>"
 
 #: ktorrent/view/viewmodel.cpp:581
 msgid "<br/><br/>Unable to contact a tracker."
-msgstr ""
+msgstr "<br/><br/>Nu a putut fi contactat niciun tracker."
 
 #: ktorrent/view/scanextender.cpp:46
 msgid "Checked %v of %m chunks"
-msgstr ""
+msgstr "%v din %m bucăți verificate"
 
 #: ktorrent/view/scanextender.cpp:128
 #, kde-format
 msgid "<font color=\"red\">%1</font>"
-msgstr ""
+msgstr "<font color=\"red\">%1</font>"
 
 #. i18n: file: ktorrent/kttorrentactivityui.rc:75
 #. i18n: ectx: Menu (ColumnsMenu)
@@ -953,76 +929,67 @@ msgid "Columns"
 msgstr "Coloane"
 
 #: ktorrent/view/view.cpp:133
-#, fuzzy
 msgctxt "@action Start all selected torrents in the current tab"
 msgid "Start"
 msgstr "Pornește"
 
 #: ktorrent/view/view.cpp:134
 msgid "Start all selected torrents in the current tab"
-msgstr "Pornește toate torentele alese în fila curentă"
+msgstr "Pornește toate torentele alese din fila curentă"
 
 #: ktorrent/view/view.cpp:139
-#, fuzzy
 msgctxt "@action Force start all selected torrents in the current tab"
 msgid "Force Start"
-msgstr "Pornește"
+msgstr "Forțează pornirea"
 
 #: ktorrent/view/view.cpp:140
-#, fuzzy
 msgid "Force start all selected torrents in the current tab"
-msgstr "Pornește toate torentele alese în fila curentă"
+msgstr "Pornește forțat toate torentele alese din fila curentă"
 
 #: ktorrent/view/view.cpp:144
-#, fuzzy
 msgctxt "@action Stop all selected torrents in the current tab"
 msgid "Stop"
 msgstr "Oprește"
 
 #: ktorrent/view/view.cpp:145
 msgid "Stop all selected torrents in the current tab"
-msgstr "Oprește toate torentele alese în fila curentă"
+msgstr "Oprește toate torentele alese din fila curentă"
 
 #: ktorrent/view/view.cpp:150
-#, fuzzy
 msgctxt "@action Pause all selected torrents in the current tab"
 msgid "Pause"
 msgstr "Întrerupe"
 
 #: ktorrent/view/view.cpp:151
-#, fuzzy
 msgid "Pause all selected torrents in the current tab"
-msgstr "Pornește toate torentele alese în fila curentă"
+msgstr "Întrerupe toate torentele alese din fila curentă"
 
 #: ktorrent/view/view.cpp:155
-#, fuzzy
 msgctxt "@action Remove all selected torrents in the current tab"
 msgid "Remove"
 msgstr "Elimină"
 
 #: ktorrent/view/view.cpp:156
 msgid "Remove all selected torrents in the current tab"
-msgstr "Elimină toate torentele alese în fila curentă"
+msgstr "Elimină toate torentele alese din fila curentă"
 
 #: ktorrent/view/view.cpp:161
-#, fuzzy
 msgctxt "@action Start all torrents in the current tab"
 msgid "Start All"
 msgstr "Pornește toate"
 
 #: ktorrent/view/view.cpp:162
 msgid "Start all torrents in the current tab"
-msgstr "Pornește toate torentele în fila curentă"
+msgstr "Pornește toate torentele din fila curentă"
 
 #: ktorrent/view/view.cpp:167
-#, fuzzy
 msgctxt "@action Stop all torrents in the current tab"
 msgid "Stop All"
 msgstr "Oprește toate"
 
 #: ktorrent/view/view.cpp:168
 msgid "Stop all torrents in the current tab"
-msgstr "Oprește toate torentele în fila curentă"
+msgstr "Oprește toate torentele din fila curentă"
 
 #: ktorrent/view/view.cpp:173
 msgid "Remove Torrent and Data"
@@ -1050,11 +1017,11 @@ msgstr "Previzualizare"
 
 #: ktorrent/view/view.cpp:199
 msgid "Data Directory"
-msgstr "Director date"
+msgstr "Dosar cu date"
 
 #: ktorrent/view/view.cpp:203
 msgid "Temporary Directory"
-msgstr "Director temporar"
+msgstr "Dosar temporar"
 
 #: ktorrent/view/view.cpp:207
 msgid "Move Data"
@@ -1124,13 +1091,12 @@ msgid "Keep Data"
 msgstr "Păstrare date"
 
 #: ktorrent/view/view.cpp:496
-#, fuzzy
 msgid ""
 "You will lose all the downloaded data of the following torrents. Are you "
 "sure you want to do this?"
 msgstr ""
-"O să pierdeți toate datele descărcate. Sunteți sigur că doriți să faceți "
-"asta?"
+"Veți pierde toate datele descărcate ale următoarelor torente. Sigur doriți "
+"să faceți asta?"
 
 #: ktorrent/view/view.cpp:497
 msgid "Remove Torrent"
@@ -1170,13 +1136,13 @@ msgstr ""
 "este deja utilizat de către o altă aplicație."
 
 #: ktorrent/core.cpp:192
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the UDP port %1 is already "
 "in use by another program."
 msgstr ""
-"KTorrent nu poate accepta conexiuni deoarece intervalul de porturi %1 - %2 "
-"este deja utilizat de către o altă aplicație."
+"KTorrent nu poate accepta conexiuni deoarece portul UDP %1 este deja "
+"utilizat de către o altă aplicație."
 
 #: ktorrent/core.cpp:305
 #, kde-format
@@ -1187,7 +1153,7 @@ msgstr ""
 
 #: ktorrent/core.cpp:1016
 msgid "KTorrent is running one or more torrents"
-msgstr "KTorrent utilizează unul sau mai multe torente."
+msgstr "KTorrent rulează unul sau mai multe torente"
 
 #: ktorrent/core.cpp:1103
 #, kde-format
@@ -1201,11 +1167,11 @@ msgid ""
 "Do you want to recreate them, or do you want to not download them?"
 msgstr ""
 "Cîteva fișiere de date ale torentului „%1” lipsesc. \n"
-"Doriți să le recreem sau să renunțați la descărcarea lor?"
+"Doriți să le creați din nou sau renunțați la descărcarea lor?"
 
 #: ktorrent/core.cpp:1215 ktorrent/core.cpp:1226 ktorrent/core.cpp:1239
 msgid "Data files are missing"
-msgstr "Fișierele de date lipsesc"
+msgstr "Fișiere de date lipsesc"
 
 #: ktorrent/core.cpp:1225
 #, kde-format
@@ -1265,88 +1231,6 @@ msgid ""
 "optimum results enable DHT."
 msgstr ""
 
-#: ktorrent/gui.cpp:270 ktorrent/gui.cpp:285
-msgid "Open Location"
-msgstr "Deschidere locație"
-
-#: ktorrent/gui.cpp:402
-msgid "Create a new torrent"
-msgstr "Creează un torent nou"
-
-#: ktorrent/gui.cpp:404
-msgid "Open a torrent"
-msgstr "Deschide un torent"
-
-#: ktorrent/gui.cpp:407
-msgid "Open Silently"
-msgstr "Deschidere silențioasă"
-
-#: ktorrent/gui.cpp:408
-msgid "Open a torrent without asking any questions"
-msgstr "Deschide torentele fără a pune alte întrebări"
-
-#: ktorrent/gui.cpp:423
-msgid "Open URL"
-msgstr "Deschide URL"
-
-#: ktorrent/gui.cpp:424
-#, fuzzy
-msgid "Open a URL which points to a torrent, magnet links are supported"
-msgstr "Deschide un URL ce indică spre un torent"
-
-#: ktorrent/gui.cpp:429 plugins/ipfilter/ipblockingprefpage.cpp:35
-#: plugins/ipfilter/ipfilterplugin.cpp:62
-#: plugins/ipfilter/ipfilterplugin.cpp:75
-msgid "IP Filter"
-msgstr "Filtru IP"
-
-#: ktorrent/gui.cpp:430
-msgid "Show the list of blocked IP addresses"
-msgstr "Arată lista adreselor IP blocate"
-
-#: ktorrent/gui.cpp:435
-msgid "Import Torrent"
-msgstr "Import torente"
-
-#: ktorrent/gui.cpp:436
-msgid "Import a torrent"
-msgstr "Importă un torent"
-
-#: ktorrent/gui.cpp:442
-msgid "Import KDE3 Torrents"
-msgstr "Import torente KDE3"
-
-#: ktorrent/gui.cpp:443
-msgid "Import all torrents from the KDE3 version of KTorrent"
-msgstr "Importă toate torentele din versiunea KDE3 a KTorrent"
-
-#: ktorrent/gui.cpp:450
-msgid "Show/Hide KTorrent"
-msgstr "Arată/ascunde KTorrent"
-
-#: ktorrent/ipfilterwidget.cpp:53
-msgid "IP Filter List"
-msgstr "Listă de filtre IP"
-
-#: ktorrent/ipfilterwidget.cpp:107
-#, fuzzy, kde-format
-msgid ""
-"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
-"XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
-"ranges like '200.10.10.0-200.10.10.40'."
-msgstr ""
-"Adresă invalidă de IP %1. Trebuie să introduceți o adresa IP în formatul XXX."
-"XXX.XXX.XXX'. Puteți deasemenea folosi asteriscuri pentru intervale, ca de "
-"exemplu '127.0.0.*'."
-
-#: ktorrent/ipfilterwidget.cpp:135
-msgid "Choose a file"
-msgstr "Alegeți un fișier"
-
-#: ktorrent/ipfilterwidget.cpp:147
-msgid "Choose a filename to save under"
-msgstr "Alegeți un fișier pentru a salva"
-
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
 #: ktorrent/main.cpp:94 plugins/search/webview.cpp:175 rc.cpp:515
@@ -1396,11 +1280,11 @@ msgstr "Modul statistică"
 
 #: ktorrent/main.cpp:106
 msgid "Christian Weilbach"
-msgstr ""
+msgstr "Christian Weilbach"
 
 #: ktorrent/main.cpp:106
 msgid "kio-magnet"
-msgstr ""
+msgstr "kio-magnet"
 
 #: ktorrent/main.cpp:108
 msgid "Mladen Babic"
@@ -1675,7 +1559,7 @@ msgstr ""
 
 #: ktorrent/main.cpp:144
 msgid "Leo Trubach"
-msgstr ""
+msgstr "Leo Trubach"
 
 #: ktorrent/main.cpp:144
 msgid "Patch to add support for IP ranges in IP filter dialog"
@@ -1683,7 +1567,7 @@ msgstr ""
 
 #: ktorrent/main.cpp:145
 msgid "Andrei Barbu"
-msgstr ""
+msgstr "Andrei Barbu"
 
 #: ktorrent/main.cpp:145
 #, fuzzy
@@ -1692,7 +1576,7 @@ msgstr "Niciun torent încărcat."
 
 #: ktorrent/main.cpp:147
 msgid "Jonas Lundqvist"
-msgstr ""
+msgstr "Jonas Lundqvist"
 
 #: ktorrent/main.cpp:147
 msgid "Feature to disable authentication in the webinterface"
@@ -1700,7 +1584,7 @@ msgstr ""
 
 #: ktorrent/main.cpp:148
 msgid "Jaroslaw Swierczynski"
-msgstr ""
+msgstr "Jaroslaw Swierczynski"
 
 #: ktorrent/main.cpp:148
 msgid "Exclusion patterns in the syndication plugin"
@@ -1708,7 +1592,7 @@ msgstr ""
 
 #: ktorrent/main.cpp:149
 msgid "Alexey Shildyakov "
-msgstr ""
+msgstr "Alexey Shildyakov "
 
 #: ktorrent/main.cpp:149
 #, fuzzy
@@ -1728,19 +1612,17 @@ msgid "Set max download speed"
 msgstr "Viteza maximă de descărcare"
 
 #: ktorrent/trayicon.cpp:149
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "<table><tr><td>Download&nbsp;speed:</td><td><b>%1</b></td></"
 "tr><tr><td>Upload&nbsp;speed:</td><td><b>%2</b></td></tr><tr><td>Received:</"
 "td><td><b>%3</b></td></tr><tr><td>Transmitted:</td><td><b>%4</b></td></tr></"
 "table>"
 msgstr ""
-"<table cellpadding='2' cellspacing='2' align='center'><tr><td><b>Viteză:</"
-"b></td><td></td></tr><tr><td>Descărcare: <font color='#1c9a1c'>%1</font></"
-"td><td>Încărcare: <font color='#990000'>%2</font></td></"
-"tr><tr><td><b>Transfer:</b></td><td></td></tr><tr><td>Descărcare: <font "
-"color='#1c9a1c'>%3</font></td><td>Încărcare: <font color='#990000'>%4</"
-"font></td></tr></table>"
+"<table><tr><td>Viteză&nbsp;descărcare:</td><td><b>%1</b></td></"
+"tr><tr><td>Viteză&nbsp;încărcare:</td><td><b>%2</b></td></tr><tr><td>Primit:"
+"</td><td><b>%3</b></td></tr><tr><td>Trimis:</td><td><b>%4</b></td></tr></"
+"table>"
 
 #: ktorrent/trayicon.cpp:194
 #, kde-format
@@ -1800,9 +1682,9 @@ msgstr ""
 "încărcarea."
 
 #: ktorrent/trayicon.cpp:290
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cannot start <b>%1</b>: <br>"
-msgstr "Nu am putut porni <b>%1</b> : <br>"
+msgstr "<b>%1</b> nu poate fi pornit: <br>"
 
 #: ktorrent/trayicon.cpp:297
 #, kde-format
@@ -1871,7 +1753,7 @@ msgstr "Controlul care gestionează coada torentului"
 #: ktorrent/torrentactivity.cpp:98
 #: plugins/magnetgenerator/magnetgeneratorplugin.cpp:143
 msgid "Magnet"
-msgstr ""
+msgstr "Magnet"
 
 #: ktorrent/torrentactivity.cpp:99
 #, fuzzy
@@ -1895,38 +1777,117 @@ msgid "Stop all torrents"
 msgstr "Oprește toate torentele"
 
 #: ktorrent/torrentactivity.cpp:124
-#, fuzzy
 msgid "Suspend Torrents"
-msgstr "Întrerupe KTorrent"
+msgstr "Suspendă torentele"
 
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:109
 #. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
 #: ktorrent/torrentactivity.cpp:126 rc.cpp:1547
-#, fuzzy
 msgid "Suspend all running torrents"
-msgstr "Întrerupe toate torentele active"
+msgstr "Suspendă toate torentele ce rulează"
 
 #: ktorrent/torrentactivity.cpp:131
 msgid "Group View Visible"
-msgstr ""
+msgstr "Vizualizare pe grupuri"
 
 #: ktorrent/torrentactivity.cpp:132
 msgid "Show or hide the group view"
-msgstr ""
+msgstr "Arată sau ascunde vizualizarea pe grupuri"
 
 #: ktorrent/torrentactivity.cpp:136
-#, fuzzy
 msgid "Filter Torrents"
-msgstr "Toate torentele"
+msgstr "Filtrează torente"
 
 #: ktorrent/torrentactivity.cpp:137
 msgid "Filter torrents based on filter string"
-msgstr ""
+msgstr "Filtrează torentele pe baza unui șir de filtrare"
 
 #: ktorrent/torrentactivity.cpp:142
 #, fuzzy
 msgid "Switch To View"
 msgstr "Tracker"
+
+#: ktorrent/gui.cpp:272 ktorrent/gui.cpp:287
+msgid "Open Location"
+msgstr "Deschidere locație"
+
+#: ktorrent/gui.cpp:404
+msgid "Create a new torrent"
+msgstr "Creează un torent nou"
+
+#: ktorrent/gui.cpp:406
+msgid "Open a torrent"
+msgstr "Deschide un torent"
+
+#: ktorrent/gui.cpp:409
+msgid "Open Silently"
+msgstr "Deschidere silențioasă"
+
+#: ktorrent/gui.cpp:410
+msgid "Open a torrent without asking any questions"
+msgstr "Deschide torentele fără a pune alte întrebări"
+
+#: ktorrent/gui.cpp:425
+msgid "Open URL"
+msgstr "Deschide URL"
+
+#: ktorrent/gui.cpp:426
+#, fuzzy
+msgid "Open a URL which points to a torrent, magnet links are supported"
+msgstr "Deschide un URL ce indică spre un torent"
+
+#: ktorrent/gui.cpp:431 plugins/ipfilter/ipblockingprefpage.cpp:35
+#: plugins/ipfilter/ipfilterplugin.cpp:62
+#: plugins/ipfilter/ipfilterplugin.cpp:75
+msgid "IP Filter"
+msgstr "Filtru IP"
+
+#: ktorrent/gui.cpp:432
+msgid "Show the list of blocked IP addresses"
+msgstr "Arată lista adreselor IP blocate"
+
+#: ktorrent/gui.cpp:437
+msgid "Import Torrent"
+msgstr "Import torente"
+
+#: ktorrent/gui.cpp:438
+msgid "Import a torrent"
+msgstr "Importă un torent"
+
+#: ktorrent/gui.cpp:444
+msgid "Import KDE3 Torrents"
+msgstr "Import torente KDE3"
+
+#: ktorrent/gui.cpp:445
+msgid "Import all torrents from the KDE3 version of KTorrent"
+msgstr "Importă toate torentele din versiunea KDE3 a KTorrent"
+
+#: ktorrent/gui.cpp:452
+msgid "Show/Hide KTorrent"
+msgstr "Arată/ascunde KTorrent"
+
+#: ktorrent/ipfilterwidget.cpp:53
+msgid "IP Filter List"
+msgstr "Listă de filtre IP"
+
+#: ktorrent/ipfilterwidget.cpp:111
+#, kde-format
+msgid ""
+"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
+"XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
+"ranges like '200.10.10.0-200.10.10.40'."
+msgstr ""
+"Adresa IP <b>%1</b>nu este validă. Adresele IP trebuie să aibă forma „XXX."
+"XXX.XXX.XXX”.<br/><br/>Deasemenea, puteți folosi caractere speciale ca "
+"„127.0.0.*” sau să specificați intervale ca „200.10.10.0-200.10.10.40”."
+
+#: ktorrent/ipfilterwidget.cpp:139
+msgid "Choose a file"
+msgstr "Alegeți un fișier"
+
+#: ktorrent/ipfilterwidget.cpp:151
+msgid "Choose a filename to save under"
+msgstr "Alegeți un fișier pentru a salva"
 
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"
@@ -2029,12 +1990,12 @@ msgstr ""
 #: libktcore/torrent/basicjobprogresswidget.cpp:53
 #, kde-format
 msgid "%1: %2<br/>%3: %4"
-msgstr ""
+msgstr "%1: %2<br/>%3: %4"
 
 #: libktcore/torrent/basicjobprogresswidget.cpp:68
-#, fuzzy, kde-format
+#, kde-format
 msgid "Warning: %1"
-msgstr "Deschidere %1"
+msgstr "Avertizare: %1"
 
 #: libktcore/torrent/queuemanager.cpp:114
 #, kde-format
@@ -2065,7 +2026,7 @@ msgstr ""
 
 #: libktcore/torrent/queuemanager.cpp:122
 msgid "Limits reached."
-msgstr ""
+msgstr "Limite atinse."
 
 #: libktcore/torrent/queuemanager.cpp:148
 msgid ""
@@ -2081,36 +2042,31 @@ msgid "Insufficient disk space for %1"
 msgstr "Spațiu pe disc insuficient pentru %1"
 
 #: libktcore/torrent/queuemanager.cpp:241
-#, fuzzy
 msgid ""
 "Not enough disk space for the following torrents. Do you want to start them "
 "anyway?"
 msgstr ""
-"Nu există destul spațiu pe disc pentru următoarele torente. Doriți să le "
-"pornim oricum?"
+"Nu există destul spațiu pe disc pentru următoarele torente. Le porniți "
+"oricum?"
 
 #: libktcore/torrent/queuemanager.cpp:280
-#, fuzzy
 msgid ""
 "The following torrents have reached their maximum seed time. Do you want to "
 "start them anyway?"
 msgstr ""
-"Următoarele torente au atins timpul maxim de încărcare. Doriți sa le pornim "
-"oricum?"
+"Următoarele torente au atins timpul maxim de încărcare. Le porniți oricum?"
 
 #: libktcore/torrent/queuemanager.cpp:309
-#, fuzzy
 msgid ""
 "The following torrents have reached their maximum share ratio. Do you want "
 "to start them anyway?"
 msgstr ""
-"Următoarele torente au atins rata maximă de încărcare. Doriți să le pornim "
-"oricum?"
+"Următoarele torente au atins rata maximă de încărcare. Le porniți oricum?"
 
 #: libktcore/torrent/queuemanager.cpp:737
-#, fuzzy, kde-format
+#, kde-format
 msgid "Error starting torrent %1: %2"
-msgstr "Eroare la pornirea torentului %1 : %2"
+msgstr "Eroare la pornirea torentului %1: %2"
 
 #: libktcore/torrent/queuemanager.cpp:739
 #: libktcore/torrent/queuemanager.cpp:755
@@ -2118,9 +2074,9 @@ msgid "Error"
 msgstr "Eroare"
 
 #: libktcore/torrent/queuemanager.cpp:753
-#, fuzzy, kde-format
+#, kde-format
 msgid "Error stopping torrent %1: %2"
-msgstr "Eroare la oprirea torentului %1 : %2"
+msgstr "Eroare la oprirea torentului %1: %2"
 
 #: libktcore/util/mmapfile.cpp:164
 msgid "Cannot write beyond end of the mmap buffer."
@@ -2173,9 +2129,8 @@ msgstr "Torentul ales nu este disponibil."
 
 #: plugins/bwscheduler/bwprefpage.cpp:27
 #: plugins/bwscheduler/bwschedulerplugin.cpp:87
-#, fuzzy
 msgid "Scheduler"
-msgstr "Încarcă programare"
+msgstr "Planificator"
 
 #: plugins/bwscheduler/bwschedulerplugin.cpp:119
 #: plugins/infowidget/infowidgetplugin.cpp:96
@@ -2198,21 +2153,19 @@ msgid "Cannot open file %1: %2"
 msgstr "Nu am putut deschide fișierul %1: %2"
 
 #: plugins/bwscheduler/schedule.cpp:156 plugins/bwscheduler/schedule.cpp:162
-#, fuzzy, kde-format
+#, kde-format
 msgid "The file %1 is corrupted or not a proper KTorrent schedule file."
 msgstr "Fișierul %1 este corupt sau nu o corespunde cu o programare KTorrent."
 
 #. i18n: file: plugins/bwscheduler/ktbwschedulerpluginui.rc:4
 #. i18n: ectx: ToolBar (SchedulerToolbar)
 #: plugins/bwscheduler/scheduleeditor.cpp:41 rc.cpp:1517
-#, fuzzy
 msgid "Bandwidth Schedule"
-msgstr "Programare lățime de bandă"
+msgstr "Planificare lățime de bandă"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:44
-#, fuzzy
 msgid "Edit the bandwidth schedule"
-msgstr "Programare lățime de bandă"
+msgstr "Modifică planificarea lățimii de bandă"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:87
 msgid "Load Schedule"
@@ -2239,14 +2192,12 @@ msgid "Clear Schedule"
 msgstr "Curăță programarea"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:95
-#, fuzzy
 msgid "Scheduler Active"
-msgstr "Culoare linie programare:"
+msgstr "Planificator activ"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:96
-#, fuzzy
 msgid "Activate or deactivate the scheduler"
-msgstr "Adaugă un element nou la programare"
+msgstr "Activează sau dezactivează planificatorul"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:125
 #: plugins/bwscheduler/scheduleeditor.cpp:141
@@ -2254,17 +2205,15 @@ msgid "KTorrent scheduler files"
 msgstr "Fișiere programate de KTorrent"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:194
-#, fuzzy
 msgid ""
 "This item conflicts with another item in the schedule, we cannot change it."
 msgstr ""
-"Acest element e în conflict cu un alt element al programării, nu poate fi "
-"modificat !"
+"Acest element e în conflict cu un alt element al planificării, nu poate fi "
+"modificat."
 
 #: plugins/bwscheduler/schedulegraphicsitem.cpp:88
-#, fuzzy
 msgid "Suspended"
-msgstr "Viteză"
+msgstr "Suspendat"
 
 #: plugins/bwscheduler/schedulegraphicsitem.cpp:95
 #, kde-format
@@ -2276,33 +2225,31 @@ msgstr ""
 "%2 Încărcare"
 
 #: plugins/bwscheduler/weekscene.cpp:75
-#, fuzzy
 msgid "Current schedule: suspended"
-msgstr "Program curent: pauză"
+msgstr "Planificare curentă: suspendată"
 
 #: plugins/bwscheduler/weekscene.cpp:77
-#, fuzzy, kde-format
+#, kde-format
 msgid "Current schedule: %1/s download, %2/s upload"
-msgstr "Program curent: %1 KiO/s descărcare, %2 KiO/s încărcare"
+msgstr "Planificare curentă: %1/s descărcare, %2/s încărcare"
 
 #: plugins/bwscheduler/weekscene.cpp:80
-#, fuzzy, kde-format
+#, kde-format
 msgid "Current schedule: unlimited download, %1/s upload"
-msgstr "Program curent: descărcare nelimitată , %1 KiO/s încărcare"
+msgstr "Planificare curentă: descărcare nelimitată, %1/s încărcare"
 
 #: plugins/bwscheduler/weekscene.cpp:82
-#, fuzzy, kde-format
+#, kde-format
 msgid "Current schedule: %1/s download, unlimited upload"
-msgstr "Program curent: %1 KiO/s descărcare, încărcare nelimitată"
+msgstr "Planificare curentă: %1/s descărcare, încărcare nelimitată"
 
 #: plugins/bwscheduler/weekscene.cpp:84
 msgid "Current schedule: unlimited upload and download"
-msgstr "Program curent: încărcare și descărcare nelimitate"
+msgstr "Planificare curentă: încărcare și descărcare nelimitate"
 
 #: plugins/bwscheduler/weekscene.cpp:87
-#, fuzzy
 msgid " (scheduler disabled)"
-msgstr "Fișiere programate de KTorrent"
+msgstr " (planificator dezactivat)"
 
 #: plugins/bwscheduler/weekscene.cpp:108
 msgid "Current schedule:"
@@ -2332,7 +2279,6 @@ msgstr ""
 
 #: plugins/infowidget/iwfilelistmodel.cpp:78
 #: plugins/infowidget/iwfiletreemodel.cpp:90
-#, fuzzy
 msgctxt "@title:column"
 msgid "Preview"
 msgstr "Previzualizare"
@@ -2422,14 +2368,12 @@ msgid "URL"
 msgstr "URL"
 
 #: plugins/infowidget/trackermodel.cpp:151
-#, fuzzy
 msgid "Times Downloaded"
-msgstr "Număr de descărcări:"
+msgstr "Număr de descărcări"
 
 #: plugins/infowidget/trackermodel.cpp:152
-#, fuzzy
 msgid "Next Update"
-msgstr "Următoarea actualizare:"
+msgstr "Următoarea actualizare"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:197
 msgid "Chunk"
@@ -2473,15 +2417,13 @@ msgid "Open"
 msgstr "Deschide"
 
 #: plugins/infowidget/fileview.cpp:116
-#, fuzzy
 msgctxt "Open file with"
 msgid "Open With"
-msgstr "Deschidere silențioasă"
+msgstr "Deschide cu"
 
 #: plugins/infowidget/fileview.cpp:117
-#, fuzzy
 msgid "Check File"
-msgstr "Mută fișier"
+msgstr "Verifică fișierul"
 
 #: plugins/infowidget/fileview.cpp:119
 msgid "Download first"
@@ -2518,19 +2460,16 @@ msgid "Expand Folder Tree"
 msgstr "Expandare ierarhie directoare"
 
 #: plugins/infowidget/fileview.cpp:132
-#, fuzzy
 msgid "File Tree"
-msgstr "Filtru"
+msgstr "Arbore de fișiere"
 
 #: plugins/infowidget/fileview.cpp:134
-#, fuzzy
 msgid "File List"
-msgstr "Fișierul există"
+msgstr "Listă de fișiere"
 
 #: plugins/infowidget/fileview.cpp:144
-#, fuzzy
 msgid "Show Filter"
-msgstr "Filtru nou"
+msgstr "Arată filtrul"
 
 #: plugins/infowidget/fileview.cpp:329
 #, fuzzy
@@ -2548,7 +2487,6 @@ msgstr[2] ""
 "faceți asta ?"
 
 #: plugins/infowidget/infowidgetplugin.cpp:83
-#, fuzzy
 msgctxt "@title:tab"
 msgid "Status"
 msgstr "Stare"
@@ -2558,7 +2496,6 @@ msgid "Displays status information about a torrent"
 msgstr "Arată informații de stare despre torent"
 
 #: plugins/infowidget/infowidgetplugin.cpp:85
-#, fuzzy
 msgctxt "@title:tab"
 msgid "Files"
 msgstr "Fișiere"
@@ -2608,7 +2545,7 @@ msgstr "Afișează toate semințele web ale unui torent"
 
 #: plugins/infowidget/peerviewmodel.cpp:88
 msgid " (µTP)"
-msgstr ""
+msgstr " (µTP)"
 
 #: plugins/infowidget/peerviewmodel.cpp:103
 msgctxt "Choked"
@@ -2651,9 +2588,8 @@ msgid "No"
 msgstr "Nu"
 
 #: plugins/infowidget/peerviewmodel.cpp:254
-#, fuzzy
 msgid "Address"
-msgstr "Adresă IP"
+msgstr "Adresă"
 
 #: plugins/infowidget/peerviewmodel.cpp:255
 msgid "Country"
@@ -2764,12 +2700,10 @@ msgid "The number of download and upload requests"
 msgstr "Numărul cererilor de încărcare și descărcare"
 
 #: plugins/infowidget/peerviewmodel.cpp:289
-#, fuzzy
 msgid "How much data we have downloaded from this peer"
 msgstr "Cîte date am descărcat de la acest partener"
 
 #: plugins/infowidget/peerviewmodel.cpp:290
-#, fuzzy
 msgid "How much data we have uploaded to this peer"
 msgstr "Cîte date am încărcat acestui partener"
 
@@ -2783,18 +2717,17 @@ msgstr "Dacă ne interesează descărcarea de la acest partener"
 
 #: plugins/infowidget/statustab.cpp:108
 msgid "Private"
-msgstr ""
+msgstr "Privat"
 
 #: plugins/infowidget/statustab.cpp:108
 msgid "Public"
-msgstr ""
+msgstr "Public"
 
 #. i18n: file: plugins/infowidget/trackerview.ui:22
 #. i18n: ectx: property (text), widget (KPushButton, m_add_tracker)
 #: plugins/infowidget/trackerview.cpp:88 rc.cpp:1779
-#, fuzzy
 msgid "Add Trackers"
-msgstr "Adaugă tracker"
+msgstr "Adaugă trackere"
 
 #: plugins/infowidget/trackerview.cpp:89
 #, fuzzy
@@ -2806,13 +2739,13 @@ msgid "Several URL's could not be added because they are malformed:"
 msgstr ""
 
 #: plugins/infowidget/trackerview.cpp:128
-#, fuzzy, kde-format
+#, kde-format
 msgid "There already is a tracker named <b>%1</b>."
-msgstr "Există deja un tracker numit <b>%1</b> !"
+msgstr "Există deja un tracker numit <b>%1</b>."
 
 #: plugins/infowidget/trackerview.cpp:130
 msgid "The following duplicate trackers were not added:"
-msgstr ""
+msgstr "Următoarele trackere duplicate nu au fost adăugate:"
 
 #: plugins/infowidget/webseedsmodel.cpp:125
 msgid "Speed"
@@ -2844,12 +2777,11 @@ msgid "Converting..."
 msgstr "Se convertește..."
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:42
-#, fuzzy
 msgid " day"
 msgid_plural " days"
-msgstr[0] " zile"
+msgstr[0] " zi"
 msgstr[1] " zile"
-msgstr[2] " zile"
+msgstr[2] " de zile"
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:67
 #: plugins/ipfilter/ipblockingprefpage.cpp:89
@@ -2865,19 +2797,17 @@ msgid "Status: Not loaded."
 msgstr "Stare: neîncărcat."
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:120
-#, fuzzy
 msgid "Status: Downloading and converting new block list..."
-msgstr "Stare: se descarcă și se convertește lista de blocuri noi ..."
+msgstr "Stare: se descarcă și se convertește lista de blocuri noi..."
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:200
-#, fuzzy
 msgid "No update done yet."
-msgstr "Nici o actualizare efectuată deocamdată !"
+msgstr "Nici o actualizare efectuată deocamdată."
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:204
-#, fuzzy, kde-format
+#, kde-format
 msgid "%1 (Last update attempt failed.)"
-msgstr "%1 (Ultima tentativă de actualizare a eșuat !)"
+msgstr "%1 (Ultima tentativă de actualizare a eșuat.)"
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:218
 msgid "Never"
@@ -2889,7 +2819,7 @@ msgstr "Niciodată"
 #: plugins/ipfilter/downloadandconvertjob.cpp:236
 #, kde-format
 msgid "Automatic update of IP filter failed: %1"
-msgstr ""
+msgstr "Actualizarea automată a filtrului IP a eșuat: %1"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:162
 #, fuzzy, kde-format
@@ -2951,7 +2881,7 @@ msgstr "Vizualizare jurnal"
 
 #: plugins/logviewer/logviewer.cpp:35
 msgid "Log"
-msgstr ""
+msgstr "Jurnal"
 
 #: plugins/logviewer/logviewer.cpp:37
 #, fuzzy
@@ -2960,7 +2890,7 @@ msgstr "Afișează înregistrările de jurnal generate de KTorrent"
 
 #: plugins/logviewer/logviewer.cpp:47
 msgid "Suspend Output"
-msgstr ""
+msgstr "Suspendă ieșirea"
 
 #: plugins/logviewer/logviewer.cpp:127
 msgid "<font color=\"#FF0000\">Logging output suspended</font>"
@@ -2983,7 +2913,7 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_x2)
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.cpp:35 rc.cpp:1920
 msgid "Magnet Generator"
-msgstr ""
+msgstr "Generator magnet"
 
 #: plugins/mediaplayer/mediacontroller.cpp:36
 #: plugins/mediaplayer/mediacontroller.cpp:80
@@ -2997,20 +2927,20 @@ msgid "Playing: <b>%1</b>"
 msgstr "Se derulează: <b>%1</b>"
 
 #: plugins/mediaplayer/mediacontroller.cpp:113
-#, fuzzy, kde-format
+#, kde-format
 msgid "<b>%2</b> - <b>%1</b> (Album: <b>%3</b>)"
-msgstr "Titlu: <b>%1</b><br/>Artist: <b>%2</b><br/>Album: <b>%3</b>"
+msgstr "<b>%2</b> - <b>%1</b> (Album: <b>%3</b>)"
 
 #: plugins/mediaplayer/mediacontroller.cpp:118
-#, fuzzy, kde-format
+#, kde-format
 msgid "<b>%2</b> - <b>%1</b>"
-msgstr "<b>%1</b><br/><br/>%2"
+msgstr "<b>%2</b> - <b>%1</b>"
 
 #: plugins/mediaplayer/mediacontroller.cpp:123
 #: plugins/mediaplayer/mediacontroller.cpp:128
-#, fuzzy, kde-format
+#, kde-format
 msgid "<b>%1</b>"
-msgstr "Url: <b>%1</b>"
+msgstr "<b>%1</b>"
 
 #: plugins/mediaplayer/mediamodel.cpp:90
 msgid "Available"
@@ -3062,14 +2992,13 @@ msgstr "Arată video"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:137
 #: plugins/mediaplayer/playlistwidget.cpp:52
-#, fuzzy
 msgid "Add Media"
-msgstr "Adaugă flux"
+msgstr "Adaugă mediu"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:141
 #: plugins/mediaplayer/playlistwidget.cpp:54
 msgid "Clear Playlist"
-msgstr ""
+msgstr "Curăță lista de redare"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:149
 msgid "Toggle Fullscreen"
@@ -3081,9 +3010,8 @@ msgid "Movie player"
 msgstr "Redare filme"
 
 #: plugins/mediaplayer/mediaview.cpp:101
-#, fuzzy
 msgid "Show incomplete files"
-msgstr "Sari peste fișiere incomplete"
+msgstr "Arată fișierele incomplete"
 
 #. i18n: file: plugins/syndication/feedwidget.ui:128
 #. i18n: ectx: property (text), widget (KPushButton, m_refresh)
@@ -3108,21 +3036,19 @@ msgstr "Titlu"
 
 #: plugins/mediaplayer/playlist.cpp:98
 msgid "Artist"
-msgstr ""
+msgstr "Interpret"
 
 #: plugins/mediaplayer/playlist.cpp:99
 msgid "Album"
-msgstr ""
+msgstr "Album"
 
 #: plugins/mediaplayer/playlist.cpp:100
-#, fuzzy
 msgid "Length"
-msgstr "Stînga"
+msgstr "Durată"
 
 #: plugins/mediaplayer/playlist.cpp:101
-#, fuzzy
 msgid "Year"
-msgstr "Șterge"
+msgstr "An"
 
 #. i18n: file: ktorrent/dialogs/torrentcreatordlg.ui:181
 #. i18n: ectx: property (text), widget (KPushButton, m_remove_tracker)
@@ -3150,14 +3076,12 @@ msgid "Remove"
 msgstr "Elimină"
 
 #: plugins/mediaplayer/playlistwidget.cpp:61
-#, fuzzy
 msgid "Random play order"
-msgstr "Gata de redat"
+msgstr "Ordine de redare aleatorie"
 
 #: plugins/mediaplayer/videowidget.cpp:202
-#, fuzzy
 msgid "KTorrent is playing a video."
-msgstr "KTorrent nu rulează !"
+msgstr "KTorrent redă un video."
 
 #: plugins/scanfolder/scanfolder.cpp:69 plugins/scanfolder/scanthread.cpp:194
 #: plugins/scanfolder/torrentloadqueue.cpp:166
@@ -3169,10 +3093,9 @@ msgstr "încărcat"
 #: plugins/scanfolder/scanfolderplugin.cpp:64
 #: plugins/scanfolder/scanfolderplugin.cpp:77
 #: plugins/scanfolder/scanfolderprefpage.cpp:37
-#, fuzzy
 msgctxt "plugin name"
 msgid "Scan Folder"
-msgstr "Citește directorul"
+msgstr "Citește dosarul"
 
 #. i18n: file: plugins/scripting/ktscriptingpluginui.rc:4
 #. i18n: ectx: ToolBar (ScriptingToolbar)
@@ -3953,7 +3876,7 @@ msgstr ""
 
 #: kio-magnet/kio_magnet.cpp:295
 msgid "You cannot write to magnet resources."
-msgstr ""
+msgstr "Nu puteți scrie în resurse magnet."
 
 #: kio-magnet/kio_magnet.cpp:316
 #, kde-format
@@ -3997,9 +3920,8 @@ msgid "The found value (%1) for the hash is neither 32 nor 40 chars long."
 msgstr ""
 
 #: kio-magnet/dbushandler.cpp:563
-#, fuzzy
 msgid "Torrent has been removed from KTorrent."
-msgstr "Torentul a fost oprit.<br />"
+msgstr "Torentul a fost eliminat din KTorrent."
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"

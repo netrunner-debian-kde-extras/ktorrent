@@ -5,7 +5,7 @@
 # Engin Çağatay <engincagatay@yahoo.com>, 2006.
 # Yavuz BAYRAK, 2007.
 # Serdar Soytetir <tulliana@gmail.com>, 2007, 2008, 2009.
-# serdar soytetir <tulliana@gmail.com>, 2007.
+# serdar soytetir <tulliana@gmail.com>, 2007, 2012.
 # Akın Ömeroğlu <akin@omeroglu.net>, 2007.
 # Serhat Demirkol <serhat_demirkol@yahoo.com>, 2009.
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2011.
@@ -13,15 +13,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-02-01 11:49+0100\n"
-"PO-Revision-Date: 2011-04-18 11:08+0300\n"
-"Last-Translator: H. İbrahim Güngör <ibrahim@pardus.org.tr>\n"
+"POT-Creation-Date: 2012-04-10 17:33+0200\n"
+"PO-Revision-Date: 2012-04-17 21:39+0300\n"
+"Last-Translator: Serdar Soytetir <tulliana@gmail.com>\n"
 "Language-Team: Turkish <kde-i18n-doc@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ktmagnetdownloader/magnetdownloader.cpp:44
@@ -453,7 +453,7 @@ msgid "Open an URL"
 msgstr "Bir Adres Aç"
 
 #: ktorrent/dialogs/pastedialog.cpp:106
-#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:337
+#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:339
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "Geçersiz Adres: %1"
@@ -584,7 +584,7 @@ msgstr "BitTorrent"
 msgid "Magnet Link"
 msgstr "Magnet Bağlandı"
 
-#: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:194
+#: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:197
 #: ktorrent/trayicon.cpp:160 plugins/infowidget/trackermodel.cpp:148
 #: plugins/infowidget/webseedsmodel.cpp:127
 msgid "Status"
@@ -629,51 +629,6 @@ msgstr ""
 #, fuzzy
 msgid "Remove Magnet"
 msgstr "Torrenti Kaldır"
-
-#: ktorrent/tools/queuemanagermodel.cpp:190
-msgid "Order"
-msgstr "Sıra"
-
-#: ktorrent/tools/queuemanagermodel.cpp:192 ktorrent/view/viewmodel.cpp:489
-msgid "Name"
-msgstr "İsim"
-
-#: ktorrent/tools/queuemanagermodel.cpp:196
-msgid "Time Stalled"
-msgstr "Zaman Duraklatıldı"
-
-#: ktorrent/tools/queuemanagermodel.cpp:198
-#: plugins/infowidget/iwfilelistmodel.cpp:77
-#: plugins/infowidget/iwfiletreemodel.cpp:89
-msgid "Priority"
-msgstr "Öncelik"
-
-#: ktorrent/tools/queuemanagermodel.cpp:233
-msgid "Running"
-msgstr "Çalışıyor"
-
-#: ktorrent/tools/queuemanagermodel.cpp:235
-msgid "Queued"
-msgstr "Kuyruğa eklendi"
-
-#: ktorrent/tools/queuemanagermodel.cpp:237
-msgid "Not queued"
-msgstr "Kuyruğa eklenmemiş"
-
-#: ktorrent/tools/queuemanagermodel.cpp:246
-#, kde-format
-msgid "%1"
-msgstr "%1"
-
-#: ktorrent/tools/queuemanagermodel.cpp:259
-msgid ""
-"Order of a torrent in the queue.\n"
-"Use drag and drop or the move up and down buttons on the right to change the "
-"order."
-msgstr ""
-"Bir torrentin kuyruktaki sırası.\n"
-"Sırayı değiştirmek için torrenti sürükleyip bırakın veya sağdaki yukarı-"
-"aşağı düğmelerini kullanın."
 
 #: ktorrent/tools/queuemanagerwidget.cpp:57
 #: plugins/search/searchactivity.cpp:81 plugins/search/searchtoolbar.cpp:70
@@ -770,6 +725,51 @@ msgstr "Kuyruğa eklenmemiş"
 #, fuzzy
 msgid "Show all not queued torrents"
 msgstr "Tüm torrentleri durdur"
+
+#: ktorrent/tools/queuemanagermodel.cpp:193
+msgid "Order"
+msgstr "Sıra"
+
+#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:489
+msgid "Name"
+msgstr "İsim"
+
+#: ktorrent/tools/queuemanagermodel.cpp:199
+msgid "Time Stalled"
+msgstr "Zaman Duraklatıldı"
+
+#: ktorrent/tools/queuemanagermodel.cpp:201
+#: plugins/infowidget/iwfilelistmodel.cpp:77
+#: plugins/infowidget/iwfiletreemodel.cpp:89
+msgid "Priority"
+msgstr "Öncelik"
+
+#: ktorrent/tools/queuemanagermodel.cpp:236
+msgid "Running"
+msgstr "Çalışıyor"
+
+#: ktorrent/tools/queuemanagermodel.cpp:238
+msgid "Queued"
+msgstr "Kuyruğa eklendi"
+
+#: ktorrent/tools/queuemanagermodel.cpp:240
+msgid "Not queued"
+msgstr "Kuyruğa eklenmemiş"
+
+#: ktorrent/tools/queuemanagermodel.cpp:249
+#, kde-format
+msgid "%1"
+msgstr "%1"
+
+#: ktorrent/tools/queuemanagermodel.cpp:262
+msgid ""
+"Order of a torrent in the queue.\n"
+"Use drag and drop or the move up and down buttons on the right to change the "
+"order."
+msgstr ""
+"Bir torrentin kuyruktaki sırası.\n"
+"Sırayı değiştirmek için torrenti sürükleyip bırakın veya sağdaki yukarı-"
+"aşağı düğmelerini kullanın."
 
 #: ktorrent/view/propertiesdlg.cpp:34
 #, fuzzy
@@ -942,7 +942,6 @@ msgid "Columns"
 msgstr "Sütunlar"
 
 #: ktorrent/view/view.cpp:133
-#, fuzzy
 msgctxt "@action Start all selected torrents in the current tab"
 msgid "Start"
 msgstr "Başlat"
@@ -952,10 +951,9 @@ msgid "Start all selected torrents in the current tab"
 msgstr "Mevcut sekmedeki seçili tüm torrentleri başlat"
 
 #: ktorrent/view/view.cpp:139
-#, fuzzy
 msgctxt "@action Force start all selected torrents in the current tab"
 msgid "Force Start"
-msgstr "Başlat"
+msgstr "Başlatmaya Zorla"
 
 #: ktorrent/view/view.cpp:140
 #, fuzzy
@@ -963,7 +961,6 @@ msgid "Force start all selected torrents in the current tab"
 msgstr "Mevcut sekmedeki seçili tüm torrentleri başlat"
 
 #: ktorrent/view/view.cpp:144
-#, fuzzy
 msgctxt "@action Stop all selected torrents in the current tab"
 msgid "Stop"
 msgstr "Durdur"
@@ -973,7 +970,6 @@ msgid "Stop all selected torrents in the current tab"
 msgstr "Mevcut sekmedeki seçili tüm torrentleri durdur"
 
 #: ktorrent/view/view.cpp:150
-#, fuzzy
 msgctxt "@action Pause all selected torrents in the current tab"
 msgid "Pause"
 msgstr "Duraklat"
@@ -1249,87 +1245,6 @@ msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
 msgstr ""
-
-#: ktorrent/gui.cpp:270 ktorrent/gui.cpp:285
-msgid "Open Location"
-msgstr "Konum Aç"
-
-#: ktorrent/gui.cpp:402
-msgid "Create a new torrent"
-msgstr "Yeni bir torrent oluştur"
-
-#: ktorrent/gui.cpp:404
-msgid "Open a torrent"
-msgstr "Bir torrent aç"
-
-#: ktorrent/gui.cpp:407
-msgid "Open Silently"
-msgstr "Sessizce Aç"
-
-#: ktorrent/gui.cpp:408
-msgid "Open a torrent without asking any questions"
-msgstr "Hiçbir soru sormadan bir torrent aç"
-
-#: ktorrent/gui.cpp:423
-msgid "Open URL"
-msgstr "Adres Aç"
-
-#: ktorrent/gui.cpp:424
-#, fuzzy
-msgid "Open a URL which points to a torrent, magnet links are supported"
-msgstr "Bir torrenti işaret eden bir adres aç"
-
-#: ktorrent/gui.cpp:429 plugins/ipfilter/ipblockingprefpage.cpp:35
-#: plugins/ipfilter/ipfilterplugin.cpp:62
-#: plugins/ipfilter/ipfilterplugin.cpp:75
-msgid "IP Filter"
-msgstr "IP Filtreleyici"
-
-#: ktorrent/gui.cpp:430
-msgid "Show the list of blocked IP addresses"
-msgstr "Engellenmiş IP adresleri listesini göster"
-
-#: ktorrent/gui.cpp:435
-msgid "Import Torrent"
-msgstr "İçeriye Torrent Aktar"
-
-#: ktorrent/gui.cpp:436
-msgid "Import a torrent"
-msgstr "İçeriye bir torrent aktar"
-
-#: ktorrent/gui.cpp:442
-msgid "Import KDE3 Torrents"
-msgstr "KDE3 Torrentlerini İçeriye Aktar"
-
-#: ktorrent/gui.cpp:443
-msgid "Import all torrents from the KDE3 version of KTorrent"
-msgstr "KTorrent'in KDE3 sürümünden tüm torrentleri içe aktar"
-
-#: ktorrent/gui.cpp:450
-msgid "Show/Hide KTorrent"
-msgstr "KTorrent'i Göster/Gizle"
-
-#: ktorrent/ipfilterwidget.cpp:53
-msgid "IP Filter List"
-msgstr "IP Filtreleme Listesi"
-
-#: ktorrent/ipfilterwidget.cpp:107
-#, fuzzy, kde-format
-msgid ""
-"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
-"XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
-"ranges like '200.10.10.0-200.10.10.40'."
-msgstr ""
-"%1 geçersiz IP adresi. IP adresini 'XXX.XXX.XXX.XXX' biçiminde girmelisiniz. "
-"'127.0.0.*' biçiminde de girebilirsiniz."
-
-#: ktorrent/ipfilterwidget.cpp:135
-msgid "Choose a file"
-msgstr "Bir dosya seç"
-
-#: ktorrent/ipfilterwidget.cpp:147
-msgid "Choose a filename to save under"
-msgstr "Kaydetmek için bir dosya adı seçin"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
@@ -1904,6 +1819,87 @@ msgstr ""
 #, fuzzy
 msgid "Switch To View"
 msgstr "İzleyici"
+
+#: ktorrent/gui.cpp:272 ktorrent/gui.cpp:287
+msgid "Open Location"
+msgstr "Konum Aç"
+
+#: ktorrent/gui.cpp:404
+msgid "Create a new torrent"
+msgstr "Yeni bir torrent oluştur"
+
+#: ktorrent/gui.cpp:406
+msgid "Open a torrent"
+msgstr "Bir torrent aç"
+
+#: ktorrent/gui.cpp:409
+msgid "Open Silently"
+msgstr "Sessizce Aç"
+
+#: ktorrent/gui.cpp:410
+msgid "Open a torrent without asking any questions"
+msgstr "Hiçbir soru sormadan bir torrent aç"
+
+#: ktorrent/gui.cpp:425
+msgid "Open URL"
+msgstr "Adres Aç"
+
+#: ktorrent/gui.cpp:426
+#, fuzzy
+msgid "Open a URL which points to a torrent, magnet links are supported"
+msgstr "Bir torrenti işaret eden bir adres aç"
+
+#: ktorrent/gui.cpp:431 plugins/ipfilter/ipblockingprefpage.cpp:35
+#: plugins/ipfilter/ipfilterplugin.cpp:62
+#: plugins/ipfilter/ipfilterplugin.cpp:75
+msgid "IP Filter"
+msgstr "IP Filtreleyici"
+
+#: ktorrent/gui.cpp:432
+msgid "Show the list of blocked IP addresses"
+msgstr "Engellenmiş IP adresleri listesini göster"
+
+#: ktorrent/gui.cpp:437
+msgid "Import Torrent"
+msgstr "İçeriye Torrent Aktar"
+
+#: ktorrent/gui.cpp:438
+msgid "Import a torrent"
+msgstr "İçeriye bir torrent aktar"
+
+#: ktorrent/gui.cpp:444
+msgid "Import KDE3 Torrents"
+msgstr "KDE3 Torrentlerini İçeriye Aktar"
+
+#: ktorrent/gui.cpp:445
+msgid "Import all torrents from the KDE3 version of KTorrent"
+msgstr "KTorrent'in KDE3 sürümünden tüm torrentleri içe aktar"
+
+#: ktorrent/gui.cpp:452
+msgid "Show/Hide KTorrent"
+msgstr "KTorrent'i Göster/Gizle"
+
+#: ktorrent/ipfilterwidget.cpp:53
+msgid "IP Filter List"
+msgstr "IP Filtreleme Listesi"
+
+#: ktorrent/ipfilterwidget.cpp:111
+#, fuzzy, kde-format
+msgid ""
+"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
+"XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
+"ranges like '200.10.10.0-200.10.10.40'."
+msgstr ""
+"%1 geçersiz IP adresi. IP adresini 'XXX.XXX.XXX.XXX' biçiminde girmelisiniz. "
+"'127.0.0.*' biçiminde de girebilirsiniz."
+
+#: ktorrent/ipfilterwidget.cpp:139
+msgid "Choose a file"
+msgstr "Bir dosya seç"
+
+#: ktorrent/ipfilterwidget.cpp:151
+msgid "Choose a filename to save under"
+msgstr "Kaydetmek için bir dosya adı seçin"
 
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"
@@ -2566,7 +2562,7 @@ msgstr "Bir torrentin tüm web dağıtıcılarını görüntüler"
 
 #: plugins/infowidget/peerviewmodel.cpp:88
 msgid " (µTP)"
-msgstr ""
+msgstr " (µTP)"
 
 #: plugins/infowidget/peerviewmodel.cpp:103
 msgctxt "Choked"
@@ -3430,9 +3426,8 @@ msgid "Configure Shutdown"
 msgstr "Kapatmayı Yapılandır"
 
 #: plugins/shutdown/shutdownruleset.cpp:263
-#, fuzzy
 msgid "Automatic shutdown not active"
-msgstr "Otomatik Güncelle"
+msgstr "Otomatik kapatma etkin değil"
 
 #: plugins/shutdown/shutdownruleset.cpp:290
 msgid " when all of the following events have occurred:<br/><br/> "
@@ -3704,9 +3699,9 @@ msgstr[0] ""
 "%1 aktif süzgeç"
 
 #: plugins/syndication/feedlist.cpp:183
-#, fuzzy, kde-format
+#, kde-format
 msgid "<b>%1</b><br/><br/>Download failed: <b>%2</b>"
-msgstr "<b>%1</b><br/>Önizleme: %2<br/>İndirilen: %3 %"
+msgstr "<b>%1</b><br/><br>İndirme işlemi başarısız oldu: <b>%2</b>"
 
 #: plugins/syndication/feedwidget.cpp:107
 msgid "Authentication Cookie"
@@ -3725,9 +3720,9 @@ msgid "<b>Not Loaded</b>"
 msgstr "<b>Yüklenmedi</b>"
 
 #: plugins/syndication/feedwidget.cpp:132
-#, fuzzy, kde-format
+#, kde-format
 msgid "<b>Download Failed: %1</b>"
-msgstr "<b>İndirme İşlemi Başarısız Oldu</b>"
+msgstr "<b>İndirme İşlemi Başarısız Oldu: %1</b>"
 
 #: plugins/syndication/feedwidget.cpp:135
 msgid "<b>Downloading</b>"
@@ -3748,9 +3743,8 @@ msgid "Timeout when downloading feed"
 msgstr "İndirme işlemi tamamlandığında veriyi kontrol et"
 
 #: plugins/syndication/feed.cpp:481
-#, fuzzy
 msgid "Unknown hostname"
-msgstr "Bilinmeyen"
+msgstr "Bilinmeyen makine adı"
 
 #: plugins/syndication/feed.cpp:483
 msgid "File not found"
@@ -3822,9 +3816,8 @@ msgid "Device"
 msgstr "Aygıt"
 
 #: plugins/upnp/routermodel.cpp:73
-#, fuzzy
 msgid "Ports Forwarded"
-msgstr "Kapı Yönlendirildi"
+msgstr ""
 
 #: plugins/upnp/routermodel.cpp:116
 #, kde-format
@@ -6392,9 +6385,8 @@ msgstr ""
 #. i18n: file: ktorrent/pref/generalpref.ui:146
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openAllTorrentsSilently)
 #: rc.cpp:951
-#, fuzzy
 msgid "Open all torrents silently"
-msgstr "Torrentleri sessizce aç"
+msgstr "Tüm torrentleri sessizce aç"
 
 #. i18n: file: ktorrent/pref/generalpref.ui:156
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_suppressSleep)
@@ -7216,9 +7208,8 @@ msgstr "Bir torrent tamamlandığı zaman indirilen verinin taşınacağı dizin
 #. i18n: file: ktorrent/view/propertiesdlg.ui:69
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, move_on_completion_url)
 #: rc.cpp:1261
-#, fuzzy
 msgid "Location to move the files to."
-msgstr "Verinin taşınacağı bir dizin seçin."
+msgstr "Dosyaların taşınacağı konum."
 
 #. i18n: file: ktorrent/ktorrentui.rc:4
 #. i18n: ectx: Menu (file)
@@ -7235,9 +7226,8 @@ msgstr "&Görünüm"
 #. i18n: file: ktorrent/ktorrentui.rc:25
 #. i18n: ectx: ToolBar (mainToolBar)
 #: rc.cpp:1270
-#, fuzzy
 msgid "Main"
-msgstr "Maxmind"
+msgstr "Ana"
 
 #. i18n: file: ktorrent/kttorrentactivityui.rc:26
 #. i18n: ectx: Menu (GroupsMenu)
@@ -7248,9 +7238,8 @@ msgstr "Gruplar"
 #. i18n: file: ktorrent/kttorrentactivityui.rc:37
 #. i18n: ectx: Menu (ViewMenu)
 #: rc.cpp:1279
-#, fuzzy
 msgid "View"
-msgstr "&Görünüm"
+msgstr "Görünüm"
 
 #. i18n: file: ktorrent/kttorrentactivityui.rc:74
 #. i18n: ectx: Menu (ColumnsMenu)
@@ -7621,9 +7610,8 @@ msgstr "Zamanlayıcıdaki tüm duraklatılmış ögelerin rengi."
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:23
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: rc.cpp:1523
-#, fuzzy
 msgid "Duration"
-msgstr "Hedef"
+msgstr "Süre"
 
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:31
 #. i18n: ectx: property (text), widget (QLabel, label_3)
@@ -7652,7 +7640,6 @@ msgstr "Alıcı:"
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:63
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: rc.cpp:1538
-#, fuzzy
 msgctxt "starting day"
 msgid "From:"
 msgstr "Gönderen:"
@@ -7660,7 +7647,6 @@ msgstr "Gönderen:"
 #. i18n: file: plugins/bwscheduler/edititemdlg.ui:73
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: rc.cpp:1541
-#, fuzzy
 msgctxt "ending day"
 msgid "To:"
 msgstr "Alıcı:"
@@ -8027,7 +8013,6 @@ msgstr "Erişilebilir parçalar:"
 #. i18n: file: plugins/infowidget/statustab.ui:273
 #. i18n: ectx: property (text), widget (QLabel, hdr_sharing)
 #: rc.cpp:1758
-#, fuzzy
 msgctxt "Noun, as in \"file sharing\""
 msgid "Sharing"
 msgstr "Paylaşım"
@@ -8066,9 +8051,8 @@ msgstr "Bir torrentin tüm web dağıtıcılarını görüntüler"
 #. i18n: file: plugins/infowidget/trackerview.ui:39
 #. i18n: ectx: property (text), widget (KPushButton, m_change_tracker)
 #: rc.cpp:1788
-#, fuzzy
 msgid "Switch Tracker"
-msgstr "İzleyici"
+msgstr "İzleyiciyi Değiştir"
 
 #. i18n: file: plugins/infowidget/trackerview.ui:46
 #. i18n: ectx: property (text), widget (QPushButton, m_scrape)
@@ -8345,9 +8329,8 @@ msgstr "İzleyici"
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:18
 #. i18n: ectx: label, entry (tr), group (general)
 #: rc.cpp:1905
-#, fuzzy
 msgid "The default tracker"
-msgstr "Öntanımlı tarayıcıyı kullan"
+msgstr "Öntanımlı izleyici"
 
 #. i18n: file: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:22
 #. i18n: ectx: label, entry (dn), group (general)
@@ -9179,7 +9162,6 @@ msgstr "Sömürgenleri kümeli göster"
 #. i18n: file: plugins/stats/Spd.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpdWgt)
 #: rc.cpp:2409
-#, fuzzy
 msgctxt "@title:window"
 msgid "Speed"
 msgstr "Hız"
@@ -9453,9 +9435,8 @@ msgstr "Filtreler"
 #. i18n: file: plugins/syndication/feedwidget.ui:155
 #. i18n: ectx: property (text), widget (KPushButton, m_cookies)
 #: rc.cpp:2574
-#, fuzzy
 msgid "Cookies"
-msgstr "Tıkandı"
+msgstr "Çerezler"
 
 #. i18n: file: plugins/syndication/filtereditor.ui:22
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -9877,9 +9858,8 @@ msgstr ""
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:98
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_authentication)
 #: rc.cpp:2785
-#, fuzzy
 msgid "Login required"
-msgstr "Zorunlu:"
+msgstr "Giriş zorunlu"
 
 #. i18n: file: plugins/webinterface/webinterfaceprefwidget.ui:115
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_username)
@@ -10015,29 +9995,24 @@ msgid "The maximum share ratio which should be targeted for each torrent."
 msgstr ""
 
 #: plugins/scripting/scripts/auto_remove/auto_remove.py:53
-#, fuzzy
 msgid "Auto Remove Settings"
-msgstr "Otomatik Yeniden Başlatma Ayarları"
+msgstr "Otomatik Kaldırma Ayarları"
 
 #: plugins/scripting/scripts/auto_remove/auto_remove.py:55
-#, fuzzy
 msgid "Auto Remove"
-msgstr "Kaldır"
+msgstr "Otomatik Kaldır"
 
 #: plugins/scripting/scripts/auto_resume/auto_resume.py:55
-#, fuzzy
 msgid "Auto Resume"
-msgstr "Otomatik Yeniden Başlatma Ayarları"
+msgstr "Otomatik Devam Ettir"
 
 #: plugins/scripting/scripts/email_notifications/email_notifications.py:105
-#, fuzzy
 msgid "E-Mail Script Settings"
-msgstr "Eposta Ayarları"
+msgstr "E-posta Betiği Ayarları"
 
 #: plugins/scripting/scripts/email_notifications/email_notifications.py:107
-#, fuzzy
 msgid "E-Mail Settings"
-msgstr "Eposta Ayarları"
+msgstr "E-posta Ayarları"
 
 #~ msgid "Invalid IP address %1"
 #~ msgstr "Geçersiz IP adresi %1"

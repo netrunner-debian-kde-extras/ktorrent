@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-02-01 11:49+0100\n"
+"POT-Creation-Date: 2012-04-10 17:33+0200\n"
 "PO-Revision-Date: 2012-01-30 15:41+0800\n"
 "Last-Translator: Franklin Weng <franklin@mail.everfocus.com.tw>\n"
 "Language-Team: Chinese Traditional <zh-l10n@linux.org.tw>\n"
@@ -442,7 +442,7 @@ msgid "Open an URL"
 msgstr "開啟網址"
 
 #: ktorrent/dialogs/pastedialog.cpp:106
-#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:337
+#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:339
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "無效的URL: %1"
@@ -572,7 +572,7 @@ msgstr "BitTorrent"
 msgid "Magnet Link"
 msgstr "Magnet 連結"
 
-#: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:194
+#: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:197
 #: ktorrent/trayicon.cpp:160 plugins/infowidget/trackermodel.cpp:148
 #: plugins/infowidget/webseedsmodel.cpp:127
 msgid "Status"
@@ -615,50 +615,6 @@ msgstr "停止 Magnet"
 #: ktorrent/tools/magnetview.cpp:45
 msgid "Remove Magnet"
 msgstr "移除 Magnet"
-
-#: ktorrent/tools/queuemanagermodel.cpp:190
-msgid "Order"
-msgstr "排序"
-
-#: ktorrent/tools/queuemanagermodel.cpp:192 ktorrent/view/viewmodel.cpp:489
-msgid "Name"
-msgstr "名稱"
-
-#: ktorrent/tools/queuemanagermodel.cpp:196
-msgid "Time Stalled"
-msgstr "停頓時間"
-
-#: ktorrent/tools/queuemanagermodel.cpp:198
-#: plugins/infowidget/iwfilelistmodel.cpp:77
-#: plugins/infowidget/iwfiletreemodel.cpp:89
-msgid "Priority"
-msgstr "優先權"
-
-#: ktorrent/tools/queuemanagermodel.cpp:233
-msgid "Running"
-msgstr "執行中"
-
-#: ktorrent/tools/queuemanagermodel.cpp:235
-msgid "Queued"
-msgstr "已排入佇列"
-
-#: ktorrent/tools/queuemanagermodel.cpp:237
-msgid "Not queued"
-msgstr "未排入佇列"
-
-#: ktorrent/tools/queuemanagermodel.cpp:246
-#, kde-format
-msgid "%1"
-msgstr "%1"
-
-#: ktorrent/tools/queuemanagermodel.cpp:259
-msgid ""
-"Order of a torrent in the queue.\n"
-"Use drag and drop or the move up and down buttons on the right to change the "
-"order."
-msgstr ""
-"將佇列中的 torrent 排序。\n"
-"用拖放的，或是用左方的上下按鍵來改變順序。"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:57
 #: plugins/search/searchactivity.cpp:81 plugins/search/searchtoolbar.cpp:70
@@ -745,6 +701,50 @@ msgstr "顯示未排入佇列"
 #: ktorrent/tools/queuemanagerwidget.cpp:94
 msgid "Show all not queued torrents"
 msgstr "顯示所有未排入佇列"
+
+#: ktorrent/tools/queuemanagermodel.cpp:193
+msgid "Order"
+msgstr "排序"
+
+#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:489
+msgid "Name"
+msgstr "名稱"
+
+#: ktorrent/tools/queuemanagermodel.cpp:199
+msgid "Time Stalled"
+msgstr "停頓時間"
+
+#: ktorrent/tools/queuemanagermodel.cpp:201
+#: plugins/infowidget/iwfilelistmodel.cpp:77
+#: plugins/infowidget/iwfiletreemodel.cpp:89
+msgid "Priority"
+msgstr "優先權"
+
+#: ktorrent/tools/queuemanagermodel.cpp:236
+msgid "Running"
+msgstr "執行中"
+
+#: ktorrent/tools/queuemanagermodel.cpp:238
+msgid "Queued"
+msgstr "已排入佇列"
+
+#: ktorrent/tools/queuemanagermodel.cpp:240
+msgid "Not queued"
+msgstr "未排入佇列"
+
+#: ktorrent/tools/queuemanagermodel.cpp:249
+#, kde-format
+msgid "%1"
+msgstr "%1"
+
+#: ktorrent/tools/queuemanagermodel.cpp:262
+msgid ""
+"Order of a torrent in the queue.\n"
+"Use drag and drop or the move up and down buttons on the right to change the "
+"order."
+msgstr ""
+"將佇列中的 torrent 排序。\n"
+"用拖放的，或是用左方的上下按鍵來改變順序。"
 
 #: ktorrent/view/propertiesdlg.cpp:34
 msgid "Torrent Settings"
@@ -1199,87 +1199,6 @@ msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
 msgstr "您正試著下載 magnet 連結，但是未開啟 DHT。為了最佳效果，請開啟 DHT。"
-
-#: ktorrent/gui.cpp:270 ktorrent/gui.cpp:285
-msgid "Open Location"
-msgstr "開啟位置"
-
-#: ktorrent/gui.cpp:402
-msgid "Create a new torrent"
-msgstr "建立新的 torrent"
-
-#: ktorrent/gui.cpp:404
-msgid "Open a torrent"
-msgstr "開啟 torrent"
-
-#: ktorrent/gui.cpp:407
-msgid "Open Silently"
-msgstr "無聲地開啟"
-
-#: ktorrent/gui.cpp:408
-msgid "Open a torrent without asking any questions"
-msgstr "開啟 torrent 時不詢問任何問題。"
-
-#: ktorrent/gui.cpp:423
-msgid "Open URL"
-msgstr "開啟網址"
-
-#: ktorrent/gui.cpp:424
-msgid "Open a URL which points to a torrent, magnet links are supported"
-msgstr "開啟指向一個 torrent 的網址，magnet 連結亦支援"
-
-#: ktorrent/gui.cpp:429 plugins/ipfilter/ipblockingprefpage.cpp:35
-#: plugins/ipfilter/ipfilterplugin.cpp:62
-#: plugins/ipfilter/ipfilterplugin.cpp:75
-msgid "IP Filter"
-msgstr "IP 過濾"
-
-#: ktorrent/gui.cpp:430
-msgid "Show the list of blocked IP addresses"
-msgstr "顯示被阻擋 IP 位址列表"
-
-#: ktorrent/gui.cpp:435
-msgid "Import Torrent"
-msgstr "匯入 Torrent"
-
-#: ktorrent/gui.cpp:436
-msgid "Import a torrent"
-msgstr "匯入 Torrent"
-
-#: ktorrent/gui.cpp:442
-msgid "Import KDE3 Torrents"
-msgstr "匯入 KDE3 的 Torrent"
-
-#: ktorrent/gui.cpp:443
-msgid "Import all torrents from the KDE3 version of KTorrent"
-msgstr "從 KDE3 版本的 KTorrent 匯入所有的 torrent"
-
-#: ktorrent/gui.cpp:450
-msgid "Show/Hide KTorrent"
-msgstr "顯示/隱藏 KTorrent"
-
-#: ktorrent/ipfilterwidget.cpp:53
-msgid "IP Filter List"
-msgstr "IP 過濾清單"
-
-#: ktorrent/ipfilterwidget.cpp:107
-#, kde-format
-msgid ""
-"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
-"XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
-"ranges like '200.10.10.0-200.10.10.40'."
-msgstr ""
-"IP 位址 <b>%1</b> 不合法。您必須用以下格式輸入IP :\"XXX.XXX.XXX.XXX\"。<br/"
-"><br/> 您可以利用萬用字元來表示一個範圍 - 如 \"127.0.0.*\" 或 "
-"\"200.10.10.0-200.10.10.40\""
-
-#: ktorrent/ipfilterwidget.cpp:135
-msgid "Choose a file"
-msgstr "選擇檔案"
-
-#: ktorrent/ipfilterwidget.cpp:147
-msgid "Choose a filename to save under"
-msgstr "請為將要儲存的檔案命名"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
@@ -1833,6 +1752,87 @@ msgstr "依據過濾字串來過濾 torrents"
 #: ktorrent/torrentactivity.cpp:142
 msgid "Switch To View"
 msgstr "切換到檢視模式"
+
+#: ktorrent/gui.cpp:272 ktorrent/gui.cpp:287
+msgid "Open Location"
+msgstr "開啟位置"
+
+#: ktorrent/gui.cpp:404
+msgid "Create a new torrent"
+msgstr "建立新的 torrent"
+
+#: ktorrent/gui.cpp:406
+msgid "Open a torrent"
+msgstr "開啟 torrent"
+
+#: ktorrent/gui.cpp:409
+msgid "Open Silently"
+msgstr "無聲地開啟"
+
+#: ktorrent/gui.cpp:410
+msgid "Open a torrent without asking any questions"
+msgstr "開啟 torrent 時不詢問任何問題。"
+
+#: ktorrent/gui.cpp:425
+msgid "Open URL"
+msgstr "開啟網址"
+
+#: ktorrent/gui.cpp:426
+msgid "Open a URL which points to a torrent, magnet links are supported"
+msgstr "開啟指向一個 torrent 的網址，magnet 連結亦支援"
+
+#: ktorrent/gui.cpp:431 plugins/ipfilter/ipblockingprefpage.cpp:35
+#: plugins/ipfilter/ipfilterplugin.cpp:62
+#: plugins/ipfilter/ipfilterplugin.cpp:75
+msgid "IP Filter"
+msgstr "IP 過濾"
+
+#: ktorrent/gui.cpp:432
+msgid "Show the list of blocked IP addresses"
+msgstr "顯示被阻擋 IP 位址列表"
+
+#: ktorrent/gui.cpp:437
+msgid "Import Torrent"
+msgstr "匯入 Torrent"
+
+#: ktorrent/gui.cpp:438
+msgid "Import a torrent"
+msgstr "匯入 Torrent"
+
+#: ktorrent/gui.cpp:444
+msgid "Import KDE3 Torrents"
+msgstr "匯入 KDE3 的 Torrent"
+
+#: ktorrent/gui.cpp:445
+msgid "Import all torrents from the KDE3 version of KTorrent"
+msgstr "從 KDE3 版本的 KTorrent 匯入所有的 torrent"
+
+#: ktorrent/gui.cpp:452
+msgid "Show/Hide KTorrent"
+msgstr "顯示/隱藏 KTorrent"
+
+#: ktorrent/ipfilterwidget.cpp:53
+msgid "IP Filter List"
+msgstr "IP 過濾清單"
+
+#: ktorrent/ipfilterwidget.cpp:111
+#, kde-format
+msgid ""
+"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
+"XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
+"ranges like '200.10.10.0-200.10.10.40'."
+msgstr ""
+"IP 位址 <b>%1</b> 不合法。您必須用以下格式輸入IP :\"XXX.XXX.XXX.XXX\"。<br/"
+"><br/> 您可以利用萬用字元來表示一個範圍 - 如 \"127.0.0.*\" 或 "
+"\"200.10.10.0-200.10.10.40\""
+
+#: ktorrent/ipfilterwidget.cpp:139
+msgid "Choose a file"
+msgstr "選擇檔案"
+
+#: ktorrent/ipfilterwidget.cpp:151
+msgid "Choose a filename to save under"
+msgstr "請為將要儲存的檔案命名"
 
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"

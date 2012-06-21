@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-02-01 11:49+0100\n"
-"PO-Revision-Date: 2012-01-28 18:54+0200\n"
+"POT-Creation-Date: 2012-04-10 17:33+0200\n"
+"PO-Revision-Date: 2012-03-25 10:28+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.5\n"
 
 #: ktmagnetdownloader/magnetdownloader.cpp:44
 msgid "KTMagnetDownloader"
@@ -245,15 +245,15 @@ msgstr " КіБ/с"
 #, kde-format
 msgid "Importing 1 torrent ..."
 msgid_plural "Importing %1 torrents ..."
-msgstr[0] "Імпортування %1 торента..."
-msgstr[1] "Імпортування %1 торентів..."
-msgstr[2] "Імпортування %1 торентів..."
-msgstr[3] "Імпортування торента..."
+msgstr[0] "Імпортування %1 торента…"
+msgstr[1] "Імпортування %1 торентів…"
+msgstr[2] "Імпортування %1 торентів…"
+msgstr[3] "Імпортування торента…"
 
 #: ktorrent/dialogs/torrentmigratordlg.cpp:105
 #, kde-format
 msgid "Importing <b>%1</b> ..."
-msgstr "Імпортування <b>%1</b> ..."
+msgstr "Імпортування <b>%1</b> …"
 
 #: ktorrent/dialogs/torrentmigratordlg.cpp:110
 msgid "Finished import."
@@ -456,7 +456,7 @@ msgid "Open an URL"
 msgstr "Відкрити адресу URL"
 
 #: ktorrent/dialogs/pastedialog.cpp:106
-#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:337
+#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:339
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "Некоректна адреса URL: %1"
@@ -589,7 +589,7 @@ msgstr "BitTorrent"
 msgid "Magnet Link"
 msgstr "Посилання маґнет"
 
-#: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:194
+#: ktorrent/tools/magnetmodel.cpp:129 ktorrent/tools/queuemanagermodel.cpp:197
 #: ktorrent/trayicon.cpp:160 plugins/infowidget/trackermodel.cpp:148
 #: plugins/infowidget/webseedsmodel.cpp:127
 msgid "Status"
@@ -632,51 +632,6 @@ msgstr "Зупинити маґнет"
 #: ktorrent/tools/magnetview.cpp:45
 msgid "Remove Magnet"
 msgstr "Вилучити маґнет"
-
-#: ktorrent/tools/queuemanagermodel.cpp:190
-msgid "Order"
-msgstr "Порядок"
-
-#: ktorrent/tools/queuemanagermodel.cpp:192 ktorrent/view/viewmodel.cpp:489
-msgid "Name"
-msgstr "Назва"
-
-#: ktorrent/tools/queuemanagermodel.cpp:196
-msgid "Time Stalled"
-msgstr "Відлік часу призупинено"
-
-#: ktorrent/tools/queuemanagermodel.cpp:198
-#: plugins/infowidget/iwfilelistmodel.cpp:77
-#: plugins/infowidget/iwfiletreemodel.cpp:89
-msgid "Priority"
-msgstr "Пріоритет"
-
-#: ktorrent/tools/queuemanagermodel.cpp:233
-msgid "Running"
-msgstr "Працює"
-
-#: ktorrent/tools/queuemanagermodel.cpp:235
-msgid "Queued"
-msgstr "У черзі"
-
-#: ktorrent/tools/queuemanagermodel.cpp:237
-msgid "Not queued"
-msgstr "Не в черзі"
-
-#: ktorrent/tools/queuemanagermodel.cpp:246
-#, kde-format
-msgid "%1"
-msgstr "%1"
-
-#: ktorrent/tools/queuemanagermodel.cpp:259
-msgid ""
-"Order of a torrent in the queue.\n"
-"Use drag and drop or the move up and down buttons on the right to change the "
-"order."
-msgstr ""
-"Порядок торента у черзі.\n"
-"Для зміни порядку скористайтеся перетяганням і скиданням або кнопками "
-"пересування вгору і вниз, розташованими праворуч."
 
 #: ktorrent/tools/queuemanagerwidget.cpp:57
 #: plugins/search/searchactivity.cpp:81 plugins/search/searchtoolbar.cpp:70
@@ -763,6 +718,51 @@ msgstr "Показати пункти поза чергою"
 #: ktorrent/tools/queuemanagerwidget.cpp:94
 msgid "Show all not queued torrents"
 msgstr "Показати всі торенти, пунктів яких немає у черзі"
+
+#: ktorrent/tools/queuemanagermodel.cpp:193
+msgid "Order"
+msgstr "Порядок"
+
+#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:489
+msgid "Name"
+msgstr "Назва"
+
+#: ktorrent/tools/queuemanagermodel.cpp:199
+msgid "Time Stalled"
+msgstr "Відлік часу призупинено"
+
+#: ktorrent/tools/queuemanagermodel.cpp:201
+#: plugins/infowidget/iwfilelistmodel.cpp:77
+#: plugins/infowidget/iwfiletreemodel.cpp:89
+msgid "Priority"
+msgstr "Пріоритет"
+
+#: ktorrent/tools/queuemanagermodel.cpp:236
+msgid "Running"
+msgstr "Працює"
+
+#: ktorrent/tools/queuemanagermodel.cpp:238
+msgid "Queued"
+msgstr "У черзі"
+
+#: ktorrent/tools/queuemanagermodel.cpp:240
+msgid "Not queued"
+msgstr "Не в черзі"
+
+#: ktorrent/tools/queuemanagermodel.cpp:249
+#, kde-format
+msgid "%1"
+msgstr "%1"
+
+#: ktorrent/tools/queuemanagermodel.cpp:262
+msgid ""
+"Order of a torrent in the queue.\n"
+"Use drag and drop or the move up and down buttons on the right to change the "
+"order."
+msgstr ""
+"Порядок торента у черзі.\n"
+"Для зміни порядку скористайтеся перетяганням і скиданням або кнопками "
+"пересування вгору і вниз, розташованими праворуч."
 
 #: ktorrent/view/propertiesdlg.cpp:34
 msgid "Torrent Settings"
@@ -1249,89 +1249,6 @@ msgid ""
 msgstr ""
 "Ви намагаєтеся звантажити маґнет-посилання, DHT не увімкнено. Для покращення "
 "роботи програми вам варто увімкнути DHT."
-
-#: ktorrent/gui.cpp:270 ktorrent/gui.cpp:285
-msgid "Open Location"
-msgstr "Відкрити адресу"
-
-#: ktorrent/gui.cpp:402
-msgid "Create a new torrent"
-msgstr "Створити новий торент"
-
-#: ktorrent/gui.cpp:404
-msgid "Open a torrent"
-msgstr "Відкрити торент"
-
-#: ktorrent/gui.cpp:407
-msgid "Open Silently"
-msgstr "Відкрити тихо"
-
-#: ktorrent/gui.cpp:408
-msgid "Open a torrent without asking any questions"
-msgstr "Відкрити торент, ні про що не запитуючи"
-
-#: ktorrent/gui.cpp:423
-msgid "Open URL"
-msgstr "Відкрити адресу URL"
-
-#: ktorrent/gui.cpp:424
-msgid "Open a URL which points to a torrent, magnet links are supported"
-msgstr ""
-"Відкрити адресу URL, яка вказує на торент, підтримуються маґнет-посилання"
-
-#: ktorrent/gui.cpp:429 plugins/ipfilter/ipblockingprefpage.cpp:35
-#: plugins/ipfilter/ipfilterplugin.cpp:62
-#: plugins/ipfilter/ipfilterplugin.cpp:75
-msgid "IP Filter"
-msgstr "Фільтр IP"
-
-#: ktorrent/gui.cpp:430
-msgid "Show the list of blocked IP addresses"
-msgstr "Показати список заблокованих адрес IP"
-
-#: ktorrent/gui.cpp:435
-msgid "Import Torrent"
-msgstr "Імпортувати торент"
-
-#: ktorrent/gui.cpp:436
-msgid "Import a torrent"
-msgstr "Імпортувати торент"
-
-#: ktorrent/gui.cpp:442
-msgid "Import KDE3 Torrents"
-msgstr "Імпортувати торенти KDE3"
-
-#: ktorrent/gui.cpp:443
-msgid "Import all torrents from the KDE3 version of KTorrent"
-msgstr "Імпортувати всі торенти з версії KDE3 KTorrent"
-
-#: ktorrent/gui.cpp:450
-msgid "Show/Hide KTorrent"
-msgstr "Показати / сховати KTorrent"
-
-#: ktorrent/ipfilterwidget.cpp:53
-msgid "IP Filter List"
-msgstr "Список фільтрів IP"
-
-#: ktorrent/ipfilterwidget.cpp:107
-#, kde-format
-msgid ""
-"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
-"XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
-"ranges like '200.10.10.0-200.10.10.40'."
-msgstr ""
-"Некоректна IP-адреса <b>%1</b>. IP-адреси слід записувати у форматі «XXX.XXX."
-"XXX.XXX».<br/><br/>Крім того, ви можете використовувати шаблони заміни, "
-"зокрема «127.0.0.*», або вказувати діапазони, зокрема "
-"«200.10.10.0-200.10.10.40»."
-
-#: ktorrent/ipfilterwidget.cpp:135
-msgid "Choose a file"
-msgstr "Виберіть файл"
-
-#: ktorrent/ipfilterwidget.cpp:147
-msgid "Choose a filename to save under"
-msgstr "Виберіть назву файла для збереження"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
@@ -1908,6 +1825,89 @@ msgstr "Фільтрувати торенти за вказаним рядком
 #: ktorrent/torrentactivity.cpp:142
 msgid "Switch To View"
 msgstr "Перемкнутися на перегляд"
+
+#: ktorrent/gui.cpp:272 ktorrent/gui.cpp:287
+msgid "Open Location"
+msgstr "Відкрити адресу"
+
+#: ktorrent/gui.cpp:404
+msgid "Create a new torrent"
+msgstr "Створити новий торент"
+
+#: ktorrent/gui.cpp:406
+msgid "Open a torrent"
+msgstr "Відкрити торент"
+
+#: ktorrent/gui.cpp:409
+msgid "Open Silently"
+msgstr "Відкрити тихо"
+
+#: ktorrent/gui.cpp:410
+msgid "Open a torrent without asking any questions"
+msgstr "Відкрити торент, ні про що не запитуючи"
+
+#: ktorrent/gui.cpp:425
+msgid "Open URL"
+msgstr "Відкрити адресу URL"
+
+#: ktorrent/gui.cpp:426
+msgid "Open a URL which points to a torrent, magnet links are supported"
+msgstr ""
+"Відкрити адресу URL, яка вказує на торент, підтримуються маґнет-посилання"
+
+#: ktorrent/gui.cpp:431 plugins/ipfilter/ipblockingprefpage.cpp:35
+#: plugins/ipfilter/ipfilterplugin.cpp:62
+#: plugins/ipfilter/ipfilterplugin.cpp:75
+msgid "IP Filter"
+msgstr "Фільтр IP"
+
+#: ktorrent/gui.cpp:432
+msgid "Show the list of blocked IP addresses"
+msgstr "Показати список заблокованих адрес IP"
+
+#: ktorrent/gui.cpp:437
+msgid "Import Torrent"
+msgstr "Імпортувати торент"
+
+#: ktorrent/gui.cpp:438
+msgid "Import a torrent"
+msgstr "Імпортувати торент"
+
+#: ktorrent/gui.cpp:444
+msgid "Import KDE3 Torrents"
+msgstr "Імпортувати торенти KDE3"
+
+#: ktorrent/gui.cpp:445
+msgid "Import all torrents from the KDE3 version of KTorrent"
+msgstr "Імпортувати всі торенти з версії KDE3 KTorrent"
+
+#: ktorrent/gui.cpp:452
+msgid "Show/Hide KTorrent"
+msgstr "Показати / сховати KTorrent"
+
+#: ktorrent/ipfilterwidget.cpp:53
+msgid "IP Filter List"
+msgstr "Список фільтрів IP"
+
+#: ktorrent/ipfilterwidget.cpp:111
+#, kde-format
+msgid ""
+"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
+"XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
+"ranges like '200.10.10.0-200.10.10.40'."
+msgstr ""
+"Некоректна IP-адреса <b>%1</b>. IP-адреси слід записувати у форматі «XXX.XXX."
+"XXX.XXX».<br/><br/>Крім того, ви можете використовувати шаблони заміни, "
+"зокрема «127.0.0.*», або вказувати діапазони, зокрема "
+"«200.10.10.0-200.10.10.40»."
+
+#: ktorrent/ipfilterwidget.cpp:139
+msgid "Choose a file"
+msgstr "Виберіть файл"
+
+#: ktorrent/ipfilterwidget.cpp:151
+msgid "Choose a filename to save under"
+msgstr "Виберіть назву файла для збереження"
 
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"
@@ -2793,7 +2793,7 @@ msgstr "Неможливо вилучити поширювача %1, оскіл�
 
 #: plugins/ipfilter/convertthread.cpp:72
 msgid "Loading txt file..."
-msgstr "Завантаження текстового файла..."
+msgstr "Завантаження текстового файла…"
 
 #: plugins/ipfilter/convertthread.cpp:156
 #, kde-format
@@ -2804,7 +2804,7 @@ msgstr "Відсутні IP-адреси для перетворення у %1"
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
 #: plugins/ipfilter/convertthread.cpp:174 rc.cpp:1797
 msgid "Converting..."
-msgstr "Перетворення..."
+msgstr "Перетворення…"
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:42
 msgid " day"
@@ -2829,7 +2829,7 @@ msgstr "Стан: не завантажено."
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:120
 msgid "Status: Downloading and converting new block list..."
-msgstr "Стан: Триває звантаження і перетворення нового списку блоків..."
+msgstr "Стан: Триває звантаження і перетворення нового списку блоків…"
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:200
 msgid "No update done yet."
@@ -3494,7 +3494,7 @@ msgstr ""
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:396
 #: plugins/stats/drawer/PlainChartDrawer.cc:337
 msgid "Save as image…"
-msgstr "Зберегти як зображення..."
+msgstr "Зберегти як зображення…"
 
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:400
 #: plugins/stats/drawer/PlainChartDrawer.cc:341
@@ -3509,7 +3509,7 @@ msgstr "Скинути"
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:416
 #: plugins/stats/drawer/PlainChartDrawer.cc:357
 msgid "Select path to save image…"
-msgstr "Вибрати адресу збереженого зображення..."
+msgstr "Вибрати адресу збереженого зображення…"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:512
 #. i18n: ectx: property (text), widget (QLabel, label_23)
@@ -4561,7 +4561,7 @@ msgstr "Коментарі:"
 #. i18n: ectx: property (windowTitle), widget (QDialog, TorrentMigratorDlg)
 #: rc.cpp:235
 msgid "Importing ..."
-msgstr "Імпортування..."
+msgstr "Імпортування…"
 
 #. i18n: file: ktorrent/dialogs/torrentmigratordlg.ui:22
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -4632,7 +4632,7 @@ msgstr "Журнал всіх нещодавно використаних адр
 #: rc.cpp:253 rc.cpp:265 rc.cpp:268 rc.cpp:271 rc.cpp:1959 rc.cpp:1962
 #: rc.cpp:1965 rc.cpp:1968 rc.cpp:1971
 msgid "..."
-msgstr "..."
+msgstr "…"
 
 #. i18n: file: ktorrent/dialogs/fileselectdlg.ui:52
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_moveCompleted)
@@ -5081,13 +5081,13 @@ msgstr "Очистити"
 #. i18n: ectx: property (text), widget (KPushButton, m_open)
 #: rc.cpp:440
 msgid "Open..."
-msgstr "Відкрити..."
+msgstr "Відкрити…"
 
 #. i18n: file: ktorrent/ipfilterwidget.ui:99
 #. i18n: ectx: property (text), widget (KPushButton, m_save_as)
 #: rc.cpp:443
 msgid "Save As..."
-msgstr "Зберегти як..."
+msgstr "Зберегти як…"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:17
 #. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_diskPrealloc)
@@ -5821,7 +5821,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, m_recommended_settings)
 #: rc.cpp:699
 msgid "Recommended Settings..."
-msgstr "Рекомендовані параметри..."
+msgstr "Рекомендовані параметри…"
 
 #. i18n: file: ktorrent/pref/proxypref.ui:16
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
@@ -7803,7 +7803,7 @@ msgid ""
 "be downloaded first, followed by the second, then the third ..."
 msgstr ""
 "Порядок, у якому слід звантажувати файли торента. Верхній файл у списку буде "
-"звантажено першим, наступний — другим тощо..."
+"звантажено першим, наступний — другим тощо…"
 
 #. i18n: file: plugins/infowidget/chunkdownloadview.ui:26
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
@@ -9651,7 +9651,7 @@ msgstr ""
 "<td style=\" vertical-align:top;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span style="
-"\" font-weight:600;\">[...]</span></p></td>\n"
+"\" font-weight:600;\">[…]</span></p></td>\n"
 "<td style=\" vertical-align:top;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Набір "
