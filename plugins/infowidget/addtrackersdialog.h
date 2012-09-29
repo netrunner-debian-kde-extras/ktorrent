@@ -1,6 +1,6 @@
 /***************************************************************************
- *   Copyright (C) 2012 by Joris Guisson                                   *
- *   joris.guisson@gmail.com                                               *
+ *   Copyright (C) 2012 by                                                 *
+ *   Joris Guisson <joris.guisson@gmail.com>                               *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,46 +17,34 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
-#ifndef KT_GROUPMODEL_H
-#define KT_GROUPMODEL_H
 
-#include <QAbstractListModel>
+#ifndef KT_ADDTRACKERSDIALOG_H
+#define KT_ADDTRACKERSDIALOG_H
+
+#include <KDialog>
+#include <KEditListWidget>
 
 
 namespace kt
 {
-	class Group;
-	class GroupManager;
 
 	/**
-		Simple list model for the view switcher combobox
+	 * Dialog to add trackers
 	 */
-	class GroupModel : public QAbstractListModel
+	class AddTrackersDialog : public KDialog
 	{
 		Q_OBJECT
 	public:
-		GroupModel(GroupManager* gman, QObject* parent);
-		virtual ~GroupModel();
+		AddTrackersDialog(QWidget* parent, const QStringList & tracker_hints);
+		virtual ~AddTrackersDialog();
 		
-		virtual QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const;
-		virtual int rowCount(const QModelIndex& parent = QModelIndex()) const;
-		
-		/// Get a group given the index
-		Group* group(int idx) const;
-		
-		/// Get the index given a group
-		int groupIndex(Group* g) const;
-		
-	private slots:
-		void customGroupChanged(QString oldName, QString newName);
-		void groupAdded(Group* g);
-		void groupRemoved(Group* g);
+		/// Get the tracker list
+		QStringList trackerList() const;
 		
 	private:
-		GroupManager* gman;
-		QList<Group*> groups;
+		KEditListWidget* trackers;
 	};
 
 }
 
-#endif // KT_GROUPMODEL_H
+#endif // KT_ADDTRACKERSDIALOG_H

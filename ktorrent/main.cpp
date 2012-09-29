@@ -42,6 +42,7 @@
 #include <util/error.h>
 #include <util/log.h>
 #include <util/functions.h>
+#include <util/signalcatcher.h>
 
 using namespace bt;
 
@@ -94,7 +95,7 @@ int main(int argc, char **argv)
 		"ktorrent", 0, ki18n("KTorrent"),
 		kt::VERSION_STRING, ki18n("Bittorrent client for KDE"),
 		KAboutData::License_GPL, 
-		ki18n("(C) 2005 - 2012 Joris Guisson and Ivan Vasic"), 
+		ki18n("(C) 2005 - 2011 Joris Guisson and Ivan Vasic"), 
 		KLocalizedString(),
 		"http://www.ktorrent.org/");
 
@@ -173,6 +174,14 @@ int main(int argc, char **argv)
 	try
 	{
 		kt::App app;
+		
+#ifndef Q_WS_WIN
+		bt::SignalCatcher catcher;
+		catcher.catchSignal(SIGINT);
+		catcher.catchSignal(SIGTERM);
+		QObject::connect(&catcher, SIGNAL(triggered()), &app, SLOT(quit()));
+#endif
+		
 		app.setQuitOnLastWindowClosed(false);
 		app.exec();
 	}
