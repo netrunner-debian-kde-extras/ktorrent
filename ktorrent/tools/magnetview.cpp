@@ -26,6 +26,7 @@
 #include <KIcon>
 #include <KConfigGroup>
 #include <QHeaderView>
+#include <QKeyEvent>
 
 namespace kt
 {
@@ -76,7 +77,7 @@ namespace kt
 		
 		foreach (const QModelIndex & idx,idx_list)
 		{
-			bt::MagnetDownloader* md = (bt::MagnetDownloader*)idx.internalPointer();
+			kt::MagnetDownloader* md = (kt::MagnetDownloader*)idx.internalPointer();
 			if (md->running())
 				stop->setEnabled(true);
 			else
@@ -87,14 +88,14 @@ namespace kt
 
 	void MagnetView::removeMagnetDownload()
 	{
-		QList<bt::MagnetDownloader*> mdl;
+		QList<kt::MagnetDownloader*> mdl;
 		QModelIndexList idx_list = selectionModel()->selectedRows();
 		foreach (const QModelIndex & idx,idx_list)
 		{
-			mdl.append((bt::MagnetDownloader*)idx.internalPointer());
+			mdl.append((kt::MagnetDownloader*)idx.internalPointer());
 		}
 		
-		foreach (bt::MagnetDownloader* md,mdl)
+		foreach (kt::MagnetDownloader* md,mdl)
 			magnet_model->removeMagnetDownloader(md);
 	}
 
@@ -114,6 +115,17 @@ namespace kt
 		{
 			magnet_model->stop(idx);
 		}
+	}
+
+	void MagnetView::keyPressEvent(QKeyEvent* event)
+	{
+		if(event->key() == Qt::Key_Delete)
+		{
+			removeMagnetDownload();
+			event->accept();
+		}
+		else
+			QTreeView::keyPressEvent(event);
 	}
 
 

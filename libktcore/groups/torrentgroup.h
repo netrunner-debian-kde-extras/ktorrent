@@ -29,15 +29,13 @@ namespace kt
 {
 
 	class QueueManager;
-	class TorrentInterface;
 
 	/**
 		@author Joris Guisson <joris.guisson@gmail.com>
 	*/
 	class KTCORE_EXPORT TorrentGroup : public Group
 	{
-		std::set<TorrentInterface*> torrents;
-		std::set<bt::SHA1Hash> hashes;
+		Q_OBJECT
 	public:
 		TorrentGroup(const QString& name);
 		virtual ~TorrentGroup();
@@ -53,6 +51,17 @@ namespace kt
 		void add(TorrentInterface* tor);
 		void remove(TorrentInterface* tor);
 		void loadTorrents(QueueManager* qman);
+	
+	signals:
+		/// Emitted when a torrent has been added
+		void torrentAdded(Group* g);
+		
+		/// Emittend when a torrent has been removed
+		void torrentRemoved(Group* g);
+		
+	private:
+		std::set<TorrentInterface*> torrents;
+		std::set<bt::SHA1Hash> hashes;
 	};
 
 }
