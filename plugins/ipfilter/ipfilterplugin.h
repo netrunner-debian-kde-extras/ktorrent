@@ -24,54 +24,54 @@
 #include <QTimer>
 #include <interfaces/plugin.h>
 #include "ipblockingprefpage.h"
-#include "antip2p.h"
+#include "ipblocklist.h"
 
 class QString;
 
 namespace kt
-{	
-	class IPBlockingPrefPage;
-	
-	const int AUTO_UPDATE_RETRY_INTERVAL = 15*60; // seconds
-	
-	/**
-	 * @author Ivan Vasic <ivasic@gmail.com>
-	 * @brief IP filter plugin
-	 * 
-	 * This plugin will load IP ranges from specific files into KT IPBlocklist.
-	 */
-	class IPFilterPlugin : public Plugin
-	{
-		Q_OBJECT
-	public:
-		IPFilterPlugin(QObject* parent, const QStringList& args);
-		virtual ~IPFilterPlugin();
+{
+    class IPBlockingPrefPage;
 
-		virtual void load();
-		virtual void unload();
-		virtual bool versionCheck(const QString & version) const;
-		
-		///Loads the KT format list filter
-		void loadFilters();
-		
-		///Loads the anti-p2p filter list
-		bool loadAntiP2P();
-		
-		///Unloads the anti-p2p filter list
-		bool unloadAntiP2P();
-		
-		/// Whether or not the IP filter is loaded and running
-		bool loadedAndRunning(); 
-		
-	public slots:
-		void checkAutoUpdate();
-		void notification(const QString & msg);
-		
-	private:
-		IPBlockingPrefPage* pref;
-		AntiP2P* level1;
-		QTimer auto_update_timer;
-	};
+    const int AUTO_UPDATE_RETRY_INTERVAL = 15 * 60; // seconds
+
+    /**
+     * @author Ivan Vasic <ivasic@gmail.com>
+     * @brief IP filter plugin
+     *
+     * This plugin will load IP ranges from specific files into KT IPBlocklist.
+     */
+    class IPFilterPlugin : public Plugin
+    {
+        Q_OBJECT
+    public:
+        IPFilterPlugin(QObject* parent, const QStringList& args);
+        virtual ~IPFilterPlugin();
+
+        virtual void load();
+        virtual void unload();
+        virtual bool versionCheck(const QString& version) const;
+
+        ///Loads the KT format list filter
+        void loadFilters();
+
+        ///Loads the anti-p2p filter list
+        bool loadAntiP2P();
+
+        ///Unloads the anti-p2p filter list
+        bool unloadAntiP2P();
+
+        /// Whether or not the IP filter is loaded and running
+        bool loadedAndRunning();
+
+    public slots:
+        void checkAutoUpdate();
+        void notification(const QString& msg);
+
+    private:
+        IPBlockingPrefPage* pref;
+        QScopedPointer<IPBlockList> ip_filter;
+        QTimer auto_update_timer;
+    };
 
 }
 

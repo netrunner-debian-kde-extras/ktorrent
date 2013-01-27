@@ -5,35 +5,38 @@
 # QAed by Funda Wang <fundawang@linux.net.cn>, 2005-09-23.
 # Hu Wei <contact@chaostone.com>, 2007, 2008.
 # Ni Hui <shuizhuyuanluo@126.com>, 2008, 2009.
+# Weng Xuetian <wengxt@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-14 19:51+0200\n"
-"PO-Revision-Date: 2009-02-09 13:33+0000\n"
-"Last-Translator: Ni Hui <shuizhuyuanluo@126.com>\n"
-"Language-Team: 简体中文 <kde-china@kde.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2012-12-19 08:39+0100\n"
+"PO-Revision-Date: 2013-01-13 21:03-0500\n"
+"Last-Translator: Weng Xuetian <wengxt@gmail.com>\n"
+"Language-Team: Chinese Simplified <kde-china@kde.org>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.5\n"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "KDE 中国,胡炜"
+msgstr "KDE 中国, 玛格丽特苏"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kde-china@kde.org,contact@huwei.name"
+msgstr "kde-china@kde.org, i@marguerite.su"
 
 #: kio-magnet/dbushandler.cpp:96
 msgid ""
 "The Web share for magnet-links is disabled. You can set it up at settings:/"
 "network-and-connectivity/sharing"
 msgstr ""
+"磁力链接Web分享已被禁用。您可以在 settings:/network-and-connectivity/sharing "
+"进行设置。"
 
 #: kio-magnet/dbushandler.cpp:120
 msgid ""
@@ -41,34 +44,35 @@ msgid ""
 "happen, even if KTorrent is not installed.                           Check "
 "your machines resources and limits."
 msgstr ""
+"无法启动 KTorrent 进程。即使 KTorrent 没有被安装，这种情况也不应该出现。请检"
+"查您的系统资源和权限。"
 
 #: kio-magnet/dbushandler.cpp:158
 #, kde-format
 msgid ""
 "Could not connect to KTorrent via DBus                                     "
 "after %1 seconds. Is it broken?"
-msgstr ""
+msgstr "无法通过 DBus 连接 KTorrent 达 %1 秒。请检查它是否已发生故障。"
 
 #: kio-magnet/dbushandler.cpp:180
 msgid ""
 "Could not get the group list, do you have a compatible KTorrent version "
 "running?"
-msgstr ""
+msgstr "无法获取组列表，您是否在运行兼容的 KTorrent 版本？"
 
 #: kio-magnet/dbushandler.cpp:333
 #, kde-format
 msgid "The link for %1 does not contain the required btih hash-parameter."
-msgstr ""
+msgstr "%1 的链接不包含所需的 btih 哈希值。"
 
 #: kio-magnet/dbushandler.cpp:345
 #, kde-format
 msgid "The found value (%1) for the hash is neither 32 nor 40 chars long."
-msgstr ""
+msgstr "发现的哈希值 (%1) 不是32或40个字符长度。"
 
 #: kio-magnet/dbushandler.cpp:624
-#, fuzzy
 msgid "Torrent has been removed from KTorrent."
-msgstr "种子已停止。<br />"
+msgstr "种子已被从 KTorrent 中移除。"
 
 #: kio-magnet/kio_magnet.cpp:294 kio-magnet/kio_magnet.cpp:395
 #, kde-format
@@ -76,15 +80,17 @@ msgid ""
 "File exists in KTorrent, but cannot open it on disk at path\"%1\". Have you "
 "removed the file manually?"
 msgstr ""
+"文件存在于 KTorrent 中，但不能在磁盘路径“%1”打开它。您是否已经人工移除了文"
+"件？"
 
 #: kio-magnet/kio_magnet.cpp:375
 msgid "You cannot write to magnet resources."
-msgstr ""
+msgstr "您不能向磁力链接资源中写入。"
 
 #: kio-magnet/kio_magnet.cpp:403
 #, kde-format
 msgid "File \"%1\" is a directory. This should not happen. Please file a bug."
-msgstr ""
+msgstr "文件“%1”是一个路径。这本不应该发生的。请汇报Bug。"
 
 #: kio-magnet/kio_magnet.cpp:429
 #, kde-format
@@ -92,69 +98,68 @@ msgid ""
 "File exists in KTorrent, but cannot open it on disk at path \"%1\". Have you "
 "removed the file manually?"
 msgstr ""
+"文件存在于 KTorrent 中，但不能在磁盘路径“%1”打开它。您是否已经人工移除了文"
+"件？"
 
 #. i18n: ectx: label, entry (Enabled), group (Magnet)
 #: kio-magnet/magnetsettings.kcfg:10
 msgid "Enable the global magnet-link support."
-msgstr ""
+msgstr "启用全局磁力链接支持。"
 
 #. i18n: ectx: label, entry (ShareSize), group (Magnet)
 #: kio-magnet/magnetsettings.kcfg:14
 msgid "Total maximum size used by the share in MiB."
-msgstr ""
+msgstr "分享的总最大尺寸 (MiB)。"
 
 #. i18n: ectx: label, entry (TrustedHosts), group (Magnet)
 #: kio-magnet/magnetsettings.kcfg:18
-#, fuzzy
 msgid "List of hosts which are directly accepted on loading"
-msgstr "显示当前正在下载的块列表"
+msgstr "直接接收传输的主机列表"
 
 #. i18n: ectx: label, entry (ManagedTorrents), group (Magnet)
 #: kio-magnet/magnetsettings.kcfg:21
 msgid "Torrents inside KTorrent which are managed by these modules."
-msgstr ""
+msgstr "KTorrent 中的种子由这些模块管理。"
 
 #. i18n: ectx: label, entry (RunningTorrents), group (Magnet)
 #: kio-magnet/magnetsettings.kcfg:24
 msgid "Torrents currently used by the I/O-Slaves."
-msgstr ""
+msgstr "种子目前被使用 I/O-Slaves 使用。"
 
 #. i18n: ectx: label, entry (MaxShareRatio), group (Magnet)
 #: kio-magnet/magnetsettings.kcfg:27
 msgid "The maximum share ratio which should be targeted for each torrent."
-msgstr ""
+msgstr "最大分享速率，针对所有种子"
 
 #: ktmagnetdownloader/magnetdownloader.cpp:44
-#, fuzzy
 msgid "KTMagnetDownloader"
-msgstr "下载用时"
+msgstr "KTMagnetDownloader"
 
 #: ktmagnetdownloader/magnetdownloader.cpp:45
 msgid "KTorrent's magnet link downloader"
-msgstr ""
+msgstr "KTorrent 的磁力链下载器"
 
 #: ktmagnetdownloader/magnetdownloader.cpp:47
-#, fuzzy
 msgid "(C) 2009 Joris Guisson"
-msgstr "Joris Guisson"
+msgstr "(C) 2009 Joris Guisson"
 
 #: ktmagnetdownloader/magnetdownloader.cpp:52 ktorrent/main.cpp:153
 msgid "Document to open"
 msgstr "要打开的文档"
 
 #: ktorrent/core.cpp:180
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the TCP port %1 is already "
 "in use by another program."
-msgstr "KTorrent 无法接受连接，因为从 %1 到 %2 的端口都被其他程序占用。"
+msgstr "KTorrent 无法接受连接，因为 TCP 端口 %1 已被其他程序占用。"
 
 #: ktorrent/core.cpp:194
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the UDP port %1 is already "
 "in use by another program."
-msgstr "KTorrent 无法接受连接，因为从 %1 到 %2 的端口都被其他程序占用。"
+msgstr "KTorrent 无法接受连接，因为 UDP 端口 %1 已被其他程序占用。"
 
 #: ktorrent/core.cpp:307
 #, kde-format
@@ -162,79 +167,81 @@ msgid ""
 "Opening the torrent <b>%1</b>, would share one or more files with the "
 "following torrents. Torrents are not allowed to write to the same files. "
 msgstr ""
+"若打开种子 <b>%1</b> 将与以下种子共享一个或多个文件。种子间不允许写入相同文"
+"件。"
 
 #: ktorrent/core.cpp:1026
 msgid "KTorrent is running one or more torrents"
-msgstr "KTorrent 正在以一个或多个种子运行"
+msgstr "KTorrent 正在运行一个或多个种子下载"
 
 #: ktorrent/core.cpp:1113
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "无法创建种子：%1"
 
-#: ktorrent/core.cpp:1212
+#: ktorrent/core.cpp:1216
 msgid ""
 "One or more storage volumes are not mounted. In order to start this torrent, "
 "they need to be mounted."
-msgstr ""
+msgstr "一个或多个存储卷未挂载。需要挂载它们才能启动该种子的下载。"
 
-#: ktorrent/core.cpp:1213
+#: ktorrent/core.cpp:1217
 msgid "Retry"
-msgstr ""
+msgstr "重试"
 
-#: ktorrent/core.cpp:1222
+#: ktorrent/core.cpp:1226
 #, kde-format
 msgid "Storage volume %1 is not mounted"
-msgstr ""
+msgstr "存储卷 %1 未挂载"
 
-#: ktorrent/core.cpp:1224
+#: ktorrent/core.cpp:1228
 #, kde-format
 msgid "Storage volumes %1 are not mounted"
-msgstr ""
+msgstr "存储卷 %1 未挂载"
 
-#: ktorrent/core.cpp:1236
+#: ktorrent/core.cpp:1240
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
 "Do you want to recreate them, or do you want to not download them?"
 msgstr ""
-"种子“%1”相关的一些数据文件缺失。\n"
-"您希望重新创建它们吗，或者您不想再下载它们？"
+"种子 \"%1\" 的一些数据文件缺失。\n"
+"您想要重新创建它们，还是不再下载它们？"
 
-#: ktorrent/core.cpp:1245 ktorrent/core.cpp:1256 ktorrent/core.cpp:1269
+#: ktorrent/core.cpp:1249 ktorrent/core.cpp:1260 ktorrent/core.cpp:1273
 msgid "Data files are missing"
 msgstr "数据文件缺失"
 
-#: ktorrent/core.cpp:1255
+#: ktorrent/core.cpp:1259
 #, kde-format
 msgid "Cannot deselect missing files: %1"
-msgstr "无法反选已缺失的文件：%1"
+msgstr "无法反选缺失的文件：%1"
 
-#: ktorrent/core.cpp:1268
+#: ktorrent/core.cpp:1272
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "无法重建缺失的文件：%1"
 
-#: ktorrent/core.cpp:1279
-#, fuzzy, kde-format
+#: ktorrent/core.cpp:1283
+#, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing.\n"
 "Do you want to recreate it?"
 msgstr ""
-"种子“%1”保存的数据文件已丢失。\n"
-"您希望重新创建它们吗？"
+"种子 \"%1\" 的数据保存位置文件已丢失。\n"
+"您想要重新创建它吗？"
 
-#: ktorrent/core.cpp:1286 ktorrent/core.cpp:1296
+#: ktorrent/core.cpp:1290 ktorrent/core.cpp:1300
 msgid "Data file is missing"
-msgstr "缺少数据文件"
+msgstr "数据文件缺失"
 
-#: ktorrent/core.cpp:1295
+#: ktorrent/core.cpp:1299
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "无法重建数据文件：%1"
 
-#: ktorrent/core.cpp:1383
-#, fuzzy, kde-format
+#: ktorrent/core.cpp:1387
+#, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
 "to import it?"
@@ -244,21 +251,20 @@ msgid_plural ""
 msgstr[0] ""
 "KTorrent 从 KDE3 版本的 KTorrent 中找到了 %1 个种子，您想要导入它们吗？"
 
-#: ktorrent/core.cpp:1405
-#, fuzzy
+#: ktorrent/core.cpp:1409
 msgid "No torrents from the KDE3 version were found."
-msgstr "未找到 KDE3 版本的种子！"
+msgstr "未找到 KDE3 版本的种子。"
 
-#: ktorrent/core.cpp:1444
+#: ktorrent/core.cpp:1448
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
-msgstr ""
+msgstr "无效的磁力 Bittorrent 链接：%1"
 
-#: ktorrent/core.cpp:1449
+#: ktorrent/core.cpp:1453
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
-msgstr ""
+msgstr "您正尝试下载一个磁力链，但您未启用 DHT。为了最佳效能请启用 DHT。"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, AddPeersDlg)
 #. i18n: ectx: property (windowTitle), widget (QWidget, GroupPolicyDlg)
@@ -285,6 +291,9 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Note:</span> We accept both IPv4 and "
 "IPv6 addresses</p>\n"
 msgstr ""
+"<p>应在此输入您想要连接到的对等点的 IP 地址或主机名。</p>\n"
+"<p><span style=\"font-weight:600;\">注意：</span>IPv4 和 IPv6 地址都是可接受"
+"的。</p>\n"
 
 #. i18n: ectx: property (text), widget (QLineEdit, m_ip)
 #. i18n: ectx: property (text), widget (KLineEdit, m_ip_to_add)
@@ -329,19 +338,16 @@ msgid "Close"
 msgstr "关闭"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:89
-#, fuzzy
 msgid "Show a file tree"
-msgstr "显示种子中的全部文件"
+msgstr "显示文件树"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:92
-#, fuzzy
 msgid "Show a file list"
-msgstr "选择文件"
+msgstr "显示文件列表"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:101 plugins/infowidget/fileview.cpp:72
-#, fuzzy
 msgid "Filter"
-msgstr "过滤"
+msgstr "过滤器"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:118
 #, kde-format
@@ -349,41 +355,42 @@ msgid "Opening %1"
 msgstr "正在打开 %1"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:227
-#, fuzzy
 msgid ""
 "Some files of this torrent have been found in the completed downloads "
 "directory. Do you want to import these files and use the completed downloads "
 "directory as the location?"
-msgstr "种子 <b>%1</b> 尚未完成下载，您是否想要同时删除未完成的数据？"
+msgstr ""
+"该种子中的部分文件已在完成下载的文件夹中找到。您想要导入这些文件并使用完成下"
+"载的文件夹作为下载位置吗？"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:230
-#, fuzzy
 msgid ""
 "All files of this torrent have been found in the completed downloads "
 "directory. Do you want to import these files and use the completed downloads "
 "directory as the location?"
-msgstr "种子 <b>%1</b> 尚未完成下载，您是否想要同时删除未完成的数据？"
+msgstr ""
+"该种子中的全部文件都已在完成下载的文件夹里找到。您想要导入这些文件并使用完成"
+"下载的文件夹作为下载位置吗？"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:234
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "The file <b>%1</b> was found in the completed downloads directory. Do you "
 "want to import this file?"
-msgstr "种子 <b>%1</b> 尚未完成下载，您是否想要同时删除未完成的数据？"
+msgstr "完成下载目录发现文件 <b>%1</b> ，您想要导入该文件吗？"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:249
 #: ktorrent/dialogs/fileselectdlg.cpp:266
-#, fuzzy, kde-format
+#, kde-format
 msgid "The directory %1 does not exist, do you want to create it?"
-msgstr "目录 %1 不存在，您想要创建吗？"
+msgstr "文件夹 %1 不存在，您想要创建它吗？"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:299
-#, fuzzy
 msgid ""
 "You have deselected the following existing files. You will lose all data in "
 "these files, are you sure you want to do this?"
 msgstr ""
-"您已经取消了下列已有文件。您将丢失这些文件中的全部数据，您确定想要这么做吗？"
+"您已反选了以下已有文件。您将丢失这些文件中的全部数据，您确定想要这么做吗？"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:303
 msgid "Yes, delete the files"
@@ -400,6 +407,8 @@ msgid ""
 "following torrents. Torrents are not allowed to write to the same files. "
 "Please select a different location."
 msgstr ""
+"若打开种子 <b>%1</b> 将与以下种子共享一个或多个文件。种子间不允许写入相同文"
+"件。请选择一个不同的位置。"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:430 ktorrent/dialogs/pastedialog.cpp:62
 #: ktorrent/dialogs/torrentcreatordlg.cpp:118 libktcore/groups/allgroup.cpp:26
@@ -408,48 +417,43 @@ msgstr "全部种子"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:507
 msgid "<b>Unable to determine free space</b>"
-msgstr ""
+msgstr "<b>无法确定剩余空间</b>"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:517
 #, kde-format
 msgid "%1 (%2 in use by existing files)"
-msgstr ""
+msgstr "%1 (%2 正被现有文件使用)"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:526
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "We are %1 bytes short of what we need"
 msgid "%1 short"
-msgstr "%1 缺失！"
+msgstr "缺 %1"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:558
-#, fuzzy
 msgid "Existing files: <b>None</b>"
-msgstr "标题：<b>%1</b>"
+msgstr "已存在文件：<b>无</b>"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:560
-#, fuzzy
 msgid "Existing files: <b>All</b>"
-msgstr "标题：<b>%1</b>"
+msgstr "已存在文件：<b>全部</b>"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:562
-#, fuzzy, kde-format
+#, kde-format
 msgid "Existing files: <b>%1</b> of <b>%2</b>"
-msgstr "标题：<b>%1</b><br/>艺人：<b>%2</b>"
+msgstr "已存在文件：<b>%1</b><br/> 共有 <b>%2</b>"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:569
-#, fuzzy
 msgid "Existing file: <b>No</b>"
-msgstr "标题：<b>%1</b>"
+msgstr "已存在文件：<b>否</b>"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:574
-#, fuzzy
 msgid "Existing file: <b>Yes</b>"
-msgstr "标题：<b>%1</b>"
+msgstr "已存在文件：<b>是</b>"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:654
-#, fuzzy
 msgid "Clear History"
-msgstr "清除搜索历史"
+msgstr "清除历史"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, FileSelectDlg)
 #: ktorrent/dialogs/fileselectdlg.ui:14
@@ -466,7 +470,7 @@ msgstr "下载到："
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_download_location_history)
 #: ktorrent/dialogs/fileselectdlg.ui:38
 msgid "History of all recently used download locations"
-msgstr ""
+msgstr "最近使用的下载位置的历史"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_download_location_history)
 #. i18n: ectx: property (text), widget (QToolButton, m_move_when_completed_history)
@@ -484,31 +488,28 @@ msgstr ""
 #: plugins/mediaplayer/mediacontroller.ui:58
 #: plugins/mediaplayer/mediacontroller.ui:71
 #: plugins/mediaplayer/mediacontroller.ui:84
-#, fuzzy
 msgid "..."
-msgstr "打开..."
+msgstr "..."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_moveCompleted)
 #: ktorrent/dialogs/fileselectdlg.ui:52
-#, fuzzy
 msgid ""
 "Moves the files to the specified location when the torrent finishes "
 "downloading."
-msgstr "用于种子文件下载完成后迁移数据的目录。"
+msgstr "种子下载完成时将文件移动到指定的位置。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_moveCompleted)
 #. i18n: ectx: property (text), widget (QCheckBox, move_on_completion_enabled)
 #. i18n: ectx: property (text), widget (QCheckBox, m_move_on_completion)
 #: ktorrent/dialogs/fileselectdlg.ui:55 ktorrent/view/propertiesdlg.ui:58
 #: plugins/syndication/filtereditor.ui:314
-#, fuzzy
 msgid "Move when completed to:"
-msgstr "将完成的下载移动到："
+msgstr "完成时移动到："
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_move_when_completed_history)
 #: ktorrent/dialogs/fileselectdlg.ui:65
 msgid "History of all recently used move when completed locations"
-msgstr ""
+msgstr "全部最近使用的完成下载时将文件移动到的位置的历史"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/fileselectdlg.ui:96
@@ -524,17 +525,17 @@ msgstr "种子中的全部文件，您可以通过在上面双击来更改它们
 #. i18n: ectx: property (text), widget (KPushButton, m_select_all)
 #: ktorrent/dialogs/fileselectdlg.ui:132
 msgid "Select &All"
-msgstr "全部选中(&A)"
+msgstr "全选 (&A)"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_select_none)
 #: ktorrent/dialogs/fileselectdlg.ui:139
 msgid "Select &None"
-msgstr "全部不选(&N)"
+msgstr "全不选 (&N)"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_invert_selection)
 #: ktorrent/dialogs/fileselectdlg.ui:146
 msgid "Invert Selection"
-msgstr "反向选择"
+msgstr "反选"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_collapse_all)
 #: ktorrent/dialogs/fileselectdlg.ui:153
@@ -548,9 +549,8 @@ msgstr "全部展开"
 
 #. i18n: ectx: property (text), widget (QLabel, m_existing_found)
 #: ktorrent/dialogs/fileselectdlg.ui:184
-#, fuzzy
 msgid "No existing files are found"
-msgstr "如果找到已存在的文件，则跳过数据检查"
+msgstr "未找到已存在的文件"
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_options)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
@@ -564,11 +564,11 @@ msgstr "如果找到已存在的文件，则跳过数据检查"
 msgid "Options"
 msgstr "选项"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/fileselectdlg.ui:207 ktorrent/dialogs/pastedlgbase.ui:77
 msgid "Group:"
-msgstr "组："
+msgstr "群组："
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_chkStartTorrent)
 #: ktorrent/dialogs/fileselectdlg.ui:244
@@ -583,6 +583,8 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Note: </span>only do this when you are "
 "absolutely sure.</p>"
 msgstr ""
+"<p>若找到了现有文件，将跳过数据检查并假定文件已完整下载。</p>\n"
+"<p><span style=\"font-weight:600;\">注意：</span>请在完全确定时再这么做。</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_skip_data_check)
 #: ktorrent/dialogs/fileselectdlg.ui:258
@@ -591,21 +593,18 @@ msgstr "如果找到已存在的文件，则跳过数据检查"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
 #: ktorrent/dialogs/fileselectdlg.ui:268
-#, fuzzy
 msgid "Disk Space"
 msgstr "磁盘空间"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: ktorrent/dialogs/fileselectdlg.ui:276
-#, fuzzy
 msgid "Required:"
-msgstr "需要的磁盘空间："
+msgstr "需要："
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
 #: ktorrent/dialogs/fileselectdlg.ui:286
-#, fuzzy
 msgid "Available:"
-msgstr "可用"
+msgstr "可用："
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel6)
 #: ktorrent/dialogs/fileselectdlg.ui:296
@@ -613,26 +612,26 @@ msgid "After download:"
 msgstr "下载后："
 
 #: ktorrent/dialogs/importdialog.cpp:225 ktorrent/dialogs/importdialog.cpp:257
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cannot load the torrent file: %1"
-msgstr "无法装入种子文件：%1"
+msgstr "无法加载种子文件：%1"
 
-#: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:67
-#: plugins/ipfilter/convertthread.cpp:167
+#: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:66
+#: plugins/ipfilter/convertthread.cpp:166
 #: plugins/search/searchenginelist.cpp:192
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cannot open %1: %2"
 msgstr "无法打开 %1：%2"
 
 #: ktorrent/dialogs/importdialog.cpp:394 ktorrent/dialogs/importdialog.cpp:411
-#, fuzzy, kde-format
+#, kde-format
 msgid "Failed to create %1: %2"
 msgstr "创建 %1 失败：%2"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ImportDialog)
 #: ktorrent/dialogs/importdialog.ui:13
 msgid "Import an existing torrent"
-msgstr "导入已有的下载"
+msgstr "导入已有的种子"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: ktorrent/dialogs/importdialog.ui:29
@@ -647,7 +646,7 @@ msgstr "数据："
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/importdialog.ui:69
 msgid "Select the torrent file and the data which belongs with it."
-msgstr "选择种子文件和属于它的数据。"
+msgstr "请选择种子文件和属于它的数据。"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_import_btn)
 #: ktorrent/dialogs/importdialog.ui:108
@@ -662,30 +661,27 @@ msgstr "取消(&N)"
 #: ktorrent/dialogs/missingfilesdlg.cpp:77
 #: ktorrent/dialogs/missingfilesdlg.cpp:110
 msgid "Select the directory where the data now is."
-msgstr "请选择数据文件所在的目录。"
+msgstr "请选择数据文件当前所在的文件夹。"
 
 #: ktorrent/dialogs/missingfilesdlg.cpp:88
-#, fuzzy
 msgid ""
 "The data files are not present in the location you selected. Do you want to "
 "create all the files in the selected directory?"
-msgstr "您所选择的位置不存在这些数据文件！您想要创建在所选目录中的全部文件吗？"
+msgstr "您所选的位置不存在数据文件，要在所选文件夹中创建全部文件吗？"
 
 #: ktorrent/dialogs/missingfilesdlg.cpp:90
-#, fuzzy
 msgid ""
 "Not all files were found in the new location; some are still missing. Do you "
 "want to create the missing files in the selected directory?"
 msgstr ""
-"新的位置并没有找到所有的文件，有些文件仍然丢失！您想要创建在所选目录中丢失的"
-"文件吗？"
+"新的位置并未找到所有的文件，有些文件仍然缺失。 您想要在所选目录中创建缺失的文"
+"件吗？"
 
 #: ktorrent/dialogs/missingfilesdlg.cpp:119
-#, fuzzy
 msgid ""
 "The data file is not present in the location you selected. Do you want to "
 "create the file in the selected directory?"
-msgstr "您所选择的位置不存在这个数据文件！您想要创建在所选目录中的文件吗？"
+msgstr "您所选的位置不存在数据文件，您想要在所选文件夹中创建文件吗？"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, MissingFilesDlg)
 #: ktorrent/dialogs/missingfilesdlg.ui:14
@@ -695,12 +691,12 @@ msgstr "文件缺失"
 #. i18n: ectx: property (text), widget (QLabel, m_text)
 #: ktorrent/dialogs/missingfilesdlg.ui:20
 msgid "The following files are missing:"
-msgstr "如下文件缺失："
+msgstr "以下文件缺失："
 
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_recreate)
 #: ktorrent/dialogs/missingfilesdlg.ui:34
 msgid "They are no longer there, recreate them."
-msgstr ""
+msgstr "所选位置没有相应文件，将重新创建它们。"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_recreate)
 #: ktorrent/dialogs/missingfilesdlg.ui:37
@@ -709,10 +705,8 @@ msgstr "重建"
 
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_dnd)
 #: ktorrent/dialogs/missingfilesdlg.ui:44
-#, fuzzy
-#| msgid "Cannot deselect missing files: %1"
 msgid "Do not download the missing files."
-msgstr "无法反选已缺失的文件：%1"
+msgstr "不下载缺失文件。"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_dnd)
 #: ktorrent/dialogs/missingfilesdlg.ui:47 plugins/infowidget/fileview.cpp:123
@@ -722,7 +716,7 @@ msgstr "不下载"
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_select_new)
 #: ktorrent/dialogs/missingfilesdlg.ui:54
 msgid "The files have been moved to another location, select the new location."
-msgstr ""
+msgstr "文件已被移动到其他位置，请选择新位置。"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_select_new)
 #: ktorrent/dialogs/missingfilesdlg.ui:57
@@ -731,10 +725,8 @@ msgstr "选择新位置"
 
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_cancel)
 #: ktorrent/dialogs/missingfilesdlg.ui:77
-#, fuzzy
-#| msgid "Don't start torrents"
 msgid "Cancel, do not start the torrent."
-msgstr "不要启动种子"
+msgstr "取消，不启动种子。"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_cancel)
 #. i18n: ectx: property (text), widget (KPushButton, cancel_button)
@@ -745,19 +737,19 @@ msgstr "取消"
 #. i18n: ectx: property (windowTitle), widget (QWidget, PasteDlgBase)
 #: ktorrent/dialogs/pastedialog.cpp:38 ktorrent/dialogs/pastedlgbase.ui:14
 msgid "Open an URL"
-msgstr "打开 URL"
+msgstr "打开网址"
 
 #: ktorrent/dialogs/pastedialog.cpp:106
 #: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:348
 #, kde-format
 msgid "Invalid URL: %1"
-msgstr "无效的 URL：%1"
+msgstr "无效的网址：%1"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/pastedlgbase.ui:25 plugins/syndication/feedwidget.ui:27
 msgid "URL:"
-msgstr "URL："
+msgstr "网址："
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_silently)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openSilently)
@@ -768,21 +760,19 @@ msgstr "以静默方式打开"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpeedLimitsDlg)
 #: ktorrent/dialogs/speedlimitsdlg.cpp:50
-#: ktorrent/dialogs/speedlimitsdlg.ui:14 ktorrent/view/view.cpp:256
+#: ktorrent/dialogs/speedlimitsdlg.ui:14 ktorrent/view/view.cpp:260
 msgid "Speed Limits"
 msgstr "速度限制"
 
 #. i18n: ectx: property (text), widget (QLabel, m_main_caption)
 #: ktorrent/dialogs/speedlimitsdlg.ui:23
-#, fuzzy
 msgid "Speed limits for individual torrents (double click to edit):"
-msgstr "对所有种子的速度限制(双击编辑)："
+msgstr "单个种子的速度限制 (双击编辑)："
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/speedlimitsdlg.ui:35
-#, fuzzy
 msgid "Filter:"
-msgstr "过滤"
+msgstr "过滤器："
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: ktorrent/dialogs/speedlimitsdlg.ui:64
@@ -790,8 +780,8 @@ msgid "Global Limits"
 msgstr "全局限制"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
+#. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ktorrent/dialogs/speedlimitsdlg.ui:70 ktorrent/pref/networkpref.ui:111
 #: ktorrent/pref/recommendedsettingsdlg.ui:221
 #: plugins/bwscheduler/bwprefpage.ui:65
@@ -849,9 +839,9 @@ msgstr "无限制"
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_rate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_max_download_rate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_max_upload_rate)
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_avg_speed_slot)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxDownloadRate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxUploadRate)
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_avg_speed_slot)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverUploadLimit)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverDownloadLimit)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_download_limit)
@@ -873,8 +863,8 @@ msgid " KiB/s"
 msgstr " KiB/秒"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/speedlimitsdlg.ui:93 ktorrent/pref/networkpref.ui:134
 #: ktorrent/pref/recommendedsettingsdlg.ui:207
@@ -890,44 +880,42 @@ msgstr "种子"
 
 #: ktorrent/dialogs/speedlimitsmodel.cpp:111
 msgid "Download Limit"
-msgstr "下载限制"
+msgstr "下载限速"
 
 #: ktorrent/dialogs/speedlimitsmodel.cpp:112
 msgid "Upload Limit"
-msgstr "上传限制"
+msgstr "上传限速"
 
 #: ktorrent/dialogs/speedlimitsmodel.cpp:113
 msgid "Assured Download Speed"
-msgstr "额定的下载速度"
+msgstr "保证下载速度"
 
 #: ktorrent/dialogs/speedlimitsmodel.cpp:114
 msgid "Assured Upload Speed"
-msgstr "额定的上传速度"
+msgstr "保证上传速度"
 
 #: ktorrent/dialogs/speedlimitsmodel.cpp:148
 #: ktorrent/dialogs/speedlimitsmodel.cpp:153
 #: ktorrent/dialogs/spinboxdelegate.cpp:43
 msgid "No assured speed"
-msgstr "无确定速度"
+msgstr "无速度保证"
 
 #: ktorrent/dialogs/torrentcreatordlg.cpp:44
 msgid "Create A Torrent"
 msgstr "创建一个种子"
 
 #: ktorrent/dialogs/torrentcreatordlg.cpp:258
-#, fuzzy
 msgid "Only HTTP is supported for webseeding."
-msgstr "仅支持 HTTP 的网络种子！"
+msgstr "仅支持 HTTP 的网络种子。"
 
 #: ktorrent/dialogs/torrentcreatordlg.cpp:290
 msgid "You must select a file or a folder."
 msgstr "您必须选择一个文件或文件夹。"
 
 #: ktorrent/dialogs/torrentcreatordlg.cpp:296
-#, fuzzy
 msgid ""
 "You have not added a tracker, are you sure you want to create this torrent?"
-msgstr "您还没有添加 tracker 服务器，您确定您要创建这个种子吗？"
+msgstr "您尚未添加任何追踪服务器，您确定要创建该种子吗？"
 
 #: ktorrent/dialogs/torrentcreatordlg.cpp:304
 msgid "You must add at least one node."
@@ -950,7 +938,7 @@ msgstr "创建种子的来源文件或文件夹："
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ktorrent/dialogs/torrentcreatordlg.ui:54
 msgid "Size of each chunk:"
-msgstr "每块的大小："
+msgstr "每个数据块的大小："
 
 #. i18n: ectx: property (text), item, widget (QComboBox, m_chunk_size)
 #: ktorrent/dialogs/torrentcreatordlg.ui:65
@@ -1005,12 +993,12 @@ msgstr "开始做种"
 #. i18n: ectx: property (text), widget (QCheckBox, m_private)
 #: ktorrent/dialogs/torrentcreatordlg.ui:125
 msgid "Private torrent (DHT not allowed)"
-msgstr "私有种子(不允许 DHT)"
+msgstr "私服种子 (不允许 DHT)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_dht)
 #: ktorrent/dialogs/torrentcreatordlg.ui:132
 msgid "Decentralized (DHT only)"
-msgstr "非集中化(只允许 DHT)"
+msgstr "非集中化 (只允许 DHT)"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_addToGroup)
@@ -1024,7 +1012,7 @@ msgstr "将种子添加到组："
 #: plugins/infowidget/infowidgetplugin.cpp:266
 #: plugins/scripting/scripts/tracker_groups/tracker_groups.py:59
 msgid "Trackers"
-msgstr "Tracker 服务器"
+msgstr "追踪服务器"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_remove_tracker)
 #. i18n: ectx: property (text), widget (KPushButton, m_remove_node)
@@ -1037,7 +1025,7 @@ msgstr "Tracker 服务器"
 #: plugins/mediaplayer/playlistwidget.cpp:50
 #: plugins/syndication/managefiltersdlg.ui:67
 msgid "Remove"
-msgstr "删除"
+msgstr "移除"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_move_up)
 #: ktorrent/dialogs/torrentcreatordlg.ui:188
@@ -1095,25 +1083,24 @@ msgstr[0] "正在导入 %1 个种子..."
 #: ktorrent/dialogs/torrentmigratordlg.cpp:105
 #, kde-format
 msgid "Importing <b>%1</b> ..."
-msgstr "正在扫描 <b>%1</b>..."
+msgstr "正在导入 <b>%1</b>..."
 
 #: ktorrent/dialogs/torrentmigratordlg.cpp:110
-#, fuzzy
 msgid "Finished import."
-msgstr "导入完成！"
+msgstr "导入完成。"
 
 #: ktorrent/dialogs/torrentmigratordlg.cpp:145
-#, fuzzy, kde-format
+#, kde-format
 msgid "Torrent <b>%1</b> already loaded."
-msgstr "种子 <b>%1</b> 已装入！"
+msgstr "种子 <b>%1</b> 已加载。"
 
 #: ktorrent/dialogs/torrentmigratordlg.cpp:152
 #, kde-format
 msgid "Failed to load <b>%1</b>"
-msgstr "装入 <b>%1</b> 失败"
+msgstr "加载 <b>%1</b> 失败"
 
 #: ktorrent/dialogs/torrentmigratordlg.cpp:160
-#, fuzzy, kde-format
+#, kde-format
 msgid "Failed to import <b>%1</b>: %2"
 msgstr "导入 <b>%1</b> 失败：%2"
 
@@ -1146,6 +1133,9 @@ msgid ""
 "location in the dialog will be set to this. You can still override it, if "
 "you want to."
 msgstr ""
+"本群组中的种子的默认保存位置。<br/><br/>这只用于文件选择对话框，您变更群组"
+"后，对话框中的下载位置将相应设定为该位置。您仍可以覆盖它，如果您想要那么做的"
+"话。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_default_location_enabled)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useSaveDir)
@@ -1155,9 +1145,8 @@ msgstr "默认保存位置："
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_default_move_on_completion_enabled)
 #: ktorrent/groups/grouppolicydlg.ui:40
-#, fuzzy
 msgid "Default move when completed location:"
-msgstr "将完成的下载移动到："
+msgstr "默认的完成时移动到的位置："
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, m_default_move_on_completion_location)
 #: ktorrent/groups/grouppolicydlg.ui:47
@@ -1167,11 +1156,14 @@ msgid ""
 "the move when completed location in the dialog will be set to this. You can "
 "still override it, if you want to."
 msgstr ""
+"本群组中的种子的默认完成后移动到的位置。<br/><br/>这只用于文件选择对话框，您"
+"变更群组后，对话框中的完成后移动到的位置将设定为该位置。您仍可以覆盖它，如果"
+"您想要这么做的话。"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox)
 #: ktorrent/groups/grouppolicydlg.ui:54
 msgid "Default settings for torrents which are added to the group."
-msgstr ""
+msgstr "添加到群组的种子的默认设置。"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: ktorrent/groups/grouppolicydlg.ui:57
@@ -1202,7 +1194,7 @@ msgstr " 小时"
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ktorrent/groups/grouppolicydlg.ui:128
 msgid "Maximum share ratio:"
-msgstr "最大共享率："
+msgstr "最大分享率："
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_only_new)
 #: ktorrent/groups/grouppolicydlg.ui:151
@@ -1213,6 +1205,9 @@ msgid ""
 "If this is not enabled, the settings will always be applied when you add a "
 "torrent to this group. "
 msgstr ""
+"当该选项启用时，只有在文件选择对话框或种子创建对话框中将种子添加到群组后才会"
+"应用这些设置。<p>\n"
+"如果未启用该选项，当您添加种子到本群组时将始终应用这些设置。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_only_new)
 #: ktorrent/groups/grouppolicydlg.ui:154
@@ -1220,50 +1215,42 @@ msgid "Apply settings only for newly opened or created torrents"
 msgstr "仅对新打开或创建的种子应用设置"
 
 #: ktorrent/groups/groupswitcher.cpp:58
-#, fuzzy
-#| msgid "Open in New Tab"
 msgid "Open a new tab"
-msgstr "在新标签打开"
+msgstr "在新标签中打开"
 
 #: ktorrent/groups/groupswitcher.cpp:63
-#, fuzzy
-#| msgid "Stop all torrents in the current tab"
 msgid "Close the current tab"
-msgstr "停止当前标签页中全部种子"
+msgstr "关闭当前标签"
 
 #: ktorrent/groups/groupswitcher.cpp:68
-#, fuzzy
-#| msgid "Group Policy"
 msgid "Edit Group Policy"
-msgstr "组策略"
+msgstr "编辑组策略"
 
-#: ktorrent/groups/groupview.cpp:81
-#, fuzzy
-#| msgid "Open in New Tab"
+#: ktorrent/groups/groupview.cpp:80
 msgid "Open In New Tab"
-msgstr "在新标签打开"
+msgstr "在新标签中打开"
 
-#: ktorrent/groups/groupview.cpp:85 ktorrent/view/view.cpp:221
+#: ktorrent/groups/groupview.cpp:84 ktorrent/view/view.cpp:225
 msgid "New Group"
 msgstr "新建组"
 
-#: ktorrent/groups/groupview.cpp:89
+#: ktorrent/groups/groupview.cpp:88
 msgid "Edit Name"
 msgstr "编辑名称"
 
-#: ktorrent/groups/groupview.cpp:93
+#: ktorrent/groups/groupview.cpp:92
 msgid "Remove Group"
-msgstr "删除组"
+msgstr "移除组"
 
-#: ktorrent/groups/groupview.cpp:97
+#: ktorrent/groups/groupview.cpp:96
 msgid "Group Policy"
 msgstr "组策略"
 
-#: ktorrent/groups/groupview.cpp:110
+#: ktorrent/groups/groupview.cpp:109
 msgid "Please enter the group name."
 msgstr "请输入组名称。"
 
-#: ktorrent/groups/groupview.cpp:117
+#: ktorrent/groups/groupview.cpp:116
 #, kde-format
 msgid "The group %1 already exists."
 msgstr "组 %1 已经存在。"
@@ -1294,16 +1281,15 @@ msgstr "不加询问打开种子"
 
 #: ktorrent/gui.cpp:434
 msgid "Open URL"
-msgstr "打开 URL"
+msgstr "打开网址"
 
 #: ktorrent/gui.cpp:435
-#, fuzzy
 msgid "Open a URL which points to a torrent, magnet links are supported"
-msgstr "打开指向种子的 URL"
+msgstr "打开指向种子的网址，支持磁力链"
 
 #: ktorrent/gui.cpp:440 plugins/ipfilter/ipblockingprefpage.cpp:35
-#: plugins/ipfilter/ipfilterplugin.cpp:62
-#: plugins/ipfilter/ipfilterplugin.cpp:75
+#: plugins/ipfilter/ipfilterplugin.cpp:60
+#: plugins/ipfilter/ipfilterplugin.cpp:73
 msgid "IP Filter"
 msgstr "IP 过滤"
 
@@ -1336,14 +1322,14 @@ msgid "IP Filter List"
 msgstr "IP 过滤列表"
 
 #: ktorrent/ipfilterwidget.cpp:111
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX."
 "XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
 "ranges like '200.10.10.0-200.10.10.40'."
 msgstr ""
-"无效的 IP 地址 %1。您必须按照“XXX.XXX.XXX.XXX”的格式输入 IP，您还可以使用通配"
-"符表示范围，如“127.0.0.*”。"
+"无效的 IP 地址<b>%1</b>。您必须按照“XXX.XXX.XXX.XXX”的格式输入 IP。<br/><br/>"
+"您还可以使用通配符表示范围，例如“127.0.0.*”。"
 
 #: ktorrent/ipfilterwidget.cpp:139
 msgid "Choose a file"
@@ -1365,15 +1351,16 @@ msgstr "添加对等点："
 
 #. i18n: ectx: property (toolTip), widget (KLineEdit, m_ip_to_add)
 #: ktorrent/ipfilterwidget.ui:31
-#, fuzzy
 msgid ""
 "IP addresses must be in the format 'XXX.XXX.XXX.XXX'.\n"
 "                                        \n"
 "You can also use wildcards like '127.0.0.*' or specify ranges like "
 "'200.10.10.0-200.10.10.40'."
 msgstr ""
-"无效的 IP 地址 %1。您必须按照“XXX.XXX.XXX.XXX”的格式输入 IP，您还可以使用通配"
-"符表示范围，如“127.0.0.*”。"
+"您必须按照“XXX.XXX.XXX.XXX”的格式输入 IP。\n"
+"                                        \n"
+"您还可以使用通配符表示范围，如“127.0.0.*”。或者使"
+"用“200.10.10.0-200.10.10.40”。"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_clear)
 #: ktorrent/ipfilterwidget.ui:72
@@ -1397,34 +1384,30 @@ msgstr "文件(&F)"
 
 #. i18n: ectx: Menu (view)
 #: ktorrent/ktorrentui.rc:16
-#, fuzzy
 msgid "&View"
-msgstr "查看菜单"
+msgstr "视图(&V)"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: ktorrent/ktorrentui.rc:25
-#, fuzzy
 msgid "Main"
-msgstr "Maxmind"
+msgstr "主工具栏"
 
 #. i18n: ectx: Menu (Torrents)
 #. i18n: ectx: ToolBar (TorrentsToolBar)
 #: ktorrent/kttorrentactivityui.rc:7 ktorrent/kttorrentactivityui.rc:83
 #: ktorrent/torrentactivity.cpp:51 libktcore/interfaces/functions.cpp:179
-#, fuzzy
 msgid "Torrents"
 msgstr "种子"
 
 #. i18n: ectx: Menu (GroupsMenu)
 #: ktorrent/kttorrentactivityui.rc:26
 msgid "Groups"
-msgstr "组"
+msgstr "群组"
 
 #. i18n: ectx: Menu (ViewMenu)
 #: ktorrent/kttorrentactivityui.rc:39
-#, fuzzy
 msgid "View"
-msgstr "查看菜单"
+msgstr "视图"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: Menu (AdvancedMenu)
@@ -1434,12 +1417,12 @@ msgid "Advanced"
 msgstr "高级"
 
 #. i18n: ectx: Menu (OpenDirMenu)
-#: ktorrent/kttorrentactivityui.rc:62 ktorrent/view/view.cpp:242
+#: ktorrent/kttorrentactivityui.rc:62 ktorrent/view/view.cpp:246
 msgid "Open Directory"
 msgstr "打开目录"
 
 #. i18n: ectx: Menu (GroupsSubMenu)
-#: ktorrent/kttorrentactivityui.rc:68 ktorrent/view/view.cpp:245
+#: ktorrent/kttorrentactivityui.rc:68 ktorrent/view/view.cpp:249
 msgid "Add to Group"
 msgstr "添加到组"
 
@@ -1464,9 +1447,8 @@ msgid "Bittorrent client for KDE"
 msgstr "KDE 下的 BitTorrent 客户端"
 
 #: ktorrent/main.cpp:98
-#, fuzzy
 msgid "(C) 2005 - 2011 Joris Guisson and Ivan Vasic"
-msgstr "(C) 2005 - 2007 Joris Guisson 和 Ivan Vasic"
+msgstr "(C) 2005 - 2011 Joris Guisson 和 Ivan Vasic"
 
 #: ktorrent/main.cpp:102
 msgid "Joris Guisson"
@@ -1490,7 +1472,7 @@ msgstr "Diego R. Brogna"
 
 #: ktorrent/main.cpp:105
 msgid "Webinterface Plugin"
-msgstr "Web 界面插件"
+msgstr "网页界面插件"
 
 #: ktorrent/main.cpp:106
 msgid "Krzysztof Kundzicz"
@@ -1502,11 +1484,11 @@ msgstr "状态统计插件"
 
 #: ktorrent/main.cpp:107
 msgid "Christian Weilbach"
-msgstr ""
+msgstr "Christian Weilbach"
 
 #: ktorrent/main.cpp:107
 msgid "kio-magnet"
-msgstr ""
+msgstr "kio-magnet"
 
 #: ktorrent/main.cpp:109
 msgid "Mladen Babic"
@@ -1542,7 +1524,7 @@ msgstr "Felix Berge"
 
 #: ktorrent/main.cpp:114
 msgid "ChunkBar's tooltip and IWFileTreeItem sorting"
-msgstr "下载块栏的工具提示和文件树排序"
+msgstr "数据块栏的工具提示和文件树项目排序"
 
 #: ktorrent/main.cpp:115
 msgid "Andreas Kling"
@@ -1585,7 +1567,7 @@ msgstr "Diego Rosario Brogna"
 
 #: ktorrent/main.cpp:120
 msgid "Global max share ratio patch"
-msgstr "全局最大共享率补丁"
+msgstr "全局最大分享率补丁"
 
 #: ktorrent/main.cpp:121
 msgid "Lesly Weyts"
@@ -1629,7 +1611,7 @@ msgstr "Juniper Networks 的 Bryan Burns"
 
 #: ktorrent/main.cpp:126
 msgid "Discovered 2 security vulnerabilities (both are fixed)"
-msgstr "发现了两个安全问题(都已经被修复)"
+msgstr "发现了两个安全问题 (都已经被修复)"
 
 #: ktorrent/main.cpp:127
 msgid "Goten Xiao"
@@ -1637,7 +1619,7 @@ msgstr "Goten Xiao"
 
 #: ktorrent/main.cpp:127
 msgid "Patch to load silently with a save location"
-msgstr "静默装入保存位置的补丁"
+msgstr "带保存位置静默加载的补丁"
 
 #: ktorrent/main.cpp:128
 msgid "Rapsys"
@@ -1756,9 +1738,8 @@ msgid "Aaron J. Seigo"
 msgstr "Aaron J. Seigo"
 
 #: ktorrent/main.cpp:142
-#, fuzzy
 msgid "Drag and drop support for Plasma applet"
-msgstr "plasma 小程序拖放支持"
+msgstr "Plasma 部件的拖放支持"
 
 #: ktorrent/main.cpp:143
 msgid "Ian Higginson"
@@ -1770,57 +1751,55 @@ msgstr "清理插件列表的补丁"
 
 #: ktorrent/main.cpp:144
 msgid "Amichai Rothman"
-msgstr ""
+msgstr "Amichai Rothman"
 
 #: ktorrent/main.cpp:144
 msgid "Patch to make the Plasma applet a popup applet"
-msgstr ""
+msgstr "使 Plasma 部件成为弹出部件的补丁"
 
 #: ktorrent/main.cpp:145
 msgid "Leo Trubach"
-msgstr ""
+msgstr "Leo Trubach"
 
 #: ktorrent/main.cpp:145
 msgid "Patch to add support for IP ranges in IP filter dialog"
-msgstr ""
+msgstr "使 IP 过滤器接受通配符的补丁"
 
 #: ktorrent/main.cpp:146
 msgid "Andrei Barbu"
-msgstr ""
+msgstr "Andrei Barbu"
 
 #: ktorrent/main.cpp:146
-#, fuzzy
 msgid "Feature which adds the date a torrent was added"
-msgstr "没有装入种子！"
+msgstr "增加了添加种子数据的功能"
 
 #: ktorrent/main.cpp:148
 msgid "Jonas Lundqvist"
-msgstr ""
+msgstr "Jonas Lundqvist"
 
 #: ktorrent/main.cpp:148
 msgid "Feature to disable authentication in the webinterface"
-msgstr ""
+msgstr "在网页界面中禁用认证的特性"
 
 #: ktorrent/main.cpp:149
 msgid "Jaroslaw Swierczynski"
-msgstr ""
+msgstr "Jaroslaw Swierczynski"
 
 #: ktorrent/main.cpp:149
 msgid "Exclusion patterns in the syndication plugin"
-msgstr ""
+msgstr "聚合插件中的排除模式"
 
 #: ktorrent/main.cpp:150
 msgid "Alexey Shildyakov "
-msgstr ""
+msgstr "Alexey Shildyakov "
 
 #: ktorrent/main.cpp:150
-#, fuzzy
 msgid "Patch to rename single file torrents to the file inside"
-msgstr "在 Web 界面上改变文件优先级的补丁"
+msgstr "将单一文件种子重命名为其内部文件的文件名的补丁"
 
 #: ktorrent/main.cpp:154
 msgid "Silently open torrent given on URL"
-msgstr "静默打开 URL 给出的种子"
+msgstr "静默打开地址给出的种子"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_diskPrealloc)
 #: ktorrent/pref/advancedpref.ui:17
@@ -1864,6 +1843,9 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Note: </span>Increasing this will "
 "decrease CPU usage.</p>"
 msgstr ""
+"<p>按毫秒计的图形界面更新间隔。</p>\n"
+"<p><span style=\"font-weight:600;\">注意：</span>增加该间隔可降低 CPU 用量。"
+"</p>"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_guiUpdateInterval)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_cpuUsage)
@@ -1888,6 +1870,12 @@ msgid ""
 "might not actually reach this speed when this value is too high. Without a "
 "limit you can easily get above 3000 KiB/s on a LAN.</p>"
 msgstr ""
+"<p>当限速时网络线程的休眠时间。不限速当然也不会生效。</p>\n"
+"<p><span style=\"font-weight:600;\">注意：</span>该时间越低占用的 CPU 越高。"
+"调高它将导致带宽很高但速度很低。</p>\n"
+"<p>以 100 Mbit 局域网为例，如果您限速 3000 KiB/s，如果该时间设置的过高，您实"
+"际上可能达不到该速度。如果不限速您可以很轻易地在局域网中获得高于 3000 KiB 的"
+"速度。</p>"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
@@ -1915,28 +1903,39 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Moving average:</span>  Moving average "
 "of the last 20 samples</p>"
 msgstr ""
+"<p>选择估算剩余时间使用的算法：</p>\n"
+"<p><span style=\"font-weight:600;\">KTorrent：</span>混合其它算法，我们将选择"
+"最适合当前情况的算法。</p>\n"
+"<p><span style=\"font-weight:600;\">当前速度算法：</span>剩余的待下载字节 / "
+"当前速度</p>\n"
+"<p><span style=\"font-weight:600;\">平均速度算法：</span>剩余的待下载字节 / "
+"平均速度</p>\n"
+"<p><span style=\"font-weight:600;\">X 个窗口均速算法：</span>最后 X 个样本的"
+"平均下载时间 (X=20)</p>\n"
+"<p><span style=\"font-weight:600;\">移动平均算法：</span>最后 20 个样本的移动"
+"平均下载时间。</p>"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
 #: ktorrent/pref/advancedpref.ui:163 plugins/stats/SpdTabPage.cc:67
 #: plugins/stats/SpdTabPage.cc:68
 msgid "Current speed"
-msgstr "当前速度"
+msgstr "当前速度算法"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
 #: ktorrent/pref/advancedpref.ui:168 plugins/stats/SpdTabPage.cc:70
 #: plugins/stats/SpdTabPage.cc:71
 msgid "Average speed"
-msgstr "平均速度"
+msgstr "平均速度算法"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
 #: ktorrent/pref/advancedpref.ui:173
 msgid "Window of X"
-msgstr "X 的窗口"
+msgstr "X 个窗口均速算法"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
 #: ktorrent/pref/advancedpref.ui:178
 msgid "Moving average"
-msgstr "移动平均"
+msgstr "移动平均算法"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ktorrent/pref/advancedpref.ui:186
@@ -1948,7 +1947,7 @@ msgstr "音频文件的预览大小："
 msgid ""
 "<p>The amount of data at the beginning and end of an audio file, which will "
 "be prioritized for previewing.</p>"
-msgstr ""
+msgstr "<p>视频文件始末的数据量，将优先下载它们以供预览。</p>"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeAudio)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeVideo)
@@ -1966,7 +1965,7 @@ msgstr "视频文件的预览大小："
 msgid ""
 "<p>The amount of data at the beginning and end of a video file, which will "
 "be prioritized for previewing.</p>"
-msgstr ""
+msgstr "<p>视频文件始末的数据量，将优先下载它们以供预览。</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useQHttpAnnounce)
 #: ktorrent/pref/advancedpref.ui:251
@@ -1976,12 +1975,15 @@ msgid ""
 "This is experimental and should only be used if you are getting a lot of "
 "connection to host broken errors."
 msgstr ""
+"禁用将 KDE 的 KIO 库用于伺服器通告。\n"
+"\n"
+"这是一项实验性的功能，因此如果各类损毁错误占用了您大量的连接时，请不要使用"
+"它。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useQHttpAnnounce)
 #: ktorrent/pref/advancedpref.ui:254
-#, fuzzy
 msgid "Do not use KIO for tracker announces"
-msgstr "连接 tracker 时使用代理"
+msgstr "不使用 KIO 发布 Tracker"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_lookUpHostnameOfPeers)
 #: ktorrent/pref/advancedpref.ui:263
@@ -1992,12 +1994,14 @@ msgid ""
 "It can be disabled if you do not like the additional network traffic it "
 "generates"
 msgstr ""
+"解析每个对等点的主机名。这将能显示对等点的主机名而非 IP 地址。\n"
+"\n"
+"如果您不喜欢该功能产生的额外网络流量，请禁用它。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_lookUpHostnameOfPeers)
 #: ktorrent/pref/advancedpref.ui:266
-#, fuzzy
 msgid "Resolve hostnames of peers"
-msgstr "正在解析主机名 %1"
+msgstr "解析对等点的主机名"
 
 #: ktorrent/pref/btpref.cpp:27
 msgid "BitTorrent"
@@ -2013,7 +2017,7 @@ msgstr "特性"
 msgid ""
 "DHT is a trackerless protocol to find peers sharing the same torrents as you "
 "do."
-msgstr "DHT 是一种免 tracker 服务器的协议，用于搜寻和你共享同一种子的对等点。"
+msgstr "DHT 是一种去中心服务器的协议，用于搜寻和你共享同一种子的对等点。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_dhtSupport)
 #: ktorrent/pref/btpref.ui:26
@@ -2033,16 +2037,19 @@ msgid ""
 "router, this port needs to be forwarded to accept incoming DHT requests. The "
 "UPnP plugin can do this for you.</p>"
 msgstr ""
+"<p>DHT 协议使用的 UDP 端口。</p>\n"
+"<p><span style=\"font-weight:600;\">注意：</span>如果您通过路由器接入互联网，"
+"那么您需要转发该端口以接收进站 DHT 请求。UPnP 插件可实现该功能。</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_pexEnabled)
 #: ktorrent/pref/btpref.ui:61
 msgid "Whether or not to use µTorrent compatible peer exchange."
-msgstr "是否使用 Torrent 可兼容对等连接交换。"
+msgstr "是否使用 µTorrent 兼容的对等点交换。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_pexEnabled)
 #: ktorrent/pref/btpref.ui:64
 msgid "Use peer exchange"
-msgstr "使用对等连接交换"
+msgstr "使用对等点交换"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_webseedsEnabled)
 #: ktorrent/pref/btpref.ui:71
@@ -2079,6 +2086,9 @@ msgid ""
 "<p>The encryption will prevent your bittorrent traffic to be flagged as "
 "bittorrent traffic, and so the ISP will not slow it down.</p>"
 msgstr ""
+"<p>当您的互联网服务器提供商对 Bittorrent 连接限速时，协议加密将很管用。</p>\n"
+"<p>加密将防止您的 Bittorrent 流量被标记为 Bittorrent 流量，因此提供商将无法再"
+"限制它。</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useEncryption)
 #. i18n: ectx: label, entry (useEncryption), group (downloads)
@@ -2093,8 +2103,8 @@ msgid ""
 "disabled. If you want to connect to those peers, you need to have this "
 "option enabled."
 msgstr ""
-"不是所有的客户端都支持加密，而且有的人会屏蔽加密。如果您想要连接到这些对等"
-"方，需要启用此选项。"
+"不是所有的客户端都支持加密，而且有的人会禁用加密。如果您想要连接到这些对等"
+"点，需要启用此选项。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_allowUnencryptedConnections)
 #. i18n: ectx: label, entry (allowUnencryptedConnections), group (downloads)
@@ -2113,6 +2123,8 @@ msgid ""
 "Instead of allowing the tracker to determine your IP address, tell the "
 "tracker which IP address to use. Use this when you are behind a proxy."
 msgstr ""
+"通知伺服器要使用的 IP 地址而禁止伺服器自行确定您的 IP 地址。使用代理时请使用"
+"该功能。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useCustomIP)
 #: ktorrent/pref/btpref.ui:133
@@ -2130,6 +2142,8 @@ msgid ""
 "Custom IP address or hostname to send to the tracker. Hostnames will be "
 "resolved at runtime and the resolved IP address will be sent to the tracker."
 msgstr ""
+"自定义发送给伺服器的 IP 地址或主机名。主机名将在运行时解析，解析出的 IP 地址"
+"将被发送给伺服器。"
 
 #: ktorrent/pref/generalpref.cpp:27
 msgid "Application"
@@ -2150,7 +2164,7 @@ msgstr "保存种子文件信息的文件夹："
 msgid ""
 "Directory to store information about all torrents currently opened in "
 "KTorrent."
-msgstr "用于保存现在所有在 KTorrent 中打开的种子文件的目录。"
+msgstr "用于保存当前所有在 KTorrent 中打开的种子文件的目录。"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useSaveDir)
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_saveDir)
@@ -2162,7 +2176,7 @@ msgstr "用于默认保存所有数据的目录。"
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_completedDir)
 #: ktorrent/pref/generalpref.ui:54 ktorrent/pref/generalpref.ui:64
 msgid "Directory to move data to when a torrent has finished downloading."
-msgstr "用于种子文件下载完成后迁移数据的目录。"
+msgstr "用于种子文件下载完成时移动数据的目录。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useCompletedDir)
 #: ktorrent/pref/generalpref.ui:57
@@ -2211,6 +2225,7 @@ msgid ""
 "When you select multiple torrents to be opened at the same time, open them "
 "silently."
 msgstr ""
+"当您选择同时打开多个种子时，静默地打开它们 (不弹出待下载文件选择对话框)。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openMultipleTorrentsSilently)
 #: ktorrent/pref/generalpref.ui:129
@@ -2219,23 +2234,19 @@ msgstr "静默打开多个种子"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openAllTorrentsSilently)
 #: ktorrent/pref/generalpref.ui:136
-#, fuzzy
 msgid "Open all torrents silently."
-msgstr "静默打开种子"
+msgstr "静默打开全部种子。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openAllTorrentsSilently)
 #: ktorrent/pref/generalpref.ui:139
-#, fuzzy
 msgid "Open all torrents silently"
-msgstr "静默打开种子"
+msgstr "静默打开全部种子"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_suppressSleep)
 #: ktorrent/pref/generalpref.ui:146
-#, fuzzy
-#| msgid "Suppress sleep when torrents are running"
 msgid ""
 "Prevent computer from going into a sleep state when torrents are running."
-msgstr "种子运行时禁止睡眠"
+msgstr "种子运行时禁止计算机进入睡眠状态。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_suppressSleep)
 #: ktorrent/pref/generalpref.ui:149
@@ -2250,11 +2261,14 @@ msgid ""
 "desktop.iso</span>, the torrent will be displayed as <span style=\" font-"
 "weight:600;\">linux-desktop.</span></p>"
 msgstr ""
+"<p>将只包含一个文件的种子重命名为它包含的唯一文件的文件名。</p>\n"
+"<p>例如文件名为 <span style=\"font-weight:600;\">linux-desktop.iso</span>，种"
+"子将显示为 <span style=\"font-weight:600;\">linux-desktop</span>。</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_autoRenameSingleFileTorrents)
 #: ktorrent/pref/generalpref.ui:160
 msgid "Rename single file torrents with the name its only file"
-msgstr ""
+msgstr "将只包含一个文件的种子重命名为它包含的唯一文件的文件名"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: ktorrent/pref/networkpref.cpp:35
@@ -2279,6 +2293,9 @@ msgid ""
 "router, this port needs to be forwarded to accept incoming connections. The "
 "UPnP plugin can do this for you.</p>"
 msgstr ""
+"<p>用于 Bittorrent 协议的端口。</p>\n"
+"<p><span style=\"font-weight:600;\">注意：</span>如果您通过路由器接入互联网，"
+"那么您需要转发该端口以接收进站连接。UPnP 插件可实现该功能。</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ktorrent/pref/networkpref.ui:47
@@ -2293,9 +2310,12 @@ msgid ""
 "router, this port needs to be forwarded. The UPnP plugin can do this for you."
 "</p>"
 msgstr ""
+"<p>用于 UDP 伺服器协议的端口。</p>\n"
+"<p><span style=\"font-weight:600;\">注意：</span>如果您通过路由器接入互联网，"
+"那么您需要转发该端口。UPnP 插件可实现该功能。</p>"
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
 #: ktorrent/pref/networkpref.ui:71 ktorrent/pref/recommendedsettingsdlg.ui:235
 #: plugins/bwscheduler/edititemdlg.ui:229
 msgid "Maximum connections per torrent:"
@@ -2306,8 +2326,8 @@ msgstr "每个种子的最大连接数："
 msgid "The maximum number of connections allowed per torrent."
 msgstr "每个种子允许的最大连接数。"
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_4)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ktorrent/pref/networkpref.ui:91 ktorrent/pref/recommendedsettingsdlg.ui:249
 #: plugins/bwscheduler/edititemdlg.ui:246
@@ -2317,12 +2337,12 @@ msgstr "全局连接限制："
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxTotalConnections)
 #: ktorrent/pref/networkpref.ui:98
 msgid "The global connection limit for all torrents combined."
-msgstr "对所有种子适用的全局连接限制。"
+msgstr "对所有种子总共的全局连接限制。"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxDownloadRate)
 #: ktorrent/pref/networkpref.ui:118
 msgid "The maximum download speed in KiB/s."
-msgstr "最大下载速度(KiB/秒)。"
+msgstr "以 KiB/秒计的最大下载速度。"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxUploadRate)
 #: ktorrent/pref/networkpref.ui:141
@@ -2339,7 +2359,7 @@ msgstr "IP 包的 DSCP 值："
 msgid ""
 "This value will be filled in the DSCP field of all the IP packets sent for "
 "the bittorrent protocol."
-msgstr ""
+msgstr "该值将被填充到 Bittorrent 协议发送的全部 IP 数据包的 DSCP 段中去。"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: ktorrent/pref/networkpref.ui:185
@@ -2354,6 +2374,8 @@ msgid ""
 "<p>If you are having trouble with ktorrent blocking other internet traffic, "
 "try setting this number a bit lower.</p>"
 msgstr ""
+"<p>KTorrent 将尝试并发的最大出站连接数量。</p>\n"
+"<p>如果您遇到了 KTorrent 阻断其它互联网流量的问题，请尝试调低该数量。</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: ktorrent/pref/networkpref.ui:213
@@ -2367,6 +2389,8 @@ msgid ""
 "<p><span style=\"font-weight:600;\">Note: </span>Requires a restart to take "
 "effect.</p>"
 msgstr ""
+"<p>监听进站连接的网络接口。</p>\n"
+"<p><span style=\"font-weight:600;\">注意：</span>需要重启生效。</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_utpEnabled)
 #: ktorrent/pref/networkpref.ui:252
@@ -2374,11 +2398,13 @@ msgid ""
 "The µTorrent transport protocol runs over UDP and is optimized to not "
 "interfere with other traffic, while still using up all unused bandwidth."
 msgstr ""
+"µTorrent 传输协议运行在 UDP 端口之上，并优化过以在不干扰其它流量的前提下用满"
+"全部剩余带宽。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_utpEnabled)
 #: ktorrent/pref/networkpref.ui:255
 msgid "Use the µTorrent transport protocol (µTP)"
-msgstr ""
+msgstr "使用 µTorrent 传输协议(µTP)"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_onlyUseUtp)
 #: ktorrent/pref/networkpref.ui:262
@@ -2387,23 +2413,25 @@ msgid ""
 "can lead to slower speeds, seeing that not all bittorrent clients support "
 "µTP."
 msgstr ""
+"Bittorrent 连接不使用 TCP 协议，只使用 µTP 协议。这将降低速度，因为不是全部"
+"的 Bittorrent 客户端都支持 µTP。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_onlyUseUtp)
 #: ktorrent/pref/networkpref.ui:265
 msgid "Only use µTP"
-msgstr ""
+msgstr "仅使用 µTP"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: ktorrent/pref/networkpref.ui:274
 msgid "Primary transport protocol:"
-msgstr ""
+msgstr "主传输协议："
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_primaryTransportProtocol)
 #: ktorrent/pref/networkpref.ui:281
 msgid ""
 "The primary transport protocol to use, when attempting to setup a connection "
 "with a peer, this protocol is chosen first."
-msgstr ""
+msgstr "要使用的主要传输协议。当尝试设定一个对等点连接时将首选该协议。"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_primaryTransportProtocol)
 #. i18n: ectx: property (text), item, widget (QComboBox, m_protocol)
@@ -2414,20 +2442,19 @@ msgstr "TCP"
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_primaryTransportProtocol)
 #: ktorrent/pref/networkpref.ui:290
 msgid "µTP"
-msgstr ""
+msgstr "µTP"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_recommended_settings)
 #: ktorrent/pref/networkpref.ui:331
 msgid ""
 "Let KTorrent calculate the recommended settings based upon the bandwidth you "
 "have available."
-msgstr "让 KTorrent 按照您可用的带宽计算推荐设置。"
+msgstr "让 KTorrent 基于您可用的带宽计算推荐设置。"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_recommended_settings)
 #: ktorrent/pref/networkpref.ui:334
-#, fuzzy
 msgid "Recommended Settings..."
-msgstr "推荐的设置"
+msgstr "推荐设置..."
 
 #: ktorrent/pref/proxypref.cpp:27
 msgid "Proxy"
@@ -2440,10 +2467,8 @@ msgstr "HTTP"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useKDEProxySettings)
 #: ktorrent/pref/proxypref.ui:23
-#, fuzzy
-#| msgid "Use the default browser configured in the system settings."
 msgid "<p>Use the HTTP proxy settings configured in the settings of KDE.</p>"
-msgstr "使用系统设置中所配置的默认浏览器。"
+msgstr "<p>使用 KDE 设置中配置的 HTTP 代理设置。</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useKDEProxySettings)
 #: ktorrent/pref/proxypref.ui:26
@@ -2468,7 +2493,7 @@ msgstr "HTTP 代理的端口。"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useProxyForWebSeeds)
 #: ktorrent/pref/proxypref.ui:74
 msgid "Whether or not to use the HTTP proxy for webseed connections."
-msgstr "对网络种子连接是否使用代理。"
+msgstr "对网络种子连接是否使用 HTTP 代理。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxyForWebSeeds)
 #: ktorrent/pref/proxypref.ui:77
@@ -2477,29 +2502,14 @@ msgstr "对网络种子连接使用代理"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useProxyForTracker)
 #: ktorrent/pref/proxypref.ui:84
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Whether or not to use "
-#| "the HTTP proxy for tracker connections.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Whether or not to use the "
 "HTTP proxy for tracker connections.</p>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
-"weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">是否在连接 tracker 时使用 "
-"HTTP 代理。</p></body></html>"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">使用对伺服器连接使用 HTTP "
+"代理。</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxyForTracker)
 #: ktorrent/pref/proxypref.ui:87
@@ -2518,6 +2528,8 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Note: </span>This is not used for "
 "tracker connections</p>"
 msgstr ""
+"<p>为 Bittorrent 连接使用 SOCKS 代理服务器。</p>\n"
+"<p><span style=\"font-weight:600;\">注意：</span>这不会作用于伺服器连接</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_socksEnabled)
 #: ktorrent/pref/proxypref.ui:107
@@ -2531,15 +2543,13 @@ msgstr "服务器："
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_socksProxy)
 #: ktorrent/pref/proxypref.ui:123
-#, fuzzy
-#| msgid "IP address or hostname of the HTTP proxy to use. "
 msgid "<p>IP address or hostname of the SOCKS server</p>"
-msgstr "用作 HTTP 代理的 IP 地址或主机名。"
+msgstr "<p>SOCKS 服务器的 IP 地址或主机名</p>"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_socksPort)
 #: ktorrent/pref/proxypref.ui:137
 msgid "Port used by the SOCKS server"
-msgstr ""
+msgstr "SOCKS 服务器使用的端口"
 
 #. i18n: ectx: property (text), widget (QLabel, label_13)
 #: ktorrent/pref/proxypref.ui:144
@@ -2551,7 +2561,7 @@ msgstr "版本："
 msgid ""
 "If the SOCKS server requires authentication via a username and a password, "
 "enable this box."
-msgstr ""
+msgstr "如果 SOCKS 服务器需要通过用户和密码认证，请启用本选项。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_socksUsePassword)
 #: ktorrent/pref/proxypref.ui:159
@@ -2568,10 +2578,8 @@ msgstr "用户名："
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_socksUsername)
 #: ktorrent/pref/proxypref.ui:177
-#, fuzzy
-#| msgid "Use a SOCKS proxy server:"
 msgid "Username for the SOCKS proxy server."
-msgstr "使用 SOCKS 代理服务器："
+msgstr "SOCKS 代理服务器的用户名。"
 
 #. i18n: ectx: property (text), widget (QLabel, label_14)
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -2584,13 +2592,11 @@ msgstr "密码："
 
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_socksPassword)
 #: ktorrent/pref/proxypref.ui:191
-#, fuzzy
-#| msgid "Use a SOCKS proxy server:"
 msgid "Password for the SOCKS proxy server."
-msgstr "使用 SOCKS 代理服务器："
+msgstr "SOCKS 代理服务器的密码。"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: property (title), widget (QGroupBox, m_qm_group_box)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: ktorrent/pref/qmpref.cpp:25 ktorrent/pref/qmpref.ui:27
 #: ktorrent/pref/recommendedsettingsdlg.ui:266
 #: ktorrent/torrentactivity.cpp:100
@@ -2598,7 +2604,6 @@ msgid "Queue Manager"
 msgstr "队列管理器"
 
 #: ktorrent/pref/qmpref.cpp:29
-#, fuzzy
 msgid " minute"
 msgid_plural " minutes"
 msgstr[0] " 分钟"
@@ -2615,8 +2620,8 @@ msgstr "启用时，队列管理器会被完全禁用，以便让您对全部种
 msgid "Control torrents manually"
 msgstr "手动控制种子"
 
-#. i18n: ectx: property (text), widget (QLabel, label_14)
 #. i18n: ectx: property (text), widget (QLabel, label_11)
+#. i18n: ectx: property (text), widget (QLabel, label_14)
 #: ktorrent/pref/qmpref.ui:35 ktorrent/pref/recommendedsettingsdlg.ui:288
 msgid "Maximum downloads:"
 msgstr "最大下载任务数："
@@ -2627,8 +2632,8 @@ msgid ""
 "The maximum number of simultaneous downloads the queue manager will run."
 msgstr "队列管理器最大同时运行的下载任务数。"
 
-#. i18n: ectx: property (text), widget (QLabel, label_17)
 #. i18n: ectx: property (text), widget (QLabel, label_10)
+#. i18n: ectx: property (text), widget (QLabel, label_17)
 #: ktorrent/pref/qmpref.ui:55 ktorrent/pref/recommendedsettingsdlg.ui:302
 msgid "Maximum seeds:"
 msgstr "最大种子数："
@@ -2648,7 +2653,7 @@ msgstr "当磁盘空间紧张时："
 msgid ""
 "What to do when the diskspace is running low and the queue manager wants to "
 "start a torrent."
-msgstr "当磁盘空间紧张，而队列管理器又要启动下载一个种子时如何操做。"
+msgstr "当磁盘空间紧张，而队列管理器又要启动一个种子时如何操作。"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startDownloadsOnLowDiskSpace)
 #: ktorrent/pref/qmpref.ui:86
@@ -2690,17 +2695,18 @@ msgid ""
 "<p>This will allow the queue manager to run other torrents, when a torrent "
 "is doing nothing.</p>"
 msgstr ""
+"<p>若启用该选项，队列管理器将降低那些挂起太久的种子的优先级。</p>\n"
+"<p>这将允许队列管理器在某种子无所事事时运行其它种子。</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_decreasePriorityOfStalledTorrents)
 #: ktorrent/pref/qmpref.ui:136
 msgid "Decrease priority of torrents which are stalled for too long"
-msgstr ""
+msgstr "挂起过长时间时降低优先级"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/pref/qmpref.ui:145
-#, fuzzy
 msgid "Stalled timer:"
-msgstr "已延迟"
+msgstr "挂起计时器："
 
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_stallTimer)
 #: ktorrent/pref/qmpref.ui:152
@@ -2708,13 +2714,14 @@ msgid ""
 "<p>Time used for the stall timer. When a torrent is stalled longer than "
 "this, its priority will be decreased.</p>"
 msgstr ""
+"<p>用于挂起计时器的时间。若一个种子下载时间长于该时间，它的优先级将被降低。</"
+"p>"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: ktorrent/pref/qmpref.ui:186
-#, fuzzy
 msgctxt "@title:group Options regarging Seeding"
 msgid "Seeding"
-msgstr "做种中"
+msgstr "做种"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_keepSeeding)
 #: ktorrent/pref/qmpref.ui:192
@@ -2728,8 +2735,8 @@ msgstr "下载完成后继续做种。禁用时，种子即停止做种。"
 msgid "Keep seeding after download is finished"
 msgstr "下载完成后保持做种"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ktorrent/pref/qmpref.ui:202 ktorrent/pref/recommendedsettingsdlg.ui:274
 msgid "Number of upload slots:"
 msgstr "上传通道数："
@@ -2743,17 +2750,11 @@ msgstr "上传通道数，它决定了您的每个种子能够同时向多少个
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: ktorrent/pref/qmpref.ui:225
-#, fuzzy
 msgid "Default maximum share ratio:"
-msgstr "最大共享率："
+msgstr "默认最大分享率："
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_maxRatio)
 #: ktorrent/pref/qmpref.ui:233
-#, fuzzy
-#| msgid ""
-#| "The maximum seed time in hours. Once you reach this time, the torrent "
-#| "will be stopped. This is only applied to newly opened torrents, existing "
-#| "torrents will not be affected by changing this."
 msgid ""
 "<p>The maximum share ratio, if this value is reached seeding will be "
 "stopped. This is only applied to newly opened torrents, existing torrents "
@@ -2761,14 +2762,15 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Attention: </span>This is not used when "
 "downloading, only when seeding.</p>"
 msgstr ""
-"以小时为单位计算的做种时间。当做种达到这个时间，将会停止。这只会对新打开的种"
-"子起作用，已存在的种子不受影响。"
+"<p>最大分享率，如果达到该值将停止做种。这只应用于新打开的种子，修改该值不会影"
+"响现有种子。</p>\n"
+"<p><span style=\"font-weight:600;\">注意：</span>该值在下载时无效，仅应用于做"
+"种期间。</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: ktorrent/pref/qmpref.ui:249
-#, fuzzy
 msgid "Default maximum seed time:"
-msgstr "最大做种时间："
+msgstr "默认最大做种时间："
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_maxSeedTime)
 #: ktorrent/pref/qmpref.ui:256
@@ -2786,13 +2788,12 @@ msgstr ""
 msgid ""
 "Value at which the share ratio will be displayed with a green color. Lower "
 "ratios will be displayed in red."
-msgstr ""
+msgstr "达到分享率的值将显示为绿色。低于分享率的值将显示为红色。"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ktorrent/pref/qmpref.ui:278
-#, fuzzy
 msgid "Minimum good share ratio:"
-msgstr "最大共享率："
+msgstr "最低可接受分享率："
 
 #: ktorrent/pref/recommendedsettingsdlg.cpp:37
 msgid "Calculate Recommended Settings"
@@ -2807,7 +2808,7 @@ msgstr "(= %1/秒)"
 #. i18n: ectx: property (windowTitle), widget (QWidget, RecommendedSettingsDlg)
 #: ktorrent/pref/recommendedsettingsdlg.ui:13
 msgid "Recommended Settings"
-msgstr "推荐的设置"
+msgstr "推荐设置"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/pref/recommendedsettingsdlg.ui:26
@@ -2861,7 +2862,7 @@ msgstr "单个通道的平均速度："
 #. i18n: ectx: property (text), widget (QCheckBox, m_chk_sim_torrents)
 #: ktorrent/pref/recommendedsettingsdlg.ui:149
 msgid "Number of torrents you usually download simultaneously:"
-msgstr "您通常同时下载的种子数量："
+msgstr "您通常同时下载的种子数："
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_chk_slots)
 #: ktorrent/pref/recommendedsettingsdlg.ui:169
@@ -2871,7 +2872,7 @@ msgstr "每个种子的通道："
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: ktorrent/pref/recommendedsettingsdlg.ui:192
 msgid "Recommended settings:"
-msgstr "推荐的设置："
+msgstr "推荐设置："
 
 #: ktorrent/statusbar.cpp:39 ktorrent/statusbar.cpp:71
 #, kde-format
@@ -2891,23 +2892,22 @@ msgstr "DHT：关闭"
 #, kde-format
 msgid "%1 node"
 msgid_plural "%1 nodes"
-msgstr[0] ""
+msgstr[0] "%1 个节点"
 
 #: ktorrent/statusbar.cpp:95
 #, kde-format
 msgid "%1 task"
 msgid_plural "%1 tasks"
-msgstr[0] ""
+msgstr[0] "%1 个任务"
 
 #: ktorrent/statusbar.cpp:95
-#, fuzzy, kde-format
-#| msgid "DHT: %1 nodes, %2 tasks"
+#, kde-format
 msgid "DHT: %1, %2"
-msgstr "DHT：%1 个节点，%2 个任务"
+msgstr "DHT：%1, %2"
 
 #: ktorrent/tools/magnetmodel.cpp:134
 msgid "Magnet Link"
-msgstr ""
+msgstr "磁力链接"
 
 #: ktorrent/tools/magnetmodel.cpp:135 ktorrent/tools/queuemanagermodel.cpp:197
 #: ktorrent/trayicon.cpp:165 plugins/infowidget/trackermodel.cpp:148
@@ -2915,9 +2915,9 @@ msgstr ""
 msgid "Status"
 msgstr "状态"
 
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (title), widget (QGroupBox, PeersSpdGbw)
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: ktorrent/tools/magnetmodel.cpp:136
 #: plugins/infowidget/infowidgetplugin.cpp:222
 #: plugins/stats/DisplaySettings.ui:165 plugins/stats/Settings.ui:166
@@ -2934,31 +2934,29 @@ msgid "Stopped"
 msgstr "已停止"
 
 #: ktorrent/tools/magnetview.cpp:43
-#, fuzzy
 msgid "Start Magnet"
-msgstr "启动种子"
+msgstr "启动磁力链"
 
 #: ktorrent/tools/magnetview.cpp:44
 msgid "Stop Magnet"
-msgstr ""
+msgstr "停止磁力链"
 
 #: ktorrent/tools/magnetview.cpp:46
-#, fuzzy
 msgid "Remove Magnet"
-msgstr "删除种子"
+msgstr "移除磁力链"
 
 #: ktorrent/tools/queuemanagermodel.cpp:193
 msgid "Order"
 msgstr "顺序"
 
-#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:495
+#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:533
 #: plugins/downloadorder/downloadorderdialog.cpp:80
 msgid "Name"
 msgstr "名称"
 
 #: ktorrent/tools/queuemanagermodel.cpp:199
 msgid "Time Stalled"
-msgstr "时间已停顿"
+msgstr "已停顿时间"
 
 #: ktorrent/tools/queuemanagermodel.cpp:201
 #: plugins/infowidget/iwfilelistmodel.cpp:77
@@ -2999,18 +2997,16 @@ msgid "Search"
 msgstr "搜索"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:66
-#, fuzzy
 msgid "Show Search"
-msgstr "搜索"
+msgstr "显示搜索"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:67
 msgid "Show or hide the search bar"
-msgstr ""
+msgstr "显示或隐藏搜索栏"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:71
-#, fuzzy
 msgid "Move Top"
-msgstr "上移"
+msgstr "移动到顶部"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:72
 msgid "Move a torrent to the top of the queue"
@@ -3025,43 +3021,36 @@ msgid "Move a torrent down in the queue"
 msgstr "将队列中的种子下移"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:80
-#, fuzzy
 msgid "Move Bottom"
-msgstr "移动数据"
+msgstr "移动到底部"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:81
 msgid "Move a torrent to the bottom of the queue"
 msgstr "将队列中的种子移到底端"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:83
-#, fuzzy
 msgid "Show Downloads"
-msgstr "下载"
+msgstr "显示下载"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:84
-#, fuzzy
 msgid "Show all downloads"
-msgstr "设定最大下载速率"
+msgstr "显示全部下载"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:88
-#, fuzzy
 msgid "Show Uploads"
-msgstr "上传"
+msgstr "显示上传"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:89
-#, fuzzy
 msgid "Show all uploads"
-msgstr "选择文件"
+msgstr "显示全部上传"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:93
-#, fuzzy
 msgid "Show Not Queued"
-msgstr "未排队"
+msgstr "显示未排队种子"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:94
-#, fuzzy
 msgid "Show all not queued torrents"
-msgstr "停止所有种子"
+msgstr "显示全部未排队种子"
 
 #: ktorrent/torrentactivity.cpp:100
 msgid "Widget to manage the torrent queue"
@@ -3070,20 +3059,19 @@ msgstr "管理种子队列的部件"
 #: ktorrent/torrentactivity.cpp:103
 #: plugins/magnetgenerator/magnetgeneratorplugin.cpp:143
 msgid "Magnet"
-msgstr ""
+msgstr "磁力网络"
 
 #: ktorrent/torrentactivity.cpp:104
 msgid "Displays the currently downloading magnet links"
-msgstr ""
+msgstr "显示当前正在下载的磁力链接"
 
 #: ktorrent/torrentactivity.cpp:119
 msgid "Start All"
 msgstr "全部开始"
 
 #: ktorrent/torrentactivity.cpp:120
-#, fuzzy
 msgid "Start all torrents"
-msgstr "启动种子"
+msgstr "启动全部种子"
 
 #: ktorrent/torrentactivity.cpp:124
 msgid "Stop All"
@@ -3094,59 +3082,54 @@ msgid "Stop all torrents"
 msgstr "停止所有种子"
 
 #: ktorrent/torrentactivity.cpp:129
-#, fuzzy
 msgid "Suspend Torrents"
-msgstr "暂停 KTorrent"
+msgstr "暂停种子"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
 #: ktorrent/torrentactivity.cpp:131 plugins/bwscheduler/edititemdlg.ui:109
-#, fuzzy
 msgid "Suspend all running torrents"
 msgstr "暂停所有运行中的种子"
 
 #: ktorrent/torrentactivity.cpp:136
 msgid "Group View Visible"
-msgstr ""
+msgstr "显示分组视图"
 
 #: ktorrent/torrentactivity.cpp:137
 msgid "Show or hide the group view"
-msgstr ""
+msgstr "显示或隐藏分组视图"
 
 #: ktorrent/torrentactivity.cpp:141
-#, fuzzy
 msgid "Filter Torrents"
-msgstr "全部种子"
+msgstr "过滤种子"
 
 #: ktorrent/torrentactivity.cpp:142
 msgid "Filter torrents based on filter string"
-msgstr ""
+msgstr "基于字符串过滤种子"
 
 #: ktorrent/trayicon.cpp:114
 msgid "Set max upload speed"
-msgstr "设定最大上传速率"
+msgstr "设定最大上传速度"
 
 #: ktorrent/trayicon.cpp:116
 msgid "Set max download speed"
-msgstr "设定最大下载速率"
+msgstr "设定最大下载速度"
 
 #: ktorrent/trayicon.cpp:154
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "<table><tr><td>Download&nbsp;speed:</td><td><b>%1</b></td></"
 "tr><tr><td>Upload&nbsp;speed:</td><td><b>%2</b></td></tr><tr><td>Received:</"
 "td><td><b>%3</b></td></tr><tr><td>Transmitted:</td><td><b>%4</b></td></tr></"
 "table>"
 msgstr ""
-"<table cellpadding='2' cellspacing='2' align='center'><tr><td><b>速度：</b></"
-"td><td></td></tr><tr><td>下载：<font color='#1c9a1c'>%1</font></td><td>上传："
-"<font color='#990000'>%2</font></td></tr><tr><td><b>传输：</b></td><td></"
-"td></tr><tr><td>下载：<font color='#1c9a1c'>%3</font></td><td>上传：<font "
-"color='#990000'>%4</font></td></tr></table>"
+"<table><tr><td>下载速度：</td><td><b>%1</b></td></tr><tr><td>上传速度：</"
+"td><td><b>%2</b></td></tr><tr><td>已接收：</td><td><b>%3</b></td></"
+"tr><tr><td>已传输：</td><td><b>%4</b></td></tr></table>"
 
 #: ktorrent/trayicon.cpp:199
 #, kde-format
 msgid "<b>%1</b> has completed downloading.<br>Average speed: %2 DL / %3 UL."
-msgstr "<b>%1</b> 已经完成下载。<br>平均速度：%2 下载/%3 上传。"
+msgstr "<b>%1</b> 已经完成下载。<br>平均速度：%2 下载 / %3 上传。"
 
 #: ktorrent/trayicon.cpp:217
 #, kde-format
@@ -3154,8 +3137,7 @@ msgid ""
 "<b>%1</b> has reached its maximum share ratio of %2 and has been stopped."
 "<br>Uploaded %3 at an average speed of %4."
 msgstr ""
-"<b>%1</b>已达到最大共享比率 %2，任务已停止。<br>共上传了 %3 数据，平均速率 "
-"%4。"
+"<b>%1</b>已达到最大分享率 %2，任务已停止。<br>共上传了 %3 数据，平均速率 %4。"
 
 #: ktorrent/trayicon.cpp:236
 #, kde-format
@@ -3163,12 +3145,12 @@ msgid ""
 "<b>%1</b> has reached its maximum seed time of %2 hours and has been stopped."
 "<br>Uploaded %3 at an average speed of %4."
 msgstr ""
-"<b>%1</b> 已达到最大种子时间 %2 小时，因此停止。<br>上传 %3 平均速率 %4。"
+"<b>%1</b> 已达到最大做种时间 %2 小时，任务已停止。<br>上传 %3 平均速率 %4。"
 
 #: ktorrent/trayicon.cpp:251
 #, kde-format
 msgid "<b>%1</b> has been stopped with the following error: <br>%2"
-msgstr "<b>%1</b> 已经停止，因为下面的错误：<br>%2"
+msgstr "<b>%1</b> 已停止，出现以下错误：<br>%2"
 
 #: ktorrent/trayicon.cpp:262
 #, kde-format
@@ -3183,8 +3165,8 @@ msgid ""
 "<b>%1</b> has reached its maximum share ratio of %2 and cannot be enqueued. "
 "<br>Remove the limit manually if you want to continue seeding."
 msgstr ""
-"<b>%1</b> 已达到最大共享比率 %2 ，因此无法进入队列。<br>如果您想继续做种，请"
-"手工去除限制。"
+"<b>%1</b> 已达到最大分享率 %2 ，因此无法进入队列。<br>如果您想继续做种，请手"
+"工移除限制。"
 
 #: ktorrent/trayicon.cpp:283
 #, kde-format
@@ -3193,10 +3175,10 @@ msgid ""
 "enqueued. <br>Remove the limit manually if you want to continue seeding."
 msgstr ""
 "<b>%1</b> 已经达到最大做种时间 %2 小时，因此无法进入队列。<br>如果您想继续做"
-"种，请手工去除限制。"
+"种，请手工移除限制。"
 
 #: ktorrent/trayicon.cpp:295
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cannot start <b>%1</b>: <br>"
 msgstr "无法开始 <b>%1</b>：<br>"
 
@@ -3218,32 +3200,31 @@ msgstr "如果您想要更改限制，请转到设置 -> 配置 KTorrent。"
 
 #: ktorrent/trayicon.cpp:314
 msgid "There is not enough diskspace available."
-msgstr "磁盘空间不够用。"
+msgstr "磁盘空间不足。"
 
 #: ktorrent/trayicon.cpp:327
 #, kde-format
 msgid ""
 "Your disk is running out of space.<br /><b>%1</b> is being downloaded to "
 "'%2'."
-msgstr "您的磁盘空间不足。<br /><b>%1</b> 将被下载至“%2”。"
+msgstr "您的磁盘空间不足。<br /><b>%1</b> 将被下载至 \"%2\"。"
 
 #: ktorrent/trayicon.cpp:330
 msgid "Torrent has been stopped.<br />"
-msgstr "种子已停止。<br />"
+msgstr "任务已停止。<br />"
 
 #: ktorrent/trayicon.cpp:366
 msgid "Speed limit in KiB/s"
-msgstr "速度限制(KiB/秒)"
+msgstr "以 KiB/秒计的速度限制"
 
 #: ktorrent/trayicon.cpp:368 plugins/bwscheduler/schedulegraphicsitem.cpp:93
 #: plugins/bwscheduler/schedulegraphicsitem.cpp:94
 msgid "Unlimited"
-msgstr "无限制"
+msgstr "不限速"
 
 #: ktorrent/view/propertiesdlg.cpp:34
-#, fuzzy
 msgid "Torrent Settings"
-msgstr "种子文件"
+msgstr "种子设置"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, PropertiesDlg)
 #: ktorrent/view/propertiesdlg.ui:14 plugins/scripting/scriptmanager.cpp:110
@@ -3255,30 +3236,27 @@ msgstr "属性"
 msgid ""
 "DHT is a distributed database which can be used to find more peers for a "
 "torrent."
-msgstr ""
+msgstr "DHT 是一个分布式数据库，可用于为种子查找更多对等点。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, dht)
 #: ktorrent/view/propertiesdlg.ui:26
-#, fuzzy
 msgid "Use DHT to find more peers"
-msgstr "使用 DHT 获得额外的对等点"
+msgstr "使用 DHT 获得更多对等点"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, pex)
 #: ktorrent/view/propertiesdlg.ui:33
 msgid ""
 "Peer exchange results in more peers being found, by exchanging information "
 "about peers with other peers."
-msgstr ""
+msgstr "对等点交换可通过与其他对等点交换对等点信息以找到更多对等点。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, pex)
 #: ktorrent/view/propertiesdlg.ui:36
-#, fuzzy
 msgid "Use peer exchange to find more peers"
-msgstr "使用对等连接交换"
+msgstr "使用对等点交换获得更多对等点"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, superseeding)
 #: ktorrent/view/propertiesdlg.ui:45
-#, fuzzy
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Superseeding mode, is a "
@@ -3293,80 +3271,58 @@ msgid ""
 "fully been established. Once there are multiple active seeders, this mode "
 "becomes useless.</p>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
-"weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">递归扫描文件夹以寻找种子。"
-"</p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">超级种子模式，是一个特殊 做"
+"种模式，该模式允许您获得超高的做种效率。这将占用较小的种子分发带宽。</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
 "p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">提示：</span>对任何名为 loaded 的文件夹将不会执行这一操作。</"
-"p></body></html>"
+"weight:600;\">注意：</span>该模式只应在种子池还未完全建立时使用。一旦有多个活"
+"跃的种源后，该模式就变得无用了。</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, superseeding)
 #: ktorrent/view/propertiesdlg.ui:48
 msgid "Use superseeding mode for seeding"
-msgstr ""
+msgstr "做种时使用超级种子模式"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, move_on_completion_enabled)
 #: ktorrent/view/propertiesdlg.ui:55
-#, fuzzy
 msgid ""
 "Move the files of the torrent to a different directory when it has finished "
 "downloading."
-msgstr "用于种子文件下载完成后迁移数据的目录。"
+msgstr "在种子完成下载后将种子中的文件移动到另外的文件夹。"
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, move_on_completion_url)
 #: ktorrent/view/propertiesdlg.ui:65
-#, fuzzy
 msgid "Location to move the files to."
-msgstr "请选择用于移动数据的目标文件夹。"
+msgstr "请选择用于移动文件的目标文件夹。"
 
 #: ktorrent/view/scanextender.cpp:46
 msgid "Checked %v of %m chunks"
-msgstr ""
+msgstr "检查了 %v 块数据, 共有 %m"
 
 #: ktorrent/view/scanextender.cpp:128
 #, kde-format
 msgid "<font color=\"red\">%1</font>"
-msgstr ""
+msgstr "<font color=\"red\">%1</font>"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ktorrent/view/scanextender.ui:21
 msgid "Found:"
-msgstr ""
+msgstr "找到:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_found)
 #: ktorrent/view/scanextender.ui:43
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks "
-#| "which were not downloaded but have been found anyway.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "were not downloaded but have been found anyway.</p>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-"size:8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">未下载却找到的块数量。</"
-"p></body></html>"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">已找到但尚未下载的区块数"
+"量。</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, chunks_found)
 #. i18n: ectx: property (text), widget (QLabel, chunks_failed)
@@ -3379,41 +3335,24 @@ msgstr "0"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
 #: ktorrent/view/scanextender.ui:66
-#, fuzzy
 msgid "Failed:"
-msgstr "文件"
+msgstr "失败："
 
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_failed)
 #: ktorrent/view/scanextender.ui:82
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks "
-#| "which have been downloaded, and which are not OK.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "have been downloaded, and which are not OK.</p>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-"size:8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">已下载却不完好的块数量。</"
-"p></body></html>"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">已下载但已毁损的区块数量。"
+"</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/view/scanextender.ui:108
-#, fuzzy
 msgid "Not downloaded:"
-msgstr "已下载："
+msgstr "未下载："
 
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_not_downloaded)
 #: ktorrent/view/scanextender.ui:127
@@ -3422,6 +3361,8 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "have not been downloaded.</p>"
 msgstr ""
+"<p style=\"margin-top:0px; margin-bottom:8px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">尚未下载的数据块数量。</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
@@ -3432,365 +3373,331 @@ msgstr "已下载："
 
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_downloaded)
 #: ktorrent/view/scanextender.ui:166
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks "
-#| "which have been downloaded, and which are OK.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "have been downloaded, and which are OK.</p>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-"size:8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">已下载并完好的块数量。</"
-"p></body></html>"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">已下载并状态良好的数据块数"
+"量。</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, error_msg)
 #: ktorrent/view/scanextender.ui:230
-#, fuzzy
 msgid "Errors:"
 msgstr "错误："
 
 #: ktorrent/view/torrentsearchbar.cpp:47
-#, fuzzy
 msgid "Torrent filter"
-msgstr "种子文件"
+msgstr "种子过滤器"
 
-#: ktorrent/view/view.cpp:135
-#, fuzzy
+#: ktorrent/view/view.cpp:139
 msgctxt "@action Start all selected torrents in the current tab"
 msgid "Start"
-msgstr "启动"
+msgstr "开始"
 
-#: ktorrent/view/view.cpp:136
+#: ktorrent/view/view.cpp:140
 msgid "Start all selected torrents in the current tab"
-msgstr "启动当前标签页中全部所选种子"
+msgstr "启动当前标签页中全部选定种子"
 
-#: ktorrent/view/view.cpp:141
-#, fuzzy
+#: ktorrent/view/view.cpp:145
 msgctxt "@action Force start all selected torrents in the current tab"
 msgid "Force Start"
-msgstr "启动"
-
-#: ktorrent/view/view.cpp:142
-#, fuzzy
-msgid "Force start all selected torrents in the current tab"
-msgstr "启动当前标签页中全部所选种子"
+msgstr "强制开始"
 
 #: ktorrent/view/view.cpp:146
-#, fuzzy
+msgid "Force start all selected torrents in the current tab"
+msgstr "强制开始当前标签中的全部选定种子"
+
+#: ktorrent/view/view.cpp:150
 msgctxt "@action Stop all selected torrents in the current tab"
 msgid "Stop"
 msgstr "停止"
 
-#: ktorrent/view/view.cpp:147
+#: ktorrent/view/view.cpp:151
 msgid "Stop all selected torrents in the current tab"
-msgstr "停止当前标签页中全部所选种子"
+msgstr "停止当前标签页中全部选定种子"
 
-#: ktorrent/view/view.cpp:152
-#, fuzzy
+#: ktorrent/view/view.cpp:156
 msgctxt "@action Pause all selected torrents in the current tab"
 msgid "Pause"
 msgstr "暂停"
 
-#: ktorrent/view/view.cpp:153
-#, fuzzy
-msgid "Pause all selected torrents in the current tab"
-msgstr "启动当前标签页中全部所选种子"
-
 #: ktorrent/view/view.cpp:157
-#, fuzzy
+msgid "Pause all selected torrents in the current tab"
+msgstr "暂停当前标签页中全部选定种子"
+
+#: ktorrent/view/view.cpp:161
 msgctxt "@action Remove all selected torrents in the current tab"
 msgid "Remove"
-msgstr "删除"
+msgstr "移除"
 
-#: ktorrent/view/view.cpp:158
+#: ktorrent/view/view.cpp:162
 msgid "Remove all selected torrents in the current tab"
-msgstr "删除当前标签页中全部所选种子"
+msgstr "移除当前标签页中全部选定种子"
 
-#: ktorrent/view/view.cpp:163
-#, fuzzy
+#: ktorrent/view/view.cpp:167
 msgctxt "@action Start all torrents in the current tab"
 msgid "Start All"
 msgstr "全部开始"
 
-#: ktorrent/view/view.cpp:164
+#: ktorrent/view/view.cpp:168
 msgid "Start all torrents in the current tab"
 msgstr "启动当前标签页中全部种子"
 
-#: ktorrent/view/view.cpp:169
-#, fuzzy
+#: ktorrent/view/view.cpp:173
 msgctxt "@action Stop all torrents in the current tab"
 msgid "Stop All"
 msgstr "全部停止"
 
-#: ktorrent/view/view.cpp:170
+#: ktorrent/view/view.cpp:174
 msgid "Stop all torrents in the current tab"
 msgstr "停止当前标签页中全部种子"
 
-#: ktorrent/view/view.cpp:175
+#: ktorrent/view/view.cpp:179
 msgid "Remove Torrent and Data"
-msgstr "删除种子和数据"
+msgstr "移除种子和数据"
 
-#: ktorrent/view/view.cpp:180
+#: ktorrent/view/view.cpp:184
 msgid "Rename Torrent"
 msgstr "重命名种子"
 
-#: ktorrent/view/view.cpp:184
+#: ktorrent/view/view.cpp:188
 msgid "Add Peers"
 msgstr "增加对等点"
 
-#: ktorrent/view/view.cpp:188
+#: ktorrent/view/view.cpp:192
 msgid "Manual Announce"
 msgstr "手动通告"
 
-#: ktorrent/view/view.cpp:193
-msgid "Scrape"
-msgstr "批量请求"
-
 #: ktorrent/view/view.cpp:197
+msgid "Scrape"
+msgstr "擦除"
+
+#: ktorrent/view/view.cpp:201
 msgid "Preview"
 msgstr "预览"
 
-#: ktorrent/view/view.cpp:201
+#: ktorrent/view/view.cpp:205
 msgid "Data Directory"
 msgstr "数据目录"
 
-#: ktorrent/view/view.cpp:205
+#: ktorrent/view/view.cpp:209
 msgid "Temporary Directory"
 msgstr "临时目录"
 
-#: ktorrent/view/view.cpp:209
+#: ktorrent/view/view.cpp:213
 msgid "Move Data"
 msgstr "移动数据"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, StatsSettingsWgt)
-#: ktorrent/view/view.cpp:213 plugins/stats/Settings.ui:13
+#: ktorrent/view/view.cpp:217 plugins/stats/Settings.ui:13
 msgid "Settings"
-msgstr "配置"
+msgstr "设置"
 
-#: ktorrent/view/view.cpp:217
+#: ktorrent/view/view.cpp:221
 msgid "Remove from Group"
-msgstr "从组中删除"
+msgstr "从组中移除"
 
-#: ktorrent/view/view.cpp:225
+#: ktorrent/view/view.cpp:229
 msgid "Check Data"
 msgstr "检查数据"
 
-#: ktorrent/view/view.cpp:226
+#: ktorrent/view/view.cpp:230
 msgid "Check all the data of a torrent"
 msgstr "检查种子的全部数据"
 
-#: ktorrent/view/view.cpp:248
-msgid "Copy Torrent URL"
-msgstr "复制种子 URL"
-
 #: ktorrent/view/view.cpp:252
-#, fuzzy
-msgid "Export Torrent"
-msgstr "导入种子"
+msgid "Copy Torrent URL"
+msgstr "复制种子地址"
 
-#: ktorrent/view/view.cpp:257
+#: ktorrent/view/view.cpp:256
+msgid "Export Torrent"
+msgstr "导出种子"
+
+#: ktorrent/view/view.cpp:261
 msgid "Set the speed limits of individual torrents"
 msgstr "为单个种子设定速度限制"
 
-#: ktorrent/view/view.cpp:466
+#: ktorrent/view/view.cpp:470
 #, kde-format
 msgid ""
 "The torrent <b>%1</b> has not finished downloading, do you want to delete "
 "the incomplete data, too?"
 msgstr "种子 <b>%1</b> 尚未完成下载，您是否想要同时删除未完成的数据？"
 
-#: ktorrent/view/view.cpp:471
+#: ktorrent/view/view.cpp:475
 msgid "Remove Download"
-msgstr "删除下载"
+msgstr "移除下载"
 
-#: ktorrent/view/view.cpp:472
+#: ktorrent/view/view.cpp:476
 msgid "Delete Data"
 msgstr "删除数据"
 
-#: ktorrent/view/view.cpp:473
+#: ktorrent/view/view.cpp:477
 msgid "Keep Data"
 msgstr "保留数据"
 
-#: ktorrent/view/view.cpp:498
-#, fuzzy
+#: ktorrent/view/view.cpp:502
 msgid ""
 "You will lose all the downloaded data of the following torrents. Are you "
 "sure you want to do this?"
-msgstr "您将失去已经下载的全部数据。您确定想要这么做吗？"
+msgstr "您将丢失以下种子的全部已下载数据。您确定想要这么做吗？"
 
-#: ktorrent/view/view.cpp:499
+#: ktorrent/view/view.cpp:503
 msgid "Remove Torrent"
-msgstr "删除种子"
+msgstr "移除种子"
 
-#: ktorrent/view/view.cpp:595 plugins/infowidget/fileview.cpp:354
+#: ktorrent/view/view.cpp:599 plugins/infowidget/fileview.cpp:354
 #: plugins/infowidget/fileview.cpp:375
 msgid "Select a directory to move the data to."
 msgstr "请选择用于移动数据的目标文件夹。"
 
-#: ktorrent/view/viewmodel.cpp:496 plugins/infowidget/peerviewmodel.cpp:266
+#: ktorrent/view/viewmodel.cpp:535 plugins/infowidget/peerviewmodel.cpp:266
 #: plugins/infowidget/webseedsmodel.cpp:126
 msgid "Downloaded"
 msgstr "已下载"
 
-#: ktorrent/view/viewmodel.cpp:497
+#: ktorrent/view/viewmodel.cpp:537
 #: libktcore/torrent/torrentfilelistmodel.cpp:77
 #: libktcore/torrent/torrentfiletreemodel.cpp:400
 msgid "Size"
 msgstr "大小"
 
-#: ktorrent/view/viewmodel.cpp:498 plugins/infowidget/peerviewmodel.cpp:267
+#: ktorrent/view/viewmodel.cpp:539 plugins/infowidget/peerviewmodel.cpp:267
 msgid "Uploaded"
 msgstr "已上传"
 
-#: ktorrent/view/viewmodel.cpp:499
-#, fuzzy
+#: ktorrent/view/viewmodel.cpp:541
 msgctxt "Bytes left to downloaded"
 msgid "Left"
-msgstr "剩余："
+msgstr "剩余"
 
-#: ktorrent/view/viewmodel.cpp:500
+#: ktorrent/view/viewmodel.cpp:543
 #: plugins/infowidget/chunkdownloadmodel.cpp:200
 #: plugins/infowidget/peerviewmodel.cpp:257
 msgid "Down Speed"
 msgstr "下载速度"
 
-#: ktorrent/view/viewmodel.cpp:501 plugins/infowidget/peerviewmodel.cpp:258
+#: ktorrent/view/viewmodel.cpp:545 plugins/infowidget/peerviewmodel.cpp:258
 msgid "Up Speed"
 msgstr "上传速度"
 
-#: ktorrent/view/viewmodel.cpp:502
+#: ktorrent/view/viewmodel.cpp:547
 msgid "Time Left"
 msgstr "剩余时间"
 
-#: ktorrent/view/viewmodel.cpp:503 plugins/infowidget/trackermodel.cpp:149
+#: ktorrent/view/viewmodel.cpp:549 plugins/infowidget/trackermodel.cpp:149
 msgid "Seeders"
-msgstr "种子来源"
+msgstr "种源"
 
-#: ktorrent/view/viewmodel.cpp:504 plugins/infowidget/trackermodel.cpp:150
+#: ktorrent/view/viewmodel.cpp:551 plugins/infowidget/trackermodel.cpp:150
 msgid "Leechers"
 msgstr "吸血虫"
 
-#: ktorrent/view/viewmodel.cpp:506
+#: ktorrent/view/viewmodel.cpp:554
 #, no-c-format
 msgid "% Complete"
 msgstr "完成百分比"
 
-#: ktorrent/view/viewmodel.cpp:507
+#: ktorrent/view/viewmodel.cpp:556
 msgid "Share Ratio"
-msgstr "共享率"
+msgstr "分享率"
 
-#: ktorrent/view/viewmodel.cpp:508
+#: ktorrent/view/viewmodel.cpp:558
 msgid "Time Downloaded"
 msgstr "下载用时"
 
-#: ktorrent/view/viewmodel.cpp:509
+#: ktorrent/view/viewmodel.cpp:560
 msgid "Time Seeded"
 msgstr "做种用时"
 
-#: ktorrent/view/viewmodel.cpp:510
+#: ktorrent/view/viewmodel.cpp:562
 msgid "Location"
 msgstr "位置"
 
-#: ktorrent/view/viewmodel.cpp:511
-#, fuzzy
+#: ktorrent/view/viewmodel.cpp:564
 msgid "Added"
-msgstr "添加种子"
+msgstr "已添加"
 
-#: ktorrent/view/viewmodel.cpp:519
+#: ktorrent/view/viewmodel.cpp:574
 msgid "How much data we have downloaded of the torrent"
 msgstr "种子已下载部分的数据量"
 
-#: ktorrent/view/viewmodel.cpp:520
+#: ktorrent/view/viewmodel.cpp:576
 msgid "Total size of the torrent, excluded files are not included"
 msgstr "种子的总大小，不包括已排除的文件"
 
-#: ktorrent/view/viewmodel.cpp:521
+#: ktorrent/view/viewmodel.cpp:578
 msgid "How much data we have uploaded"
 msgstr "已上传的数据量"
 
-#: ktorrent/view/viewmodel.cpp:522
-#, fuzzy
-#| msgid "How much data we have uploaded"
+#: ktorrent/view/viewmodel.cpp:580
 msgid "How much data left to download"
-msgstr "已上传的数据量"
+msgstr "待下载的数据量"
 
-#: ktorrent/view/viewmodel.cpp:523
+#: ktorrent/view/viewmodel.cpp:582
 msgid "Current download speed"
 msgstr "当前下载速度"
 
-#: ktorrent/view/viewmodel.cpp:524
+#: ktorrent/view/viewmodel.cpp:584
 msgid "Current upload speed"
 msgstr "当前上传速度"
 
-#: ktorrent/view/viewmodel.cpp:525
+#: ktorrent/view/viewmodel.cpp:586
 msgid ""
 "How much time is left before the torrent is finished or before the maximum "
 "share ratio is reached, if that is enabled"
-msgstr ""
+msgstr "种子下载完成或达到最大分享率 (如启用) 的剩余时间"
 
-#: ktorrent/view/viewmodel.cpp:526
+#: ktorrent/view/viewmodel.cpp:588
 msgid ""
 "How many seeders we are connected to (How many seeders there are according "
 "to the tracker)"
-msgstr ""
+msgstr "已连接的做种者数量 (追踪服务器记录的做种者数量)"
 
-#: ktorrent/view/viewmodel.cpp:527
+#: ktorrent/view/viewmodel.cpp:590
 msgid ""
 "How many leechers we are connected to (How many leechers there are according "
 "to the tracker)"
-msgstr ""
+msgstr "已连接的吸血虫数量 (追踪服务器记录的吸血虫数量)"
 
-#: ktorrent/view/viewmodel.cpp:529
-#, no-c-format
+#: ktorrent/view/viewmodel.cpp:593
 msgid ""
 "The percentage of data we have of the whole torrent, not including excluded "
 "files"
-msgstr "整个种子中已有数据的数据百分比，不包括已排除的文件"
+msgstr "整个种子中已下载数据的百分比，不包括已排除的文件"
 
-#: ktorrent/view/viewmodel.cpp:530
+#: ktorrent/view/viewmodel.cpp:595
 msgid ""
 "Share ratio is the number of bytes uploaded divided by the number of bytes "
 "downloaded"
-msgstr "共享率是上传量除以下载量得出的数字"
+msgstr "分享率是上传量除以下载量得出的数字"
 
-#: ktorrent/view/viewmodel.cpp:531
+#: ktorrent/view/viewmodel.cpp:597
 msgid "How long we have been downloading the torrent"
 msgstr "下载用时"
 
-#: ktorrent/view/viewmodel.cpp:532
+#: ktorrent/view/viewmodel.cpp:599
 msgid "How long we have been seeding the torrent"
 msgstr "做种用时"
 
-#: ktorrent/view/viewmodel.cpp:533
+#: ktorrent/view/viewmodel.cpp:601
 msgid "The location of the torrent's data on disk"
 msgstr "磁盘上种子数据的位置"
 
-#: ktorrent/view/viewmodel.cpp:534
-#, fuzzy
+#: ktorrent/view/viewmodel.cpp:603
 msgid "When this torrent was added"
-msgstr "没有装入种子！"
+msgstr "添加此种子时"
 
-#: ktorrent/view/viewmodel.cpp:583
+#: ktorrent/view/viewmodel.cpp:653
 #, kde-format
 msgid "%1<br>Url: <b>%2</b>"
-msgstr "%1<br>Url：<b>%2</b>"
+msgstr "%1<br>地址：<b>%2</b>"
 
-#: ktorrent/view/viewmodel.cpp:589
+#: ktorrent/view/viewmodel.cpp:659
 msgid "<br/><br/>Unable to contact a tracker."
-msgstr ""
+msgstr "<br/><br/>无法联系追踪服务器。"
 
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"
@@ -3816,9 +3723,8 @@ msgstr "路由器："
 
 #. i18n: ectx: property (text), widget (QLabel, m_router)
 #: ktupnptest/upnptestwidget.ui:40
-#, fuzzy
 msgid "No routers found."
-msgstr "没有找到路由器！"
+msgstr "没有找到路由器。"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_find_routers)
 #: ktupnptest/upnptestwidget.ui:49
@@ -3851,14 +3757,12 @@ msgid "Verbose mode"
 msgstr "详述模式"
 
 #: libktcore/dbus/dbustorrent.cpp:321
-#, fuzzy
 msgid "Maximum share ratio reached."
-msgstr "已经达到最大共享率限制！"
+msgstr "达到的最高分享率。"
 
 #: libktcore/dbus/dbustorrent.cpp:324
-#, fuzzy
 msgid "Maximum seed time reached."
-msgstr "已经达到最大做种时间！"
+msgstr "达到的最大做种时间。"
 
 #: libktcore/groups/groupmanager.cpp:102
 msgid "Uploads"
@@ -3920,162 +3824,143 @@ msgstr "全部文件"
 
 #. i18n: ectx: label, entry (maxDownloads), group (downloads)
 #: libktcore/ktorrent.kcfg:10
-#, fuzzy
 msgid "Maximum number of downloads (0 = no limit)"
-msgstr "最大连接数的设置："
+msgstr "最大下载数 (0 = 无限制)"
 
 #. i18n: ectx: label, entry (maxSeeds), group (downloads)
 #: libktcore/ktorrent.kcfg:15
 msgid "Maximum number of seeds (0 = no limit)"
-msgstr ""
+msgstr "最大种子数 (0 = 无限制)"
 
 #. i18n: ectx: label, entry (startDownloadsOnLowDiskSpace), group (downloads)
 #: libktcore/ktorrent.kcfg:20
 msgid "Start downloads on low disk space?"
-msgstr ""
+msgstr "在低磁盘空间时开始下载？"
 
 #. i18n: ectx: label, entry (maxConnections), group (downloads)
 #: libktcore/ktorrent.kcfg:25
-#, fuzzy
 msgid "Maximum number of connections per torrent (0 = no limit)"
-msgstr "每个种子允许的最大连接数。"
+msgstr "单个种子允许的最大连接数 (0 = 无限制)"
 
 #. i18n: ectx: label, entry (maxTotalConnections), group (downloads)
 #: libktcore/ktorrent.kcfg:30
-#, fuzzy
 msgid "Maximum number of connections for all torrents (0 = no limit) "
-msgstr "每个种子允许的最大连接数。"
+msgstr "所有种子允许的最大连接数 (0 = 无限制)"
 
 #. i18n: ectx: label, entry (maxUploadRate), group (downloads)
 #: libktcore/ktorrent.kcfg:35
-#, fuzzy
 msgid "Maximum upload speed in KiB/sec (0 = no limit)"
-msgstr "最大上传速度(KiB/秒)"
+msgstr "按 Kib/秒计的最大上传速度 (0 = 无限制)"
 
 #. i18n: ectx: label, entry (maxDownloadRate), group (downloads)
 #: libktcore/ktorrent.kcfg:40
-#, fuzzy
 msgid "Maximum download speed in KiB/sec (0 = no limit)"
-msgstr "最大下载速度(KiB/秒)。"
+msgstr "按 Kib/秒计的最大下载速度 (0 = 无限制)"
 
 #. i18n: ectx: label, entry (maxRatio), group (downloads)
 #: libktcore/ktorrent.kcfg:45
-#, fuzzy
 msgid "Maximum share ratio (0 = no limit)"
-msgstr "已经达到最大共享率限制。"
+msgstr "最大分享率 (0 = 无限制)"
 
 #. i18n: ectx: label, entry (showSystemTrayIcon), group (downloads)
 #: libktcore/ktorrent.kcfg:66
-#, fuzzy
 msgid "Show a system tray icon"
 msgstr "显示系统托盘图标"
 
 #. i18n: ectx: label, entry (showSpeedBarInTrayIcon), group (downloads)
 #: libktcore/ktorrent.kcfg:70
-#, fuzzy
 msgid "Show speed bar in tray icon"
-msgstr "显示系统托盘图标"
+msgstr "托盘图标中显示速度栏"
 
 #. i18n: ectx: label, entry (downloadBandwidth), group (downloads)
 #: libktcore/ktorrent.kcfg:74
-#, fuzzy
 msgid "Download bandwidth (in kb/s):"
-msgstr "可用下载带宽："
+msgstr "下载带宽(kb/s)："
 
 #. i18n: ectx: label, entry (uploadBandwidth), group (downloads)
 #: libktcore/ktorrent.kcfg:80
 msgid "Upload bandwidth (in kb/s):"
-msgstr ""
+msgstr "上传带宽(kb/s)："
 
 #. i18n: ectx: label, entry (showPopups), group (downloads)
 #: libktcore/ktorrent.kcfg:86
 msgid "Show popup messages when torrent is finished."
-msgstr ""
+msgstr "种子下载完成时显示弹出信息。"
 
 #. i18n: ectx: label, entry (keepSeeding), group (downloads)
 #: libktcore/ktorrent.kcfg:90
-#, fuzzy
 msgid "Keep seeding after download has finished"
 msgstr "下载完成后保持做种"
 
 #. i18n: ectx: label, entry (tempDir), group (downloads)
 #: libktcore/ktorrent.kcfg:94
-#, fuzzy
 msgid "Folder to store temporary files"
-msgstr "保存种子文件信息的文件夹："
+msgstr "保存临时文件的文件夹："
 
 #. i18n: ectx: label, entry (useSaveDir), group (downloads)
 #: libktcore/ktorrent.kcfg:97
 msgid "Whether to automatically save downloads to saveDir"
-msgstr ""
+msgstr "是否自动将下载保存在下载目录"
 
 #. i18n: ectx: label, entry (saveDir), group (downloads)
 #: libktcore/ktorrent.kcfg:101
-#, fuzzy
 msgid "Folder to store downloaded files"
-msgstr "保存种子文件信息的文件夹："
+msgstr "保存下载文件的文件夹"
 
 #. i18n: ectx: label, entry (useTorrentCopyDir), group (downloads)
 #: libktcore/ktorrent.kcfg:104
 msgid "Whether to automatically copy .torrent files to torrentCopyDir"
-msgstr ""
+msgstr "是否自动将种子文件复制到种子备份文件夹"
 
 #. i18n: ectx: label, entry (torrentCopyDir), group (downloads)
 #: libktcore/ktorrent.kcfg:108
-#, fuzzy
 msgid "Folder to copy .torrent files to"
-msgstr "复制种子文件到："
+msgstr "复制种子文件到"
 
 #. i18n: ectx: label, entry (useCustomIP), group (downloads)
 #: libktcore/ktorrent.kcfg:111
-#, fuzzy
 msgid "Whether to use a custom IP to pass to the tracker"
-msgstr "向 tracker 发送自定义 IP 地址或主机名"
+msgstr "是否向 Tracker 发送自定义 IP 地址"
 
 #. i18n: ectx: label, entry (lastSaveDir), group (downloads)
 #: libktcore/ktorrent.kcfg:115
 msgid "Directory which was used as the last save directory"
-msgstr ""
+msgstr "作为最后保存位置的文件夹"
 
 #. i18n: ectx: label, entry (customIP), group (downloads)
 #: libktcore/ktorrent.kcfg:119
-#, fuzzy
 msgid "IP to pass to the tracker"
-msgstr "对等点的 IP 地址"
+msgstr "发送到 Tracker 的 IP 地址"
 
 #. i18n: ectx: label, entry (guiUpdateInterval), group (downloads)
 #: libktcore/ktorrent.kcfg:123
-#, fuzzy
 msgid "GUI update interval"
-msgstr "界面更新间隔："
+msgstr "界面更新间隔"
 
 #. i18n: ectx: label, entry (dhtSupport), group (downloads)
 #: libktcore/ktorrent.kcfg:129
 msgid "Support for DHT"
-msgstr ""
+msgstr "对 DHT 的支持"
 
 #. i18n: ectx: label, entry (dhtPort), group (downloads)
 #: libktcore/ktorrent.kcfg:133
-#, fuzzy
 msgid "DHT port"
-msgstr "DHT：关闭"
+msgstr "DHT 端口"
 
 #. i18n: ectx: label, entry (numUploadSlots), group (downloads)
 #: libktcore/ktorrent.kcfg:142
-#, fuzzy
 msgid "Number of upload slots"
-msgstr "上传通道数："
+msgstr "上传通道数"
 
 #. i18n: ectx: label, entry (shownColumns), group (downloads)
 #: libktcore/ktorrent.kcfg:174
 msgid "Columns shown in KTorrentView"
-msgstr ""
+msgstr "KTorrent 视图中显示的栏位"
 
 #. i18n: ectx: label, entry (eta), group (downloads)
 #: libktcore/ktorrent.kcfg:219
-#, fuzzy
 msgid "Algorithm to estimate the time when a torrent is finished"
-msgstr "用于种子文件下载完成后迁移数据的目录。"
+msgstr "预估种子完成时间的算法。"
 
 #. i18n: ectx: label, entry (minDiskSpace), group (downloads)
 #: libktcore/ktorrent.kcfg:231
@@ -4083,22 +3968,22 @@ msgid ""
 "When there is no space left to complete download, and the available disk "
 "space is less than this value, the torrent will be stopped."
 msgstr ""
+"当没有足够的磁盘空间以完成下载，且可用磁盘空间小于该值时，种子将被自动停止。"
 
 #. i18n: ectx: label, entry (useCompletedDir), group (downloads)
 #: libktcore/ktorrent.kcfg:242
 msgid "Whether to automatically move completed downloads to completedDir"
-msgstr ""
+msgstr "是否自动将完成的文件移动到完成目录"
 
 #. i18n: ectx: label, entry (completedDir), group (downloads)
 #: libktcore/ktorrent.kcfg:246
-#, fuzzy
 msgid "Folder to move completed downloaded files to"
-msgstr "将完成的下载移动到："
+msgstr "将完成的下载移动到"
 
 #. i18n: ectx: label, entry (maxSeedTime), group (downloads)
 #: libktcore/ktorrent.kcfg:249
 msgid "Maximum seed time in hours (0 = no limit)"
-msgstr ""
+msgstr "按小时计的最大做种时间 (0 = 无限制)"
 
 #: libktcore/plugin/pluginactivity.cpp:38
 #: libktcore/plugin/pluginactivity.cpp:55
@@ -4108,12 +3993,12 @@ msgstr "插件"
 #: libktcore/torrent/basicjobprogresswidget.cpp:53
 #, kde-format
 msgid "%1: %2<br/>%3: %4"
-msgstr ""
+msgstr "%1: %2<br/>%3: %4"
 
 #: libktcore/torrent/basicjobprogresswidget.cpp:68
-#, fuzzy, kde-format
+#, kde-format
 msgid "Warning: %1"
-msgstr "正在打开 %1"
+msgstr "警告：%1"
 
 #: libktcore/torrent/chunkbar.cpp:93
 msgid ""
@@ -4121,33 +4006,34 @@ msgid ""
 "\"unavailable_color\">&nbsp; - Chunks to Download<br><img src="
 "\"excluded_color\">&nbsp; - Excluded Chunks"
 msgstr ""
-"<img src=\"available_color\">&nbsp; - 下载块<br><img src=\"unavailable_color"
-"\">&nbsp; - 要下载的块<br><img src=\"excluded_color\">&nbsp; - 排除的块"
+"<img src=\"available_color\">&nbsp; - 已下载数据块<br><img src="
+"\"unavailable_color\">&nbsp; - 待下载数据块<br><img src=\"excluded_color"
+"\">&nbsp; - 已排除数据块"
 
 #: libktcore/torrent/queuemanager.cpp:114
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "The torrent \"%1\" has reached its maximum share ratio and its maximum seed "
 "time. Ignore the limit and start seeding anyway?"
-msgstr "种子“%1”已达到最大共享率和最大做种时间。要忽略限制并开始做种吗？"
+msgstr "种子 \"%1\" 已达到最大分享率和最大做种时间。要忽略限制并开始做种吗？"
 
 #: libktcore/torrent/queuemanager.cpp:116
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "The torrent \"%1\" has reached its maximum share ratio. Ignore the limit and "
 "start seeding anyway?"
-msgstr "种子“%1”已达到最大共享率。要忽略限制并开始做种吗？"
+msgstr "种子 \"%1\" 已达到最大分享率。要忽略限制并开始做种吗？"
 
 #: libktcore/torrent/queuemanager.cpp:118
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "The torrent \"%1\" has reached its maximum seed time. Ignore the limit and "
 "start seeding anyway?"
-msgstr "种子“%1”已达到最大做种时间。要忽略限制并开始做种吗？"
+msgstr "种子 \"%1\" 已达到最大做种时间。要忽略限制并开始做种吗？"
 
 #: libktcore/torrent/queuemanager.cpp:122
 msgid "Limits reached."
-msgstr ""
+msgstr "达到限制。"
 
 #: libktcore/torrent/queuemanager.cpp:148
 msgid ""
@@ -4161,28 +4047,25 @@ msgid "Insufficient disk space for %1"
 msgstr "可供 %1 使用的磁盘空间不足"
 
 #: libktcore/torrent/queuemanager.cpp:241
-#, fuzzy
 msgid ""
 "Not enough disk space for the following torrents. Do you want to start them "
 "anyway?"
-msgstr "您的磁盘空间不足以下载以下种子。您仍然想要启动吗？"
+msgstr "没有足够磁盘空间下载以下种子。您仍然想要启动它们吗？"
 
 #: libktcore/torrent/queuemanager.cpp:280
-#, fuzzy
 msgid ""
 "The following torrents have reached their maximum seed time. Do you want to "
 "start them anyway?"
 msgstr "以下种子已达到最大做种时间。您仍然想要启动它们吗？"
 
 #: libktcore/torrent/queuemanager.cpp:309
-#, fuzzy
 msgid ""
 "The following torrents have reached their maximum share ratio. Do you want "
 "to start them anyway?"
-msgstr "以下种子已达到最大共享率。您仍然想要启动它们吗？"
+msgstr "以下种子已达到最大分享率。您仍然想要启动它们吗？"
 
 #: libktcore/torrent/queuemanager.cpp:737
-#, fuzzy, kde-format
+#, kde-format
 msgid "Error starting torrent %1: %2"
 msgstr "启动种子 %1 出错：%2"
 
@@ -4192,7 +4075,7 @@ msgid "Error"
 msgstr "错误"
 
 #: libktcore/torrent/queuemanager.cpp:753
-#, fuzzy, kde-format
+#, kde-format
 msgid "Error stopping torrent %1: %2"
 msgstr "停止种子 %1 出错：%2"
 
@@ -4202,58 +4085,52 @@ msgid "File"
 msgstr "文件"
 
 #: libktcore/util/mmapfile.cpp:164
-#, fuzzy
 msgid "Cannot write beyond end of the mmap buffer."
-msgstr "无法在 mmap 缓冲结束后写入！"
+msgstr "无法进行超出 mmap 缓冲区末尾的写入。"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AppletConfig)
 #: plasma/applet/applet.cpp:239 plasma/applet/appletconfig.ui:13
-#, fuzzy
 msgid "Applet"
-msgstr "应用"
+msgstr "小程序"
 
 #: plasma/applet/applet.cpp:303 plasma/applet/applet.cpp:387
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "<table>\t\t\t\t<tr><td>Download Speed:</td><td>%5 </td><td>Seeders: </td><td>"
 "%1 (%2)</td></tr>\t\t\t\t<tr><td>Upload Speed:</td><td>%6 </td><td>Leechers: "
 "</td><td>%3 (%4)</td></tr>"
 msgstr ""
-"<table>\t\t\t\t<tr><td>下载速度：</td><td>%5 </td><td>Seeders: </td><td>%1 "
-"(%2)</td></tr>\t\t\t\t<tr><td>Upload Speed:</td><td>%6 </td><td>Leechers: </"
-"td><td>%3 (%4)</td></tr>\t\t\t\t<tr><td>Downloaded:</td><td>%7 / %8 </"
-"td><td>Uploaded: </td><td>%9</td></tr>\t\t\t\t</table>"
+"<table>\t\t\t\t<tr><td>下载速度：</td><td>%5 </td><td>种源：</td><td>%1 (%2)"
+"</td></tr>\t\t\t\t<tr><td>上传速度：</td><td>%6 </td><td>吸血虫：</td><td>%3 "
+"(%4)</td></tr>"
 
 #: plasma/applet/applet.cpp:308 plasma/applet/applet.cpp:392
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "<tr><td>Downloaded:</td><td>%1 </td><td>Size: </td><td>%2</td></tr>\t\t\t"
 "\t<tr><td>Uploaded:</td><td>%3 </td><td>Complete: </td><td>%4 %</td></tr>\t\t"
 "\t\t</table>"
 msgstr ""
-"<table>\t\t\t\t<tr><td>下载速度：</td><td>%5 </td><td>Seeders: </td><td>%1 "
-"(%2)</td></tr>\t\t\t\t<tr><td>Upload Speed:</td><td>%6 </td><td>Leechers: </"
-"td><td>%3 (%4)</td></tr>\t\t\t\t<tr><td>Downloaded:</td><td>%7 / %8 </"
-"td><td>Uploaded: </td><td>%9</td></tr>\t\t\t\t</table>"
+"<tr><td>下载：</td><td>%1 </td><td>大小：</td><td>%2</td></tr>\t\t\t"
+"\t<tr><td>上传：</td><td>%3 </td><td>完成：</td><td>%4 %</td></tr>\t\t\t\t</"
+"table>"
 
 #: plasma/applet/applet.cpp:314
 #, kde-format
 msgid "<b>%1</b><br/>%2 (Share Ratio: <font color=\"%4\">%3</font>)"
-msgstr "<b>%1</b><br/>%2 (共享率：<font color=\"%4\">%3</font>)"
+msgstr "<b>%1</b><br/>%2 (分享率：<font color=\"%4\">%3</font>)"
 
 #: plasma/applet/applet.cpp:398
-#, fuzzy
 msgid "KTorrent is not running."
-msgstr "KTorrent 没有运行！"
+msgstr "KTorrent 未运行。"
 
 #: plasma/applet/applet.cpp:400
-#, fuzzy
 msgid "No torrents loaded."
-msgstr "没有装入种子！"
+msgstr "没有种子被加载。"
 
 #: plasma/applet/applet.cpp:402
 msgid "Selected torrent is unavailable."
-msgstr ""
+msgstr "所选种子不可用。"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plasma/applet/appletconfig.ui:21
@@ -4262,37 +4139,35 @@ msgstr "要显示的种子："
 
 #: plugins/bwscheduler/bwprefpage.cpp:27
 #: plugins/bwscheduler/bwschedulerplugin.cpp:87
-#, fuzzy
 msgid "Scheduler"
-msgstr "装入调度"
+msgstr "调度器"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: plugins/bwscheduler/bwprefpage.ui:16
-#, fuzzy
 msgid "Special Limits"
-msgstr "速度限制"
+msgstr "特殊限制"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_screensaverLimits)
 #: plugins/bwscheduler/bwprefpage.ui:22
 msgid ""
 "Use these global limits when the screensaver is activated, instead of the "
 "ones configured in the network settings."
-msgstr ""
+msgstr "屏保启用时不使用网络设置中的配置，而是使用全局限制。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_screensaverLimits)
 #: plugins/bwscheduler/bwprefpage.ui:25
 msgid "Use different speed limits when the screensaver is activated"
-msgstr ""
+msgstr "启用屏保时使用不同的速度限制。"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_screensaverUploadLimit)
 #: plugins/bwscheduler/bwprefpage.ui:49
 msgid "Global upload limit when the screensaver is activated."
-msgstr ""
+msgstr "屏保启用时的全局上传限速。"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_screensaverDownloadLimit)
 #: plugins/bwscheduler/bwprefpage.ui:78
 msgid "Global download limit when the screensaver is activated."
-msgstr ""
+msgstr "屏保启用时的全局下载限速。"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: ectx: property (title), widget (QGroupBox, ColorsGbw)
@@ -4332,15 +4207,13 @@ msgstr "调度项目的颜色。"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: plugins/bwscheduler/bwprefpage.ui:162
-#, fuzzy
 msgid "Suspended schedule item color:"
-msgstr "已暂停调度项目颜色："
+msgstr "已暂停的调度项目颜色："
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_suspendedColor)
 #: plugins/bwscheduler/bwprefpage.ui:169
-#, fuzzy
 msgid "Color of each suspended item on the schedule."
-msgstr "已暂停调度项目的颜色。"
+msgstr "调度中已暂停调度项目的颜色。"
 
 #: plugins/bwscheduler/bwschedulerplugin.cpp:119
 #: plugins/infowidget/infowidgetplugin.cpp:96
@@ -4349,19 +4222,18 @@ msgstr "带宽调度"
 
 #: plugins/bwscheduler/edititemdlg.cpp:80
 msgid "Add an item"
-msgstr "添加一个项目"
+msgstr "添加项目"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, EditItemDlg)
 #: plugins/bwscheduler/edititemdlg.cpp:82
 #: plugins/bwscheduler/edititemdlg.ui:14
 msgid "Edit an item"
-msgstr "编辑一个项目"
+msgstr "编辑项目"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: plugins/bwscheduler/edititemdlg.ui:23
-#, fuzzy
 msgid "Duration"
-msgstr "目标"
+msgstr "持续时间"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: plugins/bwscheduler/edititemdlg.ui:31
@@ -4381,14 +4253,12 @@ msgstr "到："
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: plugins/bwscheduler/edititemdlg.ui:63
-#, fuzzy
 msgctxt "starting day"
 msgid "From:"
 msgstr "从："
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: plugins/bwscheduler/edititemdlg.ui:73
-#, fuzzy
 msgctxt "ending day"
 msgid "To:"
 msgstr "到："
@@ -4415,13 +4285,12 @@ msgstr "上传限制："
 #. i18n: ectx: property (text), widget (QCheckBox, m_screensaver_limits)
 #: plugins/bwscheduler/edititemdlg.ui:160
 msgid "When screensaver is activated:"
-msgstr ""
+msgstr "启用屏保时："
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: plugins/bwscheduler/edititemdlg.ui:214
-#, fuzzy
 msgid "Connection Limits"
-msgstr "设定连接限制"
+msgstr "连接限制"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_set_connection_limits)
 #: plugins/bwscheduler/edititemdlg.ui:220
@@ -4431,7 +4300,6 @@ msgstr "设定连接限制"
 #. i18n: ectx: ToolBar (SchedulerToolbar)
 #: plugins/bwscheduler/ktbwschedulerpluginui.rc:4
 #: plugins/bwscheduler/scheduleeditor.cpp:41
-#, fuzzy
 msgid "Bandwidth Schedule"
 msgstr "带宽调度"
 
@@ -4441,14 +4309,13 @@ msgid "Cannot open file %1: %2"
 msgstr "无法打开文件 %1：%2"
 
 #: plugins/bwscheduler/schedule.cpp:156 plugins/bwscheduler/schedule.cpp:162
-#, fuzzy, kde-format
+#, kde-format
 msgid "The file %1 is corrupted or not a proper KTorrent schedule file."
-msgstr "文件 %1 不正确，或者不是一个 KTorrent 调度文件！"
+msgstr "文件 %1 已损坏或者不是 KTorrent 调度文件。"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:44
-#, fuzzy
 msgid "Edit the bandwidth schedule"
-msgstr "编辑带宽调度的标签"
+msgstr "编辑带宽调度"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:87
 msgid "Load Schedule"
@@ -4464,7 +4331,7 @@ msgstr "新建项目"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:90
 msgid "Remove Item"
-msgstr "删除项目"
+msgstr "移除项目"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:91
 msgid "Edit Item"
@@ -4475,14 +4342,12 @@ msgid "Clear Schedule"
 msgstr "清理调度"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:95
-#, fuzzy
 msgid "Scheduler Active"
-msgstr "调度线条颜色："
+msgstr "调度已启用"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:96
-#, fuzzy
 msgid "Activate or deactivate the scheduler"
-msgstr "向调度增加新项目"
+msgstr "启用或禁用调度器"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:125
 #: plugins/bwscheduler/scheduleeditor.cpp:141
@@ -4490,15 +4355,13 @@ msgid "KTorrent scheduler files"
 msgstr "KTorrent 调度文件"
 
 #: plugins/bwscheduler/scheduleeditor.cpp:194
-#, fuzzy
 msgid ""
 "This item conflicts with another item in the schedule, we cannot change it."
-msgstr "该项目与调度队列中的其他项目冲突，无法更改！"
+msgstr "该项目与调度队列中的其他项目冲突，无法更改。"
 
 #: plugins/bwscheduler/schedulegraphicsitem.cpp:88
-#, fuzzy
 msgid "Suspended"
-msgstr "速度"
+msgstr "已暂停"
 
 #: plugins/bwscheduler/schedulegraphicsitem.cpp:95
 #, kde-format
@@ -4510,33 +4373,31 @@ msgstr ""
 "%2 上传"
 
 #: plugins/bwscheduler/weekscene.cpp:75
-#, fuzzy
 msgid "Current schedule: suspended"
 msgstr "当前调度：已暂停"
 
 #: plugins/bwscheduler/weekscene.cpp:77
-#, fuzzy, kde-format
+#, kde-format
 msgid "Current schedule: %1/s download, %2/s upload"
-msgstr "当前调度：%1 KiB/秒 下载，%2 KiB/秒 上传"
+msgstr "当前调度：下载 %1 KiB/秒，上传 %2 /秒"
 
 #: plugins/bwscheduler/weekscene.cpp:80
-#, fuzzy, kde-format
+#, kde-format
 msgid "Current schedule: unlimited download, %1/s upload"
-msgstr "当前调度：无限制下载，%1 KiB/秒 上传"
+msgstr "当前调度：下载不限速，上传 %1 KiB/秒"
 
 #: plugins/bwscheduler/weekscene.cpp:82
-#, fuzzy, kde-format
+#, kde-format
 msgid "Current schedule: %1/s download, unlimited upload"
-msgstr "当前调度：%1 KiB/秒 下载，无限制上传"
+msgstr "当前调度：下载 %1 KiB/秒，上传不限速"
 
 #: plugins/bwscheduler/weekscene.cpp:84
 msgid "Current schedule: unlimited upload and download"
 msgstr "当前调度：无限制下载，无限制上传"
 
 #: plugins/bwscheduler/weekscene.cpp:87
-#, fuzzy
 msgid " (scheduler disabled)"
-msgstr "KTorrent 调度文件"
+msgstr " (调度器被禁用)"
 
 #: plugins/bwscheduler/weekscene.cpp:108
 msgid "Current schedule:"
@@ -4556,18 +4417,16 @@ msgstr "<b>%1</b> 的文件下载顺序："
 
 #: plugins/downloadorder/downloadorderdialog.cpp:81
 msgid "Seasons and Episodes"
-msgstr ""
+msgstr "季与剧集"
 
 #: plugins/downloadorder/downloadorderdialog.cpp:82
-#, fuzzy
-#| msgid "Available Trackers"
 msgid "Album Track Order"
-msgstr "可用 Tracker"
+msgstr "专辑曲目顺序"
 
 #. i18n: ectx: property (text), widget (QLabel, m_top_label)
 #: plugins/downloadorder/downloadorderwidget.ui:20
 msgid "File download order for:"
-msgstr ""
+msgstr "文件下载顺序："
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_custom_order_enabled)
 #: plugins/downloadorder/downloadorderwidget.ui:27
@@ -4582,25 +4441,23 @@ msgstr "自定义文件下载顺序已启用"
 #. i18n: ectx: property (text), widget (QToolButton, m_sort_by)
 #: plugins/downloadorder/downloadorderwidget.ui:42
 msgid "Sort By"
-msgstr ""
+msgstr "排序方式"
 
 #. i18n: ectx: property (placeholderText), widget (KLineEdit, m_search_files)
 #: plugins/downloadorder/downloadorderwidget.ui:52
-#, fuzzy
 msgid "Search files"
-msgstr "搜索引擎"
+msgstr "搜索文件"
 
 #. i18n: ectx: property (toolTip), widget (QListView, m_order)
 #: plugins/downloadorder/downloadorderwidget.ui:66
 msgid ""
 "Order in which to download the files of a torrent. The file at the top will "
 "be downloaded first, followed by the second, then the third ..."
-msgstr ""
+msgstr "种子中文件的下载顺序，最上面的最先下载，然后依次向下类推..."
 
 #. i18n: ectx: property (text), widget (KPushButton, m_add_tracker)
 #: plugins/infowidget/addtrackersdialog.cpp:35
 #: plugins/infowidget/trackerview.ui:22
-#, fuzzy
 msgid "Add Trackers"
 msgstr "添加 Tracker"
 
@@ -4610,13 +4467,13 @@ msgid ""
 "\"unavailable_color\">&nbsp; - Unavailable Chunks<br><img src="
 "\"excluded_color\">&nbsp; - Excluded Chunks"
 msgstr ""
-"<img src=\"available_color\">&nbsp; - 可用的块<br><img src="
-"\"unavailable_color\">&nbsp; - 不可用的块<br><img src=\"excludec_color"
-"\">&nbsp; - 排除的块"
+"<img src=\"available_color\">&nbsp; - 可用数据块<br><img src="
+"\"unavailable_color\">&nbsp; - 不可用数据块<br><img src=\"excludec_color"
+"\">&nbsp; - 已排除数据块"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:197
 msgid "Chunk"
-msgstr "块"
+msgstr "数据块"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:198
 msgid "Progress"
@@ -4632,25 +4489,23 @@ msgstr "文件"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:209
 msgid "Number of the chunk"
-msgstr "块数"
+msgstr "数据块数"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:210
-#, fuzzy
 msgid "Download progress of the chunk"
-msgstr "已下载块："
+msgstr "数据块的下载进度"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:211
 msgid "Which peer we are downloading it from"
-msgstr ""
+msgstr "获取数据的对等点"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:212
-#, fuzzy
 msgid "Download speed of the chunk"
-msgstr "已下载块："
+msgstr "数据块的下载速度"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:213
 msgid "Which files the chunk is located in"
-msgstr ""
+msgstr "数据块归属的文件"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ChunkDownloadView)
 #. i18n: ectx: property (text), widget (QLabel, hdr_chunks)
@@ -4658,17 +4513,17 @@ msgstr ""
 #: plugins/infowidget/infowidgetplugin.cpp:244
 #: plugins/infowidget/statustab.ui:181
 msgid "Chunks"
-msgstr "块"
+msgstr "数据块"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: plugins/infowidget/chunkdownloadview.ui:26
 msgid "Total:"
-msgstr "总共："
+msgstr "总计："
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel5)
 #: plugins/infowidget/chunkdownloadview.ui:62
 msgid "Currently downloading:"
-msgstr "正在下载："
+msgstr "当前下载："
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
 #: plugins/infowidget/chunkdownloadview.ui:134
@@ -4691,15 +4546,13 @@ msgid "Open"
 msgstr "打开"
 
 #: plugins/infowidget/fileview.cpp:116
-#, fuzzy
 msgctxt "Open file with"
 msgid "Open With"
-msgstr "以静默方式打开"
+msgstr "打开方式"
 
 #: plugins/infowidget/fileview.cpp:117
-#, fuzzy
 msgid "Check File"
-msgstr "移动文件"
+msgstr "检查文件"
 
 #: plugins/infowidget/fileview.cpp:119
 msgid "Download first"
@@ -4723,33 +4576,29 @@ msgstr "移动文件"
 
 #: plugins/infowidget/fileview.cpp:128
 msgid "Collapse Folder Tree"
-msgstr "折叠文件夹树形列表"
+msgstr "折叠文件夹树"
 
 #: plugins/infowidget/fileview.cpp:129
 msgid "Expand Folder Tree"
-msgstr "展开文件夹树形列表"
+msgstr "展开文件夹树"
 
 #: plugins/infowidget/fileview.cpp:132
-#, fuzzy
 msgid "File Tree"
-msgstr "过滤"
+msgstr "文件树"
 
 #: plugins/infowidget/fileview.cpp:134
-#, fuzzy
 msgid "File List"
-msgstr "文件已存在"
+msgstr "文件列表"
 
 #: plugins/infowidget/fileview.cpp:144
-#, fuzzy
 msgid "Show Filter"
-msgstr "新建过滤"
+msgstr "显示过滤器"
 
 #: plugins/infowidget/fileview.cpp:335
-#, fuzzy
 msgid "You will lose all data in this file, are you sure you want to do this?"
 msgid_plural ""
 "You will lose all data in these files, are you sure you want to do this?"
-msgstr[0] "您将失去这个文件的全部数据。您确定要这样做？"
+msgstr[0] "您将丢失这些文件中的全部数据，您确定想要这样做吗？"
 
 #: plugins/infowidget/infowidgetplugin.cpp:71
 #: plugins/infowidget/iwprefpage.cpp:27
@@ -4757,7 +4606,6 @@ msgid "Info Widget"
 msgstr "信息部件"
 
 #: plugins/infowidget/infowidgetplugin.cpp:83
-#, fuzzy
 msgctxt "@title:tab"
 msgid "Status"
 msgstr "状态"
@@ -4767,7 +4615,6 @@ msgid "Displays status information about a torrent"
 msgstr "显示关于种子的状态信息"
 
 #: plugins/infowidget/infowidgetplugin.cpp:85
-#, fuzzy
 msgctxt "@title:tab"
 msgid "Files"
 msgstr "文件"
@@ -4778,16 +4625,15 @@ msgstr "显示种子中的全部文件"
 
 #: plugins/infowidget/infowidgetplugin.cpp:223
 msgid "Displays all the peers you are connected to for a torrent"
-msgstr ""
+msgstr "显示一个种子连接的所有对等点"
 
 #: plugins/infowidget/infowidgetplugin.cpp:245
 msgid "Displays all the chunks you are downloading, of a torrent"
-msgstr ""
+msgstr "显示正在下载种子的所有数据块"
 
 #: plugins/infowidget/infowidgetplugin.cpp:267
-#, fuzzy
 msgid "Displays information about all the trackers of a torrent"
-msgstr "用于保存现在所有在 KTorrent 中打开的种子文件的目录。"
+msgstr "显示所有任务中全部 Tracker 的信息 "
 
 #: plugins/infowidget/infowidgetplugin.cpp:285
 msgid "Webseeds"
@@ -4795,11 +4641,10 @@ msgstr "网络种子"
 
 #: plugins/infowidget/infowidgetplugin.cpp:286
 msgid "Displays all the webseeds of a torrent"
-msgstr "显示种子中的全部网络种子"
+msgstr "显示任务中的全部网络种子"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:78
 #: plugins/infowidget/iwfiletreemodel.cpp:90
-#, fuzzy
 msgctxt "@title:column"
 msgid "Preview"
 msgstr "预览"
@@ -4815,7 +4660,7 @@ msgstr "完成百分比"
 #: plugins/infowidget/iwfiletreemodel.cpp:101
 msgctxt "Download first"
 msgid "First"
-msgstr "起始"
+msgstr "最先"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:90
 #: plugins/infowidget/iwfiletreemodel.cpp:102
@@ -4888,29 +4733,27 @@ msgstr "显示对等点列表"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showChunkView)
 #: plugins/infowidget/iwprefpage.ui:33
 msgid "Whether or not to show the chunks tab in the bottom of the window."
-msgstr "是否在窗口底部显示块标签。"
+msgstr "是否在窗口底部显示数据块标签。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showChunkView)
 #: plugins/infowidget/iwprefpage.ui:36
 msgid "Show list of chunks currently downloading"
-msgstr "显示当前正在下载的块列表"
+msgstr "显示当前正在下载的数据块列表"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showTrackersView)
 #: plugins/infowidget/iwprefpage.ui:43
 msgid "Whether or not to show the trackers tab in the bottom of the window."
-msgstr "是否在窗口底部显示 trackers 标签。"
+msgstr "是否在窗口底部显示追踪服务器标签。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showTrackersView)
 #: plugins/infowidget/iwprefpage.ui:46
 msgid "Show list of trackers"
-msgstr "显示 tracker 列表"
+msgstr "显示追踪服务器列表"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showWebSeedsTab)
 #: plugins/infowidget/iwprefpage.ui:53
-#, fuzzy
-#| msgid "Whether or not to show the peers tab in the bottom of the window."
 msgid "Whether or not to show the webseeds tab at the bottom of the window."
-msgstr "是否在窗口底部显示对等点标签。"
+msgstr "是否在窗口底部显示网络对等点标签。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showWebSeedsTab)
 #: plugins/infowidget/iwprefpage.ui:56
@@ -4929,9 +4772,8 @@ msgstr "最高优先级："
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_firstColor)
 #: plugins/infowidget/iwprefpage.ui:79
-#, fuzzy
 msgid "Color to use for first priority files."
-msgstr "保存种子文件信息的文件夹："
+msgstr "最高优先级文件使用的颜色。"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: plugins/infowidget/iwprefpage.ui:86
@@ -4940,28 +4782,27 @@ msgstr "最低优先级："
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_lastColor)
 #: plugins/infowidget/iwprefpage.ui:93
-#, fuzzy
 msgid "Color to use for last priority files."
-msgstr "保存种子文件信息的文件夹："
+msgstr "最低优先级文件使用的颜色。"
 
 #. i18n: ectx: label, entry (showPeerView), group (general)
 #: plugins/infowidget/ktinfowidgetplugin.kcfg:10
 msgid "Show peer view tab in main window"
-msgstr ""
+msgstr "在主窗口中显示对等点视图标签"
 
 #. i18n: ectx: label, entry (showChunkView), group (general)
 #: plugins/infowidget/ktinfowidgetplugin.kcfg:14
 msgid "Show chunk download view tab in main window"
-msgstr ""
+msgstr "在主窗口中显示数据块下载标签"
 
 #. i18n: ectx: label, entry (showTrackersView), group (general)
 #: plugins/infowidget/ktinfowidgetplugin.kcfg:18
 msgid "Show trackers view tab in main window"
-msgstr ""
+msgstr "在主窗口中显示追踪服务器视图标签"
 
 #: plugins/infowidget/peerview.cpp:56
 msgid "Kick Peer"
-msgstr "断开对等点"
+msgstr "踢掉对等点"
 
 #: plugins/infowidget/peerview.cpp:57
 msgid "Ban Peer"
@@ -4969,7 +4810,7 @@ msgstr "屏蔽对等点"
 
 #: plugins/infowidget/peerviewmodel.cpp:88
 msgid " (µTP)"
-msgstr ""
+msgstr " (µTP)"
 
 #: plugins/infowidget/peerviewmodel.cpp:103
 msgctxt "Choked"
@@ -5012,9 +4853,8 @@ msgid "No"
 msgstr "否"
 
 #: plugins/infowidget/peerviewmodel.cpp:254
-#, fuzzy
 msgid "Address"
-msgstr "IP 地址"
+msgstr "地址"
 
 #: plugins/infowidget/peerviewmodel.cpp:255
 msgid "Country"
@@ -5026,19 +4866,19 @@ msgstr "客户端"
 
 #: plugins/infowidget/peerviewmodel.cpp:259
 msgid "Choked"
-msgstr "已屏蔽"
+msgstr "已扼制"
 
 #: plugins/infowidget/peerviewmodel.cpp:260
 msgid "Snubbed"
-msgstr "已降级"
+msgstr "已冷落"
 
 #: plugins/infowidget/peerviewmodel.cpp:261
 msgid "Availability"
 msgstr "可用性"
 
 #. i18n: ectx: property (title), widget (QGroupBox, DhtGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_12)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_5)
+#. i18n: ectx: property (text), widget (QLabel, label_12)
 #: plugins/infowidget/peerviewmodel.cpp:262 plugins/stats/Conns.ui:31
 #: plugins/stats/DisplaySettings.ui:796 plugins/stats/Settings.ui:234
 msgid "DHT"
@@ -5058,11 +4898,11 @@ msgstr "请求"
 
 #: plugins/infowidget/peerviewmodel.cpp:268
 msgid "Interested"
-msgstr ""
+msgstr "对我方数据感兴趣的对等点"
 
 #: plugins/infowidget/peerviewmodel.cpp:269
 msgid "Interesting"
-msgstr ""
+msgstr "我方对其数据感兴趣的对等点"
 
 #: plugins/infowidget/peerviewmodel.cpp:277
 msgid "IP address of the peer"
@@ -5088,11 +4928,11 @@ msgstr "上传速度"
 msgid ""
 "Whether or not the peer has choked us - when we are choked the peer will not "
 "send us any data"
-msgstr ""
+msgstr "对等点是否扼制了我方，如果扼制了我方，该对等点不会向我方发送任何数据。"
 
 #: plugins/infowidget/peerviewmodel.cpp:283
 msgid "Snubbed means the peer has not sent us any data in the last 2 minutes"
-msgstr ""
+msgstr "冷落意味着此对等点在过去 2 分钟内未向我方发送任何数据"
 
 #: plugins/infowidget/peerviewmodel.cpp:284
 msgid "How much data the peer has of the torrent"
@@ -5104,41 +4944,39 @@ msgstr "对等点是否启用 DHT"
 
 #: plugins/infowidget/peerviewmodel.cpp:286
 msgid "The score of the peer, KTorrent uses this to determine who to upload to"
-msgstr "对等点的得分，KTorrent 使用此数值决定上传给谁"
+msgstr "对等点的评分，KTorrent 使用此分值决定上传对象"
 
 #: plugins/infowidget/peerviewmodel.cpp:287
 msgid "Only peers which have an upload slot will get data from us"
-msgstr ""
+msgstr "只有提供了上传通道的对等点才能从我方获得数据"
 
 #: plugins/infowidget/peerviewmodel.cpp:288
 msgid "The number of download and upload requests"
 msgstr "下载和上传请求数"
 
 #: plugins/infowidget/peerviewmodel.cpp:289
-#, fuzzy
 msgid "How much data we have downloaded from this peer"
-msgstr "我们从此对等点下载的数据量"
+msgstr "已从此对等点下载的数据量"
 
 #: plugins/infowidget/peerviewmodel.cpp:290
-#, fuzzy
 msgid "How much data we have uploaded to this peer"
-msgstr "我们上传给此对等点的数据量"
+msgstr "已向此对等点上传的数据量"
 
 #: plugins/infowidget/peerviewmodel.cpp:291
 msgid "Whether the peer is interested in downloading data from us"
-msgstr ""
+msgstr "对等点是否愿意从我方下载数据"
 
 #: plugins/infowidget/peerviewmodel.cpp:292
 msgid "Whether we are interested in downloading from this peer"
-msgstr ""
+msgstr "我方是否有兴趣从此对等点下载数据"
 
 #: plugins/infowidget/statustab.cpp:108
 msgid "Private"
-msgstr ""
+msgstr "私有"
 
 #: plugins/infowidget/statustab.cpp:108
 msgid "Public"
-msgstr ""
+msgstr "公开"
 
 #. i18n: ectx: property (text), widget (QLabel, hdr_info)
 #: plugins/infowidget/statustab.ui:32
@@ -5153,7 +4991,7 @@ msgstr "平均下载速度："
 #. i18n: ectx: property (text), widget (QLabel, label_16)
 #: plugins/infowidget/statustab.ui:64
 msgid "Type:"
-msgstr ""
+msgstr "类型："
 
 #. i18n: ectx: property (text), widget (QLabel, label_15)
 #: plugins/infowidget/statustab.ui:100
@@ -5163,29 +5001,28 @@ msgstr "平均上传速度："
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/infowidget/statustab.ui:123
 msgid "Info hash:"
-msgstr ""
+msgstr "信息的哈希："
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: plugins/infowidget/statustab.ui:188
 msgid "Downloaded chunks:"
-msgstr "已下载块："
+msgstr "已下载数据块："
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: plugins/infowidget/statustab.ui:211
 msgid "Available chunks:"
-msgstr "可用块："
+msgstr "可用数据块："
 
 #. i18n: ectx: property (text), widget (QLabel, hdr_sharing)
 #: plugins/infowidget/statustab.ui:273
-#, fuzzy
 msgctxt "Noun, as in \"file sharing\""
 msgid "Sharing"
-msgstr "共享"
+msgstr "分享"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: plugins/infowidget/statustab.ui:282
 msgid "Share ratio:"
-msgstr "共享率："
+msgstr "分享率："
 
 #. i18n: ectx: property (text), widget (QCheckBox, use_ratio_limit)
 #: plugins/infowidget/statustab.ui:299
@@ -5200,53 +5037,48 @@ msgstr "时间限制："
 #: plugins/infowidget/trackermodel.cpp:147
 #: plugins/infowidget/webseedsmodel.cpp:124
 msgid "URL"
-msgstr "URL"
+msgstr "网址"
 
 #: plugins/infowidget/trackermodel.cpp:151
-#, fuzzy
 msgid "Times Downloaded"
-msgstr "下载用时："
+msgstr "已下载时间"
 
 #: plugins/infowidget/trackermodel.cpp:152
-#, fuzzy
 msgid "Next Update"
-msgstr "下次更新于："
+msgstr "下次更新"
 
 #: plugins/infowidget/trackerview.cpp:112
 msgid "Several URL's could not be added because they are malformed:"
-msgstr ""
+msgstr "有几个错误的 URL 无法被添加："
 
 #: plugins/infowidget/trackerview.cpp:127
-#, fuzzy, kde-format
+#, kde-format
 msgid "There already is a tracker named <b>%1</b>."
-msgstr "已存在名为 <b>%1</b> 的 tracker！"
+msgstr "已经存在名为 <b>%1</b> Tracker。"
 
 #: plugins/infowidget/trackerview.cpp:129
 msgid "The following duplicate trackers were not added:"
-msgstr ""
+msgstr "以下重复的追踪服务器将不会被添加："
 
 #. i18n: ectx: property (text), widget (KPushButton, m_remove_tracker)
 #: plugins/infowidget/trackerview.ui:29
 msgid "Remove Tracker"
-msgstr "删除 Tracker"
+msgstr "移除追踪服务器"
 
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_change_tracker)
 #: plugins/infowidget/trackerview.ui:36
-#, fuzzy
 msgid "Changes the current active tracker for private torrents."
-msgstr "显示种子中的全部网络种子"
+msgstr "将当前活动的追踪服务器用于私服种子。"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_change_tracker)
 #: plugins/infowidget/trackerview.ui:39
-#, fuzzy
 msgid "Switch Tracker"
-msgstr "Tracker 服务器"
+msgstr "切换追踪服务器"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_scrape)
 #: plugins/infowidget/trackerview.ui:46
-#, fuzzy
 msgid "Update Trackers"
-msgstr "Tracker 服务器"
+msgstr "更新追踪服务器"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_restore_defaults)
 #: plugins/infowidget/trackerview.ui:66
@@ -5265,11 +5097,10 @@ msgstr "无法添加网络种子 %1，它已经是网络种子列表中的一部
 #: plugins/infowidget/webseedstab.cpp:115
 #, kde-format
 msgid "Cannot remove webseed %1, it is part of the torrent."
-msgstr "无法删除网络种子 %1，它是种子的一部分。"
+msgstr "无法移除网络种子 %1，它是种子的一部分。"
 
 #. i18n: ectx: property (toolTip), widget (KLineEdit, m_webseed)
 #: plugins/infowidget/webseedstab.ui:19
-#, fuzzy
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Webseed to add to the "
@@ -5281,21 +5112,15 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Note: </span>Only http webseeds are supported.</p>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
-"weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">递归扫描文件夹以寻找种子。"
-"</p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">要添加到种子的网络种源。</"
+"p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
 "p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">提示：</span>对任何名为 loaded 的文件夹将不会执行这一操作。</"
-"p></body></html>"
+"weight:600;\">注意：</span>仅支持 HTTP 网络种源。</p>"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
 #: plugins/infowidget/webseedstab.ui:26
@@ -5305,7 +5130,7 @@ msgstr "添加网络种子"
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
 #: plugins/infowidget/webseedstab.ui:48
 msgid "Remove Webseed"
-msgstr "删除网络种子"
+msgstr "移除网络种子"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_enable_all)
 #: plugins/infowidget/webseedstab.ui:68
@@ -5318,25 +5143,25 @@ msgid "Disable All"
 msgstr "全部禁用"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
-#: plugins/ipfilter/convertdialog.ui:19 plugins/ipfilter/convertthread.cpp:174
+#: plugins/ipfilter/convertdialog.ui:19 plugins/ipfilter/convertthread.cpp:173
 msgid "Converting..."
 msgstr "正在转换..."
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: plugins/ipfilter/convertdialog.ui:28
 msgid "Converting block list to KTorrent format. This might take some time."
-msgstr "将块列表转换成 KTorrent 格式，这可能需要一点时间。"
+msgstr "将屏蔽列表转换成 KTorrent 格式，这可能需要一点时间。"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_cancel)
 #: plugins/ipfilter/convertdialog.ui:95
 msgid "C&ancel"
 msgstr "取消(&A)"
 
-#: plugins/ipfilter/convertthread.cpp:72
+#: plugins/ipfilter/convertthread.cpp:71
 msgid "Loading txt file..."
 msgstr "正在装入文本文件..."
 
-#: plugins/ipfilter/convertthread.cpp:156
+#: plugins/ipfilter/convertthread.cpp:155
 #, kde-format
 msgid "There are no IP addresses to convert in %1"
 msgstr "%1 中没有要转换的 IP 地址"
@@ -5347,31 +5172,30 @@ msgstr "%1 中没有要转换的 IP 地址"
 #: plugins/ipfilter/downloadandconvertjob.cpp:236
 #, kde-format
 msgid "Automatic update of IP filter failed: %1"
-msgstr ""
+msgstr "自动更新 IP 过滤器失败：%1"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:162
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cannot open zip file %1."
-msgstr "无法打开文件 %1：%2"
+msgstr "无法打开 zip 文件 %1。"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:166
 #, kde-format
 msgid "Automatic update of IP filter failed: cannot open zip file %1"
-msgstr ""
+msgstr "自动更新 IP 过滤器失败：无法打开 zip 文件 %1"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:203
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cannot find blocklist in zip file %1."
-msgstr "无法反选已缺失的文件：%1"
+msgstr "无法从文件 %1 中找到屏蔽列表。"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:207
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "Automatic update of IP filter failed: cannot find blocklist in zip file %1"
-msgstr "无法反选已缺失的文件：%1"
+msgstr "自动更新 IP 过滤器失败：未在 zip 文件 %1 中找到屏蔽列表"
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:42
-#, fuzzy
 msgid " day"
 msgid_plural " days"
 msgstr[0] " 天"
@@ -5380,28 +5204,27 @@ msgstr[0] " 天"
 #: plugins/ipfilter/ipblockingprefpage.cpp:89
 #: plugins/ipfilter/ipblockingprefpage.cpp:155
 msgid "Status: Loaded and running."
-msgstr "状态：已装入且正运行。"
+msgstr "状态：已加载且正运行。"
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:69
 #: plugins/ipfilter/ipblockingprefpage.cpp:91
 #: plugins/ipfilter/ipblockingprefpage.cpp:102
 #: plugins/ipfilter/ipblockingprefpage.cpp:157
 msgid "Status: Not loaded."
-msgstr "状态：未装入。"
+msgstr "状态：未加载。"
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:120
 msgid "Status: Downloading and converting new block list..."
 msgstr "状态：正在下载和转换新屏蔽列表..."
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:200
-#, fuzzy
 msgid "No update done yet."
-msgstr "还没有完成更新！"
+msgstr "还没有更新过。"
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:204
-#, fuzzy, kde-format
+#, kde-format
 msgid "%1 (Last update attempt failed.)"
-msgstr "%1 (上次更新操作失败！)"
+msgstr "%1 (上次更新操作失败。)"
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:218
 msgid "Never"
@@ -5415,7 +5238,7 @@ msgstr "IP 屏蔽首选项"
 #. i18n: ectx: property (title), widget (Q3GroupBox, groupBox1)
 #: plugins/ipfilter/ipblockingprefpage.ui:23
 msgid "PeerGuardian Filter File "
-msgstr "PeerGuardian 过滤文件 "
+msgstr "对等点卫士过滤文件 "
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useLevel1)
 #: plugins/ipfilter/ipblockingprefpage.ui:29
@@ -5425,7 +5248,7 @@ msgstr "启用可使 IP 过滤插件工作。"
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useLevel1)
 #: plugins/ipfilter/ipblockingprefpage.ui:32
 msgid "Use PeerGuardian filter"
-msgstr "使用 PeerGuardian 过滤"
+msgstr "使用对等点卫士过滤器"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
 #: plugins/ipfilter/ipblockingprefpage.ui:44
@@ -5488,21 +5311,18 @@ msgstr "下次更新于："
 
 #. i18n: ectx: label, entry (filterURL), group (general)
 #: plugins/ipfilter/ktipfilterplugin.kcfg:10
-#, fuzzy
 msgid "Level1 filter url"
-msgstr "删除过滤"
+msgstr "一级过滤器地址"
 
 #. i18n: ectx: label, entry (useLevel1), group (general)
 #: plugins/ipfilter/ktipfilterplugin.kcfg:14
-#, fuzzy
 msgid "Use level1 filter?"
-msgstr "使用 PeerGuardian 过滤"
+msgstr "使用一级过滤器 "
 
 #. i18n: ectx: label, entry (useRichText), group (general)
 #: plugins/logviewer/ktlogviewerplugin.kcfg:11
-#, fuzzy
 msgid "Use rich log text"
-msgstr "日志输出时使用富文本"
+msgstr "使用富文本日志"
 
 #: plugins/logviewer/logflags.cpp:121
 msgid "System"
@@ -5520,7 +5340,7 @@ msgstr "调试"
 #: plugins/logviewer/logflags.cpp:202
 #: plugins/logviewer/logflagsdelegate.cpp:45
 msgid "Notice"
-msgstr "注意"
+msgstr "提示"
 
 #: plugins/logviewer/logflags.cpp:203
 #: plugins/logviewer/logflagsdelegate.cpp:44
@@ -5543,7 +5363,6 @@ msgstr "日志查看器"
 
 #. i18n: ectx: property (toolTip), widget (QTreeView, m_logging_flags)
 #: plugins/logviewer/logprefwidget.ui:23
-#, fuzzy
 msgid ""
 "Double click on the log level to alter it. The possible levels are :\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
@@ -5567,32 +5386,25 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">None:</span> No messages are shown</p>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">为每个成员指定 日志级别。</"
-"p>\n"
+"双击更改日志级别。可用级别有：\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
 "p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">全部：</span>显示所有消息</p>\n"
+"weight:600;\">全部：</span>显示全部消息</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">调试：</span>显示调试、提醒和重要的消息</p>\n"
+"weight:600;\">重要：</span>只显示重要消息</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">提醒：</span>显示提醒和重要的消息</p>\n"
+"weight:600;\">提示：</span>只显示关键消息和提示消息</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">重要：</span>仅显示重要消息</p>\n"
+"weight:600;\">调试：</span>显示调试消息，关键消息和提示消息</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">没有：</span>不显示消息</p></body></html>"
+"weight:600;\">无：</span>不显示任何消息</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useRichText)
 #: plugins/logviewer/logprefwidget.ui:42
@@ -5609,157 +5421,142 @@ msgstr "日志输出时使用富文本"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/logviewer/logprefwidget.ui:54
 msgid "Log widget position:"
-msgstr ""
+msgstr "日志部件的位置："
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
 #: plugins/logviewer/logprefwidget.ui:68
 msgid "Separate activity"
-msgstr ""
+msgstr "独立的活动"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
 #: plugins/logviewer/logprefwidget.ui:73
 msgid "Dockable widget"
-msgstr ""
+msgstr "可停靠的部件"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
 #: plugins/logviewer/logprefwidget.ui:78
-#, fuzzy
 msgid "Torrent activity"
-msgstr "种子限制"
+msgstr "种子活动"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: plugins/logviewer/logprefwidget.ui:103
-#, fuzzy
 msgid "Maximum number of visible lines:"
-msgstr "最大连接数的设置："
+msgstr "最大可查看行数："
 
 #: plugins/logviewer/logviewer.cpp:35
 msgid "Log"
-msgstr ""
+msgstr "日志"
 
 #: plugins/logviewer/logviewer.cpp:37
-#, fuzzy
 msgid "View the logging output generated by KTorrent"
-msgstr "显示 KTorrent 生成的日志输出"
+msgstr "查看 KTorrent 生成的日志"
 
 #: plugins/logviewer/logviewer.cpp:47
 msgid "Suspend Output"
-msgstr ""
+msgstr "暂停输出"
 
 #: plugins/logviewer/logviewer.cpp:127
 msgid "<font color=\"#FF0000\">Logging output suspended</font>"
-msgstr ""
+msgstr "<font color=\"#FF0000\">日志输出已暂停</font>"
 
 #: plugins/logviewer/logviewer.cpp:129
 msgid "<font color=\"#00FF00\">Logging output resumed</font>"
-msgstr ""
+msgstr "<font color=\"#00FF00\">日志输出已恢复</font>"
 
 #. i18n: ectx: label, entry (torrenttracker), group (general)
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_torrenttracker)
 #: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:10
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:40
-#, fuzzy
 msgid "Grabs a tracker from the torrent file"
-msgstr "不能将 tracker 增加到私有种子。"
+msgstr "从种子文件获取 Tracker。"
 
 #. i18n: ectx: label, entry (customtracker), group (general)
 #: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:14
-#, fuzzy
 msgid "Toggles if a custom tracker is used"
-msgstr "Tracker 服务器"
+msgstr "切换是否使用自定义 Tracker 服务器"
 
 #. i18n: ectx: label, entry (tr), group (general)
 #: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:18
-#, fuzzy
 msgid "The default tracker"
-msgstr "使用默认浏览器"
+msgstr "使用默认 Tracker"
 
 #. i18n: ectx: label, entry (dn), group (general)
 #: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:22
-#, fuzzy
 msgid "Show dn"
-msgstr "显示种子"
+msgstr "显示下载"
 
 #. i18n: ectx: label, entry (popup), group (general)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_popup)
 #: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:26
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:90
-#, fuzzy
 msgid "Show popup"
-msgstr "显示视频"
+msgstr "显示弹出窗口"
 
 #. i18n: ectx: label, entry (onlypublic), group (general)
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_onlypublic)
 #: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:30
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:77
 msgid "Only enable on public torrents"
-msgstr ""
+msgstr "仅在公开种子中启用"
 
 #: plugins/magnetgenerator/magnetgeneratorplugin.cpp:49
-#, fuzzy
 msgid "Copy Magnet URI"
-msgstr "复制种子 URL"
+msgstr "复制磁力链网址"
 
 #: plugins/magnetgenerator/magnetgeneratorplugin.cpp:143
 msgid "Magnet link copied to clipboard"
-msgstr ""
+msgstr "磁力链已复制到剪贴板"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_x2)
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.cpp:35
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:32
 msgid "Magnet Generator"
-msgstr ""
+msgstr "磁力链生成器"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, MagnetGeneratorPrefWidget)
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:26
-#, fuzzy
 msgid "Magnet Generator Preferences"
-msgstr "搜索首选项"
+msgstr "磁力链生成器首选项"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_torrenttracker)
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:43
-#, fuzzy
 msgid "Add a tracker from the torrent file"
-msgstr "不能将 tracker 增加到私有种子。"
+msgstr "从种子文件添加 Tracker。"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_customtracker)
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:50
 msgid "Define what tracker to add"
-msgstr ""
+msgstr "定义使用那个 Tracker"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_customtracker)
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:53
-#, fuzzy
 msgid "Add a custom tracker URL"
-msgstr "添加 Tracker"
+msgstr "添加自定义 Tracker 地址"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_tr)
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:60
 msgid "The tracker URL that will be a part of the magnet link"
-msgstr ""
+msgstr "Tracker 的地址会成为 Magnet 链接的一部分"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_dn)
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:67
-#, fuzzy
 msgid "Add the torrent name in the URI"
-msgstr "将队列中的种子下移"
+msgstr "在地址中添加种子的名称"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_dn)
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:70
-#, fuzzy
 msgid "Add name"
-msgstr "添加一个项目"
+msgstr "添加名称"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_onlypublic)
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:80
-#, fuzzy
 msgid "Disable the menu item for private torrents"
-msgstr "显示种子中的全部网络种子"
+msgstr "对私有种子禁用菜单项"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_popup)
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:87
 msgid "Give feedback in form of a popup"
-msgstr ""
+msgstr "通过弹出窗口提供反馈"
 
 #. i18n: ectx: Menu (MediaPlayerMenu)
 #: plugins/mediaplayer/ktmediaplayerpluginui.rc:3
@@ -5778,20 +5575,20 @@ msgid "Playing: <b>%1</b>"
 msgstr "正在播放：<b>%1</b>"
 
 #: plugins/mediaplayer/mediacontroller.cpp:113
-#, fuzzy, kde-format
+#, kde-format
 msgid "<b>%2</b> - <b>%1</b> (Album: <b>%3</b>)"
-msgstr "标题：<b>%1</b><br/>艺人：<b>%2</b><br/>专辑：<b>%3</b>"
+msgstr "<b>%2</b> - <b>%1</b> (专辑：<b>%3</b>)"
 
 #: plugins/mediaplayer/mediacontroller.cpp:118
-#, fuzzy, kde-format
+#, kde-format
 msgid "<b>%2</b> - <b>%1</b>"
-msgstr "<b>%1</b><br/><br/>%2"
+msgstr "<b>%2</b> - <b>%1</b>"
 
 #: plugins/mediaplayer/mediacontroller.cpp:123
 #: plugins/mediaplayer/mediacontroller.cpp:128
-#, fuzzy, kde-format
+#, kde-format
 msgid "<b>%1</b>"
-msgstr "Url：<b>%1</b>"
+msgstr "<b>%1</b>"
 
 #: plugins/mediaplayer/mediamodel.cpp:90
 msgid "Available"
@@ -5799,7 +5596,7 @@ msgstr "可用"
 
 #: plugins/mediaplayer/mediamodel.cpp:90
 msgid "Pending"
-msgstr "待定中"
+msgstr "等待"
 
 #: plugins/mediaplayer/mediamodel.cpp:91
 #, kde-format
@@ -5843,14 +5640,13 @@ msgstr "显示视频"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:137
 #: plugins/mediaplayer/playlistwidget.cpp:52
-#, fuzzy
 msgid "Add Media"
-msgstr "添加种子"
+msgstr "添加媒体"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:141
 #: plugins/mediaplayer/playlistwidget.cpp:54
 msgid "Clear Playlist"
-msgstr ""
+msgstr "清空播放列表"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:149
 msgid "Toggle Fullscreen"
@@ -5862,9 +5658,8 @@ msgid "Movie player"
 msgstr "电影播放器"
 
 #: plugins/mediaplayer/mediaview.cpp:101
-#, fuzzy
 msgid "Show incomplete files"
-msgstr "跳过未完成文件"
+msgstr "显示未完成文件"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_refresh)
 #: plugins/mediaplayer/mediaview.cpp:106 plugins/syndication/feedwidget.ui:128
@@ -5872,14 +5667,12 @@ msgid "Refresh"
 msgstr "刷新"
 
 #: plugins/mediaplayer/mediaview.cpp:107
-#, fuzzy
 msgid "Refresh media files"
-msgstr "搜索引擎"
+msgstr "刷新媒体文件"
 
 #: plugins/mediaplayer/mediaview.cpp:111
-#, fuzzy
 msgid "Search media files"
-msgstr "搜索引擎"
+msgstr "搜索媒体文件"
 
 #: plugins/mediaplayer/playlist.cpp:97
 #: plugins/syndication/feedwidgetmodel.cpp:82
@@ -5888,64 +5681,58 @@ msgstr "标题"
 
 #: plugins/mediaplayer/playlist.cpp:98
 msgid "Artist"
-msgstr ""
+msgstr "艺人"
 
 #: plugins/mediaplayer/playlist.cpp:99
 msgid "Album"
-msgstr ""
+msgstr "专辑"
 
 #: plugins/mediaplayer/playlist.cpp:100
-#, fuzzy
 msgid "Length"
-msgstr "剩余："
+msgstr "长度"
 
 #: plugins/mediaplayer/playlist.cpp:101
-#, fuzzy
 msgid "Year"
-msgstr "清除"
+msgstr "年份"
 
 #: plugins/mediaplayer/playlistwidget.cpp:61
-#, fuzzy
 msgid "Random play order"
-msgstr "准备播放"
+msgstr "乱序播放顺序"
 
 #: plugins/mediaplayer/videowidget.cpp:202
-#, fuzzy
 msgid "KTorrent is playing a video."
-msgstr "KTorrent 没有运行！"
+msgstr "KTorrent 正在播放视频。"
 
 #. i18n: ectx: label, entry (openSilently), group (general)
 #: plugins/scanfolder/ktscanfolderplugin.kcfg:13
-#, fuzzy
 msgid "Whether to open torrent silently or not."
-msgstr "静默打开种子"
+msgstr "是否以静默方式打开种子"
 
 #. i18n: ectx: label, entry (actionDelete), group (general)
 #: plugins/scanfolder/ktscanfolderplugin.kcfg:18
 msgid "Delete action checked."
-msgstr ""
+msgstr "删除操作已选中。"
 
 #. i18n: ectx: label, entry (actionMove), group (general)
 #: plugins/scanfolder/ktscanfolderplugin.kcfg:23
 msgid "Move action checked."
-msgstr ""
+msgstr "移动操作已选中。"
 
 #. i18n: ectx: label, entry (recursive), group (general)
 #: plugins/scanfolder/ktscanfolderplugin.kcfg:28
 msgid "Scan directories recursively."
-msgstr ""
+msgstr "递归扫描文件夹。"
 
-#: plugins/scanfolder/scanfolder.cpp:69 plugins/scanfolder/scanthread.cpp:194
+#: plugins/scanfolder/scanfolder.cpp:77 plugins/scanfolder/scanthread.cpp:194
 #: plugins/scanfolder/torrentloadqueue.cpp:166
 #: plugins/scanfolder/torrentloadqueue.cpp:167
 #: plugins/scanfolder/torrentloadqueue.cpp:170
 msgid "loaded"
-msgstr "已装入"
+msgstr "已加载"
 
 #: plugins/scanfolder/scanfolderplugin.cpp:64
 #: plugins/scanfolder/scanfolderplugin.cpp:77
 #: plugins/scanfolder/scanfolderprefpage.cpp:37
-#, fuzzy
 msgctxt "plugin name"
 msgid "Scan Folder"
 msgstr "扫描文件夹"
@@ -5958,7 +5745,7 @@ msgstr "扫描种子的文件夹："
 #. i18n: ectx: property (toolTip), widget (KListWidget, m_folders)
 #: plugins/scanfolder/scanfolderprefpage.ui:26
 msgid "List of folders which will be scanned for torrents by this plugin."
-msgstr "此插件将扫描种子的文件夹列表。"
+msgstr "将被此插件扫描种子的文件夹列表。"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_add)
 #: plugins/scanfolder/scanfolderprefpage.ui:35
@@ -5973,12 +5760,12 @@ msgstr "添加文件夹"
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_remove)
 #: plugins/scanfolder/scanfolderprefpage.ui:45
 msgid "Remove a folder from the list."
-msgstr "从列表中删除文件夹。"
+msgstr "从列表中移除文件夹。"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
 #: plugins/scanfolder/scanfolderprefpage.ui:48
 msgid "Remove Folder"
-msgstr "删除文件夹"
+msgstr "移除文件夹"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openSilently)
 #: plugins/scanfolder/scanfolderprefpage.ui:78
@@ -5991,6 +5778,8 @@ msgid ""
 "Scan the folder recursively for torrents. <br/><br/>\n"
 "Note: This will not be done for any folder named loaded."
 msgstr ""
+"递归扫描文件夹以发现种子。<br/><br/>\n"
+"注意：该操作不会应用于任何命名为 \"已加载\" 的文件夹。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_recursive)
 #: plugins/scanfolder/scanfolderprefpage.ui:92
@@ -6003,11 +5792,13 @@ msgid ""
 "When a torrent file has been found and loaded, delete it.<br/><br/>\n"
 "Warning: you will permanently lose this file."
 msgstr ""
+"在种子文件被发现和加载时删除它。<br/><br/>\n"
+"警告：您将永久丢失该文件。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_actionDelete)
 #: plugins/scanfolder/scanfolderprefpage.ui:103
 msgid "Remove torrent file after loading"
-msgstr "装入后删除种子文件"
+msgstr "加载后移除种子文件"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_actionMove)
 #: plugins/scanfolder/scanfolderprefpage.ui:110
@@ -6015,13 +5806,13 @@ msgid ""
 "When a torrent file is loaded, move it to a subdirectory named loaded. If "
 "the folder does not exist, it will be created."
 msgstr ""
-"当一个种子文件被装入时，将它移动到名为 loaded 的子目录。如果文件夹不存在。则"
-"自动创建。"
+"当一个种子文件被加载时，将它移动到名为 \"已加载\" 的子目录。如果文件夹不存在"
+"则自动创建。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_actionMove)
 #: plugins/scanfolder/scanfolderprefpage.ui:113
 msgid "Move torrent file to loaded directory"
-msgstr "移动种子文件到 loaded 目录"
+msgstr "移动种子文件到 \"已加载\" 目录"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_addToGroup)
 #: plugins/scanfolder/scanfolderprefpage.ui:122
@@ -6043,9 +5834,8 @@ msgid "Scripting"
 msgstr "脚本"
 
 #: plugins/scripting/scriptingplugin.cpp:184
-#, fuzzy
 msgid "KTorrent Script Packages"
-msgstr "KTorrent 对等点黑名单"
+msgstr "KTorrent 脚本包"
 
 #: plugins/scripting/scriptingplugin.cpp:185
 #: plugins/scripting/scriptmanager.cpp:43
@@ -6053,11 +5843,10 @@ msgid "Scripts"
 msgstr "脚本"
 
 #: plugins/scripting/scriptingplugin.cpp:245
-#, fuzzy
 msgid ""
 "Removing these scripts will fully delete them from your disk. Are you sure "
 "you want to do this?"
-msgstr "您将失去已经下载的全部数据。您确定想要这么做吗？"
+msgstr "移除这些脚本将会把它们从您的磁盘彻底删除，您确定想要这么做吗？"
 
 #: plugins/scripting/scriptmanager.cpp:47
 msgid "Widget to start, stop and manage scripts"
@@ -6069,7 +5858,7 @@ msgstr "添加脚本"
 
 #: plugins/scripting/scriptmanager.cpp:94
 msgid "Remove Script"
-msgstr "删除脚本"
+msgstr "移除脚本"
 
 #: plugins/scripting/scriptmanager.cpp:98
 msgid "Run Script"
@@ -6095,27 +5884,26 @@ msgstr "脚本属性"
 
 #: plugins/scripting/scriptmodel.cpp:112
 msgid "Cannot open archive for reading."
-msgstr ""
+msgstr "无法打开压缩档以供读取。"
 
 #: plugins/scripting/scriptmodel.cpp:116
-#, fuzzy
 msgid "Invalid archive."
-msgstr "无效的 tracker URL"
+msgstr "无效的压缩档。"
 
 #: plugins/scripting/scriptmodel.cpp:143
-#, fuzzy, kde-format
+#, kde-format
 msgid "There is already a script package named %1 installed."
-msgstr "已存在名为 <b>%1</b> 的 tracker！"
+msgstr "已安装了名为 %1 的脚本包。"
 
 #: plugins/scripting/scriptmodel.cpp:149
 msgid ""
 "Failed to load script from archive. There is something wrong with the "
 "desktop file."
-msgstr ""
+msgstr "无法从压缩档加载脚本，桌面文件有问题。"
 
 #: plugins/scripting/scriptmodel.cpp:154
 msgid "No script found in archive."
-msgstr ""
+msgstr "未在压缩档中找到脚本。"
 
 #: plugins/scripting/scriptmodel.cpp:179 plugins/syndication/feedlist.cpp:185
 #, kde-format
@@ -6128,6 +5916,8 @@ msgid ""
 "Please make sure the right interpreter is installed.<br/><br/><b>Hint:</b> "
 "All standard ktorrent scripts require krosspython"
 msgstr ""
+"未找到该脚本的解释器，因此未能执行它。 请确保安装了正确的解释器。<br/><br/"
+"><b>提示：</b>所有标准 ktorrent 脚本都需要 krosspython"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: plugins/scripting/scriptproperties.ui:51
@@ -6155,14 +5945,12 @@ msgid "Website:"
 msgstr "网站："
 
 #: plugins/scripting/scripts/auto_remove/auto_remove.py:53
-#, fuzzy
 msgid "Auto Remove Settings"
-msgstr "自动还原设置"
+msgstr "自动移除设置"
 
 #: plugins/scripting/scripts/auto_remove/auto_remove.py:55
-#, fuzzy
 msgid "Auto Remove"
-msgstr "删除"
+msgstr "自动移除"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AutoRemoveConfig)
 #. i18n: ectx: property (windowTitle), widget (QWidget, AutoResumeConfig)
@@ -6174,32 +5962,27 @@ msgstr "自动还原设置"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/scripting/scripts/auto_remove/auto_remove.ui:19
-#, fuzzy
 msgid "Auto remove a torrent when:"
-msgstr "自动还原"
+msgstr "自动移除种子的条件："
 
 #. i18n: ectx: property (text), widget (QCheckBox, finish_downloading)
 #: plugins/scripting/scripts/auto_remove/auto_remove.ui:26
-#, fuzzy
 msgid "The torrent finishes downloading"
-msgstr "用于种子文件下载完成后迁移数据的目录。"
+msgstr "种子下载完成。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, finish_seeding)
 #: plugins/scripting/scripts/auto_remove/auto_remove.ui:33
-#, fuzzy
 msgid "The torrent finishes seeding"
-msgstr "用于种子文件下载完成后迁移数据的目录。"
+msgstr "做种完成"
 
 #: plugins/scripting/scripts/auto_resume/auto_resume.py:55
-#, fuzzy
 msgid "Auto Resume"
-msgstr "自动还原设置"
+msgstr "自动恢复"
 
 #. i18n: ectx: property (text), widget (QCheckBox, auto_resume)
 #: plugins/scripting/scripts/auto_resume/auto_resume.ui:19
-#, fuzzy
 msgid "Auto resume after:"
-msgstr "自动还原"
+msgstr "自动恢复的时间："
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, hours)
 #: plugins/scripting/scripts/auto_resume/auto_resume.ui:41
@@ -6219,19 +6002,17 @@ msgid " seconds"
 msgstr " 秒"
 
 #: plugins/scripting/scripts/email_notifications/email_notifications.py:105
-#, fuzzy
 msgid "E-Mail Script Settings"
-msgstr "电子邮件配置"
+msgstr "电子邮件脚本设置"
 
 #: plugins/scripting/scripts/email_notifications/email_notifications.py:107
-#, fuzzy
 msgid "E-Mail Settings"
-msgstr "电子邮件配置"
+msgstr "电子邮件设置"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, EMailConfigWidget)
 #: plugins/scripting/scripts/email_notifications/emailconfig.ui:13
 msgid "EMail Settings"
-msgstr "电子邮件配置"
+msgstr "电子邮件设置"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: plugins/scripting/scripts/email_notifications/emailconfig.ui:19
@@ -6270,27 +6051,24 @@ msgstr "添加密送："
 
 #. i18n: ectx: label, entry (searchEngine), group (general)
 #: plugins/search/ktsearchplugin.kcfg:10
-#, fuzzy
 msgid "Current search engine"
-msgstr "当前调度："
+msgstr "当前搜索引擎"
 
-#. i18n: ectx: label, entry (useDefaultBrowser), group (general)
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_useDefaultBrowser)
+#. i18n: ectx: label, entry (useDefaultBrowser), group (general)
 #: plugins/search/ktsearchplugin.kcfg:15 plugins/search/searchpref.ui:92
 msgid "Use default browser"
 msgstr "使用默认浏览器"
 
 #. i18n: ectx: label, entry (useCustomBrowser), group (general)
 #: plugins/search/ktsearchplugin.kcfg:19
-#, fuzzy
 msgid "Use custom browser"
-msgstr "使用自定义浏览器。"
+msgstr "使用自定义浏览器"
 
 #. i18n: ectx: label, entry (customBrowser), group (general)
 #: plugins/search/ktsearchplugin.kcfg:23
-#, fuzzy
 msgid "Custom browser executable path"
-msgstr "自定义浏览器路径："
+msgstr "自定义浏览器执行文件路径"
 
 #. i18n: ectx: ToolBar (SearchToolBar)
 #: plugins/search/ktsearchpluginui.rc:3
@@ -6299,7 +6077,6 @@ msgstr "搜索工具栏"
 
 #: plugins/search/searchactivity.cpp:47 plugins/search/searchplugin.cpp:65
 #: plugins/search/searchplugin.cpp:83 plugins/search/searchprefpage.cpp:58
-#, fuzzy
 msgctxt "plugin name"
 msgid "Search"
 msgstr "搜索"
@@ -6315,9 +6092,9 @@ msgid "Failed to parse %1"
 msgstr "解析 %1 失败"
 
 #: plugins/search/searchenginelist.cpp:365
-#, fuzzy, kde-format
+#, kde-format
 msgid "URL: <b>%1</b>"
-msgstr "Url：<b>%1</b>"
+msgstr "网址：<b>%1</b>"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, SearchPref)
 #. i18n: ectx: property (windowTitle), widget (QWidget, WebInterfacePrefWidget)
@@ -6338,25 +6115,23 @@ msgstr "清除搜索历史"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_reset_default_action)
 #: plugins/search/searchpref.ui:44
-#, fuzzy
 msgid "Reset the default action taken when a torrent is downloaded."
-msgstr "用于种子文件下载完成后迁移数据的目录。"
+msgstr "重置当种子下载完成后的默认操作。"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_reset_default_action)
 #: plugins/search/searchpref.ui:47
-#, fuzzy
 msgid "Reset Default Torrent Action"
-msgstr "默认保存位置："
+msgstr "重置默认种子操作"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_restorePreviousSession)
 #: plugins/search/searchpref.ui:69
 msgid "Restore all the active searches of the last session"
-msgstr ""
+msgstr "恢复上次会话的所有活动搜索"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_restorePreviousSession)
 #: plugins/search/searchpref.ui:72
 msgid "Restore previous searches"
-msgstr ""
+msgstr "恢复上次的搜索"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openInExternal)
 #: plugins/search/searchpref.ui:79
@@ -6401,7 +6176,7 @@ msgstr "添加新搜索引擎。"
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_remove)
 #: plugins/search/searchpref.ui:167
 msgid "Remove all selected search engines."
-msgstr "删除全部选中的搜索引擎。"
+msgstr "移除全部选定的搜索引擎。"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
 #: plugins/search/searchpref.ui:170
@@ -6411,7 +6186,7 @@ msgstr "删除(&R)"
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_remove_all)
 #: plugins/search/searchpref.ui:177
 msgid "Remove all search engines."
-msgstr "删除全部搜索引擎。"
+msgstr "移除全部搜索引擎。"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_remove_all)
 #: plugins/search/searchpref.ui:180
@@ -6433,9 +6208,8 @@ msgid "Add a Search Engine"
 msgstr "添加搜索引擎"
 
 #: plugins/search/searchprefpage.cpp:106
-#, fuzzy
 msgid "Enter the hostname of the search engine (for example www.google.com):"
-msgstr "输入搜索引擎的主机名(例如 www.google.com)："
+msgstr "输入搜索引擎的主机名 (例如 www.google.com)："
 
 #: plugins/search/searchprefpage.cpp:144
 #, kde-format
@@ -6444,11 +6218,13 @@ msgid ""
 "manually. The URL should contain {searchTerms}, ktorrent will replace this "
 "by the thing you are searching for."
 msgstr ""
+"%1 并不支持开放搜索，需要您手动输入搜索引擎的网址。 网址需要包含 "
+"{searchTerms} 标记，Ktorrent 会将其替换为您要搜索的内容。"
 
 #: plugins/search/searchprefpage.cpp:151
-#, fuzzy, kde-format
+#, kde-format
 msgid "The URL %1 does not contain {searchTerms}."
-msgstr "URL %s 不包含 {searchTerms}！"
+msgstr "地址 %1 不包含 {searchTerms}。"
 
 #: plugins/search/searchtoolbar.cpp:66
 msgid "Search Text"
@@ -6471,10 +6247,9 @@ msgid " Engine:"
 msgstr " 引擎："
 
 #: plugins/search/searchwidget.cpp:205
-#, fuzzy, kde-format
-#| msgid "<b>Downloading</b>"
+#, kde-format
 msgid "Downloading:<br/><b>%1</b>"
-msgstr "<b>下载中</b>"
+msgstr "正在下载：<br/><b>%1</b>"
 
 #: plugins/search/searchwidget.cpp:245
 msgid "Do you want to download or save the torrent?"
@@ -6484,9 +6259,9 @@ msgstr "您是想要下载还是保存种子？"
 msgid "Download Torrent"
 msgstr "下载种子"
 
+#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (title), widget (QGroupBox, DlSpdGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (KPushButton, m_download)
 #: plugins/search/searchwidget.cpp:247 plugins/stats/DisplaySettings.ui:37
 #: plugins/stats/Settings.ui:114 plugins/stats/Spd.ui:19
@@ -6496,99 +6271,93 @@ msgstr "下载"
 
 #: plugins/search/webview.cpp:174
 msgid "Home"
-msgstr ""
+msgstr "主页"
 
 #: plugins/search/webview.cpp:176
 msgctxt "KDE 4 tag line, see http://kde.org/img/kde40.png"
 msgid "Be free."
-msgstr ""
+msgstr "畅游世界。"
 
 #: plugins/search/webview.cpp:177
-#, fuzzy
 msgid "Search the web for torrents."
-msgstr "扫描种子的文件夹："
+msgstr "从网络搜索种子。"
 
 #: plugins/search/webview.cpp:205
 #, kde-format
 msgid "Save %1 to"
-msgstr ""
+msgstr "保存 %1 到"
 
 #: plugins/search/webview.cpp:225
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cannot open <b>%1</b>: %2"
-msgstr "无法打开 %1：%2"
+msgstr "无法打开 <b>%1</b>：%2"
 
 #. i18n: ectx: Menu (shutdown)
 #: plugins/shutdown/ktshutdownpluginui.rc:5
 #: plugins/shutdown/shutdowndlg.cpp:37 plugins/shutdown/shutdownplugin.cpp:175
 #: plugins/shutdown/shutdownruleset.cpp:272
 msgid "Shutdown"
-msgstr ""
+msgstr "关机"
 
 #. i18n: ectx: ToolBar (ShutdownToolBar)
 #: plugins/shutdown/ktshutdownpluginui.rc:11
-#, fuzzy
 msgid "Shutdown Toolbar"
-msgstr "下载工具栏"
+msgstr "关闭工具栏"
 
 #: plugins/shutdown/shutdowndlg.cpp:34
-#, fuzzy
 msgctxt "@title:window"
 msgid "Configure Shutdown"
-msgstr "配置栏"
+msgstr "配置关机"
 
 #: plugins/shutdown/shutdowndlg.cpp:38 plugins/shutdown/shutdownplugin.cpp:179
 #: plugins/shutdown/shutdownruleset.cpp:275
-#, fuzzy
 msgid "Lock"
-msgstr "Lucke"
+msgstr "锁定"
 
 #: plugins/shutdown/shutdowndlg.cpp:42 plugins/shutdown/shutdowndlg.cpp:52
 #: plugins/shutdown/shutdownplugin.cpp:183
 #: plugins/shutdown/shutdownruleset.cpp:278
 msgid "Standby"
-msgstr ""
+msgstr "待机"
 
 #: plugins/shutdown/shutdowndlg.cpp:45 plugins/shutdown/shutdowndlg.cpp:55
 #: plugins/shutdown/shutdownplugin.cpp:187
 #: plugins/shutdown/shutdownruleset.cpp:281
 msgid "Sleep (suspend to RAM)"
-msgstr ""
+msgstr "睡眠(挂起到内存)"
 
 #: plugins/shutdown/shutdowndlg.cpp:48 plugins/shutdown/shutdowndlg.cpp:58
 #: plugins/shutdown/shutdownplugin.cpp:191
 #: plugins/shutdown/shutdownruleset.cpp:284
 msgid "Hibernate (suspend to disk)"
-msgstr ""
+msgstr "休眠(挂起到磁盘)"
 
 #: plugins/shutdown/shutdowndlg.cpp:60
-#, fuzzy
 msgid "When all torrents finish downloading"
-msgstr "用于种子文件下载完成后迁移数据的目录。"
+msgstr "当所有种子下载完成时"
 
 #: plugins/shutdown/shutdowndlg.cpp:61
 msgid "When all torrents finish seeding"
-msgstr ""
+msgstr "当所有任务完成做种时"
 
 #: plugins/shutdown/shutdowndlg.cpp:62
 msgid "When the events below happen"
-msgstr ""
+msgstr "当如下事件发生时"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ShutdownDlg)
 #: plugins/shutdown/shutdowndlg.ui:14
-#, fuzzy
 msgid "Shutdown Settings"
-msgstr "自动还原设置"
+msgstr "关机设置"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/shutdown/shutdowndlg.ui:25
 msgid "Action to execute:"
-msgstr ""
+msgstr "要执行的操作："
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: plugins/shutdown/shutdowndlg.ui:35
 msgid "Execute action when:"
-msgstr ""
+msgstr "执行操作的时间："
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_all_rules_must_be_hit)
 #: plugins/shutdown/shutdowndlg.ui:50
@@ -6596,74 +6365,70 @@ msgid ""
 "When enabled, execute the action when all events have happened. When not "
 "enabled, execute when any of the above events have happened."
 msgstr ""
+"启用后，将在全部事件都发生时执行操作。如果未启用，将在任意上述事件发生时执"
+"行。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_all_rules_must_be_hit)
 #: plugins/shutdown/shutdowndlg.ui:53
 msgid "All events must have happened"
-msgstr ""
+msgstr "全部事件必须都发生"
 
 #: plugins/shutdown/shutdownplugin.cpp:50
 msgid "Shutdown Enabled"
-msgstr ""
+msgstr "启用关机"
 
 #: plugins/shutdown/shutdownplugin.cpp:54
-#, fuzzy
 msgid "Configure Shutdown"
-msgstr "配置栏"
+msgstr "配置关机"
 
 #: plugins/shutdown/shutdownruleset.cpp:263
-#, fuzzy
 msgid "Automatic shutdown not active"
-msgstr "自动更新"
+msgstr "自动关机未激活"
 
 #: plugins/shutdown/shutdownruleset.cpp:290
 msgid " when all of the following events have occurred:<br/><br/> "
-msgstr ""
+msgstr " 当以下事件全部发生时：<br/><br/>"
 
 #: plugins/shutdown/shutdownruleset.cpp:292
 msgid " when one of the following events occur:<br/><br/> "
-msgstr ""
+msgstr " 当以下事件之一发生时：<br/><br/>"
 
 #: plugins/shutdown/shutdownruleset.cpp:374
-#, fuzzy
 msgid "<b>All torrents</b> finish downloading"
-msgstr "用于种子文件下载完成后迁移数据的目录。"
+msgstr "<b>全部种子</b>完成下载"
 
 #: plugins/shutdown/shutdownruleset.cpp:376
-#, fuzzy
 msgid "<b>All torrents</b> finish seeding"
-msgstr "用于种子文件下载完成后迁移数据的目录。"
+msgstr "<b>全部种子</b>已出种"
 
 #: plugins/shutdown/shutdownruleset.cpp:378
-#, fuzzy, kde-format
+#, kde-format
 msgid "<b>%1</b> finishes downloading"
-msgstr "用于种子文件下载完成后迁移数据的目录。"
+msgstr "<b>%1</b> 下载完成"
 
 #: plugins/shutdown/shutdownruleset.cpp:380
-#, fuzzy, kde-format
+#, kde-format
 msgid "<b>%1</b> finishes seeding"
-msgstr "用于种子文件下载完成后迁移数据的目录。"
+msgstr "<b>%1</b> 已出种"
 
 #: plugins/shutdown/shutdowntorrentmodel.cpp:92
 #: plugins/shutdown/shutdowntorrentmodel.cpp:235
-#, fuzzy
 msgid "Downloading finishes"
-msgstr "下载中"
+msgstr "下载完成"
 
 #: plugins/shutdown/shutdowntorrentmodel.cpp:94
 #: plugins/shutdown/shutdowntorrentmodel.cpp:236
-#, fuzzy
 msgid "Seeding finishes"
-msgstr "搜索已完成"
+msgstr "做种完成"
 
 #: plugins/shutdown/shutdowntorrentmodel.cpp:154
 msgid "Event"
-msgstr ""
+msgstr "事件"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ConnsWgt)
 #. i18n: ectx: property (title), widget (QGroupBox, ConnsGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_11)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#. i18n: ectx: property (text), widget (QLabel, label_11)
 #: plugins/stats/Conns.ui:13 plugins/stats/Conns.ui:19
 #: plugins/stats/DisplaySettings.ui:505 plugins/stats/Settings.ui:140
 msgid "Connections"
@@ -6678,38 +6443,35 @@ msgstr "已连接的吸血虫"
 #: plugins/stats/ConnsTabPage.cc:65 plugins/stats/ConnsTabPage.cc:118
 #: plugins/stats/DisplaySettings.ui:548
 msgid "Leechers in swarms"
-msgstr "群集中的吸血虫"
+msgstr "种源池中的吸血虫"
 
 #. i18n: ectx: property (text), widget (QLabel, label_25)
 #: plugins/stats/ConnsTabPage.cc:69 plugins/stats/DisplaySettings.ui:583
 msgid "Seeds connected"
-msgstr "已连接种子"
+msgstr "已连接的健康种源"
 
 #: plugins/stats/ConnsTabPage.cc:74 plugins/stats/ConnsTabPage.cc:132
 #: plugins/stats/ConnsTabPage.cc:136
-#, fuzzy
 msgid "Seeds in swarms"
-msgstr "群集中的种子"
+msgstr "种源池中的健康种源"
 
 #. i18n: ectx: property (text), widget (QLabel, label_27)
 #: plugins/stats/ConnsTabPage.cc:78 plugins/stats/DisplaySettings.ui:653
 msgid "Average leechers connected per torrent"
-msgstr "每个种子平均连接的吸血虫数量"
+msgstr "每个种子的平均已连接吸血虫数量"
 
 #. i18n: ectx: property (text), widget (QLabel, label_28)
 #: plugins/stats/ConnsTabPage.cc:81 plugins/stats/DisplaySettings.ui:688
 msgid "Average seeds connected per torrent"
-msgstr "每个任务平均连接的种子数"
+msgstr "每个种子的平均已连接健康种源数量"
 
 #: plugins/stats/ConnsTabPage.cc:84
-#, fuzzy
 msgid "Average leechers connected per running torrent"
-msgstr "每个种子平均连接的吸血虫数量"
+msgstr "每个运行中种子的平均已连接吸血虫数量"
 
 #: plugins/stats/ConnsTabPage.cc:87
-#, fuzzy
 msgid "Average seeds connected per running torrent"
-msgstr "正在运行的任务平均连接的种子数量"
+msgstr "每个运行中种子的平均已连接健康种源数量"
 
 #. i18n: ectx: property (text), widget (QLabel, label_31)
 #: plugins/stats/ConnsTabPage.cc:93 plugins/stats/DisplaySettings.ui:806
@@ -6723,8 +6485,6 @@ msgstr "任务"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: plugins/stats/DisplaySettings.ui:27
-#, fuzzy
-#| msgid "Download"
 msgctxt "Noun"
 msgid "Download"
 msgstr "下载"
@@ -6744,17 +6504,17 @@ msgstr "限制"
 #. i18n: ectx: property (text), widget (QLabel, label_14)
 #: plugins/stats/DisplaySettings.ui:173 plugins/stats/SpdTabPage.cc:76
 msgid "Average from leechers"
-msgstr "来自吸血虫的平均值"
+msgstr "自吸血虫下载的平均值"
 
 #. i18n: ectx: property (text), widget (QLabel, label_19)
 #: plugins/stats/DisplaySettings.ui:208 plugins/stats/SpdTabPage.cc:77
 msgid "Average to leechers"
-msgstr "到吸血虫的平均值"
+msgstr "向吸血虫上传的平均值"
 
 #. i18n: ectx: property (text), widget (QLabel, label_20)
 #: plugins/stats/DisplaySettings.ui:243 plugins/stats/SpdTabPage.cc:78
 msgid "Average from seeds"
-msgstr "来自种子的平均值"
+msgstr "自健康种源下载的平均值"
 
 #. i18n: ectx: property (text), widget (QLabel, label_21)
 #: plugins/stats/DisplaySettings.ui:278 plugins/stats/SpdTabPage.cc:79
@@ -6764,12 +6524,12 @@ msgstr "来自吸血虫"
 #. i18n: ectx: property (text), widget (QLabel, label_22)
 #: plugins/stats/DisplaySettings.ui:313 plugins/stats/SpdTabPage.cc:80
 msgid "From seeds"
-msgstr "来自种子"
+msgstr "来自健康种源"
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#. i18n: ectx: property (title), widget (QGroupBox, UlSpdGbw)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #. i18n: ectx: property (text), widget (QLabel, label_15)
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#. i18n: ectx: property (title), widget (QGroupBox, UlSpdGbw)
 #: plugins/stats/DisplaySettings.ui:364 plugins/stats/DisplaySettings.ui:374
 #: plugins/stats/Settings.ui:192 plugins/stats/Spd.ui:43
 msgid "Upload"
@@ -6783,12 +6543,12 @@ msgstr "群集中的种子"
 #. i18n: ectx: property (text), widget (QLabel, label_29)
 #: plugins/stats/DisplaySettings.ui:723
 msgid "Avg. leechers connected per running torr."
-msgstr "正在运行的种子平均连接的吸血虫数量。"
+msgstr "每个运行中种子的平均已连接吸血虫。"
 
 #. i18n: ectx: property (text), widget (QLabel, label_30)
 #: plugins/stats/DisplaySettings.ui:758
 msgid "Avg. seeds connected per running torrent"
-msgstr "正在运行的任务平均连接的种子数量"
+msgstr "每个运行中种子的平均已连接健康种源"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: plugins/stats/DisplaySettings.ui:904
@@ -6824,17 +6584,15 @@ msgstr "KDE"
 #. i18n: ectx: property (text), widget (QLabel, label_33)
 #: plugins/stats/DisplaySettings.ui:953
 msgid "(plugin reload is needed after change)"
-msgstr "(插件更改后需要被重新装入)"
+msgstr "(更改后需要重新装入插件)"
 
 #: plugins/stats/drawer/ChartDrawer.cc:26
-#, fuzzy
 msgid "KiB/s"
 msgstr " KiB/秒"
 
 #: plugins/stats/drawer/ChartDrawerData.cc:25
-#, fuzzy
 msgid "Unknown"
-msgstr "未知客户端"
+msgstr "未知"
 
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:351
 #: plugins/stats/drawer/PlainChartDrawer.cc:556
@@ -6842,6 +6600,8 @@ msgid ""
 "<h1 align='center' style='font-size: large; text-decoration: "
 "underline'>Legend:</h1><ul type='square'>"
 msgstr ""
+"<h1 align='center' style='font-size: large; text-decoration: underline'>图"
+"例：</h1><ul type='square'>"
 
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:355
 #: plugins/stats/drawer/PlainChartDrawer.cc:560
@@ -6850,209 +6610,200 @@ msgid ""
 "<li><span style='background-color: %1; font-size: 14px; font-family: "
 "monospace'>&nbsp;&nbsp;</span>&nbsp;—&nbsp;%2</li>"
 msgstr ""
+"<li><span style='background-color: %1; font-size: 14px; font-family: "
+"monospace'>&nbsp;&nbsp;</span>&nbsp;—&nbsp;%2</li>"
 
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:396
 #: plugins/stats/drawer/PlainChartDrawer.cc:337
 msgid "Save as image…"
-msgstr ""
+msgstr "保存为图片..."
 
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:400
 #: plugins/stats/drawer/PlainChartDrawer.cc:341
-#, fuzzy
 msgid "Rescale"
-msgstr "重新扫描"
+msgstr "重新调整"
 
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:404
 #: plugins/stats/drawer/PlainChartDrawer.cc:345
-#, fuzzy
 msgid "Reset"
-msgstr "测试"
+msgstr "重置"
 
 #: plugins/stats/drawer/KPlotWgtDrawer.cc:416
 #: plugins/stats/drawer/PlainChartDrawer.cc:357
 msgid "Select path to save image…"
-msgstr ""
+msgstr "选择保存图片的路径..."
 
 #. i18n: ectx: label, entry (UpdateEveryGuiUpdates), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:10
-#, fuzzy
 msgid "Update charts every n gui updates"
 msgstr "图表更新间隔"
 
 #. i18n: ectx: label, entry (DataGatherIval), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:15
 msgid "Interval in milliseconds between data gathering"
-msgstr ""
+msgstr "获取数据的时间间隔(毫秒)"
 
 #. i18n: ectx: label, entry (MaxMode), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:20
 msgid "Method of determining maximum value of the scale"
-msgstr ""
+msgstr "确定坐标轴最大值的方法"
 
 #. i18n: ectx: label, entry (ShowSeedsInSwarms), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:25
-#, fuzzy
 msgid "Whether to show seeds in swarms"
-msgstr "显示群集中的种子"
+msgstr "是否显示种源池中的健康种源"
 
 #. i18n: ectx: label, entry (ShowLeechersInSwarms), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:30
-#, fuzzy
 msgid "Whether to show leachers in swarms"
-msgstr "显示群集中的吸血虫"
+msgstr "是否显示种源池中的吸血虫"
 
 #. i18n: ectx: label, entry (DlSpdSamples), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:35
 msgid "Samples to show on download chart"
-msgstr ""
+msgstr "显示在下载图表中的样本"
 
 #. i18n: ectx: label, entry (PeersSpdSamples), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:40
 msgid "Samples to show on peers chart"
-msgstr ""
+msgstr "显示在对等点图表中的样本"
 
 #. i18n: ectx: label, entry (UlSpdSamples), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:45
 msgid "Samples to show on upload chart"
-msgstr ""
+msgstr "显示在上传图表中的样本"
 
 #. i18n: ectx: label, entry (ConnsSamples), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:50
 msgid "Samples to show on connections chart"
-msgstr ""
+msgstr "显示在连接图表中的样本"
 
 #. i18n: ectx: label, entry (DhtSpdSamples), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:55
 msgid "Samples to show on DHT chart"
-msgstr ""
+msgstr "显示在 DHT 图表中的样本"
 
 #. i18n: ectx: label, entry (DlSpdColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:60
-#, fuzzy
 msgid "Color of the speed on dl chart"
-msgstr "调度背景的颜色。"
+msgstr "下载图表中速度的颜色"
 
 #. i18n: ectx: label, entry (DlAvgColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:65
 msgid "Color of the average on dl chart"
-msgstr ""
+msgstr "下载图表中均值的颜色"
 
 #. i18n: ectx: label, entry (DlLimitColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:70
 msgid "Color of the limit on dl chart"
-msgstr ""
+msgstr "下载图表中限制的颜色"
 
 #. i18n: ectx: label, entry (PrAvgFromLColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:75
 msgid "Color of the avg from leecher on peers chart"
-msgstr ""
+msgstr "对等点图表中从吸血虫下载的平均速度的颜色"
 
 #. i18n: ectx: label, entry (PrAvgToLColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:80
 msgid "Color of the avg to leecher on peers chart"
-msgstr ""
+msgstr "对等点图表中向吸血虫上传的平均速度的颜色"
 
 #. i18n: ectx: label, entry (PrAvgFromSColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:85
 msgid "Color of the avg from seeds on peers chart"
-msgstr ""
+msgstr "对等点图表中从健康种源下载的平均速度的颜色"
 
 #. i18n: ectx: label, entry (PrFromLColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:90
 msgid "Color of the leechers on peers chart"
-msgstr ""
+msgstr "对等点图表中吸血虫的颜色"
 
 #. i18n: ectx: label, entry (PrFromSColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:95
-#, fuzzy
 msgid "Color of the seeds on peers chart"
-msgstr "调度背景的颜色。"
+msgstr "对等点图表中健康种源的颜色"
 
 #. i18n: ectx: label, entry (UlSpdColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:100
-#, fuzzy
 msgid "Color of the speed on upload chart"
-msgstr "调度背景的颜色。"
+msgstr "上传图表中速度的颜色"
 
 #. i18n: ectx: label, entry (UlAvgColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:105
 msgid "Color of the avg on upload chart"
-msgstr ""
+msgstr "上传图表中均值的颜色"
 
 #. i18n: ectx: label, entry (UlLimitColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:110
 msgid "Color of the limit on upload chart"
-msgstr ""
+msgstr "上传图表中限制的颜色"
 
 #. i18n: ectx: label, entry (CnLConnColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:115
 msgid "Color of the connected leechers on connections chart"
-msgstr ""
+msgstr "连接图表上的已连接吸血虫颜色"
 
 #. i18n: ectx: label, entry (CnLSwarmsColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:120
 msgid "Color of the leechers in swarms on connections chart"
-msgstr ""
+msgstr "连接图表上的种源池中吸血虫的颜色"
 
 #. i18n: ectx: label, entry (CnSConnColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:125
 msgid "Color of the connected seeds on connections chart"
-msgstr ""
+msgstr "连接图表上的已连接健康种源的颜色"
 
 #. i18n: ectx: label, entry (CnSSwarmsColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:130
 msgid "Color of the seeds in swarms on connections chart"
-msgstr ""
+msgstr "连接图表上的种源池中健康种源的颜色"
 
 #. i18n: ectx: label, entry (CnAvgLConnPerTorrColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:135
 msgid "Color of the avg connected leecher per torrent on connections chart"
-msgstr ""
+msgstr "连接图表上每个种子的平均已连接吸血虫数的颜色"
 
 #. i18n: ectx: label, entry (CnAvgSConnPerTorrColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:140
 msgid "Color of the avg connected seeds per torrent on connections chart"
-msgstr ""
+msgstr "连接图表上每个种子的平均已连接健康种源数的颜色"
 
 #. i18n: ectx: label, entry (CnAvgLConnPerRunTorrColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:145
 msgid ""
 "Color of the avg connected leechers per running torrent on connections chart"
-msgstr ""
+msgstr "连接图表上每个运行中种子的平均已连接吸血虫的颜色"
 
 #. i18n: ectx: label, entry (CnAvgSConnPerRunTorrColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:150
 msgid ""
 "Color of the avg connected seeds per running torrent on connections chart"
-msgstr ""
+msgstr "连接图表上每个运行中种子的平均已连接健康种源的颜色"
 
 #. i18n: ectx: label, entry (DhtNodesColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:155
-#, fuzzy
 msgid "Color of the nodes on DHT chart"
-msgstr "调度线条的颜色。"
+msgstr "DHT 图表中节点的颜色。"
 
 #. i18n: ectx: label, entry (DhtTasksColor), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:160
 msgid "Color of the tasks on DHT chart"
-msgstr ""
+msgstr "DHT 图表上的任务颜色"
 
 #. i18n: ectx: label, entry (AntiAliasing), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:165
-#, fuzzy
 msgid "Use anti aliasing on charts?"
-msgstr "使用抗锯齿"
+msgstr "图表中使用抗锯齿？"
 
 #. i18n: ectx: label, entry (DrawBgdGrid), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:170
-#, fuzzy
 msgid "Draw ugly grey background grid?"
-msgstr "绘制背景网格"
+msgstr "绘制丑陋的灰色背景网格？"
 
 #. i18n: ectx: label, entry (WidgetType), group (general)
 #: plugins/stats/ktstatsplugin.kcfg:175
 msgid "Type of widget used for chart drawing"
-msgstr ""
+msgstr "用来绘制图表的部件类型"
 
 #. i18n: ectx: property (title), widget (QGroupBox, UpdateGbw)
 #: plugins/stats/Settings.ui:19
@@ -7067,7 +6818,7 @@ msgstr "图表更新间隔"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: plugins/stats/Settings.ui:50
 msgid "GUI updates"
-msgstr "图形界面更新"
+msgstr "图形界面更新间隔"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: plugins/stats/Settings.ui:69
@@ -7107,89 +6858,80 @@ msgstr "精确的"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: plugins/stats/Settings.ui:290
 msgid "Peers connections"
-msgstr "对等连接"
+msgstr "对等点连接"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowSeedsInSwarms)
 #: plugins/stats/Settings.ui:296
 msgid "Show seeds in swarms"
-msgstr "显示群集中的种子"
+msgstr "显示种源池中的健康种源"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowLeechersInSwarms)
 #: plugins/stats/Settings.ui:303
 msgid "Show leechers in swarms"
-msgstr "显示群集中的吸血虫"
+msgstr "显示种源池中的吸血虫"
 
 #: plugins/stats/SettingsPage.cc:27
-#, fuzzy
 msgid "Statistics"
-msgstr "状态统计插件"
+msgstr "统计"
 
 #: plugins/stats/SettingsPage.cc:46
-#, fuzzy, kde-format
+#, kde-format
 msgid "(= %1 ms)"
-msgstr "(= %1/秒)"
+msgstr "(= %1  毫秒)"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpdWgt)
 #: plugins/stats/Spd.ui:13
-#, fuzzy
 msgctxt "@title:window"
 msgid "Speed"
 msgstr "速度"
 
 #: plugins/stats/SpdTabPage.cc:73 plugins/stats/SpdTabPage.cc:74
-#, fuzzy
 msgid "Speed limit"
 msgstr "速度限制"
 
 #: plugins/stats/StatsPlugin.cc:52
-#, fuzzy
 msgid "Speed charts"
-msgstr "速度限制"
+msgstr "速度图表"
 
 #: plugins/stats/StatsPlugin.cc:52
-#, fuzzy
 msgid "Displays charts about download and upload speed"
-msgstr "下载和上传请求数"
+msgstr "显示下载和上传速度的图表"
 
 #: plugins/stats/StatsPlugin.cc:53
-#, fuzzy
 msgid "Connections charts"
-msgstr "连接"
+msgstr "连接图表"
 
 #: plugins/stats/StatsPlugin.cc:53
 msgid "Displays charts about connections"
-msgstr ""
+msgstr "显示连接状况的图表"
 
 #: plugins/syndication/feed.cpp:478
 msgid "Aborted"
-msgstr ""
+msgstr "已中止"
 
 #: plugins/syndication/feed.cpp:480
-#, fuzzy
 msgid "Timeout when downloading feed"
-msgstr "下载完成后检查数据"
+msgstr "下载种子时的超时"
 
 #: plugins/syndication/feed.cpp:482
-#, fuzzy
 msgid "Unknown hostname"
-msgstr "未知客户端"
+msgstr "未知主机名"
 
 #: plugins/syndication/feed.cpp:484
 msgid "File not found"
-msgstr ""
+msgstr "未找到文件"
 
 #: plugins/syndication/feed.cpp:486
 msgid "Unknown retriever error"
-msgstr ""
+msgstr "未知的获取器错误"
 
 #: plugins/syndication/feed.cpp:490
-#, fuzzy
 msgid "Invalid feed data"
-msgstr "无效的 tracker URL"
+msgstr "无效的信息源数据"
 
 #: plugins/syndication/feed.cpp:492
 msgid "Success"
-msgstr ""
+msgstr "成功"
 
 #: plugins/syndication/feedlist.cpp:175
 #, kde-format
@@ -7201,20 +6943,20 @@ msgid_plural ""
 "%1 active filters"
 msgstr[0] ""
 "%2\n"
-"%1 个活动过滤"
+"%1 个活动过滤器"
 
 #: plugins/syndication/feedlist.cpp:183
-#, fuzzy, kde-format
+#, kde-format
 msgid "<b>%1</b><br/><br/>Download failed: <b>%2</b>"
-msgstr "<b>%1</b><br/>预览：%2<br/>已下载：%3 %"
+msgstr "<b>%1</b><br/><br/>下载失败：<b>%2</b>"
 
 #: plugins/syndication/feedwidget.cpp:107
 msgid "Authentication Cookie"
-msgstr ""
+msgstr "认证 Cookie"
 
 #: plugins/syndication/feedwidget.cpp:107
 msgid "Enter the new authentication cookie"
-msgstr ""
+msgstr "输入新认证 Cookie"
 
 #: plugins/syndication/feedwidget.cpp:126
 msgid "<b>OK</b>"
@@ -7225,13 +6967,13 @@ msgid "<b>Not Loaded</b>"
 msgstr "<b>未装入</b>"
 
 #: plugins/syndication/feedwidget.cpp:132
-#, fuzzy, kde-format
+#, kde-format
 msgid "<b>Download Failed: %1</b>"
-msgstr "<b>下载失败</b>"
+msgstr "<b>下载失败： %1</b>"
 
 #: plugins/syndication/feedwidget.cpp:135
 msgid "<b>Downloading</b>"
-msgstr "<b>下载中</b>"
+msgstr "<b>正在下载</b>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: plugins/syndication/feedwidget.ui:53
@@ -7240,14 +6982,13 @@ msgstr "状态："
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: plugins/syndication/feedwidget.ui:77
-#, fuzzy
 msgid "Refresh every:"
-msgstr "刷新"
+msgstr "刷新间隔："
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, m_refresh_rate)
 #: plugins/syndication/feedwidget.ui:84
 msgid "Time between automatic refreshes of the feed."
-msgstr ""
+msgstr "订阅的自动刷新间隔。"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_filters)
 #: plugins/syndication/feedwidget.ui:148
@@ -7256,23 +6997,22 @@ msgstr "过滤"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_cookies)
 #: plugins/syndication/feedwidget.ui:155
-#, fuzzy
 msgid "Cookies"
-msgstr "已屏蔽"
+msgstr "Cookies"
 
 #: plugins/syndication/feedwidgetmodel.cpp:83
 msgid "Date Published"
-msgstr "发行日期"
+msgstr "发布日期"
 
 #: plugins/syndication/filtereditor.cpp:39
 #: plugins/syndication/syndicationplugin.cpp:107
 msgid "Edit Filter"
-msgstr "编辑过滤"
+msgstr "编辑过滤器"
 
 #: plugins/syndication/filtereditor.cpp:233
-#, fuzzy, kde-format
+#, kde-format
 msgid "There already is a filter named %1, filter names must be unique."
-msgstr "已存在名为 %1 的过滤，过滤名称必须唯一！"
+msgstr "已存在名为 %1 的过滤器，过滤器名称必须唯一。"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/syndication/filtereditor.ui:22
@@ -7345,6 +7085,59 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">For example "
 "the *.torrent will match any item which ends in .torrent. </p>"
 msgstr ""
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">用于查找项目标题的字符串。"
+"支持简易通配符语法：</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<table border=\"0\" style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px;\" align=\"center\" cellspacing=\"1\" cellpadding="
+"\"2\">\n"
+"<tr>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span style="
+"\" font-weight:600;\">c</span></p></td>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">任何字符均将表示它自己，除"
+"了下面提到的字符。因此 <span style=\" font-weight:600;\">c</span> 将匹配字符 "
+"<span style=\" font-style:italic;\">c</span>。</p></td></tr>\n"
+"<tr>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span style="
+"\" font-weight:600;\">?</span></p></td>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"> 匹配任意单"
+"个字符。</p></td></tr>\n"
+"<tr>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span style="
+"\" font-weight:600;\">*</span></p></td>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"> 匹配 0 个或"
+"多个任意字符。</p></td></tr>\n"
+"<tr>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span style="
+"\" font-weight:600;\">[...]</span></p></td>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"> 可表示中括"
+"号里放置的一系列字符。字符类里面的反斜杠和外面的一样，都没有特殊的意义。</"
+"p></td></tr></table>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">例如 *."
+"torrent 将匹配任何以 .torrent 结尾的项目。</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_reg_exp_syntax)
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_exclusion_reg_exp)
@@ -7353,7 +7146,7 @@ msgstr ""
 msgid ""
 "By default strings will use wildcard matching. If you want to use regular "
 "expressions, this needs to be enabled."
-msgstr ""
+msgstr "默认使用通配符匹配字符串，如果要使用正则表达式，需要选中此项。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_reg_exp_syntax)
 #. i18n: ectx: property (text), widget (QCheckBox, m_exclusion_reg_exp)
@@ -7364,9 +7157,8 @@ msgstr "字符串为正则表达式"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_all_words_must_match)
 #: plugins/syndication/filtereditor.ui:91
-#, fuzzy
 msgid "Item must match all strings to be included"
-msgstr "项目必须匹配全部字符串"
+msgstr "匹配全部字符串的项目才能被涵盖"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_match_case_sensitive)
 #. i18n: ectx: property (text), widget (QCheckBox, m_exclusion_case_sensitive)
@@ -7378,28 +7170,27 @@ msgstr "区分大小写"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_5)
 #: plugins/syndication/filtereditor.ui:106
 msgid "Exclusion Patterns"
-msgstr ""
+msgstr "排除模式"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_exclusion_all_must_match)
 #: plugins/syndication/filtereditor.ui:159
-#, fuzzy
 msgid "Item must match all strings to be excluded"
-msgstr "项目必须匹配全部字符串"
+msgstr "匹配全部字符串的项目才能被排除"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: plugins/syndication/filtereditor.ui:174
 msgid "Seasons && Episodes"
-msgstr ""
+msgstr "季和剧集"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_use_se_matching)
 #: plugins/syndication/filtereditor.ui:180
 msgid "Use season and episode matching"
-msgstr ""
+msgstr "使用季和剧集匹配"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: plugins/syndication/filtereditor.ui:189
 msgid "Seasons: "
-msgstr ""
+msgstr "季："
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, m_seasons)
 #: plugins/syndication/filtereditor.ui:200
@@ -7411,11 +7202,16 @@ msgid ""
 "\n"
 "Will download seasons 1, 3, 4, 5, 6 and 9"
 msgstr ""
+"制定要下载的季，可用逗号分割多个季，也可用连接符指定季的区域\n"
+"\n"
+"例如：1, 3-6, 9\n"
+"\n"
+"将下载第 1,3,4,5,6 和第 9 季"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: plugins/syndication/filtereditor.ui:207
 msgid "Episodes:"
-msgstr ""
+msgstr "剧集："
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, m_episodes)
 #: plugins/syndication/filtereditor.ui:218
@@ -7427,21 +7223,26 @@ msgid ""
 "\n"
 "Will download episodes 1, 3, 4, 5, 6 and 9"
 msgstr ""
+"指定要下载的剧集。可用一个逗号分割多部剧集，也可用连接符指定剧集区域\n"
+"\n"
+"例如：1, 3-6, 9\n"
+"\n"
+"将下载第 1,3,4,5,6 和第 9 集"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_se_no_duplicates)
 #: plugins/syndication/filtereditor.ui:227
 msgid "Do not download multiple items with the same season and episode"
-msgstr ""
+msgstr "不同时下载同一季和同一集中的多个项目"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_download_matches)
 #: plugins/syndication/filtereditor.ui:254
 msgid "Download torrents of matching items"
-msgstr ""
+msgstr "下载匹配项目的种子"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_download_non_matches)
 #: plugins/syndication/filtereditor.ui:261
 msgid "Download torrents of non matching items"
-msgstr ""
+msgstr "下载非匹配项目的种子"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_add_to_group)
 #: plugins/syndication/filtereditor.ui:270
@@ -7473,48 +7274,48 @@ msgstr "同步工具栏"
 #: plugins/syndication/linkdownloader.cpp:199
 #, kde-format
 msgid "Could not find a valid link to a torrent on %1"
-msgstr ""
+msgstr "无法在 %1 上找到有效种子链接"
 
 #: plugins/syndication/managefiltersdlg.cpp:33
 #: plugins/syndication/syndicationplugin.cpp:95
 msgid "Add/Remove Filters"
-msgstr "添加/删除过滤"
+msgstr "添加/移除过滤器"
 
 #: plugins/syndication/managefiltersdlg.cpp:35
 #, kde-format
 msgid "Feed: <b>%1</b>"
-msgstr "种子：<b>%1</b>"
+msgstr "订阅：<b>%1</b>"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ManageFiltersDlg)
 #: plugins/syndication/managefiltersdlg.ui:13
 msgid "Manage Filters"
-msgstr "管理过滤"
+msgstr "管理过滤器"
 
 #. i18n: ectx: property (text), widget (QLabel, m_feed_text)
 #: plugins/syndication/managefiltersdlg.ui:22
 msgid "Feed:"
-msgstr "种子："
+msgstr "订阅："
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/syndication/managefiltersdlg.ui:33
 msgid "Active filters:"
-msgstr "活动过滤："
+msgstr "活动过滤器："
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: plugins/syndication/managefiltersdlg.ui:91
 msgid "Available filters:"
-msgstr "可用过滤："
+msgstr "可用过滤器："
 
 #. i18n: ectx: property (text), widget (QPushButton, m_remove_all)
 #: plugins/syndication/managefiltersdlg.ui:107
 msgid "Remove All"
-msgstr "全部删除"
+msgstr "移除全部"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_new_filter)
 #: plugins/syndication/managefiltersdlg.ui:127
 #: plugins/syndication/syndicationactivity.cpp:296
 msgid "New Filter"
-msgstr "新建过滤"
+msgstr "新过滤器"
 
 #: plugins/syndication/syndicationactivity.cpp:51
 #: plugins/syndication/syndicationplugin.cpp:42
@@ -7523,70 +7324,67 @@ msgid "Syndication"
 msgstr "同步"
 
 #: plugins/syndication/syndicationactivity.cpp:57
-#, fuzzy
 msgid "Manages RSS and Atom feeds"
-msgstr "管理 RSS 和 Atom 种子的部件"
+msgstr "管理 RSS 和 Atom 订阅"
 
 #: plugins/syndication/syndicationactivity.cpp:134
 msgid "Enter the URL"
-msgstr "输入 URL"
+msgstr "输入地址"
 
 #: plugins/syndication/syndicationactivity.cpp:134
 msgid "Please enter the URL of the RSS or Atom feed."
-msgstr "请输入 RSS 或 Atom 种子的 URL。"
+msgstr "请输入 RSS 或 Atom 订阅的地址。"
 
 #: plugins/syndication/syndicationactivity.cpp:160
-#, fuzzy, kde-format
+#, kde-format
 msgid "Failed to load feed %1: %2"
-msgstr "装入种子失败：%1！"
+msgstr "无法装入信息源 %1：%2"
 
 #: plugins/syndication/syndicationactivity.cpp:176
-#, fuzzy, kde-format
+#, kde-format
 msgid "Failed to create directory for feed %1: %2"
-msgstr "为种子 %1 创建目录失败：%2"
+msgstr "无法为信息源 %1 创建文件夹：%2"
 
 #: plugins/syndication/syndicationactivity.cpp:298
 msgid "Add New Filter"
-msgstr "添加新过滤"
+msgstr "添加新过滤器"
 
 #: plugins/syndication/syndicationplugin.cpp:86
 msgid "Add Feed"
-msgstr "添加种子"
+msgstr "添加订阅"
 
 #: plugins/syndication/syndicationplugin.cpp:89
 msgid "Remove Feed"
-msgstr "删除种子"
+msgstr "删除订阅"
 
 #: plugins/syndication/syndicationplugin.cpp:92
 msgid "Show Feed"
 msgstr "显示种子"
 
 #: plugins/syndication/syndicationplugin.cpp:98
-#, fuzzy
 msgid "Rename"
-msgstr "用户名："
+msgstr "重命名"
 
 #: plugins/syndication/syndicationplugin.cpp:101
 msgid "Add Filter"
-msgstr "添加过滤"
+msgstr "添加过滤器"
 
 #: plugins/syndication/syndicationplugin.cpp:104
 msgid "Remove Filter"
-msgstr "删除过滤"
+msgstr "移除过滤器"
 
 #. i18n: ectx: label, entry (defaultDevice), group (general)
 #: plugins/upnp/ktupnpplugin.kcfg:10
 msgid "Default UPnP device to use"
-msgstr ""
+msgstr "默认使用的 UPnP 设备"
 
 #: plugins/upnp/routermodel.cpp:72
 msgid "Device"
 msgstr "设备"
 
 #: plugins/upnp/routermodel.cpp:73
-#, fuzzy
 msgid "Ports Forwarded"
-msgstr "转发的端口"
+msgstr "已转发的端口"
 
 #: plugins/upnp/routermodel.cpp:116
 #, kde-format
@@ -7613,64 +7411,57 @@ msgstr "重新扫描"
 #: plugins/webinterface/httpclienthandler.cpp:202
 #, kde-format
 msgid "An internal server error occurred: %1"
-msgstr ""
+msgstr "发生内部服务器错误：%1"
 
 #: plugins/webinterface/httpserver.cpp:327
-#, fuzzy
 msgid "Cannot find web interface skins."
-msgstr "Web 界面皮肤："
+msgstr "无法找到网页界面皮肤。"
 
 #: plugins/webinterface/httpserver.cpp:492
 msgid "Unsupported HTTP method"
-msgstr ""
+msgstr "不支持的 HTTP 方法"
 
 #. i18n: ectx: label, entry (port), group (general)
 #: plugins/webinterface/ktwebinterfaceplugin.kcfg:10
 msgid "Port number"
-msgstr ""
+msgstr "端口号"
 
 #. i18n: ectx: label, entry (forward), group (general)
 #: plugins/webinterface/ktwebinterfaceplugin.kcfg:15
-#, fuzzy
 msgid "forward Port"
 msgstr "转发端口"
 
 #. i18n: ectx: label, entry (sessionTTL), group (general)
 #: plugins/webinterface/ktwebinterfaceplugin.kcfg:20
 msgid "Session time to live"
-msgstr ""
+msgstr "会话的存在时间"
 
 #. i18n: ectx: label, entry (skin), group (general)
 #: plugins/webinterface/ktwebinterfaceplugin.kcfg:26
-#, fuzzy
 msgid "interface skin"
-msgstr "Web 界面皮肤："
+msgstr "界面皮肤"
 
 #. i18n: ectx: label, entry (username), group (general)
 #: plugins/webinterface/ktwebinterfaceplugin.kcfg:33
-#, fuzzy
 msgid "username"
-msgstr "用户名："
+msgstr "用户名"
 
 #. i18n: ectx: label, entry (password), group (general)
 #: plugins/webinterface/ktwebinterfaceplugin.kcfg:37
-#, fuzzy
 msgid "password"
-msgstr "密码："
+msgstr "密码"
 
 #: plugins/webinterface/torrentposthandler.cpp:52
 msgid "HTTP Get not supported when uploading a torrent"
-msgstr ""
+msgstr "上传种子时不支持 HTTP Get"
 
 #: plugins/webinterface/torrentposthandler.cpp:65
-#, fuzzy
 msgid "Invalid data received"
-msgstr "无效的 tracker URL"
+msgstr "收到无效的数据"
 
 #: plugins/webinterface/torrentposthandler.cpp:77
-#, fuzzy
 msgid "Failed to open temporary file"
-msgstr "保存种子文件信息的文件夹："
+msgstr "打开临时文件失败"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: plugins/webinterface/webinterfaceplugin.cpp:55
@@ -7678,12 +7469,12 @@ msgstr "保存种子文件信息的文件夹："
 #: plugins/webinterface/webinterfaceprefwidget.cpp:40
 #: plugins/webinterface/webinterfaceprefwidget.ui:32
 msgid "Web Interface"
-msgstr "Web 界面"
+msgstr "网页界面"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: plugins/webinterface/webinterfaceprefwidget.ui:40
 msgid "Web interface skin:"
-msgstr "Web 界面皮肤："
+msgstr "网页界面皮肤："
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_skin)
 #: plugins/webinterface/webinterfaceprefwidget.ui:62
@@ -7692,7 +7483,6 @@ msgstr "使用的接口。"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_authentication)
 #: plugins/webinterface/webinterfaceprefwidget.ui:91
-#, fuzzy
 msgid ""
 "If login required is enabled, you need to enter a username and a password.\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
@@ -7704,53 +7494,44 @@ msgid ""
 "webinterface is accessible from the internet. It will allow anybody access "
 "to it.</p>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">递归扫描文件夹以寻找种子。"
-"</p>\n"
+"如果启用了登录需求，您需要输入用户名和密码。\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
 "p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">提示：</span>对任何名为 loaded 的文件夹将不会执行这一操作。</"
-"p></body></html>"
+"weight:600;\">注意：</span>当网页接口可从互联网访问时您不应该禁用该选项。那将"
+"允许所有人访问。</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_authentication)
 #: plugins/webinterface/webinterfaceprefwidget.ui:94
-#, fuzzy
 msgid "Login required"
-msgstr "需要的磁盘空间："
+msgstr "需要登录"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_username)
 #: plugins/webinterface/webinterfaceprefwidget.ui:111
 msgid "Username you need to use in the login page of the webinterface."
-msgstr "登录 Web 界面时使用的用户名。"
+msgstr "登录网页界面时使用的用户名。"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_password)
 #: plugins/webinterface/webinterfaceprefwidget.ui:125
 msgid ""
 "The password for the webinterface login page. By default this is set to "
 "ktorrent."
-msgstr "登录 Web 界面时的密码，默认是 ktorrent。"
+msgstr "登录网页界面时的密码，默认是 ktorrent。"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: plugins/webinterface/webinterfaceprefwidget.ui:140
 msgid "Web Server"
-msgstr "Web 服务器"
+msgstr "网页服务器"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_port)
 #: plugins/webinterface/webinterfaceprefwidget.ui:164
 msgid "The port the webinterface listens on."
-msgstr "Web 界面监听的端口。"
+msgstr "网页界面监听的端口。"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_forward)
 #: plugins/webinterface/webinterfaceprefwidget.ui:188
-#, fuzzy
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">If you are behind a router "
@@ -7764,22 +7545,17 @@ msgid ""
 "that the UPnP plugin automatically forwards the port. The UPnP plugin needs "
 "to be loaded for this to work.</p>"
 msgstr ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
-"weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">如果您在一台路由器之后，而"
-"您又想通过互联网上某处访问到 web 界面，您必须转发正确的端口。</p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">如果您通过路由器接入互联"
+"网，If you are behind a router 并且您想要从互联网的某个位置访问网页页面，那么"
+"您需要将正确的端口转发出去。</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
 "p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">这个选框将确保 UPnP 插件能"
-"自动转发端口。 UPnP 插件需要为此被装载。</p></body></html>"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">本复选框将保证 UPnPThis "
+"checkbox will ensure 插件能自动转发端口。需要先加载 UPnP 插件才能实现本功能。"
+"</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_forward)
 #: plugins/webinterface/webinterfaceprefwidget.ui:191

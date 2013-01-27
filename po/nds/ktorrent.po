@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-14 19:51+0200\n"
+"POT-Creation-Date: 2012-12-19 08:39+0100\n"
 "PO-Revision-Date: 2012-01-23 08:53+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -200,27 +200,27 @@ msgstr "KTorrent föhrt en oder mehr Torrents ut"
 msgid "Cannot create torrent: %1"
 msgstr "Torrent \"%1\" lett sik nich opstellen"
 
-#: ktorrent/core.cpp:1212
+#: ktorrent/core.cpp:1216
 msgid ""
 "One or more storage volumes are not mounted. In order to start this torrent, "
 "they need to be mounted."
 msgstr ""
 
-#: ktorrent/core.cpp:1213
+#: ktorrent/core.cpp:1217
 msgid "Retry"
 msgstr ""
 
-#: ktorrent/core.cpp:1222
+#: ktorrent/core.cpp:1226
 #, kde-format
 msgid "Storage volume %1 is not mounted"
 msgstr ""
 
-#: ktorrent/core.cpp:1224
+#: ktorrent/core.cpp:1228
 #, kde-format
 msgid "Storage volumes %1 are not mounted"
 msgstr ""
 
-#: ktorrent/core.cpp:1236
+#: ktorrent/core.cpp:1240
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -229,21 +229,21 @@ msgstr ""
 "En Reeg Datendateien vun den Torrent \"%1\" fehlt. \n"
 "Wullt Du se nieg opstellen oder wullt Du se lever nich daalladen?"
 
-#: ktorrent/core.cpp:1245 ktorrent/core.cpp:1256 ktorrent/core.cpp:1269
+#: ktorrent/core.cpp:1249 ktorrent/core.cpp:1260 ktorrent/core.cpp:1273
 msgid "Data files are missing"
 msgstr "Datendateien fehlt"
 
-#: ktorrent/core.cpp:1255
+#: ktorrent/core.cpp:1259
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Utsöken vun fehlen Dateien lett sik nich torüchnehmen: %1"
 
-#: ktorrent/core.cpp:1268
+#: ktorrent/core.cpp:1272
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Fehlen Dateien laat sik nich nieg opstellen: %1"
 
-#: ktorrent/core.cpp:1279
+#: ktorrent/core.cpp:1283
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing.\n"
@@ -252,16 +252,16 @@ msgstr ""
 "De Datei, de de Daten vun den Torrent \"%1\" bargt, fehlt.\n"
 "Wullt Du ehr nieg opstellen?"
 
-#: ktorrent/core.cpp:1286 ktorrent/core.cpp:1296
+#: ktorrent/core.cpp:1290 ktorrent/core.cpp:1300
 msgid "Data file is missing"
 msgstr "Datendatei fehlt"
 
-#: ktorrent/core.cpp:1295
+#: ktorrent/core.cpp:1299
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Datendatei \"%1\" lett sik nich nieg opstellen"
 
-#: ktorrent/core.cpp:1383
+#: ktorrent/core.cpp:1387
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -276,16 +276,16 @@ msgstr[1] ""
 "KTorrent hett %1 Torrents ut de KDE3-Verschoon vun KTorrent funnen, wullt Du "
 "se importeren?"
 
-#: ktorrent/core.cpp:1405
+#: ktorrent/core.cpp:1409
 msgid "No torrents from the KDE3 version were found."
 msgstr "Keen Torrents ut de KDE3-Verschoon funnen."
 
-#: ktorrent/core.cpp:1444
+#: ktorrent/core.cpp:1448
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr "Leeg Magnet-Bittorrent-Link: %1"
 
-#: ktorrent/core.cpp:1449
+#: ktorrent/core.cpp:1453
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -601,8 +601,8 @@ msgstr "Keen vörhannen Dateien funnen"
 msgid "Options"
 msgstr "Optschonen"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/fileselectdlg.ui:207 ktorrent/dialogs/pastedlgbase.ui:77
 msgid "Group:"
 msgstr "Koppel:"
@@ -651,8 +651,8 @@ msgstr "Na't Daalladen:"
 msgid "Cannot load the torrent file: %1"
 msgstr "Torrentdatei \"%1\" lett sik nich laden"
 
-#: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:67
-#: plugins/ipfilter/convertthread.cpp:167
+#: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:66
+#: plugins/ipfilter/convertthread.cpp:166
 #: plugins/search/searchenginelist.cpp:192
 #, kde-format
 msgid "Cannot open %1: %2"
@@ -803,7 +803,7 @@ msgstr "Still opmaken"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpeedLimitsDlg)
 #: ktorrent/dialogs/speedlimitsdlg.cpp:50
-#: ktorrent/dialogs/speedlimitsdlg.ui:14 ktorrent/view/view.cpp:256
+#: ktorrent/dialogs/speedlimitsdlg.ui:14 ktorrent/view/view.cpp:260
 msgid "Speed Limits"
 msgstr "Gauigkeit-Grenzen"
 
@@ -823,8 +823,8 @@ msgid "Global Limits"
 msgstr "Globaal Grenzen"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
+#. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ktorrent/dialogs/speedlimitsdlg.ui:70 ktorrent/pref/networkpref.ui:111
 #: ktorrent/pref/recommendedsettingsdlg.ui:221
 #: plugins/bwscheduler/bwprefpage.ui:65
@@ -882,9 +882,9 @@ msgstr "Keen Grenz"
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_rate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_max_download_rate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_max_upload_rate)
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_avg_speed_slot)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxDownloadRate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxUploadRate)
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_avg_speed_slot)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverUploadLimit)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverDownloadLimit)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_download_limit)
@@ -906,8 +906,8 @@ msgid " KiB/s"
 msgstr " KiB/s"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/speedlimitsdlg.ui:93 ktorrent/pref/networkpref.ui:134
 #: ktorrent/pref/recommendedsettingsdlg.ui:207
@@ -1270,33 +1270,33 @@ msgstr "All Torrents in't aktuelle Paneel anhollen"
 msgid "Edit Group Policy"
 msgstr "Koppelregel"
 
-#: ktorrent/groups/groupview.cpp:81
+#: ktorrent/groups/groupview.cpp:80
 #, fuzzy
 #| msgid "Open in New Tab"
 msgid "Open In New Tab"
 msgstr "As nieg Paneel opmaken"
 
-#: ktorrent/groups/groupview.cpp:85 ktorrent/view/view.cpp:221
+#: ktorrent/groups/groupview.cpp:84 ktorrent/view/view.cpp:225
 msgid "New Group"
 msgstr "Nieg Koppel"
 
-#: ktorrent/groups/groupview.cpp:89
+#: ktorrent/groups/groupview.cpp:88
 msgid "Edit Name"
 msgstr "Naam bewerken"
 
-#: ktorrent/groups/groupview.cpp:93
+#: ktorrent/groups/groupview.cpp:92
 msgid "Remove Group"
 msgstr "Koppel wegdoon"
 
-#: ktorrent/groups/groupview.cpp:97
+#: ktorrent/groups/groupview.cpp:96
 msgid "Group Policy"
 msgstr "Koppelregel"
 
-#: ktorrent/groups/groupview.cpp:110
+#: ktorrent/groups/groupview.cpp:109
 msgid "Please enter the group name."
 msgstr "Giff bitte den Naam vun den Koppel in."
 
-#: ktorrent/groups/groupview.cpp:117
+#: ktorrent/groups/groupview.cpp:116
 #, kde-format
 msgid "The group %1 already exists."
 msgstr "Dat gifft den Koppel \"%1\" al."
@@ -1334,8 +1334,8 @@ msgid "Open a URL which points to a torrent, magnet links are supported"
 msgstr "En URL opmaken, de na en Torrent wiest. Magnetlinks warrt ünnerstütt."
 
 #: ktorrent/gui.cpp:440 plugins/ipfilter/ipblockingprefpage.cpp:35
-#: plugins/ipfilter/ipfilterplugin.cpp:62
-#: plugins/ipfilter/ipfilterplugin.cpp:75
+#: plugins/ipfilter/ipfilterplugin.cpp:60
+#: plugins/ipfilter/ipfilterplugin.cpp:73
 msgid "IP Filter"
 msgstr "IP-Filter"
 
@@ -1465,12 +1465,12 @@ msgid "Advanced"
 msgstr "Verwiedert"
 
 #. i18n: ectx: Menu (OpenDirMenu)
-#: ktorrent/kttorrentactivityui.rc:62 ktorrent/view/view.cpp:242
+#: ktorrent/kttorrentactivityui.rc:62 ktorrent/view/view.cpp:246
 msgid "Open Directory"
 msgstr "Orner opmaken"
 
 #. i18n: ectx: Menu (GroupsSubMenu)
-#: ktorrent/kttorrentactivityui.rc:68 ktorrent/view/view.cpp:245
+#: ktorrent/kttorrentactivityui.rc:68 ktorrent/view/view.cpp:249
 msgid "Add to Group"
 msgstr "Na Koppel tofögen"
 
@@ -2351,8 +2351,8 @@ msgid ""
 "</p>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
 #: ktorrent/pref/networkpref.ui:71 ktorrent/pref/recommendedsettingsdlg.ui:235
 #: plugins/bwscheduler/edititemdlg.ui:229
 msgid "Maximum connections per torrent:"
@@ -2363,8 +2363,8 @@ msgstr "Hööchsttall vun Verbinnen per Torrent:"
 msgid "The maximum number of connections allowed per torrent."
 msgstr "De tohööchst tolaten Tall vun Verbinnen per Torrent"
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_4)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ktorrent/pref/networkpref.ui:91 ktorrent/pref/recommendedsettingsdlg.ui:249
 #: plugins/bwscheduler/edititemdlg.ui:246
@@ -2658,8 +2658,8 @@ msgstr "Passwoort:"
 msgid "Password for the SOCKS proxy server."
 msgstr "En Socks-Proxyserver bruken:"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: property (title), widget (QGroupBox, m_qm_group_box)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: ktorrent/pref/qmpref.cpp:25 ktorrent/pref/qmpref.ui:27
 #: ktorrent/pref/recommendedsettingsdlg.ui:266
 #: ktorrent/torrentactivity.cpp:100
@@ -2686,8 +2686,8 @@ msgstr ""
 msgid "Control torrents manually"
 msgstr "Torrents vun Hand stüern"
 
-#. i18n: ectx: property (text), widget (QLabel, label_14)
 #. i18n: ectx: property (text), widget (QLabel, label_11)
+#. i18n: ectx: property (text), widget (QLabel, label_14)
 #: ktorrent/pref/qmpref.ui:35 ktorrent/pref/recommendedsettingsdlg.ui:288
 msgid "Maximum downloads:"
 msgstr "Hööchsttall Daalladen:"
@@ -2698,8 +2698,8 @@ msgid ""
 "The maximum number of simultaneous downloads the queue manager will run."
 msgstr "De Hööchsttall vun Daalladen, de de Reegpleger op eenmaal utföhrt."
 
-#. i18n: ectx: property (text), widget (QLabel, label_17)
 #. i18n: ectx: property (text), widget (QLabel, label_10)
+#. i18n: ectx: property (text), widget (QLabel, label_17)
 #: ktorrent/pref/qmpref.ui:55 ktorrent/pref/recommendedsettingsdlg.ui:302
 msgid "Maximum seeds:"
 msgstr "Hööchsttall Verdelen:"
@@ -2803,8 +2803,8 @@ msgstr ""
 msgid "Keep seeding after download is finished"
 msgstr "Biblieven to verdelen, wenn en Daalladen afslaten is"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ktorrent/pref/qmpref.ui:202 ktorrent/pref/recommendedsettingsdlg.ui:274
 msgid "Number of upload slots:"
 msgstr "Tall vun Hoochlaad-Plätz:"
@@ -2995,9 +2995,9 @@ msgstr "Magnetlink"
 msgid "Status"
 msgstr "Status"
 
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (title), widget (QGroupBox, PeersSpdGbw)
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: ktorrent/tools/magnetmodel.cpp:136
 #: plugins/infowidget/infowidgetplugin.cpp:222
 #: plugins/stats/DisplaySettings.ui:165 plugins/stats/Settings.ui:166
@@ -3029,7 +3029,7 @@ msgstr "Magnet wegmaken"
 msgid "Order"
 msgstr "Reeg"
 
-#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:495
+#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:533
 #: plugins/downloadorder/downloadorderdialog.cpp:80
 msgid "Name"
 msgstr "Naam"
@@ -3561,135 +3561,135 @@ msgstr "Fehlers:"
 msgid "Torrent filter"
 msgstr "Torrent-Filter"
 
-#: ktorrent/view/view.cpp:135
+#: ktorrent/view/view.cpp:139
 msgctxt "@action Start all selected torrents in the current tab"
 msgid "Start"
 msgstr "Starten"
 
-#: ktorrent/view/view.cpp:136
+#: ktorrent/view/view.cpp:140
 msgid "Start all selected torrents in the current tab"
 msgstr "All köört Torrents in't aktuelle Paneel starten"
 
-#: ktorrent/view/view.cpp:141
+#: ktorrent/view/view.cpp:145
 msgctxt "@action Force start all selected torrents in the current tab"
 msgid "Force Start"
 msgstr "Starten verdwingen"
 
-#: ktorrent/view/view.cpp:142
+#: ktorrent/view/view.cpp:146
 msgid "Force start all selected torrents in the current tab"
 msgstr "Start vun all markeert Torrents in't aktuelle Paneel verdwingen"
 
-#: ktorrent/view/view.cpp:146
+#: ktorrent/view/view.cpp:150
 msgctxt "@action Stop all selected torrents in the current tab"
 msgid "Stop"
 msgstr "Anhollen"
 
-#: ktorrent/view/view.cpp:147
+#: ktorrent/view/view.cpp:151
 msgid "Stop all selected torrents in the current tab"
 msgstr "All köört Torrents in't aktuelle Paneel anhollen"
 
-#: ktorrent/view/view.cpp:152
+#: ktorrent/view/view.cpp:156
 msgctxt "@action Pause all selected torrents in the current tab"
 msgid "Pause"
 msgstr "Ophollen"
 
-#: ktorrent/view/view.cpp:153
+#: ktorrent/view/view.cpp:157
 msgid "Pause all selected torrents in the current tab"
 msgstr "All köört Torrents in't aktuelle Paneel ophollen"
 
-#: ktorrent/view/view.cpp:157
+#: ktorrent/view/view.cpp:161
 msgctxt "@action Remove all selected torrents in the current tab"
 msgid "Remove"
 msgstr "Wegmaken"
 
-#: ktorrent/view/view.cpp:158
+#: ktorrent/view/view.cpp:162
 msgid "Remove all selected torrents in the current tab"
 msgstr "All köört Torrents in't aktuelle Paneel wegdoon"
 
-#: ktorrent/view/view.cpp:163
+#: ktorrent/view/view.cpp:167
 msgctxt "@action Start all torrents in the current tab"
 msgid "Start All"
 msgstr "All starten"
 
-#: ktorrent/view/view.cpp:164
+#: ktorrent/view/view.cpp:168
 msgid "Start all torrents in the current tab"
 msgstr "All Torrents in't aktuelle Paneel starten"
 
-#: ktorrent/view/view.cpp:169
+#: ktorrent/view/view.cpp:173
 msgctxt "@action Stop all torrents in the current tab"
 msgid "Stop All"
 msgstr "All anhollen"
 
-#: ktorrent/view/view.cpp:170
+#: ktorrent/view/view.cpp:174
 msgid "Stop all torrents in the current tab"
 msgstr "All Torrents in't aktuelle Paneel anhollen"
 
-#: ktorrent/view/view.cpp:175
+#: ktorrent/view/view.cpp:179
 msgid "Remove Torrent and Data"
 msgstr "Torrent un Daten wegmaken"
 
-#: ktorrent/view/view.cpp:180
+#: ktorrent/view/view.cpp:184
 msgid "Rename Torrent"
 msgstr "Torrent ümnömen"
 
-#: ktorrent/view/view.cpp:184
+#: ktorrent/view/view.cpp:188
 msgid "Add Peers"
 msgstr "Partners tofögen"
 
-#: ktorrent/view/view.cpp:188
+#: ktorrent/view/view.cpp:192
 msgid "Manual Announce"
 msgstr "Mellen vun Hand"
 
-#: ktorrent/view/view.cpp:193
+#: ktorrent/view/view.cpp:197
 msgid "Scrape"
 msgstr "Raken"
 
-#: ktorrent/view/view.cpp:197
+#: ktorrent/view/view.cpp:201
 msgid "Preview"
 msgstr "Vöransicht"
 
-#: ktorrent/view/view.cpp:201
+#: ktorrent/view/view.cpp:205
 msgid "Data Directory"
 msgstr "Datenorner"
 
-#: ktorrent/view/view.cpp:205
+#: ktorrent/view/view.cpp:209
 msgid "Temporary Directory"
 msgstr "Temporeerorner"
 
-#: ktorrent/view/view.cpp:209
+#: ktorrent/view/view.cpp:213
 msgid "Move Data"
 msgstr "Daten verschuven"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, StatsSettingsWgt)
-#: ktorrent/view/view.cpp:213 plugins/stats/Settings.ui:13
+#: ktorrent/view/view.cpp:217 plugins/stats/Settings.ui:13
 msgid "Settings"
 msgstr "Instellen"
 
-#: ktorrent/view/view.cpp:217
+#: ktorrent/view/view.cpp:221
 msgid "Remove from Group"
 msgstr "Ut Koppel wegmaken"
 
-#: ktorrent/view/view.cpp:225
+#: ktorrent/view/view.cpp:229
 msgid "Check Data"
 msgstr "Daten pröven"
 
-#: ktorrent/view/view.cpp:226
+#: ktorrent/view/view.cpp:230
 msgid "Check all the data of a torrent"
 msgstr "All Torrent-Daten dörkeken"
 
-#: ktorrent/view/view.cpp:248
+#: ktorrent/view/view.cpp:252
 msgid "Copy Torrent URL"
 msgstr "Torrent-URL koperen"
 
-#: ktorrent/view/view.cpp:252
+#: ktorrent/view/view.cpp:256
 msgid "Export Torrent"
 msgstr "Torrent exporteren"
 
-#: ktorrent/view/view.cpp:257
+#: ktorrent/view/view.cpp:261
 msgid "Set the speed limits of individual torrents"
 msgstr "Gauigkeitgrenzen för verscheden Torrents fastleggen"
 
-#: ktorrent/view/view.cpp:466
+#: ktorrent/view/view.cpp:470
 #, kde-format
 msgid ""
 "The torrent <b>%1</b> has not finished downloading, do you want to delete "
@@ -3698,19 +3698,19 @@ msgstr ""
 "Daalladen för Torrent \"%1\" is nich afslaten. Wullt Du ok de Daten wegdoon, "
 "de nich kompletten sünd?"
 
-#: ktorrent/view/view.cpp:471
+#: ktorrent/view/view.cpp:475
 msgid "Remove Download"
 msgstr "Daalladen wegdoon"
 
-#: ktorrent/view/view.cpp:472
+#: ktorrent/view/view.cpp:476
 msgid "Delete Data"
 msgstr "Daten Wegdoon"
 
-#: ktorrent/view/view.cpp:473
+#: ktorrent/view/view.cpp:477
 msgid "Keep Data"
 msgstr "Daten wohren"
 
-#: ktorrent/view/view.cpp:498
+#: ktorrent/view/view.cpp:502
 msgid ""
 "You will lose all the downloaded data of the following torrents. Are you "
 "sure you want to do this?"
@@ -3718,111 +3718,112 @@ msgstr ""
 "Di warrt all daallaadt Daten vun de nakamen Torrents wegkamen. Wullt Du dit "
 "redig doon?"
 
-#: ktorrent/view/view.cpp:499
+#: ktorrent/view/view.cpp:503
 msgid "Remove Torrent"
 msgstr "Torrent wegmaken"
 
-#: ktorrent/view/view.cpp:595 plugins/infowidget/fileview.cpp:354
+#: ktorrent/view/view.cpp:599 plugins/infowidget/fileview.cpp:354
 #: plugins/infowidget/fileview.cpp:375
 msgid "Select a directory to move the data to."
 msgstr "Söök en Orner ut, na den Du de Daten verschuven wullt"
 
-#: ktorrent/view/viewmodel.cpp:496 plugins/infowidget/peerviewmodel.cpp:266
+#: ktorrent/view/viewmodel.cpp:535 plugins/infowidget/peerviewmodel.cpp:266
 #: plugins/infowidget/webseedsmodel.cpp:126
 msgid "Downloaded"
 msgstr "Daallaadt"
 
-#: ktorrent/view/viewmodel.cpp:497
+#: ktorrent/view/viewmodel.cpp:537
 #: libktcore/torrent/torrentfilelistmodel.cpp:77
 #: libktcore/torrent/torrentfiletreemodel.cpp:400
 msgid "Size"
 msgstr "Grött"
 
-#: ktorrent/view/viewmodel.cpp:498 plugins/infowidget/peerviewmodel.cpp:267
+#: ktorrent/view/viewmodel.cpp:539 plugins/infowidget/peerviewmodel.cpp:267
 msgid "Uploaded"
 msgstr "Hoochlaadt"
 
-#: ktorrent/view/viewmodel.cpp:499
+#: ktorrent/view/viewmodel.cpp:541
 #, fuzzy
 #| msgid "Left"
 msgctxt "Bytes left to downloaded"
 msgid "Left"
 msgstr "Links"
 
-#: ktorrent/view/viewmodel.cpp:500
+#: ktorrent/view/viewmodel.cpp:543
 #: plugins/infowidget/chunkdownloadmodel.cpp:200
 #: plugins/infowidget/peerviewmodel.cpp:257
 msgid "Down Speed"
 msgstr "Daalladengauheit"
 
-#: ktorrent/view/viewmodel.cpp:501 plugins/infowidget/peerviewmodel.cpp:258
+#: ktorrent/view/viewmodel.cpp:545 plugins/infowidget/peerviewmodel.cpp:258
 msgid "Up Speed"
 msgstr "Hoochladengauheit"
 
-#: ktorrent/view/viewmodel.cpp:502
+#: ktorrent/view/viewmodel.cpp:547
 msgid "Time Left"
 msgstr "Resttiet"
 
-#: ktorrent/view/viewmodel.cpp:503 plugins/infowidget/trackermodel.cpp:149
+#: ktorrent/view/viewmodel.cpp:549 plugins/infowidget/trackermodel.cpp:149
 msgid "Seeders"
 msgstr "Borns"
 
-#: ktorrent/view/viewmodel.cpp:504 plugins/infowidget/trackermodel.cpp:150
+#: ktorrent/view/viewmodel.cpp:551 plugins/infowidget/trackermodel.cpp:150
 msgid "Leechers"
 msgstr "Sugers"
 
-#: ktorrent/view/viewmodel.cpp:506
-#, no-c-format
+#: ktorrent/view/viewmodel.cpp:554
+#, fuzzy, no-c-format
+#| msgid "% Complete"
 msgid "% Complete"
 msgstr "% afslaten"
 
-#: ktorrent/view/viewmodel.cpp:507
+#: ktorrent/view/viewmodel.cpp:556
 msgid "Share Ratio"
 msgstr "Verdeelrelatschoon"
 
-#: ktorrent/view/viewmodel.cpp:508
+#: ktorrent/view/viewmodel.cpp:558
 msgid "Time Downloaded"
 msgstr "Daalladenduer"
 
-#: ktorrent/view/viewmodel.cpp:509
+#: ktorrent/view/viewmodel.cpp:560
 msgid "Time Seeded"
 msgstr "Verdeel-Duer"
 
-#: ktorrent/view/viewmodel.cpp:510
+#: ktorrent/view/viewmodel.cpp:562
 msgid "Location"
 msgstr "Steed"
 
-#: ktorrent/view/viewmodel.cpp:511
+#: ktorrent/view/viewmodel.cpp:564
 msgid "Added"
 msgstr "Toföögt"
 
-#: ktorrent/view/viewmodel.cpp:519
+#: ktorrent/view/viewmodel.cpp:574
 msgid "How much data we have downloaded of the torrent"
 msgstr "Gifft an, woveel Daten vun den Torrent al daallaadt sünd"
 
-#: ktorrent/view/viewmodel.cpp:520
+#: ktorrent/view/viewmodel.cpp:576
 msgid "Total size of the torrent, excluded files are not included"
 msgstr "Den Torrent sien heel Grött, utslaten Dateien nich mitreekt"
 
-#: ktorrent/view/viewmodel.cpp:521
+#: ktorrent/view/viewmodel.cpp:578
 msgid "How much data we have uploaded"
 msgstr "Gifft an, woveel Daten al hoochlaadt sünd"
 
-#: ktorrent/view/viewmodel.cpp:522
+#: ktorrent/view/viewmodel.cpp:580
 #, fuzzy
 #| msgid "How much data we have uploaded"
 msgid "How much data left to download"
 msgstr "Gifft an, woveel Daten al hoochlaadt sünd"
 
-#: ktorrent/view/viewmodel.cpp:523
+#: ktorrent/view/viewmodel.cpp:582
 msgid "Current download speed"
 msgstr "Aktuell Daalladengauheit"
 
-#: ktorrent/view/viewmodel.cpp:524
+#: ktorrent/view/viewmodel.cpp:584
 msgid "Current upload speed"
 msgstr "Aktuell Hoochladen-Gauheit"
 
-#: ktorrent/view/viewmodel.cpp:525
+#: ktorrent/view/viewmodel.cpp:586
 msgid ""
 "How much time is left before the torrent is finished or before the maximum "
 "share ratio is reached, if that is enabled"
@@ -3830,7 +3831,7 @@ msgstr ""
 "Gifft de Tiet an, de nablifft, ehr de Torrent afslaten warrt oder - wenn dat "
 "anmaakt is - ehr he bi de Hööchst-Verdeelrelatschoon anlangt."
 
-#: ktorrent/view/viewmodel.cpp:526
+#: ktorrent/view/viewmodel.cpp:588
 msgid ""
 "How many seeders we are connected to (How many seeders there are according "
 "to the tracker)"
@@ -3838,7 +3839,7 @@ msgstr ""
 "Gifft de Tall vun Borns an, na de Du tokoppelt büst (wat de Tracker seggt, "
 "wo vele Borns dat gifft)"
 
-#: ktorrent/view/viewmodel.cpp:527
+#: ktorrent/view/viewmodel.cpp:590
 msgid ""
 "How many leechers we are connected to (How many leechers there are according "
 "to the tracker)"
@@ -3846,8 +3847,7 @@ msgstr ""
 "Gifft de Tall vun Sugers an, de na Di tokoppelt sünd (wat de Tracker seggt, "
 "wo vele Borns dat gifft)"
 
-#: ktorrent/view/viewmodel.cpp:529
-#, no-c-format
+#: ktorrent/view/viewmodel.cpp:593
 msgid ""
 "The percentage of data we have of the whole torrent, not including excluded "
 "files"
@@ -3855,7 +3855,7 @@ msgstr ""
 "De Perzenttall vun den helen Torrent, de Du al hest, utslaten Dateien nich "
 "mitreekt"
 
-#: ktorrent/view/viewmodel.cpp:530
+#: ktorrent/view/viewmodel.cpp:595
 msgid ""
 "Share ratio is the number of bytes uploaded divided by the number of bytes "
 "downloaded"
@@ -3863,28 +3863,28 @@ msgstr ""
 "De Verdeelrelatschoon, dat sünd de hoochlaadten Bytes deelt dör de "
 "daallaadten."
 
-#: ktorrent/view/viewmodel.cpp:531
+#: ktorrent/view/viewmodel.cpp:597
 msgid "How long we have been downloading the torrent"
 msgstr "Gifft an, wo lang Du den Torrent al daallaadst."
 
-#: ktorrent/view/viewmodel.cpp:532
+#: ktorrent/view/viewmodel.cpp:599
 msgid "How long we have been seeding the torrent"
 msgstr "Gifft an, wo lang Du den Torrent al verdeelst."
 
-#: ktorrent/view/viewmodel.cpp:533
+#: ktorrent/view/viewmodel.cpp:601
 msgid "The location of the torrent's data on disk"
 msgstr "De Steed vun den Torrent sien Daten op de Fastplaat"
 
-#: ktorrent/view/viewmodel.cpp:534
+#: ktorrent/view/viewmodel.cpp:603
 msgid "When this torrent was added"
 msgstr "Wenn disse Torrent toföögt wöör"
 
-#: ktorrent/view/viewmodel.cpp:583
+#: ktorrent/view/viewmodel.cpp:653
 #, kde-format
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "%1<br>URL: <b>%2</b>"
 
-#: ktorrent/view/viewmodel.cpp:589
+#: ktorrent/view/viewmodel.cpp:659
 msgid "<br/><br/>Unable to contact a tracker."
 msgstr "<br/><br/>Tracker lett sik nich faatkriegen."
 
@@ -5106,8 +5106,8 @@ msgid "Availability"
 msgstr "Verföögborkeit"
 
 #. i18n: ectx: property (title), widget (QGroupBox, DhtGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_12)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_5)
+#. i18n: ectx: property (text), widget (QLabel, label_12)
 #: plugins/infowidget/peerviewmodel.cpp:262 plugins/stats/Conns.ui:31
 #: plugins/stats/DisplaySettings.ui:796 plugins/stats/Settings.ui:234
 msgid "DHT"
@@ -5404,7 +5404,7 @@ msgid "Disable All"
 msgstr "All utmaken"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
-#: plugins/ipfilter/convertdialog.ui:19 plugins/ipfilter/convertthread.cpp:174
+#: plugins/ipfilter/convertdialog.ui:19 plugins/ipfilter/convertthread.cpp:173
 msgid "Converting..."
 msgstr "Bi to wanneln..."
 
@@ -5419,11 +5419,11 @@ msgstr ""
 msgid "C&ancel"
 msgstr "&Afbreken"
 
-#: plugins/ipfilter/convertthread.cpp:72
+#: plugins/ipfilter/convertthread.cpp:71
 msgid "Loading txt file..."
 msgstr "Textdatei warrt laadt..."
 
-#: plugins/ipfilter/convertthread.cpp:156
+#: plugins/ipfilter/convertthread.cpp:155
 #, kde-format
 msgid "There are no IP addresses to convert in %1"
 msgstr "Binnen \"%1\" gifft dat keen IP-Adressen, de sik ümwanneln laat."
@@ -6037,7 +6037,7 @@ msgstr "Verschuven wöör anmaakt."
 msgid "Scan directories recursively."
 msgstr "Ok Ünnerornern dörkieken"
 
-#: plugins/scanfolder/scanfolder.cpp:69 plugins/scanfolder/scanthread.cpp:194
+#: plugins/scanfolder/scanfolder.cpp:77 plugins/scanfolder/scanthread.cpp:194
 #: plugins/scanfolder/torrentloadqueue.cpp:166
 #: plugins/scanfolder/torrentloadqueue.cpp:167
 #: plugins/scanfolder/torrentloadqueue.cpp:170
@@ -6370,8 +6370,8 @@ msgstr "Blindkopie tofögen:"
 msgid "Current search engine"
 msgstr "Aktuell Söökmaschien"
 
-#. i18n: ectx: label, entry (useDefaultBrowser), group (general)
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_useDefaultBrowser)
+#. i18n: ectx: label, entry (useDefaultBrowser), group (general)
 #: plugins/search/ktsearchplugin.kcfg:15 plugins/search/searchpref.ui:92
 msgid "Use default browser"
 msgstr "Standard-Nettkieker bruken"
@@ -6581,9 +6581,9 @@ msgstr "Wullt Du den Torent daalladen oder sekern?"
 msgid "Download Torrent"
 msgstr "Torrent daalladen"
 
+#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (title), widget (QGroupBox, DlSpdGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (KPushButton, m_download)
 #: plugins/search/searchwidget.cpp:247 plugins/stats/DisplaySettings.ui:37
 #: plugins/stats/Settings.ui:114 plugins/stats/Spd.ui:19
@@ -6750,8 +6750,8 @@ msgstr "Begeefnis"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ConnsWgt)
 #. i18n: ectx: property (title), widget (QGroupBox, ConnsGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_11)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#. i18n: ectx: property (text), widget (QLabel, label_11)
 #: plugins/stats/Conns.ui:13 plugins/stats/Conns.ui:19
 #: plugins/stats/DisplaySettings.ui:505 plugins/stats/Settings.ui:140
 msgid "Connections"
@@ -6851,10 +6851,10 @@ msgstr "Vun Sugers"
 msgid "From seeds"
 msgstr "Vun Verdelen"
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#. i18n: ectx: property (title), widget (QGroupBox, UlSpdGbw)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #. i18n: ectx: property (text), widget (QLabel, label_15)
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#. i18n: ectx: property (title), widget (QGroupBox, UlSpdGbw)
 #: plugins/stats/DisplaySettings.ui:364 plugins/stats/DisplaySettings.ui:374
 #: plugins/stats/Settings.ui:192 plugins/stats/Spd.ui:43
 msgid "Upload"

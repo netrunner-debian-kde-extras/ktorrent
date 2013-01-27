@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-14 19:51+0200\n"
-"PO-Revision-Date: 2012-08-27 20:25+0300\n"
+"POT-Creation-Date: 2012-12-19 08:39+0100\n"
+"PO-Revision-Date: 2012-09-26 18:32+0300\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
 "Language: fi\n"
@@ -196,7 +196,7 @@ msgstr "KTorrentissa on käynnissä yksi tai useampia torrentteja"
 msgid "Cannot create torrent: %1"
 msgstr "Ei voitu luoda torrenttia: %1"
 
-#: ktorrent/core.cpp:1212
+#: ktorrent/core.cpp:1216
 msgid ""
 "One or more storage volumes are not mounted. In order to start this torrent, "
 "they need to be mounted."
@@ -204,22 +204,22 @@ msgstr ""
 "Yksi tai useampi taltio ei ole liitettynä. Tämän torrentin käynnistämiseksi "
 "niiden tarvitsee olla liitettynä."
 
-#: ktorrent/core.cpp:1213
+#: ktorrent/core.cpp:1217
 msgid "Retry"
 msgstr "Yritä uudelleen"
 
-#: ktorrent/core.cpp:1222
+#: ktorrent/core.cpp:1226
 #, kde-format
 msgid "Storage volume %1 is not mounted"
 msgstr "Taltio %1 ei ole liitettynä"
 
 # %1 is a comma separated list of storage volumes.
-#: ktorrent/core.cpp:1224
+#: ktorrent/core.cpp:1228
 #, kde-format
 msgid "Storage volumes %1 are not mounted"
 msgstr "Taltiot %1 eivät ole liitettynä"
 
-#: ktorrent/core.cpp:1236
+#: ktorrent/core.cpp:1240
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -228,21 +228,21 @@ msgstr ""
 "Torrentista ”%1” puuttuu tiedostoja.\n"
 "Haluatko luoda ne uudelleen vai jättää ne lataamatta?"
 
-#: ktorrent/core.cpp:1245 ktorrent/core.cpp:1256 ktorrent/core.cpp:1269
+#: ktorrent/core.cpp:1249 ktorrent/core.cpp:1260 ktorrent/core.cpp:1273
 msgid "Data files are missing"
 msgstr "Tiedostoja puuttuu"
 
-#: ktorrent/core.cpp:1255
+#: ktorrent/core.cpp:1259
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Ei voitu poistaa valintaa puuttuvilta tiedostoilta: %1"
 
-#: ktorrent/core.cpp:1268
+#: ktorrent/core.cpp:1272
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Ei voitu luoda puuttuvia tiedostoja: %1"
 
-#: ktorrent/core.cpp:1279
+#: ktorrent/core.cpp:1283
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing.\n"
@@ -251,16 +251,16 @@ msgstr ""
 "Tiedosto, johon torrentin ”%1” data on tallennettu, puuttuu. \n"
 "Haluatko luoda sen uudelleen?"
 
-#: ktorrent/core.cpp:1286 ktorrent/core.cpp:1296
+#: ktorrent/core.cpp:1290 ktorrent/core.cpp:1300
 msgid "Data file is missing"
 msgstr "Tiedosto puuttuu"
 
-#: ktorrent/core.cpp:1295
+#: ktorrent/core.cpp:1299
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Ei voitu luoda uudelleen tiedostoa: %1"
 
-#: ktorrent/core.cpp:1383
+#: ktorrent/core.cpp:1387
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -273,16 +273,16 @@ msgstr[0] ""
 msgstr[1] ""
 "KTorrent on havainnut %1 KDE3-version KTorrent-torrentia, haluatko tuoda ne?"
 
-#: ktorrent/core.cpp:1405
+#: ktorrent/core.cpp:1409
 msgid "No torrents from the KDE3 version were found."
 msgstr "KDE3-version torrentteja ei löytynyt."
 
-#: ktorrent/core.cpp:1444
+#: ktorrent/core.cpp:1448
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
-msgstr "Kelvoton Magnet-torrenttilinkki: %1"
+msgstr "Virheellinen Magnet-torrenttilinkki: %1"
 
-#: ktorrent/core.cpp:1449
+#: ktorrent/core.cpp:1453
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -591,8 +591,8 @@ msgstr "Olemassa olevia tiedostoja ei löytynyt"
 msgid "Options"
 msgstr "Valinnat"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/fileselectdlg.ui:207 ktorrent/dialogs/pastedlgbase.ui:77
 msgid "Group:"
 msgstr "Ryhmä:"
@@ -641,8 +641,8 @@ msgstr "Latauksen jälkeen:"
 msgid "Cannot load the torrent file: %1"
 msgstr "Ei voi ladata torrent-tiedostoa: %1"
 
-#: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:67
-#: plugins/ipfilter/convertthread.cpp:167
+#: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:66
+#: plugins/ipfilter/convertthread.cpp:166
 #: plugins/search/searchenginelist.cpp:192
 #, kde-format
 msgid "Cannot open %1: %2"
@@ -772,7 +772,7 @@ msgstr "Avaa verkko-osoite"
 #: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:348
 #, kde-format
 msgid "Invalid URL: %1"
-msgstr "Kelvoton URL: %1"
+msgstr "Virheellinen URL: %1"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -789,7 +789,7 @@ msgstr "Avaa hiljaisesti"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpeedLimitsDlg)
 #: ktorrent/dialogs/speedlimitsdlg.cpp:50
-#: ktorrent/dialogs/speedlimitsdlg.ui:14 ktorrent/view/view.cpp:256
+#: ktorrent/dialogs/speedlimitsdlg.ui:14 ktorrent/view/view.cpp:260
 msgid "Speed Limits"
 msgstr "Nopeusrajoitukset"
 
@@ -810,8 +810,8 @@ msgid "Global Limits"
 msgstr "Järjestelmänlaajuiset rajoitukset"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
+#. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ktorrent/dialogs/speedlimitsdlg.ui:70 ktorrent/pref/networkpref.ui:111
 #: ktorrent/pref/recommendedsettingsdlg.ui:221
 #: plugins/bwscheduler/bwprefpage.ui:65
@@ -869,9 +869,9 @@ msgstr "Rajoitukseton"
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_rate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_max_download_rate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_max_upload_rate)
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_avg_speed_slot)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxDownloadRate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxUploadRate)
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_avg_speed_slot)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverUploadLimit)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverDownloadLimit)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_download_limit)
@@ -893,8 +893,8 @@ msgid " KiB/s"
 msgstr " KiB/s"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/speedlimitsdlg.ui:93 ktorrent/pref/networkpref.ui:134
 #: ktorrent/pref/recommendedsettingsdlg.ui:207
@@ -1249,31 +1249,31 @@ msgstr "Sulje nykyinen välilehti"
 msgid "Edit Group Policy"
 msgstr "Muokkaa ryhmäkäytännettä"
 
-#: ktorrent/groups/groupview.cpp:81
+#: ktorrent/groups/groupview.cpp:80
 msgid "Open In New Tab"
 msgstr "Avaa uuteen välilehteen"
 
-#: ktorrent/groups/groupview.cpp:85 ktorrent/view/view.cpp:221
+#: ktorrent/groups/groupview.cpp:84 ktorrent/view/view.cpp:225
 msgid "New Group"
 msgstr "Uusi ryhmä"
 
-#: ktorrent/groups/groupview.cpp:89
+#: ktorrent/groups/groupview.cpp:88
 msgid "Edit Name"
 msgstr "Muuta nimeä"
 
-#: ktorrent/groups/groupview.cpp:93
+#: ktorrent/groups/groupview.cpp:92
 msgid "Remove Group"
 msgstr "Poista ryhmä"
 
-#: ktorrent/groups/groupview.cpp:97
+#: ktorrent/groups/groupview.cpp:96
 msgid "Group Policy"
 msgstr "Ryhmäkäytänne"
 
-#: ktorrent/groups/groupview.cpp:110
+#: ktorrent/groups/groupview.cpp:109
 msgid "Please enter the group name."
 msgstr "Anna ryhmän nimi."
 
-#: ktorrent/groups/groupview.cpp:117
+#: ktorrent/groups/groupview.cpp:116
 #, kde-format
 msgid "The group %1 already exists."
 msgstr "Ryhmä %1 on jo olemassa."
@@ -1311,8 +1311,8 @@ msgid "Open a URL which points to a torrent, magnet links are supported"
 msgstr "Avaa torrenttiin osoittava verkko-osoite (Magnet-linkit ovat tuettuja)"
 
 #: ktorrent/gui.cpp:440 plugins/ipfilter/ipblockingprefpage.cpp:35
-#: plugins/ipfilter/ipfilterplugin.cpp:62
-#: plugins/ipfilter/ipfilterplugin.cpp:75
+#: plugins/ipfilter/ipfilterplugin.cpp:60
+#: plugins/ipfilter/ipfilterplugin.cpp:73
 msgid "IP Filter"
 msgstr "IP-suodatin"
 
@@ -1351,9 +1351,9 @@ msgid ""
 "XXX.XXX'.<br/><br/>You can also use wildcards like '127.0.0.*' or specify "
 "ranges like '200.10.10.0-200.10.10.40'."
 msgstr ""
-"Kelvoton IP-osoite <b>%1</b>. IP-osoitteiden tulee olla muodossa ”xxx.xxx."
-"xxx.xxx”.<br/><br/>Voit käyttää myös jokerimerkkejä, esim. ”127.0.0.*”, tai "
-"määrittää alueen, esim. ”200.10.10.0-200.10.10.40”."
+"Virheellinen IP-osoite <b>%1</b>. IP-osoitteiden tulee olla muodossa ”xxx."
+"xxx.xxx.xxx”.<br/><br/>Voit käyttää myös jokerimerkkejä, esim. ”127.0.0.*”, "
+"tai määrittää alueen, esim. ”200.10.10.0-200.10.10.40”."
 
 #: ktorrent/ipfilterwidget.cpp:139
 msgid "Choose a file"
@@ -1441,12 +1441,12 @@ msgid "Advanced"
 msgstr "Lisäasetukset"
 
 #. i18n: ectx: Menu (OpenDirMenu)
-#: ktorrent/kttorrentactivityui.rc:62 ktorrent/view/view.cpp:242
+#: ktorrent/kttorrentactivityui.rc:62 ktorrent/view/view.cpp:246
 msgid "Open Directory"
 msgstr "Avaa kansio"
 
 #. i18n: ectx: Menu (GroupsSubMenu)
-#: ktorrent/kttorrentactivityui.rc:68 ktorrent/view/view.cpp:245
+#: ktorrent/kttorrentactivityui.rc:68 ktorrent/view/view.cpp:249
 msgid "Add to Group"
 msgstr "Lisää ryhmään"
 
@@ -2259,11 +2259,9 @@ msgstr "Avaa kaikki torrentit hiljaisesti"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_suppressSleep)
 #: ktorrent/pref/generalpref.ui:146
-#, fuzzy
-#| msgid "Suppress sleep when torrents are running"
 msgid ""
 "Prevent computer from going into a sleep state when torrents are running."
-msgstr "Älä salli koneen siirtyä valmiustilaan, kun torrentteja ladataan"
+msgstr "Estä koneen siirtyminen valmiustilaan, kun torrentteja ladataan"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_suppressSleep)
 #: ktorrent/pref/generalpref.ui:149
@@ -2322,8 +2320,8 @@ msgid ""
 "</p>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
 #: ktorrent/pref/networkpref.ui:71 ktorrent/pref/recommendedsettingsdlg.ui:235
 #: plugins/bwscheduler/edititemdlg.ui:229
 msgid "Maximum connections per torrent:"
@@ -2334,8 +2332,8 @@ msgstr "Torrenttikohtaisia yhteyksiä enintään:"
 msgid "The maximum number of connections allowed per torrent."
 msgstr "Torrenttia kohti sallittujen yhteyksien enimmäismäärä."
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_4)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ktorrent/pref/networkpref.ui:91 ktorrent/pref/recommendedsettingsdlg.ui:249
 #: plugins/bwscheduler/edititemdlg.ui:246
@@ -2513,29 +2511,14 @@ msgstr "Käytä välityspalvelinta web-jakoihin"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useProxyForTracker)
 #: ktorrent/pref/proxypref.ui:84
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Whether or not to use "
-#| "the HTTP proxy for tracker connections.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Whether or not to use the "
 "HTTP proxy for tracker connections.</p>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
-"weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Käytetäänkö HTTP-"
-"välityspalvelinta seurantapalvelinyhteyksiin.</p></body></html>"
+"välityspalvelinta seurantapalvelinyhteyksiin.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxyForTracker)
 #: ktorrent/pref/proxypref.ui:87
@@ -2567,10 +2550,8 @@ msgstr "Palvelin:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_socksProxy)
 #: ktorrent/pref/proxypref.ui:123
-#, fuzzy
-#| msgid "IP address or hostname of the HTTP proxy to use. "
 msgid "<p>IP address or hostname of the SOCKS server</p>"
-msgstr "Käytettävän HTTP-välityspalvelimen verkko-osoite tai -nimi."
+msgstr "<p>SOCKS-välityspalvelimen verkko-osoite tai -nimi</p>"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_socksPort)
 #: ktorrent/pref/proxypref.ui:137
@@ -2623,8 +2604,8 @@ msgstr "Salasana:"
 msgid "Password for the SOCKS proxy server."
 msgstr "SOCKS-välityspalvelimen salasana"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: property (title), widget (QGroupBox, m_qm_group_box)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: ktorrent/pref/qmpref.cpp:25 ktorrent/pref/qmpref.ui:27
 #: ktorrent/pref/recommendedsettingsdlg.ui:266
 #: ktorrent/torrentactivity.cpp:100
@@ -2651,8 +2632,8 @@ msgstr ""
 msgid "Control torrents manually"
 msgstr "Hallitse torrentteja käsin"
 
-#. i18n: ectx: property (text), widget (QLabel, label_14)
 #. i18n: ectx: property (text), widget (QLabel, label_11)
+#. i18n: ectx: property (text), widget (QLabel, label_14)
 #: ktorrent/pref/qmpref.ui:35 ktorrent/pref/recommendedsettingsdlg.ui:288
 msgid "Maximum downloads:"
 msgstr "Latauksia enintään:"
@@ -2663,8 +2644,8 @@ msgid ""
 "The maximum number of simultaneous downloads the queue manager will run."
 msgstr "Jononhallinnnan samanaikaisten latausten enimmäismäärä."
 
-#. i18n: ectx: property (text), widget (QLabel, label_17)
 #. i18n: ectx: property (text), widget (QLabel, label_10)
+#. i18n: ectx: property (text), widget (QLabel, label_17)
 #: ktorrent/pref/qmpref.ui:55 ktorrent/pref/recommendedsettingsdlg.ui:302
 msgid "Maximum seeds:"
 msgstr "Jakoja enintään:"
@@ -2768,8 +2749,8 @@ msgstr ""
 msgid "Keep seeding after download is finished"
 msgstr "Jatka jakamista latauksen valmistuttua"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ktorrent/pref/qmpref.ui:202 ktorrent/pref/recommendedsettingsdlg.ui:274
 msgid "Number of upload slots:"
 msgstr "Lähetyspaikkojen määrä:"
@@ -2790,11 +2771,6 @@ msgstr "Oletusarvoinen enimmäisjakosuhde:"
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_maxRatio)
 #: ktorrent/pref/qmpref.ui:233
-#, fuzzy
-#| msgid ""
-#| "The maximum seed time in hours. Once you reach this time, the torrent "
-#| "will be stopped. This is only applied to newly opened torrents, existing "
-#| "torrents will not be affected by changing this."
 msgid ""
 "<p>The maximum share ratio, if this value is reached seeding will be "
 "stopped. This is only applied to newly opened torrents, existing torrents "
@@ -2802,9 +2778,11 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Attention: </span>This is not used when "
 "downloading, only when seeding.</p>"
 msgstr ""
-"Enimmäisjakoaika tunteina. Kun aika on saavutettu, torrentti pysäytetään. "
-"Tämä vaikuttaa vain arvon asettamisen jälkeen avattuihin torrentteihin, jo "
-"olemassa oleviin arvon muuttaminen ei vaikuta."
+"<p>Enimmäisjakosuhde. Kun arvo on saavutettu, jakaminen pysäytetään. Tämä "
+"vaikuttaa vain arvon asettamisen jälkeen avattuihin torrentteihin, jo "
+"olemassa oleviin arvon muuttaminen ei vaikuta.</p>\n"
+"<p><span style=\" font-weight:600;\">Huomio: </span>tätä ei käytetä "
+"torrenttia ladattaessa, vaan vain sitä jaettaessa.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: ktorrent/pref/qmpref.ui:249
@@ -2959,9 +2937,9 @@ msgstr "Magnet-linkki"
 msgid "Status"
 msgstr "Tila"
 
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (title), widget (QGroupBox, PeersSpdGbw)
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: ktorrent/tools/magnetmodel.cpp:136
 #: plugins/infowidget/infowidgetplugin.cpp:222
 #: plugins/stats/DisplaySettings.ui:165 plugins/stats/Settings.ui:166
@@ -2993,7 +2971,7 @@ msgstr "Poista Magnet"
 msgid "Order"
 msgstr "Järjestys"
 
-#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:495
+#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:533
 #: plugins/downloadorder/downloadorderdialog.cpp:80
 msgid "Name"
 msgstr "Nimi"
@@ -3316,28 +3294,6 @@ msgstr "Käytä käyttäjätietojen vaihtoa lisäkäyttäjien etsimiseen"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, superseeding)
 #: ktorrent/view/propertiesdlg.ui:45
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Superseeding mode, is a "
-#| "special seeding mode which allows you to achieve much higher seeding "
-#| "efficiencies. This results in less bandwidth used to spread a torrent.</"
-#| "p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">Note: </span>This should only be used if the swarm has not "
-#| "fully been established. Once there are multiple active seeders, this mode "
-#| "becomes useless.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Superseeding mode, is a "
@@ -3352,13 +3308,6 @@ msgid ""
 "fully been established. Once there are multiple active seeders, this mode "
 "becomes useless.</p>"
 msgstr ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
-"weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Alkujakotila on erityinen "
 "jakamistapa, joka mahdollistaa entistä paremman jakotehokkuuden. Torrentin "
@@ -3369,8 +3318,7 @@ msgstr ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">HUOM: </span>Tätä tulisi käyttää vain kun parvi ei ole vielä "
-"täysin muodostunut. Kun aktiivisia jakajia on monia, tämä on hyödytön.</p></"
-"body></html>"
+"täysin muodostunut. Kun aktiivisia jakajia on monia, tämä on hyödytön.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, superseeding)
 #: ktorrent/view/propertiesdlg.ui:48
@@ -3405,29 +3353,14 @@ msgstr "Löytyi:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_found)
 #: ktorrent/view/scanextender.ui:43
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks "
-#| "which were not downloaded but have been found anyway.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "were not downloaded but have been found anyway.</p>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-"size:8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Niiden lohkojen määrä, "
-"joita ei ladattu mutta löydettiin kuitenkin.</p></body></html>"
+"joita ei ladattu mutta löydettiin kuitenkin.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, chunks_found)
 #. i18n: ectx: property (text), widget (QLabel, chunks_failed)
@@ -3445,29 +3378,14 @@ msgstr "Epäonnistui:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_failed)
 #: ktorrent/view/scanextender.ui:82
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks "
-#| "which have been downloaded, and which are not OK.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "have been downloaded, and which are not OK.</p>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-"size:8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Ladattujen mutta "
-"viallisten lohkojen määrä.</p></body></html>"
+"viallisten lohkojen määrä.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/view/scanextender.ui:108
@@ -3494,29 +3412,14 @@ msgstr "Ladattu:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_downloaded)
 #: ktorrent/view/scanextender.ui:166
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks "
-#| "which have been downloaded, and which are OK.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "have been downloaded, and which are OK.</p>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-"size:8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Ladattujen ja kunnollisten "
-"lohkojen määrä.</p></body></html>"
+"lohkojen määrä.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, error_msg)
 #: ktorrent/view/scanextender.ui:230
@@ -3527,136 +3430,136 @@ msgstr "Virhe"
 msgid "Torrent filter"
 msgstr "Torrent-suodatin"
 
-#: ktorrent/view/view.cpp:135
+#: ktorrent/view/view.cpp:139
 msgctxt "@action Start all selected torrents in the current tab"
 msgid "Start"
 msgstr "Käynnistä"
 
-#: ktorrent/view/view.cpp:136
+#: ktorrent/view/view.cpp:140
 msgid "Start all selected torrents in the current tab"
 msgstr "Käynnistä kaikki valitut torrentit nykyiseltä välilehdeltä"
 
-#: ktorrent/view/view.cpp:141
+#: ktorrent/view/view.cpp:145
 msgctxt "@action Force start all selected torrents in the current tab"
 msgid "Force Start"
 msgstr "Pakota käynnistys"
 
-#: ktorrent/view/view.cpp:142
+#: ktorrent/view/view.cpp:146
 msgid "Force start all selected torrents in the current tab"
 msgstr ""
 "Pakota käynnistys kaikille valituille torrenteille nykyiseltä välilehdeltä"
 
-#: ktorrent/view/view.cpp:146
+#: ktorrent/view/view.cpp:150
 msgctxt "@action Stop all selected torrents in the current tab"
 msgid "Stop"
 msgstr "Pysäytä"
 
-#: ktorrent/view/view.cpp:147
+#: ktorrent/view/view.cpp:151
 msgid "Stop all selected torrents in the current tab"
 msgstr "Pysäytä kaikki valitut torrentit nykyiseltä välilehdeltä"
 
-#: ktorrent/view/view.cpp:152
+#: ktorrent/view/view.cpp:156
 msgctxt "@action Pause all selected torrents in the current tab"
 msgid "Pause"
 msgstr "Keskeytä"
 
-#: ktorrent/view/view.cpp:153
+#: ktorrent/view/view.cpp:157
 msgid "Pause all selected torrents in the current tab"
 msgstr "Keskeytä kaikki valitut torrentit nykyiseltä välilehdeltä"
 
-#: ktorrent/view/view.cpp:157
+#: ktorrent/view/view.cpp:161
 msgctxt "@action Remove all selected torrents in the current tab"
 msgid "Remove"
 msgstr "Poista"
 
-#: ktorrent/view/view.cpp:158
+#: ktorrent/view/view.cpp:162
 msgid "Remove all selected torrents in the current tab"
 msgstr "Poista kaikki valitut torrentit nykyiseltä välilehdeltä"
 
-#: ktorrent/view/view.cpp:163
+#: ktorrent/view/view.cpp:167
 msgctxt "@action Start all torrents in the current tab"
 msgid "Start All"
 msgstr "Käynnistä kaikki"
 
-#: ktorrent/view/view.cpp:164
+#: ktorrent/view/view.cpp:168
 msgid "Start all torrents in the current tab"
 msgstr "Käynnistää kaikki nykyisen välilehden torrentit"
 
-#: ktorrent/view/view.cpp:169
+#: ktorrent/view/view.cpp:173
 msgctxt "@action Stop all torrents in the current tab"
 msgid "Stop All"
 msgstr "Pysäytä kaikki"
 
-#: ktorrent/view/view.cpp:170
+#: ktorrent/view/view.cpp:174
 msgid "Stop all torrents in the current tab"
 msgstr "Pysäyttää kaikki nykyisen välilehden torrentit"
 
-#: ktorrent/view/view.cpp:175
+#: ktorrent/view/view.cpp:179
 msgid "Remove Torrent and Data"
 msgstr "Poista torrentti ja tiedostot"
 
-#: ktorrent/view/view.cpp:180
+#: ktorrent/view/view.cpp:184
 msgid "Rename Torrent"
 msgstr "Muuta torrentin nimeä"
 
-#: ktorrent/view/view.cpp:184
+#: ktorrent/view/view.cpp:188
 msgid "Add Peers"
 msgstr "Lisää lähteitä"
 
-#: ktorrent/view/view.cpp:188
+#: ktorrent/view/view.cpp:192
 msgid "Manual Announce"
 msgstr "Manuaalinen päivitys"
 
-#: ktorrent/view/view.cpp:193
+#: ktorrent/view/view.cpp:197
 msgid "Scrape"
 msgstr ""
 
-#: ktorrent/view/view.cpp:197
+#: ktorrent/view/view.cpp:201
 msgid "Preview"
 msgstr "Esikatselu"
 
-#: ktorrent/view/view.cpp:201
+#: ktorrent/view/view.cpp:205
 msgid "Data Directory"
 msgstr "Datakansio"
 
-#: ktorrent/view/view.cpp:205
+#: ktorrent/view/view.cpp:209
 msgid "Temporary Directory"
 msgstr "Väliaikaiskansio"
 
-#: ktorrent/view/view.cpp:209
+#: ktorrent/view/view.cpp:213
 msgid "Move Data"
 msgstr "Siirrä data"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, StatsSettingsWgt)
-#: ktorrent/view/view.cpp:213 plugins/stats/Settings.ui:13
+#: ktorrent/view/view.cpp:217 plugins/stats/Settings.ui:13
 msgid "Settings"
 msgstr "Asetukset"
 
-#: ktorrent/view/view.cpp:217
+#: ktorrent/view/view.cpp:221
 msgid "Remove from Group"
 msgstr "Poista ryhmästä"
 
-#: ktorrent/view/view.cpp:225
+#: ktorrent/view/view.cpp:229
 msgid "Check Data"
 msgstr "Tarkista data"
 
-#: ktorrent/view/view.cpp:226
+#: ktorrent/view/view.cpp:230
 msgid "Check all the data of a torrent"
 msgstr "Tarkista torrentin kaikki data"
 
-#: ktorrent/view/view.cpp:248
+#: ktorrent/view/view.cpp:252
 msgid "Copy Torrent URL"
 msgstr "Kopioi torrentin osoite"
 
-#: ktorrent/view/view.cpp:252
+#: ktorrent/view/view.cpp:256
 msgid "Export Torrent"
 msgstr "Vie torrentti"
 
-#: ktorrent/view/view.cpp:257
+#: ktorrent/view/view.cpp:261
 msgid "Set the speed limits of individual torrents"
 msgstr "Aseta yksittäisten torrenttien nopeusrajoitukset"
 
-#: ktorrent/view/view.cpp:466
+#: ktorrent/view/view.cpp:470
 #, kde-format
 msgid ""
 "The torrent <b>%1</b> has not finished downloading, do you want to delete "
@@ -3664,19 +3567,19 @@ msgid ""
 msgstr ""
 "Torrentti <b>%1</b> ei ole valmis. Haluatko poistaa keskeneräisen datan?"
 
-#: ktorrent/view/view.cpp:471
+#: ktorrent/view/view.cpp:475
 msgid "Remove Download"
 msgstr "Poista lataus"
 
-#: ktorrent/view/view.cpp:472
+#: ktorrent/view/view.cpp:476
 msgid "Delete Data"
 msgstr "Poista data"
 
-#: ktorrent/view/view.cpp:473
+#: ktorrent/view/view.cpp:477
 msgid "Keep Data"
 msgstr "Säilytä data"
 
-#: ktorrent/view/view.cpp:498
+#: ktorrent/view/view.cpp:502
 msgid ""
 "You will lose all the downloaded data of the following torrents. Are you "
 "sure you want to do this?"
@@ -3684,107 +3587,107 @@ msgstr ""
 "Menetät kaikki seuraavien torrenttien ladatut tiedostot. Haluatko varmasti "
 "jatkaa?"
 
-#: ktorrent/view/view.cpp:499
+#: ktorrent/view/view.cpp:503
 msgid "Remove Torrent"
 msgstr "Poista torrentti"
 
-#: ktorrent/view/view.cpp:595 plugins/infowidget/fileview.cpp:354
+#: ktorrent/view/view.cpp:599 plugins/infowidget/fileview.cpp:354
 #: plugins/infowidget/fileview.cpp:375
 msgid "Select a directory to move the data to."
 msgstr "Valitse kansio, johon data siirretään."
 
-#: ktorrent/view/viewmodel.cpp:496 plugins/infowidget/peerviewmodel.cpp:266
+#: ktorrent/view/viewmodel.cpp:535 plugins/infowidget/peerviewmodel.cpp:266
 #: plugins/infowidget/webseedsmodel.cpp:126
 msgid "Downloaded"
 msgstr "Ladattu"
 
-#: ktorrent/view/viewmodel.cpp:497
+#: ktorrent/view/viewmodel.cpp:537
 #: libktcore/torrent/torrentfilelistmodel.cpp:77
 #: libktcore/torrent/torrentfiletreemodel.cpp:400
 msgid "Size"
 msgstr "Koko"
 
-#: ktorrent/view/viewmodel.cpp:498 plugins/infowidget/peerviewmodel.cpp:267
+#: ktorrent/view/viewmodel.cpp:539 plugins/infowidget/peerviewmodel.cpp:267
 msgid "Uploaded"
 msgstr "Lähetetty"
 
-#: ktorrent/view/viewmodel.cpp:499
+#: ktorrent/view/viewmodel.cpp:541
 msgctxt "Bytes left to downloaded"
 msgid "Left"
 msgstr "Jäljellä"
 
-#: ktorrent/view/viewmodel.cpp:500
+#: ktorrent/view/viewmodel.cpp:543
 #: plugins/infowidget/chunkdownloadmodel.cpp:200
 #: plugins/infowidget/peerviewmodel.cpp:257
 msgid "Down Speed"
 msgstr "Latausnopeus"
 
-#: ktorrent/view/viewmodel.cpp:501 plugins/infowidget/peerviewmodel.cpp:258
+#: ktorrent/view/viewmodel.cpp:545 plugins/infowidget/peerviewmodel.cpp:258
 msgid "Up Speed"
 msgstr "Lähetysnopeus"
 
-#: ktorrent/view/viewmodel.cpp:502
+#: ktorrent/view/viewmodel.cpp:547
 msgid "Time Left"
 msgstr "Aikaa jäljellä"
 
-#: ktorrent/view/viewmodel.cpp:503 plugins/infowidget/trackermodel.cpp:149
+#: ktorrent/view/viewmodel.cpp:549 plugins/infowidget/trackermodel.cpp:149
 msgid "Seeders"
 msgstr "Jakajia"
 
-#: ktorrent/view/viewmodel.cpp:504 plugins/infowidget/trackermodel.cpp:150
+#: ktorrent/view/viewmodel.cpp:551 plugins/infowidget/trackermodel.cpp:150
 msgid "Leechers"
 msgstr "Lataajia"
 
-#: ktorrent/view/viewmodel.cpp:506
+#: ktorrent/view/viewmodel.cpp:554
 #, no-c-format
 msgid "% Complete"
 msgstr " % valmiina"
 
-#: ktorrent/view/viewmodel.cpp:507
+#: ktorrent/view/viewmodel.cpp:556
 msgid "Share Ratio"
 msgstr "Jakosuhde"
 
-#: ktorrent/view/viewmodel.cpp:508
+#: ktorrent/view/viewmodel.cpp:558
 msgid "Time Downloaded"
 msgstr "Latausaika"
 
-#: ktorrent/view/viewmodel.cpp:509
+#: ktorrent/view/viewmodel.cpp:560
 msgid "Time Seeded"
 msgstr "Jakoaika"
 
-#: ktorrent/view/viewmodel.cpp:510
+#: ktorrent/view/viewmodel.cpp:562
 msgid "Location"
 msgstr "Sijainti"
 
-#: ktorrent/view/viewmodel.cpp:511
+#: ktorrent/view/viewmodel.cpp:564
 msgid "Added"
 msgstr "Lisätty"
 
-#: ktorrent/view/viewmodel.cpp:519
+#: ktorrent/view/viewmodel.cpp:574
 msgid "How much data we have downloaded of the torrent"
 msgstr "Paljonko torrentin datasta on ladattu"
 
-#: ktorrent/view/viewmodel.cpp:520
+#: ktorrent/view/viewmodel.cpp:576
 msgid "Total size of the torrent, excluded files are not included"
 msgstr "Torrentin kokonaiskoko lukuun ottamatta ohitettuja tiedostoja"
 
-#: ktorrent/view/viewmodel.cpp:521
+#: ktorrent/view/viewmodel.cpp:578
 msgid "How much data we have uploaded"
 msgstr "Paljonko dataa on lähetetty"
 
-#: ktorrent/view/viewmodel.cpp:522
+#: ktorrent/view/viewmodel.cpp:580
 msgid "How much data left to download"
 msgstr "Paljonko dataa on lataamatta"
 
-#: ktorrent/view/viewmodel.cpp:523
+#: ktorrent/view/viewmodel.cpp:582
 msgid "Current download speed"
 msgstr "Nykyinen latausnopeus"
 
-#: ktorrent/view/viewmodel.cpp:524
+#: ktorrent/view/viewmodel.cpp:584
 msgid "Current upload speed"
 msgstr "Nykyinen lähetysnopeus"
 
-#: ktorrent/view/viewmodel.cpp:525
+#: ktorrent/view/viewmodel.cpp:586
 msgid ""
 "How much time is left before the torrent is finished or before the maximum "
 "share ratio is reached, if that is enabled"
@@ -3792,7 +3695,7 @@ msgstr ""
 "Kauanko on jäljellä ennen torrentin valmistumista tai ennen "
 "enimmäisjakosuhteen saavuttamista (jos käytössä)"
 
-#: ktorrent/view/viewmodel.cpp:526
+#: ktorrent/view/viewmodel.cpp:588
 msgid ""
 "How many seeders we are connected to (How many seeders there are according "
 "to the tracker)"
@@ -3800,7 +3703,7 @@ msgstr ""
 "Moneenko jakajaan ollaan yhteydessä (montako jakajaa seurantapalvelin "
 "ilmoittaa)"
 
-#: ktorrent/view/viewmodel.cpp:527
+#: ktorrent/view/viewmodel.cpp:590
 msgid ""
 "How many leechers we are connected to (How many leechers there are according "
 "to the tracker)"
@@ -3808,8 +3711,7 @@ msgstr ""
 "Moneenko lataajaan ollaan yhteydessä (montako lataajaa seurantapalvelin "
 "ilmoittaa)"
 
-#: ktorrent/view/viewmodel.cpp:529
-#, no-c-format
+#: ktorrent/view/viewmodel.cpp:593
 msgid ""
 "The percentage of data we have of the whole torrent, not including excluded "
 "files"
@@ -3817,35 +3719,35 @@ msgstr ""
 "Ladattu osuus torrentin kokonaisdatasta lukuun ottamatta ohitettuja "
 "tiedostoja"
 
-#: ktorrent/view/viewmodel.cpp:530
+#: ktorrent/view/viewmodel.cpp:595
 msgid ""
 "Share ratio is the number of bytes uploaded divided by the number of bytes "
 "downloaded"
 msgstr ""
 "Jakosuhde on lähetettyjen tavujen määrä jaettuna ladattujen tavujen määrällä"
 
-#: ktorrent/view/viewmodel.cpp:531
+#: ktorrent/view/viewmodel.cpp:597
 msgid "How long we have been downloading the torrent"
 msgstr "Kauanko torrenttia on ladattu"
 
-#: ktorrent/view/viewmodel.cpp:532
+#: ktorrent/view/viewmodel.cpp:599
 msgid "How long we have been seeding the torrent"
 msgstr "Kauanko torrenttia on jaettu"
 
-#: ktorrent/view/viewmodel.cpp:533
+#: ktorrent/view/viewmodel.cpp:601
 msgid "The location of the torrent's data on disk"
 msgstr "Torrentin sijainti levyllä"
 
-#: ktorrent/view/viewmodel.cpp:534
+#: ktorrent/view/viewmodel.cpp:603
 msgid "When this torrent was added"
 msgstr "Kun tämä torrentti lisättiin"
 
-#: ktorrent/view/viewmodel.cpp:583
+#: ktorrent/view/viewmodel.cpp:653
 #, kde-format
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "%1<br>Verkko-osoite: <b>%2</b>"
 
-#: ktorrent/view/viewmodel.cpp:589
+#: ktorrent/view/viewmodel.cpp:659
 msgid "<br/><br/>Unable to contact a tracker."
 msgstr "<br/><br/>Seurantapalvelimeen ei saada yhteyttä."
 
@@ -3899,7 +3801,7 @@ msgstr "Ohjaa portti"
 #. i18n: ectx: property (text), widget (QPushButton, m_undo_forward)
 #: ktupnptest/upnptestwidget.ui:132 plugins/upnp/upnpwidget.ui:34
 msgid "Undo Forward"
-msgstr "Peru porttien ohjaus"
+msgstr "Kumoa porttien ohjaus"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_verbose)
 #: ktupnptest/upnptestwidget.ui:139
@@ -4592,10 +4494,8 @@ msgid "Seasons and Episodes"
 msgstr "Kaudet ja jaksot"
 
 #: plugins/downloadorder/downloadorderdialog.cpp:82
-#, fuzzy
-#| msgid "Add Trackers"
 msgid "Album Track Order"
-msgstr "Lisää seurantapalvelimia"
+msgstr "Albumin kappalejärjestys"
 
 #. i18n: ectx: property (text), widget (QLabel, m_top_label)
 #: plugins/downloadorder/downloadorderwidget.ui:20
@@ -4615,7 +4515,7 @@ msgstr "Mukautettu latausjärjestys käytössä"
 #. i18n: ectx: property (text), widget (QToolButton, m_sort_by)
 #: plugins/downloadorder/downloadorderwidget.ui:42
 msgid "Sort By"
-msgstr ""
+msgstr "Lajitteluperuste"
 
 #. i18n: ectx: property (placeholderText), widget (KLineEdit, m_search_files)
 #: plugins/downloadorder/downloadorderwidget.ui:52
@@ -4930,10 +4830,8 @@ msgstr "Näytä lista seurantapalvelimista"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showWebSeedsTab)
 #: plugins/infowidget/iwprefpage.ui:53
-#, fuzzy
-#| msgid "Whether or not to show the peers tab in the bottom of the window."
 msgid "Whether or not to show the webseeds tab at the bottom of the window."
-msgstr "Näytetäänkö Käyttäjät-välilehti ikkunan alalaidassa."
+msgstr "Näytetäänkö Web-jaot-välilehti ikkunan alalaidassa."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showWebSeedsTab)
 #: plugins/infowidget/iwprefpage.ui:56
@@ -4952,10 +4850,8 @@ msgstr "Ensimmäinen prioriteetti:"
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_firstColor)
 #: plugins/infowidget/iwprefpage.ui:79
-#, fuzzy
-#| msgid "Folder to store temporary files"
 msgid "Color to use for first priority files."
-msgstr "Kansio väliaikaistiedostoille"
+msgstr "Ensimmäisen prioriteetin tiedostojen väri"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: plugins/infowidget/iwprefpage.ui:86
@@ -4964,10 +4860,8 @@ msgstr "Viimeisin prioriteetti:"
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_lastColor)
 #: plugins/infowidget/iwprefpage.ui:93
-#, fuzzy
-#| msgid "Folder to store temporary files"
 msgid "Color to use for last priority files."
-msgstr "Kansio väliaikaistiedostoille"
+msgstr "Viimeisimmän prioriteetin tiedostojen väri"
 
 #. i18n: ectx: label, entry (showPeerView), group (general)
 #: plugins/infowidget/ktinfowidgetplugin.kcfg:10
@@ -5061,8 +4955,8 @@ msgid "Availability"
 msgstr "Saatavuus"
 
 #. i18n: ectx: property (title), widget (QGroupBox, DhtGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_12)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_5)
+#. i18n: ectx: property (text), widget (QLabel, label_12)
 #: plugins/infowidget/peerviewmodel.cpp:262 plugins/stats/Conns.ui:31
 #: plugins/stats/DisplaySettings.ui:796 plugins/stats/Settings.ui:234
 msgid "DHT"
@@ -5334,7 +5228,7 @@ msgid "Disable All"
 msgstr "Poista kaikki käytöstä"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
-#: plugins/ipfilter/convertdialog.ui:19 plugins/ipfilter/convertthread.cpp:174
+#: plugins/ipfilter/convertdialog.ui:19 plugins/ipfilter/convertthread.cpp:173
 msgid "Converting..."
 msgstr "Muunnetaan..."
 
@@ -5349,11 +5243,11 @@ msgstr ""
 msgid "C&ancel"
 msgstr "&Peru"
 
-#: plugins/ipfilter/convertthread.cpp:72
+#: plugins/ipfilter/convertthread.cpp:71
 msgid "Loading txt file..."
 msgstr "Ladataan txt-tiedostoa..."
 
-#: plugins/ipfilter/convertthread.cpp:156
+#: plugins/ipfilter/convertthread.cpp:155
 #, kde-format
 msgid "There are no IP addresses to convert in %1"
 msgstr "Kohteessa %1 ei ole muunnettavia IP-osoitteita"
@@ -5924,7 +5818,7 @@ msgstr "Siirrä-toiminto valittu."
 msgid "Scan directories recursively."
 msgstr "Etsi myös alikansioista."
 
-#: plugins/scanfolder/scanfolder.cpp:69 plugins/scanfolder/scanthread.cpp:194
+#: plugins/scanfolder/scanfolder.cpp:77 plugins/scanfolder/scanthread.cpp:194
 #: plugins/scanfolder/torrentloadqueue.cpp:166
 #: plugins/scanfolder/torrentloadqueue.cpp:167
 #: plugins/scanfolder/torrentloadqueue.cpp:170
@@ -5973,12 +5867,15 @@ msgstr "Poista kansio"
 msgid "Open the torrents without asking any questions."
 msgstr "Avaa torrentit kysymättä mitään."
 
+# Tämä ”loaded” viittaa edeltävään ”loaded”-viestiin.
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_recursive)
 #: plugins/scanfolder/scanfolderprefpage.ui:89
 msgid ""
 "Scan the folder recursively for torrents. <br/><br/>\n"
 "Note: This will not be done for any folder named loaded."
 msgstr ""
+"Etsi torrenteja kansiosta rekursiivisesti. <br/><br/>\n"
+"Huomio: näin ei tehdä kansioille, joiden nimi on ladattu."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_recursive)
 #: plugins/scanfolder/scanfolderprefpage.ui:92
@@ -6088,7 +5985,7 @@ msgstr "Arkistoa ei voitu avata luettavaksi."
 
 #: plugins/scripting/scriptmodel.cpp:116
 msgid "Invalid archive."
-msgstr "Kelvoton arkisto."
+msgstr "Virheellinen arkisto."
 
 #: plugins/scripting/scriptmodel.cpp:143
 #, kde-format
@@ -6258,8 +6155,8 @@ msgstr "Lisää piilokopio:"
 msgid "Current search engine"
 msgstr "Nykyinen hakukone:"
 
-#. i18n: ectx: label, entry (useDefaultBrowser), group (general)
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_useDefaultBrowser)
+#. i18n: ectx: label, entry (useDefaultBrowser), group (general)
 #: plugins/search/ktsearchplugin.kcfg:15 plugins/search/searchpref.ui:92
 msgid "Use default browser"
 msgstr "Oletusselain"
@@ -6464,9 +6361,9 @@ msgid "Download Torrent"
 msgstr "Lataa torrentti"
 
 # Osassa esiintymispaikoista pitäisi olla ”Lataa” (kuten haussa), osassa ”Lataus” (kuten tilastoissa).
+#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (title), widget (QGroupBox, DlSpdGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (KPushButton, m_download)
 #: plugins/search/searchwidget.cpp:247 plugins/stats/DisplaySettings.ui:37
 #: plugins/stats/Settings.ui:114 plugins/stats/Spd.ui:19
@@ -6634,8 +6531,8 @@ msgstr "Tapahtuma"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ConnsWgt)
 #. i18n: ectx: property (title), widget (QGroupBox, ConnsGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_11)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#. i18n: ectx: property (text), widget (QLabel, label_11)
 #: plugins/stats/Conns.ui:13 plugins/stats/Conns.ui:19
 #: plugins/stats/DisplaySettings.ui:505 plugins/stats/Settings.ui:140
 msgid "Connections"
@@ -6734,10 +6631,10 @@ msgstr "Lataajilta"
 msgid "From seeds"
 msgstr "Jaoista"
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#. i18n: ectx: property (title), widget (QGroupBox, UlSpdGbw)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #. i18n: ectx: property (text), widget (QLabel, label_15)
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#. i18n: ectx: property (title), widget (QGroupBox, UlSpdGbw)
 #: plugins/stats/DisplaySettings.ui:364 plugins/stats/DisplaySettings.ui:374
 #: plugins/stats/Settings.ui:192 plugins/stats/Spd.ui:43
 msgid "Upload"
@@ -7685,7 +7582,7 @@ msgstr "HTTP-Getiä ei tueta torrentin lähetyksessä"
 
 #: plugins/webinterface/torrentposthandler.cpp:65
 msgid "Invalid data received"
-msgstr "Vastaanotettu kelvotonta dataa"
+msgstr "Vastaanotettu virheellistä dataa"
 
 #: plugins/webinterface/torrentposthandler.cpp:77
 msgid "Failed to open temporary file"

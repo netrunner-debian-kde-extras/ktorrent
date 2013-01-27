@@ -1,6 +1,6 @@
 # Translation of ktorrent.po to Catalan
 #
-# Josep Ma. Ferrer <txemaq@gmail.com>, 2006, 2008, 2009, 2010, 2011, 2012.
+# Josep Ma. Ferrer <txemaq@gmail.com>, 2006, 2008, 2009, 2010, 2011, 2012, 2013.
 # Xavier Batlle i Pèlach <tevibp@wanadoo.es>, 2006.
 # Xavier Batlle i Pelach <tevi@eltercer.cat>, 2006.
 # Xavier Batlle Pelach <tevi@eltercer.cat>, 2007, 2008.
@@ -11,15 +11,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-14 19:51+0200\n"
-"PO-Revision-Date: 2012-02-05 08:13+0100\n"
+"POT-Creation-Date: 2012-12-19 08:39+0100\n"
+"PO-Revision-Date: 2013-01-11 23:12+0100\n"
 "Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -36,16 +36,12 @@ msgstr ""
 "joanmaspons@gmail.com"
 
 #: kio-magnet/dbushandler.cpp:96
-#, fuzzy
-#| msgid ""
-#| "The Web share for magnet-links is disabled.         You can set it up at "
-#| "settings:/network-and-connectivity/sharing"
 msgid ""
 "The Web share for magnet-links is disabled. You can set it up at settings:/"
 "network-and-connectivity/sharing"
 msgstr ""
-"La compartició Web per enllaços «magnet» està deshabilitada.         Podeu "
-"activar-la a settings:/network-and-connectivity/sharing"
+"La compartició Web per enllaços «magnet» està deshabilitada. Podeu activar-"
+"la a settings:/network-and-connectivity/sharing"
 
 #: kio-magnet/dbushandler.cpp:120
 msgid ""
@@ -92,15 +88,12 @@ msgid "Torrent has been removed from KTorrent."
 msgstr "El torrent s'ha eliminat del KTorrent."
 
 #: kio-magnet/kio_magnet.cpp:294 kio-magnet/kio_magnet.cpp:395
-#, fuzzy, kde-format
-#| msgid ""
-#| "File exists in KTorrent, but cannot open it on disk at path \"%1\". Have "
-#| "you removed the file manually?"
+#, kde-format
 msgid ""
 "File exists in KTorrent, but cannot open it on disk at path\"%1\". Have you "
 "removed the file manually?"
 msgstr ""
-"El fitxer existeix al KTorrent però no es pot obrir al camí del disc «%1». "
+"El fitxer existeix al KTorrent però no es pot obrir en el disc al camí «%1». "
 "Heu eliminat el fitxer manualment?"
 
 #: kio-magnet/kio_magnet.cpp:375
@@ -170,16 +163,13 @@ msgid "Document to open"
 msgstr "Document a obrir"
 
 #: ktorrent/core.cpp:180
-#, fuzzy, kde-format
-#| msgid ""
-#| "KTorrent is unable to accept connections because the TCP ports %1 is "
-#| "already in use by another program."
+#, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the TCP port %1 is already "
 "in use by another program."
 msgstr ""
 "El KTorrent no pot acceptar connexions perquè un altre programa està usant "
-"els ports TCP %1."
+"el port TCP %1."
 
 #: ktorrent/core.cpp:194
 #, kde-format
@@ -191,17 +181,14 @@ msgstr ""
 "el port UDP %1."
 
 #: ktorrent/core.cpp:307
-#, fuzzy, kde-format
-#| msgid ""
-#| "Opening the torrent <b>%1</b>, would share one or more files with the "
-#| "following torrents. .Torrents are not allowed to write to the same files. "
+#, kde-format
 msgid ""
 "Opening the torrent <b>%1</b>, would share one or more files with the "
 "following torrents. Torrents are not allowed to write to the same files. "
 msgstr ""
-"Obrint el torrent <b>%1</b>, es compartirà un o més fitxers amb els torrents "
-"següents. Els torrents no estan autoritzats a escriure en els mateixos "
-"fitxers. "
+"En obrir el torrent <b>%1</b>, es compartirà un o més fitxers amb els "
+"torrents següents. Els torrents no estan autoritzats a escriure en els "
+"mateixos fitxers. "
 
 #: ktorrent/core.cpp:1026
 msgid "KTorrent is running one or more torrents"
@@ -212,27 +199,29 @@ msgstr "El KTorrent està treballant amb un o més torrents"
 msgid "Cannot create torrent: %1"
 msgstr "No es pot crear el torrent: %1"
 
-#: ktorrent/core.cpp:1212
+#: ktorrent/core.cpp:1216
 msgid ""
 "One or more storage volumes are not mounted. In order to start this torrent, "
 "they need to be mounted."
 msgstr ""
+"Un o més volums d'emmagatzematge no estan muntats. Per tal d'iniciar aquest "
+"torrent, han d'estar muntats."
 
-#: ktorrent/core.cpp:1213
+#: ktorrent/core.cpp:1217
 msgid "Retry"
-msgstr ""
+msgstr "Torna a intentar-ho"
 
-#: ktorrent/core.cpp:1222
+#: ktorrent/core.cpp:1226
 #, kde-format
 msgid "Storage volume %1 is not mounted"
-msgstr ""
+msgstr "El volum d'emmagatzematge %1 no està muntat"
 
-#: ktorrent/core.cpp:1224
+#: ktorrent/core.cpp:1228
 #, kde-format
 msgid "Storage volumes %1 are not mounted"
-msgstr ""
+msgstr "Els volums d'emmagatzematge %1 no estan muntats"
 
-#: ktorrent/core.cpp:1236
+#: ktorrent/core.cpp:1240
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -241,21 +230,21 @@ msgstr ""
 "S'han perdut alguns fitxers de dades del torrent «%1». \n"
 "Voleu tornar-los a crear, o no els voleu baixar?"
 
-#: ktorrent/core.cpp:1245 ktorrent/core.cpp:1256 ktorrent/core.cpp:1269
+#: ktorrent/core.cpp:1249 ktorrent/core.cpp:1260 ktorrent/core.cpp:1273
 msgid "Data files are missing"
 msgstr "S'han perdut els fitxers de dades"
 
-#: ktorrent/core.cpp:1255
+#: ktorrent/core.cpp:1259
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "No s'han pogut desseleccionar els fitxers perduts: %1"
 
-#: ktorrent/core.cpp:1268
+#: ktorrent/core.cpp:1272
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "No s'han pogut tornar a crear els fitxers perduts: %1"
 
-#: ktorrent/core.cpp:1279
+#: ktorrent/core.cpp:1283
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing.\n"
@@ -264,16 +253,16 @@ msgstr ""
 "El fitxer on s'han desat les dades del torrent «%1» s'ha perdut.\n"
 "Voleu tornar-lo a crear?"
 
-#: ktorrent/core.cpp:1286 ktorrent/core.cpp:1296
+#: ktorrent/core.cpp:1290 ktorrent/core.cpp:1300
 msgid "Data file is missing"
 msgstr "Falta el fitxer de dades"
 
-#: ktorrent/core.cpp:1295
+#: ktorrent/core.cpp:1299
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "No es pot tornar a crear el fitxer de dades: %1"
 
-#: ktorrent/core.cpp:1383
+#: ktorrent/core.cpp:1387
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -288,16 +277,16 @@ msgstr[1] ""
 "El KTorrent ha trobat %1 torrents de la versió KDE3 del KTorrent, els voleu "
 "importar?"
 
-#: ktorrent/core.cpp:1405
+#: ktorrent/core.cpp:1409
 msgid "No torrents from the KDE3 version were found."
 msgstr "No s'han trobat torrents de la versió del KDE3."
 
-#: ktorrent/core.cpp:1444
+#: ktorrent/core.cpp:1448
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr "Enllaç «magnet» de bittorrent no vàlid: %1"
 
-#: ktorrent/core.cpp:1449
+#: ktorrent/core.cpp:1453
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -332,6 +321,10 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Note:</span> We accept both IPv4 and "
 "IPv6 addresses</p>\n"
 msgstr ""
+"<p>L'adreça IP o nom de màquina del parell al que voleu connectar, s'hauria "
+"de posar aquí.</p>\n"
+"<p><span style=\" font-weight:600;\">Nota:</span> S'accepten tant adreces "
+"IPv4 i IPv6</p>\n"
 
 #. i18n: ectx: property (text), widget (QLineEdit, m_ip)
 #. i18n: ectx: property (text), widget (KLineEdit, m_ip_to_add)
@@ -612,8 +605,8 @@ msgstr "No s'han trobat fitxers existents"
 msgid "Options"
 msgstr "Opcions"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/fileselectdlg.ui:207 ktorrent/dialogs/pastedlgbase.ui:77
 msgid "Group:"
 msgstr "Grup:"
@@ -631,6 +624,10 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Note: </span>only do this when you are "
 "absolutely sure.</p>"
 msgstr ""
+"<p>Quan s'han trobat els fitxers existents, omet la verificació de les dades "
+"i assumeix que els fitxers estan totalment baixats.</p>\n"
+"<p><span style=\" font-weight:600;\">Nota: </span>només feu això si esteu "
+"completament segur.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_skip_data_check)
 #: ktorrent/dialogs/fileselectdlg.ui:258
@@ -662,8 +659,8 @@ msgstr "Després de baixar:"
 msgid "Cannot load the torrent file: %1"
 msgstr "No es pot carregar el fitxer torrent: %1"
 
-#: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:67
-#: plugins/ipfilter/convertthread.cpp:167
+#: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:66
+#: plugins/ipfilter/convertthread.cpp:166
 #: plugins/search/searchenginelist.cpp:192
 #, kde-format
 msgid "Cannot open %1: %2"
@@ -746,7 +743,7 @@ msgstr "S'han perdut els fitxers següents:"
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_recreate)
 #: ktorrent/dialogs/missingfilesdlg.ui:34
 msgid "They are no longer there, recreate them."
-msgstr ""
+msgstr "Ja no hi són, els torno a crear."
 
 #. i18n: ectx: property (text), widget (KPushButton, m_recreate)
 #: ktorrent/dialogs/missingfilesdlg.ui:37
@@ -755,10 +752,8 @@ msgstr "Torna a crear"
 
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_dnd)
 #: ktorrent/dialogs/missingfilesdlg.ui:44
-#, fuzzy
-#| msgid "Cannot deselect missing files: %1"
 msgid "Do not download the missing files."
-msgstr "No s'han pogut desseleccionar els fitxers perduts: %1"
+msgstr "No es baixen els fitxers perduts."
 
 #. i18n: ectx: property (text), widget (KPushButton, m_dnd)
 #: ktorrent/dialogs/missingfilesdlg.ui:47 plugins/infowidget/fileview.cpp:123
@@ -769,6 +764,7 @@ msgstr "No descarreguis"
 #: ktorrent/dialogs/missingfilesdlg.ui:54
 msgid "The files have been moved to another location, select the new location."
 msgstr ""
+"Els fitxers s'han mogut a una altra ubicació, seleccioneu la nova ubicació."
 
 #. i18n: ectx: property (text), widget (KPushButton, m_select_new)
 #: ktorrent/dialogs/missingfilesdlg.ui:57
@@ -777,10 +773,8 @@ msgstr "Selecció d'ubicació nova"
 
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_cancel)
 #: ktorrent/dialogs/missingfilesdlg.ui:77
-#, fuzzy
-#| msgid "Don't start torrents"
 msgid "Cancel, do not start the torrent."
-msgstr "No iniciïs els torrents"
+msgstr "Cancel·la, no iniciïs el torrent."
 
 #. i18n: ectx: property (text), widget (KPushButton, m_cancel)
 #. i18n: ectx: property (text), widget (KPushButton, cancel_button)
@@ -814,7 +808,7 @@ msgstr "Obre silenciosament"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpeedLimitsDlg)
 #: ktorrent/dialogs/speedlimitsdlg.cpp:50
-#: ktorrent/dialogs/speedlimitsdlg.ui:14 ktorrent/view/view.cpp:256
+#: ktorrent/dialogs/speedlimitsdlg.ui:14 ktorrent/view/view.cpp:260
 msgid "Speed Limits"
 msgstr "Límits de velocitat"
 
@@ -835,8 +829,8 @@ msgid "Global Limits"
 msgstr "Límits globals"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
+#. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ktorrent/dialogs/speedlimitsdlg.ui:70 ktorrent/pref/networkpref.ui:111
 #: ktorrent/pref/recommendedsettingsdlg.ui:221
 #: plugins/bwscheduler/bwprefpage.ui:65
@@ -894,9 +888,9 @@ msgstr "Sense límit"
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_rate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_max_download_rate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_max_upload_rate)
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_avg_speed_slot)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxDownloadRate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxUploadRate)
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_avg_speed_slot)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverUploadLimit)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverDownloadLimit)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_download_limit)
@@ -918,8 +912,8 @@ msgid " KiB/s"
 msgstr " KiB/s"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/speedlimitsdlg.ui:93 ktorrent/pref/networkpref.ui:134
 #: ktorrent/pref/recommendedsettingsdlg.ui:207
@@ -1190,6 +1184,10 @@ msgid ""
 "location in the dialog will be set to this. You can still override it, if "
 "you want to."
 msgstr ""
+"Ubicació per defecte per desar els torrents d'aquest grup. <br/><br/>Això "
+"només s'utilitza en el diàleg de selecció de fitxer, quan es canvia el grup, "
+"servirà per definir la ubicació de baixada. Si voleu, encara podeu "
+"substituir-ho."
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_default_location_enabled)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useSaveDir)
@@ -1210,13 +1208,15 @@ msgid ""
 "the move when completed location in the dialog will be set to this. You can "
 "still override it, if you want to."
 msgstr ""
+"Ubicació per defecte per moure els torrents d'aquest grup. <br/><br/>Això "
+"només s'utilitza en el diàleg de selecció de fitxer, quan es canvia el grup, "
+"servirà per definir a ion moure la baixada en finalitzar. Si voleu, encara "
+"podeu substituir-ho."
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox)
 #: ktorrent/groups/grouppolicydlg.ui:54
-#, fuzzy
-#| msgid "Decrease priority of torrents which are stalled for too long"
 msgid "Default settings for torrents which are added to the group."
-msgstr "Disminueix la prioritat dels torrents que s'han encallat massa estona"
+msgstr "Configuració per defecte pels torrents que s'han afegit al grup."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: ktorrent/groups/grouppolicydlg.ui:57
@@ -1258,6 +1258,11 @@ msgid ""
 "If this is not enabled, the settings will always be applied when you add a "
 "torrent to this group. "
 msgstr ""
+"Quan això s'activa, aquest paràmetres només s'apliquen quan s'afegeix un "
+"torrent al grup en el diàleg de selecció de fitxer o en el diàleg de creació "
+"de torrent.<p>\n"
+"Si no s'activa, els paràmetres sempre s'aplicaran quan afegiu un torrent a "
+"aquest grup. "
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_only_new)
 #: ktorrent/groups/grouppolicydlg.ui:154
@@ -1265,50 +1270,42 @@ msgid "Apply settings only for newly opened or created torrents"
 msgstr "Aplica els paràmetres només als torrents oberts o creats"
 
 #: ktorrent/groups/groupswitcher.cpp:58
-#, fuzzy
-#| msgid "Open in New Tab"
 msgid "Open a new tab"
-msgstr "Obre en una pestanya nova"
+msgstr "Obre una pestanya nova"
 
 #: ktorrent/groups/groupswitcher.cpp:63
-#, fuzzy
-#| msgid "Stop all torrents in the current tab"
 msgid "Close the current tab"
-msgstr "Atura tots els torrents de la pestanya actual"
+msgstr "Tanca la pestanya actual"
 
 #: ktorrent/groups/groupswitcher.cpp:68
-#, fuzzy
-#| msgid "Group Policy"
 msgid "Edit Group Policy"
-msgstr "Política del grup"
+msgstr "Edició de política de grup"
 
-#: ktorrent/groups/groupview.cpp:81
-#, fuzzy
-#| msgid "Open in New Tab"
+#: ktorrent/groups/groupview.cpp:80
 msgid "Open In New Tab"
 msgstr "Obre en una pestanya nova"
 
-#: ktorrent/groups/groupview.cpp:85 ktorrent/view/view.cpp:221
+#: ktorrent/groups/groupview.cpp:84 ktorrent/view/view.cpp:225
 msgid "New Group"
 msgstr "Grup nou"
 
-#: ktorrent/groups/groupview.cpp:89
+#: ktorrent/groups/groupview.cpp:88
 msgid "Edit Name"
 msgstr "Edita nom"
 
-#: ktorrent/groups/groupview.cpp:93
+#: ktorrent/groups/groupview.cpp:92
 msgid "Remove Group"
 msgstr "Elimina grup"
 
-#: ktorrent/groups/groupview.cpp:97
+#: ktorrent/groups/groupview.cpp:96
 msgid "Group Policy"
 msgstr "Política del grup"
 
-#: ktorrent/groups/groupview.cpp:110
+#: ktorrent/groups/groupview.cpp:109
 msgid "Please enter the group name."
 msgstr "Si us plau, escriviu el nom del grup."
 
-#: ktorrent/groups/groupview.cpp:117
+#: ktorrent/groups/groupview.cpp:116
 #, kde-format
 msgid "The group %1 already exists."
 msgstr "El grup %1 ja existeix."
@@ -1346,8 +1343,8 @@ msgid "Open a URL which points to a torrent, magnet links are supported"
 msgstr "Obre un URL que apunta a un torrent, es permeten enllaços «magnet»"
 
 #: ktorrent/gui.cpp:440 plugins/ipfilter/ipblockingprefpage.cpp:35
-#: plugins/ipfilter/ipfilterplugin.cpp:62
-#: plugins/ipfilter/ipfilterplugin.cpp:75
+#: plugins/ipfilter/ipfilterplugin.cpp:60
+#: plugins/ipfilter/ipfilterplugin.cpp:73
 msgid "IP Filter"
 msgstr "Filtre d'IP"
 
@@ -1476,12 +1473,12 @@ msgid "Advanced"
 msgstr "Avançat"
 
 #. i18n: ectx: Menu (OpenDirMenu)
-#: ktorrent/kttorrentactivityui.rc:62 ktorrent/view/view.cpp:242
+#: ktorrent/kttorrentactivityui.rc:62 ktorrent/view/view.cpp:246
 msgid "Open Directory"
 msgstr "Obre el directori"
 
 #. i18n: ectx: Menu (GroupsSubMenu)
-#: ktorrent/kttorrentactivityui.rc:68 ktorrent/view/view.cpp:245
+#: ktorrent/kttorrentactivityui.rc:68 ktorrent/view/view.cpp:249
 msgid "Add to Group"
 msgstr "Afegeix al grup"
 
@@ -1506,10 +1503,8 @@ msgid "Bittorrent client for KDE"
 msgstr "Client del Bittorrent per al KDE"
 
 #: ktorrent/main.cpp:98
-#, fuzzy
-#| msgid "(C) 2005 - 2012 Joris Guisson and Ivan Vasic"
 msgid "(C) 2005 - 2011 Joris Guisson and Ivan Vasic"
-msgstr "(C) 2005 - 2012 Joris Guisson and Ivan Vasic"
+msgstr "(C) 2005 - 2011 Joris Guisson and Ivan Vasic"
 
 #: ktorrent/main.cpp:102
 msgid "Joris Guisson"
@@ -1773,7 +1768,7 @@ msgstr "Pedaç per a solucionar una fallada a ChunkDownloadView"
 
 #: ktorrent/main.cpp:139
 msgid "Rickard Närström"
-msgstr "Richard Närström"
+msgstr "Rickard Närström"
 
 #: ktorrent/main.cpp:139
 msgid "A couple of bugfixes"
@@ -1912,6 +1907,9 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Note: </span>Increasing this will "
 "decrease CPU usage.</p>"
 msgstr ""
+"<p>L'interval en mil·lisegons entre actualitzacions de l'IGU.</p>\n"
+"<p><span style=\" font-weight:600;\">Nota: </span>Augmentant això disminuirà "
+"l'ús de la CPU.</p>"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_guiUpdateInterval)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_cpuUsage)
@@ -1936,6 +1934,15 @@ msgid ""
 "might not actually reach this speed when this value is too high. Without a "
 "limit you can easily get above 3000 KiB/s on a LAN.</p>"
 msgstr ""
+"<p>Interval de temps que els fils de xarxa estaran en letargia quan tenen "
+"limitació de velocitat. Això no té efecte quan no hi ha límits de velocitat."
+"</p>\n"
+"<p><span style=\" font-weight:600;\">Nota:</span> Quan més baix, més ús de "
+"CPU. Un valor alt pot comportar velocitats més baixes en situacions d'alt "
+"ample de banda. </p>\n"
+"<p>Per exemple, en una LAN de 100 Mbit, si establiu un límit de 3000 KiB/s, "
+"podríeu no arribar a aquesta velocitat si aquest valor és massa alt. Sense "
+"cap límit, es pot arribar fàcilment per sobre de 3000 KiB/s en una LAN.</p>"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
@@ -1963,6 +1970,18 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Moving average:</span>  Moving average "
 "of the last 20 samples</p>"
 msgstr ""
+"<p>Seleccioneu l'algorisme que s'utilitzarà per estimar el temps restant:</"
+"p>\n"
+"<p><span style=\" font-weight:600;\">KTorrent:</span> Barreja d'altres "
+"algorismes, s'usa el que millor s'ajusta a la situació actual.</p>\n"
+"<p><span style=\" font-weight:600;\">Velocitat actual:</span> Bytes que "
+"resten per baixar / velocitat actual</p>\n"
+"<p><span style=\" font-weight:600;\">Velocitat mitjana: </span>Bytes que "
+"resten per baixar / velocitat mitjana</p>\n"
+"<p><span style=\" font-weight:600;\">Finestra de X:</span> Mitjana de les "
+"darreres X mostres (X = 20)</p>\n"
+"<p><span style=\" font-weight:600;\">Mitjana mòbil:</span> Mitjana mòbil de "
+"les 20 darreres mostres</p>"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
 #: ktorrent/pref/advancedpref.ui:163 plugins/stats/SpdTabPage.cc:67
@@ -1997,6 +2016,8 @@ msgid ""
 "<p>The amount of data at the beginning and end of an audio file, which will "
 "be prioritized for previewing.</p>"
 msgstr ""
+"<p>La quantitat de dades al principi i final d'un fitxer d'àudio, que es "
+"prioritzaran per la previsualització.</p>"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeAudio)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeVideo)
@@ -2015,6 +2036,8 @@ msgid ""
 "<p>The amount of data at the beginning and end of a video file, which will "
 "be prioritized for previewing.</p>"
 msgstr ""
+"<p>La quantitat de dades al principi i final d'un fitxer de vídeo, que es "
+"prioritzaran per la previsualització.</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useQHttpAnnounce)
 #: ktorrent/pref/advancedpref.ui:251
@@ -2089,6 +2112,10 @@ msgid ""
 "router, this port needs to be forwarded to accept incoming DHT requests. The "
 "UPnP plugin can do this for you.</p>"
 msgstr ""
+"<p>Port UDP que utilitzarà el protocol DHT.</p>\n"
+"<p><span style=\" font-weight:600;\">Atenció:</span> Si esteu darrere d'un "
+"encaminador, aquest port s'ha de redirigir per acceptar sol·licituds DHT "
+"entrants. El connector UPnP pot fer això per vós.</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_pexEnabled)
 #: ktorrent/pref/btpref.ui:61
@@ -2139,6 +2166,10 @@ msgid ""
 "<p>The encryption will prevent your bittorrent traffic to be flagged as "
 "bittorrent traffic, and so the ISP will not slow it down.</p>"
 msgstr ""
+"<p>L'encriptatge de protocol és útil quan el vostre proveïdor d'Internet "
+"alenteix les connexions del bittorrent. </p>\n"
+"<p>L'encriptatge evita que el vostre trànsit bittorrent es marqui com a "
+"trànsit bittorrent, i per tant, el proveïdor no l'alentirà.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useEncryption)
 #. i18n: ectx: label, entry (useEncryption), group (downloads)
@@ -2282,6 +2313,8 @@ msgid ""
 "When you select multiple torrents to be opened at the same time, open them "
 "silently."
 msgstr ""
+"Quan se seleccionen diversos torrents a obrir al mateix temps, els obre en "
+"silenci."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openMultipleTorrentsSilently)
 #: ktorrent/pref/generalpref.ui:129
@@ -2290,23 +2323,21 @@ msgstr "Obre múltiples torrents en silenci"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openAllTorrentsSilently)
 #: ktorrent/pref/generalpref.ui:136
-#, fuzzy
-#| msgid "Open all torrents silently"
 msgid "Open all torrents silently."
-msgstr "Obre els torrents en silenci"
+msgstr "Obre tots els torrents en silenci."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openAllTorrentsSilently)
 #: ktorrent/pref/generalpref.ui:139
 msgid "Open all torrents silently"
-msgstr "Obre els torrents en silenci"
+msgstr "Obre tots els torrents en silenci"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_suppressSleep)
 #: ktorrent/pref/generalpref.ui:146
-#, fuzzy
-#| msgid "Suppress sleep when torrents are running"
 msgid ""
 "Prevent computer from going into a sleep state when torrents are running."
-msgstr "Evita el repòs quan s'executin els torrents"
+msgstr ""
+"Evita que l'ordinador entri en estat de repòs quan els torrents s'estan "
+"executant."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_suppressSleep)
 #: ktorrent/pref/generalpref.ui:149
@@ -2321,6 +2352,10 @@ msgid ""
 "desktop.iso</span>, the torrent will be displayed as <span style=\" font-"
 "weight:600;\">linux-desktop.</span></p>"
 msgstr ""
+"<p>Reanomena un torrent de fitxer únic amb el nom del seu fitxer únic. </p>\n"
+"<p>Per exemple, si el fitxer s'anomena <span style=\" font-weight:600;"
+"\">linux-desktop.iso</span>, el torrent es mostrarà com a <span style=\" "
+"font-weight:600;\">linux-desktop.</span></p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_autoRenameSingleFileTorrents)
 #: ktorrent/pref/generalpref.ui:160
@@ -2351,6 +2386,10 @@ msgid ""
 "router, this port needs to be forwarded to accept incoming connections. The "
 "UPnP plugin can do this for you.</p>"
 msgstr ""
+"<p>Port que utilitzarà el protocol bittorrent.</p>\n"
+"<p><span style=\" font-weight:600;\">Atenció:</span> Si esteu darrere d'un "
+"encaminador, aquest port s'ha de redirigir per acceptar sol·licituds "
+"connections entrants. El connector UPnP pot fer això per vós.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ktorrent/pref/networkpref.ui:47
@@ -2365,9 +2404,13 @@ msgid ""
 "router, this port needs to be forwarded. The UPnP plugin can do this for you."
 "</p>"
 msgstr ""
+"<p>Port que utilitzarà el protocol del seguidor UDP.</p>\n"
+"<p><span style=\" font-weight:600;\">Atenció:</span> Si esteu darrere d'un "
+"encaminador, aquest port s'ha de redirigir. El connector UPnP pot fer això "
+"per vós.</p>"
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
 #: ktorrent/pref/networkpref.ui:71 ktorrent/pref/recommendedsettingsdlg.ui:235
 #: plugins/bwscheduler/edititemdlg.ui:229
 msgid "Maximum connections per torrent:"
@@ -2378,8 +2421,8 @@ msgstr "Màxim de connexions per torrent:"
 msgid "The maximum number of connections allowed per torrent."
 msgstr "Nombre màxim de connexions permeses per torrent."
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_4)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ktorrent/pref/networkpref.ui:91 ktorrent/pref/recommendedsettingsdlg.ui:249
 #: plugins/bwscheduler/edititemdlg.ui:246
@@ -2428,6 +2471,10 @@ msgid ""
 "<p>If you are having trouble with ktorrent blocking other internet traffic, "
 "try setting this number a bit lower.</p>"
 msgstr ""
+"<p>El nombre màxim de connexions sortints que el ktorrent intentarà establir "
+"simultàniament.</p>\n"
+"<p>Si teniu problemes degut a que el ktorrent bloqueja altre trànsit "
+"d'Internet, disminuïu aquest nombre.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: ktorrent/pref/networkpref.ui:213
@@ -2441,6 +2488,9 @@ msgid ""
 "<p><span style=\"font-weight:600;\">Note: </span>Requires a restart to take "
 "effect.</p>"
 msgstr ""
+"<p>Quina interfície de xarxa s'escoltarà per les connexions entrants.</p>\n"
+"<p><span style=\"font-weight:600;\">Nota: </span>Requereix tornar a iniciar "
+"perquè tingui efecte.</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_utpEnabled)
 #: ktorrent/pref/networkpref.ui:252
@@ -2523,10 +2573,10 @@ msgstr "HTTP"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useKDEProxySettings)
 #: ktorrent/pref/proxypref.ui:23
-#, fuzzy
-#| msgid "Use the default browser configured in the system settings."
 msgid "<p>Use the HTTP proxy settings configured in the settings of KDE.</p>"
-msgstr "Usa el navegador predeterminat configurat a l'arranjament del sistema."
+msgstr ""
+"<p>Usa l'arranjament del servidor intermediari HTTP configurat a "
+"l'arranjament del KDE.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useKDEProxySettings)
 #: ktorrent/pref/proxypref.ui:26
@@ -2562,29 +2612,14 @@ msgstr "Usa un servidor intermediari en les connexions de sembrat web"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useProxyForTracker)
 #: ktorrent/pref/proxypref.ui:84
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Whether or not to use "
-#| "the HTTP proxy for tracker connections.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Whether or not to use the "
 "HTTP proxy for tracker connections.</p>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
-"weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Si usar o no el servidor "
-"intermediari HTTP per a les connexions dels seguidors.</p></body></html>"
+"intermediari HTTP per a les connexions dels seguidors.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxyForTracker)
 #: ktorrent/pref/proxypref.ui:87
@@ -2603,6 +2638,10 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Note: </span>This is not used for "
 "tracker connections</p>"
 msgstr ""
+"<p>Utilitza un servidor intermediari SOCKS per les connexions bittorrent.</"
+"p>\n"
+"<p><span style=\" font-weight:600;\">Nota: </span>Això no s'utilitza per les "
+"connexions de seguidors</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_socksEnabled)
 #: ktorrent/pref/proxypref.ui:107
@@ -2616,16 +2655,13 @@ msgstr "Servidor:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_socksProxy)
 #: ktorrent/pref/proxypref.ui:123
-#, fuzzy
-#| msgid "IP address or hostname of the HTTP proxy to use. "
 msgid "<p>IP address or hostname of the SOCKS server</p>"
-msgstr ""
-"Adreça IP o nom de màquina del servidor intermediari HTTP a utilitzar. "
+msgstr "<p>Adreça IP o nom de màquina del servidor SOCKS</p>"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_socksPort)
 #: ktorrent/pref/proxypref.ui:137
 msgid "Port used by the SOCKS server"
-msgstr ""
+msgstr "Port usat pel servidor SOCKS"
 
 #. i18n: ectx: property (text), widget (QLabel, label_13)
 #: ktorrent/pref/proxypref.ui:144
@@ -2638,8 +2674,8 @@ msgid ""
 "If the SOCKS server requires authentication via a username and a password, "
 "enable this box."
 msgstr ""
-"Activeu aquesta caixa si el servidor SOCKS requereix autenticació amb un nom "
-"d'usuari i una contrasenya."
+"Activeu aquesta casella si el servidor SOCKS requereix autenticació amb un "
+"nom d'usuari i una contrasenya."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_socksUsePassword)
 #: ktorrent/pref/proxypref.ui:159
@@ -2656,10 +2692,8 @@ msgstr "Usuari:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_socksUsername)
 #: ktorrent/pref/proxypref.ui:177
-#, fuzzy
-#| msgid "Use a SOCKS proxy server:"
 msgid "Username for the SOCKS proxy server."
-msgstr "Usa un servidor intermediari SOCKS:"
+msgstr "Nom d'usuari pel servidor intermediari SOCKS."
 
 #. i18n: ectx: property (text), widget (QLabel, label_14)
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -2672,13 +2706,11 @@ msgstr "Contrasenya:"
 
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_socksPassword)
 #: ktorrent/pref/proxypref.ui:191
-#, fuzzy
-#| msgid "Use a SOCKS proxy server:"
 msgid "Password for the SOCKS proxy server."
-msgstr "Usa un servidor intermediari SOCKS:"
+msgstr "Contrasenya pel servidor intermediari SOCKS."
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: property (title), widget (QGroupBox, m_qm_group_box)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: ktorrent/pref/qmpref.cpp:25 ktorrent/pref/qmpref.ui:27
 #: ktorrent/pref/recommendedsettingsdlg.ui:266
 #: ktorrent/torrentactivity.cpp:100
@@ -2705,8 +2737,8 @@ msgstr ""
 msgid "Control torrents manually"
 msgstr "Control manual dels torrents"
 
-#. i18n: ectx: property (text), widget (QLabel, label_14)
 #. i18n: ectx: property (text), widget (QLabel, label_11)
+#. i18n: ectx: property (text), widget (QLabel, label_14)
 #: ktorrent/pref/qmpref.ui:35 ktorrent/pref/recommendedsettingsdlg.ui:288
 msgid "Maximum downloads:"
 msgstr "Màxim de baixades:"
@@ -2718,8 +2750,8 @@ msgid ""
 msgstr ""
 "Nombre màxim de descàrregues simultànies que executarà el gestor de cues."
 
-#. i18n: ectx: property (text), widget (QLabel, label_17)
 #. i18n: ectx: property (text), widget (QLabel, label_10)
+#. i18n: ectx: property (text), widget (QLabel, label_17)
 #: ktorrent/pref/qmpref.ui:55 ktorrent/pref/recommendedsettingsdlg.ui:302
 msgid "Maximum seeds:"
 msgstr "Màxim sembrats:"
@@ -2785,6 +2817,10 @@ msgid ""
 "<p>This will allow the queue manager to run other torrents, when a torrent "
 "is doing nothing.</p>"
 msgstr ""
+"<p>Amb això activat, el gestor de cues disminuirà la prioritat d'un torrent "
+"que ha estat encallat durant molt temps. </p>\n"
+"<p>Això permetrà que el gestor de cues executi altres quan un torrent no "
+"faci res.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_decreasePriorityOfStalledTorrents)
 #: ktorrent/pref/qmpref.ui:136
@@ -2802,6 +2838,8 @@ msgid ""
 "<p>Time used for the stall timer. When a torrent is stalled longer than "
 "this, its priority will be decreased.</p>"
 msgstr ""
+"<p>Temps utilitzat pel temporitzador d'encallat. Quan un torrent està "
+"encallat durant més temps que aquest, la seva prioritat disminuirà.</p>"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: ktorrent/pref/qmpref.ui:186
@@ -2823,8 +2861,8 @@ msgstr ""
 msgid "Keep seeding after download is finished"
 msgstr "Mantén el sembrat després d'haver finalitzat la baixada"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ktorrent/pref/qmpref.ui:202 ktorrent/pref/recommendedsettingsdlg.ui:274
 msgid "Number of upload slots:"
 msgstr "Nombre de ranures de pujada:"
@@ -2845,11 +2883,6 @@ msgstr "Ràtio màxima de compartició per omissió:"
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_maxRatio)
 #: ktorrent/pref/qmpref.ui:233
-#, fuzzy
-#| msgid ""
-#| "The maximum seed time in hours. Once you reach this time, the torrent "
-#| "will be stopped. This is only applied to newly opened torrents, existing "
-#| "torrents will not be affected by changing this."
 msgid ""
 "<p>The maximum share ratio, if this value is reached seeding will be "
 "stopped. This is only applied to newly opened torrents, existing torrents "
@@ -2857,9 +2890,11 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Attention: </span>This is not used when "
 "downloading, only when seeding.</p>"
 msgstr ""
-"Temps màxim de sembrat en hores. Quan s'arriba a aquest temps, s'aturarà el "
-"torrent. Això només s'aplica al torrents que s'obrin, els torrents existents "
-"no es veuran afectats en canviar això."
+"<p>La ràtio màxima de compartició. Quan s'arriba a aquest valor s'aturarà el "
+"sembrat. Això només s'aplica al torrents que s'obrin, els torrents existents "
+"no es veuran afectats en canviar això.</p>\n"
+"<p><span style=\" font-weight:600;\">Atenció: </span>Això no s'usa en "
+"baixar, només en sembrar.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: ktorrent/pref/qmpref.ui:249
@@ -2989,21 +3024,20 @@ msgstr "DHT: desconnectat"
 #, kde-format
 msgid "%1 node"
 msgid_plural "%1 nodes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 node"
+msgstr[1] "%1 nodes"
 
 #: ktorrent/statusbar.cpp:95
 #, kde-format
 msgid "%1 task"
 msgid_plural "%1 tasks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 tasca"
+msgstr[1] "%1 tasques"
 
 #: ktorrent/statusbar.cpp:95
-#, fuzzy, kde-format
-#| msgid "DHT: %1 nodes, %2 tasks"
+#, kde-format
 msgid "DHT: %1, %2"
-msgstr "DHT: %1 nodes, %2 tasques"
+msgstr "DHT: %1, %2"
 
 #: ktorrent/tools/magnetmodel.cpp:134
 msgid "Magnet Link"
@@ -3015,9 +3049,9 @@ msgstr "Enllaços «magnet»"
 msgid "Status"
 msgstr "Estat"
 
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (title), widget (QGroupBox, PeersSpdGbw)
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: ktorrent/tools/magnetmodel.cpp:136
 #: plugins/infowidget/infowidgetplugin.cpp:222
 #: plugins/stats/DisplaySettings.ui:165 plugins/stats/Settings.ui:166
@@ -3049,7 +3083,7 @@ msgstr "Elimina el «magnet»"
 msgid "Order"
 msgstr "Ordre"
 
-#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:495
+#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:533
 #: plugins/downloadorder/downloadorderdialog.cpp:80
 msgid "Name"
 msgstr "Nom"
@@ -3371,28 +3405,6 @@ msgstr "Usa intercanvi de parells per a cercar més parells"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, superseeding)
 #: ktorrent/view/propertiesdlg.ui:45
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Superseeding mode, is a "
-#| "special seeding mode which allows you to achieve much higher seeding "
-#| "efficiencies. This results in less bandwidth used to spread a torrent.</"
-#| "p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">Note: </span>This should only be used if the swarm has not "
-#| "fully been established. Once there are multiple active seeders, this mode "
-#| "becomes useless.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Superseeding mode, is a "
@@ -3407,18 +3419,11 @@ msgid ""
 "fully been established. Once there are multiple active seeders, this mode "
 "becomes useless.</p>"
 msgstr ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
-"weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">El mode de super sembra, "
-"és un mode de sembra especial que permet aconseguir eficiències de sembra "
-"més altes. Això dona requereix menys ampla de banda usada per escampar un "
-"torrent.</p>\n"
+"és un mode de sembra especial que permet aconseguir eficiències de sembrat "
+"més altes. Això redueix l'amplada de banda usada per escampar un torrent.</"
+"p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
 "p>\n"
@@ -3426,7 +3431,7 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Nota: </span>Això només s'hauria de fer servir quan l'eixam "
 "encara no està establert completament. Quan ja hi ha múltiples sembradors "
-"actius, aquest mode no és útil.</p></body></html>"
+"actius, aquest mode no és útil.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, superseeding)
 #: ktorrent/view/propertiesdlg.ui:48
@@ -3463,29 +3468,14 @@ msgstr "Trobat:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_found)
 #: ktorrent/view/scanextender.ui:43
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks "
-#| "which were not downloaded but have been found anyway.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "were not downloaded but have been found anyway.</p>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
-"weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">El nombre de trossos que "
-"no s'han baixat però que s'han trobat.</p></body></html>"
+"no s'han baixat però que s'han trobat.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, chunks_found)
 #. i18n: ectx: property (text), widget (QLabel, chunks_failed)
@@ -3503,29 +3493,14 @@ msgstr "Ha fallat:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_failed)
 #: ktorrent/view/scanextender.ui:82
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks "
-#| "which have been downloaded, and which are not OK.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "have been downloaded, and which are not OK.</p>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
-"weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">El nombre de trossos que "
-"s'han baixat, però que no són correctes.</p></body></html>"
+"s'han baixat, però que no són correctes.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/view/scanextender.ui:108
@@ -3539,6 +3514,9 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "have not been downloaded.</p>"
 msgstr ""
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">El nombre de trossos que "
+"no s'han baixat</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
@@ -3549,29 +3527,14 @@ msgstr "Baixat:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_downloaded)
 #: ktorrent/view/scanextender.ui:166
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks "
-#| "which have been downloaded, and which are OK.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "have been downloaded, and which are OK.</p>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
-"weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">El nombre de trossos que "
-"s'han baixat i que són correctes.</p></body></html>"
+"s'han baixat i que són correctes.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, error_msg)
 #: ktorrent/view/scanextender.ui:230
@@ -3582,135 +3545,135 @@ msgstr "Errors:"
 msgid "Torrent filter"
 msgstr "Filtre de torrents"
 
-#: ktorrent/view/view.cpp:135
+#: ktorrent/view/view.cpp:139
 msgctxt "@action Start all selected torrents in the current tab"
 msgid "Start"
 msgstr "Inicia"
 
-#: ktorrent/view/view.cpp:136
+#: ktorrent/view/view.cpp:140
 msgid "Start all selected torrents in the current tab"
 msgstr "Inicia tots els torrents seleccionats de la pestanya actual"
 
-#: ktorrent/view/view.cpp:141
+#: ktorrent/view/view.cpp:145
 msgctxt "@action Force start all selected torrents in the current tab"
 msgid "Force Start"
 msgstr "Força l'inici"
 
-#: ktorrent/view/view.cpp:142
+#: ktorrent/view/view.cpp:146
 msgid "Force start all selected torrents in the current tab"
 msgstr "Força l'inici de tots els torrents seleccionats de la pestanya actual"
 
-#: ktorrent/view/view.cpp:146
+#: ktorrent/view/view.cpp:150
 msgctxt "@action Stop all selected torrents in the current tab"
 msgid "Stop"
 msgstr "Atura"
 
-#: ktorrent/view/view.cpp:147
+#: ktorrent/view/view.cpp:151
 msgid "Stop all selected torrents in the current tab"
 msgstr "Atura tots els torrents seleccionats de la pestanya actual"
 
-#: ktorrent/view/view.cpp:152
+#: ktorrent/view/view.cpp:156
 msgctxt "@action Pause all selected torrents in the current tab"
 msgid "Pause"
 msgstr "Pausa"
 
-#: ktorrent/view/view.cpp:153
+#: ktorrent/view/view.cpp:157
 msgid "Pause all selected torrents in the current tab"
 msgstr "Pausa tots els torrents seleccionats de la pestanya actual"
 
-#: ktorrent/view/view.cpp:157
+#: ktorrent/view/view.cpp:161
 msgctxt "@action Remove all selected torrents in the current tab"
 msgid "Remove"
 msgstr "Elimina"
 
-#: ktorrent/view/view.cpp:158
+#: ktorrent/view/view.cpp:162
 msgid "Remove all selected torrents in the current tab"
 msgstr "Elimina tots els torrents seleccionats de la pestanya actual"
 
-#: ktorrent/view/view.cpp:163
+#: ktorrent/view/view.cpp:167
 msgctxt "@action Start all torrents in the current tab"
 msgid "Start All"
 msgstr "Inicia'ls tots"
 
-#: ktorrent/view/view.cpp:164
+#: ktorrent/view/view.cpp:168
 msgid "Start all torrents in the current tab"
 msgstr "Inicia tots els torrents de la pestanya actual"
 
-#: ktorrent/view/view.cpp:169
+#: ktorrent/view/view.cpp:173
 msgctxt "@action Stop all torrents in the current tab"
 msgid "Stop All"
 msgstr "Atura'ls tots"
 
-#: ktorrent/view/view.cpp:170
+#: ktorrent/view/view.cpp:174
 msgid "Stop all torrents in the current tab"
 msgstr "Atura tots els torrents de la pestanya actual"
 
-#: ktorrent/view/view.cpp:175
+#: ktorrent/view/view.cpp:179
 msgid "Remove Torrent and Data"
 msgstr "Elimina el torrent i les dades"
 
-#: ktorrent/view/view.cpp:180
+#: ktorrent/view/view.cpp:184
 msgid "Rename Torrent"
 msgstr "Reanomena el torrent"
 
-#: ktorrent/view/view.cpp:184
+#: ktorrent/view/view.cpp:188
 msgid "Add Peers"
 msgstr "Afegeix parells"
 
-#: ktorrent/view/view.cpp:188
+#: ktorrent/view/view.cpp:192
 msgid "Manual Announce"
 msgstr "Anunci manual"
 
-#: ktorrent/view/view.cpp:193
+#: ktorrent/view/view.cpp:197
 msgid "Scrape"
 msgstr "Rascada"
 
-#: ktorrent/view/view.cpp:197
+#: ktorrent/view/view.cpp:201
 msgid "Preview"
 msgstr "Vista prèvia"
 
-#: ktorrent/view/view.cpp:201
+#: ktorrent/view/view.cpp:205
 msgid "Data Directory"
 msgstr "Directori de dades"
 
-#: ktorrent/view/view.cpp:205
+#: ktorrent/view/view.cpp:209
 msgid "Temporary Directory"
 msgstr "Directori temporal"
 
-#: ktorrent/view/view.cpp:209
+#: ktorrent/view/view.cpp:213
 msgid "Move Data"
 msgstr "Mou les dades"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, StatsSettingsWgt)
-#: ktorrent/view/view.cpp:213 plugins/stats/Settings.ui:13
+#: ktorrent/view/view.cpp:217 plugins/stats/Settings.ui:13
 msgid "Settings"
 msgstr "Arranjament"
 
-#: ktorrent/view/view.cpp:217
+#: ktorrent/view/view.cpp:221
 msgid "Remove from Group"
 msgstr "Esborra del grup"
 
-#: ktorrent/view/view.cpp:225
+#: ktorrent/view/view.cpp:229
 msgid "Check Data"
 msgstr "Comprova les dades"
 
-#: ktorrent/view/view.cpp:226
+#: ktorrent/view/view.cpp:230
 msgid "Check all the data of a torrent"
 msgstr "Comprova totes les dades d'un torrent"
 
-#: ktorrent/view/view.cpp:248
+#: ktorrent/view/view.cpp:252
 msgid "Copy Torrent URL"
 msgstr "Copia l'URL d'un torrent"
 
-#: ktorrent/view/view.cpp:252
+#: ktorrent/view/view.cpp:256
 msgid "Export Torrent"
 msgstr "Exporta un torrent"
 
-#: ktorrent/view/view.cpp:257
+#: ktorrent/view/view.cpp:261
 msgid "Set the speed limits of individual torrents"
 msgstr "Estableix els límits de velocitat dels torrents individuals"
 
-#: ktorrent/view/view.cpp:466
+#: ktorrent/view/view.cpp:470
 #, kde-format
 msgid ""
 "The torrent <b>%1</b> has not finished downloading, do you want to delete "
@@ -3719,19 +3682,19 @@ msgstr ""
 "El torrent <b>%1</b> no ha acabat de baixar, voleu esborrar també les dades "
 "incompletes?"
 
-#: ktorrent/view/view.cpp:471
+#: ktorrent/view/view.cpp:475
 msgid "Remove Download"
 msgstr "Esborra les baixades"
 
-#: ktorrent/view/view.cpp:472
+#: ktorrent/view/view.cpp:476
 msgid "Delete Data"
 msgstr "Esborra les dades"
 
-#: ktorrent/view/view.cpp:473
+#: ktorrent/view/view.cpp:477
 msgid "Keep Data"
 msgstr "Mantén les dades"
 
-#: ktorrent/view/view.cpp:498
+#: ktorrent/view/view.cpp:502
 msgid ""
 "You will lose all the downloaded data of the following torrents. Are you "
 "sure you want to do this?"
@@ -3739,111 +3702,107 @@ msgstr ""
 "Perdreu totes les dades baixades dels següents torrents. Esteu segur que "
 "voleu fer això?"
 
-#: ktorrent/view/view.cpp:499
+#: ktorrent/view/view.cpp:503
 msgid "Remove Torrent"
 msgstr "Elimina el torrent"
 
-#: ktorrent/view/view.cpp:595 plugins/infowidget/fileview.cpp:354
+#: ktorrent/view/view.cpp:599 plugins/infowidget/fileview.cpp:354
 #: plugins/infowidget/fileview.cpp:375
 msgid "Select a directory to move the data to."
 msgstr "Seleccioneu un directori a on moure les dades."
 
-#: ktorrent/view/viewmodel.cpp:496 plugins/infowidget/peerviewmodel.cpp:266
+#: ktorrent/view/viewmodel.cpp:535 plugins/infowidget/peerviewmodel.cpp:266
 #: plugins/infowidget/webseedsmodel.cpp:126
 msgid "Downloaded"
 msgstr "Baixat"
 
-#: ktorrent/view/viewmodel.cpp:497
+#: ktorrent/view/viewmodel.cpp:537
 #: libktcore/torrent/torrentfilelistmodel.cpp:77
 #: libktcore/torrent/torrentfiletreemodel.cpp:400
 msgid "Size"
 msgstr "Mida"
 
-#: ktorrent/view/viewmodel.cpp:498 plugins/infowidget/peerviewmodel.cpp:267
+#: ktorrent/view/viewmodel.cpp:539 plugins/infowidget/peerviewmodel.cpp:267
 msgid "Uploaded"
 msgstr "Pujat"
 
-#: ktorrent/view/viewmodel.cpp:499
-#, fuzzy
-#| msgid "Left:"
+#: ktorrent/view/viewmodel.cpp:541
 msgctxt "Bytes left to downloaded"
 msgid "Left"
-msgstr "Pendent:"
+msgstr "Pendent"
 
-#: ktorrent/view/viewmodel.cpp:500
+#: ktorrent/view/viewmodel.cpp:543
 #: plugins/infowidget/chunkdownloadmodel.cpp:200
 #: plugins/infowidget/peerviewmodel.cpp:257
 msgid "Down Speed"
 msgstr "Baixant a"
 
-#: ktorrent/view/viewmodel.cpp:501 plugins/infowidget/peerviewmodel.cpp:258
+#: ktorrent/view/viewmodel.cpp:545 plugins/infowidget/peerviewmodel.cpp:258
 msgid "Up Speed"
 msgstr "Pujant a"
 
-#: ktorrent/view/viewmodel.cpp:502
+#: ktorrent/view/viewmodel.cpp:547
 msgid "Time Left"
 msgstr "Temps restant"
 
-#: ktorrent/view/viewmodel.cpp:503 plugins/infowidget/trackermodel.cpp:149
+#: ktorrent/view/viewmodel.cpp:549 plugins/infowidget/trackermodel.cpp:149
 msgid "Seeders"
 msgstr "Sembradors"
 
-#: ktorrent/view/viewmodel.cpp:504 plugins/infowidget/trackermodel.cpp:150
+#: ktorrent/view/viewmodel.cpp:551 plugins/infowidget/trackermodel.cpp:150
 msgid "Leechers"
 msgstr "Sangoneres"
 
-#: ktorrent/view/viewmodel.cpp:506
+#: ktorrent/view/viewmodel.cpp:554
 #, no-c-format
 msgid "% Complete"
 msgstr "% completat"
 
-#: ktorrent/view/viewmodel.cpp:507
+#: ktorrent/view/viewmodel.cpp:556
 msgid "Share Ratio"
 msgstr "Ràtio de compartició"
 
-#: ktorrent/view/viewmodel.cpp:508
+#: ktorrent/view/viewmodel.cpp:558
 msgid "Time Downloaded"
 msgstr "Temps de baixada"
 
-#: ktorrent/view/viewmodel.cpp:509
+#: ktorrent/view/viewmodel.cpp:560
 msgid "Time Seeded"
 msgstr "Temps sembrat"
 
-#: ktorrent/view/viewmodel.cpp:510
+#: ktorrent/view/viewmodel.cpp:562
 msgid "Location"
 msgstr "Lloc"
 
-#: ktorrent/view/viewmodel.cpp:511
+#: ktorrent/view/viewmodel.cpp:564
 msgid "Added"
 msgstr "S'ha afegit"
 
-#: ktorrent/view/viewmodel.cpp:519
+#: ktorrent/view/viewmodel.cpp:574
 msgid "How much data we have downloaded of the torrent"
 msgstr "Quantes dades s'han descarregat del torrent"
 
-#: ktorrent/view/viewmodel.cpp:520
+#: ktorrent/view/viewmodel.cpp:576
 msgid "Total size of the torrent, excluded files are not included"
 msgstr "Mida total del torrent, sense incloure els fitxers exclosos"
 
-#: ktorrent/view/viewmodel.cpp:521
+#: ktorrent/view/viewmodel.cpp:578
 msgid "How much data we have uploaded"
 msgstr "Quantes dades s'han pujat"
 
-#: ktorrent/view/viewmodel.cpp:522
-#, fuzzy
-#| msgid "How much data we have uploaded"
+#: ktorrent/view/viewmodel.cpp:580
 msgid "How much data left to download"
-msgstr "Quantes dades s'han pujat"
+msgstr "Quantes dades queden per baixar"
 
-#: ktorrent/view/viewmodel.cpp:523
+#: ktorrent/view/viewmodel.cpp:582
 msgid "Current download speed"
 msgstr "Velocitat actual de baixada"
 
-#: ktorrent/view/viewmodel.cpp:524
+#: ktorrent/view/viewmodel.cpp:584
 msgid "Current upload speed"
 msgstr "Velocitat actual de pujada"
 
-#: ktorrent/view/viewmodel.cpp:525
+#: ktorrent/view/viewmodel.cpp:586
 msgid ""
 "How much time is left before the torrent is finished or before the maximum "
 "share ratio is reached, if that is enabled"
@@ -3851,7 +3810,7 @@ msgstr ""
 "Quant temps queda abans d'acabar el torrent o abans d'arribar a la ràtio "
 "màxima de compartició, si està habilitada"
 
-#: ktorrent/view/viewmodel.cpp:526
+#: ktorrent/view/viewmodel.cpp:588
 msgid ""
 "How many seeders we are connected to (How many seeders there are according "
 "to the tracker)"
@@ -3859,7 +3818,7 @@ msgstr ""
 "A quants sembradors estem connectats (quants sembradors hi ha segons el "
 "seguidor)"
 
-#: ktorrent/view/viewmodel.cpp:527
+#: ktorrent/view/viewmodel.cpp:590
 msgid ""
 "How many leechers we are connected to (How many leechers there are according "
 "to the tracker)"
@@ -3867,8 +3826,7 @@ msgstr ""
 "A quantes sangoneres estem connectats (quantes sangoneres hi ha segons el "
 "seguidor)"
 
-#: ktorrent/view/viewmodel.cpp:529
-#, no-c-format
+#: ktorrent/view/viewmodel.cpp:593
 msgid ""
 "The percentage of data we have of the whole torrent, not including excluded "
 "files"
@@ -3876,7 +3834,7 @@ msgstr ""
 "El percentatge de dades que hi ha de tot el torrent, sense incloure els "
 "fitxers exclosos"
 
-#: ktorrent/view/viewmodel.cpp:530
+#: ktorrent/view/viewmodel.cpp:595
 msgid ""
 "Share ratio is the number of bytes uploaded divided by the number of bytes "
 "downloaded"
@@ -3884,28 +3842,28 @@ msgstr ""
 "La ràtio de compartició és el nombre de bytes pujats dividit pel nombre de "
 "bytes baixats"
 
-#: ktorrent/view/viewmodel.cpp:531
+#: ktorrent/view/viewmodel.cpp:597
 msgid "How long we have been downloading the torrent"
 msgstr "Quant temps porteu baixant el torrent"
 
-#: ktorrent/view/viewmodel.cpp:532
+#: ktorrent/view/viewmodel.cpp:599
 msgid "How long we have been seeding the torrent"
 msgstr "Quant temps porteu sembrant el torrent"
 
-#: ktorrent/view/viewmodel.cpp:533
+#: ktorrent/view/viewmodel.cpp:601
 msgid "The location of the torrent's data on disk"
 msgstr "La ubicació de les dades del torrent en el disc"
 
-#: ktorrent/view/viewmodel.cpp:534
+#: ktorrent/view/viewmodel.cpp:603
 msgid "When this torrent was added"
 msgstr "Quan aquest torrent es va afegir"
 
-#: ktorrent/view/viewmodel.cpp:583
+#: ktorrent/view/viewmodel.cpp:653
 #, kde-format
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "%1<br>URL: <b>%2</b>"
 
-#: ktorrent/view/viewmodel.cpp:589
+#: ktorrent/view/viewmodel.cpp:659
 msgid "<br/><br/>Unable to contact a tracker."
 msgstr "<br/><br/>No s'ha pogut connectar a cap seguidor."
 
@@ -4651,16 +4609,12 @@ msgid "File download order for <b>%1</b>:"
 msgstr "Ordre de baixada de fitxers per a <b>%1</b>:"
 
 #: plugins/downloadorder/downloadorderdialog.cpp:81
-#, fuzzy
-#| msgid "Seasons && Episodes"
 msgid "Seasons and Episodes"
 msgstr "Temporades i episodis"
 
 #: plugins/downloadorder/downloadorderdialog.cpp:82
-#, fuzzy
-#| msgid "Add Trackers"
 msgid "Album Track Order"
-msgstr "Afegeix seguidors"
+msgstr "Ordre de les peces d'àlbum"
 
 #. i18n: ectx: property (text), widget (QLabel, m_top_label)
 #: plugins/downloadorder/downloadorderwidget.ui:20
@@ -4680,14 +4634,12 @@ msgstr "Habilitat l'ordre de baixada de fitxers personalitzat"
 #. i18n: ectx: property (text), widget (QToolButton, m_sort_by)
 #: plugins/downloadorder/downloadorderwidget.ui:42
 msgid "Sort By"
-msgstr ""
+msgstr "Ordena per"
 
 #. i18n: ectx: property (placeholderText), widget (KLineEdit, m_search_files)
 #: plugins/downloadorder/downloadorderwidget.ui:52
-#, fuzzy
-#| msgid "Search media files"
 msgid "Search files"
-msgstr "Cerca fitxers de suports"
+msgstr "Cerca fitxers"
 
 #. i18n: ectx: property (toolTip), widget (QListView, m_order)
 #: plugins/downloadorder/downloadorderwidget.ui:66
@@ -5001,11 +4953,10 @@ msgstr "Mostra la llista de seguidors"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showWebSeedsTab)
 #: plugins/infowidget/iwprefpage.ui:53
-#, fuzzy
-#| msgid "Whether or not to show the peers tab in the bottom of the window."
 msgid "Whether or not to show the webseeds tab at the bottom of the window."
 msgstr ""
-"Si mostrar o no la pestanya dels parells a la part inferior de la finestra."
+"Si mostrar o no la pestanya dels sembradors web a la part inferior de la "
+"finestra."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showWebSeedsTab)
 #: plugins/infowidget/iwprefpage.ui:56
@@ -5024,10 +4975,8 @@ msgstr "Prioritat principal:"
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_firstColor)
 #: plugins/infowidget/iwprefpage.ui:79
-#, fuzzy
-#| msgid "Folder to store temporary files"
 msgid "Color to use for first priority files."
-msgstr "Carpeta per desar fitxers temporals"
+msgstr "Color a usar pels fitxers amb prioritat principal."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: plugins/infowidget/iwprefpage.ui:86
@@ -5036,10 +4985,8 @@ msgstr "Darrera prioritat:"
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_lastColor)
 #: plugins/infowidget/iwprefpage.ui:93
-#, fuzzy
-#| msgid "Folder to store temporary files"
 msgid "Color to use for last priority files."
-msgstr "Carpeta per desar fitxers temporals"
+msgstr "Color a usar pels fitxers amb darrera prioritat."
 
 #. i18n: ectx: label, entry (showPeerView), group (general)
 #: plugins/infowidget/ktinfowidgetplugin.kcfg:10
@@ -5134,8 +5081,8 @@ msgid "Availability"
 msgstr "Disponibilitat"
 
 #. i18n: ectx: property (title), widget (QGroupBox, DhtGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_12)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_5)
+#. i18n: ectx: property (text), widget (QLabel, label_12)
 #: plugins/infowidget/peerviewmodel.cpp:262 plugins/stats/Conns.ui:31
 #: plugins/stats/DisplaySettings.ui:796 plugins/stats/Settings.ui:234
 msgid "DHT"
@@ -5366,23 +5313,6 @@ msgstr "No es pot esborrar el sembrador web %1, forma part del torrent."
 
 #. i18n: ectx: property (toolTip), widget (KLineEdit, m_webseed)
 #: plugins/infowidget/webseedstab.ui:19
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Webseed to add to the "
-#| "torrent.</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">Note: </span>Only http webseeds are supported.</p></body></"
-#| "html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Webseed to add to the "
@@ -5394,11 +5324,6 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Note: </span>Only http webseeds are supported.</p>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-"size:8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Sembrador web a afegir al "
 "torrent.</p>\n"
@@ -5407,8 +5332,7 @@ msgstr ""
 "p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Nota: </span>només es permeten sembradors web http.</p></"
-"body></html>"
+"weight:600;\">Nota: </span>Només es permeten sembradors web http.</p>"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
 #: plugins/infowidget/webseedstab.ui:26
@@ -5431,7 +5355,7 @@ msgid "Disable All"
 msgstr "Deshabilita-ho tot"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
-#: plugins/ipfilter/convertdialog.ui:19 plugins/ipfilter/convertthread.cpp:174
+#: plugins/ipfilter/convertdialog.ui:19 plugins/ipfilter/convertthread.cpp:173
 msgid "Converting..."
 msgstr "S'està convertint..."
 
@@ -5447,11 +5371,11 @@ msgstr ""
 msgid "C&ancel"
 msgstr "C&ancel·la"
 
-#: plugins/ipfilter/convertthread.cpp:72
+#: plugins/ipfilter/convertthread.cpp:71
 msgid "Loading txt file..."
 msgstr "S'està carregant el fitxer txt..."
 
-#: plugins/ipfilter/convertthread.cpp:156
+#: plugins/ipfilter/convertthread.cpp:155
 #, kde-format
 msgid "There are no IP addresses to convert in %1"
 msgstr "No hi ha adreces IP a convertir en %1"
@@ -5660,38 +5584,6 @@ msgstr "Visor de registre"
 
 #. i18n: ectx: property (toolTip), widget (QTreeView, m_logging_flags)
 #: plugins/logviewer/logprefwidget.ui:23
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Double click on the log "
-#| "level to alter it. The possible levels are :</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">All: </span>All messages are shown</p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">Important: </span>Only important messages are shown</p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">Notice: </span>Only notice and important messages are "
-#| "shown</p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">Debug: </span>Debug, notice and important messages are "
-#| "shown</p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">None:</span> No messages are shown</p></body></html>"
 msgid ""
 "Double click on the log level to alter it. The possible levels are :\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
@@ -5715,35 +5607,28 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">None:</span> No messages are shown</p>"
 msgstr ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-"size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Feu doble clic en el "
-"nivell de registre per a canviar-lo. Els nivells possibles són:</p>\n"
+"Feu doble clic en el nivell de registre per a canviar-lo. Els possibles "
+"nivells són:\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
 "p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Tot: </span>mostra tots els missatges</p>\n"
+"weight:600;\">Tot: </span>Mostra tots els missatges</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Important: </span>només mostra els missatges importants</p>\n"
+"weight:600;\">Important: </span>Només mostra els missatges importants</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Avís: </span>mostra els missatges d'avís i els importants</p>\n"
+"weight:600;\">Avís: </span>Només mostra els missatges d'avís i els "
+"importants</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Depuració:</span> mostra els missatges de depuració, els "
+"weight:600;\">Depuració: </span>Mostra els missatges de depuració, els "
 "avisos i els importants</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Cap: </span>no mostra cap missatge</p></body></html>"
+"weight:600;\">Cap:</span> No mostra cap missatge</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useRichText)
 #: plugins/logviewer/logprefwidget.ui:42
@@ -6064,7 +5949,7 @@ msgstr "S'ha marcat l'acció de moure."
 msgid "Scan directories recursively."
 msgstr "Explora els directoris recursivament."
 
-#: plugins/scanfolder/scanfolder.cpp:69 plugins/scanfolder/scanthread.cpp:194
+#: plugins/scanfolder/scanfolder.cpp:77 plugins/scanfolder/scanthread.cpp:194
 #: plugins/scanfolder/torrentloadqueue.cpp:166
 #: plugins/scanfolder/torrentloadqueue.cpp:167
 #: plugins/scanfolder/torrentloadqueue.cpp:170
@@ -6119,6 +6004,8 @@ msgid ""
 "Scan the folder recursively for torrents. <br/><br/>\n"
 "Note: This will not be done for any folder named loaded."
 msgstr ""
+"Explora recursivament la carpeta cercant torrents. <br/><br/>\n"
+"Nota: Això no es farà per les carpetes anomenades «carregats»."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_recursive)
 #: plugins/scanfolder/scanfolderprefpage.ui:92
@@ -6131,11 +6018,13 @@ msgid ""
 "When a torrent file has been found and loaded, delete it.<br/><br/>\n"
 "Warning: you will permanently lose this file."
 msgstr ""
+"Quan s'hagi trobat i carregat un fitxer torrent, l'elimina.<br/><br/>\n"
+"Avís: Aquest fitxer s'esborrarà permanentment."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_actionDelete)
 #: plugins/scanfolder/scanfolderprefpage.ui:103
 msgid "Remove torrent file after loading"
-msgstr "Esborra el torrent després de la càrrega"
+msgstr "Elimina el torrent després de la càrrega"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_actionMove)
 #: plugins/scanfolder/scanfolderprefpage.ui:110
@@ -6259,7 +6148,7 @@ msgid ""
 msgstr ""
 "No s'ha trobat cap intèrpret per aquest script, per tant no s'ha executat. "
 "Assegureu-vos que l'intèrpret adequat està instal·lat.<br/><br/><b>Consell:</"
-"b> tots els scripts estàndard del Ktorrent requereixen krosspython"
+"b> tots els scripts estàndard del ktorrent requereixen el krosspython"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: plugins/scripting/scriptproperties.ui:51
@@ -6396,8 +6285,8 @@ msgstr "Afegeix BCC:"
 msgid "Current search engine"
 msgstr "Motor de cerca actual"
 
-#. i18n: ectx: label, entry (useDefaultBrowser), group (general)
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_useDefaultBrowser)
+#. i18n: ectx: label, entry (useDefaultBrowser), group (general)
 #: plugins/search/ktsearchplugin.kcfg:15 plugins/search/searchpref.ui:92
 msgid "Use default browser"
 msgstr "Usa el navegador per omissió"
@@ -6448,7 +6337,7 @@ msgstr "Preferències de cerca"
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_clear_history)
 #: plugins/search/searchpref.ui:34
 msgid "Clear the search history combo boxes."
-msgstr "Neteja les caixes combo d'històries de cerques."
+msgstr "Neteja els quadres combinats d'historial de cerques."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_clear_history)
 #: plugins/search/searchpref.ui:37
@@ -6605,9 +6494,9 @@ msgstr "Voleu descarregar o desar el torrent?"
 msgid "Download Torrent"
 msgstr "Descarrega el torrent"
 
+#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (title), widget (QGroupBox, DlSpdGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (KPushButton, m_download)
 #: plugins/search/searchwidget.cpp:247 plugins/stats/DisplaySettings.ui:37
 #: plugins/stats/Settings.ui:114 plugins/stats/Spd.ui:19
@@ -6773,8 +6662,8 @@ msgstr "Esdeveniment"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ConnsWgt)
 #. i18n: ectx: property (title), widget (QGroupBox, ConnsGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_11)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#. i18n: ectx: property (text), widget (QLabel, label_11)
 #: plugins/stats/Conns.ui:13 plugins/stats/Conns.ui:19
 #: plugins/stats/DisplaySettings.ui:505 plugins/stats/Settings.ui:140
 msgid "Connections"
@@ -6831,11 +6720,9 @@ msgstr "Tasques"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: plugins/stats/DisplaySettings.ui:27
-#, fuzzy
-#| msgid "Download"
 msgctxt "Noun"
 msgid "Download"
-msgstr "Descarrega"
+msgstr "Baixada"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #. i18n: ectx: property (text), widget (QLabel, label_16)
@@ -6874,10 +6761,10 @@ msgstr "Des de sangoneres"
 msgid "From seeds"
 msgstr "Des de sembradors"
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#. i18n: ectx: property (title), widget (QGroupBox, UlSpdGbw)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #. i18n: ectx: property (text), widget (QLabel, label_15)
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#. i18n: ectx: property (title), widget (QGroupBox, UlSpdGbw)
 #: plugins/stats/DisplaySettings.ui:364 plugins/stats/DisplaySettings.ui:374
 #: plugins/stats/Settings.ui:192 plugins/stats/Spd.ui:43
 msgid "Upload"
@@ -7388,71 +7275,6 @@ msgstr "Coincidència de cadena"
 #. i18n: ectx: property (toolTip), widget (KEditListBox, m_exclusion_patterns)
 #: plugins/syndication/filtereditor.ui:68
 #: plugins/syndication/filtereditor.ui:136
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">The string to find in "
-#| "the title of an item. Simple wildcard syntax is supported :</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<table border=\"0\" style=\" margin-top:0px; margin-bottom:0px; margin-"
-#| "left:0px; margin-right:0px;\" align=\"center\" cellspacing=\"1\" "
-#| "cellpadding=\"2\">\n"
-#| "<tr>\n"
-#| "<td style=\" vertical-align:top;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span "
-#| "style=\" font-weight:600;\">c</span></p></td>\n"
-#| "<td style=\" vertical-align:top;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Any character "
-#| "represents itself apart from those mentioned below. Thus <span style=\" "
-#| "font-weight:600;\">c</span> matches the character <span style=\" font-"
-#| "style:italic;\">c</span>.</p></td></tr>\n"
-#| "<tr>\n"
-#| "<td style=\" vertical-align:top;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span "
-#| "style=\" font-weight:600;\">?</span></p></td>\n"
-#| "<td style=\" vertical-align:top;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Matches "
-#| "any single character. </p></td></tr>\n"
-#| "<tr>\n"
-#| "<td style=\" vertical-align:top;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span "
-#| "style=\" font-weight:600;\">*</span></p></td>\n"
-#| "<td style=\" vertical-align:top;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Matches "
-#| "zero or more of any characters.</p></td></tr>\n"
-#| "<tr>\n"
-#| "<td style=\" vertical-align:top;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span "
-#| "style=\" font-weight:600;\">[...]</span></p></td>\n"
-#| "<td style=\" vertical-align:top;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Sets of "
-#| "characters can be represented in square brackets. Within the character "
-#| "class, like outside, backslash has no special meaning.</p></td></tr></"
-#| "table>\n"
-#| "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">For "
-#| "example the *.torrent will match any item which ends in .torrent. </p></"
-#| "body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The string to find in the "
@@ -7510,13 +7332,6 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">For example "
 "the *.torrent will match any item which ends in .torrent. </p>"
 msgstr ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
-"weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">La cadena a cercar en el "
 "títol d'un element. S'accepta una sintaxi de comodins senzilla:</p>\n"
@@ -7572,7 +7387,7 @@ msgstr ""
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Per "
 "exemple, *.torrent concordarà amb qualsevol element que acabi amb .torrent. "
-"</p></body></html>"
+"</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_reg_exp_syntax)
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_exclusion_reg_exp)
@@ -7924,26 +7739,6 @@ msgstr "La interfície a usar."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_authentication)
 #: plugins/webinterface/webinterfaceprefwidget.ui:91
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">If login required is "
-#| "enabled, you need to enter a username and a password.</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">Attention: </span>You should not disable this when the "
-#| "webinterface is accessible from the internet. It will allow anybody "
-#| "access to it.</p></body></html>"
 msgid ""
 "If login required is enabled, you need to enter a username and a password.\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
@@ -7955,25 +7750,15 @@ msgid ""
 "webinterface is accessible from the internet. It will allow anybody access "
 "to it.</p>"
 msgstr ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Si està actiu el requisit "
-"d'iniciar una sessió, cal que introduïu un nom d'usuari i una contrasenya.</"
-"p>\n"
+"Si està actiu el requisit d'iniciar una sessió, cal que introduïu un nom "
+"d'usuari i una contrasenya.\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
 "p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Atenció: </span>No heu de deshabilitar això quan la interfície "
-"web és accessible des de Internet. Això permetria l'accés a tothom.</p></"
-"body></html>"
+"web és accessible des de Internet. Això permetria l'accés a tothom.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_authentication)
 #: plugins/webinterface/webinterfaceprefwidget.ui:94
@@ -8007,26 +7792,6 @@ msgstr "El port que escoltarà la interfície web."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_forward)
 #: plugins/webinterface/webinterfaceprefwidget.ui:188
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">If you are behind a "
-#| "router and you want to access the webinterface from somewhere on the "
-#| "Internet you need to forward the correct port.</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">This checkbox will "
-#| "ensure that the UPnP plugin automatically forwards the port. The UPnP "
-#| "plugin needs to be loaded for this to work.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">If you are behind a router "
@@ -8040,13 +7805,6 @@ msgid ""
 "that the UPnP plugin automatically forwards the port. The UPnP plugin needs "
 "to be loaded for this to work.</p>"
 msgstr ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-"
-"weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Si esteu darrere d'un "
 "encaminador i voleu accedir a la interfície web des d'algun lloc d'Internet "
@@ -8055,9 +7813,9 @@ msgstr ""
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
 "p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Aquesta caixa de selecció "
-"assegurarà que el connector UPnP redireccioni automàticament el port. El "
-"connector UPnP necessita estar carregat per aquesta feina.</p></body></html>"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Aquesta casella de "
+"selecció assegurarà que el connector UPnP redireccioni automàticament el "
+"port. El connector UPnP necessita estar carregat per aquesta feina.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_forward)
 #: plugins/webinterface/webinterfaceprefwidget.ui:191

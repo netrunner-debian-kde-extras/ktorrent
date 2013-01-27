@@ -1,6 +1,7 @@
 /***************************************************************************
  *   Copyright (C) 2005 by Joris Guisson                                   *
  *   joris.guisson@gmail.com                                               *
+ *   ivasic@gmail.com                                                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,23 +18,63 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.             *
  ***************************************************************************/
-#ifndef KTVERSION_HH
-#define KTVERSION_HH
+#ifndef ANTIP2P_H
+#define ANTIP2P_H
 
-#include <version.h>
-#include "util/constants.h"
-
-#define KT_VERSION_MACRO "4.3.1"
+#include <QVector>
+#include <util/constants.h>
+#include <interfaces/blocklistinterface.h>
 
 namespace kt
 {
-	const bt::Uint32 MAJOR = 4;
-	const bt::Uint32 MINOR = 3;
-	const bt::Uint32 RELEASE = 1;
-	const bt::VersionType VERSION_TYPE = bt::NORMAL;
-	const char VERSION_STRING[] = KT_VERSION_MACRO;
+
+    struct IPBlock
+    {
+        bt::Uint32 ip1;
+        bt::Uint32 ip2;
+
+        IPBlock();
+        IPBlock(const IPBlock& block);
+        IPBlock(const QString& start, const QString& end);
+
+        bool constains(bt::Uint32 ip) const
+        {
+            return ip1 <= ip && ip <= ip2;
+        }
+    };
+
+    /**
+     * @author Ivan Vasic <ivasic@gmail.com>
+     * @brief This class is used to manage anti-p2p filter list, so called level1.
+     */
+    class IPBlockList : public bt::BlockListInterface
+    {
+    public:
+        IPBlockList();
+        virtual ~IPBlockList();
+
+        virtual bool blocked(const net::Address& addr) const;
+        
+        /**
+         * Overloaded function. Uses Uint32 IP to be checked
+         **/
+        bool isBlockedIP(bt::Uint32 ip);
+
+        /**
+         * Loads filter file
+         * @param path The file to load
+         * @return true upon success, false otherwise
+         */
+        bool load(const QString & path);
+        
+        /**
+         * Add a single block
+         * @param block
+         */
+        void addBlock(const IPBlock & block);
+
+    private:
+        QVector<IPBlock> blocks;
+    };
 }
-
-
-
 #endif

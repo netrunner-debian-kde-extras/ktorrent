@@ -8,34 +8,34 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-14 19:51+0200\n"
-"PO-Revision-Date: 2011-05-08 01:51+0200\n"
-"Last-Translator: \n"
-"Language-Team:  <bs@li.org>\n"
+"POT-Creation-Date: 2012-12-19 08:39+0100\n"
+"PO-Revision-Date: 2012-12-20 13:53+0000\n"
+"Last-Translator: Samir Ribić <Unknown>\n"
+"Language-Team: <bs@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2011-04-22 03:58+0000\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Launchpad-Export-Date: 2012-12-21 01:45+0000\n"
+"X-Generator: Launchpad (build 16378)\n"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
-"Slobodan Simić,,Launchpad Contributions:,Slobodan Simic,Slobodan Simic, ,"
-"Launchpad Contributions:,Mirza,Samir Ribić"
+msgstr "Slobodan Simić,Haris Javoraš,Samir Ribić"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "slsimic@gmail.com,,,,,,,,"
+msgstr "slsimic@gmail.com,miniprogrammerme@gmail.com,samir.ribic@etf.unsa.ba"
 
 #: kio-magnet/dbushandler.cpp:96
 msgid ""
 "The Web share for magnet-links is disabled. You can set it up at settings:/"
 "network-and-connectivity/sharing"
 msgstr ""
+"Mrežno dijeljenje za magnet-veze je onemogućeno. To možete promjeniti u "
+"settings:/network-and-connectivity/sharing"
 
 #: kio-magnet/dbushandler.cpp:120
 msgid ""
@@ -43,6 +43,8 @@ msgid ""
 "happen, even if KTorrent is not installed.                           Check "
 "your machines resources and limits."
 msgstr ""
+"Ne mogu pokrenuti proces za KTorrent. To se ne bi trebalo desiti čak i ako "
+"KTorrent nije instaliran. Provjerite resurse i ograničenja mašine."
 
 #: kio-magnet/dbushandler.cpp:158
 #, kde-format
@@ -50,28 +52,30 @@ msgid ""
 "Could not connect to KTorrent via DBus                                     "
 "after %1 seconds. Is it broken?"
 msgstr ""
+"Ne mogu se povezati na KTorrent preko "
+"DBus                                     nakon %1 secondi. Je li oštećen?"
 
 #: kio-magnet/dbushandler.cpp:180
 msgid ""
 "Could not get the group list, do you have a compatible KTorrent version "
 "running?"
 msgstr ""
+"Nije mogla da dobije listu grupe, imate li pokrenutu kompatibilnu verziju "
+"KTorrenta?"
 
 #: kio-magnet/dbushandler.cpp:333
 #, kde-format
 msgid "The link for %1 does not contain the required btih hash-parameter."
-msgstr ""
+msgstr "Veza na %1 ne sadrži potreban btih hash-parametar."
 
 #: kio-magnet/dbushandler.cpp:345
 #, kde-format
 msgid "The found value (%1) for the hash is neither 32 nor 40 chars long."
-msgstr ""
+msgstr "Pronađena vrijednost (%1) nije duga ni 32 niti 40 znakova."
 
 #: kio-magnet/dbushandler.cpp:624
-#, fuzzy
-#| msgid "Torrent has been stopped.<br />"
 msgid "Torrent has been removed from KTorrent."
-msgstr "Torent je zaustavljen.<br />"
+msgstr "Torrent je uklonjen iz KTorrent."
 
 #: kio-magnet/kio_magnet.cpp:294 kio-magnet/kio_magnet.cpp:395
 #, kde-format
@@ -79,15 +83,18 @@ msgid ""
 "File exists in KTorrent, but cannot open it on disk at path\"%1\". Have you "
 "removed the file manually?"
 msgstr ""
+"Datoteka postoji u KTorrent-u ali se ne može otvoriti na disku sa lokacije "
+"\"%1\". Da li ste je uklonili ručno?"
 
 #: kio-magnet/kio_magnet.cpp:375
 msgid "You cannot write to magnet resources."
-msgstr ""
+msgstr "Ne možete pisati na magnetne resurse"
 
 #: kio-magnet/kio_magnet.cpp:403
 #, kde-format
 msgid "File \"%1\" is a directory. This should not happen. Please file a bug."
 msgstr ""
+"Datoteka \"%1\" je direktorij. To se ne bi trebalo desiti. Prijavite grešku"
 
 #: kio-magnet/kio_magnet.cpp:429
 #, kde-format
@@ -95,38 +102,38 @@ msgid ""
 "File exists in KTorrent, but cannot open it on disk at path \"%1\". Have you "
 "removed the file manually?"
 msgstr ""
+"Datoteka postoji u KTorrent, ali je ne mogu pokrenuti u disku na stazi "
+"\"%1\". Da li ste ručno uklonili datoteku?"
 
 #. i18n: ectx: label, entry (Enabled), group (Magnet)
 #: kio-magnet/magnetsettings.kcfg:10
 msgid "Enable the global magnet-link support."
-msgstr ""
+msgstr "Omogućite globalnu magnet-link podršku."
 
 #. i18n: ectx: label, entry (ShareSize), group (Magnet)
 #: kio-magnet/magnetsettings.kcfg:14
 msgid "Total maximum size used by the share in MiB."
-msgstr ""
+msgstr "Ukupna maksimalna veličina koju dijeljenje koristi u MiB."
 
 #. i18n: ectx: label, entry (TrustedHosts), group (Magnet)
 #: kio-magnet/magnetsettings.kcfg:18
-#, fuzzy
-#| msgid "Show list of chunks currently downloading"
 msgid "List of hosts which are directly accepted on loading"
-msgstr "Spisak dijelova koji se trenutno preuzimaju"
+msgstr "Lista poslužitelja koji su direktno prihvaćeni pri učitavanju"
 
 #. i18n: ectx: label, entry (ManagedTorrents), group (Magnet)
 #: kio-magnet/magnetsettings.kcfg:21
 msgid "Torrents inside KTorrent which are managed by these modules."
-msgstr ""
+msgstr "Torrenti unutar KTorrenta kojima upravljaju ovi moduli."
 
 #. i18n: ectx: label, entry (RunningTorrents), group (Magnet)
 #: kio-magnet/magnetsettings.kcfg:24
 msgid "Torrents currently used by the I/O-Slaves."
-msgstr ""
+msgstr "Torenti koje trenutno koriste I/O-Slaves."
 
 #. i18n: ectx: label, entry (MaxShareRatio), group (Magnet)
 #: kio-magnet/magnetsettings.kcfg:27
 msgid "The maximum share ratio which should be targeted for each torrent."
-msgstr ""
+msgstr "Maksimalni omjer dijeljenja koji treba biti ciljan za svaki torent."
 
 #: ktmagnetdownloader/magnetdownloader.cpp:44
 msgid "KTMagnetDownloader"
@@ -145,15 +152,13 @@ msgid "Document to open"
 msgstr "Dokument za otvaranje"
 
 #: ktorrent/core.cpp:180
-#, fuzzy, kde-format
-#| msgid ""
-#| "KTorrent is unable to accept connections because the TCP ports %1 is "
-#| "already in use by another program."
+#, kde-format
 msgid ""
 "KTorrent is unable to accept connections because the TCP port %1 is already "
 "in use by another program."
 msgstr ""
-"K‑torent ne može da prihvata veze jer TCP port %1 već koristi drugi program."
+"KTtorrent ne može prihvatiti veze zbog toga što TCP port %1 već koristi "
+"drugi program."
 
 #: ktorrent/core.cpp:194
 #, kde-format
@@ -169,6 +174,8 @@ msgid ""
 "Opening the torrent <b>%1</b>, would share one or more files with the "
 "following torrents. Torrents are not allowed to write to the same files. "
 msgstr ""
+"Otvaranje torenta <b>%1</b> će podijeliti jednu ili više datoteka sa "
+"sljedećim torentima. Torentima nije dozvoljeno da pišu istovremeno. "
 
 #: ktorrent/core.cpp:1026
 msgid "KTorrent is running one or more torrents"
@@ -179,27 +186,29 @@ msgstr "K‑torent radi sa jednim ili više torenata"
 msgid "Cannot create torrent: %1"
 msgstr "Ne mogu da napravim torent: %1"
 
-#: ktorrent/core.cpp:1212
+#: ktorrent/core.cpp:1216
 msgid ""
 "One or more storage volumes are not mounted. In order to start this torrent, "
 "they need to be mounted."
 msgstr ""
+"Jedan ili više sadržaja za pohranu nisu montirani.  Da b pokrenuo torent, "
+"trebaju biti montirani."
 
-#: ktorrent/core.cpp:1213
+#: ktorrent/core.cpp:1217
 msgid "Retry"
-msgstr ""
+msgstr "Pokušaj ponovo"
 
-#: ktorrent/core.cpp:1222
+#: ktorrent/core.cpp:1226
 #, kde-format
 msgid "Storage volume %1 is not mounted"
-msgstr ""
+msgstr "Sadržaj za pohranu %1 nije montiran"
 
-#: ktorrent/core.cpp:1224
+#: ktorrent/core.cpp:1228
 #, kde-format
 msgid "Storage volumes %1 are not mounted"
-msgstr ""
+msgstr "Sadržaji za pohranu %1 nisu montirani"
 
-#: ktorrent/core.cpp:1236
+#: ktorrent/core.cpp:1240
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -208,21 +217,21 @@ msgstr ""
 "Nedostaje nekoliko datoteka torenta „%1“. \n"
 "Želite li da ih ponovo napravite ili da ih ne preuzimate?"
 
-#: ktorrent/core.cpp:1245 ktorrent/core.cpp:1256 ktorrent/core.cpp:1269
+#: ktorrent/core.cpp:1249 ktorrent/core.cpp:1260 ktorrent/core.cpp:1273
 msgid "Data files are missing"
 msgstr "Nedostaju datoteke sa podacima"
 
-#: ktorrent/core.cpp:1255
+#: ktorrent/core.cpp:1259
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Ne mogu da demarkiram nedostajuće datoteke: %1"
 
-#: ktorrent/core.cpp:1268
+#: ktorrent/core.cpp:1272
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Ne mogu da napravim nedostajuće datoteke: %1"
 
-#: ktorrent/core.cpp:1279
+#: ktorrent/core.cpp:1283
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing.\n"
@@ -231,16 +240,16 @@ msgstr ""
 "Nedostaje datoteka u koui se upisuju podaci torenta „%1“. \n"
 "Želite li da je ponovo napravite?"
 
-#: ktorrent/core.cpp:1286 ktorrent/core.cpp:1296
+#: ktorrent/core.cpp:1290 ktorrent/core.cpp:1300
 msgid "Data file is missing"
 msgstr "Nedostaje datoteka sa podacima"
 
-#: ktorrent/core.cpp:1295
+#: ktorrent/core.cpp:1299
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Ne mogu da napravim datoteku: %1"
 
-#: ktorrent/core.cpp:1383
+#: ktorrent/core.cpp:1387
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -255,16 +264,16 @@ msgstr[1] ""
 msgstr[2] ""
 "Nađeno je %1 torenata iz KDE‑3 verzije K‑torenta. Želite li da ih uvezete?"
 
-#: ktorrent/core.cpp:1405
+#: ktorrent/core.cpp:1409
 msgid "No torrents from the KDE3 version were found."
 msgstr "Nema torenata iz KDE‑3 verzije."
 
-#: ktorrent/core.cpp:1444
+#: ktorrent/core.cpp:1448
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr "Neispravna magnetska bittorent veza: %1"
 
-#: ktorrent/core.cpp:1449
+#: ktorrent/core.cpp:1453
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -299,6 +308,10 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Note:</span> We accept both IPv4 and "
 "IPv6 addresses</p>\n"
 msgstr ""
+"<p> IP adresa ili ime hosta na koji se susjed povezuje treba biti ovdje "
+"navedeno.</p>\n"
+"<p><span style=\" font-weight:600;\">Napomena:</span> Prihvataju se IPv4 i "
+"IPv6 adrese</p>\n"
 
 #. i18n: ectx: property (text), widget (QLineEdit, m_ip)
 #. i18n: ectx: property (text), widget (KLineEdit, m_ip_to_add)
@@ -417,6 +430,9 @@ msgid ""
 "following torrents. Torrents are not allowed to write to the same files. "
 "Please select a different location."
 msgstr ""
+"Otvaranje torenta <b>%1</b>, bi dijelilo jednu ili više datoteka s sljedećim "
+"torentima. Torentima nije dopušteno da pišu u iste datoteke. Molim odaberite "
+"drugu lokaciju."
 
 #: ktorrent/dialogs/fileselectdlg.cpp:430 ktorrent/dialogs/pastedialog.cpp:62
 #: ktorrent/dialogs/torrentcreatordlg.cpp:118 libktcore/groups/allgroup.cpp:26
@@ -430,7 +446,7 @@ msgstr "<b>Ne mogu da odredim slobodan prostor</b>"
 #: ktorrent/dialogs/fileselectdlg.cpp:517
 #, kde-format
 msgid "%1 (%2 in use by existing files)"
-msgstr ""
+msgstr "%1 (%2 koriste postojeće datoteke)"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:526
 #, kde-format
@@ -461,7 +477,7 @@ msgstr "Postojeća datoteka: <b>da</b>"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:654
 msgid "Clear History"
-msgstr "Očisti historijat "
+msgstr "Očisti historijat"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, FileSelectDlg)
 #: ktorrent/dialogs/fileselectdlg.ui:14
@@ -478,7 +494,7 @@ msgstr "Preuzmi u:"
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_download_location_history)
 #: ktorrent/dialogs/fileselectdlg.ui:38
 msgid "History of all recently used download locations"
-msgstr ""
+msgstr "Historija svih nedavno korištenih lokacija preuzimanja"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_download_location_history)
 #. i18n: ectx: property (text), widget (QToolButton, m_move_when_completed_history)
@@ -518,7 +534,7 @@ msgstr "Premjesti kada se završi u:"
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_move_when_completed_history)
 #: ktorrent/dialogs/fileselectdlg.ui:65
 msgid "History of all recently used move when completed locations"
-msgstr ""
+msgstr "Historija svih nedavno korištenih premještanja nakon završetka"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/fileselectdlg.ui:96
@@ -573,8 +589,8 @@ msgstr "Postojeće datoteke nisu nađeni"
 msgid "Options"
 msgstr "Opcije"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/fileselectdlg.ui:207 ktorrent/dialogs/pastedlgbase.ui:77
 msgid "Group:"
 msgstr "Grupa:"
@@ -592,6 +608,10 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Note: </span>only do this when you are "
 "absolutely sure.</p>"
 msgstr ""
+"<p>Kada se pronađe postojeća datoteka, preskoči provjeru podataka i "
+"pretpostavi da su datoteke potpuno preuzete.</p>\n"
+"<p><span style=\" font-weight:600;\">Napomena: </span>ovo uradite samo ako "
+"ste potpuno sigurni.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_skip_data_check)
 #: ktorrent/dialogs/fileselectdlg.ui:258
@@ -624,8 +644,8 @@ msgstr "Nakon preuzimanja:"
 msgid "Cannot load the torrent file: %1"
 msgstr "Ne mogu da učitam torent: %1"
 
-#: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:67
-#: plugins/ipfilter/convertthread.cpp:167
+#: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:66
+#: plugins/ipfilter/convertthread.cpp:166
 #: plugins/search/searchenginelist.cpp:192
 #, kde-format
 msgid "Cannot open %1: %2"
@@ -708,7 +728,7 @@ msgstr "Sljedeće datoteke nedostaju:"
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_recreate)
 #: ktorrent/dialogs/missingfilesdlg.ui:34
 msgid "They are no longer there, recreate them."
-msgstr ""
+msgstr "Oni više nisu tu, da li ih želite ponovo napraviti?"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_recreate)
 #: ktorrent/dialogs/missingfilesdlg.ui:37
@@ -717,10 +737,8 @@ msgstr "Napr&avi"
 
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_dnd)
 #: ktorrent/dialogs/missingfilesdlg.ui:44
-#, fuzzy
-#| msgid "Cannot deselect missing files: %1"
 msgid "Do not download the missing files."
-msgstr "Ne mogu da demarkiram nedostajuće datoteke: %1"
+msgstr "Nemoj preuzimati datoteke koje nedostaju."
 
 #. i18n: ectx: property (text), widget (KPushButton, m_dnd)
 #: ktorrent/dialogs/missingfilesdlg.ui:47 plugins/infowidget/fileview.cpp:123
@@ -730,7 +748,7 @@ msgstr "Ne preuzimaj"
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_select_new)
 #: ktorrent/dialogs/missingfilesdlg.ui:54
 msgid "The files have been moved to another location, select the new location."
-msgstr ""
+msgstr "Datoteka je premještena na drugu lokaciju, odaberite novu lokaciju."
 
 #. i18n: ectx: property (text), widget (KPushButton, m_select_new)
 #: ktorrent/dialogs/missingfilesdlg.ui:57
@@ -739,10 +757,8 @@ msgstr "Izaberi novu lokaciju"
 
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_cancel)
 #: ktorrent/dialogs/missingfilesdlg.ui:77
-#, fuzzy
-#| msgid "Don't start torrents"
 msgid "Cancel, do not start the torrent."
-msgstr "Ne pokreći torente"
+msgstr "Otkaži, nemoj pokretati torent."
 
 #. i18n: ectx: property (text), widget (KPushButton, m_cancel)
 #. i18n: ectx: property (text), widget (KPushButton, cancel_button)
@@ -776,7 +792,7 @@ msgstr "Otvori tiho"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpeedLimitsDlg)
 #: ktorrent/dialogs/speedlimitsdlg.cpp:50
-#: ktorrent/dialogs/speedlimitsdlg.ui:14 ktorrent/view/view.cpp:256
+#: ktorrent/dialogs/speedlimitsdlg.ui:14 ktorrent/view/view.cpp:260
 msgid "Speed Limits"
 msgstr "Ograničenja brzine"
 
@@ -796,8 +812,8 @@ msgid "Global Limits"
 msgstr "Globalna ograničenja"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
+#. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ktorrent/dialogs/speedlimitsdlg.ui:70 ktorrent/pref/networkpref.ui:111
 #: ktorrent/pref/recommendedsettingsdlg.ui:221
 #: plugins/bwscheduler/bwprefpage.ui:65
@@ -855,9 +871,9 @@ msgstr "Bez ograničenja"
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_rate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_max_download_rate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_max_upload_rate)
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_avg_speed_slot)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxDownloadRate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxUploadRate)
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_avg_speed_slot)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverUploadLimit)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverDownloadLimit)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_download_limit)
@@ -879,8 +895,8 @@ msgid " KiB/s"
 msgstr " kiB/s"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/speedlimitsdlg.ui:93 ktorrent/pref/networkpref.ui:134
 #: ktorrent/pref/recommendedsettingsdlg.ui:207
@@ -1159,6 +1175,10 @@ msgid ""
 "location in the dialog will be set to this. You can still override it, if "
 "you want to."
 msgstr ""
+"Podrazumijevana lokacija snimanja za torente iz ove grupe. <br/><br/>To se "
+"koristi samo u dijaloškom prozoru za izbor datoteke, kada mijenjate grupu "
+"lokacija za preuzimanje će biti postavljena na ovo. Možete prevazići ako "
+"želite."
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_default_location_enabled)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useSaveDir)
@@ -1168,9 +1188,8 @@ msgstr "Podrazumijevana lokacija upisivanja:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_default_move_on_completion_enabled)
 #: ktorrent/groups/grouppolicydlg.ui:40
-#, fuzzy
 msgid "Default move when completed location:"
-msgstr "Premjesti kada se završi u:"
+msgstr "Podrazumijevana lokacija za premještanje pri završetku"
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, m_default_move_on_completion_location)
 #: ktorrent/groups/grouppolicydlg.ui:47
@@ -1180,13 +1199,15 @@ msgid ""
 "the move when completed location in the dialog will be set to this. You can "
 "still override it, if you want to."
 msgstr ""
+"Zadana lokacija na koju se premješta po završetku za torrent-e iz ove "
+"skupine. <br/> <br/> To se koristi samo u dijalogu odabira datoteka, kada "
+"promijenite grupu, lokacija na koju se premješta po završetku će biti "
+"postavljen na tu vrijednost. Još uvijek možete ga nadjačati, ako želite."
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox)
 #: ktorrent/groups/grouppolicydlg.ui:54
-#, fuzzy
-#| msgid "Decrease priority of torrents which are stalled for too long"
 msgid "Default settings for torrents which are added to the group."
-msgstr "Smanji prioritet torenata koji su predugo u zastoju"
+msgstr "Podrazumijevane postavke za torente koji budu dodani u ovu grupu."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: ktorrent/groups/grouppolicydlg.ui:57
@@ -1228,6 +1249,10 @@ msgid ""
 "If this is not enabled, the settings will always be applied when you add a "
 "torrent to this group. "
 msgstr ""
+"Kada se to omogući, ove postavke će se primijeniti kada je torrent dodan u "
+"grupu u dijalogu odabira datoteka ili dijalogu torrent stvaranja. <p>\n"
+"Ako to nije omogućeno, postavke uvijek će se primijeniti kada dodate torrent "
+"ovoj grupi. "
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_only_new)
 #: ktorrent/groups/grouppolicydlg.ui:154
@@ -1235,50 +1260,42 @@ msgid "Apply settings only for newly opened or created torrents"
 msgstr "Primijeni postavke samo na novootvorene ili napravljene torente"
 
 #: ktorrent/groups/groupswitcher.cpp:58
-#, fuzzy
-#| msgid "Open a torrent"
 msgid "Open a new tab"
-msgstr "Otvori torent"
+msgstr "Otvori novu karticu"
 
 #: ktorrent/groups/groupswitcher.cpp:63
-#, fuzzy
-#| msgid "Stop all torrents in the current tab"
 msgid "Close the current tab"
-msgstr "Zaustavlja sve torente u tekućoj kartici"
+msgstr "Zatvori trenutnu karticu"
 
 #: ktorrent/groups/groupswitcher.cpp:68
-#, fuzzy
-#| msgid "Group Policy"
 msgid "Edit Group Policy"
-msgstr "Smjernica grupe"
+msgstr "Uređivačka grupna pravila"
 
-#: ktorrent/groups/groupview.cpp:81
-#, fuzzy
-#| msgid "Open Tab"
+#: ktorrent/groups/groupview.cpp:80
 msgid "Open In New Tab"
-msgstr "Otvori karticu"
+msgstr "Otvori u novoj kartici"
 
-#: ktorrent/groups/groupview.cpp:85 ktorrent/view/view.cpp:221
+#: ktorrent/groups/groupview.cpp:84 ktorrent/view/view.cpp:225
 msgid "New Group"
 msgstr "Nova grupa"
 
-#: ktorrent/groups/groupview.cpp:89
+#: ktorrent/groups/groupview.cpp:88
 msgid "Edit Name"
 msgstr "Uredi ime"
 
-#: ktorrent/groups/groupview.cpp:93
+#: ktorrent/groups/groupview.cpp:92
 msgid "Remove Group"
 msgstr "Ukloni grupu"
 
-#: ktorrent/groups/groupview.cpp:97
+#: ktorrent/groups/groupview.cpp:96
 msgid "Group Policy"
 msgstr "Smjernica grupe"
 
-#: ktorrent/groups/groupview.cpp:110
+#: ktorrent/groups/groupview.cpp:109
 msgid "Please enter the group name."
 msgstr "Unesite ime grupe."
 
-#: ktorrent/groups/groupview.cpp:117
+#: ktorrent/groups/groupview.cpp:116
 #, kde-format
 msgid "The group %1 already exists."
 msgstr "Grupa %1 već postoji."
@@ -1316,8 +1333,8 @@ msgid "Open a URL which points to a torrent, magnet links are supported"
 msgstr "Otvara URL koji pokazuje na torent, magnetske veze su podržane"
 
 #: ktorrent/gui.cpp:440 plugins/ipfilter/ipblockingprefpage.cpp:35
-#: plugins/ipfilter/ipfilterplugin.cpp:62
-#: plugins/ipfilter/ipfilterplugin.cpp:75
+#: plugins/ipfilter/ipfilterplugin.cpp:60
+#: plugins/ipfilter/ipfilterplugin.cpp:73
 msgid "IP Filter"
 msgstr "IP filter"
 
@@ -1418,9 +1435,8 @@ msgstr "&Prikaz"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: ktorrent/ktorrentui.rc:25
-#, fuzzy
 msgid "Main"
-msgstr "Maxmind"
+msgstr "Glavno"
 
 #. i18n: ectx: Menu (Torrents)
 #. i18n: ectx: ToolBar (TorrentsToolBar)
@@ -1431,15 +1447,13 @@ msgstr "Torenti"
 
 #. i18n: ectx: Menu (GroupsMenu)
 #: ktorrent/kttorrentactivityui.rc:26
-#, fuzzy
 msgid "Groups"
-msgstr "Grupa:"
+msgstr "Grupe"
 
 #. i18n: ectx: Menu (ViewMenu)
 #: ktorrent/kttorrentactivityui.rc:39
-#, fuzzy
 msgid "View"
-msgstr "&Prikaz"
+msgstr "Prikaz"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: Menu (AdvancedMenu)
@@ -1449,12 +1463,12 @@ msgid "Advanced"
 msgstr "Napredno"
 
 #. i18n: ectx: Menu (OpenDirMenu)
-#: ktorrent/kttorrentactivityui.rc:62 ktorrent/view/view.cpp:242
+#: ktorrent/kttorrentactivityui.rc:62 ktorrent/view/view.cpp:246
 msgid "Open Directory"
 msgstr "Otvori direktorijum"
 
 #. i18n: ectx: Menu (GroupsSubMenu)
-#: ktorrent/kttorrentactivityui.rc:68 ktorrent/view/view.cpp:245
+#: ktorrent/kttorrentactivityui.rc:68 ktorrent/view/view.cpp:249
 msgid "Add to Group"
 msgstr "Dodaj u grupu"
 
@@ -1479,10 +1493,8 @@ msgid "Bittorrent client for KDE"
 msgstr "Bittorent klijent za KDE"
 
 #: ktorrent/main.cpp:98
-#, fuzzy
-#| msgid "(C) 2005 - 2010 Joris Guisson and Ivan Vasic"
 msgid "(C) 2005 - 2011 Joris Guisson and Ivan Vasic"
-msgstr "© 2005–2010, Joris Gison i Ivan Vasić"
+msgstr "(C) 2005 - 2011 Joris Guisson i Ivan Vasic"
 
 #: ktorrent/main.cpp:102
 msgid "Joris Guisson"
@@ -1518,7 +1530,7 @@ msgstr "Priključak statistike"
 
 #: ktorrent/main.cpp:107
 msgid "Christian Weilbach"
-msgstr ""
+msgstr "Christian Weilbach"
 
 #: ktorrent/main.cpp:107
 msgid "kio-magnet"
@@ -1820,15 +1832,15 @@ msgstr "Mogućnost isključenja autentifikacije u web sučelju"
 
 #: ktorrent/main.cpp:149
 msgid "Jaroslaw Swierczynski"
-msgstr ""
+msgstr "Jaroslaw Swierczynski"
 
 #: ktorrent/main.cpp:149
 msgid "Exclusion patterns in the syndication plugin"
-msgstr ""
+msgstr "Uzorci islkuljučenja u syndication dodatku"
 
 #: ktorrent/main.cpp:150
 msgid "Alexey Shildyakov "
-msgstr ""
+msgstr "Alexey Shildyakov "
 
 #: ktorrent/main.cpp:150
 msgid "Patch to rename single file torrents to the file inside"
@@ -1881,6 +1893,9 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Note: </span>Increasing this will "
 "decrease CPU usage.</p>"
 msgstr ""
+"<p>Interval u milisekundama izmežu obnavljanja GUI-ja.</p>\n"
+"<p><span style=\" font-weight:600;\">Važno: </span>Povečanjem ovoga smanjuje "
+"se iskorištenost CPJ.</p>"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_guiUpdateInterval)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_cpuUsage)
@@ -1905,6 +1920,14 @@ msgid ""
 "might not actually reach this speed when this value is too high. Without a "
 "limit you can easily get above 3000 KiB/s on a LAN.</p>"
 msgstr ""
+"<p>Iznos vremena koliko će mrežne niti se uspavati kad je brzina ograničena. "
+"To nema apsolutno nikakvog učinka ako nema ograničenja brzine.</p>\n"
+"<p><span style=\" font-weight:600;\">Napomena:</span> Što je iznos manji je "
+"to više procesora se koristi. Postavljen visoko može dovesti do nižih brzina "
+"u visokim bandwith situacijama. </p>\n"
+"<p>Na primjer, za 100 Mbit LAN, ako postavite limit 3000 KiB/s, možda nećete "
+"doseći ovu brzinu ako je vrijednost previsoka. Bez limita možete doseći "
+"preko  3000 KiB/s na LAN.</p>"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
@@ -1932,6 +1955,18 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Moving average:</span>  Moving average "
 "of the last 20 samples</p>"
 msgstr ""
+"<p>Odaberite algoritam koji će se koristiti za određivanje preostalog "
+"vremena :</p>\n"
+"<p><span style=\" font-weight:600;\">KTorrent:</span>Kombinacija raznih "
+"algoritama, koristi se onaj koji najbolje odgovara datoj situaciji.</p>\n"
+"<p><span style=\" font-weight:600;\">Trenutna brzina:</span>Broj nepreuzetih "
+"bita / trenutna brzina</p>\n"
+"<p><span style=\" font-weight:600;\">prosječna brzina: </span>Broj "
+"nepreuzetih bita / prosječna brzina</p>\n"
+"<p><span style=\" font-weight:600;\">Prozor X</span> Prosjek posljednjih X "
+"primjera (X = 20)</p>\n"
+"<p><span style=\" font-weight:600;\">Prosjek premještanja:</span>  Prosjek "
+"premještanja posljednjih 20 primjera</p>"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
 #: ktorrent/pref/advancedpref.ui:163 plugins/stats/SpdTabPage.cc:67
@@ -1966,6 +2001,8 @@ msgid ""
 "<p>The amount of data at the beginning and end of an audio file, which will "
 "be prioritized for previewing.</p>"
 msgstr ""
+"<p>Količina podataka na početku i kraju zvučne datoteke koja će biti "
+"prioritetna za preslušavanje</p>"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeAudio)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeVideo)
@@ -1984,6 +2021,8 @@ msgid ""
 "<p>The amount of data at the beginning and end of a video file, which will "
 "be prioritized for previewing.</p>"
 msgstr ""
+"<p>Količina podataka na početku i kraju video datoteke koja će biti "
+"prioritetna za pregledavanje</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useQHttpAnnounce)
 #: ktorrent/pref/advancedpref.ui:251
@@ -2056,6 +2095,10 @@ msgid ""
 "router, this port needs to be forwarded to accept incoming DHT requests. The "
 "UPnP plugin can do this for you.</p>"
 msgstr ""
+"<p>UDP port koji će biti korišten za DHT protokol.</p>\n"
+"<p><span style=\" font-weight:600;\">Pažnja:</span> Ako ste iza rutera, ovaj "
+"port mora biti promaknut da prihvati dolazeće DHT zahtjeve. UPnP priključak "
+"ovo može uraditi umjesto vas.</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_pexEnabled)
 #: ktorrent/pref/btpref.ui:61
@@ -2104,6 +2147,10 @@ msgid ""
 "<p>The encryption will prevent your bittorrent traffic to be flagged as "
 "bittorrent traffic, and so the ISP will not slow it down.</p>"
 msgstr ""
+"<p>Šifrovanje protokola je korisno kada vaš ISP usporava BitTorrent veze. </"
+"p>\n"
+"<p>Enkripcija će spriječiti da BitTorrent promet bude označen kao BitTorrent "
+"promet, i tako ga ISP neće usporiti.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useEncryption)
 #. i18n: ectx: label, entry (useEncryption), group (downloads)
@@ -2242,7 +2289,7 @@ msgstr "Prikaži iskačuće poruke sistemskog ugla"
 msgid ""
 "When you select multiple torrents to be opened at the same time, open them "
 "silently."
-msgstr ""
+msgstr "Kada odaberete da otvorite više torenta, otvorite ih tiho."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openMultipleTorrentsSilently)
 #: ktorrent/pref/generalpref.ui:129
@@ -2251,23 +2298,19 @@ msgstr "Otvaraj višestruke torente tiho"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openAllTorrentsSilently)
 #: ktorrent/pref/generalpref.ui:136
-#, fuzzy
 msgid "Open all torrents silently."
-msgstr "Otvori torente tiho"
+msgstr "Otvori sve torente tiho."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openAllTorrentsSilently)
 #: ktorrent/pref/generalpref.ui:139
-#, fuzzy
 msgid "Open all torrents silently"
-msgstr "Otvori torente tiho"
+msgstr "Otvori sve torente tiho"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_suppressSleep)
 #: ktorrent/pref/generalpref.ui:146
-#, fuzzy
-#| msgid "Suppress sleep when torrents are running"
 msgid ""
 "Prevent computer from going into a sleep state when torrents are running."
-msgstr "Ne uspavljuj računar kada torenti rade"
+msgstr "Zabrani računaru da ide u stanje sleep za vrijeme izvršavanja torenta."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_suppressSleep)
 #: ktorrent/pref/generalpref.ui:149
@@ -2282,11 +2325,16 @@ msgid ""
 "desktop.iso</span>, the torrent will be displayed as <span style=\" font-"
 "weight:600;\">linux-desktop.</span></p>"
 msgstr ""
+"<p>Preimenuj torente sa jednom datotekom u ime te datoteke.</p>\n"
+"<p>Ako je, na primjer, naziv datoteke <span style=\" font-weight:600;"
+"\">linux-desktop.iso</span>, torent će biti prikazan kao <span style=\" font-"
+"weight:600;\">linux-desktop.</span></p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_autoRenameSingleFileTorrents)
 #: ktorrent/pref/generalpref.ui:160
 msgid "Rename single file torrents with the name its only file"
 msgstr ""
+"Preimenuj torente koji imaju jednu datoteku da se zovu poput te datoteke"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: ktorrent/pref/networkpref.cpp:35
@@ -2311,6 +2359,10 @@ msgid ""
 "router, this port needs to be forwarded to accept incoming connections. The "
 "UPnP plugin can do this for you.</p>"
 msgstr ""
+"<p>Port koji će biti korišten za bittorent protokol.</p>\n"
+"<p><span style=\" font-weight:600;\">Pažnja:</span> Ako ste iza rutera, ovaj "
+"port mora biti promaknut da prihvati dolazeće zahtjeve. UPnP priključak ovo "
+"može uraditi umjesto vas.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ktorrent/pref/networkpref.ui:47
@@ -2325,9 +2377,12 @@ msgid ""
 "router, this port needs to be forwarded. The UPnP plugin can do this for you."
 "</p>"
 msgstr ""
+"<p>Port korišten za UDP traker protokol.</p>\n"
+"<p><span style=\" font-weight:600;\">Upozorenje:</span>Ako ste iza routera, "
+"ovaj port treba biti proslijeđen. UPnP dodatak može to učiniti za vas.</p>"
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
 #: ktorrent/pref/networkpref.ui:71 ktorrent/pref/recommendedsettingsdlg.ui:235
 #: plugins/bwscheduler/edititemdlg.ui:229
 msgid "Maximum connections per torrent:"
@@ -2338,8 +2393,8 @@ msgstr "Najviše veza po preuzimanju:"
 msgid "The maximum number of connections allowed per torrent."
 msgstr "Najveći dozvoljeni broj veza po torentu."
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_4)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ktorrent/pref/networkpref.ui:91 ktorrent/pref/recommendedsettingsdlg.ui:249
 #: plugins/bwscheduler/edititemdlg.ui:246
@@ -2388,6 +2443,10 @@ msgid ""
 "<p>If you are having trouble with ktorrent blocking other internet traffic, "
 "try setting this number a bit lower.</p>"
 msgstr ""
+"<p> Maksimalan broj izlaznih veza koje će ktorrent  pokušati postaviti "
+"istovremeno. </p>\n"
+"<p> Ako imate problema što ktorrent blokira drugi internet promet, pokušajte "
+"postaviti ovaj broj malo niže. </p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: ktorrent/pref/networkpref.ui:213
@@ -2401,6 +2460,9 @@ msgid ""
 "<p><span style=\"font-weight:600;\">Note: </span>Requires a restart to take "
 "effect.</p>"
 msgstr ""
+"<p>Koje mrežno sučelje treba slušati za dolazeće veze.</p>\n"
+"<p><span style=\"font-weight:600;\">Napomena: </span>Potrebno ponovno "
+"pokretanje da stupi na snagu.</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_utpEnabled)
 #: ktorrent/pref/networkpref.ui:252
@@ -2481,10 +2543,8 @@ msgstr "HTTP"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useKDEProxySettings)
 #: ktorrent/pref/proxypref.ui:23
-#, fuzzy
-#| msgid "Use the default browser configured in the system settings."
 msgid "<p>Use the HTTP proxy settings configured in the settings of KDE.</p>"
-msgstr "Koristi podrazumijevani pregledač podešen u sistemskim postavkama."
+msgstr "<p>Koristi HTTP proxy postavke podešene u postavkama za KDE.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useKDEProxySettings)
 #: ktorrent/pref/proxypref.ui:26
@@ -2518,21 +2578,14 @@ msgstr "Koristi proksi za veze web sijanja"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useProxyForTracker)
 #: ktorrent/pref/proxypref.ui:84
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Whether or not to use "
-#| "the HTTP proxy for tracker connections.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Whether or not to use the "
 "HTTP proxy for tracker connections.</p>"
-msgstr "<html><p>Da li se koristi HTTP proksi za veze pratilaca.</p></html>"
+msgstr ""
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Koristiti HTTP proxy za "
+"praćenje veza.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxyForTracker)
 #: ktorrent/pref/proxypref.ui:87
@@ -2551,6 +2604,9 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Note: </span>This is not used for "
 "tracker connections</p>"
 msgstr ""
+"<p>Koristi SOCKS proxy poslužitelj za veze bitornenta.</p>\n"
+"<p><span style=\" font-weight:600;\">Napomena: </span>Ovo se koristi samo za "
+"praćenje veza.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_socksEnabled)
 #: ktorrent/pref/proxypref.ui:107
@@ -2564,15 +2620,13 @@ msgstr "Server:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_socksProxy)
 #: ktorrent/pref/proxypref.ui:123
-#, fuzzy
-#| msgid "IP address or hostname of the HTTP proxy to use. "
 msgid "<p>IP address or hostname of the SOCKS server</p>"
-msgstr "IP adresa ili ime računara HTTP proksija. "
+msgstr "<p>IP adresa ili ime glavnog računala SOCKS poslužitelja</p>"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_socksPort)
 #: ktorrent/pref/proxypref.ui:137
 msgid "Port used by the SOCKS server"
-msgstr ""
+msgstr "Port koristi SOCKS poslužitelj"
 
 #. i18n: ectx: property (text), widget (QLabel, label_13)
 #: ktorrent/pref/proxypref.ui:144
@@ -2603,10 +2657,8 @@ msgstr "Korisničko ime:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_socksUsername)
 #: ktorrent/pref/proxypref.ui:177
-#, fuzzy
-#| msgid "Use a SOCKS proxy server:"
 msgid "Username for the SOCKS proxy server."
-msgstr "SOKS proksi server:"
+msgstr "Korisničko ime za SOCKS proxy poslužitelj."
 
 #. i18n: ectx: property (text), widget (QLabel, label_14)
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -2619,13 +2671,11 @@ msgstr "Lozinka:"
 
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_socksPassword)
 #: ktorrent/pref/proxypref.ui:191
-#, fuzzy
-#| msgid "Use a SOCKS proxy server:"
 msgid "Password for the SOCKS proxy server."
-msgstr "SOKS proksi server:"
+msgstr "Lozinka za SOCKS proxy poslužitelj."
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: property (title), widget (QGroupBox, m_qm_group_box)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: ktorrent/pref/qmpref.cpp:25 ktorrent/pref/qmpref.ui:27
 #: ktorrent/pref/recommendedsettingsdlg.ui:266
 #: ktorrent/torrentactivity.cpp:100
@@ -2653,8 +2703,8 @@ msgstr ""
 msgid "Control torrents manually"
 msgstr "Ručno upravljanje torentima"
 
-#. i18n: ectx: property (text), widget (QLabel, label_14)
 #. i18n: ectx: property (text), widget (QLabel, label_11)
+#. i18n: ectx: property (text), widget (QLabel, label_14)
 #: ktorrent/pref/qmpref.ui:35 ktorrent/pref/recommendedsettingsdlg.ui:288
 msgid "Maximum downloads:"
 msgstr "Najviše preuzimanja:"
@@ -2666,8 +2716,8 @@ msgid ""
 msgstr ""
 "Najveći broj preuzimanja koje će menadžer redoslijeda istovremeno pokrenuti."
 
-#. i18n: ectx: property (text), widget (QLabel, label_17)
 #. i18n: ectx: property (text), widget (QLabel, label_10)
+#. i18n: ectx: property (text), widget (QLabel, label_17)
 #: ktorrent/pref/qmpref.ui:55 ktorrent/pref/recommendedsettingsdlg.ui:302
 msgid "Maximum seeds:"
 msgstr "Najviše sijanja:"
@@ -2734,6 +2784,10 @@ msgid ""
 "<p>This will allow the queue manager to run other torrents, when a torrent "
 "is doing nothing.</p>"
 msgstr ""
+"<p> Kada je to omogućeno, menadžer redova će smanjiti prioritet torenta koji "
+"je zastao predugo. </p>\n"
+"<p> To će omogućiti red menadžer za pokretanje drugih torenta, kada torrent "
+"ne radi ništa. </p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_decreasePriorityOfStalledTorrents)
 #: ktorrent/pref/qmpref.ui:136
@@ -2751,6 +2805,8 @@ msgid ""
 "<p>Time used for the stall timer. When a torrent is stalled longer than "
 "this, its priority will be decreased.</p>"
 msgstr ""
+"<p>Vrijeme za mjerač neaktivnosti. Kada je torent neaktivan duže od ovog, "
+"prioritet će mu se smanjiti.</p>"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: ktorrent/pref/qmpref.ui:186
@@ -2772,8 +2828,8 @@ msgstr ""
 msgid "Keep seeding after download is finished"
 msgstr "Nastavi da siješ nakon završenog preuzimanja"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ktorrent/pref/qmpref.ui:202 ktorrent/pref/recommendedsettingsdlg.ui:274
 msgid "Number of upload slots:"
 msgstr "Broj veza slanja:"
@@ -2794,11 +2850,6 @@ msgstr "Podrazumijevani najveći odnos dijeljenja:"
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_maxRatio)
 #: ktorrent/pref/qmpref.ui:233
-#, fuzzy
-#| msgid ""
-#| "The maximum seed time in hours. Once you reach this time, the torrent "
-#| "will be stopped. This is only applied to newly opened torrents, existing "
-#| "torrents will not be affected by changing this."
 msgid ""
 "<p>The maximum share ratio, if this value is reached seeding will be "
 "stopped. This is only applied to newly opened torrents, existing torrents "
@@ -2806,9 +2857,11 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Attention: </span>This is not used when "
 "downloading, only when seeding.</p>"
 msgstr ""
-"Najduže vrijeme sijanja u satima. Kada istekne ovo vrijeme torent će se "
-"zaustaviti. Ovo se odnosi samo na novootvorene torente. Na postojeće torente "
-"ova izmjena neće uticati."
+"<p>Maksimalno omjer dijeljenja, ako ova vrijednost je postignut sijanje će "
+"biti zaustavljeno. Ovo se primjenjuje samo na novootvorenim torentima, "
+"postojeći torenti neće biti pogođeni promjenom ovoga.</p>\n"
+"<p><span style=\" font-weight:600;\">Pažnja: </span>Ovo se ne koristi pri "
+"preuzimanju, nego samo pri sijanju.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: ktorrent/pref/qmpref.ui:249
@@ -2833,12 +2886,13 @@ msgid ""
 "Value at which the share ratio will be displayed with a green color. Lower "
 "ratios will be displayed in red."
 msgstr ""
+"Vrijednost za koju će omjer dijeljenja biti prikazan u zelenoj boji. Niži "
+"omjeri će biti prikazani crveno."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ktorrent/pref/qmpref.ui:278
-#, fuzzy
 msgid "Minimum good share ratio:"
-msgstr "Najveći odnos dijeljenja:"
+msgstr "Minimalni omjer dobre razmjene:"
 
 #: ktorrent/pref/recommendedsettingsdlg.cpp:37
 msgid "Calculate Recommended Settings"
@@ -2937,23 +2991,22 @@ msgstr "DHT: isključen"
 #, kde-format
 msgid "%1 node"
 msgid_plural "%1 nodes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 čvor"
+msgstr[1] "%1 čvora"
+msgstr[2] "%1 čvorova"
 
 #: ktorrent/statusbar.cpp:95
 #, kde-format
 msgid "%1 task"
 msgid_plural "%1 tasks"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 zadatak"
+msgstr[1] "%1 zadatka"
+msgstr[2] "%1 zadataka"
 
 #: ktorrent/statusbar.cpp:95
-#, fuzzy, kde-format
-#| msgid "DHT: %1 nodes, %2 tasks"
+#, kde-format
 msgid "DHT: %1, %2"
-msgstr "DHT: veza %1, poslova %2"
+msgstr "DHT: %1, %2"
 
 #: ktorrent/tools/magnetmodel.cpp:134
 msgid "Magnet Link"
@@ -2965,9 +3018,9 @@ msgstr "Magnetska veza"
 msgid "Status"
 msgstr "Stanje"
 
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (title), widget (QGroupBox, PeersSpdGbw)
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: ktorrent/tools/magnetmodel.cpp:136
 #: plugins/infowidget/infowidgetplugin.cpp:222
 #: plugins/stats/DisplaySettings.ui:165 plugins/stats/Settings.ui:166
@@ -3001,7 +3054,7 @@ msgid "Order"
 msgstr "redoslijed"
 
 # >> @title:column
-#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:495
+#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:533
 #: plugins/downloadorder/downloadorderdialog.cpp:80
 msgid "Name"
 msgstr "Ime"
@@ -3085,41 +3138,28 @@ msgid "Move a torrent to the bottom of the queue"
 msgstr "Pomera torent na dno redoslijeda"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:83
-#, fuzzy
-#| msgid "Downloads"
 msgid "Show Downloads"
-msgstr "Preuzimanja"
+msgstr "Pokaži preuzimanja"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:84
-#, fuzzy
-#| msgid "Set max download speed"
 msgid "Show all downloads"
-msgstr "Postavi najveću brzinu preuzimanja"
+msgstr "Pokaži sva preuzimanja"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:88
-#, fuzzy
-#| msgid "Uploads"
 msgid "Show Uploads"
-msgstr "Poslato"
+msgstr "Pokaži slanja datoteka"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:89
-#, fuzzy
-#| msgid "Show a file list"
 msgid "Show all uploads"
-msgstr "Prikaži spisak datoteka"
+msgstr "Pokaži sva slanja datoteka"
 
-# >> @item:intable
 #: ktorrent/tools/queuemanagerwidget.cpp:93
-#, fuzzy
-#| msgid "Not queued"
 msgid "Show Not Queued"
-msgstr "nije u redu"
+msgstr "Pokaži one koji nisu na redu čekanja"
 
 #: ktorrent/tools/queuemanagerwidget.cpp:94
-#, fuzzy
-#| msgid "Stop all torrents"
 msgid "Show all not queued torrents"
-msgstr "Zaustavi sve torente"
+msgstr "Pokaži sve torente koji nisu na redu čekanja"
 
 #: ktorrent/torrentactivity.cpp:100
 msgid "Widget to manage the torrent queue"
@@ -3168,14 +3208,12 @@ msgid "Show or hide the group view"
 msgstr "Prikazuje ili skriva grupni prikaz"
 
 #: ktorrent/torrentactivity.cpp:141
-#, fuzzy
-#| msgid "All Torrents"
 msgid "Filter Torrents"
-msgstr "Svi torenti"
+msgstr "Filtriraj torente"
 
 #: ktorrent/torrentactivity.cpp:142
 msgid "Filter torrents based on filter string"
-msgstr ""
+msgstr "Filtriraj torente na osnovu filter rečenice"
 
 #: ktorrent/trayicon.cpp:114
 msgid "Set max upload speed"
@@ -3305,10 +3343,8 @@ msgid "Unlimited"
 msgstr "Neograničeno"
 
 #: ktorrent/view/propertiesdlg.cpp:34
-#, fuzzy
-#| msgid "Torrents"
 msgid "Torrent Settings"
-msgstr "Torenti"
+msgstr "Postavke torenta"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, PropertiesDlg)
 #: ktorrent/view/propertiesdlg.ui:14 plugins/scripting/scriptmanager.cpp:110
@@ -3321,12 +3357,13 @@ msgid ""
 "DHT is a distributed database which can be used to find more peers for a "
 "torrent."
 msgstr ""
+"DHT je distribuirana baza podataka koja se može koristiti za traženje više "
+"učesnika u torrentu."
 
 #. i18n: ectx: property (text), widget (QCheckBox, dht)
 #: ktorrent/view/propertiesdlg.ui:26
-#, fuzzy
 msgid "Use DHT to find more peers"
-msgstr "DHT za dodatne saradnike"
+msgstr "Koristi DHT za traženje više učesnika"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, pex)
 #: ktorrent/view/propertiesdlg.ui:33
@@ -3334,16 +3371,16 @@ msgid ""
 "Peer exchange results in more peers being found, by exchanging information "
 "about peers with other peers."
 msgstr ""
+"Razmjena parnjaka rezultuje u više nađenih parnjaka, razmjenjujući "
+"informacije o parnjacima s drugim parnjacima."
 
 #. i18n: ectx: property (text), widget (QCheckBox, pex)
 #: ktorrent/view/propertiesdlg.ui:36
-#, fuzzy
 msgid "Use peer exchange to find more peers"
-msgstr "Razmjena saradnika"
+msgstr "Koristi razmjenu parnjaka da ih se što više nađe"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, superseeding)
 #: ktorrent/view/propertiesdlg.ui:45
-#, fuzzy
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Superseeding mode, is a "
@@ -3358,30 +3395,35 @@ msgid ""
 "fully been established. Once there are multiple active seeders, this mode "
 "becomes useless.</p>"
 msgstr ""
-"<html><p>Ako je uključeno <interface>Neophodno prijavljivanje</interface>, "
-"morate zadati korisničko ime i lozinku.</p><p><b>Pažnja</b>: Ovo ne treba da "
-"isključujete kada je web sučelje dostupno preko Interneta, jer biste onda "
-"svima dozvolili pristup.</p></html>"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Super sijanje je poseban "
+"nači sijanja koji vam omogućuje da postignete bolji učinak sijanja. To "
+"rezultira u manjoj korištenosti propusnog opsega za širenje torrent-a.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Napomena: </span>To treba koristiti samo ako roj nije u "
+"potpunosti uspostavljen. Nakon što postoji više aktivnih sijača, ovaj način "
+"postaje beskoristan.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, superseeding)
 #: ktorrent/view/propertiesdlg.ui:48
 msgid "Use superseeding mode for seeding"
-msgstr ""
+msgstr "Koristi režim supresjemena"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, move_on_completion_enabled)
 #: ktorrent/view/propertiesdlg.ui:55
-#, fuzzy
 msgid ""
 "Move the files of the torrent to a different directory when it has finished "
 "downloading."
-msgstr ""
-"Premješta datoteke na navedenu lokaciju po završetku preuzimanja torenta."
+msgstr "Pomjeri datoteke torenta u drugi direktorij kada se završi preuzimanje"
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, move_on_completion_url)
 #: ktorrent/view/propertiesdlg.ui:65
-#, fuzzy
 msgid "Location to move the files to."
-msgstr "Izaberite direktorije gdje premještate podatke."
+msgstr "Lokacija gdje premjestiti datoteke"
 
 #: ktorrent/view/scanextender.cpp:46
 msgid "Checked %v of %m chunks"
@@ -3399,22 +3441,14 @@ msgstr "Nađeno:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_found)
 #: ktorrent/view/scanextender.ui:43
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks "
-#| "which were not downloaded but have been found anyway.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "were not downloaded but have been found anyway.</p>"
 msgstr ""
-"<html><p>Broj dijelova koji nisu preuzeti ali su ipak pronađeni.</p></html>"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Broj dijelova koji nisu "
+"preuzeti ali su nekako pronađeni.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, chunks_found)
 #. i18n: ectx: property (text), widget (QLabel, chunks_failed)
@@ -3432,21 +3466,14 @@ msgstr "Neuspjelo:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_failed)
 #: ktorrent/view/scanextender.ui:82
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks "
-#| "which have been downloaded, and which are not OK.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "have been downloaded, and which are not OK.</p>"
-msgstr "<html><p>Broj dijelova koji su preuzeti a koji nisu u redu.</p></html>"
+msgstr ""
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Broj dijelova koji su "
+"preuzeti ali nisu u redu.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/view/scanextender.ui:108
@@ -3460,6 +3487,9 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "have not been downloaded.</p>"
 msgstr ""
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Broj dijelova koji nisu "
+"preuzeti.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
@@ -3470,21 +3500,14 @@ msgstr "Preuzeto:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, chunks_downloaded)
 #: ktorrent/view/scanextender.ui:166
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks "
-#| "which have been downloaded, and which are OK.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "have been downloaded, and which are OK.</p>"
-msgstr "<html><p>Broj dijelova koji su preuzeti a koji su u redu.</p></html>"
+msgstr ""
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Broj dijelova koji su "
+"preuzeti i u redu su</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, error_msg)
 #: ktorrent/view/scanextender.ui:230
@@ -3492,145 +3515,138 @@ msgid "Errors:"
 msgstr "Greške:"
 
 #: ktorrent/view/torrentsearchbar.cpp:47
-#, fuzzy
-#| msgid "Torrent Limits"
 msgid "Torrent filter"
-msgstr "Ograničenja torenta"
+msgstr "Filter torenta"
 
-#: ktorrent/view/view.cpp:135
+#: ktorrent/view/view.cpp:139
 msgctxt "@action Start all selected torrents in the current tab"
 msgid "Start"
 msgstr "Pokreni"
 
-#: ktorrent/view/view.cpp:136
+#: ktorrent/view/view.cpp:140
 msgid "Start all selected torrents in the current tab"
 msgstr "Pokreće sve izabrane torente u tekućoj kartici"
 
-#: ktorrent/view/view.cpp:141
-#, fuzzy
-#| msgctxt "@action Start all selected torrents in the current tab"
-#| msgid "Start"
+#: ktorrent/view/view.cpp:145
 msgctxt "@action Force start all selected torrents in the current tab"
 msgid "Force Start"
-msgstr "Pokreni"
-
-#: ktorrent/view/view.cpp:142
-#, fuzzy
-#| msgid "Start all selected torrents in the current tab"
-msgid "Force start all selected torrents in the current tab"
-msgstr "Pokreće sve izabrane torente u tekućoj kartici"
+msgstr "Prisili pokretanje"
 
 #: ktorrent/view/view.cpp:146
+msgid "Force start all selected torrents in the current tab"
+msgstr "Prisili pokretanje svih označenih torenta u trenutnoj kartici"
+
+#: ktorrent/view/view.cpp:150
 msgctxt "@action Stop all selected torrents in the current tab"
 msgid "Stop"
 msgstr "Zaustavi"
 
-#: ktorrent/view/view.cpp:147
+#: ktorrent/view/view.cpp:151
 msgid "Stop all selected torrents in the current tab"
 msgstr "Zaustavlja sve izabrane torente u tekućoj kartici"
 
-#: ktorrent/view/view.cpp:152
+#: ktorrent/view/view.cpp:156
 msgctxt "@action Pause all selected torrents in the current tab"
 msgid "Pause"
 msgstr "Pauziraj"
 
-#: ktorrent/view/view.cpp:153
+#: ktorrent/view/view.cpp:157
 msgid "Pause all selected torrents in the current tab"
 msgstr "Pauzira sve izabrane torente u tekućoj kartici"
 
-#: ktorrent/view/view.cpp:157
+#: ktorrent/view/view.cpp:161
 msgctxt "@action Remove all selected torrents in the current tab"
 msgid "Remove"
 msgstr "Ukloni"
 
-#: ktorrent/view/view.cpp:158
+#: ktorrent/view/view.cpp:162
 msgid "Remove all selected torrents in the current tab"
 msgstr "Uklanja sve izabrane torente u tekućoj kartici"
 
-#: ktorrent/view/view.cpp:163
+#: ktorrent/view/view.cpp:167
 msgctxt "@action Start all torrents in the current tab"
 msgid "Start All"
 msgstr "Pokreni sve"
 
-#: ktorrent/view/view.cpp:164
+#: ktorrent/view/view.cpp:168
 msgid "Start all torrents in the current tab"
 msgstr "Pokreće sve torente u tekućoj kartici"
 
-#: ktorrent/view/view.cpp:169
+#: ktorrent/view/view.cpp:173
 msgctxt "@action Stop all torrents in the current tab"
 msgid "Stop All"
 msgstr "Zaustavi sve"
 
-#: ktorrent/view/view.cpp:170
+#: ktorrent/view/view.cpp:174
 msgid "Stop all torrents in the current tab"
 msgstr "Zaustavlja sve torente u tekućoj kartici"
 
-#: ktorrent/view/view.cpp:175
+#: ktorrent/view/view.cpp:179
 msgid "Remove Torrent and Data"
 msgstr "Ukloni torent i podatke"
 
-#: ktorrent/view/view.cpp:180
+#: ktorrent/view/view.cpp:184
 msgid "Rename Torrent"
 msgstr "Preimenuj torent"
 
-#: ktorrent/view/view.cpp:184
+#: ktorrent/view/view.cpp:188
 msgid "Add Peers"
 msgstr "Dodaj saradnike"
 
-#: ktorrent/view/view.cpp:188
+#: ktorrent/view/view.cpp:192
 msgid "Manual Announce"
 msgstr "Ručno objavljivanje"
 
-#: ktorrent/view/view.cpp:193
+#: ktorrent/view/view.cpp:197
 msgid "Scrape"
 msgstr "Zagrebi"
 
-#: ktorrent/view/view.cpp:197
+#: ktorrent/view/view.cpp:201
 msgid "Preview"
 msgstr "Pregled"
 
-#: ktorrent/view/view.cpp:201
+#: ktorrent/view/view.cpp:205
 msgid "Data Directory"
 msgstr "Direktorijum podataka"
 
-#: ktorrent/view/view.cpp:205
+#: ktorrent/view/view.cpp:209
 msgid "Temporary Directory"
 msgstr "Privremeni direktorijum"
 
-#: ktorrent/view/view.cpp:209
+#: ktorrent/view/view.cpp:213
 msgid "Move Data"
 msgstr "Premjesti podatke"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, StatsSettingsWgt)
-#: ktorrent/view/view.cpp:213 plugins/stats/Settings.ui:13
+#: ktorrent/view/view.cpp:217 plugins/stats/Settings.ui:13
 msgid "Settings"
 msgstr "Postavke"
 
-#: ktorrent/view/view.cpp:217
+#: ktorrent/view/view.cpp:221
 msgid "Remove from Group"
 msgstr "Ukloni iz grupe"
 
-#: ktorrent/view/view.cpp:225
+#: ktorrent/view/view.cpp:229
 msgid "Check Data"
 msgstr "Provjeri podatke"
 
-#: ktorrent/view/view.cpp:226
+#: ktorrent/view/view.cpp:230
 msgid "Check all the data of a torrent"
 msgstr "Provjeri sve podatke torenta"
 
-#: ktorrent/view/view.cpp:248
+#: ktorrent/view/view.cpp:252
 msgid "Copy Torrent URL"
 msgstr "Kopiraj URL torenta"
 
-#: ktorrent/view/view.cpp:252
+#: ktorrent/view/view.cpp:256
 msgid "Export Torrent"
 msgstr "Uvezi torent"
 
-#: ktorrent/view/view.cpp:257
+#: ktorrent/view/view.cpp:261
 msgid "Set the speed limits of individual torrents"
 msgstr "Postavi ograničenja brzine pojedinačnih torenata"
 
-#: ktorrent/view/view.cpp:466
+#: ktorrent/view/view.cpp:470
 #, kde-format
 msgid ""
 "The torrent <b>%1</b> has not finished downloading, do you want to delete "
@@ -3639,134 +3655,129 @@ msgstr ""
 "Preuzimanje torenta <b>%1</b> nije završeno. Želite li da obrišete i "
 "nepotpune podatke?"
 
-#: ktorrent/view/view.cpp:471
+#: ktorrent/view/view.cpp:475
 msgid "Remove Download"
 msgstr "Ukloni preuzimanje"
 
-#: ktorrent/view/view.cpp:472
+#: ktorrent/view/view.cpp:476
 msgid "Delete Data"
 msgstr "Obriši podatke"
 
-#: ktorrent/view/view.cpp:473
+#: ktorrent/view/view.cpp:477
 msgid "Keep Data"
 msgstr "Zadrži podatke"
 
-#: ktorrent/view/view.cpp:498
-#, fuzzy
-#| msgid ""
-#| "You will lose all the downloaded data. Are you sure you want to do this?"
+#: ktorrent/view/view.cpp:502
 msgid ""
 "You will lose all the downloaded data of the following torrents. Are you "
 "sure you want to do this?"
-msgstr "Izgubićete sve preuzete podatke. Želite li zaista ovo da učinite?"
+msgstr ""
+"Izgubit ćete sve preuzete podatke za sljedeće torente. Jeste li sigurni da "
+"to želite?"
 
-#: ktorrent/view/view.cpp:499
+#: ktorrent/view/view.cpp:503
 msgid "Remove Torrent"
 msgstr "Ukloni torent"
 
-#: ktorrent/view/view.cpp:595 plugins/infowidget/fileview.cpp:354
+#: ktorrent/view/view.cpp:599 plugins/infowidget/fileview.cpp:354
 #: plugins/infowidget/fileview.cpp:375
 msgid "Select a directory to move the data to."
 msgstr "Izaberite direktorije gdje premještate podatke."
 
-#: ktorrent/view/viewmodel.cpp:496 plugins/infowidget/peerviewmodel.cpp:266
+#: ktorrent/view/viewmodel.cpp:535 plugins/infowidget/peerviewmodel.cpp:266
 #: plugins/infowidget/webseedsmodel.cpp:126
 msgid "Downloaded"
 msgstr "Preuzeto"
 
-#: ktorrent/view/viewmodel.cpp:497
+#: ktorrent/view/viewmodel.cpp:537
 #: libktcore/torrent/torrentfilelistmodel.cpp:77
 #: libktcore/torrent/torrentfiletreemodel.cpp:400
 msgid "Size"
 msgstr "Veličina"
 
-#: ktorrent/view/viewmodel.cpp:498 plugins/infowidget/peerviewmodel.cpp:267
+#: ktorrent/view/viewmodel.cpp:539 plugins/infowidget/peerviewmodel.cpp:267
 msgid "Uploaded"
 msgstr "Poslato"
 
-#: ktorrent/view/viewmodel.cpp:499
-#, fuzzy
-#| msgid "Left:"
+#: ktorrent/view/viewmodel.cpp:541
 msgctxt "Bytes left to downloaded"
 msgid "Left"
-msgstr "Preostalo:"
+msgstr "Lijevo"
 
-#: ktorrent/view/viewmodel.cpp:500
+#: ktorrent/view/viewmodel.cpp:543
 #: plugins/infowidget/chunkdownloadmodel.cpp:200
 #: plugins/infowidget/peerviewmodel.cpp:257
 msgid "Down Speed"
 msgstr "Smanji brzinu"
 
-#: ktorrent/view/viewmodel.cpp:501 plugins/infowidget/peerviewmodel.cpp:258
+#: ktorrent/view/viewmodel.cpp:545 plugins/infowidget/peerviewmodel.cpp:258
 msgid "Up Speed"
 msgstr "Povećaj brzinu"
 
-#: ktorrent/view/viewmodel.cpp:502
+#: ktorrent/view/viewmodel.cpp:547
 msgid "Time Left"
 msgstr "Preostalo vrijeme"
 
-#: ktorrent/view/viewmodel.cpp:503 plugins/infowidget/trackermodel.cpp:149
+#: ktorrent/view/viewmodel.cpp:549 plugins/infowidget/trackermodel.cpp:149
 msgid "Seeders"
 msgstr "Sijači"
 
-#: ktorrent/view/viewmodel.cpp:504 plugins/infowidget/trackermodel.cpp:150
+#: ktorrent/view/viewmodel.cpp:551 plugins/infowidget/trackermodel.cpp:150
 msgid "Leechers"
 msgstr "Pijavice"
 
-#: ktorrent/view/viewmodel.cpp:506
+#: ktorrent/view/viewmodel.cpp:554
 #, no-c-format
 msgid "% Complete"
 msgstr "% završeno"
 
-#: ktorrent/view/viewmodel.cpp:507
+#: ktorrent/view/viewmodel.cpp:556
 msgid "Share Ratio"
 msgstr "Odnos dijeljenja"
 
-#: ktorrent/view/viewmodel.cpp:508
+#: ktorrent/view/viewmodel.cpp:558
 msgid "Time Downloaded"
 msgstr "Vrijeme preuzimanja"
 
-#: ktorrent/view/viewmodel.cpp:509
+#: ktorrent/view/viewmodel.cpp:560
 msgid "Time Seeded"
 msgstr "Vrijeme sijanja"
 
 # >> @title:column
-#: ktorrent/view/viewmodel.cpp:510
+#: ktorrent/view/viewmodel.cpp:562
 msgid "Location"
 msgstr "lokacija"
 
 # >> @title:column
-#: ktorrent/view/viewmodel.cpp:511
+#: ktorrent/view/viewmodel.cpp:564
 msgid "Added"
 msgstr "dodato"
 
-#: ktorrent/view/viewmodel.cpp:519
+#: ktorrent/view/viewmodel.cpp:574
 msgid "How much data we have downloaded of the torrent"
 msgstr "Koliko je podataka iz torenta preuzeto"
 
-#: ktorrent/view/viewmodel.cpp:520
+#: ktorrent/view/viewmodel.cpp:576
 msgid "Total size of the torrent, excluded files are not included"
 msgstr "Ukupna veličina torenta, izuzete datoteke nisu uračunati"
 
-#: ktorrent/view/viewmodel.cpp:521
+#: ktorrent/view/viewmodel.cpp:578
 msgid "How much data we have uploaded"
 msgstr "Koliko je podataka poslato"
 
-#: ktorrent/view/viewmodel.cpp:522
-#, fuzzy
-#| msgid "How much data we have uploaded"
+#: ktorrent/view/viewmodel.cpp:580
 msgid "How much data left to download"
-msgstr "Koliko je podataka poslato"
+msgstr "Koliko podataka je preostalo za preuzimanje"
 
-#: ktorrent/view/viewmodel.cpp:523
+#: ktorrent/view/viewmodel.cpp:582
 msgid "Current download speed"
 msgstr "Trenutna brzina preuzimanja"
 
-#: ktorrent/view/viewmodel.cpp:524
+#: ktorrent/view/viewmodel.cpp:584
 msgid "Current upload speed"
 msgstr "Trenutna brzina slanja"
 
-#: ktorrent/view/viewmodel.cpp:525
+#: ktorrent/view/viewmodel.cpp:586
 msgid ""
 "How much time is left before the torrent is finished or before the maximum "
 "share ratio is reached, if that is enabled"
@@ -3774,57 +3785,54 @@ msgstr ""
 "Koliko je vremena preostalo do završetka ili do dostizanja najvećeg odnosa "
 "dijeljenja, ako je to uključeno."
 
-#: ktorrent/view/viewmodel.cpp:526
+#: ktorrent/view/viewmodel.cpp:588
 msgid ""
 "How many seeders we are connected to (How many seeders there are according "
 "to the tracker)"
 msgstr "Na koliko sijača smo povezani (koliko ih ima prema pratiocu)"
 
-#: ktorrent/view/viewmodel.cpp:527
+#: ktorrent/view/viewmodel.cpp:590
 msgid ""
 "How many leechers we are connected to (How many leechers there are according "
 "to the tracker)"
 msgstr "Na koliko pijavica smo povezani (koliko ih ima prema pratiocu)"
 
-#: ktorrent/view/viewmodel.cpp:529
-#, no-c-format
+#: ktorrent/view/viewmodel.cpp:593
 msgid ""
 "The percentage of data we have of the whole torrent, not including excluded "
 "files"
 msgstr "Procenat pristiglih podataka torenta, isključujući izuzete datoteke"
 
-#: ktorrent/view/viewmodel.cpp:530
+#: ktorrent/view/viewmodel.cpp:595
 msgid ""
 "Share ratio is the number of bytes uploaded divided by the number of bytes "
 "downloaded"
 msgstr "Odnos dijeljenja je broj poslatih podeljen brojem preuzetih bajtova"
 
-#: ktorrent/view/viewmodel.cpp:531
+#: ktorrent/view/viewmodel.cpp:597
 msgid "How long we have been downloading the torrent"
 msgstr "Koliko dugo se torent već preuzima"
 
-#: ktorrent/view/viewmodel.cpp:532
+#: ktorrent/view/viewmodel.cpp:599
 msgid "How long we have been seeding the torrent"
 msgstr "Koliko dugo se torent već seje"
 
-#: ktorrent/view/viewmodel.cpp:533
+#: ktorrent/view/viewmodel.cpp:601
 msgid "The location of the torrent's data on disk"
 msgstr "Lokacija podataka torenta na disku"
 
-#: ktorrent/view/viewmodel.cpp:534
+#: ktorrent/view/viewmodel.cpp:603
 msgid "When this torrent was added"
 msgstr "Kada je dodat ovaj torent"
 
-#: ktorrent/view/viewmodel.cpp:583
+#: ktorrent/view/viewmodel.cpp:653
 #, kde-format
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "<html>%1<br />URL: <b>%2</b></html>"
 
-#: ktorrent/view/viewmodel.cpp:589
-#, fuzzy
-#| msgid "Unable to contact a tracker."
+#: ktorrent/view/viewmodel.cpp:659
 msgid "<br/><br/>Unable to contact a tracker."
-msgstr "Ne mogu da kontaktiram pratilac."
+msgstr "<br/><br/>Neuspjelo kontaktiranje tragača."
 
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"
@@ -4123,7 +4131,7 @@ msgstr "Priključci"
 #: libktcore/torrent/basicjobprogresswidget.cpp:53
 #, kde-format
 msgid "%1: %2<br/>%3: %4"
-msgstr ""
+msgstr "%1: %2<br/>%3: %4"
 
 #: libktcore/torrent/basicjobprogresswidget.cpp:68
 #, kde-format
@@ -4383,9 +4391,8 @@ msgstr "Uredi stavku"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: plugins/bwscheduler/edititemdlg.ui:23
-#, fuzzy
 msgid "Duration"
-msgstr "Odredište"
+msgstr "Trajanje"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: plugins/bwscheduler/edititemdlg.ui:31
@@ -4406,17 +4413,15 @@ msgstr "Do:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: plugins/bwscheduler/edititemdlg.ui:63
-#, fuzzy
 msgctxt "starting day"
 msgid "From:"
 msgstr "Od:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: plugins/bwscheduler/edititemdlg.ui:73
-#, fuzzy
 msgctxt "ending day"
 msgid "To:"
-msgstr "Do:"
+msgstr "Za:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: plugins/bwscheduler/edititemdlg.ui:103
@@ -4573,17 +4578,12 @@ msgid "File download order for <b>%1</b>:"
 msgstr "Redoslijed preuzimanja datoteka za <b>%1</b>:"
 
 #: plugins/downloadorder/downloadorderdialog.cpp:81
-#, fuzzy
-#| msgid "Seasons && Episodes"
 msgid "Seasons and Episodes"
 msgstr "Sezone i epizode"
 
-# >! @title:window (in trackerview.cpp)
 #: plugins/downloadorder/downloadorderdialog.cpp:82
-#, fuzzy
-#| msgid "Add Trackers"
 msgid "Album Track Order"
-msgstr "Dodaj pratioce"
+msgstr "Redoslijed traka albuma"
 
 #. i18n: ectx: property (text), widget (QLabel, m_top_label)
 #: plugins/downloadorder/downloadorderwidget.ui:20
@@ -4603,13 +4603,12 @@ msgstr "Poseban redoslijed preuzimanja datoteka"
 #. i18n: ectx: property (text), widget (QToolButton, m_sort_by)
 #: plugins/downloadorder/downloadorderwidget.ui:42
 msgid "Sort By"
-msgstr ""
+msgstr "Sortiraj po"
 
 #. i18n: ectx: property (placeholderText), widget (KLineEdit, m_search_files)
 #: plugins/downloadorder/downloadorderwidget.ui:52
-#, fuzzy
 msgid "Search files"
-msgstr "Motori pretrage"
+msgstr "Traži datoteke"
 
 #. i18n: ectx: property (toolTip), widget (QListView, m_order)
 #: plugins/downloadorder/downloadorderwidget.ui:66
@@ -4712,11 +4711,9 @@ msgid "Open"
 msgstr "Otvori"
 
 #: plugins/infowidget/fileview.cpp:116
-#, fuzzy
-#| msgid "Open Silently"
 msgctxt "Open file with"
 msgid "Open With"
-msgstr "Otvori tiho"
+msgstr "Otvori pomoću"
 
 #: plugins/infowidget/fileview.cpp:117
 msgid "Check File"
@@ -4925,10 +4922,8 @@ msgstr "Prikaži listu saradnika"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showWebSeedsTab)
 #: plugins/infowidget/iwprefpage.ui:53
-#, fuzzy
-#| msgid "Whether or not to show the peers tab in the bottom of the window."
 msgid "Whether or not to show the webseeds tab at the bottom of the window."
-msgstr "Da li prikazivati karticu saradnika u dnu ekrana."
+msgstr "Hoće li ili ne pokazati webseeds karticu na dnu prozora."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showWebSeedsTab)
 #: plugins/infowidget/iwprefpage.ui:56
@@ -4947,10 +4942,8 @@ msgstr "Prvi prioritet:"
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_firstColor)
 #: plugins/infowidget/iwprefpage.ui:79
-#, fuzzy
-#| msgid "Folder to store temporary files"
 msgid "Color to use for first priority files."
-msgstr "Direktorij za smještanje privremenih datoteka"
+msgstr "Boja za datoteke prvog prioriteta."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: plugins/infowidget/iwprefpage.ui:86
@@ -4959,10 +4952,8 @@ msgstr "Posljednji prioritet:"
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_lastColor)
 #: plugins/infowidget/iwprefpage.ui:93
-#, fuzzy
-#| msgid "Folder to store temporary files"
 msgid "Color to use for last priority files."
-msgstr "Direktorij za smještanje privremenih datoteka"
+msgstr "Boja za datoteke posljednjeg prioriteta"
 
 #. i18n: ectx: label, entry (showPeerView), group (general)
 #: plugins/infowidget/ktinfowidgetplugin.kcfg:10
@@ -4989,7 +4980,7 @@ msgstr "Zabrani saradnika"
 
 #: plugins/infowidget/peerviewmodel.cpp:88
 msgid " (µTP)"
-msgstr "(µTP)"
+msgstr " (µTP)"
 
 #: plugins/infowidget/peerviewmodel.cpp:103
 msgctxt "Choked"
@@ -5057,8 +5048,8 @@ msgid "Availability"
 msgstr "Dostupnost"
 
 #. i18n: ectx: property (title), widget (QGroupBox, DhtGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_12)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_5)
+#. i18n: ectx: property (text), widget (QLabel, label_12)
 #: plugins/infowidget/peerviewmodel.cpp:262 plugins/stats/Conns.ui:31
 #: plugins/stats/DisplaySettings.ui:796 plugins/stats/Settings.ui:234
 msgid "DHT"
@@ -5189,7 +5180,7 @@ msgstr "Prosječna brzina slanja:"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/infowidget/statustab.ui:123
 msgid "Info hash:"
-msgstr ""
+msgstr "Info hash:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: plugins/infowidget/statustab.ui:188
@@ -5203,7 +5194,6 @@ msgstr "Dostupno dijelova:"
 
 #. i18n: ectx: property (text), widget (QLabel, hdr_sharing)
 #: plugins/infowidget/statustab.ui:273
-#, fuzzy
 msgctxt "Noun, as in \"file sharing\""
 msgid "Sharing"
 msgstr "Dijeljenje"
@@ -5249,7 +5239,7 @@ msgstr "Već postoji pratilac po imenu <b>%1</b>."
 
 #: plugins/infowidget/trackerview.cpp:129
 msgid "The following duplicate trackers were not added:"
-msgstr ""
+msgstr "Sljedeći dupli tragači nisu dodati:"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_remove_tracker)
 #: plugins/infowidget/trackerview.ui:29
@@ -5258,17 +5248,13 @@ msgstr "Ukloni pratioca"
 
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_change_tracker)
 #: plugins/infowidget/trackerview.ui:36
-#, fuzzy
-#| msgid "Disable the menu item for private torrents"
 msgid "Changes the current active tracker for private torrents."
-msgstr "Isključi stavku menija za privatne torente"
+msgstr "Mijenja trenutno aktivne tragače za privatne torente."
 
 #. i18n: ectx: property (text), widget (KPushButton, m_change_tracker)
 #: plugins/infowidget/trackerview.ui:39
-#, fuzzy
-#| msgid "Tracker"
 msgid "Switch Tracker"
-msgstr "Pratilac"
+msgstr "Zamijeni tragače"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_scrape)
 #: plugins/infowidget/trackerview.ui:46
@@ -5296,23 +5282,6 @@ msgstr "Ne mogu da uklonim web sijanje %1, ono je dio torenta."
 
 #. i18n: ectx: property (toolTip), widget (KLineEdit, m_webseed)
 #: plugins/infowidget/webseedstab.ui:19
-#, fuzzy
-#| msgid ""
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Webseed to add to the "
-#| "torrent.</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">Note: </span>Only http webseeds are supported.</p></body></"
-#| "html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Webseed to add to the "
@@ -5324,8 +5293,15 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Note: </span>Only http webseeds are supported.</p>"
 msgstr ""
-"<html><p>Web sijanja za dodavanje u torent.</p><p><b>Napomena:</b> Podržana "
-"su samo HTTP web sijanja.</p></html>"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Mrežno sjeme koje se "
+"dodaje na torrent.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Note: </span>Samo http mrežna sjemena su podržana.</p>"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
 #: plugins/infowidget/webseedstab.ui:26
@@ -5348,7 +5324,7 @@ msgid "Disable All"
 msgstr "Isključi sve"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
-#: plugins/ipfilter/convertdialog.ui:19 plugins/ipfilter/convertthread.cpp:174
+#: plugins/ipfilter/convertdialog.ui:19 plugins/ipfilter/convertthread.cpp:173
 msgid "Converting..."
 msgstr "Prevodim..."
 
@@ -5362,11 +5338,11 @@ msgstr "Pretvoram listu blokova u K‑torentov format. Može potrajati."
 msgid "C&ancel"
 msgstr "&Odustani"
 
-#: plugins/ipfilter/convertthread.cpp:72
+#: plugins/ipfilter/convertthread.cpp:71
 msgid "Loading txt file..."
 msgstr "Učitavam txt datoteku..."
 
-#: plugins/ipfilter/convertthread.cpp:156
+#: plugins/ipfilter/convertthread.cpp:155
 #, kde-format
 msgid "There are no IP addresses to convert in %1"
 msgstr "Nema IP adresa za pretvaranje u %1"
@@ -5377,7 +5353,7 @@ msgstr "Nema IP adresa za pretvaranje u %1"
 #: plugins/ipfilter/downloadandconvertjob.cpp:236
 #, kde-format
 msgid "Automatic update of IP filter failed: %1"
-msgstr ""
+msgstr "Automatsko ažuriranje IP filtra neuspjelo: %1"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:162
 #, kde-format
@@ -5388,6 +5364,7 @@ msgstr "Ne mogu da otvorim arhivu %1."
 #, kde-format
 msgid "Automatic update of IP filter failed: cannot open zip file %1"
 msgstr ""
+"Automatsko ažuriranje IP filtra neuspjelo: ne mogu otvoriti zip datoteku %1"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:203
 #, kde-format
@@ -5403,10 +5380,9 @@ msgstr ""
 "arhivi: %1"
 
 #: plugins/ipfilter/ipblockingprefpage.cpp:42
-#, fuzzy
 msgid " day"
 msgid_plural " days"
-msgstr[0] " dana"
+msgstr[0] " dan"
 msgstr[1] " dana"
 msgstr[2] " dana"
 
@@ -5575,38 +5551,6 @@ msgstr "Pregled dnevnika"
 
 #. i18n: ectx: property (toolTip), widget (QTreeView, m_logging_flags)
 #: plugins/logviewer/logprefwidget.ui:23
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#| "size:8pt; font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Double click on the log "
-#| "level to alter it. The possible levels are :</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">All: </span>All messages are shown</p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">Important: </span>Only important messages are shown</p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">Notice: </span>Only notice and important messages are "
-#| "shown</p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">Debug: </span>Debug, notice and important messages are "
-#| "shown</p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">None:</span> No messages are shown</p></body></html>"
 msgid ""
 "Double click on the log level to alter it. The possible levels are :\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
@@ -5630,13 +5574,27 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">None:</span> No messages are shown</p>"
 msgstr ""
-"<html><p>Dvokliknite na nivo dnevnika da bi ga mijenjali. Mogući nivoi su:</"
-"p><p><interface>sve</interface>: prikazuje sve poruke</"
-"p><p><interface>važno</interface>: prikazuje samo važne poruke</"
-"p><p><interface>napomena</interface>: prikazuje samo upozorenja i važne "
-"poruke</p><p><interface>ispravljanje</interface>: prikazuju se poruke za "
-"ispravljanje grešaka, upozorenja i važne poruke</p><p><interface>ništa</"
-"interface>: ne prikazuje poruke</p></html>"
+"Dvaput kliknite na nivo evidentiranja da ga mijenjati. Mogući su nivoi:\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Sve: </span>Sve poruke su prikazane</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Važne: </span>Samo važne poruke su prikazane</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Napomene: </span>Samo napomene i važne poruke su prikazane</"
+"p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Ispravljačke: </span>Ispravljačke, napomene i važne poruke su "
+"prikazane</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Ništa:</span> Poruke nisu prikazane</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useRichText)
 #: plugins/logviewer/logprefwidget.ui:42
@@ -5672,9 +5630,8 @@ msgstr "aktivnost torenta"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: plugins/logviewer/logprefwidget.ui:103
-#, fuzzy
 msgid "Maximum number of visible lines:"
-msgstr "Najveći broj podešavanja veze:"
+msgstr "Maksimalni broj vidljivih linija:"
 
 #: plugins/logviewer/logviewer.cpp:35
 msgid "Log"
@@ -5810,22 +5767,20 @@ msgid "Playing: <b>%1</b>"
 msgstr "Puštam: <b>%1</b>"
 
 #: plugins/mediaplayer/mediacontroller.cpp:113
-#, fuzzy, kde-format
-#| msgid "Title: <b>%1</b><br/>Artist: <b>%2</b><br/>Album: <b>%3</b>"
+#, kde-format
 msgid "<b>%2</b> - <b>%1</b> (Album: <b>%3</b>)"
-msgstr "Naslov: <b>%1</b><br/>Izvođač: <b>%2</b><br/>Album: <b>%3</b>"
+msgstr "<b>%2</b> - <b>%1</b> (Album: <b>%3</b>)"
 
 #: plugins/mediaplayer/mediacontroller.cpp:118
-#, fuzzy, kde-format
-#| msgid "<b>%1</b><br/><br/>%2"
+#, kde-format
 msgid "<b>%2</b> - <b>%1</b>"
-msgstr "<b>%1</b><br/><br/>%2"
+msgstr "<b>%2</b> - <b>%1</b>"
 
 #: plugins/mediaplayer/mediacontroller.cpp:123
 #: plugins/mediaplayer/mediacontroller.cpp:128
-#, fuzzy, kde-format
+#, kde-format
 msgid "<b>%1</b>"
-msgstr "URL: <b>%1</b>"
+msgstr "<b>%1</b>"
 
 #: plugins/mediaplayer/mediamodel.cpp:90
 msgid "Available"
@@ -5896,7 +5851,7 @@ msgstr "Plejer filmova"
 
 #: plugins/mediaplayer/mediaview.cpp:101
 msgid "Show incomplete files"
-msgstr ""
+msgstr "Pokaži nedovršene datoteke"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_refresh)
 #: plugins/mediaplayer/mediaview.cpp:106 plugins/syndication/feedwidget.ui:128
@@ -5904,14 +5859,12 @@ msgid "Refresh"
 msgstr "Osvježi"
 
 #: plugins/mediaplayer/mediaview.cpp:107
-#, fuzzy
 msgid "Refresh media files"
-msgstr "Motori pretrage"
+msgstr "Osvježi multimedijalne datoteke"
 
 #: plugins/mediaplayer/mediaview.cpp:111
-#, fuzzy
 msgid "Search media files"
-msgstr "Motori pretrage"
+msgstr "Traži multimedijalne datoteke"
 
 #: plugins/mediaplayer/playlist.cpp:97
 #: plugins/syndication/feedwidgetmodel.cpp:82
@@ -5939,10 +5892,8 @@ msgid "Year"
 msgstr "godina"
 
 #: plugins/mediaplayer/playlistwidget.cpp:61
-#, fuzzy
-#| msgid "Ready to play"
 msgid "Random play order"
-msgstr "Spreman za puštanje"
+msgstr "Puštaj po nasumičnom poretku"
 
 #: plugins/mediaplayer/videowidget.cpp:202
 msgid "KTorrent is playing a video."
@@ -5968,7 +5919,7 @@ msgstr "Radnja premještanja označena."
 msgid "Scan directories recursively."
 msgstr "Rekurzivno pretraživanje direktorija"
 
-#: plugins/scanfolder/scanfolder.cpp:69 plugins/scanfolder/scanthread.cpp:194
+#: plugins/scanfolder/scanfolder.cpp:77 plugins/scanfolder/scanthread.cpp:194
 #: plugins/scanfolder/torrentloadqueue.cpp:166
 #: plugins/scanfolder/torrentloadqueue.cpp:167
 #: plugins/scanfolder/torrentloadqueue.cpp:170
@@ -6023,6 +5974,8 @@ msgid ""
 "Scan the folder recursively for torrents. <br/><br/>\n"
 "Note: This will not be done for any folder named loaded."
 msgstr ""
+"Pretraži torente u direktoriju rekurzivno<br/><br/>\n"
+"Napomena: Ovo neće biti izvršeno za bilo koji direktorij čije je ime učitano."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_recursive)
 #: plugins/scanfolder/scanfolderprefpage.ui:92
@@ -6035,6 +5988,8 @@ msgid ""
 "When a torrent file has been found and loaded, delete it.<br/><br/>\n"
 "Warning: you will permanently lose this file."
 msgstr ""
+"Kada je torrent datoteka nađena i učitana, obriši je.<br/><br/>\n"
+"Upozorenje: Datoteka će trajno biti izgubljena."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_actionDelete)
 #: plugins/scanfolder/scanfolderprefpage.ui:103
@@ -6084,13 +6039,12 @@ msgid "Scripts"
 msgstr "Skripte"
 
 #: plugins/scripting/scriptingplugin.cpp:245
-#, fuzzy
 msgid ""
 "Removing these scripts will fully delete them from your disk. Are you sure "
 "you want to do this?"
 msgstr ""
-"Ako se uklone, skripte će biti potpuno obrisane s diska. Želite li zaista "
-"ovo da učinite?"
+"Uklanjanje ovih skripti će ih u potpunosti ukloniti s diska. Jeste li "
+"sigurni da to želite?"
 
 #: plugins/scripting/scriptmanager.cpp:47
 msgid "Widget to start, stop and manage scripts"
@@ -6162,6 +6116,9 @@ msgid ""
 "Please make sure the right interpreter is installed.<br/><br/><b>Hint:</b> "
 "All standard ktorrent scripts require krosspython"
 msgstr ""
+"Nema nađenog interpretera za ove skripte mogu se naći, tako da se ne može "
+"izvršiti. Molimo provjerite da li je pravi interpreter instaliran <br/> <br/"
+"> <b> Savjet:. </b> Sve standardne ktorrent skripte zahtijevaju krosspython"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: plugins/scripting/scriptproperties.ui:51
@@ -6189,16 +6146,12 @@ msgid "Website:"
 msgstr "Veb sajt:"
 
 #: plugins/scripting/scripts/auto_remove/auto_remove.py:53
-#, fuzzy
-#| msgid "Auto Resume Settings"
 msgid "Auto Remove Settings"
-msgstr "Postavke automatskog nastavljanja"
+msgstr "Automatski ukloni postavke"
 
 #: plugins/scripting/scripts/auto_remove/auto_remove.py:55
-#, fuzzy
-#| msgid "Remove"
 msgid "Auto Remove"
-msgstr "Ukloni"
+msgstr "Automatski ukloni"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AutoRemoveConfig)
 #. i18n: ectx: property (windowTitle), widget (QWidget, AutoResumeConfig)
@@ -6224,10 +6177,8 @@ msgid "The torrent finishes seeding"
 msgstr "završetku sijanja torenta"
 
 #: plugins/scripting/scripts/auto_resume/auto_resume.py:55
-#, fuzzy
-#| msgid "Auto Resume Settings"
 msgid "Auto Resume"
-msgstr "Postavke automatskog nastavljanja"
+msgstr "Automatski nastavi"
 
 #. i18n: ectx: property (text), widget (QCheckBox, auto_resume)
 #: plugins/scripting/scripts/auto_resume/auto_resume.ui:19
@@ -6252,16 +6203,12 @@ msgid " seconds"
 msgstr " sekundi"
 
 #: plugins/scripting/scripts/email_notifications/email_notifications.py:105
-#, fuzzy
-#| msgid "EMail Settings"
 msgid "E-Mail Script Settings"
-msgstr "Postavke e‑pošte"
+msgstr "Postavke skriptiranja elektronske pošte"
 
 #: plugins/scripting/scripts/email_notifications/email_notifications.py:107
-#, fuzzy
-#| msgid "EMail Settings"
 msgid "E-Mail Settings"
-msgstr "Postavke e‑pošte"
+msgstr "Postavke elektronske pošte"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, EMailConfigWidget)
 #: plugins/scripting/scripts/email_notifications/emailconfig.ui:13
@@ -6308,8 +6255,8 @@ msgstr "Dodaj BCC:"
 msgid "Current search engine"
 msgstr "Trenutni motor pretrage"
 
-#. i18n: ectx: label, entry (useDefaultBrowser), group (general)
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_useDefaultBrowser)
+#. i18n: ectx: label, entry (useDefaultBrowser), group (general)
 #: plugins/search/ktsearchplugin.kcfg:15 plugins/search/searchpref.ui:92
 msgid "Use default browser"
 msgstr "Koristi podrazumijevani"
@@ -6346,7 +6293,7 @@ msgid "Failed to parse %1"
 msgstr "Ne mogu da raščlanim %1"
 
 #: plugins/search/searchenginelist.cpp:365
-#, fuzzy, kde-format
+#, kde-format
 msgid "URL: <b>%1</b>"
 msgstr "URL: <b>%1</b>"
 
@@ -6369,25 +6316,23 @@ msgstr "Očisti historijat pretrage"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_reset_default_action)
 #: plugins/search/searchpref.ui:44
-#, fuzzy
 msgid "Reset the default action taken when a torrent is downloaded."
-msgstr "Direktorij gdje će se premjestiti podaci nakon završenog preuzimanja."
+msgstr "Postavi podrazumijevanu akciju kada se torent preuzima"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_reset_default_action)
 #: plugins/search/searchpref.ui:47
-#, fuzzy
 msgid "Reset Default Torrent Action"
-msgstr "Podrazumijevana lokacija upisivanja:"
+msgstr "Reset podrazumijevane torent akcije"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_restorePreviousSession)
 #: plugins/search/searchpref.ui:69
 msgid "Restore all the active searches of the last session"
-msgstr ""
+msgstr "Obnovi sve aktivne pretrage zadnje sesije"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_restorePreviousSession)
 #: plugins/search/searchpref.ui:72
 msgid "Restore previous searches"
-msgstr ""
+msgstr "Obnovi prethodne pretrage"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openInExternal)
 #: plugins/search/searchpref.ui:79
@@ -6464,10 +6409,8 @@ msgid "Add a Search Engine"
 msgstr "Dodaj pretraživač"
 
 #: plugins/search/searchprefpage.cpp:106
-#, fuzzy
 msgid "Enter the hostname of the search engine (for example www.google.com):"
-msgstr ""
-"Unesite ime računara za pretraživač (na primjer <link>www.google.com</link>):"
+msgstr "Unesi ime računara pretraživačkog pogona (npr. www.google.com):"
 
 # literal-segment: searchTerms
 #: plugins/search/searchprefpage.cpp:144
@@ -6507,10 +6450,9 @@ msgid " Engine:"
 msgstr " Pretraživač:"
 
 #: plugins/search/searchwidget.cpp:205
-#, fuzzy, kde-format
-#| msgid "<b>Downloading</b>"
+#, kde-format
 msgid "Downloading:<br/><b>%1</b>"
-msgstr "<b>Preuzimam</b>"
+msgstr "Preuzimam:<br/><b>%1</b>"
 
 #: plugins/search/searchwidget.cpp:245
 msgid "Do you want to download or save the torrent?"
@@ -6520,9 +6462,9 @@ msgstr "Želite li da preuzmete torent?"
 msgid "Download Torrent"
 msgstr "Preuzmi torent"
 
+#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (title), widget (QGroupBox, DlSpdGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (KPushButton, m_download)
 #: plugins/search/searchwidget.cpp:247 plugins/stats/DisplaySettings.ui:37
 #: plugins/stats/Settings.ui:114 plugins/stats/Spd.ui:19
@@ -6547,12 +6489,12 @@ msgstr "Traženje torenata na Vebu."
 #: plugins/search/webview.cpp:205
 #, kde-format
 msgid "Save %1 to"
-msgstr ""
+msgstr "Snimi %1 u"
 
 #: plugins/search/webview.cpp:225
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cannot open <b>%1</b>: %2"
-msgstr "Ne mogu da otvorim datoteku %1: %2"
+msgstr "Ne mogu otvoriti <b>%1</b>: %2"
 
 #. i18n: ectx: Menu (shutdown)
 #: plugins/shutdown/ktshutdownpluginui.rc:5
@@ -6630,11 +6572,14 @@ msgid ""
 "When enabled, execute the action when all events have happened. When not "
 "enabled, execute when any of the above events have happened."
 msgstr ""
+"Kada je omogućeno, izvršiti akciju kada su se svi događaji se dogodili. Kad "
+"nije omogućeno, izvršiti kada se bilo koji od gore navedenih događaja "
+"dogodio."
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_all_rules_must_be_hit)
 #: plugins/shutdown/shutdowndlg.ui:53
 msgid "All events must have happened"
-msgstr ""
+msgstr "Svi događaji se moraju desiti"
 
 #: plugins/shutdown/shutdownplugin.cpp:50
 msgid "Shutdown Enabled"
@@ -6646,44 +6591,34 @@ msgid "Configure Shutdown"
 msgstr "Podesi gašenje"
 
 #: plugins/shutdown/shutdownruleset.cpp:263
-#, fuzzy
-#| msgid "Automatic Update"
 msgid "Automatic shutdown not active"
-msgstr "Automatsko ažuriranje"
+msgstr "Automatsko gašenje nije aktivno"
 
 #: plugins/shutdown/shutdownruleset.cpp:290
 msgid " when all of the following events have occurred:<br/><br/> "
-msgstr ""
+msgstr " kada se dese svi sljedeći događaji:<br/><br/> "
 
 #: plugins/shutdown/shutdownruleset.cpp:292
 msgid " when one of the following events occur:<br/><br/> "
-msgstr ""
+msgstr " kada se desi jedan od sljedećih događaja:<br/><br/> "
 
-# >> @item:inlistbox
 #: plugins/shutdown/shutdownruleset.cpp:374
-#, fuzzy
-#| msgid "When all torrents finish downloading"
 msgid "<b>All torrents</b> finish downloading"
-msgstr "po završenom preuzimanju svih torenata"
+msgstr "<b>Svi torenti</b> završili preuzimanje"
 
-# >> @item:inlistbox
 #: plugins/shutdown/shutdownruleset.cpp:376
-#, fuzzy
-#| msgid "When all torrents finish seeding"
 msgid "<b>All torrents</b> finish seeding"
-msgstr "po završenom sijanju svih torenata"
+msgstr "<b>Svi torenti</b> završili sjeme"
 
 #: plugins/shutdown/shutdownruleset.cpp:378
-#, fuzzy, kde-format
-#| msgid "The torrent finishes downloading"
+#, kde-format
 msgid "<b>%1</b> finishes downloading"
-msgstr "završetku preuzimanja torenta"
+msgstr "<b>%1</b> završava preuzimanje"
 
 #: plugins/shutdown/shutdownruleset.cpp:380
-#, fuzzy, kde-format
-#| msgid "The torrent finishes seeding"
+#, kde-format
 msgid "<b>%1</b> finishes seeding"
-msgstr "završetku sijanja torenta"
+msgstr "<b>%1</b> završava sjeme"
 
 # >> @item:inlistbox
 #: plugins/shutdown/shutdowntorrentmodel.cpp:92
@@ -6704,8 +6639,8 @@ msgstr "događaj"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ConnsWgt)
 #. i18n: ectx: property (title), widget (QGroupBox, ConnsGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_11)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#. i18n: ectx: property (text), widget (QLabel, label_11)
 #: plugins/stats/Conns.ui:13 plugins/stats/Conns.ui:19
 #: plugins/stats/DisplaySettings.ui:505 plugins/stats/Settings.ui:140
 msgid "Connections"
@@ -6762,8 +6697,6 @@ msgstr "Poslovi"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: plugins/stats/DisplaySettings.ui:27
-#, fuzzy
-#| msgid "Download"
 msgctxt "Noun"
 msgid "Download"
 msgstr "Preuzimanje"
@@ -6805,10 +6738,10 @@ msgstr "Od pijavica"
 msgid "From seeds"
 msgstr "Od sijanja"
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#. i18n: ectx: property (title), widget (QGroupBox, UlSpdGbw)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #. i18n: ectx: property (text), widget (QLabel, label_15)
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#. i18n: ectx: property (title), widget (QGroupBox, UlSpdGbw)
 #: plugins/stats/DisplaySettings.ui:364 plugins/stats/DisplaySettings.ui:374
 #: plugins/stats/Settings.ui:192 plugins/stats/Spd.ui:43
 msgid "Upload"
@@ -7200,37 +7133,31 @@ msgstr "Prikazuje grafike o vezama."
 
 #: plugins/syndication/feed.cpp:478
 msgid "Aborted"
-msgstr ""
+msgstr "Prekinuto"
 
 #: plugins/syndication/feed.cpp:480
-#, fuzzy
-#| msgid "Check data when download is finished"
 msgid "Timeout when downloading feed"
-msgstr "Provjeri podatke nakon završenog preuzimanja"
+msgstr "Vrijeme isteklo pri preuzimanju dovoda"
 
 #: plugins/syndication/feed.cpp:482
-#, fuzzy
-#| msgid "Unknown"
 msgid "Unknown hostname"
-msgstr "Nepoznat"
+msgstr "Nepoznato ime hosta"
 
 #: plugins/syndication/feed.cpp:484
 msgid "File not found"
-msgstr ""
+msgstr "Datoteka nije pronađena"
 
 #: plugins/syndication/feed.cpp:486
 msgid "Unknown retriever error"
-msgstr ""
+msgstr "Nepoznata greška preuzimaoca"
 
 #: plugins/syndication/feed.cpp:490
-#, fuzzy
-#| msgid "Invalid data received"
 msgid "Invalid feed data"
-msgstr "Primljeni su neispravni podaci"
+msgstr "Neispravni podaci dovoda"
 
 #: plugins/syndication/feed.cpp:492
 msgid "Success"
-msgstr ""
+msgstr "Uspjeh"
 
 #: plugins/syndication/feedlist.cpp:175
 #, kde-format
@@ -7251,17 +7178,17 @@ msgstr[2] ""
 "%1 aktivnih filtera"
 
 #: plugins/syndication/feedlist.cpp:183
-#, fuzzy, kde-format
+#, kde-format
 msgid "<b>%1</b><br/><br/>Download failed: <b>%2</b>"
-msgstr "<b>%1</b><br/>Pregled: %2<br/>Preuzeto: %3 %"
+msgstr "<b>%1</b><br/><br/>Preuzimanje neuspjelo: <b>%2</b>"
 
 #: plugins/syndication/feedwidget.cpp:107
 msgid "Authentication Cookie"
-msgstr ""
+msgstr "Kolačić za autentifikaciju"
 
 #: plugins/syndication/feedwidget.cpp:107
 msgid "Enter the new authentication cookie"
-msgstr ""
+msgstr "Unesite novi kolačić za autentifikaciju"
 
 #: plugins/syndication/feedwidget.cpp:126
 msgid "<b>OK</b>"
@@ -7272,9 +7199,9 @@ msgid "<b>Not Loaded</b>"
 msgstr "<b>Nije učitan</b>"
 
 #: plugins/syndication/feedwidget.cpp:132
-#, fuzzy, kde-format
+#, kde-format
 msgid "<b>Download Failed: %1</b>"
-msgstr "<b>Neuspjelo preuzimanje</b>"
+msgstr "<b>Preuzimanje nije uspjelo: %1</b>"
 
 #: plugins/syndication/feedwidget.cpp:135
 msgid "<b>Downloading</b>"
@@ -7302,9 +7229,8 @@ msgstr "Filteri"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_cookies)
 #: plugins/syndication/feedwidget.ui:155
-#, fuzzy
 msgid "Cookies"
-msgstr "Zagušeno"
+msgstr "Kolačići"
 
 #: plugins/syndication/feedwidgetmodel.cpp:83
 msgid "Date Published"
@@ -7334,71 +7260,6 @@ msgstr "Poklapanje niski"
 #. i18n: ectx: property (toolTip), widget (KEditListBox, m_exclusion_patterns)
 #: plugins/syndication/filtereditor.ui:68
 #: plugins/syndication/filtereditor.ui:136
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">The string to find in "
-#| "the title of an item. Simple wildcard syntax is supported :</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<table border=\"0\" style=\" margin-top:0px; margin-bottom:0px; margin-"
-#| "left:0px; margin-right:0px;\" align=\"center\" cellspacing=\"1\" "
-#| "cellpadding=\"2\">\n"
-#| "<tr>\n"
-#| "<td style=\" vertical-align:top;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span "
-#| "style=\" font-weight:600;\">c</span></p></td>\n"
-#| "<td style=\" vertical-align:top;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">Any character "
-#| "represents itself apart from those mentioned below. Thus <span style=\" "
-#| "font-weight:600;\">c</span> matches the character <span style=\" font-"
-#| "style:italic;\">c</span>.</p></td></tr>\n"
-#| "<tr>\n"
-#| "<td style=\" vertical-align:top;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span "
-#| "style=\" font-weight:600;\">?</span></p></td>\n"
-#| "<td style=\" vertical-align:top;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Matches "
-#| "any single character. </p></td></tr>\n"
-#| "<tr>\n"
-#| "<td style=\" vertical-align:top;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span "
-#| "style=\" font-weight:600;\">*</span></p></td>\n"
-#| "<td style=\" vertical-align:top;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Matches "
-#| "zero or more of any characters.</p></td></tr>\n"
-#| "<tr>\n"
-#| "<td style=\" vertical-align:top;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span "
-#| "style=\" font-weight:600;\">[...]</span></p></td>\n"
-#| "<td style=\" vertical-align:top;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Sets of "
-#| "characters can be represented in square brackets. Within the character "
-#| "class, like outside, backslash has no special meaning.</p></td></tr></"
-#| "table>\n"
-#| "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">For "
-#| "example the *.torrent will match any item which ends in .torrent. </p></"
-#| "body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The string to find in the "
@@ -7456,22 +7317,60 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">For example "
 "the *.torrent will match any item which ends in .torrent. </p>"
 msgstr ""
-"<html><p>Termin za traženje u naslovu stavke. Podržana je jednostavna "
-"džokerska sintaksa:</p><table border=\"0\" style=\" margin-top:0px; margin-"
-"bottom:0px; margin-left:0px; margin-right:0px;\" align=\"center\" "
-"cellspacing=\"1\" cellpadding=\"2\"><tr><td style=\" vertical-align:top;"
-"\"><p><b>s</b></p></td><td style=\" vertical-align:top;\"><p>Svaki znak "
-"predstavlja samog sebe osim ovih navedenih ispod. Tako <b>s</b> predstavlja "
-"znak <i>s</i>.</p></td></tr><tr><td style=\" vertical-align:top;\"><p><b>?</"
-"b></p></td><td style=\" vertical-align:top;\"><p>Predstavlja neki "
-"pojedinačni znak.</p></td></tr><tr><td style=\" vertical-align:top;"
-"\"><p><b>*</b></p></td><td style=\" vertical-align:top;\"><p>Predstavlja "
-"nijedan ili nekoliko znakova.</p></td></tr><tr><td style=\" vertical-align:"
-"top;\"><p><b>[...]</b></p></td><td style=\" vertical-align:top;\"><p>Skup "
-"znakova može se prikazati u uglastim zagradama. Unutar klase znakova, kao i "
-"izvan nje, obrnuto kroz nema specijalno značenje.</p></td></tr></table><p>Na "
-"primjer, *.torrent će poklopiti svaku stavku koja se završava sa .torrent. </"
-"p></html>"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">String kojim se nalazi "
+"naslov elementa. Prosti džoker je dopušten :</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<table border=\"0\" style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px;\" align=\"center\" cellspacing=\"1\" cellpadding="
+"\"2\">\n"
+"<tr>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span style="
+"\" font-weight:600;\">c</span></p></td>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Svaki znak predstavlja "
+"samog sebe, osim onih posebno navedenih ispod. Tako <span style=\" font-"
+"weight:600;\">c</span> odgovara znaku <span style=\" font-style:italic;\">c</"
+"span>.</p></td></tr>\n"
+"<tr>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span style="
+"\" font-weight:600;\">?</span></p></td>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Odgovara "
+"svakom pojedinačnom znaku. </p></td></tr>\n"
+"<tr>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span style="
+"\" font-weight:600;\">*</span></p></td>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Odgovara "
+"nijednom više znakova.</p></td></tr>\n"
+"<tr>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span style="
+"\" font-weight:600;\">[...]</span></p></td>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Skup "
+"znakova je u uglastim zagradama. Unutar klase znakova, naopaka kosa crta "
+"nema posebno značenje.</p></td></tr></table>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Na primjer "
+"*.torrent odgovara elementima koji se završavaju s .torrent. </p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_reg_exp_syntax)
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_exclusion_reg_exp)
@@ -7493,9 +7392,8 @@ msgstr "Niske su regularni izrazi"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_all_words_must_match)
 #: plugins/syndication/filtereditor.ui:91
-#, fuzzy
 msgid "Item must match all strings to be included"
-msgstr "Stavka mora poklapa sve niske"
+msgstr "Stavka se mora slagati s svim nizovima da bude uključena"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_match_case_sensitive)
 #. i18n: ectx: property (text), widget (QCheckBox, m_exclusion_case_sensitive)
@@ -7507,13 +7405,12 @@ msgstr "Razlikuje veličinu slova"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_5)
 #: plugins/syndication/filtereditor.ui:106
 msgid "Exclusion Patterns"
-msgstr ""
+msgstr "Uzorci za isključivanje"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_exclusion_all_must_match)
 #: plugins/syndication/filtereditor.ui:159
-#, fuzzy
 msgid "Item must match all strings to be excluded"
-msgstr "Stavka mora poklapa sve niske"
+msgstr "Stavka se mora slagati s svim nizovima da bude isključena"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: plugins/syndication/filtereditor.ui:174
@@ -7677,15 +7574,14 @@ msgid "Please enter the URL of the RSS or Atom feed."
 msgstr "Unesite URL za RSS ili atom dovod."
 
 #: plugins/syndication/syndicationactivity.cpp:160
-#, fuzzy, kde-format
-#| msgid "Failed to load feed %1."
+#, kde-format
 msgid "Failed to load feed %1: %2"
-msgstr "Ne mogu da učitam dovod %1."
+msgstr "Neuspjelo učitavanje dovoda %1: %2"
 
 #: plugins/syndication/syndicationactivity.cpp:176
-#, fuzzy, kde-format
+#, kde-format
 msgid "Failed to create directory for feed %1: %2"
-msgstr "Ne mogu da stvorim direkorij za dovod %1: %2"
+msgstr "Neuspjelo kreiranje direktorija za dovod %1: %2"
 
 #: plugins/syndication/syndicationactivity.cpp:298
 msgid "Add New Filter"
@@ -7724,11 +7620,9 @@ msgstr "Podrazumevan UPnP uređaj"
 msgid "Device"
 msgstr "Pregled"
 
-# >> @title:column
 #: plugins/upnp/routermodel.cpp:73
-#, fuzzy
 msgid "Ports Forwarded"
-msgstr "port prosleđen"
+msgstr "Portovi proslijeđeni"
 
 #: plugins/upnp/routermodel.cpp:116
 #, kde-format
@@ -7829,26 +7723,6 @@ msgstr "Koje sučelje se koristi."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_authentication)
 #: plugins/webinterface/webinterfaceprefwidget.ui:91
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">If login required is "
-#| "enabled, you need to enter a username and a password.</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "weight:600;\">Attention: </span>You should not disable this when the "
-#| "webinterface is accessible from the internet. It will allow anybody "
-#| "access to it.</p></body></html>"
 msgid ""
 "If login required is enabled, you need to enter a username and a password.\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
@@ -7860,10 +7734,14 @@ msgid ""
 "webinterface is accessible from the internet. It will allow anybody access "
 "to it.</p>"
 msgstr ""
-"<html><p>Ako je uključeno <interface>Neophodno prijavljivanje</interface>, "
-"morate zadati korisničko ime i lozinku.</p><p><b>Pažnja</b>: Ovo ne treba da "
-"isključujete kada je web sučelje dostupno preko Interneta, jer biste onda "
-"svima dozvolili pristup.</p></html>"
+"Ako je potrebna prijava, morate unijeti vaše korisničko ime i lozinku.\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Upozorenje: </span>Ne biste trebali isključiti ovo ako je "
+"moguć pristup sučelju sa interneta. To će dozvoliti svima da mu pristupe.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_authentication)
 #: plugins/webinterface/webinterfaceprefwidget.ui:94
@@ -7895,26 +7773,6 @@ msgstr "Port na kome web sučelje osluškuje."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_forward)
 #: plugins/webinterface/webinterfaceprefwidget.ui:188
-#, fuzzy
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#| "font-weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">If you are behind a "
-#| "router and you want to access the webinterface from somewhere on the "
-#| "Internet you need to forward the correct port.</p>\n"
-#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#| "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#| "\"></p>\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">This checkbox will "
-#| "ensure that the UPnP plugin automatically forwards the port. The UPnP "
-#| "plugin needs to be loaded for this to work.</p></body></html>"
 msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">If you are behind a router "
@@ -7928,10 +7786,17 @@ msgid ""
 "that the UPnP plugin automatically forwards the port. The UPnP plugin needs "
 "to be loaded for this to work.</p>"
 msgstr ""
-"<html><p>Ako ste iza rutera i želite da pristupite web sučelju odnekud sa "
-"Interneta, morate da proslijedite pravi port.</p><p>Ova kućica će "
-"obezbjediti da UPnP priključak automatski proslijedi port. UPnP priključak "
-"mora biti učitan da bi ovo radilo.</p></html>"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Ako ste iza rutera a "
+"želite pristupiti sučelju od nekud drugdje sa interneta,  trebate "
+"proslijediti tačan port.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Ova kvačica osigurava da "
+"će UPnP dodatak automatski proslijediti port. UPnP dodatak mora biti učitan "
+"da bi ovo radilo.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_forward)
 #: plugins/webinterface/webinterfaceprefwidget.ui:191
@@ -7957,899 +7822,3 @@ msgstr " sekundi"
 #: plugins/zeroconf/zeroconfplugin.cpp:68
 msgid "ZeroConf"
 msgstr "Zirokonf"
-
-#, fuzzy
-#~| msgid "Tracker"
-#~ msgid "Switch To View"
-#~ msgstr "Pratilac"
-
-#~ msgid "Enter the URL's of the trackers, one per line:"
-#~ msgstr "Unesite URL‑ova pratilaca, jedan po redu:"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:9pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">The IP address or "
-#~ "hostname of the peer you want to connect to, should be put here.</p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "weight:600;\">Note:</span> We accept both IPv4 and IPv6 addresses</p></"
-#~ "body></html>"
-#~ msgstr ""
-#~ "<html><p>IP adresa ili ime računara saradnika sa kojim želite da se "
-#~ "povežete treba staviti ovdje.</p><p><b>Napomena:</b> Prihvataju se i IPv4 "
-#~ "i IPv6 adrese.</p></html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:10pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">They are no longer "
-#~ "there, recreate them.</p></body></html>"
-#~ msgstr "<html><p>Nisu više ovdje. Napravite ih ponovo.</p></html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:10pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Do not download the "
-#~ "missing files.</p></body></html>"
-#~ msgstr "<html><p>Ne preuzimaj nedostajuće datoteke.</p></html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:10pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">The files have been "
-#~ "moved to another location, select the new location.</p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Datoteke su premještene na drugu lokaciju. Izaberite novu "
-#~ "lokaciju.</p></html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:10pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Cancel, do not start "
-#~ "the torrent.</p></body></html>"
-#~ msgstr "<html><p>Odustani, ne pokreći torent.</p></html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#~ "size:8pt; font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">When existing files "
-#~ "have been found, skip the data check and assume that the files are fully "
-#~ "downloaded.</p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "weight:600;\">Note: </span>only do this when you are absolutely sure.</"
-#~ "p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Kada su nađeni postojeće datoteke, preskoči provjeru i smatraj "
-#~ "da su datoteke potpuno preuzete.</p><p><b>Napomena:</b> uradite ovo samo "
-#~ "kada ste apsolutno sigurni!.</p></html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#~ "size:8pt; font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Default save location "
-#~ "for torrents from this group. </p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "weight:600;\">Note:</span> This is only used in the file selection "
-#~ "dialog, when you change the group, the download location in the dialog "
-#~ "will be set to this. You can still override it, if you want to. </p></"
-#~ "body></html>"
-#~ msgstr ""
-#~ "<html><p>Podrazumevana lokacija za upisivanje torenata iz ove grupe.</"
-#~ "p><p><b>Napomena:</b> koristi se samo u dijalogu izbora datoteke. Kada "
-#~ "mijenjate grupu, lokacija za preuzimanje će biti postavljena na ovu. I "
-#~ "dalje ćete moći da je potisnete kad poželite.</p></html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#~ "size:8pt; font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Default save location "
-#~ "for torrents from this group. </p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "weight:600;\">Note: </span>This is only used in the file selection "
-#~ "dialog, when you change the group, the download location in the dialog "
-#~ "will be set to this. You can still override it, if you want to.</p></"
-#~ "body></html>"
-#~ msgstr ""
-#~ "<html><p>Podrazumijevana lokacija za upisivanje torenata iz ove grupe.</"
-#~ "p><p><b>Napomena:</b> koristi se samo u dijalogu izbora datoteke. Kada "
-#~ "mijenjate grupu, lokacija za preuzimanje će biti postavljena na ovu. I "
-#~ "dalje ćete moći da je potisnete kad poželite.</p></html>"
-
-#, fuzzy
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "family:'Bitstream Vera Sans';\">Default move on completion location for "
-#~ "torrents from this group. </span></p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
-#~ "font-family:'Bitstream Vera Sans';\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "family:'Bitstream Vera Sans'; font-weight:600;\">Note: </span><span style="
-#~ "\" font-family:'Bitstream Vera Sans';\">This is only used in the file "
-#~ "selection dialog, when you change the group, the download location in the "
-#~ "dialog will be set to this. You can still override it, if you want to.</"
-#~ "span></p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Podrazumijevana lokacija za upisivanje torenata iz ove grupe.</"
-#~ "p><p><b>Napomena:</b> koristi se samo u dijalogu izbora datoteke. Kada "
-#~ "mijenjate grupu, lokacija za preuzimanje će biti postavljena na ovu. I "
-#~ "dalje ćete moći da je potisnete kad poželite.</p></html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#~ "size:8pt; font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Default settings for "
-#~ "torrents which are added to the group.</p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Podrazumijevane postavke za torente dodate u grupu.</p></html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#~ "size:8pt; font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">When this is enabled, "
-#~ "these settings will only be applied when a torrent is added to the group "
-#~ "in the file selection dialog or the torrent creation dialog.</p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">If this is not enabled, "
-#~ "the settings will always be applied when you add a torrent to this group. "
-#~ "</p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Kada je ovo uključeno, ove postavke će se primjenjivati samo "
-#~ "kada je torent dodat u grupu u dijalogu izbora datoteke ili dijalogu "
-#~ "stvaranja torenta.</p><p>Ako nije uključeno, postavke će se primjenjivati "
-#~ "uvijek kada dodate torent u ovu grupu.</p></html>"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
-#~ "style=\" font-size:8pt;\">The interval in milliseconds between GUI "
-#~ "updates.</span></p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "weight:600;\">Note: </span>Increasing this will decrease CPU usage.</p></"
-#~ "body></html>"
-#~ msgstr ""
-#~ "<html><p>Period u milisekundama po kojem se ažurira grafički prikaz.</"
-#~ "p><p><b>Napomena:</b> Povećavanjem ovoga, smanjićete zauzetost procesora."
-#~ "</p></html>"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
-#~ "style=\" font-size:8pt;\">Amount of time the network threads will sleep "
-#~ "when they are speed limited. This has absolutely no effect when there are "
-#~ "no speed limits.</span></p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "weight:600;\">Note:</span> The lower this is the more CPU is used. "
-#~ "Setting it high can lead to lower speeds in high bandwith situations. </"
-#~ "p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">For example on an 100 "
-#~ "Mbit LAN, if you set a limit of 3000 KiB/s, you might not actually reach "
-#~ "this speed when this value is too high. Without a limit you can easily "
-#~ "get above 3000 KiB/s on a LAN.</p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Vrijeme za koje će se mrežni poslovi uspavati kada postoje "
-#~ "ograničenja brzine. Ovo nema apsolutno nikakvog uticaja kada brzina nije "
-#~ "ograničena.</p><p><b>Napomena:</b> Što je ovo manje, više je zauzet "
-#~ "procesor. Ako ga podesite previsoko, može dovesti do malih brzina na "
-#~ "bržim vezama.</p><p>Na primjer, na LAN‑u od 100 Mbit, ako postavite "
-#~ "ograničenje od 3000 kiB/s, nećete dobiti tu brzinu ako vam je ova "
-#~ "vrijednost prevelika. Bez ograničenja, na LAN‑u lako možete preći i preko "
-#~ "3000 kiB/s.</p></html>"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><span "
-#~ "style=\" font-size:8pt;\">Select which algorithm to use for estimating "
-#~ "the time left :</span></p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "weight:600;\">KTorrent:</span> Mix of other algorithms, we use the one "
-#~ "which fits best in the current situation.</p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "weight:600;\">Current speed:</span> Bytes left to download / current "
-#~ "speed</p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "weight:600;\">Average speed: </span>Bytes left to download / average "
-#~ "speed</p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "weight:600;\">Window of X:</span> Average of the last X samples (X = 20)</"
-#~ "p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "weight:600;\">Moving average:</span>  Moving average of the last 20 "
-#~ "samples</p></body></html>"
-#~ msgstr ""
-#~ "<html><p >Izaberite koji algoritam će se koristiti za procjenu preostalog "
-#~ "vremena:</p><p><interface>K‑torent</interface>: mješavina drugih "
-#~ "algoritama, koristi onaj koji najbolje odgovara situaciji</"
-#~ "p><p><interface>trenutna brzina</interface>: preostalo za preuzimanje / "
-#~ "trenutna brzina</p><p><interface>prosečna brzina</interface>: preostalo "
-#~ "za preuzimanje / prosječna brzina</p><p><interface>prozor od X</"
-#~ "interface>: prosjek posljednjih X uzoraka (X = 20)</"
-#~ "p><p><interface>klizni prosek</interface>: klizni prosjek posljednjih 20 "
-#~ "uzoraka</p></html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">The amount of data at "
-#~ "the beginning and end of an audio file, which will be prioritized for "
-#~ "previewing.</p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Količina podataka na početku i na kraju audio datoteke koja će "
-#~ "biti prioritetna, da biste mogli da ga pregledate što ranije.</p></html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">The amount of data at "
-#~ "the beginning and end of a video file, which will be prioritized for "
-#~ "previewing.</p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Količina podataka na početku i na kraju video datoteke koja će "
-#~ "biti prioritetna, da biste mogli da ga pregledate što ranije.</p></html>"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-family:'OpenSymbol'; "
-#~ "font-size:9pt;\"><span style=\" font-size:8pt;\">Port used for the "
-#~ "bittorrent protocol.</span></p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
-#~ "font-family:'OpenSymbol';\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-family:'OpenSymbol';"
-#~ "\"><span style=\" font-weight:600;\">Attention:</span> If you are behind "
-#~ "a router, this port needs to be forwarded to accept incoming connections. "
-#~ "The UPnP plugin can do this for you.</p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Port koji se koristi za protokol bittorent.</p><p><b>Pažnja:</b> "
-#~ "Ako ste iza rutera, ovaj port treba proslijediti da bi prihvatao dolazne "
-#~ "veze. UPnP priključak može to da uradi za vas.</p></html>"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-family:'OpenSymbol'; "
-#~ "font-size:9pt;\"><span style=\" font-size:8pt;\">Port used for the UDP "
-#~ "tracker protocol.</span></p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
-#~ "font-family:'OpenSymbol';\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-family:'OpenSymbol';"
-#~ "\"><span style=\" font-weight:600;\">Attention:</span> If you are behind "
-#~ "a router, this port needs to be forwarded. The UPnP plugin can do this "
-#~ "for you.</p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Port koji se koristi za protokol UDP pratioca.</p><p><b>Pažnja:</"
-#~ "b> Ako ste iza rutera, ovaj port treba proslijediti. UPnP priključak može "
-#~ "to da uradi za vas.</p></html>"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">The maximum number of "
-#~ "outgoing connections ktorrent will try to setup simultaneously.</p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
-#~ "font-family:'OpenSymbol';\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-family:'OpenSymbol';"
-#~ "\">If you are having trouble with ktorrent blocking other internet "
-#~ "traffic, try setting this number a bit lower.</p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Najveći broj odlaznih veza koje će K‑torent pokušati istovremeno "
-#~ "da uspostavi.</p><p>Ako K‑torent usporava ostali internet saobraćaj, "
-#~ "pokušajte da postavite manji broj.</p></html>"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Which network interface "
-#~ "to use for all network traffic.</p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
-#~ "font-family:'OpenSymbol';\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-family:'OpenSymbol';"
-#~ "\"><span style=\" font-weight:600;\">Note: </span>Requires a restart to "
-#~ "take effect.</p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Koje mrežno sučelje će se koristiti za sav mrežni saobraćaj.</"
-#~ "p><p><b>Napomena:</b> Zahtjeva ponovno pokretanje da bi stupilo na snagu."
-#~ "</p></html>"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
-#~ "style=\" font-size:8pt;\">Use the HTTP proxy settings configured in the "
-#~ "settings of KDE.</span></p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Koristi postavke HTTP proksija podešene u postavkama KDE‑a.</p></"
-#~ "html>"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
-#~ "style=\" font-size:8pt;\">Use a SOCKS proxy server for bittorrent "
-#~ "connections.</span></p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"></p>\n"
-#~ "<p style=\" font-family:'OpenSymbol'; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"><span style=\" font-weight:600;\">Note: </span>This is not used for "
-#~ "tracker connections</p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Koristi SOKS proksi server za bittorent veze.</p><p><b>Napomena:"
-#~ "</b> Ovo se ne koristi za veze pratilaca.</p></html>"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
-#~ "style=\" font-size:8pt;\">IP address or hostname of the SOCKS server</"
-#~ "span></p></body></html>"
-#~ msgstr "<html><p>IP adresa ili ime računara SOKS servera</p></html>"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
-#~ "style=\" font-size:8pt;\">Port used by the SOCKS server</span></p></"
-#~ "body></html>"
-#~ msgstr "<html><p>Port koji koristi SOKS server.</p></html>"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><span "
-#~ "style=\" font-size:8pt;\">Username for the SOCKS proxy server.</span></"
-#~ "p></body></html>"
-#~ msgstr "<html><p>Korisničko ime za SOKS proksi server.</p></html>"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><span "
-#~ "style=\" font-size:8pt;\">Password for the SOCKS proxy server.</span></"
-#~ "p></body></html>"
-#~ msgstr "<html><p>Lozinka za SOKS proksi server.</p></html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#~ "size:8pt; font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">When you select "
-#~ "multiple torrents to be opened at the same time, open them silently.</p></"
-#~ "body></html>"
-#~ msgstr ""
-#~ "<html><p>Kada se izabere više torenata za istovremeno otvaranje, otvori "
-#~ "ih tiho.</p></html>"
-
-#, fuzzy
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "family:'Bitstream Vera Sans';\">Open all torrents silently.</span></p></"
-#~ "body></html>"
-#~ msgstr "<html><p>Korisničko ime za SOKS proksi server.</p></html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#~ "size:8pt; font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Prevent computer from "
-#~ "going into a sleep state when torrents are running.</p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Sprečava da se računar uspava kada su torenti pokrenuti.</p></"
-#~ "html>"
-
-#, fuzzy
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Rename a single file "
-#~ "torrent with the name of its only file. </p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">If for example the file "
-#~ "is named <span style=\" font-weight:600;\">linux-desktop.iso</span>, the "
-#~ "torrent will be displayed as <span style=\" font-weight:600;\">linux-"
-#~ "desktop.</span></p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Kada je torent pronađen i učitan, obriši ga.</p><p><b>Upozorenje:"
-#~ "</b> zauvijek ćete izgubiti tu datoteku.</p></html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-size:8pt; font-weight:400; font-style:"
-#~ "normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">With this enabled, the "
-#~ "queue manager will decrease the priority of a torrent which has been "
-#~ "stalled for too long. </p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">This will allow the "
-#~ "queue manager to run other torrents, when a torrent is doing nothing.</"
-#~ "p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Sa ovim uključenim, menadžer redoslijeda će sniziti prioritet "
-#~ "torenta koji je predugo u zastoju. </p><p>Ovako će menadžer redoslijeda "
-#~ "moći da pokrene druge torente kada trenutni miruje.</p></html>"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Bitstream "
-#~ "Vera Sans';\">Time used for the stall timer. When a torrent is stalled "
-#~ "longer than this, its priority will be decreased.</p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Vreme kojim se određuje zastoj. Ako je torent duže u zastoju, "
-#~ "prioritet će mu se smanjiti.</p></html>"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
-#~ "style=\" font-size:8pt;\">The maximum share ratio, if this value is "
-#~ "reached seeding will be stopped. This is only applied to newly opened "
-#~ "torrents, existing torrents will not be affected by changing this.</"
-#~ "span></p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "weight:600;\">Attention: </span>This is not used when downloading, only "
-#~ "when seeding.</p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Najveći odnos deljenja; ako je ova vrijednost dostignuta sijanje "
-#~ "će se prekinuti. Primjenjuje se samo na novootvorene torente, dok na "
-#~ "postojeće izmjena neće uticati.</p><p><b>Pažnja:</b> Ovo se ne koristi "
-#~ "pri preuzimanju, samo pri sijanju.</p></html>"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;  font-size:9pt;\"><span "
-#~ "style=\" font-size:8pt;\">UDP port to use for the DHT protocol.</span></"
-#~ "p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; \"><span style=\" font-"
-#~ "weight:600;\">Attention:</span> If you are behind a router, this port "
-#~ "needs to be forwarded to accept incoming DHT requests. The UPnP plugin "
-#~ "can do this for you.</p></body></html>"
-#~ msgstr ""
-#~ "<html><p>UDP port koji se koristi za DHT protokol.</p><p><b>Pažnja:</b> "
-#~ "Ako ste iza rutera, ovaj port treba proslijediti da bi prihvatao dolazne "
-#~ "DHT zahtjeve. UPnP priključak može to da uradi za vas.</p></html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Protocol encryption is "
-#~ "useful when your ISP is slowing down bittorrent connections. </p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">The encryption will "
-#~ "prevent your bittorrent traffic to be flagged as bittorrent traffic, and "
-#~ "so the ISP will not slow it down.</p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Šifrovanje protokola je korisno kada vaš internet provajder "
-#~ "usporava bittorent veze.</p><p>Šifrovanje će spriječiti da bittorent "
-#~ "saobraćaj bude prepoznat kao takav, pa ga provajder neće usporavati.</p></"
-#~ "html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#~ "size:8pt; font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks "
-#~ "which have not been downloaded.</p></body></html>"
-#~ msgstr "<html><p>Broj dijelova koji nisu preuzeti.</p></html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#~ "size:8pt; font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Whether or not to show "
-#~ "the webseeds tab at the bottom of the window.</p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Da li prikazivati karticu web sijanja u dnu prozora.</p></html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#~ "size:8pt; font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Color to use for first "
-#~ "priority files.</p></body></html>"
-#~ msgstr "<html><p>Boja za datoteke prvog prioriteta.</p></html>"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
-#~ "size:8pt; font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Color to use for last "
-#~ "priority files.</p></body></html>"
-#~ msgstr "<html><p>Boja za datoteke posljednjeg prioriteta.</p></html>"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Scan the folder "
-#~ "recursively for torrents.</p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Note: "
-#~ "<span style=\" font-weight:400;\">This will not be done for any folder "
-#~ "named loaded.</span></p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Potraži torente rekurzivno u direktoriju.</p><p><b>Napomena</b>: "
-#~ "Ovo se neće raditi za bilo koji direktorij „loaded“.</p></html>"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">When a torrent file has "
-#~ "been found and loaded, delete it.</p>\n"
-#~ "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-#~ "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-#~ "\"></p>\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;"
-#~ "\">Warning:<span style=\" font-weight:400;\"> you will permanently lose "
-#~ "this file.</span></p></body></html>"
-#~ msgstr ""
-#~ "<html><p>Kada je torent pronađen i učitan, obriši ga.</p><p><b>Upozorenje:"
-#~ "</b> zauvijek ćete izgubiti tu datoteku.</p></html>"
-
-#~ msgid "Invalid IP address %1"
-#~ msgstr "Neispravna IP adresa %1"
-
-#~ msgid "Duplicate IP address %1"
-#~ msgstr "Duplirana IP adresa %1"
-
-#~ msgid "Change Tracker"
-#~ msgstr "Promijeni pratilac"
-
-#~ msgid " corrupted chunk"
-#~ msgid_plural " corrupted chunks"
-#~ msgstr[0] " oštećen dio"
-#~ msgstr[1] " oštećena dijela"
-#~ msgstr[2] " oštećenih dijelova"
-
-#~ msgid " corrupted chunks"
-#~ msgstr " oštećenih dijelova"
-
-#~ msgid "Data Checking"
-#~ msgstr "Provjera podataka"
-
-#~ msgid ""
-#~ "During uploading when a chunk is loaded into memory automatically recheck "
-#~ "this chunk, to see if it still is OK."
-#~ msgstr ""
-#~ "Tokom slanja, kada je dio datoteke učitan u memoriju, automatski provjeri "
-#~ "da li je on i dalje ispravan."
-
-#~ msgid "Recheck chunks during uploading"
-#~ msgstr "Provjeri dijelove tokom slanja"
-
-#~ msgid ""
-#~ "Because rechecking big chunks can take a lot of time, the recheck can be "
-#~ "disabled when the chunks are bigger then a certain size."
-#~ msgstr ""
-#~ "Pošto provjera velikih dijelova može trajati dugo, moguće je isključiti "
-#~ "provjeru kada su dijelovi veći od određene vrijednosti."
-
-#~ msgid "Do not recheck when chunks are bigger than"
-#~ msgstr "Ne proveravaj kada su dijelovi veći od"
-
-#~ msgid "The maximum size a chunk can be for rechecking during uploading."
-#~ msgstr ""
-#~ "Veličina dijelova preko koje neće biti ponovne provjere tokom slanja."
-
-#~ msgid ""
-#~ "Automatically do a full data check when we find to many corrupted chunks."
-#~ msgstr ""
-#~ "Automatski uradi punu provjeru podataka kada se nađe previše oštećenih "
-#~ "dijelova."
-
-#~ msgid "Do a full data check after "
-#~ msgstr "Uradi punu provjeru nakon "
-
-#~ msgid "The number of corrupted chunks before a full data check is done"
-#~ msgstr "Broj oštećenih dijelova nakon kojeg će se uraditi puna provjera"
-
-#, fuzzy
-#~| msgid "From:"
-#~ msgid "Form"
-#~ msgstr "Od:"
-
-#~ msgid "Mode:"
-#~ msgstr "Režim:"
-
-# >> @item:inlistbox Mode
-#~ msgid "Single File"
-#~ msgstr "jedna datoteka"
-
-# >> @item:inlistbox Mode
-#~ msgid "Playlist"
-#~ msgstr "lista puštanja"
-
-# >> @item:inlistbox Mode
-#~ msgid "Random"
-#~ msgstr "nasumično"
-
-#~ msgid ""
-#~ "Playing: <b>%1</b><br/>\n"
-#~ "%2"
-#~ msgstr ""
-#~ "Puštam: <b>%1</b><br/>\n"
-#~ "%2"
-
-#~ msgid "Title: <b>%1</b><br/>Artist: <b>%2</b>"
-#~ msgstr "Naslov: <b>%1</b><br/>Izvođač: <b>%2</b>"
-
-#~ msgid "Title: <b>%1</b>"
-#~ msgstr "Naslov: <b>%1</b>"
-
-#~ msgid "Play List"
-#~ msgstr "Lista puštanja"
-
-#~ msgid "Media Player Toolbar"
-#~ msgstr "Traka medija plejera"
