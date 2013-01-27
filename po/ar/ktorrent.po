@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-14 19:51+0200\n"
+"POT-Creation-Date: 2012-12-19 08:39+0100\n"
 "PO-Revision-Date: 2007-10-14 15:28+0000\n"
 "Last-Translator: Youssef Chahibi <chahibi@gmail.com>\n"
 "Language-Team:  <en@li.org>\n"
@@ -175,66 +175,66 @@ msgstr "السيل لا إعلان أو حقل"
 msgid "Cannot create torrent: %1"
 msgstr "غير قادر على إنشاء السيل: %1"
 
-#: ktorrent/core.cpp:1212
+#: ktorrent/core.cpp:1216
 msgid ""
 "One or more storage volumes are not mounted. In order to start this torrent, "
 "they need to be mounted."
 msgstr ""
 
-#: ktorrent/core.cpp:1213
+#: ktorrent/core.cpp:1217
 msgid "Retry"
 msgstr ""
 
-#: ktorrent/core.cpp:1222
+#: ktorrent/core.cpp:1226
 #, kde-format
 msgid "Storage volume %1 is not mounted"
 msgstr ""
 
-#: ktorrent/core.cpp:1224
+#: ktorrent/core.cpp:1228
 #, kde-format
 msgid "Storage volumes %1 are not mounted"
 msgstr ""
 
-#: ktorrent/core.cpp:1236
+#: ktorrent/core.cpp:1240
 #, fuzzy, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
 "Do you want to recreate them, or do you want to not download them?"
 msgstr "عدّة البيانات ملفات من مفقود إلى أو إلى ليس تنزيلات?"
 
-#: ktorrent/core.cpp:1245 ktorrent/core.cpp:1256 ktorrent/core.cpp:1269
+#: ktorrent/core.cpp:1249 ktorrent/core.cpp:1260 ktorrent/core.cpp:1273
 #, fuzzy
 msgid "Data files are missing"
 msgstr "ملفات البيانات ناقصة"
 
-#: ktorrent/core.cpp:1255
+#: ktorrent/core.cpp:1259
 #, fuzzy, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "لا يستطيع عدم انتقاء مفقود ملفات 1"
 
-#: ktorrent/core.cpp:1268
+#: ktorrent/core.cpp:1272
 #, fuzzy, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "لا يستطيع مفقود ملفات 1"
 
-#: ktorrent/core.cpp:1279
+#: ktorrent/core.cpp:1283
 #, fuzzy, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing.\n"
 "Do you want to recreate it?"
 msgstr "الـ ملفّ البيانات هو من هو مفقود إلى الإيطالية?"
 
-#: ktorrent/core.cpp:1286 ktorrent/core.cpp:1296
+#: ktorrent/core.cpp:1290 ktorrent/core.cpp:1300
 #, fuzzy
 msgid "Data file is missing"
 msgstr "بيانات الملف مفقودة"
 
-#: ktorrent/core.cpp:1295
+#: ktorrent/core.cpp:1299
 #, fuzzy, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "لا يستطيع البيانات ملفّ 1"
 
-#: ktorrent/core.cpp:1383
+#: ktorrent/core.cpp:1387
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -249,16 +249,16 @@ msgstr[3] ""
 msgstr[4] ""
 msgstr[5] ""
 
-#: ktorrent/core.cpp:1405
+#: ktorrent/core.cpp:1409
 msgid "No torrents from the KDE3 version were found."
 msgstr ""
 
-#: ktorrent/core.cpp:1444
+#: ktorrent/core.cpp:1448
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr ""
 
-#: ktorrent/core.cpp:1449
+#: ktorrent/core.cpp:1453
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -581,8 +581,8 @@ msgstr ""
 msgid "Options"
 msgstr "خيارات"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/fileselectdlg.ui:207 ktorrent/dialogs/pastedlgbase.ui:77
 #, fuzzy
 msgid "Group:"
@@ -637,8 +637,8 @@ msgstr "بعد تنزيلات:"
 msgid "Cannot load the torrent file: %1"
 msgstr "لا يستطيع التحميل ملفّ 1"
 
-#: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:67
-#: plugins/ipfilter/convertthread.cpp:167
+#: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:66
+#: plugins/ipfilter/convertthread.cpp:166
 #: plugins/search/searchenginelist.cpp:192
 #, fuzzy, kde-format
 msgid "Cannot open %1: %2"
@@ -797,7 +797,7 @@ msgstr "افتح سكوني"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpeedLimitsDlg)
 #: ktorrent/dialogs/speedlimitsdlg.cpp:50
-#: ktorrent/dialogs/speedlimitsdlg.ui:14 ktorrent/view/view.cpp:256
+#: ktorrent/dialogs/speedlimitsdlg.ui:14 ktorrent/view/view.cpp:260
 #, fuzzy
 msgid "Speed Limits"
 msgstr "السرعة الحدود"
@@ -821,8 +821,8 @@ msgid "Global Limits"
 msgstr "شامل الحدود"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
+#. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ktorrent/dialogs/speedlimitsdlg.ui:70 ktorrent/pref/networkpref.ui:111
 #: ktorrent/pref/recommendedsettingsdlg.ui:221
 #: plugins/bwscheduler/bwprefpage.ui:65
@@ -882,9 +882,9 @@ msgstr "لا"
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_rate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_max_download_rate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_max_upload_rate)
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_avg_speed_slot)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxDownloadRate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxUploadRate)
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_avg_speed_slot)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverUploadLimit)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverDownloadLimit)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_download_limit)
@@ -907,8 +907,8 @@ msgid " KiB/s"
 msgstr "ك.ب. s"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/speedlimitsdlg.ui:93 ktorrent/pref/networkpref.ui:134
 #: ktorrent/pref/recommendedsettingsdlg.ui:207
@@ -1315,36 +1315,36 @@ msgstr "ابدأ"
 msgid "Edit Group Policy"
 msgstr ""
 
-#: ktorrent/groups/groupview.cpp:81
+#: ktorrent/groups/groupview.cpp:80
 #, fuzzy
 msgid "Open In New Tab"
 msgstr "فتح تبويب"
 
-#: ktorrent/groups/groupview.cpp:85 ktorrent/view/view.cpp:221
+#: ktorrent/groups/groupview.cpp:84 ktorrent/view/view.cpp:225
 #, fuzzy
 msgid "New Group"
 msgstr "مجموعة جديدة"
 
-#: ktorrent/groups/groupview.cpp:89
+#: ktorrent/groups/groupview.cpp:88
 #, fuzzy
 msgid "Edit Name"
 msgstr "حرر الاسم"
 
-#: ktorrent/groups/groupview.cpp:93
+#: ktorrent/groups/groupview.cpp:92
 #, fuzzy
 msgid "Remove Group"
 msgstr "أحذف المجموعة"
 
-#: ktorrent/groups/groupview.cpp:97
+#: ktorrent/groups/groupview.cpp:96
 msgid "Group Policy"
 msgstr ""
 
-#: ktorrent/groups/groupview.cpp:110
+#: ktorrent/groups/groupview.cpp:109
 #, fuzzy
 msgid "Please enter the group name."
 msgstr "الرجاء إدخال اسم المجموعة."
 
-#: ktorrent/groups/groupview.cpp:117
+#: ktorrent/groups/groupview.cpp:116
 #, fuzzy, kde-format
 msgid "The group %1 already exists."
 msgstr "المجموعة %1 موجودة مسبقاً."
@@ -1388,8 +1388,8 @@ msgid "Open a URL which points to a torrent, magnet links are supported"
 msgstr ""
 
 #: ktorrent/gui.cpp:440 plugins/ipfilter/ipblockingprefpage.cpp:35
-#: plugins/ipfilter/ipfilterplugin.cpp:62
-#: plugins/ipfilter/ipfilterplugin.cpp:75
+#: plugins/ipfilter/ipfilterplugin.cpp:60
+#: plugins/ipfilter/ipfilterplugin.cpp:73
 #, fuzzy
 msgid "IP Filter"
 msgstr "IP تصفية"
@@ -1532,13 +1532,13 @@ msgid "Advanced"
 msgstr "متقدم"
 
 #. i18n: ectx: Menu (OpenDirMenu)
-#: ktorrent/kttorrentactivityui.rc:62 ktorrent/view/view.cpp:242
+#: ktorrent/kttorrentactivityui.rc:62 ktorrent/view/view.cpp:246
 #, fuzzy
 msgid "Open Directory"
 msgstr "افتح دليلاً"
 
 #. i18n: ectx: Menu (GroupsSubMenu)
-#: ktorrent/kttorrentactivityui.rc:68 ktorrent/view/view.cpp:245
+#: ktorrent/kttorrentactivityui.rc:68 ktorrent/view/view.cpp:249
 #, fuzzy
 msgid "Add to Group"
 msgstr "أضف إلى المجموعة"
@@ -2460,8 +2460,8 @@ msgid ""
 "</p>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
 #: ktorrent/pref/networkpref.ui:71 ktorrent/pref/recommendedsettingsdlg.ui:235
 #: plugins/bwscheduler/edititemdlg.ui:229
 #, fuzzy
@@ -2474,8 +2474,8 @@ msgstr "أقصى عدد الاتصالات لكل سيل:"
 msgid "The maximum number of connections allowed per torrent."
 msgstr "أقصى عدد الاتصالات لكل سيل:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_4)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ktorrent/pref/networkpref.ui:91 ktorrent/pref/recommendedsettingsdlg.ui:249
 #: plugins/bwscheduler/edititemdlg.ui:246
@@ -2760,8 +2760,8 @@ msgstr "كلمة المرور:"
 msgid "Password for the SOCKS proxy server."
 msgstr ""
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: property (title), widget (QGroupBox, m_qm_group_box)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: ktorrent/pref/qmpref.cpp:25 ktorrent/pref/qmpref.ui:27
 #: ktorrent/pref/recommendedsettingsdlg.ui:266
 #: ktorrent/torrentactivity.cpp:100
@@ -2792,8 +2792,8 @@ msgstr ""
 msgid "Control torrents manually"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_14)
 #. i18n: ectx: property (text), widget (QLabel, label_11)
+#. i18n: ectx: property (text), widget (QLabel, label_14)
 #: ktorrent/pref/qmpref.ui:35 ktorrent/pref/recommendedsettingsdlg.ui:288
 #, fuzzy
 msgid "Maximum downloads:"
@@ -2805,8 +2805,8 @@ msgid ""
 "The maximum number of simultaneous downloads the queue manager will run."
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_17)
 #. i18n: ectx: property (text), widget (QLabel, label_10)
+#. i18n: ectx: property (text), widget (QLabel, label_17)
 #: ktorrent/pref/qmpref.ui:55 ktorrent/pref/recommendedsettingsdlg.ui:302
 #, fuzzy
 msgid "Maximum seeds:"
@@ -2914,8 +2914,8 @@ msgstr ""
 msgid "Keep seeding after download is finished"
 msgstr "حافظ عليه بعد تنزيلات هو إنتهيت"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ktorrent/pref/qmpref.ui:202 ktorrent/pref/recommendedsettingsdlg.ui:274
 #, fuzzy
 msgid "Number of upload slots:"
@@ -3117,9 +3117,9 @@ msgstr ""
 msgid "Status"
 msgstr "الحالة"
 
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (title), widget (QGroupBox, PeersSpdGbw)
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: ktorrent/tools/magnetmodel.cpp:136
 #: plugins/infowidget/infowidgetplugin.cpp:222
 #: plugins/stats/DisplaySettings.ui:165 plugins/stats/Settings.ui:166
@@ -3156,7 +3156,7 @@ msgstr "أحذف السيل"
 msgid "Order"
 msgstr ""
 
-#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:495
+#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:533
 #: plugins/downloadorder/downloadorderdialog.cpp:80
 #, fuzzy
 msgid "Name"
@@ -3661,361 +3661,360 @@ msgstr "خطأ: "
 msgid "Torrent filter"
 msgstr "السيل ملفات"
 
-#: ktorrent/view/view.cpp:135
+#: ktorrent/view/view.cpp:139
 #, fuzzy
 msgctxt "@action Start all selected torrents in the current tab"
 msgid "Start"
 msgstr "ابدأ"
 
-#: ktorrent/view/view.cpp:136
+#: ktorrent/view/view.cpp:140
 msgid "Start all selected torrents in the current tab"
 msgstr ""
 
-#: ktorrent/view/view.cpp:141
+#: ktorrent/view/view.cpp:145
 #, fuzzy
 msgctxt "@action Force start all selected torrents in the current tab"
 msgid "Force Start"
 msgstr "ابدأ"
 
-#: ktorrent/view/view.cpp:142
+#: ktorrent/view/view.cpp:146
 #, fuzzy
 msgid "Force start all selected torrents in the current tab"
 msgstr "صف/أحذف من الصف"
 
-#: ktorrent/view/view.cpp:146
+#: ktorrent/view/view.cpp:150
 #, fuzzy
 msgctxt "@action Stop all selected torrents in the current tab"
 msgid "Stop"
 msgstr "قف"
 
-#: ktorrent/view/view.cpp:147
+#: ktorrent/view/view.cpp:151
 msgid "Stop all selected torrents in the current tab"
 msgstr ""
 
-#: ktorrent/view/view.cpp:152
+#: ktorrent/view/view.cpp:156
 msgctxt "@action Pause all selected torrents in the current tab"
 msgid "Pause"
 msgstr ""
 
-#: ktorrent/view/view.cpp:153
+#: ktorrent/view/view.cpp:157
 #, fuzzy
 msgid "Pause all selected torrents in the current tab"
 msgstr "صف/أحذف من الصف"
 
-#: ktorrent/view/view.cpp:157
+#: ktorrent/view/view.cpp:161
 #, fuzzy
 msgctxt "@action Remove all selected torrents in the current tab"
 msgid "Remove"
 msgstr "احذف"
 
-#: ktorrent/view/view.cpp:158
+#: ktorrent/view/view.cpp:162
 msgid "Remove all selected torrents in the current tab"
 msgstr ""
 
-#: ktorrent/view/view.cpp:163
+#: ktorrent/view/view.cpp:167
 #, fuzzy
 msgctxt "@action Start all torrents in the current tab"
 msgid "Start All"
 msgstr "ابدأ الكل"
 
-#: ktorrent/view/view.cpp:164
+#: ktorrent/view/view.cpp:168
 msgid "Start all torrents in the current tab"
 msgstr ""
 
-#: ktorrent/view/view.cpp:169
+#: ktorrent/view/view.cpp:173
 #, fuzzy
 msgctxt "@action Stop all torrents in the current tab"
 msgid "Stop All"
 msgstr "قف الكل"
 
-#: ktorrent/view/view.cpp:170
+#: ktorrent/view/view.cpp:174
 #, fuzzy
 msgid "Stop all torrents in the current tab"
 msgstr "ابدأ"
 
-#: ktorrent/view/view.cpp:175
+#: ktorrent/view/view.cpp:179
 #, fuzzy
 msgid "Remove Torrent and Data"
 msgstr "أحذف السيل و البيانات"
 
-#: ktorrent/view/view.cpp:180
+#: ktorrent/view/view.cpp:184
 #, fuzzy
 msgid "Rename Torrent"
 msgstr "أحذف السيل"
 
-#: ktorrent/view/view.cpp:184
+#: ktorrent/view/view.cpp:188
 #, fuzzy
 msgid "Add Peers"
 msgstr "إضافة النبلاء"
 
-#: ktorrent/view/view.cpp:188
+#: ktorrent/view/view.cpp:192
 #, fuzzy
 msgid "Manual Announce"
 msgstr "إعلان يدوي"
 
-#: ktorrent/view/view.cpp:193
+#: ktorrent/view/view.cpp:197
 #, fuzzy
 msgid "Scrape"
 msgstr "الورطة"
 
-#: ktorrent/view/view.cpp:197
+#: ktorrent/view/view.cpp:201
 #, fuzzy
 msgid "Preview"
 msgstr "معاينة"
 
-#: ktorrent/view/view.cpp:201
+#: ktorrent/view/view.cpp:205
 #, fuzzy
 msgid "Data Directory"
 msgstr "دليل البيانات"
 
-#: ktorrent/view/view.cpp:205
+#: ktorrent/view/view.cpp:209
 #, fuzzy
 msgid "Temporary Directory"
 msgstr "الدليل المؤقت"
 
-#: ktorrent/view/view.cpp:209
+#: ktorrent/view/view.cpp:213
 #, fuzzy
 msgid "Move Data"
 msgstr "حفط البيانات"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, StatsSettingsWgt)
-#: ktorrent/view/view.cpp:213 plugins/stats/Settings.ui:13
+#: ktorrent/view/view.cpp:217 plugins/stats/Settings.ui:13
 #, fuzzy
 msgid "Settings"
 msgstr "البذر"
 
-#: ktorrent/view/view.cpp:217
+#: ktorrent/view/view.cpp:221
 #, fuzzy
 msgid "Remove from Group"
 msgstr "احذف من المجموعة"
 
-#: ktorrent/view/view.cpp:225
+#: ktorrent/view/view.cpp:229
 #, fuzzy
 msgid "Check Data"
 msgstr "كِش البيانات"
 
-#: ktorrent/view/view.cpp:226
+#: ktorrent/view/view.cpp:230
 #, fuzzy
 msgid "Check all the data of a torrent"
 msgstr "جاري المسح البيانات من:"
 
-#: ktorrent/view/view.cpp:248
+#: ktorrent/view/view.cpp:252
 #, fuzzy
 msgid "Copy Torrent URL"
 msgstr "لصق السيل URL"
 
-#: ktorrent/view/view.cpp:252
+#: ktorrent/view/view.cpp:256
 #, fuzzy
 msgid "Export Torrent"
 msgstr "استيراد السيل"
 
-#: ktorrent/view/view.cpp:257
+#: ktorrent/view/view.cpp:261
 msgid "Set the speed limits of individual torrents"
 msgstr ""
 
-#: ktorrent/view/view.cpp:466
+#: ktorrent/view/view.cpp:470
 #, fuzzy, kde-format
 msgid ""
 "The torrent <b>%1</b> has not finished downloading, do you want to delete "
 "the incomplete data, too?"
 msgstr "الـ<b></b> ليس إنتهيت إلى حذف غير كامل البيانات?"
 
-#: ktorrent/view/view.cpp:471
+#: ktorrent/view/view.cpp:475
 #, fuzzy
 msgid "Remove Download"
 msgstr "إزالة التنزيل"
 
-#: ktorrent/view/view.cpp:472
+#: ktorrent/view/view.cpp:476
 #, fuzzy
 msgid "Delete Data"
 msgstr "احذف البيانات"
 
-#: ktorrent/view/view.cpp:473
+#: ktorrent/view/view.cpp:477
 #, fuzzy
 msgid "Keep Data"
 msgstr "حفط البيانات"
 
-#: ktorrent/view/view.cpp:498
+#: ktorrent/view/view.cpp:502
 #, fuzzy
 msgid ""
 "You will lose all the downloaded data of the following torrents. Are you "
 "sure you want to do this?"
 msgstr "سوف تفقد جميع بيانات التنزيل. هل أنت متأكد من فعل ذلك؟"
 
-#: ktorrent/view/view.cpp:499
+#: ktorrent/view/view.cpp:503
 #, fuzzy
 msgid "Remove Torrent"
 msgstr "أحذف السيل"
 
-#: ktorrent/view/view.cpp:595 plugins/infowidget/fileview.cpp:354
+#: ktorrent/view/view.cpp:599 plugins/infowidget/fileview.cpp:354
 #: plugins/infowidget/fileview.cpp:375
 #, fuzzy
 msgid "Select a directory to move the data to."
 msgstr "ملف أو دليل إلى إ_نشئ من:"
 
-#: ktorrent/view/viewmodel.cpp:496 plugins/infowidget/peerviewmodel.cpp:266
+#: ktorrent/view/viewmodel.cpp:535 plugins/infowidget/peerviewmodel.cpp:266
 #: plugins/infowidget/webseedsmodel.cpp:126
 #, fuzzy
 msgid "Downloaded"
 msgstr "منزل"
 
-#: ktorrent/view/viewmodel.cpp:497
+#: ktorrent/view/viewmodel.cpp:537
 #: libktcore/torrent/torrentfilelistmodel.cpp:77
 #: libktcore/torrent/torrentfiletreemodel.cpp:400
 #, fuzzy
 msgid "Size"
 msgstr "الحجم"
 
-#: ktorrent/view/viewmodel.cpp:498 plugins/infowidget/peerviewmodel.cpp:267
+#: ktorrent/view/viewmodel.cpp:539 plugins/infowidget/peerviewmodel.cpp:267
 #, fuzzy
 msgid "Uploaded"
 msgstr "المرسل"
 
-#: ktorrent/view/viewmodel.cpp:499
+#: ktorrent/view/viewmodel.cpp:541
 #, fuzzy
 msgctxt "Bytes left to downloaded"
 msgid "Left"
 msgstr "اليسار:"
 
-#: ktorrent/view/viewmodel.cpp:500
+#: ktorrent/view/viewmodel.cpp:543
 #: plugins/infowidget/chunkdownloadmodel.cpp:200
 #: plugins/infowidget/peerviewmodel.cpp:257
 #, fuzzy
 msgid "Down Speed"
 msgstr "سرعة التنزيل"
 
-#: ktorrent/view/viewmodel.cpp:501 plugins/infowidget/peerviewmodel.cpp:258
+#: ktorrent/view/viewmodel.cpp:545 plugins/infowidget/peerviewmodel.cpp:258
 #, fuzzy
 msgid "Up Speed"
 msgstr "سرعة التحميل"
 
-#: ktorrent/view/viewmodel.cpp:502
+#: ktorrent/view/viewmodel.cpp:547
 #, fuzzy
 msgid "Time Left"
 msgstr "الوقت الباقي"
 
-#: ktorrent/view/viewmodel.cpp:503 plugins/infowidget/trackermodel.cpp:149
+#: ktorrent/view/viewmodel.cpp:549 plugins/infowidget/trackermodel.cpp:149
 #, fuzzy
 msgid "Seeders"
 msgstr "ناثرو البذور"
 
-#: ktorrent/view/viewmodel.cpp:504 plugins/infowidget/trackermodel.cpp:150
+#: ktorrent/view/viewmodel.cpp:551 plugins/infowidget/trackermodel.cpp:150
 msgid "Leechers"
 msgstr ""
 
-#: ktorrent/view/viewmodel.cpp:506
+#: ktorrent/view/viewmodel.cpp:554
 #, fuzzy, no-c-format
 msgid "% Complete"
 msgstr "% منجز"
 
-#: ktorrent/view/viewmodel.cpp:507
+#: ktorrent/view/viewmodel.cpp:556
 #, fuzzy
 msgid "Share Ratio"
 msgstr "مشاركة النسبة"
 
-#: ktorrent/view/viewmodel.cpp:508
+#: ktorrent/view/viewmodel.cpp:558
 #, fuzzy
 msgid "Time Downloaded"
 msgstr "الوقت منزل"
 
-#: ktorrent/view/viewmodel.cpp:509
+#: ktorrent/view/viewmodel.cpp:560
 #, fuzzy
 msgid "Time Seeded"
 msgstr "الوقت مصنّف"
 
-#: ktorrent/view/viewmodel.cpp:510
+#: ktorrent/view/viewmodel.cpp:562
 #, fuzzy
 msgid "Location"
 msgstr "إفتح الموقع"
 
-#: ktorrent/view/viewmodel.cpp:511
+#: ktorrent/view/viewmodel.cpp:564
 #, fuzzy
 msgid "Added"
 msgstr "ناثرو البذور"
 
-#: ktorrent/view/viewmodel.cpp:519
+#: ktorrent/view/viewmodel.cpp:574
 #, fuzzy
 msgid "How much data we have downloaded of the torrent"
 msgstr "هل تريد التنزيل أو الحفظ للسيل؟"
 
-#: ktorrent/view/viewmodel.cpp:520
+#: ktorrent/view/viewmodel.cpp:576
 msgid "Total size of the torrent, excluded files are not included"
 msgstr ""
 
-#: ktorrent/view/viewmodel.cpp:521
+#: ktorrent/view/viewmodel.cpp:578
 msgid "How much data we have uploaded"
 msgstr ""
 
-#: ktorrent/view/viewmodel.cpp:522
+#: ktorrent/view/viewmodel.cpp:580
 #, fuzzy
 msgid "How much data left to download"
 msgstr "هل تريد التنزيل أو الحفظ للسيل؟"
 
-#: ktorrent/view/viewmodel.cpp:523
+#: ktorrent/view/viewmodel.cpp:582
 #, fuzzy
 msgid "Current download speed"
 msgstr "ضبط تنزيلات سرعة"
 
-#: ktorrent/view/viewmodel.cpp:524
+#: ktorrent/view/viewmodel.cpp:584
 #, fuzzy
 msgid "Current upload speed"
 msgstr "السيل ملفات"
 
-#: ktorrent/view/viewmodel.cpp:525
+#: ktorrent/view/viewmodel.cpp:586
 msgid ""
 "How much time is left before the torrent is finished or before the maximum "
 "share ratio is reached, if that is enabled"
 msgstr ""
 
-#: ktorrent/view/viewmodel.cpp:526
+#: ktorrent/view/viewmodel.cpp:588
 msgid ""
 "How many seeders we are connected to (How many seeders there are according "
 "to the tracker)"
 msgstr ""
 
-#: ktorrent/view/viewmodel.cpp:527
+#: ktorrent/view/viewmodel.cpp:590
 msgid ""
 "How many leechers we are connected to (How many leechers there are according "
 "to the tracker)"
 msgstr ""
 
-#: ktorrent/view/viewmodel.cpp:529
-#, no-c-format
+#: ktorrent/view/viewmodel.cpp:593
 msgid ""
 "The percentage of data we have of the whole torrent, not including excluded "
 "files"
 msgstr ""
 
-#: ktorrent/view/viewmodel.cpp:530
+#: ktorrent/view/viewmodel.cpp:595
 msgid ""
 "Share ratio is the number of bytes uploaded divided by the number of bytes "
 "downloaded"
 msgstr ""
 
-#: ktorrent/view/viewmodel.cpp:531
+#: ktorrent/view/viewmodel.cpp:597
 #, fuzzy
 msgid "How long we have been downloading the torrent"
 msgstr "أنت 1"
 
-#: ktorrent/view/viewmodel.cpp:532
+#: ktorrent/view/viewmodel.cpp:599
 msgid "How long we have been seeding the torrent"
 msgstr ""
 
-#: ktorrent/view/viewmodel.cpp:533
+#: ktorrent/view/viewmodel.cpp:601
 msgid "The location of the torrent's data on disk"
 msgstr ""
 
-#: ktorrent/view/viewmodel.cpp:534
+#: ktorrent/view/viewmodel.cpp:603
 #, fuzzy
 msgid "When this torrent was added"
 msgstr "غير محمل"
 
-#: ktorrent/view/viewmodel.cpp:583
+#: ktorrent/view/viewmodel.cpp:653
 #, fuzzy, kde-format
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "جاري المسح البيانات من<b></b>:"
 
-#: ktorrent/view/viewmodel.cpp:589
+#: ktorrent/view/viewmodel.cpp:659
 msgid "<br/><br/>Unable to contact a tracker."
 msgstr ""
 
@@ -5358,8 +5357,8 @@ msgid "Availability"
 msgstr "التوفر"
 
 #. i18n: ectx: property (title), widget (QGroupBox, DhtGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_12)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_5)
+#. i18n: ectx: property (text), widget (QLabel, label_12)
 #: plugins/infowidget/peerviewmodel.cpp:262 plugins/stats/Conns.ui:31
 #: plugins/stats/DisplaySettings.ui:796 plugins/stats/Settings.ui:234
 msgid "DHT"
@@ -5657,7 +5656,7 @@ msgid "Disable All"
 msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
-#: plugins/ipfilter/convertdialog.ui:19 plugins/ipfilter/convertthread.cpp:174
+#: plugins/ipfilter/convertdialog.ui:19 plugins/ipfilter/convertthread.cpp:173
 #, fuzzy
 msgid "Converting..."
 msgstr "تحويل..."
@@ -5674,12 +5673,12 @@ msgstr "تحويل مربع قائمة إلى تنسيق هذا بعض وقت."
 msgid "C&ancel"
 msgstr "إ&لغاء"
 
-#: plugins/ipfilter/convertthread.cpp:72
+#: plugins/ipfilter/convertthread.cpp:71
 #, fuzzy
 msgid "Loading txt file..."
 msgstr "جاري التّحميل نص ملفّ."
 
-#: plugins/ipfilter/convertthread.cpp:156
+#: plugins/ipfilter/convertthread.cpp:155
 #, kde-format
 msgid "There are no IP addresses to convert in %1"
 msgstr ""
@@ -6306,7 +6305,7 @@ msgstr ""
 msgid "Scan directories recursively."
 msgstr ""
 
-#: plugins/scanfolder/scanfolder.cpp:69 plugins/scanfolder/scanthread.cpp:194
+#: plugins/scanfolder/scanfolder.cpp:77 plugins/scanfolder/scanthread.cpp:194
 #: plugins/scanfolder/torrentloadqueue.cpp:166
 #: plugins/scanfolder/torrentloadqueue.cpp:167
 #: plugins/scanfolder/torrentloadqueue.cpp:170
@@ -6667,8 +6666,8 @@ msgstr ""
 msgid "Current search engine"
 msgstr "محرك البحث:"
 
-#. i18n: ectx: label, entry (useDefaultBrowser), group (general)
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_useDefaultBrowser)
+#. i18n: ectx: label, entry (useDefaultBrowser), group (general)
 #: plugins/search/ktsearchplugin.kcfg:15 plugins/search/searchpref.ui:92
 #, fuzzy
 msgid "Use default browser"
@@ -6898,9 +6897,9 @@ msgstr "هل تريد التنزيل أو الحفظ للسيل؟"
 msgid "Download Torrent"
 msgstr "تنزيل السيل"
 
+#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (title), widget (QGroupBox, DlSpdGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (KPushButton, m_download)
 #: plugins/search/searchwidget.cpp:247 plugins/stats/DisplaySettings.ui:37
 #: plugins/stats/Settings.ui:114 plugins/stats/Spd.ui:19
@@ -7073,8 +7072,8 @@ msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ConnsWgt)
 #. i18n: ectx: property (title), widget (QGroupBox, ConnsGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_11)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#. i18n: ectx: property (text), widget (QLabel, label_11)
 #: plugins/stats/Conns.ui:13 plugins/stats/Conns.ui:19
 #: plugins/stats/DisplaySettings.ui:505 plugins/stats/Settings.ui:140
 #, fuzzy
@@ -7187,10 +7186,10 @@ msgstr "المجلّدات"
 msgid "From seeds"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#. i18n: ectx: property (title), widget (QGroupBox, UlSpdGbw)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #. i18n: ectx: property (text), widget (QLabel, label_15)
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#. i18n: ectx: property (title), widget (QGroupBox, UlSpdGbw)
 #: plugins/stats/DisplaySettings.ui:364 plugins/stats/DisplaySettings.ui:374
 #: plugins/stats/Settings.ui:192 plugins/stats/Spd.ui:43
 #, fuzzy

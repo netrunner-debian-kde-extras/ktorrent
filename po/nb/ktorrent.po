@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-14 19:51+0200\n"
-"PO-Revision-Date: 2012-02-13 16:55+0100\n"
+"POT-Creation-Date: 2012-12-19 08:39+0100\n"
+"PO-Revision-Date: 2012-10-16 21:38+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.4\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -33,6 +33,8 @@ msgid ""
 "The Web share for magnet-links is disabled. You can set it up at settings:/"
 "network-and-connectivity/sharing"
 msgstr ""
+"Nettverksdelingen for magnet-lenker er slått av. Du kan sette den opp ved "
+"innstillinger:/nettverk-og-forbindelser/deling"
 
 #: kio-magnet/dbushandler.cpp:120
 msgid ""
@@ -80,6 +82,8 @@ msgid ""
 "File exists in KTorrent, but cannot open it on disk at path\"%1\". Have you "
 "removed the file manually?"
 msgstr ""
+"Fila finnes i KTorrent, men kan ikke åpne den på disk ved stien «%1». Har du "
+"fjernet fila manuelt?"
 
 #: kio-magnet/kio_magnet.cpp:375
 msgid "You cannot write to magnet resources."
@@ -152,6 +156,8 @@ msgid ""
 "KTorrent is unable to accept connections because the TCP port %1 is already "
 "in use by another program."
 msgstr ""
+"KTorrent kan ikke ta i mot tilkoblinger fordi et annet program bruker TCP-"
+"port %1."
 
 #: ktorrent/core.cpp:194
 #, kde-format
@@ -159,8 +165,8 @@ msgid ""
 "KTorrent is unable to accept connections because the UDP port %1 is already "
 "in use by another program."
 msgstr ""
-"KTorrent kan ikke ta i mot tilkoblinger fordi UDP-porten %1 er i bruk av et "
-"annet program."
+"KTorrent kan ikke ta i mot tilkoblinger fordi et annet program bruker UDP-"
+"port %1."
 
 #: ktorrent/core.cpp:307
 #, kde-format
@@ -168,6 +174,9 @@ msgid ""
 "Opening the torrent <b>%1</b>, would share one or more files with the "
 "following torrents. Torrents are not allowed to write to the same files. "
 msgstr ""
+"Hvis torrenten <b>%1</b> åpnes. så vil en eller flere filer deles med "
+"følgende torrenter.  Torrenter har ikke lov til å skrive til de samme "
+"filene. "
 
 #: ktorrent/core.cpp:1026
 msgid "KTorrent is running one or more torrents"
@@ -178,27 +187,29 @@ msgstr "KTorrent kjører en eller flere torrrenter"
 msgid "Cannot create torrent: %1"
 msgstr "Klarte ikke lage torrent: %1"
 
-#: ktorrent/core.cpp:1212
+#: ktorrent/core.cpp:1216
 msgid ""
 "One or more storage volumes are not mounted. In order to start this torrent, "
 "they need to be mounted."
 msgstr ""
+"Ett eller flere lagringsvolumer er ikke montert. De må monteres for at denne "
+"torrenten skal starte."
 
-#: ktorrent/core.cpp:1213
+#: ktorrent/core.cpp:1217
 msgid "Retry"
 msgstr "Prøv igjen"
 
-#: ktorrent/core.cpp:1222
+#: ktorrent/core.cpp:1226
 #, kde-format
 msgid "Storage volume %1 is not mounted"
-msgstr ""
+msgstr "Lagringsvolum %1 er ikke montert"
 
-#: ktorrent/core.cpp:1224
+#: ktorrent/core.cpp:1228
 #, kde-format
 msgid "Storage volumes %1 are not mounted"
-msgstr ""
+msgstr "Lagringsvolumer %1  er ikke montert"
 
-#: ktorrent/core.cpp:1236
+#: ktorrent/core.cpp:1240
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -207,21 +218,21 @@ msgstr ""
 "Flere datafiler i torrenten «%1» mangler. \n"
 "Vil du lage dem på nytt eller la være å laste dem ned?"
 
-#: ktorrent/core.cpp:1245 ktorrent/core.cpp:1256 ktorrent/core.cpp:1269
+#: ktorrent/core.cpp:1249 ktorrent/core.cpp:1260 ktorrent/core.cpp:1273
 msgid "Data files are missing"
 msgstr "Datafiler mangler"
 
-#: ktorrent/core.cpp:1255
+#: ktorrent/core.cpp:1259
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Klarte ikke fravelge manglende filer: %1"
 
-#: ktorrent/core.cpp:1268
+#: ktorrent/core.cpp:1272
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Klarte ikke lage manglende filer på nytt: %1"
 
-#: ktorrent/core.cpp:1279
+#: ktorrent/core.cpp:1283
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing.\n"
@@ -230,16 +241,16 @@ msgstr ""
 "Fila som inneholder data for torrenten «%1» mangler.\n"
 "Vil du bygge den opp igjen?"
 
-#: ktorrent/core.cpp:1286 ktorrent/core.cpp:1296
+#: ktorrent/core.cpp:1290 ktorrent/core.cpp:1300
 msgid "Data file is missing"
 msgstr "Datafil mangler"
 
-#: ktorrent/core.cpp:1295
+#: ktorrent/core.cpp:1299
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Klarte ikke lage datafil på nytt: %1"
 
-#: ktorrent/core.cpp:1383
+#: ktorrent/core.cpp:1387
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -254,16 +265,16 @@ msgstr[1] ""
 "KTorrent har funnet %1 torrenter fra KDE3-versjonen av KTorrent. Vil du "
 "importere dem?"
 
-#: ktorrent/core.cpp:1405
+#: ktorrent/core.cpp:1409
 msgid "No torrents from the KDE3 version were found."
 msgstr "Fant ingen torrenter fra KDE3-versjonen."
 
-#: ktorrent/core.cpp:1444
+#: ktorrent/core.cpp:1448
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr "Ugyldig magnet bittorrent-lenke: %1"
 
-#: ktorrent/core.cpp:1449
+#: ktorrent/core.cpp:1453
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -298,6 +309,10 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Note:</span> We accept both IPv4 and "
 "IPv6 addresses</p>\n"
 msgstr ""
+"<p>Skriv inn her IP-adressen eller vertsnavnet til motparten du vil koble "
+"til.</p> \n"
+"<p><span style=\" font-weight:600;\">Merk:</span> Både IPv4 og IPv6-adresser "
+"godtas</p> \n"
 
 #. i18n: ectx: property (text), widget (QLineEdit, m_ip)
 #. i18n: ectx: property (text), widget (KLineEdit, m_ip_to_add)
@@ -573,8 +588,8 @@ msgstr "Fant ingen eksisterende filer"
 msgid "Options"
 msgstr "Innstillinger"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/fileselectdlg.ui:207 ktorrent/dialogs/pastedlgbase.ui:77
 msgid "Group:"
 msgstr "Gruppe:"
@@ -592,6 +607,10 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Note: </span>only do this when you are "
 "absolutely sure.</p>"
 msgstr ""
+"<p>Når eksisterende filer er funnet, så hopp over datakontrollen og anta at "
+"filene er helt lastet ned.</p> \n"
+"<p><span style=\" font-weight:600;\">Merk:</span> gjør dette bare når du er "
+"fullstendig sikker.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_skip_data_check)
 #: ktorrent/dialogs/fileselectdlg.ui:258
@@ -606,7 +625,7 @@ msgstr "Diskplass"
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: ktorrent/dialogs/fileselectdlg.ui:276
 msgid "Required:"
-msgstr "Påkrevet:"
+msgstr "Nødvendig:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
 #: ktorrent/dialogs/fileselectdlg.ui:286
@@ -623,8 +642,8 @@ msgstr "Etter nedlasting:"
 msgid "Cannot load the torrent file: %1"
 msgstr "Klarte ikke laste inn torrentfila: %1"
 
-#: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:67
-#: plugins/ipfilter/convertthread.cpp:167
+#: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:66
+#: plugins/ipfilter/convertthread.cpp:166
 #: plugins/search/searchenginelist.cpp:192
 #, kde-format
 msgid "Cannot open %1: %2"
@@ -707,7 +726,7 @@ msgstr "Følgende filer mangler:"
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_recreate)
 #: ktorrent/dialogs/missingfilesdlg.ui:34
 msgid "They are no longer there, recreate them."
-msgstr ""
+msgstr "De er ikke her lenger, opprett dem på nytt."
 
 #. i18n: ectx: property (text), widget (KPushButton, m_recreate)
 #: ktorrent/dialogs/missingfilesdlg.ui:37
@@ -717,7 +736,7 @@ msgstr "Lag på nytt"
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_dnd)
 #: ktorrent/dialogs/missingfilesdlg.ui:44
 msgid "Do not download the missing files."
-msgstr ""
+msgstr "Ikke last ned de manglende filene."
 
 #. i18n: ectx: property (text), widget (KPushButton, m_dnd)
 #: ktorrent/dialogs/missingfilesdlg.ui:47 plugins/infowidget/fileview.cpp:123
@@ -727,7 +746,7 @@ msgstr "Ikke last ned"
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_select_new)
 #: ktorrent/dialogs/missingfilesdlg.ui:54
 msgid "The files have been moved to another location, select the new location."
-msgstr ""
+msgstr "Filene er flyttet til et annet sted, velg det nye stedet."
 
 #. i18n: ectx: property (text), widget (KPushButton, m_select_new)
 #: ktorrent/dialogs/missingfilesdlg.ui:57
@@ -737,7 +756,7 @@ msgstr "Velg ny plassering"
 #. i18n: ectx: property (toolTip), widget (KPushButton, m_cancel)
 #: ktorrent/dialogs/missingfilesdlg.ui:77
 msgid "Cancel, do not start the torrent."
-msgstr ""
+msgstr "Avbryt, ikke start torrenten."
 
 #. i18n: ectx: property (text), widget (KPushButton, m_cancel)
 #. i18n: ectx: property (text), widget (KPushButton, cancel_button)
@@ -771,7 +790,7 @@ msgstr "Åpne stille"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpeedLimitsDlg)
 #: ktorrent/dialogs/speedlimitsdlg.cpp:50
-#: ktorrent/dialogs/speedlimitsdlg.ui:14 ktorrent/view/view.cpp:256
+#: ktorrent/dialogs/speedlimitsdlg.ui:14 ktorrent/view/view.cpp:260
 msgid "Speed Limits"
 msgstr "Fartsgrenser"
 
@@ -791,8 +810,8 @@ msgid "Global Limits"
 msgstr "Globale grenser"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
+#. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ktorrent/dialogs/speedlimitsdlg.ui:70 ktorrent/pref/networkpref.ui:111
 #: ktorrent/pref/recommendedsettingsdlg.ui:221
 #: plugins/bwscheduler/bwprefpage.ui:65
@@ -850,9 +869,9 @@ msgstr "Ingen grense"
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_upload_rate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_max_download_rate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_max_upload_rate)
-#. i18n: ectx: property (suffix), widget (QSpinBox, m_avg_speed_slot)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxDownloadRate)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_maxUploadRate)
+#. i18n: ectx: property (suffix), widget (QSpinBox, m_avg_speed_slot)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverUploadLimit)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_screensaverDownloadLimit)
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_download_limit)
@@ -874,8 +893,8 @@ msgid " KiB/s"
 msgstr " KiB/s"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/dialogs/speedlimitsdlg.ui:93 ktorrent/pref/networkpref.ui:134
 #: ktorrent/pref/recommendedsettingsdlg.ui:207
@@ -1147,12 +1166,15 @@ msgid ""
 "location in the dialog will be set to this. You can still override it, if "
 "you want to."
 msgstr ""
+"Standard lagringssted for torrenter fra denne gruppa.<br/> <br/> Dette "
+"brukes bare i filvelgerdialogen, når du endrer gruppe, blir dette satt som "
+"lagringssted for gruppa.  Du kan likevel overstyre det, hvis du vil."
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_default_location_enabled)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useSaveDir)
 #: ktorrent/groups/grouppolicydlg.ui:26 ktorrent/pref/generalpref.ui:40
 msgid "Default save location:"
-msgstr "Standard lagringsmappe:"
+msgstr "Standard lagringssted:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_default_move_on_completion_enabled)
 #: ktorrent/groups/grouppolicydlg.ui:40
@@ -1167,11 +1189,15 @@ msgid ""
 "the move when completed location in the dialog will be set to this. You can "
 "still override it, if you want to."
 msgstr ""
+"Standard sted dit torrenter fra denne gruppa flyttes ved fullføring.<br/> "
+"<br/> Dette brukes bare i filvelgerdialogen, når du endrer gruppe, blir "
+"dette satt som fullføringssted for gruppa.  Du kan likevel overstyre det, "
+"hvis du vil."
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox)
 #: ktorrent/groups/grouppolicydlg.ui:54
 msgid "Default settings for torrents which are added to the group."
-msgstr ""
+msgstr "Standard innstillinger for torrenter som legges til denne gruppa."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: ktorrent/groups/grouppolicydlg.ui:57
@@ -1213,12 +1239,17 @@ msgid ""
 "If this is not enabled, the settings will always be applied when you add a "
 "torrent to this group. "
 msgstr ""
+"Når dette er slått på blir disse innstillingene bare brukt når en torrent "
+"legges til gruppa i filvelgerdialogen eller dialogen for å opprette "
+"torrenter. <p>\n"
+"Hvis dette ikke er slått på blir innstillingene alltid brukt når en torrent "
+"legges til gruppa. "
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_only_new)
 #: ktorrent/groups/grouppolicydlg.ui:154
 msgid "Apply settings only for newly opened or created torrents"
 msgstr ""
-"Bruk innstillinger bare for torrenter som nettop er åpnet eller opprettet"
+"Bruk innstillinger bare for torrenter som nettopp er åpnet eller opprettet"
 
 #: ktorrent/groups/groupswitcher.cpp:58
 msgid "Open a new tab"
@@ -1230,36 +1261,36 @@ msgstr "Lukk gjeldende fane"
 
 #: ktorrent/groups/groupswitcher.cpp:68
 msgid "Edit Group Policy"
-msgstr ""
+msgstr "Rediger gruppepraksis"
 
-#: ktorrent/groups/groupview.cpp:81
+#: ktorrent/groups/groupview.cpp:80
 msgid "Open In New Tab"
-msgstr ""
+msgstr "Åpne i en ny fane"
 
-#: ktorrent/groups/groupview.cpp:85 ktorrent/view/view.cpp:221
+#: ktorrent/groups/groupview.cpp:84 ktorrent/view/view.cpp:225
 msgid "New Group"
 msgstr "Ny gruppe"
 
-#: ktorrent/groups/groupview.cpp:89
+#: ktorrent/groups/groupview.cpp:88
 msgid "Edit Name"
 msgstr "Endre navn"
 
-#: ktorrent/groups/groupview.cpp:93
+#: ktorrent/groups/groupview.cpp:92
 msgid "Remove Group"
 msgstr "Fjern gruppe"
 
-#: ktorrent/groups/groupview.cpp:97
+#: ktorrent/groups/groupview.cpp:96
 msgid "Group Policy"
-msgstr "Regler for grupper"
+msgstr "Gruppepraksis"
 
-#: ktorrent/groups/groupview.cpp:110
+#: ktorrent/groups/groupview.cpp:109
 msgid "Please enter the group name."
 msgstr "Skriv inn gruppenavnet."
 
-#: ktorrent/groups/groupview.cpp:117
+#: ktorrent/groups/groupview.cpp:116
 #, kde-format
 msgid "The group %1 already exists."
-msgstr "Gruppen «%1» finnes fra før."
+msgstr "Gruppa «%1» finnes fra før."
 
 #: ktorrent/groups/groupviewmodel.cpp:44
 msgid "Custom Groups"
@@ -1294,8 +1325,8 @@ msgid "Open a URL which points to a torrent, magnet links are supported"
 msgstr "Åpne en URL som peker til en torrent, magnet-lenker er støttet"
 
 #: ktorrent/gui.cpp:440 plugins/ipfilter/ipblockingprefpage.cpp:35
-#: plugins/ipfilter/ipfilterplugin.cpp:62
-#: plugins/ipfilter/ipfilterplugin.cpp:75
+#: plugins/ipfilter/ipfilterplugin.cpp:60
+#: plugins/ipfilter/ipfilterplugin.cpp:73
 msgid "IP Filter"
 msgstr "IP-filter"
 
@@ -1424,12 +1455,12 @@ msgid "Advanced"
 msgstr "Avansert"
 
 #. i18n: ectx: Menu (OpenDirMenu)
-#: ktorrent/kttorrentactivityui.rc:62 ktorrent/view/view.cpp:242
+#: ktorrent/kttorrentactivityui.rc:62 ktorrent/view/view.cpp:246
 msgid "Open Directory"
 msgstr "Åpne mappe"
 
 #. i18n: ectx: Menu (GroupsSubMenu)
-#: ktorrent/kttorrentactivityui.rc:68 ktorrent/view/view.cpp:245
+#: ktorrent/kttorrentactivityui.rc:68 ktorrent/view/view.cpp:249
 msgid "Add to Group"
 msgstr "Legg til gruppe"
 
@@ -1852,6 +1883,9 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Note: </span>Increasing this will "
 "decrease CPU usage.</p>"
 msgstr ""
+"<p>Intervallet i millisekunder mellom oppfrisking av GUI-et.</p> \n"
+"<p><span style=\" font-weight:600;\">Merk:</span> CPU-lasten blir mindre når "
+"intervallet blir større.</p>"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_guiUpdateInterval)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_cpuUsage)
@@ -1876,6 +1910,15 @@ msgid ""
 "might not actually reach this speed when this value is too high. Without a "
 "limit you can easily get above 3000 KiB/s on a LAN.</p>"
 msgstr ""
+"<p>Hvor lenge nettverkstråder vil sove når de har hastighetsbegrensning. "
+"Dette har ingen virkning i det hele tatt når det ikke er noen "
+"hastighetsgrenser.</p> \n"
+"<p><span style=\" font-weight:600;\">Merk:</span> Lavere verdi her gir mer "
+"CPU-last. Om den settes for høyt kan hastigheten bli lavere i situasjoner "
+"der det er stor båndbredde.</p> \n"
+"<p>På et 100Mbit LAN, for eksempel. hvis hastigheten er begrenset til 3000 "
+"KiB/s, så kan du kanskje ikke oppnå denne hastigheten hvis denne verdien er "
+"satt for høyt. Uten grense kan du lett komme over 3000 KiB/s på et LAN.</p>"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
@@ -1903,6 +1946,17 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Moving average:</span>  Moving average "
 "of the last 20 samples</p>"
 msgstr ""
+"<p>Velg hvilken algoritme som brukes til å anslå gjenstående tid:</p>\n"
+"<p><span style=\" font-weight:600;\">KTorrent:</span> Miks av andre "
+"algoritmer, vi bruker den som passer best i denne situasjonen.</p>\n"
+"<p><span style=\" font-weight:600;\">Nåværende fart:</span> Byte igjen å "
+"laste ned / nåværende fart</p>\n"
+"<p><span style=\" font-weight:600;\">Gjennomsnitsfart: </span>Byte igjen å "
+"laste ned / gjennomsnittsfart</p>\n"
+"<p><span style=\" font-weight:600;\">N-gjennomsnitt:</span> Gjennomsnitt av "
+"de siste N bitene (N = 20)</p>\n"
+"<p><span style=\" font-weight:600;\">Bevegelig gjennomsnitt:</span> "
+"Bevegelig gjennomsnitt av de siste 20 bitene</p>"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
 #: ktorrent/pref/advancedpref.ui:163 plugins/stats/SpdTabPage.cc:67
@@ -1924,7 +1978,7 @@ msgstr "N-gjennomsnitt"
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
 #: ktorrent/pref/advancedpref.ui:178
 msgid "Moving average"
-msgstr "Oppdatert gjennomsnitt"
+msgstr "Bevegelig gjennomsnitt"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ktorrent/pref/advancedpref.ui:186
@@ -1937,6 +1991,8 @@ msgid ""
 "<p>The amount of data at the beginning and end of an audio file, which will "
 "be prioritized for previewing.</p>"
 msgstr ""
+"<p>Hvor mye data i begynnelsen og slutten av en lydfil som blir prioritert "
+"for forhåndsvisning.</p>"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeAudio)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeVideo)
@@ -1955,6 +2011,8 @@ msgid ""
 "<p>The amount of data at the beginning and end of a video file, which will "
 "be prioritized for previewing.</p>"
 msgstr ""
+"<p>Hvor mye data i begynnelsen og slutten av en videofil som blir prioritert "
+"for forhåndsvisning.</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useQHttpAnnounce)
 #: ktorrent/pref/advancedpref.ui:251
@@ -2030,6 +2088,10 @@ msgid ""
 "router, this port needs to be forwarded to accept incoming DHT requests. The "
 "UPnP plugin can do this for you.</p>"
 msgstr ""
+"<p>UDP-port som skal brukes for DHT-protokollen,</p> \n"
+"<p><span style=\" font-weight:600;\">OBS:</span> Hvis du er bak en ruter, må "
+"denne porten videresendes til å ta imot innkommende DHT-forespørsler. "
+"Programtillegget for UPnP kan gjøre det for deg.</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_pexEnabled)
 #: ktorrent/pref/btpref.ui:61
@@ -2076,6 +2138,10 @@ msgid ""
 "<p>The encryption will prevent your bittorrent traffic to be flagged as "
 "bittorrent traffic, and so the ISP will not slow it down.</p>"
 msgstr ""
+"<p>Protokollkryptering er nyttig når din ISP bremser ned bittorrent-"
+"forbindelser. </p> \n"
+" <p>Krypteringen gjør at bittorrent-trafikken ikke merkes som bittorrent-"
+"trafikk, så ISP-en ikke bremser den ned.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useEncryption)
 #. i18n: ectx: label, entry (useEncryption), group (downloads)
@@ -2213,27 +2279,28 @@ msgid ""
 "When you select multiple torrents to be opened at the same time, open them "
 "silently."
 msgstr ""
+"Når du velger flere torrenter som skal åpnes samtidig, så åpne dem taust."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openMultipleTorrentsSilently)
 #: ktorrent/pref/generalpref.ui:129
 msgid "Open multiple torrents silently"
-msgstr "Åpne flere torrenter stille"
+msgstr "Åpne flere torrenter taust"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openAllTorrentsSilently)
 #: ktorrent/pref/generalpref.ui:136
 msgid "Open all torrents silently."
-msgstr ""
+msgstr "Åpne alle torrenter taust"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_openAllTorrentsSilently)
 #: ktorrent/pref/generalpref.ui:139
 msgid "Open all torrents silently"
-msgstr "Åpne alle torrenter stille"
+msgstr "Åpne alle torrenter taust"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_suppressSleep)
 #: ktorrent/pref/generalpref.ui:146
 msgid ""
 "Prevent computer from going into a sleep state when torrents are running."
-msgstr ""
+msgstr "Forhindre at maskinen går i dvalemodus mens torrenter kjører"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_suppressSleep)
 #: ktorrent/pref/generalpref.ui:149
@@ -2248,6 +2315,11 @@ msgid ""
 "desktop.iso</span>, the torrent will be displayed as <span style=\" font-"
 "weight:600;\">linux-desktop.</span></p>"
 msgstr ""
+"<p>Bytt navn på en torrent med bare én fil til navnet på den eneste fila.</"
+"p> \n"
+"<p>Hvis fila for eksempel heter <span style=\" font-weight:600;\">linux-"
+"desktop.iso</span> så blir torrenten vist som <span style=\" font-weight:600;"
+"\">linux-desktop</span></p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_autoRenameSingleFileTorrents)
 #: ktorrent/pref/generalpref.ui:160
@@ -2277,6 +2349,10 @@ msgid ""
 "router, this port needs to be forwarded to accept incoming connections. The "
 "UPnP plugin can do this for you.</p>"
 msgstr ""
+"<p>Port som skal brukes for bittorrent-protokollen,</p> \n"
+"<p><span style=\" font-weight:600;\">OBS:</span> Hvis du er bak en ruter, må "
+"denne porten videresendes til å ta imot innkommende forespørsler. "
+"Programtillegget for UPnP kan gjøre det for deg.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ktorrent/pref/networkpref.ui:47
@@ -2291,9 +2367,13 @@ msgid ""
 "router, this port needs to be forwarded. The UPnP plugin can do this for you."
 "</p>"
 msgstr ""
+"<p>Port som skal brukes for UDP sporer-protokollen,</p> \n"
+"<p><span style=\" font-weight:600;\">OBS:</span> Hvis du er bak en ruter, må "
+"denne porten videresendes. Programtillegget for UPnP kan gjøre det for deg.</"
+"p>"
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
 #: ktorrent/pref/networkpref.ui:71 ktorrent/pref/recommendedsettingsdlg.ui:235
 #: plugins/bwscheduler/edititemdlg.ui:229
 msgid "Maximum connections per torrent:"
@@ -2304,8 +2384,8 @@ msgstr "Høyeste antall forbindelser per torrent:"
 msgid "The maximum number of connections allowed per torrent."
 msgstr "Høyeste antall forbindelser tillatt per torrent."
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_4)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ktorrent/pref/networkpref.ui:91 ktorrent/pref/recommendedsettingsdlg.ui:249
 #: plugins/bwscheduler/edititemdlg.ui:246
@@ -2354,6 +2434,10 @@ msgid ""
 "<p>If you are having trouble with ktorrent blocking other internet traffic, "
 "try setting this number a bit lower.</p>"
 msgstr ""
+"<p>Største antall utgående tilkoblinger som ktorrent fil forsøke å sette opp "
+"samtidig.</p> \n"
+"<p>Hvis du har vansker med at ktorrent blokkerer annen Internet-trafikk, så "
+"forsøk å sette dette tallet litt lavere.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: ktorrent/pref/networkpref.ui:213
@@ -2367,6 +2451,10 @@ msgid ""
 "<p><span style=\"font-weight:600;\">Note: </span>Requires a restart to take "
 "effect.</p>"
 msgstr ""
+"<p>Hvilket nettverksgrensesnitt skal det lyttes på etter innkommende "
+"tilkoblinger.</p> \n"
+"<p><span style=\"font-weight:600;\">Merk:</span>Krever omstart for å få "
+"virkning.</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_utpEnabled)
 #: ktorrent/pref/networkpref.ui:252
@@ -2448,6 +2536,7 @@ msgstr "HTTP"
 #: ktorrent/pref/proxypref.ui:23
 msgid "<p>Use the HTTP proxy settings configured in the settings of KDE.</p>"
 msgstr ""
+"<p>Bruk HTTP mellomtjeneroppsettet som er satt i KDE-innstillingene.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useKDEProxySettings)
 #: ktorrent/pref/proxypref.ui:26
@@ -2487,6 +2576,9 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Whether or not to use the "
 "HTTP proxy for tracker connections.</p>"
 msgstr ""
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Om HTTP-mellomtjeneren "
+"skal brukes for sporertilkoblinger.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxyForTracker)
 #: ktorrent/pref/proxypref.ui:87
@@ -2505,6 +2597,9 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Note: </span>This is not used for "
 "tracker connections</p>"
 msgstr ""
+"<p>Bruk en SOCKS mellomtjener for bittorrent-tilkoblinger.</p> \n"
+"<p><span style=\" font-weight:600;\">Merk:</span> Dette brukes ikke for "
+"sporertilkoblinger.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_socksEnabled)
 #: ktorrent/pref/proxypref.ui:107
@@ -2519,12 +2614,12 @@ msgstr "Tjener:"
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_socksProxy)
 #: ktorrent/pref/proxypref.ui:123
 msgid "<p>IP address or hostname of the SOCKS server</p>"
-msgstr ""
+msgstr "<p>IP-adressen eller vertsnavnet til HTTP-mellomtjeneren</p>"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_socksPort)
 #: ktorrent/pref/proxypref.ui:137
 msgid "Port used by the SOCKS server"
-msgstr ""
+msgstr "Portnummeret til SOCKS-mellomtjeneren."
 
 #. i18n: ectx: property (text), widget (QLabel, label_13)
 #: ktorrent/pref/proxypref.ui:144
@@ -2556,7 +2651,7 @@ msgstr "Brukernavn:"
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_socksUsername)
 #: ktorrent/pref/proxypref.ui:177
 msgid "Username for the SOCKS proxy server."
-msgstr ""
+msgstr "Brukernavn for SOCKS-mellomtjeneren."
 
 #. i18n: ectx: property (text), widget (QLabel, label_14)
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -2570,10 +2665,10 @@ msgstr "Passord:"
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_socksPassword)
 #: ktorrent/pref/proxypref.ui:191
 msgid "Password for the SOCKS proxy server."
-msgstr ""
+msgstr "Passord til SOCKS-mellomtjeneren."
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: property (title), widget (QGroupBox, m_qm_group_box)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: ktorrent/pref/qmpref.cpp:25 ktorrent/pref/qmpref.ui:27
 #: ktorrent/pref/recommendedsettingsdlg.ui:266 ktorrent/torrentactivity.cpp:100
 msgid "Queue Manager"
@@ -2599,8 +2694,8 @@ msgstr ""
 msgid "Control torrents manually"
 msgstr "Styr torrenter manuelt"
 
-#. i18n: ectx: property (text), widget (QLabel, label_14)
 #. i18n: ectx: property (text), widget (QLabel, label_11)
+#. i18n: ectx: property (text), widget (QLabel, label_14)
 #: ktorrent/pref/qmpref.ui:35 ktorrent/pref/recommendedsettingsdlg.ui:288
 msgid "Maximum downloads:"
 msgstr "Høyeste antall nedlastinger:"
@@ -2611,8 +2706,8 @@ msgid ""
 "The maximum number of simultaneous downloads the queue manager will run."
 msgstr "Høyeste antall nedlastinger købehandleren skal kjøre samtidig."
 
-#. i18n: ectx: property (text), widget (QLabel, label_17)
 #. i18n: ectx: property (text), widget (QLabel, label_10)
+#. i18n: ectx: property (text), widget (QLabel, label_17)
 #: ktorrent/pref/qmpref.ui:55 ktorrent/pref/recommendedsettingsdlg.ui:302
 msgid "Maximum seeds:"
 msgstr "Høyeste antall delinger:"
@@ -2676,6 +2771,10 @@ msgid ""
 "<p>This will allow the queue manager to run other torrents, when a torrent "
 "is doing nothing.</p>"
 msgstr ""
+"<p>Når dette er slått på vil købehandleren minske prioriteten til en torrent "
+"som har stoppet opp for lenge.</p> \n"
+"<p>Dette vil tillate købehandleren å kjøre andre torrenter, når en torrent "
+"gjør ingenting.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_decreasePriorityOfStalledTorrents)
 #: ktorrent/pref/qmpref.ui:136
@@ -2693,6 +2792,8 @@ msgid ""
 "<p>Time used for the stall timer. When a torrent is stalled longer than "
 "this, its priority will be decreased.</p>"
 msgstr ""
+"<p>Tid brukt for stoppetidsmåling. Når en torrent er stoppet opp lenger enn "
+"dette får den mindre prioritet.</p>"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: ktorrent/pref/qmpref.ui:186
@@ -2714,8 +2815,8 @@ msgstr ""
 msgid "Keep seeding after download is finished"
 msgstr "Fortsett å dele etter at nedlasting er ferdig"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ktorrent/pref/qmpref.ui:202 ktorrent/pref/recommendedsettingsdlg.ui:274
 msgid "Number of upload slots:"
 msgstr "Antall opplastingsplasser:"
@@ -2743,6 +2844,11 @@ msgid ""
 "<p><span style=\" font-weight:600;\">Attention: </span>This is not used when "
 "downloading, only when seeding.</p>"
 msgstr ""
+"<p>Største delingsforhold. Hvis denne verdien blir nådd blir deling stoppet. "
+"Dette gjelder mare nyåpnede torrenter, eksisterende torrenter blir ikke "
+"påvirket om dette endres.</p> \n"
+"<p><span style=\" font-weight:600;\">OBS:</span> Dette brukes ikke ved "
+"nedlasting, bare bed deling.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: ktorrent/pref/qmpref.ui:249
@@ -2871,20 +2977,20 @@ msgstr "DHT: av"
 #, kde-format
 msgid "%1 node"
 msgid_plural "%1 nodes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 node"
+msgstr[1] "%1 noder"
 
 #: ktorrent/statusbar.cpp:95
 #, kde-format
 msgid "%1 task"
 msgid_plural "%1 tasks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 oppgave"
+msgstr[1] "%1 oppgaver"
 
 #: ktorrent/statusbar.cpp:95
 #, kde-format
 msgid "DHT: %1, %2"
-msgstr ""
+msgstr "DHT: %1, %2"
 
 #: ktorrent/tools/magnetmodel.cpp:134
 msgid "Magnet Link"
@@ -2896,9 +3002,9 @@ msgstr "Magnet-lenke"
 msgid "Status"
 msgstr "Status"
 
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (title), widget (QGroupBox, PeersSpdGbw)
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: ktorrent/tools/magnetmodel.cpp:136
 #: plugins/infowidget/infowidgetplugin.cpp:222
 #: plugins/stats/DisplaySettings.ui:165 plugins/stats/Settings.ui:166
@@ -2930,7 +3036,7 @@ msgstr "Fjern Magnet"
 msgid "Order"
 msgstr "Rekkefølge"
 
-#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:495
+#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:533
 #: plugins/downloadorder/downloadorderdialog.cpp:80
 msgid "Name"
 msgstr "Navn"
@@ -3267,6 +3373,18 @@ msgid ""
 "fully been established. Once there are multiple active seeders, this mode "
 "becomes useless.</p>"
 msgstr ""
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Superdelemodus er en "
+"spesiell delemodus som gir mye større effektivitet for kilden. Dette gjør at "
+"det brukes mindre nettkapasitet til å spre en torrent.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Merk: </span>Dette bør bare brukes når svermen ikke er helt "
+"etablert. Når det er flere aktive delere blir denne kjøremåten helt unyttig."
+"</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, superseeding)
 #: ktorrent/view/propertiesdlg.ui:48
@@ -3306,6 +3424,9 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "were not downloaded but have been found anyway.</p>"
 msgstr ""
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Antall blokker som ikke er "
+"lastet ned, men er blitt funnet likevel.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, chunks_found)
 #. i18n: ectx: property (text), widget (QLabel, chunks_failed)
@@ -3328,6 +3449,9 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "have been downloaded, and which are not OK.</p>"
 msgstr ""
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Antall blokker som har "
+"blitt lastet ned, men som ikke er i orden.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ktorrent/view/scanextender.ui:108
@@ -3341,6 +3465,9 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "have not been downloaded.</p>"
 msgstr ""
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Antall blokker som ikke er "
+"lastet ned.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
@@ -3355,6 +3482,9 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The number of chunks which "
 "have been downloaded, and which are OK.</p>"
 msgstr ""
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Antall blokker som er "
+"lastet ned, og som er OK.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, error_msg)
 #: ktorrent/view/scanextender.ui:230
@@ -3365,135 +3495,135 @@ msgstr "Feil: "
 msgid "Torrent filter"
 msgstr "Torrentfilter"
 
-#: ktorrent/view/view.cpp:135
+#: ktorrent/view/view.cpp:139
 msgctxt "@action Start all selected torrents in the current tab"
 msgid "Start"
 msgstr "Start"
 
-#: ktorrent/view/view.cpp:136
+#: ktorrent/view/view.cpp:140
 msgid "Start all selected torrents in the current tab"
 msgstr "Start alle markerte torrenter i gjeldende fane"
 
-#: ktorrent/view/view.cpp:141
+#: ktorrent/view/view.cpp:145
 msgctxt "@action Force start all selected torrents in the current tab"
 msgid "Force Start"
 msgstr "Tving start"
 
-#: ktorrent/view/view.cpp:142
+#: ktorrent/view/view.cpp:146
 msgid "Force start all selected torrents in the current tab"
 msgstr "Tvangsstart alle markerte torrenter i gjeldende fane"
 
-#: ktorrent/view/view.cpp:146
+#: ktorrent/view/view.cpp:150
 msgctxt "@action Stop all selected torrents in the current tab"
 msgid "Stop"
 msgstr "Stopp"
 
-#: ktorrent/view/view.cpp:147
+#: ktorrent/view/view.cpp:151
 msgid "Stop all selected torrents in the current tab"
 msgstr "Stopp alle markerte torrenter i gjeldende fane"
 
-#: ktorrent/view/view.cpp:152
+#: ktorrent/view/view.cpp:156
 msgctxt "@action Pause all selected torrents in the current tab"
 msgid "Pause"
 msgstr "Pause"
 
-#: ktorrent/view/view.cpp:153
+#: ktorrent/view/view.cpp:157
 msgid "Pause all selected torrents in the current tab"
 msgstr "Pause alle markerte torrenter i gjeldende fane"
 
-#: ktorrent/view/view.cpp:157
+#: ktorrent/view/view.cpp:161
 msgctxt "@action Remove all selected torrents in the current tab"
 msgid "Remove"
 msgstr "Fjern"
 
-#: ktorrent/view/view.cpp:158
+#: ktorrent/view/view.cpp:162
 msgid "Remove all selected torrents in the current tab"
 msgstr "Fjern alle markerte torrenter i gjeldende fane"
 
-#: ktorrent/view/view.cpp:163
+#: ktorrent/view/view.cpp:167
 msgctxt "@action Start all torrents in the current tab"
 msgid "Start All"
 msgstr "Start alle"
 
-#: ktorrent/view/view.cpp:164
+#: ktorrent/view/view.cpp:168
 msgid "Start all torrents in the current tab"
 msgstr "Start alle torrenter i gjeldende fane"
 
-#: ktorrent/view/view.cpp:169
+#: ktorrent/view/view.cpp:173
 msgctxt "@action Stop all torrents in the current tab"
 msgid "Stop All"
 msgstr "Stopp alle"
 
-#: ktorrent/view/view.cpp:170
+#: ktorrent/view/view.cpp:174
 msgid "Stop all torrents in the current tab"
 msgstr "Stopp alle torrenter i gjeldende fane"
 
-#: ktorrent/view/view.cpp:175
+#: ktorrent/view/view.cpp:179
 msgid "Remove Torrent and Data"
 msgstr "Fjern torrent og data"
 
-#: ktorrent/view/view.cpp:180
+#: ktorrent/view/view.cpp:184
 msgid "Rename Torrent"
 msgstr "Endre navn på torrent"
 
-#: ktorrent/view/view.cpp:184
+#: ktorrent/view/view.cpp:188
 msgid "Add Peers"
 msgstr "Legg til deltakere"
 
-#: ktorrent/view/view.cpp:188
+#: ktorrent/view/view.cpp:192
 msgid "Manual Announce"
 msgstr "Manuell annonsering"
 
-#: ktorrent/view/view.cpp:193
+#: ktorrent/view/view.cpp:197
 msgid "Scrape"
 msgstr "Hent status"
 
-#: ktorrent/view/view.cpp:197
+#: ktorrent/view/view.cpp:201
 msgid "Preview"
 msgstr "Forhåndsvisning"
 
-#: ktorrent/view/view.cpp:201
+#: ktorrent/view/view.cpp:205
 msgid "Data Directory"
 msgstr "Datamappe"
 
-#: ktorrent/view/view.cpp:205
+#: ktorrent/view/view.cpp:209
 msgid "Temporary Directory"
 msgstr "Midlertidig mappe"
 
-#: ktorrent/view/view.cpp:209
+#: ktorrent/view/view.cpp:213
 msgid "Move Data"
 msgstr "Flytt data"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, StatsSettingsWgt)
-#: ktorrent/view/view.cpp:213 plugins/stats/Settings.ui:13
+#: ktorrent/view/view.cpp:217 plugins/stats/Settings.ui:13
 msgid "Settings"
 msgstr "Innstillinger"
 
-#: ktorrent/view/view.cpp:217
+#: ktorrent/view/view.cpp:221
 msgid "Remove from Group"
 msgstr "Fjern fra gruppe"
 
-#: ktorrent/view/view.cpp:225
+#: ktorrent/view/view.cpp:229
 msgid "Check Data"
 msgstr "Kontroller data"
 
-#: ktorrent/view/view.cpp:226
+#: ktorrent/view/view.cpp:230
 msgid "Check all the data of a torrent"
 msgstr "Kontroller alle data i en torrent"
 
-#: ktorrent/view/view.cpp:248
+#: ktorrent/view/view.cpp:252
 msgid "Copy Torrent URL"
 msgstr "Kopier torrent-URL"
 
-#: ktorrent/view/view.cpp:252
+#: ktorrent/view/view.cpp:256
 msgid "Export Torrent"
 msgstr "Eksporter torrent"
 
-#: ktorrent/view/view.cpp:257
+#: ktorrent/view/view.cpp:261
 msgid "Set the speed limits of individual torrents"
 msgstr "Sett fartsgrenser for enkelttorrenter"
 
-#: ktorrent/view/view.cpp:466
+#: ktorrent/view/view.cpp:470
 #, kde-format
 msgid ""
 "The torrent <b>%1</b> has not finished downloading, do you want to delete "
@@ -3502,19 +3632,19 @@ msgstr ""
 "Torrrenten <b>%1</b> er ikke ferdig lastet ned; vil du slette de uferdige "
 "dataene også?"
 
-#: ktorrent/view/view.cpp:471
+#: ktorrent/view/view.cpp:475
 msgid "Remove Download"
 msgstr "Fjern nedlasting"
 
-#: ktorrent/view/view.cpp:472
+#: ktorrent/view/view.cpp:476
 msgid "Delete Data"
 msgstr "Fjern data"
 
-#: ktorrent/view/view.cpp:473
+#: ktorrent/view/view.cpp:477
 msgid "Keep Data"
 msgstr "Behold data"
 
-#: ktorrent/view/view.cpp:498
+#: ktorrent/view/view.cpp:502
 msgid ""
 "You will lose all the downloaded data of the following torrents. Are you "
 "sure you want to do this?"
@@ -3522,107 +3652,107 @@ msgstr ""
 "Du vil miste alle data du har lastet ned fra følgende torrenter. Er du "
 "sikker på at du vil gjøre dette?"
 
-#: ktorrent/view/view.cpp:499
+#: ktorrent/view/view.cpp:503
 msgid "Remove Torrent"
 msgstr "Fjern torrent"
 
-#: ktorrent/view/view.cpp:595 plugins/infowidget/fileview.cpp:354
+#: ktorrent/view/view.cpp:599 plugins/infowidget/fileview.cpp:354
 #: plugins/infowidget/fileview.cpp:375
 msgid "Select a directory to move the data to."
 msgstr "Velg en mappe som data kan flyttes til."
 
-#: ktorrent/view/viewmodel.cpp:496 plugins/infowidget/peerviewmodel.cpp:266
+#: ktorrent/view/viewmodel.cpp:535 plugins/infowidget/peerviewmodel.cpp:266
 #: plugins/infowidget/webseedsmodel.cpp:126
 msgid "Downloaded"
 msgstr "Lastet ned"
 
-#: ktorrent/view/viewmodel.cpp:497
+#: ktorrent/view/viewmodel.cpp:537
 #: libktcore/torrent/torrentfilelistmodel.cpp:77
 #: libktcore/torrent/torrentfiletreemodel.cpp:400
 msgid "Size"
 msgstr "Størrelse"
 
-#: ktorrent/view/viewmodel.cpp:498 plugins/infowidget/peerviewmodel.cpp:267
+#: ktorrent/view/viewmodel.cpp:539 plugins/infowidget/peerviewmodel.cpp:267
 msgid "Uploaded"
 msgstr "Lastet opp"
 
-#: ktorrent/view/viewmodel.cpp:499
+#: ktorrent/view/viewmodel.cpp:541
 msgctxt "Bytes left to downloaded"
 msgid "Left"
-msgstr ""
+msgstr "Gjenstår"
 
-#: ktorrent/view/viewmodel.cpp:500
+#: ktorrent/view/viewmodel.cpp:543
 #: plugins/infowidget/chunkdownloadmodel.cpp:200
 #: plugins/infowidget/peerviewmodel.cpp:257
 msgid "Down Speed"
 msgstr "Nedhastighet"
 
-#: ktorrent/view/viewmodel.cpp:501 plugins/infowidget/peerviewmodel.cpp:258
+#: ktorrent/view/viewmodel.cpp:545 plugins/infowidget/peerviewmodel.cpp:258
 msgid "Up Speed"
 msgstr "Opphastighet"
 
-#: ktorrent/view/viewmodel.cpp:502
+#: ktorrent/view/viewmodel.cpp:547
 msgid "Time Left"
 msgstr "Tid igjen"
 
-#: ktorrent/view/viewmodel.cpp:503 plugins/infowidget/trackermodel.cpp:149
+#: ktorrent/view/viewmodel.cpp:549 plugins/infowidget/trackermodel.cpp:149
 msgid "Seeders"
 msgstr "Delere"
 
-#: ktorrent/view/viewmodel.cpp:504 plugins/infowidget/trackermodel.cpp:150
+#: ktorrent/view/viewmodel.cpp:551 plugins/infowidget/trackermodel.cpp:150
 msgid "Leechers"
 msgstr "Nedlastere"
 
-#: ktorrent/view/viewmodel.cpp:506
+#: ktorrent/view/viewmodel.cpp:554
 #, no-c-format
 msgid "% Complete"
 msgstr "% ferdig"
 
-#: ktorrent/view/viewmodel.cpp:507
+#: ktorrent/view/viewmodel.cpp:556
 msgid "Share Ratio"
 msgstr "Delingsforhold"
 
-#: ktorrent/view/viewmodel.cpp:508
+#: ktorrent/view/viewmodel.cpp:558
 msgid "Time Downloaded"
 msgstr "Tid lastet ned"
 
-#: ktorrent/view/viewmodel.cpp:509
+#: ktorrent/view/viewmodel.cpp:560
 msgid "Time Seeded"
 msgstr "Tid lastet opp"
 
-#: ktorrent/view/viewmodel.cpp:510
+#: ktorrent/view/viewmodel.cpp:562
 msgid "Location"
 msgstr "Adresse"
 
-#: ktorrent/view/viewmodel.cpp:511
+#: ktorrent/view/viewmodel.cpp:564
 msgid "Added"
 msgstr "Lagt til"
 
-#: ktorrent/view/viewmodel.cpp:519
+#: ktorrent/view/viewmodel.cpp:574
 msgid "How much data we have downloaded of the torrent"
 msgstr "Hvor mye data vi har lastet ned fra denne torrenten"
 
-#: ktorrent/view/viewmodel.cpp:520
+#: ktorrent/view/viewmodel.cpp:576
 msgid "Total size of the torrent, excluded files are not included"
 msgstr "Total størrelse på torrenten, ekskluderte filer er ikke tatt med"
 
-#: ktorrent/view/viewmodel.cpp:521
+#: ktorrent/view/viewmodel.cpp:578
 msgid "How much data we have uploaded"
 msgstr "Hvor mye data vi har lastet opp"
 
-#: ktorrent/view/viewmodel.cpp:522
+#: ktorrent/view/viewmodel.cpp:580
 msgid "How much data left to download"
-msgstr ""
+msgstr "Hvor mye data som gjenstår å laste ned"
 
-#: ktorrent/view/viewmodel.cpp:523
+#: ktorrent/view/viewmodel.cpp:582
 msgid "Current download speed"
 msgstr "Angi høyeste nedlastingsfart"
 
-#: ktorrent/view/viewmodel.cpp:524
+#: ktorrent/view/viewmodel.cpp:584
 msgid "Current upload speed"
 msgstr "Nåværende opplastingsfart"
 
-#: ktorrent/view/viewmodel.cpp:525
+#: ktorrent/view/viewmodel.cpp:586
 msgid ""
 "How much time is left before the torrent is finished or before the maximum "
 "share ratio is reached, if that is enabled"
@@ -3630,7 +3760,7 @@ msgstr ""
 "Hvor lang tid som er igjen før torrenten er ferdig, eller før høyeste "
 "deleforhold er nådd hvis dette er slått på"
 
-#: ktorrent/view/viewmodel.cpp:526
+#: ktorrent/view/viewmodel.cpp:588
 msgid ""
 "How many seeders we are connected to (How many seeders there are according "
 "to the tracker)"
@@ -3638,7 +3768,7 @@ msgstr ""
 "Hvor mange delere vi er koblet til (Hvor mange delere det er i følge "
 "sporeren)"
 
-#: ktorrent/view/viewmodel.cpp:527
+#: ktorrent/view/viewmodel.cpp:590
 msgid ""
 "How many leechers we are connected to (How many leechers there are according "
 "to the tracker)"
@@ -3646,8 +3776,7 @@ msgstr ""
 "Hvor mange nedlastere vi er koblet til  (Hvor mange nedlastere det er i "
 "følge sporeren)"
 
-#: ktorrent/view/viewmodel.cpp:529
-#, no-c-format
+#: ktorrent/view/viewmodel.cpp:593
 msgid ""
 "The percentage of data we have of the whole torrent, not including excluded "
 "files"
@@ -3655,34 +3784,34 @@ msgstr ""
 "Hvor mange prosent av hele torrenten som er lastet ned, unntatt ekskluderte "
 "filer"
 
-#: ktorrent/view/viewmodel.cpp:530
+#: ktorrent/view/viewmodel.cpp:595
 msgid ""
 "Share ratio is the number of bytes uploaded divided by the number of bytes "
 "downloaded"
 msgstr "Deleforholdet er antall byte lastet opp delt på antall byte lastet ned"
 
-#: ktorrent/view/viewmodel.cpp:531
+#: ktorrent/view/viewmodel.cpp:597
 msgid "How long we have been downloading the torrent"
 msgstr "Hvor lenge nedlasting av torrenten har pågått"
 
-#: ktorrent/view/viewmodel.cpp:532
+#: ktorrent/view/viewmodel.cpp:599
 msgid "How long we have been seeding the torrent"
 msgstr "Hvor lenge deling av torrenten har pågått"
 
-#: ktorrent/view/viewmodel.cpp:533
+#: ktorrent/view/viewmodel.cpp:601
 msgid "The location of the torrent's data on disk"
 msgstr "Hvor torrentens data er plassert på disken"
 
-#: ktorrent/view/viewmodel.cpp:534
+#: ktorrent/view/viewmodel.cpp:603
 msgid "When this torrent was added"
 msgstr "Når denne torrenten  ble lagt til"
 
-#: ktorrent/view/viewmodel.cpp:583
+#: ktorrent/view/viewmodel.cpp:653
 #, kde-format
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "%1<br>URL: <b>%2</b>"
 
-#: ktorrent/view/viewmodel.cpp:589
+#: ktorrent/view/viewmodel.cpp:659
 msgid "<br/><br/>Unable to contact a tracker."
 msgstr "<br/> <br/>Klarer ikke kontakte en sporer."
 
@@ -4423,11 +4552,11 @@ msgstr "Rekkefølge for filnedlasting for <b>%1</b>:"
 
 #: plugins/downloadorder/downloadorderdialog.cpp:81
 msgid "Seasons and Episodes"
-msgstr ""
+msgstr "Sesonger og episoder"
 
 #: plugins/downloadorder/downloadorderdialog.cpp:82
 msgid "Album Track Order"
-msgstr ""
+msgstr "Rekkefølge som albumspor"
 
 #. i18n: ectx: property (text), widget (QLabel, m_top_label)
 #: plugins/downloadorder/downloadorderwidget.ui:20
@@ -4452,7 +4581,7 @@ msgstr "Sorter etter"
 #. i18n: ectx: property (placeholderText), widget (KLineEdit, m_search_files)
 #: plugins/downloadorder/downloadorderwidget.ui:52
 msgid "Search files"
-msgstr ""
+msgstr "Søk i filer"
 
 #. i18n: ectx: property (toolTip), widget (QListView, m_order)
 #: plugins/downloadorder/downloadorderwidget.ui:66
@@ -4765,7 +4894,7 @@ msgstr "Vis liste over sporere"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showWebSeedsTab)
 #: plugins/infowidget/iwprefpage.ui:53
 msgid "Whether or not to show the webseeds tab at the bottom of the window."
-msgstr ""
+msgstr "Om nettkilderfanen skal vises nederst i vinduet, eller ikke."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showWebSeedsTab)
 #: plugins/infowidget/iwprefpage.ui:56
@@ -4785,7 +4914,7 @@ msgstr "Førsteprioritet:"
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_firstColor)
 #: plugins/infowidget/iwprefpage.ui:79
 msgid "Color to use for first priority files."
-msgstr ""
+msgstr "Farge som skal brukes for filer med første prioritet."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: plugins/infowidget/iwprefpage.ui:86
@@ -4795,7 +4924,7 @@ msgstr "Lav prioritet:"
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_lastColor)
 #: plugins/infowidget/iwprefpage.ui:93
 msgid "Color to use for last priority files."
-msgstr ""
+msgstr "Farge som skal brukes for filer med siste prioritet."
 
 #. i18n: ectx: label, entry (showPeerView), group (general)
 #: plugins/infowidget/ktinfowidgetplugin.kcfg:10
@@ -4893,8 +5022,8 @@ msgid "Availability"
 msgstr "Tilgjengelighet"
 
 #. i18n: ectx: property (title), widget (QGroupBox, DhtGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_12)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_5)
+#. i18n: ectx: property (text), widget (QLabel, label_12)
 #: plugins/infowidget/peerviewmodel.cpp:262 plugins/stats/Conns.ui:31
 #: plugins/stats/DisplaySettings.ui:796 plugins/stats/Settings.ui:234
 msgid "DHT"
@@ -5134,6 +5263,15 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Note: </span>Only http webseeds are supported.</p>"
 msgstr ""
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Nettkilde som skal legges "
+"til i torrenten.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Merk: </span>Støtter kun nettdeling via HTTP.</p>"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
 #: plugins/infowidget/webseedstab.ui:26
@@ -5156,7 +5294,7 @@ msgid "Disable All"
 msgstr "Ta alle ut av bruk"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ConvertDialog)
-#: plugins/ipfilter/convertdialog.ui:19 plugins/ipfilter/convertthread.cpp:174
+#: plugins/ipfilter/convertdialog.ui:19 plugins/ipfilter/convertthread.cpp:173
 msgid "Converting..."
 msgstr "Gjør om …"
 
@@ -5170,11 +5308,11 @@ msgstr "Gjør om  blokkliste til KTorrent-format. Dette kan ta litt tid."
 msgid "C&ancel"
 msgstr "&Avbryt"
 
-#: plugins/ipfilter/convertthread.cpp:72
+#: plugins/ipfilter/convertthread.cpp:71
 msgid "Loading txt file..."
 msgstr "Laster txt-fil …"
 
-#: plugins/ipfilter/convertthread.cpp:156
+#: plugins/ipfilter/convertthread.cpp:155
 #, kde-format
 msgid "There are no IP addresses to convert in %1"
 msgstr "Det er ingen IP-adresser å gjøre om i %1"
@@ -5399,6 +5537,27 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">None:</span> No messages are shown</p>"
 msgstr ""
+"Dobbeltklikk på loggnivået for å endre det. Mulige verdier er \n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Alle: </span>Alle meldinger blir vist</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Viktige: </span>Bare viktige meldinger blir vist</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Merknad: </span>Bare merknads- og viktige meldinger blir vist</"
+"p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Feilsøk: </span>Feilsøking-, merknad- og viktige meldinger "
+"blir vist</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Ingen:</span> Ingen meldinger blir vist i loggen</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useRichText)
 #: plugins/logviewer/logprefwidget.ui:42
@@ -5717,7 +5876,7 @@ msgstr "Flytting er valgt."
 msgid "Scan directories recursively."
 msgstr "Søk gjennom undermapper også."
 
-#: plugins/scanfolder/scanfolder.cpp:69 plugins/scanfolder/scanthread.cpp:194
+#: plugins/scanfolder/scanfolder.cpp:77 plugins/scanfolder/scanthread.cpp:194
 #: plugins/scanfolder/torrentloadqueue.cpp:166
 #: plugins/scanfolder/torrentloadqueue.cpp:167
 #: plugins/scanfolder/torrentloadqueue.cpp:170
@@ -5773,6 +5932,8 @@ msgid ""
 "Scan the folder recursively for torrents. <br/><br/>\n"
 "Note: This will not be done for any folder named loaded."
 msgstr ""
+"Skann mappa rekursivt etter torrenter.<br/> <br/> \n"
+"Merk: Dett blir ikke gjort for noen mappe som heter loaded."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_recursive)
 #: plugins/scanfolder/scanfolderprefpage.ui:92
@@ -5785,6 +5946,8 @@ msgid ""
 "When a torrent file has been found and loaded, delete it.<br/><br/>\n"
 "Warning: you will permanently lose this file."
 msgstr ""
+"Når en torrentfil er funnet og lastet inn, så slett den,<br/> <br/> \n"
+"Advarsel: Du mister denne fila permanent."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_actionDelete)
 #: plugins/scanfolder/scanfolderprefpage.ui:103
@@ -6050,8 +6213,8 @@ msgstr "Legg til som blindkopi:"
 msgid "Current search engine"
 msgstr "Gjeldende søkemotor"
 
-#. i18n: ectx: label, entry (useDefaultBrowser), group (general)
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_useDefaultBrowser)
+#. i18n: ectx: label, entry (useDefaultBrowser), group (general)
 #: plugins/search/ktsearchplugin.kcfg:15 plugins/search/searchpref.ui:92
 msgid "Use default browser"
 msgstr "Bruk standard nettleser"
@@ -6256,9 +6419,9 @@ msgstr "Vil du laste ned eller lagre torrenten?"
 msgid "Download Torrent"
 msgstr "Last ned torrent"
 
+#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (title), widget (QGroupBox, DlSpdGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (KPushButton, m_download)
 #: plugins/search/searchwidget.cpp:247 plugins/stats/DisplaySettings.ui:37
 #: plugins/stats/Settings.ui:114 plugins/stats/Spd.ui:19
@@ -6425,8 +6588,8 @@ msgstr "Hendelse"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ConnsWgt)
 #. i18n: ectx: property (title), widget (QGroupBox, ConnsGbw)
-#. i18n: ectx: property (text), widget (QLabel, label_11)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#. i18n: ectx: property (text), widget (QLabel, label_11)
 #: plugins/stats/Conns.ui:13 plugins/stats/Conns.ui:19
 #: plugins/stats/DisplaySettings.ui:505 plugins/stats/Settings.ui:140
 msgid "Connections"
@@ -6485,7 +6648,7 @@ msgstr "Oppgaver"
 #: plugins/stats/DisplaySettings.ui:27
 msgctxt "Noun"
 msgid "Download"
-msgstr ""
+msgstr "Last ned"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #. i18n: ectx: property (text), widget (QLabel, label_16)
@@ -6524,10 +6687,10 @@ msgstr "Fra nedlastere"
 msgid "From seeds"
 msgstr "Fra delere"
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#. i18n: ectx: property (title), widget (QGroupBox, UlSpdGbw)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #. i18n: ectx: property (text), widget (QLabel, label_15)
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#. i18n: ectx: property (title), widget (QGroupBox, UlSpdGbw)
 #: plugins/stats/DisplaySettings.ui:364 plugins/stats/DisplaySettings.ui:374
 #: plugins/stats/Settings.ui:192 plugins/stats/Spd.ui:43
 msgid "Upload"
@@ -7093,6 +7256,61 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">For example "
 "the *.torrent will match any item which ends in .torrent. </p>"
 msgstr ""
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Strengen som skal finnes i "
+"tittelen på et element. Det kan brukes enkel jokertegn-syntaks:</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<table border=\"0\" style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px;\" align=\"center\" cellspacing=\"1\" "
+"cellpadding=\"2\">\n"
+"<tr>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span "
+"style=\" font-weight:600;\">c</span></p></td>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Et tegn står for seg selv, "
+"unntatt de som er nevnt nedenfor. Altså <span style=\" font-weight:600;\">c</"
+"span> samsvarer med tegnet <span style=\" font-style:italic;\">c</span>.</"
+"p></td></tr>\n"
+"<tr>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span "
+"style=\" font-weight:600;\">?</span></p></td>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Samsvarer "
+"med ett enkelt tegn.</p></td></tr>\n"
+"<tr>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span "
+"style=\" font-weight:600;\">*</span></p></td>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Samsvarer "
+"med null eller flere tegn.</p></td></tr>\n"
+"<tr>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span "
+"style=\" font-weight:600;\">[…]</span></p></td>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Flere "
+"bokstaver kan settes inni hakeparenteser slik at det gir treff på hver av "
+"disse bokstavene. Omvendt skråstrek har ingen spesiell betydning, hverken "
+"inni eller utenfor hakeparenteser.</p></td></tr></table>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">For "
+"eksempel: *.torrent gir treff på alt som slutter med .torrent. </p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_reg_exp_syntax)
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_exclusion_reg_exp)
@@ -7455,6 +7673,15 @@ msgid ""
 "webinterface is accessible from the internet. It will allow anybody access "
 "to it.</p>"
 msgstr ""
+"Hvis obligatorisk login er slått på, må du oppgi et brukernavn og et passord."
+"\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Merk: </span>Du må ikke slå av dette hvis nettgrensesnittet "
+"kan nås fra Internett. Det gir hvem som helst tilgang til det.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_authentication)
 #: plugins/webinterface/webinterfaceprefwidget.ui:94
@@ -7498,6 +7725,17 @@ msgid ""
 "that the UPnP plugin automatically forwards the port. The UPnP plugin needs "
 "to be loaded for this to work.</p>"
 msgstr ""
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Hvis du er bak en ruter og "
+"du vil få tilgang til nettgrensesnittet fra et eller annet sted på "
+"Internett, så må du videresende den riktige porten.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Denne avkryssingsboksen "
+"sørger for at UPnP-modulen videresender porten automatisk. Programtillegget "
+"for UPnP må være lastet inn for at dette skal virke.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_forward)
 #: plugins/webinterface/webinterfaceprefwidget.ui:191
