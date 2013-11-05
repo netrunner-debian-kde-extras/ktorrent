@@ -6,8 +6,7 @@ export DEB_CFLAGS_MAINT_APPEND := $(shell dpkg-buildflags --get CPPFLAGS)
 override_dh_auto_configure:
 	dh_auto_configure -Skde -- -DCMAKE_USE_RELATIVE_PATHS=ON \
 	                           -DWITH_SYSTEM_GEOIP:BOOL=ON \
-	                           -DKDE4_BUILD_TESTS=false \
-	                           -DENABLE_KIO_MAGNET=1
+	                           -DKDE4_BUILD_TESTS=false
 %:
 	dh $@ --parallel --dbg-package=ktorrent-dbg --with kde
 
