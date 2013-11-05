@@ -1,0 +1,18 @@
+From: Modestas Vainius <modax@debian.org>
+Subject: Do not link deprecated kutils
+Forwarded: no
+Origin: vendor
+
+kutils is a dummy transitional library which we don't need to link with since
+KDE 4.5.
+--- a/libktcore/CMakeLists.txt
++++ b/libktcore/CMakeLists.txt
+@@ -56,7 +56,7 @@ kde4_add_ui_files(libktorrent_SRC ${libk
+ kde4_add_kcfg_files(libktorrent_SRC settings.kcfgc)
+ kde4_add_library(ktcore SHARED ${libktorrent_SRC})
+ 
+-target_link_libraries(ktcore ${QT_QT3SUPPORT_LIBRARY} ${KDE4_KPARTS_LIBS} ${KDE4_KUTILS_LIBS} ${LIBKTORRENT_LIBRARIES} ${KDE4_SOLID_LIBS} ${GMP_LIBRARIES})
++target_link_libraries(ktcore ${QT_QT3SUPPORT_LIBRARY} ${KDE4_KPARTS_LIBS} ${KDE4_KCMUTILS_LIBS} ${LIBKTORRENT_LIBRARIES} ${KDE4_SOLID_LIBS} ${GMP_LIBRARIES})
+ set_target_properties(ktcore PROPERTIES VERSION 15.0.0 SOVERSION 15 )
+ install(TARGETS ktcore  ${INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
+ 
