@@ -1,3 +1,24 @@
+ktorrent (4.3.1-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Jonathan Riddell ]
+  * Remove build-dep on kde-workspace, soon to be removed from the archive
+  * Remove shutdown plugin from .install file which required kde-workspace
+  * Add kubuntu_magnet-mimetype.diff to open magnet links
+  * Remove obsolete build-dep on nepomuk-core-dev
+
+  [ Scott Kitterman ]
+  * Remove plasma-widget-ktorrent package as it is not compatible with
+    Plasma 5
+  * Remove obsolete ktorrent suggests
+  * Remove ancient build-conflicts
+  * Backport Ubuntu changes to Debian
+  * Add build-depends on libsoprano-dev
+  * Bump standards version to 3.9.6 without further change
+
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 31 Aug 2015 12:48:22 -0400
+
 ktorrent (4.3.1-2) unstable; urgency=low
 
   * Do not build tests like before KDE 4.10. Fixes FTBFS (Closes: #722628)
