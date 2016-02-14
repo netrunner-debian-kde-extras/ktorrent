@@ -8,6 +8,10 @@ ktorrent (4.3.1-4) UNRELEASED; urgency=medium
   * Remove the README.Debian file, since all the information it contains are
     long obsolete.
   * Restore the krosspython suggest in ktorrent, removed in 4.3.1-3.
+  * Backport upstream commit e22c887b55ec5e83db959c3b98d448947c886cc0 to fix
+    build with GCC 6; patch
+    upstream_webinterface-rename-major-minor-to-major_version-min.patch.
+    (Closes: #811942)
 
  -- Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>  Sun, 14 Feb 2016 15:11:00 +0100
 
