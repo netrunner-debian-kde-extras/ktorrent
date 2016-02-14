@@ -1,0 +1,29 @@
+From f090d11e8837d944dedb40f873713abe4e15d4b4 Mon Sep 17 00:00:00 2001
+From: Joris Guisson <joris.guisson@gmail.com>
+Date: Sat, 8 Nov 2014 12:35:09 +0100
+Subject: [PATCH] Properly support x-scheme-handler/magnet mimetype, and drop
+ old hard-coded magnet.protocol.
+
+Patch from Rex Dieter
+
+Review: 108648
+---
+ ktorrent/ktorrent.desktop | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/ktorrent/ktorrent.desktop b/ktorrent/ktorrent.desktop
+index d326f63..dff843f 100755
+--- a/ktorrent/ktorrent.desktop
++++ b/ktorrent/ktorrent.desktop
+@@ -119,7 +119,7 @@ Exec=ktorrent %i -caption %c %u
+ Icon=ktorrent
+ Type=Application
+ X-DocPath=ktorrent/index.html
+-MimeType=application/x-bittorrent;application/x-torrent;
++MimeType=application/x-bittorrent;application/x-torrent;x-scheme-handler/magnet;
+ X-DBUS-StartupType=Unique
+ X-DBUS-ServiceName=org.ktorrent.ktorrent
+ Comment=A BitTorrent program for KDE
+-- 
+2.7.0
+
